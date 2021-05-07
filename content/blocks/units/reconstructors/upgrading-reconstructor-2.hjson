@@ -1,0 +1,31 @@
+type: Reconstructor
+size: 5
+constructTime: 2100
+
+requirements: [
+    lead/780
+    silicon/780
+    titanium/600
+    metaglass/500
+    thorium/500
+]
+
+upgrades: [
+    [mega, magno],
+    [zenith, galaxy],
+    [fortress, tower]
+]
+
+consumes: {
+    items: {
+        items: [
+            silicon/400
+            titanium/350
+            metaglass/200
+            thorium/150
+        ]
+    }
+    power: 10
+}
+category: units
+research: upgrading-reconstructor-1

@@ -1,0 +1,48 @@
+speed: 0.6
+hitSize: 9
+health: 600
+armor: 3
+weapons: [{
+name: purple-flamethrower
+top: false
+shootSound: flame
+shootY: 2
+reload: 14
+recoil: 1
+ejectEffect: none
+bullet: pyraFlame
+shootStatus: sporeSlowed
+shootStatusDuration: 60
+}
+{
+name: sapper
+x: 1
+y: 1
+rotate: true
+ejectEffect: none
+reload: 9
+shootSound: sap
+bullet: {
+type: SapBulletType
+sapStrength: 0.3
+length: 60
+shootEffect: shootSmall
+hitColor: bf92f9
+despawnEffect: none
+width: 0.54
+lifetime: 50
+knockback: -1.24
+damage: 12
+status: sapped
+statusDuration: 60
+}
+}]
+research: {
+parent: cold
+requirements: [
+lead/4000
+graphite/3000
+silicon/3000
+spore-pod/3000
+]
+}

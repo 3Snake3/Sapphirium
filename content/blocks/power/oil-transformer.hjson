@@ -1,0 +1,19 @@
+type: ThermalGenerator
+health: 1200
+category: power
+research: spore-generator
+researchCostMultiplier: 1.5
+requirements: [
+creostone/210
+silicon/140
+metaglass/100
+titanium/90
+thorium/85
+plastanium/70
+]
+powerProduction: 1.2
+generateEffect: redgeneratespark
+size: 3
+ambientSound: hum
+ambientSoundVolume: 0.06
+attribute: oil

@@ -1,0 +1,23 @@
+type: SingleTypeGenerator
+requirements: [
+copper/80
+lead/90
+graphite/50
+silicon/70
+]
+size: 2
+category: power
+consumes: {
+items: {
+items: [
+copper/2
+]
+}
+}
+itemDuration: 120
+powerProduction: 2
+hasLiquids: false
+hasItems: true
+ambientSound: steam
+ambientSoundVolume: 0.04
+research: steam-generator

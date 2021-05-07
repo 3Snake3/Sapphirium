@@ -1,0 +1,47 @@
+type: Reconstructor
+size: 3
+consumes: {
+  power: 4
+  items: {
+    items: [
+    graphite/120
+    silicon/120
+    titanium/100
+    metaglass/100
+    ]
+  }
+}
+constructTime: 750
+requirements: [
+  graphite/250
+  silicon/200
+  titanium/180
+  metaglass/120
+  thorium/120
+  plastanium/80
+]
+upgrades: [
+[dagger, blaster]
+  [
+  mace, guard
+  ]
+  [
+  crawler, rapics
+  ]
+  [flare, dart]
+  [
+  horizon, glaive
+  ]
+  [poly, trident]
+  [
+  nova, totem
+  ]
+  [
+  arrow, crown
+  ]
+  [
+  star, zenith
+  ]
+]
+category: units
+research: additive-reconstructor

@@ -1,0 +1,31 @@
+health: 400
+speed: 1
+hitSize: 8
+canDrown: false
+canBoost: true
+engineOffset: 5.5
+lowAltitude: true
+weapons: [{
+top: false
+name: small-shotgun
+reload: 45
+ejectEffect: casing1
+shots: 5
+bullet: {
+type: BasicBulletType
+width: 7
+height: 9
+speed: 7
+damage: 25
+lifetime: 30
+shootEffect: shootSmall
+smokeEffect: shootSmallSmoke
+}}]
+research: {
+parent: dagger
+requirements: [
+lead/4000
+silicon/3000
+titanium/2500
+]
+}

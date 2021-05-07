@@ -1,0 +1,108 @@
+speed: 0.40
+canBoost: true
+boostMultiplier: 2.5
+            hitSize: 20
+            rotateSpeed: 2.4
+            health: 15000
+            armor: 14
+            canDrown: false
+            mechFrontSway: 1
+engineOffset: 12
+engineSize: 6
+lowAltitude: true
+            mechStepParticles: true
+            mechStepShake: 0.15
+            singleTarget: true
+
+            weapons: [{
+            name: power-weapon
+                top: false
+                y: 1
+                x: 16
+                shootY: 8
+                reload: 45
+                shots: 4
+                recoil: 5
+                shake: 3
+                ejectEffect: casing3
+                shootSound: bang
+                inaccuracy: 7
+                shotDelay: 4
+                alternate: true
+                bullet: {
+type: BasicBulletType
+speed: 8
+damage: 30
+                    width: 16
+                    height: 28
+                    lifetime: 22
+                    shootEffect: shootBig
+                    lightning: 4
+                    lightningLength: 10
+                    lightningColor: f3e979
+                    lightningDamage: 25
+                    status: shocked
+statusDuration: 70
+                }
+                }
+{
+            name: large-bullet-mount
+                reload: 20
+                x: 8.5
+                y: 6
+                rotate: true
+                ejectEffect: casing2
+                shots: 2
+                shotDelay: 2
+                shootCone: 60
+                shootSound: shootBig
+                alternate: true
+                rotateSpeed: 4
+                spacing: 1
+                bullet: {
+                type: MissileBulletType
+                width: 12
+                height: 12
+                speed: 6
+                damage: 50
+                lifetime: 45
+                homingPower: 0.35
+                homingRange: 30
+                keepVelocity: false
+                shootEffect: shootBig
+                hitEffect: massiveExplosion
+                despawnEffect: blastExplosion
+                splashDamage: 30
+                splashDamageRadius: 45
+            }
+            }
+            {
+            name: large-bullet-mount
+                reload: 40
+                x: 14
+                y: -7
+                rotate: true
+                ejectEffect: none
+                alternate: true
+                shootSound: laser
+                bullet: {
+                type: LaserBulletType
+colors: ["FFD2AE", "E58956", "FFFFFF"]
+length: 190
+damage: 120
+shootEffect: shockwave
+smokeEffect: none
+                }
+                }
+                ]
+                research: {
+                parent: tower
+                requirements: [
+                creostone/40000
+                graphite/40000
+                titanium/37000
+                metaglass/30000
+                creostone/22000
+                surge-alloy/18000
+                ]
+                }

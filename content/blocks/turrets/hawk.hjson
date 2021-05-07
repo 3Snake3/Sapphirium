@@ -1,0 +1,48 @@
+type: PowerTurret
+requirements: [
+lead/250
+creostone/180
+silicon/150
+titanium/80
+]
+range: 270
+chargeTime: 80
+chargeMaxDelay: 70
+chargeEffects: 7
+recoilAmount: 3
+reloadTime: 140
+cooldown: 0.03
+powerUse: 8
+shootShake: 3
+smokeEffect: none
+chargeEffect: lancerLaserCharge
+chargeBeginEffect: lancerLaserChargeBegin
+heatColor: ff0000
+size: 2
+health: 1200
+targetGround: false
+targetAir: true
+shootSound: laser
+shootType: {
+type: LaserBulletType
+colors: ["FF3C00", "FF5600", "FFFFFF"]
+hitEffect: hitLancer
+despawnEffect: none
+hitSize: 5
+lifetime: 20
+width: 20
+length: 300
+damage: 200
+collidesAir: true
+collidesGround: false
+}
+consumes: {
+liquid: {
+liquid: cryofluid
+amount: 0.3
+optional: true
+booster: true
+}
+}
+category: turret
+research: sparrow

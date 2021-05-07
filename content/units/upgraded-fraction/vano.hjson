@@ -1,0 +1,9 @@
+hitSize: 9
+research: {
+parent: mono
+requirements: [
+lead/4000
+silicon/4000
+thorium/4000
+]
+}

@@ -1,0 +1,43 @@
+flying: true
+speed: 1.2
+drag: 0.06
+armor: 4
+health: 240
+commandLimit: 5
+hitSize: 10
+weapons: [{
+name: none
+x: 0
+y: 0
+mirror: false
+reload: 14.5
+alternate: true
+ejectEffect: casing1
+shots: 3
+spacing: 4
+inaccuracy: 5
+bullet: {
+type: BasicBulletType
+speed: 4
+damage: 8
+width: 10
+height: 12
+frontColor: feb380
+backColor: ea8878
+status: burning
+lifetime: 60
+incendChance: 0.7
+incendSpread: 2
+incendAmount: 1
+}
+}]
+research: {
+parent: horizon
+requirements: [
+graphite/8000
+creostone/8000
+titanium/7500
+metaglass/5500
+plastanium/3500
+]
+}

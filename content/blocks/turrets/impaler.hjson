@@ -1,0 +1,26 @@
+health: 2500
+reloadTime: 120
+chargeTime: 40
+chargeMaxDelay: 30
+chargeEffects: 7
+recoilAmount: 3
+range: 350
+cooldown: 0.03
+powerUse: 8
+shootShake: 3
+shootEffect: lancerLaserShoot
+smokeEffect: none
+chargeEffect: lancerLaserCharge
+chargeBeginEffect: lancerLaserChargeBegin
+size: 3
+targetAir: true
+shootSound: laser
+research: parallax
+requirements: [
+copper/200
+lead/120
+silicon/85
+creostone/75
+phase-fabric/45
+]
+category: turret

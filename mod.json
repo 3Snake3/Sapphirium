@@ -1,0 +1,6 @@
+name: "adc"
+description: "Adds a lot of additional content. It includes power generators, crafters, turrets, walls, drills, upgraded illuminator, new item, units and resprite of two ingame walls."
+displayName: "[green]ADC[]"
+author: "[green]Snake[]"
+minGameVersion: "122"
+version: "5.1"

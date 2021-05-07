@@ -1,0 +1,160 @@
+flying: true
+health: 16000
+armor: 20
+speed: 2
+rotateSpeed: 2
+accel: 0.09
+drag: 0.09
+lowAltitude: true
+hitSize: 48
+engineOffset: 17.5
+engineSize: 10
+weapons: [{
+name: tesla-weapon
+x: 0
+y: 12
+reload: 120
+mirror: false
+recoil: 4
+shootSound: energyball-shoot
+bullet: {
+type: BasicBulletType
+width: 20
+height: 20
+speed: 5
+lifetime: 35
+damage: 120
+splashDamage: 80
+splashDamageRadius: 30
+backColor: f3e979
+frontColor: ffffff
+hittable: false
+lightning: 6
+lightningLength: 13
+lightningDamage: 15
+lightningColor: f3e979
+hitSound: energyball-hit
+status: shocked
+statusDuration: 65
+}
+}
+{
+name: lightning-missiles
+x: 17
+y: 17
+reload: 15
+recoil: 2
+alternate: true
+rotate: true
+rotateSpeed: 4
+shootSound: missile
+inaccuracy: 8
+bullet: {
+type: MissileBulletType
+width: 10
+height: 10
+speed: 6
+damage: 13
+lifetime: 35
+backColor: f3e979
+frontColor: ffffff
+shootEffect: sparkShoot
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+keepVelocity: false
+homingPower: 2
+homingRange: 45
+lightning: 4
+lightningLength: 8
+lightningDamage: 8
+lightningColor: f3e979
+weaveScale: 2
+weaveMag: 2
+status: melting
+statusDuration: 65
+}
+}
+{
+name: lightning-missiles
+x: 16
+y: -16
+reload: 15
+recoil: 2
+alternate: true
+rotate: true
+rotateSpeed: 4
+shootSound: missile
+inaccuracy: 8
+bullet: {
+type: MissileBulletType
+width: 10
+height: 10
+speed: 6
+damage: 13
+lifetime: 35
+backColor: f3e979
+frontColor: ffffff
+shootEffect: sparkShoot
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+keepVelocity: false
+homingPower: 2
+homingRange: 45
+lightning: 4
+lightningLength: 8
+lightningDamage: 8
+lightningColor: f3e979
+weaveScale: 2
+weaveMag: 2
+status: melting
+statusDuration: 65
+}
+}]
+abilities: [{
+type: ForceFieldAbility
+radius: 125
+regen: 1
+max: 200
+cooldown: 300
+}
+{
+type: MoveLightningAbility
+damage: 20
+length: 25
+minSpeed: 0.7
+maxSpeed: 1.3
+offset: 0
+chance: 0.20
+color: f3e979
+bullet: {
+type: LightningBulletType
+lightningLength: 10
+lightningDamage: 15
+lightningColor: f3e979
+fragBullets: 3
+fragCone: 160
+status: shocked
+statusDuration: 65
+fragBullet: {
+type: LightningBulletType
+lightningLength: 10
+lightningDamage: 15
+lightningColor: f3e979
+status: shocked
+statusDuration: 65
+}
+}
+bulletAngle: 360
+bulletSpread: 360
+}]
+research: {
+parent: discharge
+requirements: [
+silicon/45000
+creostone/40000
+titanium/34000
+metaglass/30000
+plastanium/29000
+surge-alloy/30000
+]
+}

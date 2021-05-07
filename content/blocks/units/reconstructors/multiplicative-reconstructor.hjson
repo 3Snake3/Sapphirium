@@ -1,0 +1,26 @@
+upgrades: [
+  [
+    poly, mega
+  ]
+  [
+    trident, mega
+  ]
+  [
+   horizon, star
+  ]
+  [
+    atrax, spiroct
+  ]
+  [
+    mace, fortress
+  ]
+  [
+    pulsar, quasar
+  ]
+  [
+ guard, fortress
+ ]
+ [
+ minke, bryde
+ ]
+]

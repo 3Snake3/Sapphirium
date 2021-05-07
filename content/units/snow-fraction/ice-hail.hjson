@@ -1,0 +1,95 @@
+flying: true
+speed: 2
+health: 700
+armor: 5
+accel: 0.014
+drag: 0.01
+hitSize: 30
+lowAltitude: true
+engineOffset: 12
+range: 70
+engineSize: 3
+weapons: [{
+name: snow-cannons
+x: 4
+y: 4
+reload: 35
+shots: 4
+alternate: false
+rotate: true
+spacing: 5
+inaccuracy: 5
+shootCone: 80
+ejectEffect: casing2
+shootSound: railgun
+bullet: {
+type: LaserBoltBulletType
+speed: 6
+damage: 20
+height: 7
+lifetime: 30
+width: 4
+backColor: 837de8
+frontColor: e8eaff
+status: freezing
+statusDuration: 70
+fragBullets: 4
+fragCone: 90
+fragLifeMin: 0.3
+fragBullet: {
+type: LaserBoltBulletType
+speed: 6
+damage: 9
+backColor: 837de8
+frontColor: e8eaff
+lifetime: 20
+status: wet
+statusDuration: 60
+}
+}
+}
+{
+name: snow-cannons
+x: 5
+y: -2
+reload: 25
+rotate: true
+alternate: true
+shots: 2
+shootCone: 48
+spacing: 3
+inaccuracy: 2
+shootSound: lasershoot
+bullet: {
+type: LaserBoltBulletType
+damage: 20
+speed: 7
+drag: 0.001
+backColor: 837de8
+frontColor: e8eaff
+status: freezing
+statusDuration: 70
+lifetime: 30
+fragBullets: 2
+fragLifeMin: 0.4
+fragBullet: {
+type: LaserBoltBulletType
+speed: 8
+damage: 10
+backColor: 837de8
+frontColor: e8eaff
+lifetime: 15
+status: wet
+statusDuration: 60
+}
+}
+}]
+research: {
+parent: chill
+requirements: [
+silicon/7000
+graphite/7000
+metaglass/6700
+ice-cube/6000
+]
+}

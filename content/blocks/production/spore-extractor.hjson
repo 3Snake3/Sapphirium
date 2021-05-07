@@ -1,0 +1,27 @@
+type: Cultivator
+health: 1000
+outputItem: spore-pod/5
+craftTime: 200
+size: 3
+hasLiquids: true
+hasPower: true
+hasItems: true
+itemCapacity: 20
+consumes: {
+power: 2
+liquid: water/0.4
+items: {
+items: [
+ice-cube/1
+]
+}
+}
+requirements: [
+copper/80
+lead/90
+creostone/60
+titanium/25
+thorium/25
+]
+category: production
+research: cultivator

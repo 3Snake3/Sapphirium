@@ -1,0 +1,32 @@
+type: Reconstructor
+size: 9
+consumes: {
+  power: 15
+  liquid: cryofluid/0.7
+  items: {
+    items: [
+    silicon/1500
+    plastanium/800
+    ice-cube/900
+    surge-alloy/750
+    phase-fabric/400
+    ]
+  }
+}
+constructTime: 15200
+requirements: [
+  graphite/4500
+  silicon/4000
+  titanium/3400
+  thorium/2300
+  plastanium/2100
+ metaglass/2000
+ phase-fabric/2000
+]
+upgrades: [
+[sickle, scythe],
+ [glacier, snowstorm],
+ [epidemic, pandemic]
+]
+category: units
+research: special-purpose-reconstructor-3

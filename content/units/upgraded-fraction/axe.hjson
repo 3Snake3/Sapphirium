@@ -1,0 +1,59 @@
+speed: 0.6
+hitSize: 9
+health: 750
+armor: 5
+engineOffset: 5.5
+lowAltitude: true
+canBoost: true
+weapons: [{
+name: flamethrower
+top: false
+shootSound: flame
+shootY: 2
+reload: 10
+recoil: 1
+ejectEffect: none
+bullet: {
+type: BasicBulletType
+speed: 4
+damage: 20
+ammoMultiplier: 3
+hitSize: 7
+lifetime: 40
+pierce: true
+status: burning
+statusDuration: 60
+shootEffect: shootSmallFlame
+hitEffect: hitFlameSmall
+despawnEffect: none
+keepVelocity: false
+hittable: false
+}
+}
+{
+name: shotgun
+top: false
+reload: 14
+alternate: true
+recoil: 2
+shootSound: bang
+bullet: {
+type: BasicBulletType
+speed: 7
+damage: 10
+shootEffect: shootSmall
+smokeEffect: shootSmallSmoke
+width: 12
+height: 12
+splashDamageRadius: 20
+splashDamage: 10
+lifetime: 25
+}}]
+research: {
+parent: mace
+requirements: [
+graphite/3400
+creostone/4000
+titanium/4000
+]
+}

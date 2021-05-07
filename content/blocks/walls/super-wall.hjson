@@ -1,0 +1,16 @@
+type: Wall
+health: 8000
+insulated: true
+absorbLasers: true
+lightningChance: 0.5
+chanceDeflect: 10
+placeableLiquid: true
+size: 2
+requirements: [
+plastanium/7
+surge-alloy/7
+phase-fabric/3
+metaglass/2
+]
+category: defense
+research: phase-wall-large

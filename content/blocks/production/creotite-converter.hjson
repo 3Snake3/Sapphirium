@@ -1,0 +1,30 @@
+type: AttributeSmelter
+craftTime: 90
+outputItem: creostone/6
+craftEffect: redgeneratespark
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 16
+consumes: {
+power: 4.7
+liquid: creotite/0.2
+items: {
+items: [
+silicon/3
+coal/5
+sand/8
+]
+}
+}
+category: crafting
+requirements: [
+copper/85
+graphite/70
+silicon/65
+titanium/50
+thorium/35
+]
+size: 3
+research: creotite-mixer
+attribute: heat

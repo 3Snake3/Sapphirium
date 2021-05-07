@@ -1,0 +1,41 @@
+flying: true
+health: 150
+accel: 0.06
+drag: 0.04
+circleTarget: true
+hitSize: 9
+speed: 5
+range: 270
+weapons: [{
+name: spark-guns
+x: 5
+reload: 13
+recoil: 1
+rotate: true
+alternate: true
+shootSound: shoot
+bullet: {
+type: BasicBulletType
+width: 9
+height: 13
+speed: 6
+damage: 15
+lifetime: 45
+hitEffect: flakExplosion
+despawnEffect: flakExplosion
+backColor: f3e979
+frontColor: ffffff
+lightning: 2
+lightningLength: 4
+lightningColor: f3e979
+lightningDamage: 7
+status: shocked
+}
+}]
+research: {
+parent: special-air-factory
+requirements: [
+silicon/2000
+surge-alloy/2000
+]
+}

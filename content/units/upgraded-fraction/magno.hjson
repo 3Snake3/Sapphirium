@@ -1,0 +1,95 @@
+speed: 4
+mineTier: 5
+mineSpeed: 6
+health: 600
+armor: 4
+accel: 0.06
+drag: 0.017
+lowAltitude: true
+flying: true
+engineOffset: 12.5
+rotateShooting: false
+hitSize: 20
+engineSize: 3
+buildSpeed: 4.5
+isCounted: false
+weapons: [{
+name: heal-weapon-mount
+reload: 25
+shootSound: lasershoot
+x: 8
+y: -6
+rotate: true
+bullet: {
+type: LaserBoltBulletType
+speed: 5.2
+damage: 20
+lifetime: 40
+healPercent: 7
+collidesTeam: true
+backColor: 98ffa9
+frontColor: ffffff
+}}
+{
+name: heal-weapon-mount
+reload: 15
+shootSound: lasershoot
+x: 4
+y: 5
+rotate: true
+bullet: {
+type: LaserBoltBulletType
+speed: 5.2
+damage: 20
+lifetime: 40
+healPercent: 5
+collidesTeam: true
+backColor: 98ffa9
+frontColor: ffffff
+}}
+{
+name: heal-weapon-mount
+reload: 18
+shootSound: missile
+x: 8
+y: -2
+rotate: true
+alternate: true
+recoil: 1
+bullet: {
+type: MissileBulletType
+speed: 4
+damage: 14
+lifetime: 60
+healPercent: 3
+collidesTeam: true
+backColor: 98ffa9
+frontColor: ffffff
+hitColor: 98ffa9
+trailColor: 98ffa9
+keepVelocity: false
+weaveMag: 3
+weaveScale: 3
+fragBullets: 4
+fragBullet: {
+type: BasicBulletType
+width: 8
+height: 8
+shootEffect: shootSmall
+backColor: 98ffa9
+frontColor: ffffff
+hitColor: 98ffa9
+damage: 5
+speed: 6
+healPercent: 2
+}
+}}]
+research: {
+parent: mega
+requirements: [
+titanium/8000
+silicon/8000
+metaglass/7600
+thorium/6000
+]
+}

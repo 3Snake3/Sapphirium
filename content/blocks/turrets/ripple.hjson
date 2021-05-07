@@ -1,0 +1,26 @@
+ammoTypes: {
+graphite: artilleryDense
+silicon: artilleryHoming
+pyratite: artilleryIncendiary
+blast-compound: artilleryExplosive
+plastanium: artilleryPlastic
+creostone: {
+type: ArtilleryBulletType
+speed: 2.5
+damage: 20
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+knockback: 0.8
+lifetime: 80
+width: 15
+height: 15
+collidesTiles: false
+splashDamageRadius: 37.5
+splashDamage: 57
+backColor: bd5553
+frontColor: ffc299
+trailColor: bd5553
+status: melting
+statusDuration: 60
+}
+}

@@ -1,0 +1,157 @@
+speed: 0.35
+            hitSize: 26
+            rotateSpeed: 1.65
+            health: 26000
+            armor: 12
+            mechStepParticles: true
+            mechStepShake: 0.75
+            canDrown: false
+            mechFrontSway: 1.9
+            mechSideSway: 0.6
+
+            weapons: [{
+            name: pandemic-weapon
+                top: false
+                y: 1
+                x: 21.5
+                shootY: 11
+                reload: 9
+                recoil: 5
+                shake: 2
+                ejectEffect: casing4
+                shootSound: bang
+
+                bullet: {
+type: BasicBulletType
+speed: 13
+damage: 45
+                    pierce: true
+                    pierceCap: 10
+                    width: 14
+                    height: 33
+                    lifetime: 15
+                    shootEffect: shootBig
+                    fragVelocityMin: 0.4
+backColor: 6d56bf
+frontColor: bf92f9
+                    hitEffect: sapExplosion
+                    despawnEffect: sapExplosion
+                    splashDamage: 22
+                    splashDamageRadius: 40
+
+                    fragBullets: 2
+                    fragLifeMin: 0
+                    fragCone: 30
+status: sporeSlowed
+statusDuration: 75
+                    fragBullet: {
+type: BasicBulletType
+speed: 9
+damage: 18
+                        width: 10
+                        height: 10
+                        pierce: true
+                        pierceBuilding: true
+                        pierceCap: 4
+
+                        lifetime: 25
+                        hitEffect: sapExplosion
+                        despawnEffect: sapExplosion
+                        splashDamage: 20
+                        splashDamageRadius: 20
+                        status: sporeSlowed
+statusDuration: 80
+                        lightning: 1
+                lightningLength: 4
+                lightningDamage: 5
+                lightningColor: bf92f9
+                        }
+                        }
+                        }
+                        {
+                name: special-sap-weapon
+                x: 8.5
+                y: 10
+                reload: 45
+                recoil: 3
+                alternate: true
+                rotate: true
+                shootSound: sap
+                bullet: {
+                type: SapBulletType
+                width: 1.5
+                length: 315
+                sapStrength: 3
+                color: bf92f9
+                hitColor: bf92f9
+                damage: 45
+                status: sapped
+statusDuration: 120
+                }
+                }
+                {
+                name: bowler
+                x: 0
+                y: 5
+                reload: 120
+                recoil: 3
+                shake: 4
+                mirror: false
+                shootSound: release
+                ejectEffect: none
+                bullet: {
+                type: BasicBulletType
+                width: 55
+                height: 55
+                speed: 3
+                damage: 250
+                lifetime: 80
+                hitSound: explosionbig
+                hitEffect: sapExplosion
+                despawnEffect: sapExplosion
+                shootEffect: shootBig
+                splashDamage: 40
+                splashDamageRadius: 35
+                backColor: 6d56bf
+                frontColor: bf92f9
+                lightning: 4
+                lightningLength: 8
+                lightningDamage: 20
+                lightningColor: bf92f9
+                fragBullets: 5
+                fragCone: 200
+                fragBullet: {
+                type: ArtilleryBulletType
+                width: 20
+                height: 20
+                speed: 2.5
+                damage: 10
+                lifetime: 60
+                hitEffect: sapExplosion
+                despawnEffect: sapExplosion
+                splashDamage: 10
+                splashDamageRadius: 10
+                backColor: 6d56bf
+                frontColor: bf92f9
+                lightning: 1
+                lightningLength: 3
+                lightningDamage: 5
+                lightningColor: bf92f9
+status: sporeSlowed
+statusDuration: 75
+                }
+                }
+                }]
+                research: {
+parent: epidemic
+requirements: [
+lead/50000
+silicon/55000
+titanium/60000
+metaglass/60000
+thorium/50000
+spore-pod/38000
+plastanium/42000
+phase-fabric/30000
+]
+}

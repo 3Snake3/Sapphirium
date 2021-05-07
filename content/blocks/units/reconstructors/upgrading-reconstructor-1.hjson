@@ -1,0 +1,40 @@
+type: Reconstructor
+size: 3
+consumes: {
+  power: 5
+  liquid: water/0.06
+  items: {
+    items: [
+    graphite/70
+    silicon/70
+    titanium/70
+    ]
+  }
+}
+constructTime: 720
+requirements: [
+  copper/400
+  lead/400
+  graphite/300
+  silicon/250
+  titanium/100
+]
+upgrades: [
+  [
+    mono, vano
+  ]
+  [
+    poly, pal
+  ]
+  [
+    dagger, knife
+  ]
+  [
+    mace, axe
+  ]
+  [
+    crown, mantle
+  ]
+]
+category: units
+research: additive-reconstructor

@@ -1,0 +1,9 @@
+type: Wall
+health: 1440
+absorbLasers: true
+size: 2
+requirements: [
+lead/10
+ice-cube/14
+]
+category: defense

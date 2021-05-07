@@ -1,0 +1,17 @@
+ammoTypes: {
+graphite: standardDenseBig
+pyratite: standardIncendiaryBig
+thorium: standardThoriumBig
+creostone: {
+type: BasicBulletType
+speed: 8
+damage: 85
+width: 17
+height: 22
+knockback: 0.7
+shootEffect: shootBig
+pierceBuilding: true
+pierceCap: 2.5
+status: melting
+}
+}

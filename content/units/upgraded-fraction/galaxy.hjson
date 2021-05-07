@@ -1,0 +1,104 @@
+health: 1200
+speed: 2.5
+accel: 0.08
+drag: 0.020
+flying: true
+range: 140
+hitSize: 25
+lowAltitude: true
+armor: 7
+
+engineOffset: 12
+engineSize: 3
+
+commandLimit: 2
+
+weapons: [{
+name: zenith-missiles
+reload: 43
+x: 7
+y: -2
+rotate: true
+shake: 1
+shots: 3
+inaccuracy: 5
+velocityRnd: 0.2
+shootSound: missile
+
+bullet: {
+type: MissileBulletType
+speed: 6
+damage: 25
+width: 8
+height: 8
+shrinkY: 0
+drag: -0.003
+homingRange: 60
+keepVelocity: false
+splashDamageRadius: 25
+splashDamage: 16
+lifetime: 45
+trailColor: d06b53
+backColor: d06b53
+frontColor: ffa665
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+weaveScale: 6
+weaveMag: 1
+status: blasted
+statusDuration: 70
+}
+}
+{
+name: small-shotgun
+x: 7
+y: 5
+reload: 15
+shake: 1
+inaccuracy: 0
+rotate: true
+shootSound: pew
+ejectEffect: casing2
+alternate: true
+bullet: {
+type: BasicBulletType
+width: 9
+height: 13
+speed: 5
+damage: 10
+lifetime: 40
+backColor: d06b53
+frontColor: ffa665
+incendChance: 0.9
+incendAmount: 2
+incendSpread: 8
+status: burning
+statusDuration: 70
+fragBullets: 2
+fragCone: 145
+fragBullet: {
+type: BombBulletType
+width: 5
+height: 7
+speed: 20
+damage: 5
+lifetime: 20
+backColor: d06b53
+frontColor: ffa665
+pierce: true
+pierceCap: 2
+splashDamage: 10
+splashDamageRadius: 50
+}
+}
+}]
+research: {
+parent: zenith
+requirements: [
+titanium/10000
+creostone/10000
+metaglass/8000
+thorium/8000
+plastanium/6000
+]
+}

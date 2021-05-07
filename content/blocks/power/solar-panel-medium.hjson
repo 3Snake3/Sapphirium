@@ -1,0 +1,12 @@
+type: SolarGenerator
+size: 2
+health: 160
+hasPower: true
+powerProduction: 0.49
+requirements: [
+lead/100
+silicon/120
+graphite/90
+]
+category: power
+research: solar-panel

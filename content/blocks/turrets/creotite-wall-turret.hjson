@@ -1,0 +1,36 @@
+type: PowerTurret
+health: 3200
+recoilAmount: 0
+reloadTime: 6
+coolantMultiplier: 1.5
+range: 60
+shootCone: 50
+targetAir: true
+ammoUseEffect: none
+powerUse: 0.80
+size: 2
+shootSound: flame
+baseExplosiveness: 0.95
+shootType: {
+type: BasicBulletType
+ammoMultiplier: 4
+            hitSize: 7
+            lifetime: 18
+            pierce: true
+            collidesAir: true
+            statusDuration: 360
+            shootEffect: shootPyraFlame
+            hitEffect: hitFlameSmall
+            despawnEffect: none
+            status: burning
+            hittable: false
+speed: 3.35
+damage: 25
+makeFire: true
+}
+requirements: [
+creostone/25
+silicon/15
+]
+category: defense
+research: creotite-wall

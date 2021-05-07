@@ -1,0 +1,29 @@
+type: UnitFactory
+
+health: 650
+size: 3
+
+requirements: [
+  graphite/45
+  silicon/30
+  titanium/10
+]
+
+plans: [
+    {
+        unit: cold
+        requirements: [
+            spore-pod/10
+            silicon/15
+        ]
+        time: 900
+    }
+]
+
+category: units
+
+consumes: {
+    power: 2
+}
+
+research: additive-reconstructor

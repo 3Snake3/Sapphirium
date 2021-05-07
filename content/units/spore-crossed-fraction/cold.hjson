@@ -1,0 +1,56 @@
+type: mech
+health: 200
+speed: 1
+hitSize: 8
+weapons: [{
+name: sap-weapon
+reload: 14
+ejectEffect: casing1
+shots: 5
+bullet: {
+type: BasicBulletType
+speed: 2.5
+damage: 9
+width: 7
+height: 9
+lifetime: 60
+shootEffect: shootSmall
+smokeEffect: shootSmallSmoke
+ammoMultiplier: 2
+backColor: 6d56bf
+frontColor: bf92f9
+status: sporeSlowed
+statusDuration: 60
+}
+}
+{
+name: sapper
+reload: 14
+x: 1
+y: 1
+rotate: true
+ejectEffect: none
+shootSound: sap
+bullet: {
+type: SapBulletType
+sapStrength: 0.1
+length: 40
+shootEffect: shootSmall
+hitColor: bf92f9
+despawnEffect: none
+width: 0.54
+lifetime: 45
+knockback: -1.24
+damage: 10
+status: sapped
+statusDuration: 65
+}
+}]
+research: {
+parent: special-ground-factory
+requirements: [
+lead/2000
+silicon/2600
+spore-pod/1800
+]
+}

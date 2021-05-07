@@ -1,0 +1,42 @@
+speed: 0.7
+hitSize: 20
+canBoost: true
+boostMultiplier: 1
+health: 200
+buildSpeed: 1.6
+armor: 6
+weapons: [{
+name: heal-blaster
+x: 6
+y: -1
+reload: 24
+alternate: false
+ejectEffect: none
+recoil: 2
+shootSound: lasershoot
+bullet: {
+type: LaserBoltBulletType
+shootEffect: shootHeal
+height: 12
+smokeEffect: hitLaser
+hitEffect: hitLaser
+despawnEffect: hitLaser
+lifetime: 30
+speed: 5.2
+damage: 30
+backColor: 98ffa9
+frontColor: ffffff
+collidesTeam: true
+healPercent: 6
+}
+}]
+research: {
+parent: nova
+requirements: [
+graphite/6000
+silicon/6000
+titanium/5000
+metaglass/3000
+plastanium/2500
+]
+}

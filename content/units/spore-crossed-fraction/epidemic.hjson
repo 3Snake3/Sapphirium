@@ -1,0 +1,113 @@
+speed: 0.40
+            hitSize: 25
+            rotateSpeed: 2.5
+            health: 12000
+            armor: 16
+            canDrown: false
+            mechFrontSway: 1
+            mechStepParticles: true
+            mechStepShake: 0.15
+            singleTarget: true
+range: 100
+            weapons: [{
+            name: epidemic-weapon
+                top: false
+                y: 1
+                x: 16
+                shootY: 8
+                reload: 65
+                recoil: 5
+                shake: 3
+                ejectEffect: casing3
+                shootSound: artillery
+                shots: 3
+                inaccuracy: 3
+                shotDelay: 4
+                shootStatus: sporeSlowed
+                shootStatusDuration: 80
+                bullet: {
+type: BasicBulletType
+damage: 50
+speed: 7
+                    width: 15
+                    height: 25
+                    lifetime: 45
+                    shootEffect: shootBig
+                    lightning: 2
+                    lightningLength: 6
+                    lightningColor: bf92f9
+                    lightningDamage: 20
+                    fragBullets: 2
+                    fragCone: 180
+                    hitEffect: sapExplosion
+                    despawnEffect: sapExplosion
+                    backColor: 6d56bf
+frontColor: bf92f9
+                    fragBullet: {
+                    type: ArtilleryBulletType
+                    width: 8
+                    height: 8
+                    lifetime: 60
+                    speed: 3
+                    damage: 10
+                    backColor: 6d56bf
+frontColor: bf92f9
+}
+                }
+                }
+                {
+                name: special-sap-weapon
+                x: 8.5
+                y: 8
+                reload: 35
+                recoil: 2
+                alternate: true
+                rotate: true
+                shootSound: sap
+                bullet: {
+                type: SapBulletType
+                width: 1
+                length: 300
+                sapStrength: 2
+                color: bf92f9
+                hitColor: bf92f9
+                damage: 30
+                status: sapped
+statusDuration: 85
+                }
+                }
+ {
+ name: point-weapon
+ x: 8.5
+ y: -7
+ reload: 65
+ alternate: true
+ recoil: 3
+ rotate: true
+ shootSound: railgun
+ bullet: {
+ type: RailBulletType
+ shootEffect: railShoot
+                    length: 250
+                    updateEffectSeg: 60
+                    pierceEffect: railHit
+                    updateEffect: railTrail
+                    hitEffect: massiveExplosion
+                    smokeEffect: shootBig
+                    damage: 180
+                    pierceDamageFactor: 0.5
+                }
+                }
+                ]
+                research: {
+parent: infection
+requirements: [
+lead/25000
+silicon/25000
+titanium/25000
+metaglass/23000
+thorium/23000
+spore-pod/18000
+plastanium/20000
+]
+}

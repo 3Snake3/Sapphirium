@@ -1,0 +1,35 @@
+canBoost: true
+speed: 0.5
+boostMultiplier: 0.95
+health: 250
+armor: 4
+weapons: [{
+name: blasters
+top: false
+reload: 14
+alternate: true
+ejectEffect: casing1
+bullet: {
+type: BasicBulletType
+width: 11
+height: 16
+lifetime: 40
+inaccuracy: 5
+backColor: ea8878
+frontColor: feb380
+speed: 4
+damage: 14
+status: burning
+pierceBuilding: true
+}
+}]
+research: {
+parent: dagger
+requirements: [
+graphite/8000
+creostone/8000
+titanium/7500
+metaglass/5500
+plastanium/3500
+]
+}

@@ -1,0 +1,72 @@
+speed: 0.39
+hitSize: 13
+rotateSpeed: 3
+targetAir: false
+health: 860
+armor: 6
+mechFrontSway: 0.55
+commandLimit: 4
+weapons: [{
+name: sap-artillery
+top: false
+x: 9
+y: 1
+reload: 60
+recoil: 4
+shake: 2
+ejectEffect: casing2
+shootSound: artillery
+shots: 2
+shotDelay: 2
+bullet: {
+type: ArtilleryBulletType
+sprite: shell
+hitEffect: sapExplosion
+speed: 2.5
+knockback: 0.8
+damage: 12
+lifetime: 110
+width: 14
+height: 14
+collides: true
+collidesTiles: false
+splashDamageRadius: 24
+splashDamage: 38
+backColor: 6d56bf
+frontColor: bf92f9
+hitShake: 2
+status: sporeSlowed
+statusDuration: 60
+fragBullets: 4
+fragLifeMin: 0.3
+fragCone: 360
+fragBullet: {
+type: ArtilleryBulletType
+speed: 2.3
+damage: 15
+hitEffect: sapExplosion
+lifetime: 60
+width: 10
+height: 10
+collidesTiles: false
+splashDamageRadius: 30
+splashDamage: 10
+backColor: 6d56bf
+frontColor: bf92f9
+hitShake: 1
+status: sapped
+statusDuration: 60
+}
+}
+}]
+research: {
+parent: flu
+requirements: [
+lead/8500
+silicon/8000
+titanium/8000
+metaglass/7800
+thorium/7500
+spore-pod/7000
+]
+}

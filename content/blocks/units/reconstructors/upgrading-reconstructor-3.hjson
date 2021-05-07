@@ -1,0 +1,34 @@
+type: Reconstructor
+
+size: 7
+constructTime: 6000
+liquidCapacity: 65
+requirements: [
+    lead/4000
+    silicon/2500
+    titanium/1800
+    thorium/1600
+    plastanium/1000
+    metaglass/1000
+    phase-fabric/1100
+]
+
+upgrades: [
+    [antumbra, twilight],
+    [scepter, power]
+]
+
+consumes: {
+    items: {
+        items: [
+            silicon/1000
+            titanium/900
+            plastanium/600
+            thorium/450
+        ]
+    }
+    power: 17
+    liquid: cryofluid/1.2
+}
+category: units
+research: upgrading-reconstructor-2

@@ -1,0 +1,35 @@
+type: AttributeSmelter
+outputItem: plastanium/8
+size: 3
+health: 1250
+hasPower: true
+hasItem: true
+hasLiquids: true
+craftTime: 120
+updateEffect: plasticburn
+attribute: oil
+flameColor: c2ff99
+itemCapacity: 30
+liquidCapacity: 35
+consumes: {
+power: 5.0
+ items: {
+  items: [
+   titanium/5
+   spore-pod/1
+  ]
+ }
+ liquid:{
+ liquid:oil
+ amount: 0.5
+ }
+}
+requirements: [
+ graphite/230
+ creostone/180
+ titanium/140
+ thorium/100
+ plastanium/120
+]
+category: crafting
+research: plastanium-compressor

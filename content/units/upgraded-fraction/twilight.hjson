@@ -1,0 +1,120 @@
+speed: 0.8
+            accel: 0.04
+            drag: 0.04
+            rotateSpeed: 1.9
+            flying: true
+            lowAltitude: true
+            health: 8500
+            armor: 18
+            engineOffset: 28
+            engineSize: 5.3
+            hitSize: 56
+            targetFlag: battery
+
+            weapons: [{
+            name: missiles-mount
+                y: 8
+                x: 17
+                reload: 130
+                ejectEffect: none
+                rotateSpeed: 4
+                shootCone: 100
+                shots: 8
+                spacing: 1
+                velocityRnd: 0.2
+                shotDelay: 2
+                alternate: true
+                inaccuracy: 10
+                bullet: {
+                type: MissileBulletType
+            speed: 4
+            damage: 25
+                width: 8
+                height: 8
+                shrinkY: 0
+                drag: -0.01
+                splashDamageRadius: 20
+                splashDamage: 30
+                ammoMultiplier: 4
+                lifetime: 50
+                hitEffect: blastExplosion
+                despawnEffect: blastExplosion
+                status: melting
+                statusDuration: 60
+                }
+                shootSound: bang
+                rotate: true
+                shadow: 6
+             }
+             {
+            name: missiles-mount
+                y: -8
+                x: 17
+                reload: 80
+                rotateSpeed: 4
+                ejectEffect: none
+                shots: 4
+                bullet: missileSurge
+                shootSound: missile
+                rotate: true
+                shootCone: 80
+                shotDelay: 2
+                spacing: 1
+                shadow: 6
+                }
+  {
+            name: large-bullet-mount
+                y: 10
+                x: 10
+                shootY: 10
+                reload: 12
+                shake: 1
+                rotateSpeed: 2
+                ejectEffect: casing1
+                shootSound: shootBig
+                rotate: true
+                shadow: 8
+                bullet: {
+type: BasicBulletType
+speed: 7
+damage: 50
+                    width: 15
+                    height: 23
+                    lifetime: 30
+                    shootEffect: shootBig
+                    }
+                    }
+                    {
+                    name: large-bullet-mount
+                y: -10
+                x: 10
+                shootY: 10
+                reload: 30
+                shake: 2
+                rotateSpeed: 3
+                ejectEffect: casing2
+                shootSound: shootBig
+                rotate: true
+                shadow: 8
+                bullet: {
+type: BasicBulletType
+speed: 7
+damage: 50
+                    width: 15
+                    height: 23
+                    lifetime: 30
+                    shootEffect: shootBig
+                    }
+                    }
+                    ]
+                    research: {
+parent: antumbra
+requirements: [
+titanium/30000
+creostone/30000
+metaglass/21000
+thorium/17000
+plastanium/13000
+phase-fabric/10000
+]
+}

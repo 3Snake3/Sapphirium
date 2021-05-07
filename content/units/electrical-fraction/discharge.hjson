@@ -1,0 +1,108 @@
+flying: true
+health: 900
+accel: 0.09
+armor: 12
+hitSize: 20
+drag: 0.09
+faceTarget: false
+circleTarget: true
+speed: 2
+range: 270
+weapons: [{
+name: discharge-bomber
+reload: 35
+alternate: true
+inaccuracy: 5
+shootSound: plasmadrop
+bullet: {
+type: BombBulletType
+width: 15
+height: 15
+speed: 6
+splashDamage: 30
+splashDamageRadius: 30
+backColor: f3e979
+frontColor: ffffff
+lightning: 6
+lightningLength: 12
+lightningColor: f3e979
+lightningDamage: 20
+hitSound: plasmaboom
+status: blasted
+statusDuration: 65
+}
+}
+{
+name: lightning-missiles
+x: 10
+y: 0
+reload: 45
+recoil: 2
+rotate: true
+alternate: true
+rotateSpeed: 3
+shootSound: missile
+shots: 3
+spacing: 3
+shotDelay: 2
+shootCone: 75
+inaccuracy: 5
+bullet: {
+type: MissileBulletType
+width: 12
+height: 12
+speed: 6
+damage: 10
+lifetime: 45
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+backColor: f3e979
+trailColor: f3e979
+frontColor: ffffff
+lightning: 6
+lightningLength: 7
+lightningColor: f3e979
+lightningDamage: 13
+weaveScale: 2
+weaveMag: 2
+keepVelocity: false
+drag: -0.001
+homingPower: 1
+homingRange: 10
+status: shocked
+statusDuration: 65
+}
+}
+]
+abilities: [{
+type: ForceFieldAbility
+radius: 75
+regen: 1
+max: 150
+cooldown: 120
+}
+{
+type: MoveLightningAbility
+damage: 15
+length: 12
+minSpeed: 0.9
+maxSpeed: 1.5
+offset: 0
+color: f3e979
+bullet: {
+type: LightningBulletType
+lightningColor: f3e979
+}
+bulletAngle: 90
+bulletSpread: 20
+}]
+research: {
+parent: lightning
+requirements: [
+silicon/28000
+creostone/20000
+titanium/17000
+metaglass/12000
+surge-alloy/23000
+]
+}

@@ -1,0 +1,36 @@
+type: Reconstructor
+
+size: 9
+constructTime: 15300
+liquidCapacity: 190
+requirements: [
+    lead/6500
+    silicon/6500
+    titanium/3000
+    thorium/3000
+    plastanium/1200
+    metaglass/1200
+    phase-fabric/800
+    surge-alloy/1000
+]
+
+upgrades: [
+    [eclipse, darkness],
+    [reign, world]
+]
+
+consumes: {
+    items: {
+        items: [
+            silicon/2000
+            plastanium/1200
+            surge-alloy/800
+            phase-fabric/450
+            thorium/200
+        ]
+    }
+    power: 30
+    liquid: cryofluid/3.5
+}
+category: units
+research: upgrading-reconstructor-3

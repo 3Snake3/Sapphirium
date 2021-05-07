@@ -1,0 +1,49 @@
+type: flying
+health: 600
+speed: 2
+accel: 0.08
+drag: 0.020
+flying: true
+range: 120
+hitSize: 15
+lowAltitude: true
+armor: 3
+
+engineOffset: 12
+engineSize: 3
+
+weapons: [{
+name: zenith-missiles
+reload: 30
+x: 7
+rotate: true
+velocityRnd: 0.2
+shootSound: missile
+bullet: {
+type: MissileBulletType
+speed: 5
+damage: 20
+width: 8
+height: 8
+shrinkY: 0
+drag: -0.003
+homingRange: 60
+keepVelocity: false
+splashDamageRadius: 15
+splashDamage: 5
+lifetime: 45
+trailColor: d06b53
+backColor: d06b53
+frontColor: ffa665
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+}
+}]
+research: {
+parent: horizon
+requirements: [
+graphite/8000
+silicon/6000
+metaglass/5000
+]
+}

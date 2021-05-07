@@ -1,0 +1,33 @@
+type: GenericCrafter
+drawer: DrawWeave
+size: 3
+craftTime: 100
+outputItem: phase-fabric/8
+craftEffect: smeltsmoke
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 30
+liquidCapacity: 30
+consumes: {
+power: 8
+liquid: water/0.5
+items: {
+items: [
+thorium/6
+sand/16
+]
+}
+}
+ambientSound: techloop
+ambientSoundVolume: 0.03
+category: crafting
+requirements: [
+creostone/300
+lead/230
+thorium/150
+plastanium/80
+phase-fabric/65
+]
+research: phase-weaver
+

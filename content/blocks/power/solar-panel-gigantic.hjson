@@ -1,0 +1,16 @@
+type: SolarGenerator
+size: 5
+health: 900
+hasPower: true
+powerProduction: 3.43
+requirements: [
+lead/500
+silicon/435
+titanium/430
+plastanium/345
+thorium/230
+phase-fabric/210
+creostone/130
+]
+category: power
+research: solar-panel-huge

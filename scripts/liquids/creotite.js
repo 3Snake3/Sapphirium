@@ -1,0 +1,9 @@
+const creotite = extendContent(Liquid, "creotite", {});
+creotite.temperature = 0.65;
+creotite.viscosity = 0.7;
+creotite.flammability = 0.95;
+creotite.explosiveness = 0.95;
+creotite.heatCapacity = 0.8;
+creotite.effect = StatusEffects.corroded;
+creotite.color = Color.valueOf("ff9382");
+creotite.lightColor = Color.valueOf("ffcac2");

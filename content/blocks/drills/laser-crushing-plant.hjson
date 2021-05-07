@@ -1,0 +1,32 @@
+type: Drill
+drillTime: 180
+tier: 10
+warmupSpeed: 0.02
+liquidBoostIntensity: 2.5
+liquidCapacity: 100
+rotateSpeed: 1
+hasPower: true
+drillEffect: mineHuge
+itemCapacity: 100
+heatColor: FEFF00
+drawRim: true
+size: 8
+consumes: {
+  power: 16
+    liquid: {
+              liquid: cryofluid
+              amount: 0.4
+              booster: true
+               optional: true
+            }
+  }
+requirements: [
+metaglass/1650
+  titanium/1000
+  silicon/1000
+  plastanium/650
+  creostone/700
+  phase-fabric/300
+]
+category: production
+research: blast-drill

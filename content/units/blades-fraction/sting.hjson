@@ -1,0 +1,86 @@
+flying: true
+drag: 0.06
+speed: 1.5
+hitSize: 20
+accel: 0.02
+engineOffset: 6
+health: 1000
+lowAltitude: true
+targetFlag: turret
+weapons: [{
+name: bowler
+x: 0
+y: 3
+reload: 110
+recoil: 3
+mirror: false
+shootSound: small-sphere-shoot
+shake: 2
+bullet: {
+type: BasicBulletType
+width: 15
+height: 15
+shootEffect: shootBig
+hitSound: small-sphere-hit
+hitShake: 2
+speed: 3
+damage: 60
+splashDamageRadius: 30
+splashDamage: 10
+lifetime: 60
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+hitSize: 45
+backColor: 6d56bf
+frontColor: bf92f9
+status: unmoving
+statusDuration: 65
+lightning: 2
+lightningLength: 7
+lightningDamage: 10
+}
+}
+{
+name: missiles
+x: 5
+y: -3
+reload: 90
+recoil: 4
+shotDelay: 2
+alternate: true
+rotate: true
+shake: 2
+shots: 6
+shootCone: 70
+spacing: 1
+inaccuracy: 8
+velocityRnd: 0.2
+shootSound: missile
+bullet: {
+type: MissileBulletType
+width: 10
+height: 10
+speed: 4.5
+damage: 10
+lifetime: 35
+keepVelocity: false
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+backColor: 6d56bf
+frontColor: bf92f9
+trailColor: 6d56bf
+splashDamage: 10
+splashDamageRadius: 20
+status: sporeSlowed
+statusDuration: 65
+}
+}]
+research: {
+parent: arrow
+requirements: [
+silicon/8000
+titanium/8000
+metaglass/6600
+plastanium/5000
+]
+}

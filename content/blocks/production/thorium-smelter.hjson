@@ -1,0 +1,28 @@
+type: GenericCrafter
+health: 450
+outputItem: thorium/1
+drawer: DrawGlow
+requirements: [
+lead/50
+titanium/20
+silicon/70
+graphite/50
+]
+consumes: {
+power: 0.7
+items: {
+items: [
+copper/1
+lead/2
+titanium/2
+]
+}
+}
+hasPower: true
+hasLiquids: false
+hasItems: true
+craftTime: 30
+craftEffect: smeltsmoke
+category: crafting
+research: silicon-smelter
+size: 2

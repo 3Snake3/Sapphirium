@@ -1,0 +1,36 @@
+ammoTypes: {
+metaglass: fragGlass
+ice-cube: {
+type: FlakBulletType
+speed: 5
+damage: 6
+ammoMultiplier: 4
+            shootEffect: shootSmall
+            reloadMultiplier: 0.8
+            width: 7
+            height: 9
+            hitEffect: flakExplosion
+            splashDamage: 40
+            splashDamageRadius: 18
+            status: freezing
+            fragBullet: {
+            type: BasicBulletType
+            speed: 4
+            damage: 6
+            width: 7
+            height: 14
+            shrinkY: 1
+            lifetime: 23
+            backColor: 00BCFF
+            frontColor: ffffff
+            despawnEffect: none
+        }
+            fragBullets: 5
+            explodeRange: 20
+            collidesGround: true
+        }
+            blast-compound: fragExplosive
+            plastanium: fragPlastic
+            surge-alloy: fragSurge
+            }
+            

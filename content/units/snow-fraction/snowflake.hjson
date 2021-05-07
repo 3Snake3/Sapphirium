@@ -1,0 +1,44 @@
+type: flying
+flying: true
+health: 180
+speed: 3
+accel: 0.06
+drag: 0.04
+targetAir: false
+circleTarget: true
+faceTarget: false
+hitSize: 8
+weapons: [{
+name: snow-bomber
+x: 0
+y: 0
+top: false
+reload: 15
+shots: 2
+alternate: true
+spacing: 4
+inaccuracy: 5
+shootCone: 180
+ignoreRotation: true
+ejectEffect: none
+shootY: 0
+bullet: {
+type: BombBulletType
+sprite: large-bomb
+splashDamage: 20
+splashDamageRadius: 20
+hitEffect: flakExplosion
+despawnEffect: flakExplosion
+backColor: 837de8
+frontColor: e8eaff
+status: freezing
+}
+}]
+research: {
+parent: special-air-factory
+requirements: [
+lead/1500
+silicon/1500
+ice-cube/650
+]
+}

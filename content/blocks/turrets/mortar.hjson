@@ -1,0 +1,82 @@
+type: ItemTurret
+requirements: [
+lead/50
+graphite/80
+silicon/50
+titanium/40
+]
+ammoTypes: {
+graphite: {
+type: ArtilleryBulletType
+width: 20
+height: 20
+lifetime: 35
+splashDamageRadius: 30
+splashDamage: 50
+collidesGround: true
+hitEffect: blastExplosion
+speed: 2
+}
+metaglass: {
+type: ArtilleryBulletType
+width: 18
+height: 18
+lifetime: 30
+splashDamageRadius: 20
+splashDamage: 20
+hitEffect: flakExplosion
+fragBullets: 4
+fragLifeMin: 0.2
+fragCone: 30
+speed: 3
+fragBullet: {
+type: BasicBulletType
+width: 8
+heigth: 8
+lifetime: 20
+damage: 5
+hitEffect: flakExplosion
+speed: 3
+}
+}
+ice-cube: {
+type: ArtilleryBulletType
+width: 18
+height: 18
+lifetime: 38
+splashDamageRadius: 30
+splashDamage: 25
+hitEffect: flakExplosion
+despawnEffect: flakExplosion
+fragBullets: 6
+fragLifeMin: 0.2
+fragCone: 30
+speed: 4
+frontColor: e8eaff
+backColor: 837de8
+fragBullet: {
+type: BasicBulletType
+width: 8
+heigth: 8
+lifetime: 30
+damage: 10
+hitEffect: flakExplosion
+despawnEffect: flakExplosion
+speed: 3
+frontColor: e8eaff
+backColor: 837de8
+}
+}
+}
+size: 3
+targetAir: false
+reloadTime: 100
+recoilAmount: 4
+minRange: 80
+range: 300
+inaccuracy: 3
+shootCone: 10
+health: 1000
+shootSound: bang
+category: turret
+research: ripple

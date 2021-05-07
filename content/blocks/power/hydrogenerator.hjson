@@ -1,0 +1,18 @@
+type: ThermalGenerator
+health: 750
+category: power
+research: thermal-generator
+requirements: [
+lead/70
+graphite/60
+metaglass/50
+silicon/40
+]
+powerProduction: 1.5
+generateEffect: redgeneratespark
+size: 2
+floating: true
+placeableLiquid: true
+ambientSound: hum
+ambientSoundVolume: 0.06
+attribute: water

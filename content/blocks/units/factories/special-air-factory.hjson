@@ -1,0 +1,46 @@
+type: UnitFactory
+
+health: 650
+size: 3
+
+requirements: [
+    lead/80
+    graphite/80
+    silicon/65
+]
+
+plans: [
+    {
+        unit: snowflake
+        requirements: [
+            silicon/20
+            ice-cube/15
+        ]
+        time: 600
+    }
+    {
+        unit: blade
+        requirements: [
+            lead/15
+            silicon/20
+            graphite/10
+        ]
+        time: 900
+    }
+    {
+        unit: spark
+        requirements: [
+            silicon/20
+            surge-alloy/10
+        ]
+        time: 1400
+    }
+]
+
+category: units
+
+consumes: {
+    power: 2
+}
+
+research: air-factory

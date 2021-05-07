@@ -1,0 +1,71 @@
+flying: true
+health: 300
+armor: 2
+accel: 0.07
+drag: 0.04
+rotateSpeed: 3
+speed: 2
+targetAir: false
+circleTarget: true
+faceTarget: false
+hitSize: 10
+weapons: [{
+name: snow-bomber
+x: 0
+y: 0
+reload: 20
+shots: 2
+spacing: 4
+inaccuracy: 5
+shootCone: 180
+ignoreRotation: true
+ejectEffect: none
+shootSound: none
+shootY: 0
+bullet: {
+type: BombBulletType
+sprite: large-bomb
+splashDamage: 30
+splashDamageRadius: 20
+hitEffect: flakExplosion
+despawnEffect: flakExplosion
+backColor: 497ac9
+frontColor: 5ce9ff
+hitColor: 5c9aff
+status: freezing
+statusDuration: 60
+}
+}
+{
+name: snow-cannons
+x: 5
+y: -2
+reload: 25
+alternate: true
+shots: 2
+shootCone: 48
+spacing: 3
+inaccuracy: 2
+shootSound: lasershoot
+rotate: true
+bullet: {
+type: LaserBoltBulletType
+damage: 20
+speed: 7
+drag: 0.001
+backColor: 497ac9
+frontColor: 5ce9ff
+hitColor: 5c9aff
+status: wet
+statusDuration: 60
+}
+}]
+research: {
+parent: snowflake
+requirements: [
+silicon/4000
+ice-cube/4000
+graphite/3000
+]
+}
+

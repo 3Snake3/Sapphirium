@@ -1,0 +1,146 @@
+flying: true
+health: 17000
+engineOffset: 38
+hitSize: 58
+engineSize: 7.3
+armor: 10
+rotateSpeed: 0.8
+lowAltitude: true
+speed: 0.6
+destructibleWreck: false
+targetFlag: core
+accel: 0.08
+drag: 0.08
+weapons: [{
+name: snowlaser-cannon-big
+x: 0
+y: -10
+mirror: false
+reload: 200
+recoil: 5
+rotate: true
+rotateSpeed: 1
+shootSound: laserblast
+shootY: 7
+shake: 10
+bullet: {
+type: LaserBulletType
+damage: 250
+length: 240
+width: 43
+lifetime: 55
+largeHit: true
+colors: ["837de8", "c1befa", "e8eaff"]
+shootEffect: shockwave
+status: freezing
+statusDuration: 200
+}
+}
+{
+name: snowlaser-cannon
+x: 30
+y: -10
+reload: 15
+recoil: 5
+rotate: true
+rotateSpeed: 2
+shootSound: laser
+shootY: 7
+shake: 6
+bullet: {
+type: LaserBulletType
+damage: 120
+length: 240
+colors: ["837de8", "c1befa", "e8eaff"]
+shootEffect: shockwave
+hitEffect: shockwave
+hitSound: laser
+fragBullets: 1
+fragCone: 30
+status: freezing
+statusDuration: 100
+fragBullet: {
+type: LaserBulletType
+damage: 70
+length: 100
+colors: ["837de8", "c1befa", "e8eaff"]
+}
+}
+}
+{
+name: snow-cannons-big
+x: 12
+y: 20
+reload: 20
+shots: 2
+shotDelay: 4
+alternate: true
+rotate: true
+recoil: 4
+shootSound: bang
+ejectEffect: casing3
+shake: 2
+bullet: {
+type: BasicBulletType
+width: 20
+height: 30
+damage: 40
+splashDamage: 30
+splashDamageRadius: 30
+lifetime: 35
+speed: 6
+hitSound: explosion
+shootEffect: shootBig
+hitEffect: flakExplosionBig
+despawnEffect: flakExplosionBig
+backColor: 837de8
+frontColor: e8eaff
+status: wet
+statusDuration: 75
+}
+}
+{
+name: snow-missiles
+x: 24
+y: 17
+reload: 20
+recoil: 3
+shootSound: shootBig
+spacing: 4
+inaccuracy: 4
+shake: 3
+bullet: {
+type: MissileBulletType
+width: 9
+height: 9
+speed: 7
+lifetime: 35
+damage: 20
+keepVelocity: false
+splashDamage: 30
+splashDamageRadius: 35
+homingPower: 3
+homingRange: 25
+hitEffect: shockwave
+despawnEffect: shockwave
+trailColor: 837de8
+backColor: 837de8
+frontColor: e8eaff
+status: freezing
+statusDuration: 100
+hitShake: 3
+}
+}]
+research: {
+parent: glacier
+requirements: [
+silicon/47000
+ice-cube/45000
+titanium/45000
+thorium/40000
+metaglass/37000
+plastanium/30000
+phase-fabric/28000
+surge-alloy/28000
+]
+}

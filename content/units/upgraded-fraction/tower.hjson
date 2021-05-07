@@ -1,0 +1,66 @@
+speed: 0.40
+hitSize: 20
+rotateSpeed: 4
+health: 900
+armor: 7
+mechFrontSway: 0.55
+canDrown: false
+canBoost: true
+boostMultiplier: 2
+targetAir: false
+commandLimit: 3
+weapons: [{
+name: artillery
+x: 9
+y: 1
+reload: 45
+recoil: 3
+top: false
+alternate: false
+spacing: 4
+inaccuracy: 8
+shootCone: 60
+shootSound: bang
+bullet: {
+type: ArtilleryBulletType
+speed: 3.2
+damage: 17
+lifetime: 90
+knockback: 0.8
+splashDamageRadius: 20
+splashDamage: 5
+width: 15
+height: 15
+collidesTiles: false
+hitShake: 3
+status: blasted
+statusDuration: 65
+}
+}
+{
+name: lancer
+x: 0
+y: 2
+reload: 75
+shake: 2
+shootSound: laser
+recoil: 2
+bullet: {
+type: LaserBulletType
+colors: ["FFD2AE", "E58956", "FFFFFF"]
+length: 120
+damage: 30
+shootEffect: shockwave
+smokeEffect: none
+}
+}]
+research: {
+parent: fortress
+requirements: [
+lead/30000
+graphite/28000
+creostone/25000
+titanium/25000
+thorium/20000
+]
+}

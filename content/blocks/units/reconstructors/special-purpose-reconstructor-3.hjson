@@ -1,0 +1,31 @@
+type: Reconstructor
+size: 7
+consumes: {
+  power: 9
+  liquid: water/0.6
+  items: {
+    items: [
+    silicon/1000
+    titanium/780
+    plastanium/500
+    ice-cube/200
+    phase-fabric/100
+    ]
+  }
+}
+constructTime: 5800
+requirements: [
+  silicon/900
+  titanium/700
+  thorium/650
+  plastanium/500
+  phase-fabric/100
+]
+upgrades: [
+[sting, sickle],
+ [ice-hail, glacier],
+ [infection, epidemic]
+ [discharge, tesla]
+]
+category: units
+research: special-purpose-reconstructor-2

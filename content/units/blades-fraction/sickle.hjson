@@ -1,0 +1,144 @@
+flying: true
+health: 8600
+drag: 0.04
+engineSize: 13
+engineOffset: 17
+hitSize: 55
+armor: 9
+rotateSpeed: 1.8
+lowAltitude: true
+accel: 0.04
+speed: 0.8
+targetFlag: generator
+weapons: [{
+name: sickle-swarmer
+x: 12
+y: 6
+shots: 6
+spacing: 5
+reload: 65
+shotDelay: 6
+inaccuracy: 6
+xRand: 6
+shootSound: missile
+rotate: true
+alternate: true
+rotateSpeed: 4
+bullet: {
+type: MissileBulletType
+width: 12
+height: 12
+lifetime: 47
+speed: 5
+damage: 10
+homingPower: 0.20
+homingRange: 80
+backColor: 6d56bf
+frontColor: bf92f9
+hitColor: bf92f9
+trailColor: 6d56bf
+drag: -0.003
+keepVelocity: false
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+velocityRnd: 0.3
+weaveScale: 6
+weaveMag: 2
+lightning: 2
+lightningLength: 7
+lightningDamage: 5
+lightningColor: bf92f9
+splashDamageRadius: 35
+splashDamage: 45
+status: sporeSlowed
+statusDuration: 65
+}
+}
+{
+name: laser-cannon
+mirror: false
+x: 0
+y: 0
+reload: 100
+recoil: 4
+shootCone: 90
+shootSound: laser
+shots: 3
+spacing: 4
+shootY: 9
+rotateSpeed: 2
+bullet: {
+type: LaserBulletType
+length: 220
+damage: 70
+colors: ["6d56bf", "bf92f9", "ffffff"]
+status: sapped
+statusDuration: 65
+}
+}
+{
+name: bowler
+x: 0
+y: 7
+reload: 100
+recoil: 5
+mirror: false
+shootSound: artillery
+shake: 4
+bullet: {
+type: BasicBulletType
+width: 30
+height: 30
+shootEffect: shootBig
+hitSound: explosion
+hitShake: 4
+speed: 2.5
+damage: 80
+splashDamageRadius: 40
+splashDamage: 20
+lifetime: 70
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+backColor: 6d56bf
+frontColor: bf92f9
+lightning: 4
+lightningLength: 15
+lightningDamage: 20
+lightningColor: bf92f9
+fragBullets: 4
+fragLifeMin: 0.3
+lightning: 6
+lightningLength: 15
+lightningDamage: 10
+lightningColor: bf92f9
+fragBullet: {
+type: ArtilleryBulletType
+width: 20
+height: 20
+hitShake: 2
+speed: 5
+damage: 8
+splashDamage: 20
+splashDamageRadius: 10
+lifetime: 60
+hitSize: 30
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+backColor: 6d56bf
+frontColor: bf92f9
+status: unmoving
+statusDuration: 70
+}
+}
+}]
+research: {
+parent: sting
+requirements: [
+silicon/15000
+titanium/15000
+thorium/15000
+metaglass/13000
+plastanium/10000
+phase-fabric/1000
+]
+}

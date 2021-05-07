@@ -1,0 +1,59 @@
+type: flying
+flying: true
+health: 300
+armor: 3
+speed: 2
+hitSize: 10
+faceTarget: false
+circleTarget: true
+targetFlag: battery
+weapons: [{
+name: arrow-blasters
+x: 3
+y: 1
+reload: 20
+recoil: 2
+shootSound: lasershoot
+alternate: true
+rotate: true
+bullet: {
+type: LaserBoltBulletType
+speed: 5
+damage: 10
+backColor: 6d56bf
+frontColor: bf92f9
+hitColor: bf92f9
+}
+}
+{
+name: bomb-launcher
+reload: 60
+shots: 5
+shootSound: missile
+spacing: 15
+inaccuracy: 5
+alternate: true
+bullet: {
+type: BombBulletType
+width: 8
+height: 8
+speed: 4
+damage: 10
+splashDamageRadius: 20
+splashDamage: 5
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+backColor: 6d56bf
+frontColor: bf92f9
+status: sporeSlowed
+statusDuration: 65
+}
+}]
+research: {
+parent: blade
+requirements: [
+lead/4000
+silicon/4000
+graphite/2500
+]
+}

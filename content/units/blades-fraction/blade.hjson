@@ -1,0 +1,39 @@
+type: flying
+flying: true
+health: 120
+armor: 2
+speed: 2.5
+circleTarget: true
+range: 140
+hitSize: 10
+weapons: [{
+name: blade-guns
+x: 3
+y: 0
+reload: 10
+recoil: 2
+shotDelay: 2
+shots: 2
+alternate: true
+spacing: 3
+inaccuracy: 3
+shootSound: shootSnap
+bullet: {
+type: BasicBulletType
+width: 7
+height: 10
+damage: 30
+speed: 5
+lifetime: 35
+shootEffect: shootSmall
+backColor: 6d56bf
+frontColor: bf92f9
+}
+}]
+research: {
+parent: special-air-factory
+requirements: [
+lead/2000
+silicon/2000
+]
+}
