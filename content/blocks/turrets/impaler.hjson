@@ -4,7 +4,7 @@ chargeTime: 40
 chargeMaxDelay: 30
 chargeEffects: 7
 recoilAmount: 3
-range: 350
+range: 290
 cooldown: 0.03
 powerUse: 8
 shootShake: 3
