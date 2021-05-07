@@ -107,6 +107,7 @@ vano.health = 200;
 vano.engineSize = 1.8;
 vano.engineOffSet = 5.7;
 vano.range = 60;
+vano.itemCapacity = 40;
 vano.isCounted = false;
 vano.ammoType = AmmoTypes.powerLow;
 vano.mineTier = 4;
