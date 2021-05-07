@@ -1,3 +1,5 @@
+![](https://github.com/3Snake3/Pictures/blob/master/icon3.png)
+
 ENG:
 This mod adds a lot of additional content, like improved versions of vanilla factories,
 which give out a much larger amount of resources, however, and require more for this.
