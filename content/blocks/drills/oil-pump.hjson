@@ -7,7 +7,7 @@ liquidCapacity: 30
 rotateSpeed: 1.5
 attribute: oil
 consumes: {
-power: 3
+power: 2
 }
 requirements: [
 copper/70
