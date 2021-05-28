@@ -39,9 +39,6 @@ upgrades: [
   [
   arrow, crown
   ]
-  [
-  star, zenith
-  ]
 ]
 category: units
 research: additive-reconstructor
