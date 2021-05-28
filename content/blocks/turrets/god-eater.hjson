@@ -1,11 +1,11 @@
 type: PowerTurret
 requirements: [
-silicon/3000
-titanium/1600
-thorium/1000
-plastanium/650
-creostone/500
-surge-alloy/350
+silicon/1600
+titanium/1450
+thorium/1200
+plastanium/950
+creostone/600
+surge-alloy/450
 phase-fabric/300
 ]
 range: 550
@@ -17,7 +17,7 @@ reloadTime: 600
 cooldown: 600
 powerUse: 21
 shootShake: 14
-liquidCapacity: 30
+liquidCapacity: 40
 rotateSpeed: 1.5
 shootEffect: greenLaserCharge
 smokeEffect: none
@@ -54,27 +54,35 @@ collidesTeam: true
 sideAngle: 15
 sideWidth: 0
 sideLength: 0
-status: unmoving
-statusDuration: 150
 healPercent: 50
 hitSound: spark
 fragBullets: 5
 fragCone: 100
+status: {
+name: stunned
+speedMultiplier: 0.001
+healthMultiplier: 0.9
+disarm: true
+}
+statusDuration: 150
 fragBullet: {
 type: LightningBulletType
 lightningColor: 98ffa9
 lightningLength: 25
 healPercent: 30
 damage: 100
+collidesAir: true
+collidesGround: true
+collidesTeam: true
 }
 }
-coolantMultiplier: 0.05
+coolantMultiplier: 1.5
 coolantUsage: 4
 consumes: {
 liquid: {
-liquid: cryofluid
-amount: 0.5
-optional: true
+liquid: ledonite
+amount: 0.6
+optional: false
 booster: true
 }
 }

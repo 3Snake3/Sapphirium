@@ -1,23 +1,22 @@
 type: Drill
-drillTime: 180
+drillTime: 200
 tier: 10
-warmupSpeed: 0.02
+warmupSpeed: 0.03
 liquidBoostIntensity: 2.5
 liquidCapacity: 100
 rotateSpeed: 1
 hasPower: true
 drillEffect: mineHuge
-itemCapacity: 100
+itemCapacity: 500
 heatColor: FEFF00
 drawRim: true
 size: 8
 consumes: {
   power: 16
     liquid: {
-              liquid: cryofluid
+              liquid: ledonite
               amount: 0.4
               booster: true
-               optional: true
             }
   }
 requirements: [

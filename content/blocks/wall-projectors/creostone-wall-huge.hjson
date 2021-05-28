@@ -1,0 +1,17 @@
+health: 7200
+size: 3
+radius: 30
+hasLiquids: false
+shieldHealth: 1000
+cooldownNormal: 1
+phaseRadiusBoost: 150
+phaseShieldBoost: 800
+placeableLiquid: true
+category: defense
+researchCostMultiplier: 2.5
+buildCostMultiplier: 2.5
+requirements: [
+creostone/70
+silicon/30
+]
+research: creotite-wall-turret

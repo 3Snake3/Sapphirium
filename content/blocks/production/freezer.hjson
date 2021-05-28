@@ -1,13 +1,8 @@
 craftTime: 80
-outputItem: ice-cube/3
 craftEffect: smeltsmoke
 hasPower: true
 hasItems: true
 hasLiquids: true
-consumes: {
-power: 0.3
-liquid: water/0.2
-}
 category: crafting
 requirements: [
 lead/45

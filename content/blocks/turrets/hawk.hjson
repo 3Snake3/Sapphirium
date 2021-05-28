@@ -36,13 +36,5 @@ damage: 200
 collidesAir: true
 collidesGround: false
 }
-consumes: {
-liquid: {
-liquid: cryofluid
-amount: 0.3
-optional: true
-booster: true
-}
-}
 category: turret
 research: sparrow

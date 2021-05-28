@@ -1,0 +1,11 @@
+type: Conveyor
+health: 85
+speed: 0.13
+displayedSpeed: 17.8
+requirements: [
+graphite/1
+titanium/1
+creostone/1
+]
+category: distribution
+research: titanium-conveyor

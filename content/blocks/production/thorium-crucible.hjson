@@ -1,4 +1,4 @@
-type: AttributeSmelter
+type: GenericCrafter
 outputItem: thorium/8
 requirements: [
 graphite/110
@@ -22,7 +22,7 @@ hasPower: true
 hasLiquids: true
 hasItems: true
 craftTime: 120
-attribute: heat
+drawer: DrawGlow
 itemCapacity: 20
 craftEffect: smeltsmoke
 category: crafting

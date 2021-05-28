@@ -16,10 +16,11 @@ type: LightningBulletType
 damage: 50
 lightningLength: 35
 lightningColor: f3e979
+status: shocked
+statusDuration: 120
 }
 reloadTime: 40
 shots: 4
-shootY: 3
 shootCone: 60
 rotateSpeed: 7
 powerUse: 6.5

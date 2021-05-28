@@ -1,9 +1,8 @@
 type: SingleTypeGenerator
 requirements: [
-copper/80
-lead/90
-graphite/50
-silicon/70
+copper/65
+lead/60
+graphite/45
 ]
 size: 2
 category: power
@@ -14,10 +13,10 @@ copper/2
 ]
 }
 }
-itemDuration: 120
-powerProduction: 2
+itemDuration: 110
+powerProduction: 2.5
 hasLiquids: false
 hasItems: true
 ambientSound: steam
 ambientSoundVolume: 0.04
-research: steam-generator
+research: combustion-generator

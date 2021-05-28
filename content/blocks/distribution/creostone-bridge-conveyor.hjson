@@ -1,0 +1,13 @@
+type: BufferedItemBridge
+health: 100
+range: 7
+placeableLiquid: true
+speed: 80
+bufferCapacity: 20
+requirements: [
+copper/9
+lead/9
+creostone/7
+]
+category: distribution
+research: creotite-converter

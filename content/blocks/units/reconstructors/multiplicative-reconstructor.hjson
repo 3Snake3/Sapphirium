@@ -6,7 +6,10 @@ upgrades: [
     trident, mega
   ]
   [
-   horizon, star
+   horizon, zenith
+  ]
+  [
+   star, zenith
   ]
   [
     atrax, spiroct

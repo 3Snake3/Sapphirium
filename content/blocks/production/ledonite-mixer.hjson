@@ -1,0 +1,34 @@
+type: LiquidConverter
+drawer: DrawMixer
+requirements: [
+lead/95
+silicon/80
+graphite/70
+titanium/65
+creostone/45
+metaglass/30
+]
+outputLiquid: ledonite/0.4
+craftTime: 140
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+outputsLiquid: true
+consumes: {
+power: 4.7
+liquid: cryofluid/0.4
+items: {
+items: [
+ice-cube/4
+titanium/4
+]
+}
+}
+health: 1000
+itemCapacity: 10
+liquidCapacity: 48
+rotate: false
+solid: true
+category: crafting
+research: cryofluid-mixer

@@ -19,6 +19,7 @@ requirements: [
 ]
 upgrades: [
   [arrow, sting]
+  [horizon, star]
   [chill, ice-hail]
   [flu, infection]
   [lightning, discharge]

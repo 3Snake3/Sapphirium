@@ -1,0 +1,29 @@
+type: PowerTurret
+health: 3000
+recoilAmount: 1.5
+reloadTime: 70
+range: 85
+shootCone: 15
+targetAir: true
+ammoUseEffect: none
+powerUse: 0.70
+size: 2
+shootSound: release
+shootEffect: shootLiquid
+shootType: {
+type: LiquidBulletType
+liquid: cryofluid
+puddleSize: 8
+orbSize: 6
+damage: 8
+knockback: 2
+status: freezing
+statusDuration: 200
+}
+requirements: [
+cryocube/20
+silicon/20
+lead/5
+]
+category: defense
+research: cryocube-wall

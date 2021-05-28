@@ -1,4 +1,4 @@
-type: AttributeSmelter
+type: GenericCrafter
 outputItem: plastanium/8
 size: 3
 health: 1250
@@ -7,10 +7,12 @@ hasItem: true
 hasLiquids: true
 craftTime: 120
 updateEffect: plasticburn
-attribute: oil
-flameColor: c2ff99
+craftEffect: formsmoke
 itemCapacity: 30
 liquidCapacity: 35
+ambientSound: techloop
+ambientSoundVolume: 0.22
+drawer: DrawGlow
 consumes: {
 power: 5.0
  items: {
