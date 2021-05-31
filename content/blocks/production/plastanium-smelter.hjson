@@ -3,7 +3,7 @@ outputItem: plastanium/8
 size: 3
 health: 1250
 hasPower: true
-hasItem: true
+hasItems: true
 hasLiquids: true
 craftTime: 120
 updateEffect: plasticburn
