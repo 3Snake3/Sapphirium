@@ -1,0 +1,20 @@
+ammoTypes: {
+water: heavyWaterShot
+slag: heavySlagShot
+cryofluid: heavyCryoShot
+oil: heavyOilShot
+creotite: {
+type: LiquidBulletType
+lifetime: 49
+speed: 4
+knockback: 1.5
+puddleSize: 8
+orbSize: 4
+ammoMultiplier: 0.5
+status: corroded
+statusDuration: 220
+drag: 0.001
+damage: 4
+liquid: creotite
+}
+}

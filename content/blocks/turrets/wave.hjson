@@ -1,0 +1,14 @@
+ammoTypes: {
+water: waterShot
+slag: slagShot
+cryofluid: cryoShot
+oil: oilShot
+creotite: {
+type: LiquidBulletType
+status: corroded
+statusDuration: 100
+drag: 0.01
+damage: 2
+liquid: creotite
+}
+}
