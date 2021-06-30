@@ -1,0 +1,96 @@
+type: ItemTurret
+size: 3
+category: turret
+research: cyclone
+requirements: [
+lead/125
+silicon/100
+graphite/80
+plastanium/65
+thorium/65
+]
+reloadTime: 170
+rotateSpeed: 3
+recoilAmount: 6
+shootShake: 3
+range: 380
+shootSound: artillery
+ammoPerShot: 2
+targetGround: false
+targetAir: true
+ammoTypes: {
+thorium: {
+sprite: adc-missile-large
+width: 20
+height: 23
+speed: 7
+lifetime: 54
+damage: 200
+splashDamage: 120
+splashDamageRadius: 80
+hitShake: 3
+hitSound: explosion
+hitEffect: massiveExplosion
+despawnEffect: massiveExplosion
+shootEffect: shootBig
+status: blasted
+statusDuration: 120
+trailChance: 0.9
+trailMult: 3
+trailSize: 6
+trailEffect: missileTrail
+fragBullets: 4
+fragLifeMin: 0.4
+fragCone: 75
+makeFire: true
+collidesGround: false
+ammoMultiplier: 4
+knockback: 2
+fragBullet: {
+type: MissileBulletType
+width: 12
+height: 16
+speed: 6
+collidesGround: false
+lifetime: 80
+homingPower: 0.60
+homingRange: 45
+damage: 40
+splashDamage: 80
+splashDamageRadius: 45
+drag: -0.003
+weaveMag: 2
+weaveScale: 4
+status: melting
+statusDuration: 130
+makeFire: true
+}
+}
+silicon: {
+sprite: adc-missile-large
+width: 21
+height: 23
+speed: 6.5
+lifetime: 54
+damage: 150
+splashDamage: 80
+splashDamageRadius: 45
+hitShake: 3
+hitSound: explosion
+hitEffect: massiveExplosion
+despawnEffect: massiveExplosion
+shootEffect: shootBig
+status: unmoving
+statusDuration: 60
+trailChance: 0.9
+trailMult: 3
+trailSize: 6
+trailEffect: missileTrail
+makeFire: true
+collidesGround: false
+homingPower: 0.75
+homingRange: 70
+reloadMultiplier: 0.85
+ammoMultiplier: 5
+}
+}

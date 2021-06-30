@@ -1,0 +1,7 @@
+type: Wall
+health: 800
+category: defense
+requirements: [
+coal/10
+]
+research: cinderblock-wall-turret

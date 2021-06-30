@@ -1,0 +1,27 @@
+type: Separator
+size: 3
+category: crafting
+research: disassembler
+requirements: [
+creostone/170
+silicon/100
+graphite/70
+titanium/60
+thorium/45
+cinderblock/35
+]
+consumes: {
+liquid: creotite/0.12
+power: 6
+}
+results: [
+coal/6
+pyratite/3
+blast-compound/2
+creostone/2
+spore-pod/1
+]
+spinnerSpeed: 7
+craftTime: 20
+hasPower: true
+itemCapacity: 40

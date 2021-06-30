@@ -1,0 +1,31 @@
+type: AttributeSmelter
+attribute: water
+health: 2000
+craftTime: 200
+outputItem: globium/3
+craftEffect: smeltsmoke
+hasPower: true
+itemCapacity: 20
+boostScale: 0.20
+consumes: {
+power: 5
+liquid: ledonite/0.2
+items: {
+items: [
+lead/7
+titanium/5
+thorium/3
+]
+}
+}
+size: 3
+category: crafting
+requirements: [
+creostone/200
+titanium/160
+thorium/100
+plastanium/75
+metaglass/45
+silicon/25
+]
+research: creotite-converter

@@ -27,17 +27,17 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
             power: 0.6
           },
           output: {
-            items: ["adc-slag-cube/4"]
+            items: ["adc-cinderblock/4"]
           },
           craftTime: 120
         },
         {
           input: {
-            liquids: ["oil/4"],
-            power: 0.7
+            liquids: ["oil/10"]
           },
           output: {
-            items: ["adc-oil-cube/6"]
+            items: ["coal/7"],
+            power: 3
           },
           craftTime: 160
         },
@@ -66,7 +66,6 @@ const creostoneProjector = new JavaAdapter(ForceProjector, {
   }
 }, "creostone-wall-huge");
 
-creostoneProjector.consumes.add(new ConsumeLiquidFilter(liquid => liquid.temperature <= 1 && liquid.flammability < 1.3, 0.5)).boost().update(false);
 creostoneProjector.consumes.item(Items.phaseFabric, 1).boost().update(false);
 creostoneProjector.consumes.power(2);
 

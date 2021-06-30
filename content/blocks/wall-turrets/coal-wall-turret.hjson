@@ -1,0 +1,26 @@
+type: PowerTurret
+health: 6700
+size: 2
+reloadTime: 20
+recoilAmount: 3
+shootShake: 1
+powerUse: 1
+range: 75
+shootSound: shotgun
+shootCone: 30
+shootType: {
+type: ShrapnelBulletType
+length: 75
+width: 13
+damage: 20
+fromColor: 61615b
+toColor: 303030
+status: tarred
+statusDuration: 80
+}
+category: defense
+requirements: [
+coal/20
+silicon/10
+]
+research: coal-wall

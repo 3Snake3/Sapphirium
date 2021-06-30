@@ -3,12 +3,12 @@ health: 850
 size: 2
 ammoTypes: {
 sand: {
-type: BasicBulletType
-width: 17
-height: 17
+width: 12
+height: 12
 speed: 6
 lifetime: 30
 damage: 17
+sprite: adc-sand-bullet
 splashDamageRadius: 20
 splashDamage: 20
 hitEffect: flakExplosion
@@ -34,9 +34,9 @@ pierceCap: 1
 }
 }
 creostone: {
-type: BasicBulletType
-width: 18
-height: 18
+sprite: adc-sand-bullet
+width: 13
+height: 13
 speed: 5.5
 lifetime: 38
 damage: 25

@@ -1,0 +1,12 @@
+type: Conduit
+health: 320
+liquidCapacity: 40
+liquidPressure: 2
+placeableLiquid: true
+requirements: [
+globium/2
+metaglass/2
+plastanium/2
+]
+category: liquid
+research: creostone-conduit

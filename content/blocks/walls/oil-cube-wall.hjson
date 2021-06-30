@@ -1,8 +1,0 @@
-type: Wall
-health: 800
-category: defense
-requirements: [
-oil-cube/10
-silicon/5
-]
-research: slag-cube-wall-turret

@@ -1,0 +1,94 @@
+type: ItemTurret
+size: 2
+category: turret
+research: salvo
+requirements: [
+copper/125
+graphite/95
+titanium/70
+metaglass/40
+]
+range: 180
+ammoTypes: {
+copper: {
+sprite: adc-dartt
+width: 7
+height: 9
+damage: 9
+speed: 2.5
+lifetime: 72
+shootEffect: shootSmall
+smokeEffect: shootSmallSmoke
+ammoMultiplier: 2
+}
+graphite: {
+sprite: adc-dartt
+width: 9
+height: 12
+damage: 20
+speed: 3.5
+lifetime: 51
+reloadMultiplier: 0.6
+ammoMultiplier: 4
+}
+thorium: {
+sprite: adc-dartt
+width: 10
+height: 13
+damage: 32
+speed: 4
+lifetime: 45
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+ammoMultiplier: 4
+}
+silicon: {
+sprite: adc-dartt
+width: 7
+height: 9
+damage: 15
+speed: 3
+lifetime: 60
+reloadMultiplier: 1.7
+ammoMultiplier: 5
+homingPower: 0.10
+}
+pyratite: {
+sprite: adc-dartt
+width: 10
+height: 12
+damage: 12
+speed: 3.2
+lifetime: 56.25
+frontColor: f8ad42
+backColor: f68021
+status: burning
+makeFire: true
+inaccuracy: 4
+}
+creostone: {
+sprite: adc-dartt
+width: 12
+height: 14
+damage: 37
+speed: 5
+lifetime: 36
+frontColor: eb8778
+backColor: bd5553
+status: corroded
+homingPower: 0.20
+inaccuracy: 3
+pierce: true
+pierceCap: 2
+ammoMultiplier: 6
+reloadMultiplier: 1.4
+}
+}
+reloadTime: 8
+recoilAmount: 3
+rotateSpeed: 8
+health: 960
+shootShake: 1
+ammoEjectBack: 1
+ammoUseEffect: casing2
+shootSound: shootBig
