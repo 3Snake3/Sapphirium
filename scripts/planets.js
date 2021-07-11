@@ -299,12 +299,12 @@ SandusGenerator.arr = [
     [Blocks.snow, Blocks.stone, Blocks.snow, Blocks.dacite, Blocks.snow, Blocks.snow, Blocks.ice, Blocks.stone, Blocks.darksand, Blocks.water, Blocks.darksand, Blocks.ice, Blocks.dacite],
     [Blocks.ice, Blocks.dacite, Blocks.snow, Blocks.stone, Blocks.snow, Blocks.ice, Blocks.snow, Blocks.stone, Blocks.iceSnow, Blocks.darksandWater, Blocks.darksandWater, Blocks.water, Blocks.stone],  
     [Blocks.stone, Blocks.dacite, Blocks.stone, Blocks.darksand, Blocks.snow, Blocks.stone, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.darksandTaintedWater, Blocks.darksand, Blocks.stone, Blocks.darksand],  
-    [Blocks.darksandWater, Blocks.darksand, purelyWater, Blocks.darksandWater, Blocks.snow, Blocks.snow, Blocks.water, Blocks.darksand, Blocks.darksand, Blocks.snow, Blocks.darksand, Blocks.water, Blocks.dacite],  
-    [Blocks.darksandTaintedWater, Blocks.water, Blocks.snow, Blocks.snow, Blocks.dacite, Blocks.darksandWater, Blocks.darksandTaintedWater, Blocks.stone, Blocks.darksandWater, Blocks.stone, Blocks.snow, Blocks.darksand, Blocks.ice],  
+    [Blocks.darksandWater, Blocks.darksand, Blocks.darksandWater, Blocks.darksandWater, Blocks.snow, Blocks.snow, Blocks.water, Blocks.darksand, Blocks.darksand, Blocks.snow, Blocks.darksand, Blocks.water, Blocks.dacite],  
+    [Blocks.darksandTaintedWater, Blocks.water, Blocks.darksand, Blocks.snow, Blocks.dacite, Blocks.darksandWater, Blocks.darksandTaintedWater, Blocks.stone, Blocks.darksandWater, Blocks.stone, Blocks.snow, Blocks.darksand, Blocks.ice],  
     [Blocks.darksandTaintedWater, Blocks.darksandWater, Blocks.darksand, Blocks.snow, Blocks.darksandWater, Blocks.darksandTaintedWater, Blocks.snow, Blocks.water, Blocks.stone, Blocks.darksand, Blicks.stone, Blocks.iceSnow, Blocks.snow],  
     [Blocks.water, Blocks.darksandTaintedWater, Blocks.snow, Blocks.water, Blocks.ice, Blocks.darksand, Blocks.darksand, Blocks.darksand, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.stone],
-    [Blocks.darksandWater, Blocks.water, Blocks.snow, whiteStoneFloor, Blocks.snow, Blocks.stone, Blocks.darksand, Blocks.iceSnow, Blocks.snow, Blocks.snow, whiteStoneFloor, Blocks.snow, Blocks.ice], 
-    [Blocks.darksand, Block.darksand, Blocks.stone, Blocks.stone, Blocks.darksand, Blocks.ice, purelyWater, Blocks.stone, Blocks.ice, Blocks.darksand, Blocks.stone, Blocks.stone, Blocks.dacite], 
+    [Blocks.darksandWater, Blocks.water, Blocks.snow, Blocks.darksand, Blocks.snow, Blocks.stone, Blocks.darksand, Blocks.iceSnow, Blocks.snow, Blocks.snow, Blocks.dacite, Blocks.snow, Blocks.ice], 
+    [Blocks.darksand, Block.darksand, Blocks.stone, Blocks.stone, Blocks.darksand, Blocks.ice, Blocks.darksand, Blocks.stone, Blocks.ice, Blocks.darksand, Blocks.stone, Blocks.stone, Blocks.dacite], 
     [Blocks.darksand, Blocks.snow, Blocks.stone, Blocks.ice, Blocks.ice, Blocks.stone, Blocks.dacite, Blocks.dacite, Blocks.ice, Blocks.iceSnow, Blocks.iceSnow, Blocks.ice, Blocks.snow],
     [Blocks.ice, Blocks.snow, Blocks.snow, Blocks.stone, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.dacite, Blocks.snow, Blocks.ice, Blocks.snow]
 ];
