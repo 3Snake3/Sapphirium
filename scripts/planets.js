@@ -313,7 +313,7 @@ SandusGenerator.rid = new Packages.arc.util.noise.RidgedPerlin(1, 2);
 SandusGenerator.basegen = new BaseGenerator();
 SandusGenerator.scl = 9.7823310;
 SandusGenerator.waterOffset = 0.05;
-SandusGenerator.water = 3 / CarputoGenerator.arr[0].length;
+SandusGenerator.water = 3 / SandusGenerator.arr[0].length;
 
 const Sandus = extend(Planet, "sandus", Planets.sun, 3, 1, {});
 
