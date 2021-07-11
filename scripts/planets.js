@@ -1,6 +1,6 @@
 ///CONST///
 
-isDev = true;
+let isDev = true;
 
 ///FUNCTIONS///
 
