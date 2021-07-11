@@ -36,7 +36,6 @@ waveCreotite.status = statuses.superMelting;
 waveCreotite.knockback = 0.9;
 waveCreotite.pierceCap = 12;
 waveCreotite.pierce = true;
-waveCreotite.liquid = creotiteLiquid;
 
 const tsunamiCreotite = extend(LiquidBulletType, {});
 tsunamiCreotite.speed = 5;
@@ -45,11 +44,13 @@ tsunamiCreotite.lifetime = 54;
 tsunamiCreotite.knockback = 1.09;
 tsunamiCreotite.pierceCap = 20;
 tsunamiCreotite.pierce = true;
-tsunamiCreotite.liquid = creotiteLiquid;
 
 Events.on(ClientLoadEvent, cons(e=>{
    const creotiteLiquid = Vars.content.getByName(ContentType.liquid, "adc-creotite");
   
+   waveCreotite.liquid = creotiteLiquid;
+   tsunamiCreotite.liquid = creotiteLiquid;
+
    Blocks.wave.ammo(
       Liquids.water, Bullets.waterShot, 
       Liquids.slag, Bullets.slagShot, 
