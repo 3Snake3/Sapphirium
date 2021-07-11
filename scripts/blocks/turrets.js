@@ -30,7 +30,6 @@ spear.buildingDamageMultiplier = 0.15;
 const impaler = extendContent(PowerTurret, "impaler", {});
 impaler.shootType = spear;
 
-const creotiteLiquid = Vars.content.getByName(ContentType.liquid, "adc-creotite");
 const waveCreotite = extend(LiquidBulletType, {});
 waveCreotite.speed = 3;
 waveCreotite.status = statuses.superMelting;
@@ -38,12 +37,6 @@ waveCreotite.knockback = 0.9;
 waveCreotite.pierceCap = 12;
 waveCreotite.pierce = true;
 waveCreotite.liquid = creotiteLiquid;
-Blocks.wave.ammo(
-Liquids.water, Bullets.waterShot, 
-Liquids.slag, Bullets.slagShot, 
-Liquids.oil, Bullets.oilShot, 
-Liquids.cryofluid, Bullets.cryoShot, 
-creotiteLiquid, waveCreotite);
 
 const tsunamiCreotite = extend(LiquidBulletType, {});
 tsunamiCreotite.speed = 5;
@@ -53,9 +46,24 @@ tsunamiCreotite.knockback = 1.09;
 tsunamiCreotite.pierceCap = 20;
 tsunamiCreotite.pierce = true;
 tsunamiCreotite.liquid = creotiteLiquid;
-Blocks.tsunami.ammo(
-Liquids.water, Bullets.heavyWaterShot, 
-Liquids.slag, Bullets.heavySlagShot, 
-Liquids.oil, Bullets.heavyOilShot, 
-Liquids.cryofluid, Bullets.heavyCryoShot, 
-creotiteLiquid, tsunamiCreotite);
+
+Events.on(ClientLoadEvent, cons(e=>{
+   const creotiteLiquid = Vars.content.getByName(ContentType.liquid, "adc-creotite");
+  
+   Blocks.wave.ammo(
+      Liquids.water, Bullets.waterShot, 
+      Liquids.slag, Bullets.slagShot, 
+      Liquids.oil, Bullets.oilShot, 
+      Liquids.cryofluid, Bullets.cryoShot, 
+      creotiteLiquid, waveCreotite
+   );
+
+   Blocks.tsunami.ammo(
+      Liquids.water, Bullets.heavyWaterShot, 
+      Liquids.slag, Bullets.heavySlagShot, 
+      Liquids.oil, Bullets.heavyOilShot, 
+      Liquids.cryofluid, Bullets.heavyCryoShot, 
+      creotiteLiquid, tsunamiCreotite
+   );
+
+}));
