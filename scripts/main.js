@@ -1,7 +1,7 @@
+require("planets");
+
 require("blocks/blocks");
 require("blocks/turrets");
 require("statuses/statuses");
-
-require("planets");
 
 require("blib");
