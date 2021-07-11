@@ -301,7 +301,7 @@ SandusGenerator.arr = [
     [Blocks.stone, Blocks.dacite, Blocks.stone, Blocks.darksand, Blocks.snow, Blocks.stone, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.darksandTaintedWater, Blocks.darksand, Blocks.stone, Blocks.darksand],  
     [Blocks.darksandWater, Blocks.darksand, Blocks.darksandWater, Blocks.darksandWater, Blocks.snow, Blocks.snow, Blocks.water, Blocks.darksand, Blocks.darksand, Blocks.snow, Blocks.darksand, Blocks.water, Blocks.dacite],  
     [Blocks.darksandTaintedWater, Blocks.water, Blocks.darksand, Blocks.snow, Blocks.dacite, Blocks.darksandWater, Blocks.darksandTaintedWater, Blocks.stone, Blocks.darksandWater, Blocks.stone, Blocks.snow, Blocks.darksand, Blocks.ice],  
-    [Blocks.darksandTaintedWater, Blocks.darksandWater, Blocks.darksand, Blocks.snow, Blocks.darksandWater, Blocks.darksandTaintedWater, Blocks.snow, Blocks.water, Blocks.stone, Blocks.darksand, Blicks.stone, Blocks.iceSnow, Blocks.snow],  
+    [Blocks.darksandTaintedWater, Blocks.darksandWater, Blocks.darksand, Blocks.snow, Blocks.darksandWater, Blocks.darksandTaintedWater, Blocks.snow, Blocks.water, Blocks.stone, Blocks.darksand, Blocks.stone, Blocks.iceSnow, Blocks.snow],  
     [Blocks.water, Blocks.darksandTaintedWater, Blocks.snow, Blocks.water, Blocks.ice, Blocks.darksand, Blocks.darksand, Blocks.darksand, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.snow, Blocks.stone],
     [Blocks.darksandWater, Blocks.water, Blocks.snow, Blocks.darksand, Blocks.snow, Blocks.stone, Blocks.darksand, Blocks.iceSnow, Blocks.snow, Blocks.snow, Blocks.dacite, Blocks.snow, Blocks.ice], 
     [Blocks.darksand, Block.darksand, Blocks.stone, Blocks.stone, Blocks.darksand, Blocks.ice, Blocks.darksand, Blocks.stone, Blocks.ice, Blocks.darksand, Blocks.stone, Blocks.stone, Blocks.dacite], 
@@ -319,7 +319,7 @@ const Sandus = extend(Planet, "sandus", Planets.sun, 3, 1, {});
 
 Sandus.generator = SandusGenerator;
 Sandus.startSector = 20;
-Sandus.meshLoader = () => new HexMesh(Sandus, 5);
+Sandus.meshLoader = () => new HexMesh(Sandus, 6);
 
 Sandus.hasAtmosphere = true;
 Sandus.atmosphereRadIn = 0.019;
