@@ -1,17 +1,14 @@
-type: GenericCrafter
+type: AttributeCrafter
 outputItem: plastanium/8
 size: 3
 health: 1250
-hasPower: true
-hasItem: true
-hasLiquids: true
 craftTime: 120
 updateEffect: plasticburn
 craftEffect: formsmoke
 itemCapacity: 30
 liquidCapacity: 35
 ambientSound: techloop
-ambientSoundVolume: 0.22
+ambientSoundVolume: 0.19
 drawer: DrawGlow
 consumes: {
 power: 5.0
@@ -35,3 +32,4 @@ requirements: [
 ]
 category: crafting
 research: plastanium-compressor
+attribute: oil

@@ -1,4 +1,4 @@
-type: Cultivator
+type: AttributeCrafter
 health: 1000
 outputItem: spore-pod/5
 craftTime: 200
@@ -7,6 +7,10 @@ hasLiquids: true
 hasPower: true
 hasItems: true
 itemCapacity: 20
+drawer: DrawCultivator
+attribute: spores
+legacyReadWarmap: true
+maxBoost: 4
 consumes: {
 power: 2
 liquid: water/0.4

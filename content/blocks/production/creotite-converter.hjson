@@ -1,4 +1,4 @@
-type: AttributeSmelter
+type: AttributeCrafter
 craftTime: 90
 outputItem: creostone/6
 craftEffect: redgeneratespark
@@ -6,6 +6,7 @@ hasPower: true
 hasItems: true
 hasLiquids: true
 itemCapacity: 16
+drawer: DrawSmelter
 consumes: {
 power: 4.7
 liquid: creotite/0.2
