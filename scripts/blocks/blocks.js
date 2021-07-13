@@ -66,7 +66,7 @@ const creostoneProjector = new JavaAdapter(ForceProjector, {
   }
 }, "creostone-wall-huge");
 
-creostoneProjector.consumes.item(Items.phaseFabric, 1).boost().update(false);
+creostoneProjector.consumes.item(Items.phaseFabric).boost();
 creostoneProjector.consumes.power(2);
 
 creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, creostoneProjector, {
@@ -149,3 +149,7 @@ creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, cr
         Draw.reset();
     }
 });
+
+const massDriverBolt = extend(MassDriverBolt, {});
+const massDriver = extendContent(MassDriver, "compact-driver", {});
+massDriver.bullet = massDriverBolt;

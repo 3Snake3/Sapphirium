@@ -1,4 +1,4 @@
-require("planets");
+/**require("planets");*/
 
 require("blocks/blocks");
 require("blocks/turrets");

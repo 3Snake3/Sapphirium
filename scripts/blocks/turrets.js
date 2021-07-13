@@ -30,7 +30,7 @@ spear.buildingDamageMultiplier = 0.15;
 const impaler = extendContent(PowerTurret, "impaler", {});
 impaler.shootType = spear;
 
-const waveCreotite = extend(LiquidBulletType, {});
+/**const waveCreotite = extend(LiquidBulletType, {});
 waveCreotite.speed = 3;
 waveCreotite.status = statuses.superMelting;
 waveCreotite.knockback = 0.9;
@@ -67,4 +67,4 @@ Events.on(ClientLoadEvent, cons(e=>{
       creotiteLiquid, tsunamiCreotite
    );
 
-}));
+}));*/
