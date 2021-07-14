@@ -3,25 +3,22 @@ size: 3
 category: crafting
 research: disassembler
 requirements: [
-creostone/170
-silicon/100
-graphite/70
+creostone/145
+cinderblock/90
+silicon/75
 titanium/60
-thorium/45
-cinderblock/35
 ]
 consumes: {
 liquid: creotite/0.12
-power: 6
+power: 5
 }
 results: [
-coal/6
+coal/4
 pyratite/3
 blast-compound/2
-creostone/2
-spore-pod/1
+spore-pod/2
 ]
 spinnerSpeed: 7
-craftTime: 20
+craftTime: 23
 hasPower: true
 itemCapacity: 40
