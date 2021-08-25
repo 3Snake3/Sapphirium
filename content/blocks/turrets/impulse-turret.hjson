@@ -1,0 +1,56 @@
+type: PowerTurret
+health: 2000
+size: 3
+category: turret
+research: segment
+reloadTime: 120
+recoilAmount: 0
+rotateSpeed: 0
+shootCone: 360
+shootLength: 0
+inaccuracy: 0
+range: 230
+shootSound: release
+shots: 360
+spread: 1
+powerUse: 8
+shootType: {
+sprite: adc-wave-bullet2
+width: 10
+height: 30
+damage: 35
+drawSize: 0
+speed: 6
+lifetime: 39
+hitEffect: {
+type: WaveEffect
+sizeFrom: 0
+sizeTo: 40
+strokeFrom: 4
+strokeTo: 0
+lifetime: 10
+}
+pierce: true
+pierceBuilding: true
+shrinkX: -18
+shrinkY: 0
+pierceCap: 8
+hittable: false
+absorbable: true
+reflectable: false
+collidesTiles: true
+hitSize: 36
+knockback: 3
+backColor: 6a76a1
+frontColor: 96abd9
+shootEffect: none
+smokeEffect: none
+despawnEffect: none
+}
+requirements: [
+lead/200
+silicon/120
+plastanium/85
+thorium/60
+creostone/45
+]

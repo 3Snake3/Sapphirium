@@ -1,6 +1,6 @@
 name: "adc"
 description: "Adds a lot of additional content like turrets, factories and other."
 displayName: "[green]ADC[]"
-author: "[green]Snake[]"
+author: "Snake"
 minGameVersion: "127"
-version: "8.0"
+version: "9.0"

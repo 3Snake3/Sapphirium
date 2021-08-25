@@ -1,11 +1,11 @@
 type: LiquidConverter
 drawer: DrawMixer
 requirements: [
-graphite/140
-silicon/125
-titanium/130
-thorium/120
-plastanium/120
+lead/220
+graphite/125
+silicon/100
+titanium/80
+plastanium/60
 ]
 outputLiquid: cryofluid/1
 craftTime: 140
@@ -24,7 +24,6 @@ titanium/10
 ]
 }
 }
-health: 1200
 itemCapacity: 20
 liquidCapacity: 60
 rotate: false

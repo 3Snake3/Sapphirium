@@ -6,11 +6,11 @@ silicon/150
 titanium/80
 ]
 range: 270
-chargeTime: 80
-chargeMaxDelay: 70
+chargeTime: 90
+chargeMaxDelay: 80
 chargeEffects: 7
 recoilAmount: 3
-reloadTime: 140
+reloadTime: 180
 cooldown: 0.03
 powerUse: 8
 shootShake: 3
@@ -19,7 +19,6 @@ chargeEffect: lancerLaserCharge
 chargeBeginEffect: lancerLaserChargeBegin
 heatColor: ff0000
 size: 2
-health: 1200
 targetGround: false
 targetAir: true
 shootSound: laser
@@ -31,7 +30,7 @@ despawnEffect: none
 hitSize: 5
 lifetime: 20
 width: 20
-length: 300
+length: 270
 damage: 200
 collidesAir: true
 collidesGround: false

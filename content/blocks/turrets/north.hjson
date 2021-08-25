@@ -1,49 +1,34 @@
 type: PowerTurret
-health: 1300
 size: 3
-powerUse: 5
-hasPower: true
+range: 170
+reloadTime: 8
+xRand: 2
+recoilAmount: 3
+rotateSpeed: 10
+inaccuracy: 7
+shootCone: 25
 shootSound: lasershoot
-reloadTime: 15
-recoilAmount: 2
-shootCone: 90
-cooldown: 0.03
-range: 165
+powerUse: 5
 shootType: {
-type: LaserBoltBulletType
+sprite: adc-spear-bullet
 speed: 6
-width: 5
-height: 20
-damage: 15
-lifetime: 40
+width: 12
+height: 12
+damage: 10
+lifetime: 30
 status: freezing
-statusDuration: 80
+statusDuration: 85
 frontColor: e8eaff
 backColor: 837de8
 hitEffect: shockwave
 despawnEffect: shockwave
 shootEffect: shockwave
-fragBullets: 4
-fragCone: 180
-fragBullet: {
-type: LaserBoltBulletType
-height: 10
-lifetime: 25
-speed: 6
-damage: 5
-hitEffect: shockwave
-despawnEffect: shockwave
-frontColor: e8eaff
-backColor: 837de8
-}
 }
 category: turret
-research: parallax
+research: segment
 requirements: [
-lead/200
-graphite/200
-silicon/160
-titanium/150
-ice-cube/150
-plastanium/100
+copper/200
+titanium/125
+plastanium/80
+ice-cube/50
 ]

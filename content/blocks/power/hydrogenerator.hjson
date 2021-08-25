@@ -8,11 +8,22 @@ graphite/60
 metaglass/50
 silicon/40
 ]
-powerProduction: 1.5
-generateEffect: redgeneratespark
+powerProduction: 1.8
+generateEffect: {
+type: PartictleEffect
+particles: 5
+region: adc-transparent-circle
+lifetime: 20
+sizeFrom: 2
+sizeTo: 0
+length: 10
+strokeFrom: 4
+strokeTo: 0
+colorFrom: 6a75c4
+colorTo: 6a75c4
+}
 size: 2
 floating: true
-placeableLiquid: true
 ambientSound: hum
 ambientSoundVolume: 0.06
 attribute: water

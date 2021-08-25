@@ -1,15 +1,13 @@
 type: PowerTurret
-health: 1250
 size: 2
 category: turret
 research: beam-LT
 requirements: [
-lead/180
-graphite/130
+lead/200
+graphite/125
 silicon/90
-titanium/120
-thorium/90
-plastanium/65
+titanium/60
+plastanium/45
 ]
 range: 180
 chargeTime: 20

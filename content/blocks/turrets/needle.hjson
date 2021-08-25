@@ -1,7 +1,5 @@
-type: ItemTurret
-health: 2000
 size: 4
-reloadTime: 210
+reloadTime: 260
 recoilAmount: 10
 shootShake: 6
 shootSound: railgun
@@ -11,7 +9,7 @@ rotateSpeed: 2.5
 range: 450
 cooldown: 0.009
 restitution: 0.009
-coolantUsage: 1
+coolantUsage: 2
 coolantMultiplier: 0.3
 maxAmmo: 30
 ammoPerShot: 2
@@ -35,15 +33,13 @@ statusDuration: 45
 }
 }
 consumes: {
-power: 9
+power: 10
 }
 requirements: [
-creostone/900
-titanium/700
-silicon/500
-metaglass/450
-surge-alloy/350
-plastanium/250
+creostone/400
+silicon/300
+plastanium/195
+titanium/120
+surge-alloy/80
 ]
 category: turret
-research: meltdown

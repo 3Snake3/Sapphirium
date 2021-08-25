@@ -11,8 +11,20 @@ titanium/90
 thorium/85
 plastanium/70
 ]
-powerProduction: 1.2
-generateEffect: redgeneratespark
+powerProduction: 0.8
+generateEffect: {
+type: PartictleEffect
+particles: 5
+region: adc-transparent-circle
+lifetime: 20
+sizeFrom: 3
+sizeTo: 0
+strokeFrom: 4
+strokeTo: 0
+length: 15
+colorFrom: 303030
+colorTo: 61615b
+}
 size: 3
 ambientSound: hum
 ambientSoundVolume: 0.06

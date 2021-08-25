@@ -15,12 +15,10 @@ chargeBeginEffect: lancerLaserChargeBegin
 size: 3
 targetAir: true
 shootSound: laser
-research: parallax
 requirements: [
-copper/200
-lead/120
-silicon/85
-creostone/75
+titanium/180
+silicon/120
+plastanium/70
 phase-fabric/45
 ]
 category: turret

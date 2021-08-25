@@ -19,6 +19,6 @@ blast-compound/2
 spore-pod/2
 ]
 spinnerSpeed: 7
-craftTime: 23
+craftTime: 40
 hasPower: true
 itemCapacity: 40

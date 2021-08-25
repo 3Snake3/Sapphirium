@@ -11,7 +11,7 @@ category: defense
 researchCostMultiplier: 2.5
 buildCostMultiplier: 2.5
 requirements: [
-creostone/70
-silicon/30
+creostone/165
+silicon/80
 ]
 research: creotite-wall-turret

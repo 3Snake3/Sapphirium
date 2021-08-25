@@ -6,7 +6,7 @@ this.opposite(StatusEffects.overdrive, StatusEffects.overclock);
 weakened.speedMultiplier = 0.80;
 weakened.healthMultiplier = 0.80;
 weakened.damageMultiplier = 0.80;
-weakened.reloadMultiplier = 0.80;
+weakened.reloadMultiplier = 1.20;
 weakened.color = Pal.gray;
 exports.weakened = weakened;
 
@@ -54,9 +54,8 @@ this.affinity(StatusEffects.freezing, ((unit, time, newTime, result) => {
         },
         });
         superFreezing.speedMultiplier = 0.5;
-        superFreezing.damageMultiplier = 0.65;
-        superFreezing.disarm = true;
-        superFreezing.transitionDamage = 15;
+        superFreezing.reloadMultiplier = 0.5;
+        superFreezing.transitionDamage = 10;
         superFreezing.damage = 0.5;
         superFreezing.effect = Fx.freezing;
         superFreezing.color = Color.valueOf("6fdded");

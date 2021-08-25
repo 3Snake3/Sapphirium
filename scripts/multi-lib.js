@@ -591,7 +591,7 @@ function MultiCrafterBlock() {
                     if(inputPower > 0) {
                         part.table(cons(row => {
                             row.add("[lightgray]" + Stat.powerUse.localized() + ":[]").padRight(4);
-                            (new NumberValue(this.recs[i].input.power * 60, StatUnit.powerSecond)).display(row);
+                            (StatValues.number(this.recs[i].input.power * 60, StatUnit.powerSecond)).display(row);
                         })).left().row();
                     }
                     part.add("[accent]" + Stat.output.localized()).left().row();
@@ -604,12 +604,12 @@ function MultiCrafterBlock() {
                     if(outputPower > 0) {
                         part.table(cons(row => {
                             row.add("[lightgray]" + Stat.basePowerGeneration.localized() + ":[]").padRight(4);
-                            (new NumberValue(this.recs[i].output.power * 60, StatUnit.powerSecond)).display(row);
+                            (StatValues.number(this.recs[i].output.power * 60, StatUnit.powerSecond)).display(row);
                         })).left().row();
                     }
                     part.table(cons(row => {
                         row.add("[lightgray]" + Stat.productionTime.localized() + ":[]").padRight(4);
-                        (new NumberValue(rec.craftTime / 60, StatUnit.seconds)).display(row);
+                        (StatValues.number(rec.craftTime / 60, StatUnit.seconds)).display(row);
                     })).left().row();
                     if(typeof this["customDisplay"] === "function") this.customDisplay(part, i);
                 }).color(Pal.accent).left().growX();

@@ -1,12 +1,10 @@
 const statuses = require("statuses/statuses");
 
-const spear = extend(LaserBoltBulletType, {});
-spear.width = 6;
-spear.height = 35;
+const spear = extend(BasicBulletType, 8, 35, "adc-spear-bullet", {});
+spear.width = 15;
+spear.height = 40;
 spear.frontColor = Color.valueOf("ffffff");
 spear.backColor = Color.valueOf("0096FF");
-spear.damage = 80;
-spear.speed = 8;
 spear.lifetime = 36.3;
 spear.pierce = true;
 spear.hittable = false;
@@ -15,56 +13,20 @@ spear.reflectable = false;
 spear.keepVelocity = false;
 spear.hitSize = 4;
 spear.lightning = 4;
-spear.lightningLength = 15;
-spear.lightningCone = 90;
-spear.lightningDamage = 20;
+spear.lightningLength = 10;
+spear.lightningCone = 60;
+spear.lightningDamage = 10;
 spear.lightningColor = Color.valueOf("0096FF");
 spear.hitSound = Sounds.spark;
 spear.pierceBuilding = true;
 spear.status = statuses.weakened;
-spear.statusDuration = 70;
-spear.splashDamageRadius = 25;
-spear.splashDamage = 45;
-spear.buildingDamageMultiplier = 0.15;
+spear.statusDuration = 75;
+spear.buildingDamageMultiplier = 0.70;
 
 const impaler = extendContent(PowerTurret, "impaler", {});
 impaler.shootType = spear;
-
-/**const waveCreotite = extend(LiquidBulletType, {});
-waveCreotite.speed = 3;
-waveCreotite.status = statuses.superMelting;
-waveCreotite.knockback = 0.9;
-waveCreotite.pierceCap = 12;
-waveCreotite.pierce = true;
-
-const tsunamiCreotite = extend(LiquidBulletType, {});
-tsunamiCreotite.speed = 5;
-tsunamiCreotite.status = statuses.superMelting;
-tsunamiCreotite.lifetime = 54;
-tsunamiCreotite.knockback = 1.09;
-tsunamiCreotite.pierceCap = 20;
-tsunamiCreotite.pierce = true;
-
-Events.on(ClientLoadEvent, cons(e=>{
-   const creotiteLiquid = Vars.content.getByName(ContentType.liquid, "adc-creotite");
-  
-   waveCreotite.liquid = creotiteLiquid;
-   tsunamiCreotite.liquid = creotiteLiquid;
-
-   Blocks.wave.ammo(
-      Liquids.water, Bullets.waterShot, 
-      Liquids.slag, Bullets.slagShot, 
-      Liquids.oil, Bullets.oilShot, 
-      Liquids.cryofluid, Bullets.cryoShot, 
-      creotiteLiquid, waveCreotite
-   );
-
-   Blocks.tsunami.ammo(
-      Liquids.water, Bullets.heavyWaterShot, 
-      Liquids.slag, Bullets.heavySlagShot, 
-      Liquids.oil, Bullets.heavyOilShot, 
-      Liquids.cryofluid, Bullets.heavyCryoShot, 
-      creotiteLiquid, tsunamiCreotite
-   );
-
-}));*/
+exports.impaler = impaler;
+const warhead = extendContent(ItemTurret, "warhead", {});
+exports.warhead = warhead;
+const needle = extendContent(ItemTurret, "needle", {});
+exports.needle = needle;

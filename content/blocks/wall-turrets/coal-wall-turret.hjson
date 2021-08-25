@@ -1,7 +1,6 @@
-type: PowerTurret
-health: 6700
+health: 2780
 size: 2
-reloadTime: 20
+reloadTime: 30
 recoilAmount: 3
 shootShake: 1
 powerUse: 1
@@ -12,11 +11,10 @@ shootType: {
 type: ShrapnelBulletType
 length: 75
 width: 13
-damage: 20
+damage: 45
 fromColor: 61615b
 toColor: 303030
-status: tarred
-statusDuration: 80
+shootEffect: none
 }
 category: defense
 requirements: [

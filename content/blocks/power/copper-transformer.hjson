@@ -13,8 +13,8 @@ copper/2
 ]
 }
 }
-itemDuration: 110
-powerProduction: 2.5
+itemDuration: 100
+powerProduction: 2
 hasLiquids: false
 hasItems: true
 ambientSound: steam

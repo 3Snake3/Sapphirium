@@ -1,0 +1,6 @@
+health: 350
+category: defense
+research: coal-wall-turret
+requirements: [
+silicon/6
+]

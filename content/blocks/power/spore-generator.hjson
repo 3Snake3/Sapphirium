@@ -9,8 +9,20 @@ metaglass/60
 titanium/65
 thorium/80
 ]
-powerProduction: 2
-generateEffect: redgeneratespark
+powerProduction: 3
+generateEffect: {
+type: PartictleEffect
+particles: 5
+region: adc-transparent-circle
+lifetime: 20
+sizeFrom: 2
+sizeTo: 0
+strokeFrom: 4
+strokeTo: 0
+length: 10
+colorFrom: 5c5e9e
+colorTo: 8b73c7
+}
 size: 2
 floating: true
 ambientSound: hum

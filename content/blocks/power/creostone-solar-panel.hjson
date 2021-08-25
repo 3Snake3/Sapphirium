@@ -1,0 +1,14 @@
+type: SolarGenerator
+health: 3000
+size: 5
+powerProduction: 6.7
+hasPower: true
+category: power
+requirements: [
+graphite/600
+silicon/450
+creostone/200
+phase-fabric/150
+thorium/60
+]
+research: solar-panel-gigantic

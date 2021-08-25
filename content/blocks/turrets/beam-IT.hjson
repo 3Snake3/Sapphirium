@@ -1,17 +1,13 @@
 type: ItemTurret
-health: 950
 size: 2
 category: turret
 requirements: [
-copper/200
-lead/170
-silicon/170
-titanium/80
-thorium/35
+copper/125
+graphite/85
+silicon/60
+titanium/40
 ]
 research: parallax
-targetGround: true
-targetAir: true
 ammoTypes: {
 copper: {
 type: BasicBulletType
@@ -45,9 +41,10 @@ speed: 6
 lifetime: 35
 splashDamage: 20
 splashDamageRadius: 20
+inaccuracy: 6
 backColor: ffaa5f
 frontColor: ffffff
-status: melting
+status: burning
 statusDuration: 70
 incendChance: 1.5
 incendAmount: 3
@@ -74,10 +71,9 @@ incendSpread: 2
 blast-compound: {
 type: FlakBulletType
 explodeRange: 30
-collidesGround: true
-collidesAir: true
 ammoMultiplier: 4
-reloadMultiplier: 0.5
+reloadMultiplier: 1.08
+inaccuracy: 7
 width: 14
 height: 18
 damage: 10
@@ -89,9 +85,6 @@ backColor: ff795e
 frontColor: ffffff
 status: blasted
 statusDuration: 85
-incendChance: 2
-incendAmount: 6
-incendSpread: 10
 hitEffect: blastExplosion
 despawnEffect: blastExplosion
 fragBullets: 3
@@ -117,10 +110,9 @@ hitSound: explosion
 surge-alloy: {
 type: FlakBulletType
 explodeRange: 40
-collidesGround: true
-collidesAir: true
 ammoMultiplier: 6
-reloadMultiplier: 0.14
+reloadMultiplier: 1.15
+inaccuracy: 7.7
 width: 15
 height: 20
 lifetime: 35
@@ -148,7 +140,6 @@ height: 15
 lifetime: 30
 speed: 6
 damage: 10
-status: melting
 backColor: f3e979
 frontColor: ffffff
 splashDamage: 5
@@ -160,9 +151,6 @@ lightningLength: 5
 hitSound: spark
 }
 }
-}
-consumes: {
-power: 1.5
 }
 range: 200
 reloadTime: 45

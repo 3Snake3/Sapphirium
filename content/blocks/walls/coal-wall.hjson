@@ -1,5 +1,4 @@
-type: Wall
-health: 800
+health: 350
 category: defense
 requirements: [
 coal/10

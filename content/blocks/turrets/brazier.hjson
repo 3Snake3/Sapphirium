@@ -1,0 +1,73 @@
+type: PowerTurret
+size: 3
+category: turret
+research: gold-horn
+reloadTime: 6
+recoilAmount: 0
+inaccuracy: 5
+rotateSpeed: 5
+cooldown: 0.10
+range: 200
+coolantMultiplier: 2.5
+shootCone: 25
+shootSound: flame
+shootType: {
+type: BasicBulletType
+speed: 5
+lifetime: 40
+damage: 30
+backColor: f3e979
+frontColor: ffffff
+hitSize: 15
+pierce: true
+pierceBuilding: true
+buildingDamageMultiplier: 0.8
+status: melting
+statusDuration: 80
+despawnEffect: none
+hittable: false
+reflectable: false
+shootEffect: {
+type: MultiEffect
+effects: [{
+type: ParticleEffect
+particles: 30
+sizeFrom: 3
+sizeTo: 3
+lifetime: 40
+length: 200
+cone: 7
+colorFrom: f3e979
+colorTo: ffffff
+offset: 3
+}
+{
+type: ParticleEffect
+particles: 7
+sizeFrom: 3
+sizeTo: 3
+lifetime: 50
+length: 210
+cone: 8
+colorFrom: d99e6a
+colorTo: cc894e
+}]
+}
+hitEffect: {
+type: ParticleEffect
+particles: 18
+lifetime: 20
+length: 20
+sizeFrom: 5
+sizeTo: 0
+cone: 360
+colorFrom: f3e979
+colorTo: ffffff
+}
+}
+requirements: [
+graphite/120
+silicon/75
+plastanium/55
+titanium/35
+]

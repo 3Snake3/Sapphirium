@@ -9,8 +9,8 @@ surge-alloy/450
 phase-fabric/300
 ]
 range: 550
-chargeTime: 140
-chargeMaxDelay: 130
+chargeTime: 300
+chargeMaxDelay: 290
 chargeEffects: 10
 recoilAmount: 10
 reloadTime: 600
@@ -27,15 +27,12 @@ shootSound: laserblast
 chargeSound: lasercharge
 heatColor: ff0000
 size: 8
-health: 17000
-targetGround: true
-targetAir: true
+health: 20000
 shootType: {
 type: LaserBulletType
 colors: ["98ffa9", "98FFA9", "FFFFFF"]
-length: 550
-damage: 3500
-splashDamageRadius: 30
+length: 570
+damage: 2000
 width: 60
 lifetime: 60
 lightningSpacing: 40
@@ -59,12 +56,12 @@ hitSound: spark
 fragBullets: 5
 fragCone: 100
 status: {
-name: stunned
+name: adc-stunned
 speedMultiplier: 0.001
 healthMultiplier: 0.9
 disarm: true
 }
-statusDuration: 150
+statusDuration: 120
 fragBullet: {
 type: LightningBulletType
 lightningColor: 98ffa9
@@ -76,7 +73,7 @@ collidesGround: true
 collidesTeam: true
 }
 }
-coolantMultiplier: 1.5
+coolantMultiplier: 2.5
 coolantUsage: 4
 consumes: {
 liquid: {

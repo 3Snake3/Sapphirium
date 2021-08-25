@@ -16,9 +16,9 @@ liquid: cryofluid
 puddleSize: 8
 orbSize: 6
 damage: 8
-knockback: 2
 status: freezing
-statusDuration: 200
+lifetime: 45
+pierce: true
 }
 requirements: [
 cryocube/20

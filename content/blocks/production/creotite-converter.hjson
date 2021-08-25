@@ -1,5 +1,5 @@
 type: AttributeCrafter
-craftTime: 90
+craftTime: 100
 outputItem: creostone/6
 craftEffect: redgeneratespark
 hasPower: true
@@ -8,7 +8,7 @@ hasLiquids: true
 itemCapacity: 16
 drawer: DrawSmelter
 consumes: {
-power: 4.7
+power: 4.5
 liquid: creotite/0.2
 items: {
 items: [
@@ -20,11 +20,10 @@ sand/8
 }
 category: crafting
 requirements: [
-copper/85
-graphite/70
-silicon/65
+copper/100
+graphite/75
+silicon/50
 titanium/50
-thorium/35
 ]
 size: 3
 research: creotite-mixer

@@ -1,0 +1,32 @@
+health: 380
+category: defense
+research: {
+parent: copper-wall-large
+objectives: [
+graphite-press,
+multi-press,
+silicon-smelter
+]
+}
+reload: 15
+healPercent: 1
+range: 40
+baseColor: 96abd9
+phaseColor: ffd59e
+phaseBoost: 5
+phaseRangeBoost: 15
+useTime: 400
+consumes: {
+power: 0.6
+items: {
+items: [
+graphite/1
+]
+booster: true
+optional: true
+}
+}
+requirements: [
+graphite/15
+silicon/8
+]

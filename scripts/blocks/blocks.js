@@ -51,6 +51,7 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
       Draw.rect(region2, this.x, this.y)
 };
 });
+exports.multi = multi;
 
 /**This is not my code, its belongs to sharlotte-mobile/ExampleMod*/
 const creostoneProjector = new JavaAdapter(ForceProjector, {
@@ -153,3 +154,40 @@ creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, cr
 const massDriverBolt = extend(MassDriverBolt, {});
 const massDriver = extendContent(MassDriver, "compact-driver", {});
 massDriver.bullet = massDriverBolt;
+
+const graphiteW = extendContent(MendProjector, "graphite-wall", {});
+exports.graphiteW = graphiteW;
+
+const graphiteWT = extendContent(PowerTurret, "graphite-wall-turret", {});
+exports.graphiteWT = graphiteWT;
+
+const coalW = extendContent(Wall, "coal-wall", {});
+exports.coalW = coalW;
+
+const coalWT = extendContent(PowerTurret, "coal-wall-turret", {});
+exports.coalWT = coalWT;
+
+const siliconW = extendContent(Wall, "silicon-wall", {});
+exports.siliconW = siliconW;
+
+const siliconWT = extendContent(PowerTurret, "silicon-wall-turret", {});
+exports.siliconWT = siliconWT;
+
+const statuses = require("statuses/statuses");
+
+const freezeWave = extend(BasicBulletType, 10, 0.9, "adc-none-bullet", {});
+freezeWave.status = statuses.superFreezing;
+freezeWave.lifetime = 20;
+freezeWave.pierce = true;
+freezeWave.pierceBuilding = true;
+freezeWave.buildingDamageMultiplier = 0;
+freezeWave.hitEffect = Fx.none;
+freezeWave.despawnEffect = Fx.none;
+freezeWave.shootEffect = Fx.none;
+freezeWave.absorbable = false;
+freezeWave.reflectable = false;
+freezeWave.hittable = false;
+
+const fp = extendContent(PowerTurret, "freeze-projector", {});
+fp.shootType = freezeWave;
+exports.fp = fp;

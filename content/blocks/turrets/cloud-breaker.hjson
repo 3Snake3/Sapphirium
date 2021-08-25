@@ -1,15 +1,15 @@
 type: ItemTurret
 size: 3
 category: turret
-research: cyclone
+research: ripple
 requirements: [
-lead/125
-silicon/100
-graphite/80
-plastanium/65
-thorium/65
+graphite/250
+titanium/150
+silicon/85
+creostone/60
+plastanium/45
 ]
-reloadTime: 170
+reloadTime: 165
 rotateSpeed: 3
 recoilAmount: 6
 shootShake: 3
@@ -19,69 +19,26 @@ ammoPerShot: 2
 targetGround: false
 targetAir: true
 ammoTypes: {
-thorium: {
-sprite: adc-missile-large
-width: 20
-height: 23
-speed: 7
-lifetime: 54
-damage: 200
-splashDamage: 120
-splashDamageRadius: 80
-hitShake: 3
-hitSound: explosion
-hitEffect: massiveExplosion
-despawnEffect: massiveExplosion
-shootEffect: shootBig
-status: blasted
-statusDuration: 120
-trailChance: 0.9
-trailMult: 3
-trailSize: 6
-trailEffect: missileTrail
-fragBullets: 4
-fragLifeMin: 0.4
-fragCone: 75
-makeFire: true
-collidesGround: false
-ammoMultiplier: 4
-knockback: 2
-fragBullet: {
-type: MissileBulletType
-width: 12
-height: 16
-speed: 6
-collidesGround: false
-lifetime: 80
-homingPower: 0.60
-homingRange: 45
-damage: 40
-splashDamage: 80
-splashDamageRadius: 45
-drag: -0.003
-weaveMag: 2
-weaveScale: 4
-status: melting
-statusDuration: 130
-makeFire: true
-}
-}
 silicon: {
 sprite: adc-missile-large
 width: 21
 height: 23
 speed: 6.5
 lifetime: 54
-damage: 150
-splashDamage: 80
-splashDamageRadius: 45
+damage: 25
+splashDamage: 75
+splashDamageRadius: 80
 hitShake: 3
 hitSound: explosion
-hitEffect: massiveExplosion
-despawnEffect: massiveExplosion
+hitEffect: {
+type: MultiEffect 
+effects: [shockwave, massiveExplosion]
+}
+despawnEffect: {
+type: MultiEffect 
+effects: [shockwave, massiveExplosion]
+}
 shootEffect: shootBig
-status: unmoving
-statusDuration: 60
 trailChance: 0.9
 trailMult: 3
 trailSize: 6
@@ -92,5 +49,82 @@ homingPower: 0.75
 homingRange: 70
 reloadMultiplier: 0.85
 ammoMultiplier: 5
+fragBullets: 3
+fragCone: 75
+fragBullet: {
+type: FlakBulletType
+width: 16
+height: 16
+explodeRange: 35
+lifetime: 12
+speed: 1
+damage: 0
+splashDamage: 10
+splashDamageRadius: 80
+status: blasted
+statusDuration: 85
+hitEffect: {
+type: MultiEffect 
+effects: [shockwave, flakExplosionBig]
+}
+despawnEffect: {
+type: MultiEffect 
+effects: [shockwave, flakExplosionBig]
+}
+}
+}
+thorium: {
+sprite: adc-missile-large
+width: 20
+height: 23
+speed: 7
+lifetime: 54
+damage: 50
+splashDamage: 85
+splashDamageRadius: 100
+hitShake: 3
+hitSound: explosion
+hitEffect: {
+type: MultiEffect 
+effects: [shockwave, massiveExplosion]
+}
+despawnEffect: {
+type: MultiEffect 
+effects: [shockwave, massiveExplosion]
+}
+shootEffect: shootBig
+trailChance: 0.9
+trailMult: 3
+trailSize: 6
+trailEffect: missileTrail
+fragLifeMin: 0.4
+fragCone: 75
+makeFire: true
+collidesGround: false
+ammoMultiplier: 4
+knockback: 2
+fragBullets: 3
+fragCone: 85
+fragBullet: {
+type: FlakBulletType
+width: 18
+height: 18
+explodeRange: 50
+lifetime: 11
+speed: 1
+damage: 0
+splashDamage: 20
+splashDamageRadius: 80
+status: blasted
+statusDuration: 90
+hitEffect: {
+type: MultiEffect 
+effects: [shockwave, flakExplosionBig]
+}
+despawnEffect: {
+type: MultiEffect 
+effects: [shockwave, flakExplosionBig]
+}
+}
 }
 }

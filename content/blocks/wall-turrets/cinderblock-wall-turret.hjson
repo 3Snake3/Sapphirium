@@ -1,5 +1,5 @@
 type: PowerTurret
-health: 6000
+health: 2280
 reloadTime: 7
 recoilAmount: 3
 shootSound: shootBig

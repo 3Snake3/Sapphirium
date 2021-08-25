@@ -7,15 +7,15 @@ width: 12
 height: 12
 speed: 6
 lifetime: 30
-damage: 17
-sprite: adc-sand-bullet
+damage: 10
+sprite: adc-circle-bullet
 splashDamageRadius: 20
 splashDamage: 20
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
 pierce: true
-pierceCap: 3
-fragBullets: 6
+pierceCap: 2
+fragBullets: 4
 fragCone: 70
 status: slow
 hitShake: 2
@@ -34,7 +34,7 @@ pierceCap: 1
 }
 }
 creostone: {
-sprite: adc-sand-bullet
+sprite: adc-circle-bullet
 width: 13
 height: 13
 speed: 5.5
@@ -51,6 +51,7 @@ statusDuration: 65
 hitShake: 3
 ammoMultiplier: 1.5
 buildingDamageMultiplier: 0.35
+reloadMultiplier: 1.5
 hitSound: explosion
 fragBullet: {
 type: BasicBulletType
@@ -61,7 +62,6 @@ lifetime: 40
 damage: 9
 hitEffect: blastExplosion
 despawnEffect: blastExplosion
-status: burning
 }
 }
 }
@@ -73,10 +73,10 @@ restitution: 0.2
 range: 180
 shootSound: shootBig
 requirements: [
-copper/120
-creostone/70
-silicon/40
-titanium/45
+copper/125
+lead/85
+creostone/60
+graphite/40
 ]
 category: turret
 research: salvo
