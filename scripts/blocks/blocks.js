@@ -194,7 +194,7 @@ exports.fp = fp;
 
 const creostoneSP = extendContent(SolarGenerator, "creostone-solar-panel", {
     load(){	
-    this.super$load()
-    this.teamRegion = Core.atlas.find("adc-sword-weapon-heat")
-	}
+        this.super$load()
+        this.teamRegion = Core.atlas.find("adc-" + this.name + "-team")
+    }
 });
