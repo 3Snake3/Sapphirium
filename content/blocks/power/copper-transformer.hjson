@@ -1,22 +1,26 @@
 type: SingleTypeGenerator
-requirements: [
-copper/65
-lead/60
-graphite/45
-]
-size: 2
 category: power
-consumes: {
-items: {
-items: [
-copper/2
-]
-}
-}
+
+size: 2
+hasItems: true
+hasLiquids: false
 itemDuration: 100
 powerProduction: 2
-hasLiquids: false
-hasItems: true
 ambientSound: steam
 ambientSoundVolume: 0.04
+
+requirements: [
+  copper/65
+  lead/60
+  graphite/45
+]
+
+consumes: {
+  items: {
+    items: [
+      copper/2
+    ]
+  }
+}
+
 research: combustion-generator
