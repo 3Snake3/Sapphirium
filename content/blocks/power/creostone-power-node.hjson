@@ -1,14 +1,17 @@
 type: PowerNode
+category: power
+
 health: 145
 maxNodes: 15
 laserRange: 9
 placeableLiquid: true
 laserColor1: eb8778
 laserColor2: bd5553
+
 requirements: [
-titanium/2
-graphite/2
-creostone/2
+  titanium/2
+  graphite/2
+  creostone/2
 ]
-category: power
+
 research: power-node-large
