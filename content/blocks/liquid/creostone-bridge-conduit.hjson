@@ -1,12 +1,15 @@
 type: LiquidExtendingBridge
-health: 100
-range: 7
-hasPower: false
-placeableLiquid: true
-requirements: [
-graphite/4
-metaglass/2
-creostone/4
-]
 category: liquid
+
+health: 100
+hasPower: false
+range: 7
+placeableLiquid: true
+
+requirements: [
+  graphite/4
+  metaglass/2
+  creostone/4
+]
+
 research: bridge-conduit
