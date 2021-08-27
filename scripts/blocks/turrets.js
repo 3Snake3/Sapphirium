@@ -1,32 +1,36 @@
-const statuses = require("statuses/statuses");
+const statuses = require("statuses/statuses")
 
-const spear = extend(BasicBulletType, 8, 35, "adc-spear-bullet", {});
-spear.width = 15;
-spear.height = 40;
-spear.frontColor = Color.valueOf("ffffff");
-spear.backColor = Color.valueOf("0096FF");
-spear.lifetime = 36.3;
-spear.pierce = true;
-spear.hittable = false;
-spear.absorbable = false;
-spear.reflectable = false;
-spear.keepVelocity = false;
-spear.hitSize = 4;
-spear.lightning = 4;
-spear.lightningLength = 10;
-spear.lightningCone = 60;
-spear.lightningDamage = 10;
-spear.lightningColor = Color.valueOf("0096FF");
-spear.hitSound = Sounds.spark;
-spear.pierceBuilding = true;
-spear.status = statuses.weakened;
-spear.statusDuration = 75;
-spear.buildingDamageMultiplier = 0.70;
+const spear = extend(BasicBulletType, 8, 35, "adc-spear-bullet", {
+  
+    width: 15,
+    height: 40,
+    frontColor: Color.white,
+    backColor: Color.valueOf("0096FF"),
 
-const impaler = extendContent(PowerTurret, "impaler", {});
+    lifetime: 36.3,
+    pierce: true,
+    hittable: false,
+    absorbable: false,
+    reflectable: false,
+    keepVelocity: false,
+    hitSize: 4,
+    pierceBuilding: true,
+  
+    lightning: 4,
+    lightningLength: 10,
+    lightningCone: 60,
+    lightningDamage: 10,
+    lightningColor: Color.valueOf("0096FF"),
+  
+    hitSound: Sounds.spark,
+    status: statuses.weakened,
+    statusDuration: 75,
+    buildingDamageMultiplier: 0.7
+})
+
+const impaler = extendContent(PowerTurret, "impaler", {})
 impaler.shootType = spear;
+
 exports.impaler = impaler;
-const warhead = extendContent(ItemTurret, "warhead", {});
-exports.warhead = warhead;
-const needle = extendContent(ItemTurret, "needle", {});
-exports.needle = needle;
+exports.warhead = extendContent(ItemTurret, "warhead", {})
+exports.needle = extendContent(ItemTurret, "needle", {})
