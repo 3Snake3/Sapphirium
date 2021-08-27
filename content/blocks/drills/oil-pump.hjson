@@ -1,20 +1,24 @@
 type: SolidPump
-health: 300
-result: oil
-pumpAmount: 0.07
-size: 2
-liquidCapacity: 30
-rotateSpeed: 1.5
-attribute: oil
-consumes: {
-power: 2
-}
-requirements: [
-copper/70
-lead/70
-graphite/50
-silicon/50
-plastanium/30
-]
-research: spore-press
 category: production
+
+size: 2
+health: 300
+liquidCapacity: 30
+result: oil
+attribute: oil
+pumpAmount: 0.07
+rotateSpeed: 1.5
+
+requirements: [
+  copper/70
+  lead/70
+  graphite/50
+  silicon/50
+  plastanium/30
+]
+
+consumes: {
+  power: 2
+}
+
+research: spore-press
