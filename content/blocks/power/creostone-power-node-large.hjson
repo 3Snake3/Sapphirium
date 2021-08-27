@@ -1,16 +1,19 @@
 type: PowerNode
+category: power
+
+size: 2
 health: 360
 maxNodes: 22
 laserRange: 20
-size: 2
 placeableLiquid: true
 laserColor1: eb8778
 laserColor2: bd5553
+
 requirements: [
-titanium/5
-graphite/5
-metaglass/5
-creostone/5
+  titanium/5
+  graphite/5
+  metaglass/5
+  creostone/5
 ]
-category: power
+
 research: creostone-power-node
