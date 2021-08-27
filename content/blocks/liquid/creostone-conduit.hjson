@@ -1,12 +1,15 @@
 type: Conduit
+category: liquid
+
 health: 110
 liquidCapacity: 20
 liquidPressure: 1.025
 placeableLiquid: true
+
 requirements: [
-titanium/4
-metaglass/4
-creostone/2
+  titanium/4
+  metaglass/4
+  creostone/2
 ]
-category: liquid
+
 research: pulse-conduit
