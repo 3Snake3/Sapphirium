@@ -1,17 +1,20 @@
 size: 2
 category: distribution
-requirements: [
-lead/85
-graphite/60
-silicon/60
-titanium/45
-]
 range: 390
 itemCapacity: 80
 reloadTime: 250
 knockback: 3.3
 shake: 2
-research: phase-conveyor
+
+requirements: [
+  lead/85
+  graphite/60
+  silicon/60
+  titanium/45
+]
+
 consumes: {
-power: 1
+  power: 1
 }
+
+research: phase-conveyor
