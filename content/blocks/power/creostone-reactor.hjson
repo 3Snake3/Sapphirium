@@ -1,35 +1,41 @@
 type: NuclearReactor
-lightColor: e7221f
+category: power
+
+size: 3
+health: 1000
+itemCapacity: 20
+liquidCapacity: 20
 itemDuration: 360
+powerProduction: 22
+
+lightColor: e7221f
 heating: 0.04
 smokeThreshold: 0.5
 flashThreshold: 0.48
 explosionRadius: 28
 explosionDamage: 2200
 coolantPower: 0.7
-itemCapacity: 20
-liquidCapacity: 20
-consumes: {
-liquid: ledonite/0.010
-items: {
-items: [
-creostone/2
-]
-}
-}
-powerProduction: 22
-size: 3
-health: 1000
+
 ambientSound: hum
 ambientSoundVolume: 0.22
-category: power
+
 requirements: [
-copper/350
-lead/280
-silicon/170
-graphite/100
-creostone/110
-metaglass/40
+  copper/350
+  lead/280
+  silicon/170
+  graphite/100
+  creostone/110
+  metaglass/40
 ]
+
+consumes: {
+  liquid: ledonite/0.010
+  items: {
+    items: [
+      creostone/2
+    ]
+  }
+}
+
 research: thorium-reactor
 
