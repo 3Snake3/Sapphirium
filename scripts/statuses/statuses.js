@@ -1,14 +1,17 @@
 const weakened = extendContent(StatusEffect, "weakened", {
-init(){
-this.opposite(StatusEffects.overdrive, StatusEffects.overclock);
-},
-});
-weakened.speedMultiplier = 0.80;
-weakened.healthMultiplier = 0.80;
-weakened.damageMultiplier = 0.80;
-weakened.reloadMultiplier = 1.20;
-weakened.color = Pal.gray;
-exports.weakened = weakened;
+            
+    init(){
+        this.opposite(StatusEffects.overdrive, StatusEffects.overclock);
+    },
+            
+    speedMultiplier: 0.8,
+    healthMultiplier: 0.8,
+    damageMultiplier: 0.8,
+    reloadMultiplier: 1.2,
+    color: Pal.gray      
+})
+
+exports.weakened = weakened; 
 
 const superMelting = extendContent(StatusEffect, "super-melting", {
 init(){
