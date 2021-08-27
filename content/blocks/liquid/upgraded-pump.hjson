@@ -1,18 +1,24 @@
 type: Pump
-size: 3
 category: liquid
-requirements: [
-graphite/150
-silicon/100
-titanium/75
-metaglass/65
-thorium/45
-]
+
+size: 3
+health: 860
+hasPower: true
+
 pumpAmount: 0.40
 liquidCapacity: 60
-health: 860
+
+
+requirements: [
+  graphite/150
+  silicon/100
+  titanium/75
+  metaglass/65
+  thorium/45
+]
+
 consumes: {
-power: 2.5
+  power: 2.5
 }
-hasPower: true
+
 research: thermal-pump
