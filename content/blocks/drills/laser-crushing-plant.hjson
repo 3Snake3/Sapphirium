@@ -1,31 +1,37 @@
 type: Drill
+category: production
+
+size: 8
+hasPower: true
+warmupSpeed: 0.03
+itemCapacity: 500
+
 drillTime: 200
 tier: 10
-warmupSpeed: 0.03
 liquidBoostIntensity: 2.5
 liquidCapacity: 100
+
 rotateSpeed: 1
-hasPower: true
 drillEffect: mineHuge
-itemCapacity: 500
 heatColor: FEFF00
 drawRim: true
-size: 8
-consumes: {
-  power: 16
-    liquid: {
-              liquid: ledonite
-              amount: 0.4
-              booster: true
-            }
-  }
+
 requirements: [
-metaglass/1650
+  metaglass/1650
   titanium/1000
   silicon/1000
   plastanium/650
   creostone/700
   phase-fabric/300
 ]
-category: production
+
+consumes: {
+  power: 16
+  liquid: {
+    liquid: ledonite
+    amount: 0.4
+    booster: true
+  }
+}
+
 research: blast-drill
