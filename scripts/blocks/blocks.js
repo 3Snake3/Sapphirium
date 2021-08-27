@@ -151,9 +151,8 @@ creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, cr
     }
 });
 
-const massDriverBolt = extend(MassDriverBolt, {});
 const massDriver = extendContent(MassDriver, "compact-driver", {});
-massDriver.bullet = massDriverBolt;
+massDriver.bullet = extend(MassDriverBolt, {});
 
 const graphiteW = extendContent(MendProjector, "graphite-wall", {});
 exports.graphiteW = graphiteW;
@@ -175,19 +174,27 @@ exports.siliconWT = siliconWT;
 
 const statuses = require("statuses/statuses");
 
-const freezeWave = extend(BasicBulletType, 10, 0.9, "adc-none-bullet", {});
-freezeWave.status = statuses.superFreezing;
-freezeWave.lifetime = 20;
-freezeWave.pierce = true;
-freezeWave.pierceBuilding = true;
-freezeWave.buildingDamageMultiplier = 0;
-freezeWave.hitEffect = Fx.none;
-freezeWave.despawnEffect = Fx.none;
-freezeWave.shootEffect = Fx.none;
-freezeWave.absorbable = false;
-freezeWave.reflectable = false;
-freezeWave.hittable = false;
+const freezeWave = extend(BasicBulletType, 10, 0.9, "adc-none-bullet", {
+    status: statuses.superFreezing,
+    lifetime: 20,
+    pierce: true,
+    pierceBuilding: true,
+    buildingDamageMultiplier: 0,
+    hitEffect: Fx.none,
+    despawnEffect: Fx.none,
+    shootEffect: Fx.none,
+    absorbable: false,
+    reflectable: false,
+    hittable: false,
+});
 
 const fp = extendContent(PowerTurret, "freeze-projector", {});
 fp.shootType = freezeWave;
 exports.fp = fp;
+
+const creostoneSP = extendContent(SolarGenerator, "creostone-solar-panel", {
+    load(){	
+    this.super$load()
+    this.teamRegion = Core.atlas.find("adc-sword-weapon-heat")
+	}
+});
