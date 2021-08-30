@@ -198,3 +198,24 @@ const creostoneSP = extendContent(SolarGenerator, "creostone-solar-panel", {
         this.teamRegion = Core.atlas.find("adc-" + this.name + "-team")
     }
 });
+
+const cold = new Attribute(5, "cold");
+Blocks.snow.attributes.set(cold, 0.2);
+Blocks.iceSnow.attributes.set(cold, 0.45);
+Blocks.ice.attributes.set(cold, 0.7);
+
+const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
+    
+    attribute: cold,
+    
+    canPlaceOn(tile, team){
+		let floor = tile.floor();
+		
+        //make sure that there are cold in this place
+		return floor == Blocks.snow || floor == Blocks.iceSnow || floor == Block.ice;
+    },
+    
+    load(){
+        this.rotatorRegion = Core.atlas.find("adc-" + this.name + "-rotator")
+    },
+});
