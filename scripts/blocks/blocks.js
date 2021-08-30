@@ -183,7 +183,7 @@ const freezeWave = extend(BasicBulletType, 10, 0.9, "adc-none-bullet", {
     hitEffect: Fx.none,
     despawnEffect: Fx.none,
     shootEffect: Fx.none,
-    absorbable: false,
+    absorbable: true,
     reflectable: false,
     hittable: false,
 });
