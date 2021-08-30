@@ -12,6 +12,10 @@ shootSound: tractorbeam
 shootLength: 0
 inaccuracy: 0
 rotateSpeed: 0
+powerUse: 3.8
+
+coolantMultiplier: 0.3
+coolantUsage: 1
 
 heatColor: bfecff
 
@@ -33,9 +37,10 @@ requirements: [
 ]
 
 consumes: {
-  power: 3.3
   liquid: {
-    liquid: water
+    liquid: ledonite
     amount: 0.16
+    optional: false
+    booster: false
   }
 }
