@@ -14,6 +14,7 @@ inaccuracy: 0
 rotateSpeed: 0
 
 heatColor: bfecff
+
 shootEffect: {
   type: WaveEffect
   sides: 0
@@ -31,4 +32,10 @@ requirements: [
   silicon/60
 ]
 
-
+consumes: {
+  power: 3.3
+  liquid: {
+    liquid: water
+    amount: 0.16
+  }
+}
