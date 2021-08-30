@@ -4,7 +4,7 @@ const turrets = require("blocks/turrets");
 const creostone = Vars.content.getByName(ContentType.item, "adc-creostone"); 
 const globium = Vars.content.getByName(ContentType.item, "adc-globium"); 
 const creotite = Vars.content.getByName(ContentType.liquid, "adc-creotite");
-const ledonite = Vars.content.getByNams(ContentType.liquid, "adc-ledonitd");
+const ledonite = Vars.content.getByName(ContentType.liquid, "adc-ledonitd");
 
 function newNode(parent, content, req, objectives){
   
