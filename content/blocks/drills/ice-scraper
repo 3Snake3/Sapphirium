@@ -1,0 +1,17 @@
+category: AttributeCrafter
+
+size: 3
+health: 170
+hasLiquids: true
+hasItems: true
+hasPower: true
+
+craftTime: 368
+outputItem: ice-cube/1
+maxBoost: 1.42
+            
+requirements:[
+  copper/250
+  lead/100
+  silicon/55 
+]
