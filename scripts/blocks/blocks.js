@@ -214,7 +214,7 @@ const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
     drawer: rotator,
 	
     drawPlace(x, y, rotation, valid){  
-        this.drawPlaceText(Core.bundle.format("bar.drillspeed", (this.baseEfficiency + Math.min(this.maxBoost, this.boostScale * this.sumAttribute(this.attribute, x, y))) * 100)), x, y, valid);
+        this.drawPlaceText(Core.bundle.format("bar.drillspeed", this.baseEfficiency + Math.min(this.maxBoost, this.boostScale * this.sumAttribute(this.attribute, x, y))) * 100, x, y, valid);
     },
     
     canPlaceOn(tile, team){
