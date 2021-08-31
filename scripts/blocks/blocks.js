@@ -211,13 +211,14 @@ rotator.drawSpinSprite = true;
 const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
     
     attribute: cold,
-    
     drawer: rotator,
+	
+    drawPlace(x, y, rotation, valid){
+        this.drawPlaceText(Core.bundle.format("bar.drillspeed", (baseEfficiency + Math.min(maxBoost, boostScale * sumAttribute(attribute, x, y))) * 100)), x, y, valid);
+    }
     
     canPlaceOn(tile, team){
-		let floor = tile.floor();
-		
-		return floor == Blocks.snow || Blocks.iceSnow || floor == Blocks.ice;
+	return tile.getLinkedTilesAs(this, this.tempTiles).sumf(other -> other.floor().attributes.get(this.attribute)) > 0.1;
     }
     
 });
