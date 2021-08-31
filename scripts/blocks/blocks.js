@@ -195,27 +195,30 @@ exports.fp = fp;
 const creostoneSP = extendContent(SolarGenerator, "creostone-solar-panel", {
     load(){	
         this.super$load()
-        this.teamRegion = Core.atlas.find("adc-" + this.name + "-team")
+        this.teamRegion = Core.atlas.find(this.name + "-team");
+        this.region = Core.atlas.find(this.name);
     }
 });
 
-const cold = new Attribute(5, "cold");
+const cold = Attribute.add("cold");
 Blocks.snow.attributes.set(cold, 0.2);
 Blocks.iceSnow.attributes.set(cold, 0.45);
 Blocks.ice.attributes.set(cold, 0.7);
+
+const rotator = new DrawRotator();
+rotator.drawSpinSprite = true;
 
 const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
     
     attribute: cold,
     
+    drawer: rotator,
+    
     canPlaceOn(tile, team){
 		let floor = tile.floor();
 		
-        //make sure that there are cold in this place
-		return floor == Blocks.snow || floor == Blocks.iceSnow || floor == Block.ice;
-    },
+		return floor == Blocks.snow || Blocks.iceSnow || floor == Blocks.ice;
+    }
     
-    load(){
-        this.rotatorRegion = Core.atlas.find("adc-" + this.name + "-rotator")
-    },
 });
+		

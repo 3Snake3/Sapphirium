@@ -23,11 +23,11 @@ ambientSound: techloop
 ambientSoundVolume: 0.03
 category: crafting
 requirements: [
-creostone/300
-lead/230
-thorium/150
-plastanium/80
-phase-fabric/65
+creostone/225
+lead/125
+thorium/80
+plastanium/60
+phase-fabric/45
 ]
 research: phase-weaver
 

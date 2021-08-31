@@ -16,8 +16,8 @@ function newNode(parent, content, req, objectives){
 }
 
 //liquids
-newNode(Liquids.oil, creotite, creotite.researchRequirements(), Seq.with(new Objectives.Produce(creotite)) );
-newNode(Liquids.cryofluid, ledonite, ledonite.reserchRequirements(), Seq.with(new Objectives.Produce(ledonite)) );
+newNode(Liquids.oil, creotite, null, Seq.with(new Objectives.Produce(creotite)) );
+newNode(Liquids.cryofluid, ledonite, null, Seq.with(new Objectives.Produce(ledonite)) );
 
 //items
 
