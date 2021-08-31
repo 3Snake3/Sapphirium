@@ -214,12 +214,14 @@ const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
     drawer: rotator,
 	
     drawPlace(x, y, rotation, valid){
+	    
+	    
         this.drawPlaceText(Core.bundle.format("bar.drillspeed", (baseEfficiency + Math.min(maxBoost, boostScale * sumAttribute(attribute, x, y))) * 100)), x, y, valid);
-    }
+    },
     
     canPlaceOn(tile, team){
 	return tile.getLinkedTilesAs(this, this.tempTiles).sumf(other -> other.floor().attributes.get(this.attribute)) > 0.1;
-    }
+    },
     
 });
 		
