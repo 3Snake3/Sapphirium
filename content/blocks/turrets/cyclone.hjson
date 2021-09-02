@@ -6,12 +6,12 @@ speed: 5
 damage: 6
 ammoMultiplier: 4
             shootEffect: shootSmall
-            reloadMultiplier: 0.8
+            reloadMultiplier: 0.85
             width: 7
             height: 9
             hitEffect: flakExplosion
-            splashDamage: 40
-            splashDamageRadius: 18
+            splashDamage: 35
+            splashDamageRadius: 23
             status: freezing
             fragBullet: {
             type: BasicBulletType

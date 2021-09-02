@@ -105,9 +105,9 @@ reloadMultiplier: 1.3
 }
 }
 requirements: [
-lead/250
-graphite/120
-creostone/80
-silicon/60
-plastanium/45
+copper/550
+lead/350
+graphite/230
+thorium/145
+creostone/125
 ]

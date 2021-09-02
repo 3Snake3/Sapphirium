@@ -13,8 +13,8 @@ reloadMultiplier: 0.8
 width: 7
 height: 9
 hitEffect: flakExplosion
-splashDamage: 40
-splashDamageRadius: 23
+splashDamage: 30
+splashDamageRadius: 45
 status: freezing
 fragBullet: {
 type: BasicBulletType
