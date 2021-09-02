@@ -166,11 +166,17 @@ exports.coalW = coalW;
 const coalWT = extendContent(PowerTurret, "coal-wall-turret", {});
 exports.coalWT = coalWT;
 
-const siliconW = extendContent(Wall, "silicon-wall", {});
+/*const siliconW = extendContent(Wall, "silicon-wall", {});
 exports.siliconW = siliconW;
 
 const siliconWT = extendContent(PowerTurret, "silicon-wall-turret", {});
 exports.siliconWT = siliconWT;
+
+const cryocubeW = extendContent(Wall, "cryocube-wall", {});
+exports.cryocubeW = cryocubeW;
+
+const cryocubeWT = extendContent(PowerTurret, "cryocube-wall-turret", {});
+exports.cryocubeWT = cryocubeWT;*/
 
 const statuses = require("statuses/statuses");
 
@@ -192,13 +198,12 @@ const fp = extendContent(PowerTurret, "freeze-projector", {});
 fp.shootType = freezeWave;
 exports.fp = fp;
 
-const creostoneSP = extendContent(SolarGenerator, "creostone-solar-panel", {
+/*const creostoneSP = extendContent(SolarGenerator, "creostone-solar-panel", {
     load(){	
         this.super$load()
         this.teamRegion = Core.atlas.find(this.name + "-team");
-        this.region = Core.atlas.find(this.name);
     }
-});
+});*/
 
 const cold = Attribute.add("cold");
 Blocks.snow.attributes.set(cold, 0.2);
@@ -222,4 +227,8 @@ const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
     },
     
 });*/
+
+const coreCage = extendContent(CoreBlock, "core-cage", {
+	thrusterLength: 46/4,
+	});
 		

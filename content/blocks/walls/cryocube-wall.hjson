@@ -1,8 +1,5 @@
 type: Wall
 health: 300
-absorbLasers: true
-flashHit: true
-chanceDeflect: 30
 requirements: [
 cryocube/20
 ]

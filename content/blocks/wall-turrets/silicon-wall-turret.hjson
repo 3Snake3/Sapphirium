@@ -1,3 +1,4 @@
+type: PowerTurret
 health: 2300
 size: 2
 reloadTime: 40
@@ -29,3 +30,4 @@ requirements: [
 silicon/40
 creostone/10
 ]
+research: silicon-wall
