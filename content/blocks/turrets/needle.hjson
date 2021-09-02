@@ -36,10 +36,10 @@ consumes: {
 power: 10
 }
 requirements: [
-creostone/400
-silicon/300
-plastanium/195
-titanium/120
-surge-alloy/80
+creostone/1250
+silicon/450
+plastanium/290
+titanium/170
+surge-alloy/90
 ]
 category: turret

@@ -205,7 +205,7 @@ Blocks.snow.attributes.set(cold, 0.2);
 Blocks.iceSnow.attributes.set(cold, 0.45);
 Blocks.ice.attributes.set(cold, 0.7);
 
-const rotator = new DrawRotator();
+/*const rotator = new DrawRotator();
 rotator.drawSpinSprite = true;
 
 const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
@@ -221,5 +221,5 @@ const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
 	return tile.getLinkedTilesAs(this, this.tempTiles).sumf(other => other.floor().attributes.get(this.attribute)) > 0.1;
     },
     
-});
+});*/
 		
