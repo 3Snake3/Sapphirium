@@ -32,5 +32,9 @@ const impaler = extendContent(PowerTurret, "impaler", {})
 impaler.shootType = spear;
 
 exports.impaler = impaler;
-exports.warhead = extendContent(ItemTurret, "warhead", {})
-exports.needle = extendContent(ItemTurret, "needle", {})
+
+const warhead = extendContent(ItemTurret, "warhead", {})
+exports.warhead = warhead;
+
+const needle = extendContent(ItemTurret, "needle", {})
+exports.needle = needle;

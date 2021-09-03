@@ -5,3 +5,4 @@ research: coal-wall-turret
 requirements: [
 silicon/6
 ]
+research: cryocube-wall-turret

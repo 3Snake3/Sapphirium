@@ -16,8 +16,9 @@ function newNode(parent, content, req, objectives){
 }
 
 //liquids
-newNode(Liquids.oil, creotite, ItemStack.empty, Seq.with(new Objectives.Produce(creotite)) );
-newNode(Liquids.cryofluid, ledonite, ItemStack.empty, Seq.with(new Objectives.Produce(ledonite)) );
+//this is not work, null object reference.
+/*newNode(Liquids.oil, creotite, ItemStack.empty, Seq.with(new Objectives.Produce(creotite)) );
+newNode(Liquids.cryofluid, ledonite, ItemStack.empty, Seq.with(new Objectives.Produce(ledonite)) );*/
 
 //items
 
@@ -28,4 +29,5 @@ newNode(Blocks.meltdown, turrets.needle, ItemStack.with(creostone, 10000, Items.
 newNode(Blocks.cryofluidMixer, blocks.multi, ItemStack.with(Items.lead, 1800, Items.graphite, 1000, Items.silicon, 1200), Seq.with(new Objectives.SectorComplete(SectorPresets.craters)));
 newNode(blocks.graphiteW, blocks.graphiteWT, ItemStack.with(Items.graphite, 3500, Items.silicon, 1200), Seq.with(new Objectives.Research(Blocks.lancer)));
 newNode(blocks.coalW, blocks.coalWT, ItemStack.with(Items.coal, 3500, Items.silicon, 1200), Seq.with(new Objectives.Research(Blocks.fuse)));
-newNode(blocks.siliconW, blocks.siliconWT, ItemStack.with(Items.silicon, 3500, creostone, 1200), Seq.with(new Objectives.Research(Blocks.swarmer)));
+//not work
+/*newNode(blocks.siliconW, blocks.siliconWT, ItemStack.with(Items.silicon, 3500, creostone, 1200), Seq.with(new Objectives.Research(Blocks.swarmer)));*/

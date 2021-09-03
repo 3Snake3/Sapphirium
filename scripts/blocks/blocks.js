@@ -226,9 +226,8 @@ const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
 	return tile.getLinkedTilesAs(this, this.tempTiles).sumf(other => other.floor().attributes.get(this.attribute)) > 0.1;
     },
     
-});*/
+});
 
 const coreCage = extendContent(CoreBlock, "core-cage", {
 	thrusterLength: 46/4,
-	});
-		
+	});*/
