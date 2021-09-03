@@ -1,3 +1,4 @@
+type: PowerTurret
 health: 3000
 size: 2
 category: defense

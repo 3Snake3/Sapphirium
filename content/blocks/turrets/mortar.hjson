@@ -88,7 +88,7 @@ speed: 3
 fragBullet: {
 type: BasicBulletType
 width: 8
-heigth: 8
+height: 8
 lifetime: 20
 damage: 5
 hitEffect: flakExplosion
@@ -140,7 +140,7 @@ ammoMultiplier: 2
 fragBullet: {
 type: BasicBulletType
 width: 8
-heigth: 8
+height: 8
 lifetime: 30
 damage: 10
 hitEffect: flakExplosion

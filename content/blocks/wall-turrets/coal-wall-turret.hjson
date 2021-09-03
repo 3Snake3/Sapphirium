@@ -1,3 +1,4 @@
+type: PowerTurret
 health: 2780
 size: 2
 reloadTime: 30

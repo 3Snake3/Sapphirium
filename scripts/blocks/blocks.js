@@ -51,7 +51,6 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
       Draw.rect(region2, this.x, this.y)
 };
 });
-exports.multi = multi;
 
 /**This is not my code, its belongs to sharlotte-mobile/ExampleMod*/
 const creostoneProjector = new JavaAdapter(ForceProjector, {
@@ -154,29 +153,18 @@ creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, cr
 const massDriver = extendContent(MassDriver, "compact-driver", {});
 massDriver.bullet = extend(MassDriverBolt, {});
 
-const graphiteW = extendContent(MendProjector, "graphite-wall", {});
-exports.graphiteW = graphiteW;
+//this is broken
+/*const graphiteW = extend(MendProjector, "graphite-wall", {});
+const graphiteWT = extend(PowerTurret, "graphite-wall-turret", {});
 
-const graphiteWT = extendContent(PowerTurret, "graphite-wall-turret", {});
-exports.graphiteWT = graphiteWT;
+const coalW = extend(Wall, "coal-wall", {});
+const coalWT = extend(PowerTurret, "coal-wall-turret", {});
 
-const coalW = extendContent(Wall, "coal-wall", {});
-exports.coalW = coalW;
+const siliconW = extend(Wall, "silicon-wall", {});
+const siliconWT = extend(PowerTurret, "silicon-wall-turret", {});
 
-const coalWT = extendContent(PowerTurret, "coal-wall-turret", {});
-exports.coalWT = coalWT;
-
-/*const siliconW = extendContent(Wall, "silicon-wall", {});
-exports.siliconW = siliconW;
-
-const siliconWT = extendContent(PowerTurret, "silicon-wall-turret", {});
-exports.siliconWT = siliconWT;
-
-const cryocubeW = extendContent(Wall, "cryocube-wall", {});
-exports.cryocubeW = cryocubeW;
-
-const cryocubeWT = extendContent(PowerTurret, "cryocube-wall-turret", {});
-exports.cryocubeWT = cryocubeWT;*/
+const cryocubeW = extend(Wall, "cryocube-wall", {});
+const cryocubeWT = extend(PowerTurret, "cryocube-wall-turret", {});*/
 
 const statuses = require("statuses/statuses");
 
@@ -194,26 +182,26 @@ const freezeWave = extend(BasicBulletType, 10, 0.9, "adc-none-bullet", {
     hittable: false,
 });
 
-const fp = extendContent(PowerTurret, "freeze-projector", {});
+const fp = extend(PowerTurret, "freeze-projector", {});
 fp.shootType = freezeWave;
-exports.fp = fp;
 
-/*const creostoneSP = extendContent(SolarGenerator, "creostone-solar-panel", {
+/*const creostoneSP = extend(SolarGenerator, "creostone-solar-panel", {
     load(){	
         this.super$load()
         this.teamRegion = Core.atlas.find(this.name + "-team");
     }
 });*/
 
-const cold = Attribute.add("cold");
+/*const cold = Attribute.add("cold");
 Blocks.snow.attributes.set(cold, 0.2);
 Blocks.iceSnow.attributes.set(cold, 0.45);
-Blocks.ice.attributes.set(cold, 0.7);
+Blocks.ice.attributes.set(cold, 0.7);*/
 
+//broken
 /*const rotator = new DrawRotator();
 rotator.drawSpinSprite = true;
 
-const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
+const iceScraper = extend(AttributeCrafter, "ice-scraper", {
     
     attribute: cold,
     drawer: rotator,
@@ -226,8 +214,13 @@ const iceScraper = extendContent(AttributeCrafter, "ice-scraper", {
 	return tile.getLinkedTilesAs(this, this.tempTiles).sumf(other => other.floor().attributes.get(this.attribute)) > 0.1;
     },
     
-});
+});*/
 
-const coreCage = extendContent(CoreBlock, "core-cage", {
+const coreCage = extend(CoreBlock, "core-cage", {
 	thrusterLength: 46/4,
-	});*/
+	});
+	
+module.exports = {
+  multi: multi,
+  fp: fp
+} 

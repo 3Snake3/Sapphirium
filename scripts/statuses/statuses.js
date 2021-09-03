@@ -11,8 +11,6 @@ const weakened = extendContent(StatusEffect, "weakened", {
     color: Pal.gray      
 })
 
-exports.weakened = weakened; 
-
 const superMelting = extendContent(StatusEffect, "super-melting", {
             
     init(){
@@ -84,5 +82,8 @@ const superFreezing = extendContent(StatusEffect, "super-freezing", {
     color: Color.valueOf("6fdded")
 });
 
-exports.superFreezing = superFreezing;
-exports.superMelting = superMelting;
+module.exports = {
+	weakened: weakened,
+	superMelting: superMelting,
+	superFreezing: superFreezing
+}

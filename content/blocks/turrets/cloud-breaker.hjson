@@ -40,8 +40,6 @@ effects: [shockwave, massiveExplosion]
 }
 shootEffect: shootBig
 trailChance: 0.9
-trailMult: 3
-trailSize: 6
 trailEffect: missileTrail
 makeFire: true
 collidesGround: false
@@ -94,8 +92,6 @@ effects: [shockwave, massiveExplosion]
 }
 shootEffect: shootBig
 trailChance: 0.9
-trailMult: 3
-trailSize: 6
 trailEffect: missileTrail
 fragLifeMin: 0.4
 fragCone: 75

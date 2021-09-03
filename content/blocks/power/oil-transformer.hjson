@@ -13,7 +13,7 @@ plastanium/70
 ]
 powerProduction: 0.8
 generateEffect: {
-type: PartictleEffect
+type: ParticleEffect
 particles: 5
 region: adc-transparent-circle
 lifetime: 20

@@ -1,3 +1,4 @@
+type: MendProjector
 health: 380
 category: defense
 research: {

@@ -28,13 +28,13 @@ const spear = extend(BasicBulletType, 8, 35, "adc-spear-bullet", {
     buildingDamageMultiplier: 0.7
 })
 
-const impaler = extendContent(PowerTurret, "impaler", {})
+const impaler = extend(PowerTurret, "impaler", {})
 impaler.shootType = spear;
 
-exports.impaler = impaler;
-
-const warhead = extendContent(ItemTurret, "warhead", {})
-exports.warhead = warhead;
-
-const needle = extendContent(ItemTurret, "needle", {})
-exports.needle = needle;
+const warhead = extend(ItemTurret, "warhead", {})
+const needle = extend(ItemTurret, "needle", {})
+module.exports = {
+warhead: warhead,
+impaler: impaler,
+needle: needle
+}
