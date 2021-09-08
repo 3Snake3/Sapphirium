@@ -23,7 +23,7 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
         },
         {
           input: {
-            liquids: ["slag/3"],
+            liquids: ["water/6", "slag/3"],
             power: 0.6
           },
           output: {
@@ -48,8 +48,8 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
       let region1 = Core.atlas.find("adc-freezer-top")
       Draw.rect(region1, this.x, this.y);
       let region2 = Core.atlas.find("adc-freezer")
-      Draw.rect(region2, this.x, this.y)
-};
+      Draw.rect(region2, this.x, this.y);
+}
 });
 
 /**This is not my code, its belongs to sharlotte-mobile/ExampleMod*/
@@ -197,29 +197,19 @@ Blocks.snow.attributes.set(cold, 0.2);
 Blocks.iceSnow.attributes.set(cold, 0.45);
 Blocks.ice.attributes.set(cold, 0.7);*/
 
-//broken
-/*const rotator = new DrawRotator();
-rotator.drawSpinSprite = true;
-
-const iceScraper = extend(AttributeCrafter, "ice-scraper", {
-    
-    attribute: cold,
-    drawer: rotator,
-	
-    drawPlace(x, y, rotation, valid){  
-        this.drawPlaceText(Core.bundle.format("bar.drillspeed", this.baseEfficiency + Math.min(this.maxBoost, this.boostScale * this.sumAttribute(this.attribute, x, y))) * 100, x, y, valid);
-    },
-    
-    canPlaceOn(tile, team){
-	return tile.getLinkedTilesAs(this, this.tempTiles).sumf(other => other.floor().attributes.get(this.attribute)) > 0.1;
-    },
-    
-});*/
-
-const coreCage = extend(CoreBlock, "core-cage", {
+/*const coreCage = extend(CoreBlock, "core-cage", {
 	thrusterLength: 46/4,
 	});
 	
+const ledoniteLiquid = extendContent(Floor, "ledonite", {
+	isLiquid: true,
+	status: statuses.superFreezing,
+	statusDuration: 240,
+	drownTime: 150,
+	speedMultiplier: 0.19,
+	lightColor: Color.valueOf("c1f4ff"),
+	});*/
+
 module.exports = {
   multi: multi,
   fp: fp

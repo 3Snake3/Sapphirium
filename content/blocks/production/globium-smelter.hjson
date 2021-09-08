@@ -9,7 +9,7 @@ boostScale: 0.20
 drawer: DrawSmelter
 consumes: {
 power: 4.5
-liquid: ledonite/0.2
+liquid: ledonite-liquid/0.2
 items: {
 items: [
 lead/5

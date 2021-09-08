@@ -1,4 +1,3 @@
-type: NuclearReactor
 category: power
 
 size: 3
@@ -29,7 +28,7 @@ requirements: [
 ]
 
 consumes: {
-  liquid: ledonite/0.010
+  liquid: ledonite-liquid/0.02
   items: {
     items: [
       creostone/2

@@ -9,7 +9,7 @@ hasItems: true
 itemCapacity: 20
 drawer: DrawCultivator
 attribute: spores
-legacyReadWarmap: true
+legacyReadWarmup: true
 maxBoost: 4
 consumes: {
 power: 2

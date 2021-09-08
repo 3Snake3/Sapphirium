@@ -1,13 +1,12 @@
-type: PowerTurret
 requirements: [
-silicon/1600
-titanium/1450
-thorium/1200
-plastanium/950
-creostone/600
-surge-alloy/450
-phase-fabric/300
+titanium/3500
+graphite/2800
+silicon/2000
+plastanium/1650
+surge-alloy/1200
+creostone/1000
 ]
+buildCostMultiplier: 0.85
 range: 550
 chargeTime: 300
 chargeMaxDelay: 290
@@ -27,60 +26,13 @@ shootSound: laserblast
 chargeSound: lasercharge
 heatColor: ff0000
 size: 8
-health: 20000
-shootType: {
-type: LaserBulletType
-colors: ["98ffa9", "98FFA9", "FFFFFF"]
-length: 570
-damage: 2000
-width: 60
-lifetime: 60
-lightningSpacing: 40
-lightningLength: 40
-lightningDelay: 1.1
-lightningLengthRand: 70
-lightningDamage: 200
-lightningAngleRand: 40
-largeHit: true
-lightColor: 98ffa9
-lightningColor: 98ffa9
-collidesGround: true
-collidesAir: true
-collidesTiles: true
-collidesTeam: true
-sideAngle: 15
-sideWidth: 0
-sideLength: 0
-healPercent: 50
-hitSound: spark
-fragBullets: 5
-fragCone: 100
-status: {
-name: adc-stunned
-speedMultiplier: 0.001
-healthMultiplier: 0.9
-disarm: true
-}
-statusDuration: 120
-fragBullet: {
-type: LightningBulletType
-lightningColor: 98ffa9
-lightningLength: 25
-healPercent: 30
-damage: 100
-collidesAir: true
-collidesGround: true
-collidesTeam: true
-}
-}
+health: 18500
 coolantMultiplier: 2.5
 coolantUsage: 4
 consumes: {
 liquid: {
-liquid: ledonite
+liquid: ledonite-liquid
 amount: 0.6
-optional: false
-booster: true
 }
 }
 category: turret

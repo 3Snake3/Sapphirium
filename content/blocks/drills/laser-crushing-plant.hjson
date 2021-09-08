@@ -28,7 +28,7 @@ requirements: [
 consumes: {
   power: 16
   liquid: {
-    liquid: ledonite
+    liquid: ledonite-liquid
     amount: 0.4
     booster: true
   }

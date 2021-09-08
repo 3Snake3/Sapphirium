@@ -25,7 +25,17 @@ despawnEffect: shockwave
 shootEffect: shockwave
 }
 category: turret
-research: segment
+research: {
+parent: segment
+requirements: [
+copper/8500
+graphite/6500
+silicon/4200
+thorium/2450
+phase-fabric/1200
+]
+objectives: [sparrow, overgrowth]
+}
 requirements: [
 copper/200
 titanium/125

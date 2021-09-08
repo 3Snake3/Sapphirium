@@ -15,7 +15,7 @@ hasLiquids: true
 outputsLiquid: true
 consumes: {
 power: 5.5
-liquid: water/0.4
+liquid: ledonite-liquid/0.4
 items: {
 items: [
 pyratite/2

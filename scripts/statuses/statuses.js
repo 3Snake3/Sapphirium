@@ -82,8 +82,24 @@ const superFreezing = extendContent(StatusEffect, "super-freezing", {
     color: Color.valueOf("6fdded")
 });
 
+const effect = extendContent(ParticleEffect, {});
+effect.particles = 1;
+effect.sizeFrom = 5;
+effect.sizeTo = 5;
+effect.region = Core.atlas.find("adc-stun");
+effect.lifetime = 100;
+effect.length = 0;
+
+const stun = extendContent(StatusEffect, "stunned", {
+	speedMultiplier: 0.001,
+	disarm: true,
+	effect: effect,
+	})
+		
+
 module.exports = {
 	weakened: weakened,
 	superMelting: superMelting,
-	superFreezing: superFreezing
+	superFreezing: superFreezing,
+	stun: stun
 }

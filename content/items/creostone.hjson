@@ -1,5 +1,6 @@
-cost: 1.0
+cost: 2
 flammability: 1.25
+hardness: 4
 explosiveness: 0.18
 radioactivity: 0.8
 color: ffaf7a

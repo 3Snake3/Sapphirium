@@ -26,4 +26,14 @@ silicon/20
 lead/5
 ]
 category: defense
-research: cryocube-wall
+research: {
+parent: cryocube-wall
+requirements: [
+copper/8500
+graphite/6500
+silicon/4200
+thorium/2450
+phase-fabric/1200
+]
+objectives: [cloud-breaker, planetaryTerminal]
+}
