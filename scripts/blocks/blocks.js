@@ -185,18 +185,6 @@ const freezeWave = extend(BasicBulletType, 10, 0.9, "adc-none-bullet", {
 const fp = extend(PowerTurret, "freeze-projector", {});
 fp.shootType = freezeWave;
 
-/*const creostoneSP = extend(SolarGenerator, "creostone-solar-panel", {
-    load(){	
-        this.super$load()
-        this.teamRegion = Core.atlas.find(this.name + "-team");
-    }
-});*/
-
-/*const cold = Attribute.add("cold");
-Blocks.snow.attributes.set(cold, 0.2);
-Blocks.iceSnow.attributes.set(cold, 0.45);
-Blocks.ice.attributes.set(cold, 0.7);*/
-
 /*const coreCage = extend(CoreBlock, "core-cage", {
 	thrusterLength: 46/4,
 	});

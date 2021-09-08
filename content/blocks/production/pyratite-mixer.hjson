@@ -4,8 +4,8 @@ particles: 6
 sizeFrom: 5
 sizeTo: 0
 region: adc-octagon
-colorFrom: ff795e
-colorTo: ff795e
-length: 14
+colorFrom: f8ad42
+colorTo: f8ad42
+length: 12
 lifetime: 20
 }
