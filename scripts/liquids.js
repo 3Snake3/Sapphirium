@@ -12,5 +12,5 @@ const surgeMass = extend(Liquid, "surge-mass", {
 });
 
 module.exports = {
-	surgeMass: SM
+	surgeMass: surgeMass
 	}
