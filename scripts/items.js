@@ -11,5 +11,5 @@ const globium = extend(Item, "globium", {});
 const creosand = extend(Item, "creosand", {});
 
 module.exports = {
-surgeStone: SS
+surgeStone: surgeStone
 }
