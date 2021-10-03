@@ -1,4 +1,4 @@
-type: PowerTurret
+
 health: 3000
 recoilAmount: 1.5
 reloadTime: 70
@@ -10,6 +10,8 @@ powerUse: 0.70
 size: 2
 shootSound: release
 shootEffect: shootLiquid
+group: walls
+priority: turret
 shootType: {
 type: LiquidBulletType
 liquid: cryofluid
@@ -35,5 +37,5 @@ silicon/4200
 thorium/2450
 phase-fabric/1200
 ]
-objectives: [cloud-breaker, planetaryTerminal]
+objectives: [tsunami]
 }

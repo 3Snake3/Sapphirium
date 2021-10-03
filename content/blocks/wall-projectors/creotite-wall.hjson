@@ -1,10 +1,11 @@
 type: OverdriveProjector
 health: 800
-range: 20
+range: 40
 speedBoost: 0.5
 consumes: {
 power: 0.5
 }
+group: walls
 requirements: [
 creostone/8
 silicon/4

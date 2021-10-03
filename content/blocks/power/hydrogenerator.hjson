@@ -1,14 +1,17 @@
 type: ThermalGenerator
 health: 750
 category: power
-research: thermal-generator
+research: {
+parent: thermal-generator
+objectives: [water-extractor]
+}
 requirements: [
 lead/70
 graphite/60
 metaglass/50
 silicon/40
 ]
-powerProduction: 1.8
+powerProduction: 1.2
 generateEffect: {
 type: ParticleEffect
 particles: 5

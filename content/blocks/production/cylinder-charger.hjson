@@ -1,0 +1,40 @@
+type: GenericCrafter
+consumes: {
+power: 2.5
+liquid: surge-mass/0.5
+items: {
+items: [
+charged-lead/1
+charged-stick/1
+charged-ingot/1
+]
+}
+}
+outputItem: charged-cylinder/1
+craftTime: 180
+drawer: DrawSmelter
+liquidCapacity: 30
+craftEffect: {
+type: ParticleEffect
+particles: 6
+cone: 360
+sizeFrom: 6
+sizeTo: 0
+region: adc-rhombus
+lifetime: 23
+length: 20
+colorFrom: fff480
+colorTo: e8d174
+}
+category: crafting
+ambientSound: respawning
+ambientSoundVolume: 0.15
+requirements: [
+titanium/85
+graphite/85
+silicon/60
+plastanium/30
+surge-alloy/30
+]
+research: ingot-charger
+size: 2

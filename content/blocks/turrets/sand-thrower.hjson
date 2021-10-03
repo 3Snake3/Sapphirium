@@ -19,7 +19,6 @@ fragBullets: 4
 fragCone: 70
 status: slow
 hitShake: 2
-reloadMultiplier: 1.5
 fragBullet: {
 type: BasicBulletType
 width: 8
@@ -71,7 +70,7 @@ rotateSpeed: 8
 spread: 6
 restitution: 0.2
 range: 180
-shootSound: shootBig
+shootSound: throw
 requirements: [
 copper/125
 lead/85

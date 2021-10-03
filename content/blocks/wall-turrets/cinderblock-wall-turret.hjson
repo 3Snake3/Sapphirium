@@ -1,10 +1,12 @@
-type: PowerTurret
+
 health: 2280
 reloadTime: 7
 recoilAmount: 3
 shootSound: shootBig
 shootCone: 30
 range: 70
+group: walls
+priority: turret
 shootType: {
 type: BasicBulletType
 width: 10

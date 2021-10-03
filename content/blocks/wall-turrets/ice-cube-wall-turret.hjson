@@ -1,4 +1,4 @@
-type: PowerTurret
+
 health: 1440
 absorbLasers: true
 size: 2
@@ -13,6 +13,8 @@ recoilAmount: 2
 inaccuracy: 5
 range: 100
 rotateSpeed: 10
+group: walls
+priority: turret
 shootEffect: {
 type: ParticleEffect
 particles: 6

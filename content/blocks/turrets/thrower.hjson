@@ -1,7 +1,10 @@
 type: ItemTurret
 size: 2
 category: turret
-research: salvo
+research: {
+parent: salvo
+objectives: [cyclone]
+}
 requirements: [
 copper/125
 graphite/95
@@ -15,11 +18,12 @@ sprite: adc-dartt
 width: 7
 height: 9
 damage: 9
-speed: 2.5
-lifetime: 72
+speed: 3
+lifetime: 60
 shootEffect: shootSmall
 smokeEffect: shootSmallSmoke
-ammoMultiplier: 2
+pierce: true
+pierceCap: 1
 }
 graphite: {
 sprite: adc-dartt
@@ -29,7 +33,32 @@ damage: 20
 speed: 3.5
 lifetime: 51
 reloadMultiplier: 0.6
-ammoMultiplier: 4
+ammoMultiplier: 3
+pierce: true
+pierceCap: 2
+}
+metaglass: {
+sprite: adc-dartt
+width: 9
+height: 12
+damage: 12
+speed: 5
+lifetime: 36
+reloadMultiplier: 0.8
+ammoMultiplier: 2
+fragBullets: 5
+fragCone: 90
+fragBullet: {
+type: BasicBulletType
+width: 9
+height: 9
+speed: 5
+lifetime: 20
+damage: 5
+pierce: true
+pierceCap: 1
+knockback: 0.4
+}
 }
 thorium: {
 sprite: adc-dartt
@@ -41,6 +70,8 @@ lifetime: 45
 shootEffect: shootBig
 smokeEffect: shootBigSmoke
 ammoMultiplier: 4
+pierce: true
+pierceCap: 3
 }
 silicon: {
 sprite: adc-dartt
@@ -52,6 +83,8 @@ lifetime: 60
 reloadMultiplier: 1.7
 ammoMultiplier: 5
 homingPower: 0.10
+pierce: true
+pierceCap: 2
 }
 pyratite: {
 sprite: adc-dartt
@@ -65,6 +98,8 @@ backColor: f68021
 status: burning
 makeFire: true
 inaccuracy: 4
+pierce: true
+pierceCap: 2
 }
 creostone: {
 sprite: adc-dartt
@@ -82,6 +117,8 @@ pierce: true
 pierceCap: 2
 ammoMultiplier: 6
 reloadMultiplier: 1.4
+pierce: true
+pierceCap: 4
 }
 }
 reloadTime: 8
@@ -91,4 +128,4 @@ health: 960
 shootShake: 1
 ammoEjectBack: 1
 ammoUseEffect: casing2
-shootSound: shootBig
+shootSound: throw

@@ -1,4 +1,4 @@
-type: PowerTurret
+
 health: 3200
 recoilAmount: 0
 reloadTime: 6
@@ -11,6 +11,8 @@ powerUse: 0.80
 size: 2
 shootSound: flame
 baseExplosiveness: 0.95
+group: walls
+priority: turret
 shootType: {
 type: BasicBulletType
 ammoMultiplier: 4

@@ -29,7 +29,7 @@ requirements: [
 ]
 
 consumes: {
-  liquid: ledonite-liquid/0.02
+  liquid: ledonite-liquid/0.083
   items: {
     items: [
       creostone/2

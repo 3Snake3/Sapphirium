@@ -10,6 +10,7 @@ placeableLiquid: true
 category: defense
 researchCostMultiplier: 2.5
 buildCostMultiplier: 2.5
+group: walls
 requirements: [
 creostone/165
 silicon/80

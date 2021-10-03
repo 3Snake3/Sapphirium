@@ -1,0 +1,41 @@
+type: GenericCrafter
+consumes: {
+power: 1
+liquid: surge-mass/0.2
+items: {
+items: [
+lead/1
+silicon/2
+]
+}
+}
+outputItem: charged-lead/1
+craftTime: 60
+drawer: DrawSmelter
+liquidCapacity: 12
+craftEffect: {
+type: ParticleEffect
+particles: 6
+cone: 360
+sizeFrom: 6
+sizeTo: 0
+region: adc-rhombus
+lifetime: 23
+length: 20
+colorFrom: fff480
+colorTo: e8d174
+}
+category: crafting
+ambientSound: respawning
+ambientSoundVolume: 0.15
+requirements: [
+lead/65
+graphite/65
+silicon/45
+surge-alloy/15
+]
+research: {
+parent: silicon-smelter
+objectives: [freezer]
+}
+size: 2

@@ -1,0 +1,39 @@
+type: GenericCrafter
+consumes: {
+power: 1.7
+liquid: surge-mass/0.3
+items: {
+items: [
+charged-lead/1
+silicon/2
+graphite/1
+]
+}
+}
+outputItem: charged-stick/1
+craftTime: 65
+drawer: DrawSmelter
+liquidCapacity: 24
+craftEffect: {
+type: ParticleEffect
+particles: 6
+cone: 360
+sizeFrom: 3
+sizeTo: 0
+region: adc-rhombus
+lifetime: 15
+length: 10
+colorFrom: fff480
+colorTo: e8d174
+}
+category: crafting
+ambientSound: respawning
+ambientSoundVolume: 0.15
+requirements: [
+titanium/65
+graphite/65
+silicon/45
+surge-alloy/20
+]
+research: lead-charger
+size: 2

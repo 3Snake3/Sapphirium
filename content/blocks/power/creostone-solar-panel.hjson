@@ -3,11 +3,13 @@ health: 3000
 size: 5
 powerProduction: 6.7
 category: power
+placeableLiquid: true
 requirements: [
-graphite/600
+graphite/560
 silicon/450
 creostone/200
 phase-fabric/150
 thorium/60
+metaglass/40
 ]
 research: solar-panel-gigantic

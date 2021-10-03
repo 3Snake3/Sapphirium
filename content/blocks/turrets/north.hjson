@@ -13,7 +13,7 @@ shootType: {
 sprite: adc-spear-bullet
 speed: 6
 width: 12
-height: 12
+height: 18
 damage: 10
 lifetime: 30
 status: freezing
@@ -23,17 +23,14 @@ backColor: 837de8
 hitEffect: shockwave
 despawnEffect: shockwave
 shootEffect: shockwave
+pierce: true
+weaveScale: 4
+weaveMag: 2
+homingPower: 6
 }
 category: turret
 research: {
 parent: segment
-requirements: [
-copper/8500
-graphite/6500
-silicon/4200
-thorium/2450
-phase-fabric/1200
-]
 objectives: [sparrow, overgrowth]
 }
 requirements: [

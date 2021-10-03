@@ -1,3 +1,4 @@
+type: Wall
 health: 350
 category: defense
 requirements: [

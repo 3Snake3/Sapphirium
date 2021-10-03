@@ -1,15 +1,19 @@
 type: ItemTurret
 size: 3
 category: turret
-research: ripple
-requirements: [
-graphite/250
-titanium/150
-silicon/85
-creostone/60
-plastanium/45
+research: {
+parent: ripple
+objectives: [
+scatter, swarmer
 ]
-reloadTime: 165
+}
+requirements: [
+thorium/350
+titanium/250
+silicon/200
+creostone/125
+]
+reloadTime: 200
 rotateSpeed: 3
 recoilAmount: 6
 shootShake: 3
@@ -19,108 +23,222 @@ ammoPerShot: 2
 targetGround: false
 targetAir: true
 ammoTypes: {
-silicon: {
-sprite: adc-missile-large
-width: 21
-height: 23
-speed: 6.5
-lifetime: 54
+pyratite: {
+width: 19
+height: 22
 damage: 25
-splashDamage: 75
-splashDamageRadius: 80
-hitShake: 3
-hitSound: explosion
-hitEffect: {
-type: MultiEffect 
-effects: [shockwave, massiveExplosion]
-}
-despawnEffect: {
-type: MultiEffect 
-effects: [shockwave, massiveExplosion]
-}
-shootEffect: shootBig
-trailChance: 0.9
-trailEffect: missileTrail
+splashDamage: 45
+splashDamageRadius: 20
 makeFire: true
-collidesGround: false
-homingPower: 0.75
-homingRange: 70
-reloadMultiplier: 0.85
-ammoMultiplier: 5
+incendAmount: 5
+incendSpread: 5
+incendChance: 1.2
+speed: 6
+lifetime: 63.3
+hitShake: 3
+hitEffect: {
+type: ExplosionEffect
+sparks: 6
+smokes: 5
+sparkStroke: 4
+waveLife: 12
+waveStroke: 4
+waveRad: 20
+sparkRad: 30
+sparkLen: 10
+}
+despawnHit: true
+trailLength: 60
+trailChance: 0.8
+trailWidth: 0.9
+backColor: f68021
+frontColor: f8ad42
+trailColor: f68021
+trailEffect: incendTrail
+status: burning
+statusDuration: 80
 fragBullets: 3
 fragCone: 75
+sprite: adc-missile-large
+hitSound: explosion
 fragBullet: {
-type: FlakBulletType
-width: 16
-height: 16
-explodeRange: 35
-lifetime: 12
-speed: 1
+collidesAir: true
+collidesGround: false
+collidesTiles: false
+collides: false
+sprite: adc-circle-bullet
+shrinkY: 0.7
+drag: 0.05
+keepVelocity: false
+hitSound: explosion
+hitEffect: flakExplosion
+despawnHit: true
+splashDamage: 15
+splashDamageRadius: 10
 damage: 0
-splashDamage: 10
-splashDamageRadius: 80
-status: blasted
-statusDuration: 85
+width: 15
+height: 15
+}
+}
+blast-compound: {
+width: 20
+height: 22
+damage: 35
+splashDamage: 50
+splashDamageRadius: 30
+speed: 6
+lifetime: 63.3
+hitShake: 4
 hitEffect: {
-type: MultiEffect 
-effects: [shockwave, flakExplosionBig]
+type: ExplosionEffect
+sparks: 6
+smokes: 5
+sparkStroke: 4
+waveLife: 12
+waveStroke: 4
+waveRad: 30
+sparkRad: 40
+sparkLen: 10
 }
-despawnEffect: {
-type: MultiEffect 
-effects: [shockwave, flakExplosionBig]
-}
+despawnHit: true
+trailLength: 60
+trailChance: 0.8
+trailWidth: 0.9
+backColor: e58956
+frontColor: ffd2ae
+trailColor: e58956
+status: blasted
+statusDuration: 80
+fragBullets: 3
+fragCone: 75
+sprite: adc-missile-large
+ammoMultiplier: 2
+hitSound: explosion
+fragBullet: {
+collidesAir: true
+collidesGround: false
+collidesTiles: false
+collides: false
+sprite: adc-circle-bullet
+shrinkY: 0.7
+drag: 0.05
+keepVelocity: false
+hitSound: explosion
+hitEffect: flakExplosion
+despawnHit: true
+splashDamage: 25
+splashDamageRadius: 25
+damage: 0
+width: 15
+height: 15
 }
 }
 thorium: {
-sprite: adc-missile-large
 width: 20
-height: 23
-speed: 7
-lifetime: 54
-damage: 50
-splashDamage: 85
-splashDamageRadius: 100
-hitShake: 3
-hitSound: explosion
-hitEffect: {
-type: MultiEffect 
-effects: [shockwave, massiveExplosion]
-}
-despawnEffect: {
-type: MultiEffect 
-effects: [shockwave, massiveExplosion]
-}
-shootEffect: shootBig
-trailChance: 0.9
-trailEffect: missileTrail
-fragLifeMin: 0.4
-fragCone: 75
-makeFire: true
-collidesGround: false
+height: 22
+damage: 60
+splashDamage: 30
+splashDamageRadius: 40
+reloadMultiplier: 1.5
 ammoMultiplier: 4
-knockback: 2
+speed: 5
+lifetime: 76
+hitShake: 4
+hitEffect: {
+type: ExplosionEffect
+sparks: 6
+smokes: 5
+sparkStroke: 4
+waveLife: 12
+waveStroke: 4
+waveRad: 40
+sparkRad: 50
+sparkLen: 10
+}
+despawnHit: true
+trailLength: 60
+trailChance: 0.8
+trailWidth: 0.9
+backColor: f9a3c7
+frontColor: ffffff
+trailColor: f9a3c7
+status: corroded
+statusDuration: 100
 fragBullets: 3
+fragCone: 75
+sprite: adc-missile-large
+hitSound: explosion
+fragBullet: {
+collidesAir: true
+collidesGround: false
+collidesTiles: false
+collides: false
+sprite: adc-circle-bullet
+shrinkY: 0.7
+drag: 0.05
+keepVelocity: false
+hitSound: explosion
+hitEffect: flakExplosion
+despawnHit: true
+splashDamage: 25
+splashDamageRadius: 25
+damage: 0
+width: 15
+height: 15
+}
+}
+creostone: {
+width: 22
+height: 25
+damage: 70
+splashDamage: 70
+splashDamageRadius: 40
+reloadMultiplier: 2
+ammoMultiplier: 5
+sprite: adc-missile-large
+speed: 5
+lifetime: 76
+hitShake: 4
+hitEffect: {
+type: ExplosionEffect
+sparks: 6
+smokes: 5
+sparkStroke: 4
+waveLife: 12
+waveStroke: 4
+waveRad: 40
+sparkRad: 50
+sparkLen: 20
+}
+despawnHit: true
+trailLength: 60
+trailChance: 0.8
+trailWidth: 0.9
+backColor: e58956
+frontColor: ffd2ae
+trailColor: e58956
+status: melting
+statusDuration: 80
+hitSound: explosion
+fragBullets: 4
 fragCone: 85
 fragBullet: {
-type: FlakBulletType
-width: 18
-height: 18
-explodeRange: 50
-lifetime: 11
-speed: 1
+collidesAir: true
+collidesGround: false
+collidesTiles: false
+collides: false
+sprite: adc-circle-bullet
+shrinkY: 0.7
+drag: 0.05
+keepVelocity: false
+hitSound: explosion
+hitEffect: flakExplosion
+despawnHit: true
+splashDamage: 40
+splashDamageRadius: 30
 damage: 0
-splashDamage: 20
-splashDamageRadius: 80
-status: blasted
-statusDuration: 90
-hitEffect: {
-type: MultiEffect 
-effects: [shockwave, flakExplosionBig]
-}
-despawnEffect: {
-type: MultiEffect 
-effects: [shockwave, flakExplosionBig]
-}
+width: 20
+height: 20
 }
 }
 }

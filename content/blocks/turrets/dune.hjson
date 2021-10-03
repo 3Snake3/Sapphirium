@@ -1,0 +1,137 @@
+type: ItemTurret
+size: 3
+category: turret
+research: sand-thrower
+requirements: [
+copper/165
+lead/125
+metaglass/80
+silicon/60
+]
+shootEffect: shootBig
+reloadTime: 15
+recoilAmount: 4.5
+rotateSpeed: 6
+range: 200
+ammoPerShot: 5
+maxAmmo: 60
+shots: 3
+xRand: 3
+spread: 5
+shootCone: 75
+alternate: true
+shootSound: throw
+ammoTypes: {
+sand: {
+sprite: adc-circle-bullet
+width: 15
+height: 15
+pierce: true
+pierceCap: 3
+speed: 6
+lifetime: 33.3
+reloadMultiplier: 1.45
+damage: 12
+hitEffect: {
+type: ExplosionEffect
+sparks: 0
+smokes: 6
+waveStroke: 4
+waveLife: 12
+waveRad: 30
+}
+despawnEffect: {
+type: ExplosionEffect
+sparks: 0
+smokes: 6
+waveStroke: 4
+waveLife: 12
+waveRad: 30
+}
+fragBullets: 3
+fragCone: 125
+fragBullet: {
+width: 9
+height: 9
+damage: 3
+speed: 5
+lifetime: 20
+hitEffect: {
+type: ExplosionEffect
+sparks: 0
+smokes: 4
+waveStroke: 3
+waveLife: 12
+waveRad: 20
+}
+despawnEffect: {
+type: ExplosionEffect
+sparks: 0
+smokes: 6
+waveStroke: 4
+waveLife: 12
+waveRad: 20
+}
+}
+}
+creostone: {
+sprite: adc-circle-bullet
+width: 17
+height: 17
+damage: 33
+speed: 5
+lifetime: 40
+backColor: bd5553
+frontColor: eb8778
+status: melting
+statusDuration: 120
+splashDamage: 15
+splashDamageRadius: 45
+hitEffect: {
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 45
+waveLife: 15
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 50
+sparkLen: 30
+smokeSize: 5
+smokeRad: 45
+waveColor: eb8778
+smokeColor: bd5553
+}
+despawnEffect: {
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 45
+waveLife: 15
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 50
+sparkLen: 30
+smokeSize: 5
+smokeRad: 45
+waveColor: eb8778
+smokeColor: bd5553
+}
+trailChance: 1
+  trailEffect: {
+    type: ParticleEffect
+    length: 0
+    layer: 100
+    particles: 1
+    lifetime: 40
+    sizeFrom: 6
+    sizeTo: 0
+    colorFrom: eb8778
+    colorTo: eb8778
+    region: particle
+  }
+ ammoMultiplier: 2
+ }
+ }
+
+

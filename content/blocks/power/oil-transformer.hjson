@@ -1,15 +1,17 @@
 type: ThermalGenerator
 health: 1200
 category: power
-research: spore-generator
+research: {
+parent: spore-generator
+objectives: [oil-extractor]
+}
 researchCostMultiplier: 1.5
 requirements: [
-creostone/210
-silicon/140
-metaglass/100
-titanium/90
-thorium/85
-plastanium/70
+silicon/335
+creostone/220
+titanium/300
+plastanium/170
+metaglass/90
 ]
 powerProduction: 0.8
 generateEffect: {

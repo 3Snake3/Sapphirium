@@ -10,15 +10,15 @@ silicon-smelter
 ]
 }
 reload: 15
-healPercent: 1
+healPercent: 1.5
 range: 40
 baseColor: 96abd9
-phaseColor: ffd59e
+phaseColor: 96abd9
 phaseBoost: 5
 phaseRangeBoost: 15
 useTime: 400
 consumes: {
-power: 0.6
+power: 1.5
 items: {
 items: [
 graphite/1

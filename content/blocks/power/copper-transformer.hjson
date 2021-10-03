@@ -4,8 +4,8 @@ category: power
 size: 2
 hasItems: true
 hasLiquids: false
-itemDuration: 100
-powerProduction: 2
+itemDuration: 120
+powerProduction: 1.2
 ambientSound: steam
 ambientSoundVolume: 0.04
 

@@ -10,8 +10,6 @@ titanium/60
 plastanium/45
 ]
 range: 180
-chargeTime: 20
-chargeMaxDelay: 10
 recoilAmount: 2
 reloadTime: 30
 powerUse: 7
@@ -25,7 +23,17 @@ shootType: {
 type: LaserBulletType
 length: 180
 colors: ["f3e979", "f3e979", FFFFFF"]
-hitEffect: hitLancer
+hitEffect: {
+type: ParticleEffect
+particles: 12
+length: 10
+lifetime: 20
+line: true
+sizeFrom: 0
+sizeTo: 8
+colorFrom: f3e979
+colorTo: f3e979
+}
 despawnEffect: none
 damage: 50
 shootEffect: shockwave
@@ -36,9 +44,19 @@ fragBullet: {
 type: LaserBulletType
 length: 180
 colors: ["f3e979", "f3e979", FFFFFF"]
-hitEffect: hitLancer
+hitEffect: {
+type: ParticleEffect
+particles: 6
+length: 10
+lifetime: 20
+line: true
+sizeFrom: 0
+sizeTo: 4
+colorFrom: f3e979
+colorTo: f3e979
+}
 despawnEffect: none
-damage: 20
+damage: 30
 }
 }
 shootCone: 90

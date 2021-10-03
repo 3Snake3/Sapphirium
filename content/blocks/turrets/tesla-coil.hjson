@@ -1,0 +1,35 @@
+type: PowerTurret
+category: turret
+size: 2
+
+reloadTime: 15
+recoilAmount: 0
+rotateSpeed: 4
+
+range: 115
+xRand: 3
+powerUse: 4.5
+shootCone: 360
+shootSound: spark
+smokeEffect: none
+shots: 2
+spread: 360
+
+shootType: {
+type: LightningBulletType
+damage: 15
+lifetime: 10
+lightningLength: 19.16
+lightningColor: f3e979
+shootEffect: none
+}
+
+requirements: [
+copper/125
+graphite/100
+silicon/65
+charged-cylinder/45
+surge-stone/20
+]
+
+research: hidden-tesla

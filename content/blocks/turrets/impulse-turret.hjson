@@ -11,9 +11,9 @@ silicon/4200
 thorium/2450
 phase-fabric/1200
 ]
-objectives: [cloud-breaker, planetaryTerminal]
+objectives: [spraying-projector, clothing-phase-factory, thorium-smelter]
 }
-reloadTime: 120
+reloadTime: 180
 recoilAmount: 0
 rotateSpeed: 0
 shootCone: 360
@@ -44,7 +44,7 @@ pierce: true
 pierceBuilding: true
 shrinkX: -18
 shrinkY: 0
-pierceCap: 8
+pierceCap: 5
 hittable: false
 absorbable: true
 reflectable: false
@@ -58,9 +58,9 @@ smokeEffect: none
 despawnEffect: none
 }
 requirements: [
-copper/650
-graphite/350
-silicon/280
-thorium/170
-phase-fabric/80
+titanium/650
+thorium/380
+creostone/265
+plastanium/200
+phase-fabric/125
 ]

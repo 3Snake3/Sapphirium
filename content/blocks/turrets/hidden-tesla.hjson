@@ -1,0 +1,34 @@
+type: PowerTurret
+category: turret
+
+health: 60
+reloadTime: 10
+recoilAmount: 0
+rotateSpeed: 6
+shootCone: 360
+range: 75
+powerUse: 2
+shootSound: spark
+smokeEffect: none
+
+shootType: {
+type: LightningBulletType
+damage: 5
+lightningLength: 12.5
+lightningColor: f3e979
+shootEffect: none
+}
+
+targetable: false
+
+requirements: [
+copper/60
+lead/60
+silicon/40
+surge-stone/20
+]
+
+research: {
+parent: arc
+objectives: [parallax]
+}

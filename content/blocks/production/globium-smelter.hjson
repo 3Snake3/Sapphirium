@@ -21,11 +21,10 @@ thorium/4
 size: 3
 category: crafting
 requirements: [
-creostone/120
-titanium/80
-thorium/65
-plastanium/50
-metaglass/50
-silicon/45
+copper/225
+lead/140
+silicon/85
+creostone/75
+metaglass/45
 ]
 research: creotite-converter

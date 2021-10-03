@@ -1,4 +1,4 @@
-type: PowerTurret
+
 health: 2300
 size: 2
 reloadTime: 40
@@ -10,6 +10,8 @@ inaccuracy: 5
 range: 120
 xRand: 4
 category: defense
+group: walls
+priority: turret
 shootType: {
 type: MissileBulletType
 width: 9

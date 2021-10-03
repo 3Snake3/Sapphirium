@@ -10,7 +10,8 @@ bufferCapacity: 20
 requirements: [
   copper/9
   lead/9
-  creostone/7
+  creostone/5
+  metaglass/4
 ]
 
-research: creotite-converter
+research: bridge-conveyor

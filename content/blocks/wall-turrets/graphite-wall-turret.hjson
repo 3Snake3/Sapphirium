@@ -1,4 +1,4 @@
-type: PowerTurret
+
 health: 3000
 size: 2
 category: defense
@@ -15,6 +15,8 @@ powerUse: 4
 shootShake: 2
 cooldown: 0.02
 shootSound: laser
+group: walls
+priority: turret
 shootType: {
 type: LaserBulletType
 colors: [96abd9, 6a76a1, 7a7a7a]

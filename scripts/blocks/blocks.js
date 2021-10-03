@@ -36,10 +36,19 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
             liquids: ["oil/10"]
           },
           output: {
-            items: ["coal/7"],
+            items: ["coal/4"],
             power: 3
           },
           craftTime: 160
+        },
+        {
+        input: {
+            liquids: ["adc-surge-mass/12"]
+          },
+          output: {
+            items: ["adc-surge-stone/2"]
+          },
+          craftTime: 125
         },
 ], {
   },
@@ -98,7 +107,7 @@ creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, cr
             var cons = creostoneProjector.consumes.get(ConsumeType.liquid);
             if(cons.valid(this)){
                 cons.update(this);
-                scale *= (creostoneProjector.cooldownLiquid * (1 + (this.liquids.current().temperature - 0.4) * 0.9));
+                scale *= (creostoneProjector.cooldownLiquid * (1 + (this.liquids.current().heatCapacity - 0.4) * 0.9));
             }
 
             this.buildup -= this.delta() * scale;
@@ -153,39 +162,42 @@ creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, cr
 const massDriver = extendContent(MassDriver, "compact-driver", {});
 massDriver.bullet = extend(MassDriverBolt, {});
 
-//this is broken
-/*const graphiteW = extend(MendProjector, "graphite-wall", {});
-const graphiteWT = extend(PowerTurret, "graphite-wall-turret", {});
+const graphiteWT = extend(PowerTurret, "graphite-wall-turret", {
+flags: EnumSet.of(BlockFlag.turret),
+});
 
-const coalW = extend(Wall, "coal-wall", {});
-const coalWT = extend(PowerTurret, "coal-wall-turret", {});
+const coalWT = extend(PowerTurret, "coal-wall-turret", {
+flags: EnumSet.of(BlockFlag.turret),
+});
 
-const siliconW = extend(Wall, "silicon-wall", {});
-const siliconWT = extend(PowerTurret, "silicon-wall-turret", {});
+const siliconWT = extend(PowerTurret, "silicon-wall-turret", {
+flags: EnumSet.of(BlockFlag.turret),
+});
 
-const cryocubeW = extend(Wall, "cryocube-wall", {});
-const cryocubeWT = extend(PowerTurret, "cryocube-wall-turret", {});*/
+const cryocubeWT = extend(PowerTurret, "cryocube-wall-turret", {
+flags: EnumSet.of(BlockFlag.extinguisher, BlockFlag.turret),
+});
+
+const icecubeWT = extend(PowerTurret, "ice-cube-wall-turret", {
+flags: EnumSet.of(BlockFlag.turret),
+});
+
+const creostoneWT = extend(PowerTurret, "creotite-wall-turret", {
+flags: EnumSet.of(BlockFlag.turret),
+});
+
+const cinderblockWT = extend(PowerTurret, "cinderblock-wall-turret", {
+flags: EnumSet.of(BlockFlag.turret),
+});
 
 const statuses = require("statuses/statuses");
 
-const freezeWave = extend(BasicBulletType, 10, 0.9, "adc-none-bullet", {
-    status: statuses.superFreezing,
-    lifetime: 20,
-    pierce: true,
-    pierceBuilding: true,
-    buildingDamageMultiplier: 0,
-    hitEffect: Fx.none,
-    despawnEffect: Fx.none,
-    shootEffect: Fx.none,
-    absorbable: true,
-    reflectable: false,
-    hittable: false,
-});
+/*const cold = Attribute.add("cold");
+Blocks.snow.attributes.set(cold, 0.2);
+Blocks.iceSnow.attributes.set(cold, 0.45);
+Blocks.ice.attributes.set(cold, 0.7);*/
 
-const fp = extend(PowerTurret, "freeze-projector", {});
-fp.shootType = freezeWave;
-
-/*const coreCage = extend(CoreBlock, "core-cage", {
+const coreCage = extend(CoreBlock, "core-cage", {
 	thrusterLength: 46/4,
 	});
 	
@@ -196,9 +208,11 @@ const ledoniteLiquid = extendContent(Floor, "ledonite", {
 	drownTime: 150,
 	speedMultiplier: 0.19,
 	lightColor: Color.valueOf("c1f4ff"),
-	});*/
+	});
+	
+const upgPump = extend(Pump, "upgraded-pump", {});
 
 module.exports = {
   multi: multi,
-  fp: fp
+  upgPump: upgPump
 } 

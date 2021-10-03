@@ -1,0 +1,56 @@
+type: PowerTurret
+reloadTime: 180
+size: 3
+recoilAmount: 0
+rotateSpeed: 0
+shootLength: 0
+shootCone: 360
+shots: 360
+group: projectors
+emitLight: true
+lightRadius: 75
+heatColor: 91abff
+powerUse: 5
+consumes: {
+liquid: water/2
+}
+shootType: {
+sprite: adc-none-bullet
+width: 3
+height: 3
+hitEffect: none
+despawnEffect: none
+knockback: 4
+damage: 0
+pierce: true
+pierceBuilding: true
+hittable: false
+reflectable: false
+speed: 6
+lifetime: 25
+shootEffect: {
+type: WaveEffect
+sides: 6
+sizeFrom: 0
+sizeTo: 150
+strokeFrom: 4
+strokeTo: 0
+colorFrom: 6a75c4
+colorTo: 8ca4f5
+lifetime: 25
+}
+smokeEffect: none
+}
+range: 150
+category: effect
+shootSound: release
+requirements: [
+copper/225
+graphite/125
+plastanium/85
+phase-fabric/60
+]
+research: {
+parent: force-projector
+objectives: [core-nucleus]
+}

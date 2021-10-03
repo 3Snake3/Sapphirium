@@ -1,0 +1,36 @@
+type: LiquidConverter
+outputLiquid: surge-mass/0.25
+consumes: {
+power: {
+usage: 2
+capacity: 240
+buffered: true
+}
+liquid: slag/0.25
+items: {
+items: [
+surge-alloy/1
+]
+}
+}
+hasPower: true
+hasItems: true
+hasLiquids: true
+outputsPower: true
+rotate: false
+solid: true
+outputsLiquid: true
+drawer: DrawMixer
+size: 2
+craftTime: 125
+liquidCapacity: 40
+category: crafting
+requirements: [
+lead/85
+silicon/60
+surge-alloy/70
+]
+research: {
+parent: alloy-smelter
+objectives: [ledonite-mixer]
+}

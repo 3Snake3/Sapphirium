@@ -1,165 +1,350 @@
 type: ItemTurret
+
 requirements: [
-copper/125
-lead/100
-graphite/80
-titanium/65
+graphite/350
+titanium/325
+plastanium/160
+cinderblock/160
 ]
+
 ammoTypes: {
 graphite: {
 type: ArtilleryBulletType
+
 width: 20
 height: 20
-lifetime: 35
+
+lifetime: 100
+
 splashDamageRadius: 30
-splashDamage: 50
+splashDamage: 30
+
 collidesGround: true
+
 hitEffect: {
 type: ExplosionEffect
+
 waveLife: 10
 waveStroke: 4
 waveRad: 30
 waveColor: ffffff
+
 sparks: 6
 sparkStroke: 4
 sparkRad: 25
 sparkLen: 4
+
 smokes: 7
 smokeSize: 4
 smokeRad: 25
 }
+
 despawnEffect: {
 type: ExplosionEffect
+
 waveLife: 10
 waveStroke: 4
 waveRad: 30
 waveColor: ffffff
+
 sparks: 6
 sparkStroke: 4
 sparkRad: 25
 sparkLen: 4
+
 smokes: 7
 smokeSize: 4
 smokeRad: 25
 }
+speed: 3
+ammoMultiplier: 2.5
+}
+
+titanium: {
+type: ArtilleryBulletType
+
+width: 22
+height: 22
+
 speed: 2
-reloadMultiplier: 1.3
+lifetime: 150
+knockback: 0.5
+
+splashDamage: 45
+splashDamageRadius: 45
+
+collidesAir: false
+
 ammoMultiplier: 4
-}
-metaglass: {
-type: ArtilleryBulletType
-width: 18
-height: 18
-lifetime: 30
-splashDamageRadius: 20
-splashDamage: 20
+reloadMultiplier: 1.25
+
 hitEffect: {
 type: ExplosionEffect
+
 waveLife: 10
 waveStroke: 4
-waveRad: 20
+waveRad: 30
 waveColor: ffffff
-sparks: 4
+
+sparks: 6
 sparkStroke: 4
-sparkRad: 15
-sparkLen: 3
-smokes: 5
-smokeSize: 3
-smokeRad: 15
+sparkRad: 25
+sparkLen: 4
+
+smokes: 7
+smokeSize: 4
+smokeRad: 25
 }
+
 despawnEffect: {
 type: ExplosionEffect
+
 waveLife: 10
 waveStroke: 4
-waveRad: 20
+waveRad: 30
 waveColor: ffffff
-sparks: 4
+
+sparks: 6
 sparkStroke: 4
-sparkRad: 15
-sparkLen: 3
-smokes: 5
-smokeSize: 3
-smokeRad: 15
+sparkRad: 25
+sparkLen: 4
+
+smokes: 7
+smokeSize: 4
+smokeRad: 25
 }
+}
+
+thorium: {
+type: ArtilleryBulletType
+
+width: 24
+height: 24
+
+speed: 2
+lifetime: 150
+knockback: 0.5
+
+splashDamage: 60
+splashDamageRadius: 60
+
+status: corroded
+statusDuration: 180
+
+collidesAir: false
+shootEffect: shootBig
+
+ammoMultiplier: 6
+reloadMultiplier: 1.45
+
+hitEffect: {
+type: ExplosionEffect
+
+waveLife: 10
+waveStroke: 4
+waveRad: 30
+waveColor: ffffff
+
+sparks: 6
+sparkStroke: 4
+sparkRad: 25
+sparkLen: 4
+
+smokes: 7
+smokeSize: 4
+smokeRad: 25
+}
+
+despawnEffect: {
+type: ExplosionEffect
+
+waveLife: 10
+waveStroke: 4
+waveRad: 30
+waveColor: ffffff
+
+sparks: 6
+sparkStroke: 4
+sparkRad: 25
+sparkLen: 4
+
+smokes: 7
+smokeSize: 4
+smokeRad: 25
+}
+}
+
+plastanium: {
+type: ArtilleryBulletType
+
+width: 20
+height: 20
+
+speed: 3.5
+lifetime: 85.7
+knockback: 0.8
+
+splashDamage: 35
+splashDamageRadius: 70
+
+status: disarmed
+statusDuration: 40
+
+collidesAir: false
+
+ammoMultiplier: 3
+reloadMultiplier: 1.3
+
+backColor: d8d97f
+frontColor: fffac6
+
 fragBullets: 4
-fragLifeMin: 0.2
-fragCone: 30
-speed: 3
+fragLifeMin: 0.3
+fragCone: 180
 fragBullet: {
-type: BasicBulletType
-width: 8
-height: 8
-lifetime: 20
-damage: 5
-hitEffect: flakExplosion
-speed: 3
-}
-}
-ice-cube: {
-type: ArtilleryBulletType
-width: 18
-height: 18
-lifetime: 38
+type: ArtilleryBullerType
+
+width: 13
+height: 13
+
+speed: 2
+lifetime: 95.7
+damage: 15
+
+splashDamage: 15
 splashDamageRadius: 30
-splashDamage: 25
+
+collidesAir: false
+
+backColor: d8d97f
+frontColor: fffac6
+trailColor: d8d97f
+
+hitEffect: {
+type: MultiEffect
+
+effects: [
+{
+type: WaveEffect
+
+strokeFrom: 4
+strokeTo: 4
+
+sizeFrom: 0
+sizeTo: 30
+
+lifetime: 15
+sides: 6
+
+colorFrom: a1b46e
+colorTo: a1b46e
+}
+{
+type: ParticleEffect
+
+particles: 6
+cone: 360
+lifetime: 23
+spin: 10
+
+region: adc-rhombus
+
+sizeFrom: 10
+sizeTo: 0
+
+colorFrom: a1b46e
+colorTo: a1b46e
+}
+]
+}
+
+despawnEffect: {
+type: MultiEffect
+
+effects: [
+{
+type: WaveEffect
+
+strokeFrom: 4
+strokeTo: 4
+
+sizeFrom: 0
+sizeTo: 30
+
+lifetime: 15
+sides: 6
+
+colorFrom: a1b46e
+colorTo: a1b46e
+}
+{
+type: ParticleEffect
+
+particles: 6
+cone: 360
+lifetime: 23
+spin: 10
+
+region: adc-rhombus
+
+sizeFrom: 10
+sizeTo: 0
+
+colorFrom: a1b46e
+colorTo: a1b46e
+}
+]
+}
+}
+
+hitSound: explosion
 hitEffect: {
 type: ExplosionEffect
+
 waveLife: 10
 waveStroke: 4
 waveRad: 30
-waveColor: e8eaff
-sparks: 4
+waveColor: ffffff
+
+sparks: 6
 sparkStroke: 4
-sparkRad: 20
+sparkRad: 25
 sparkLen: 4
-smokes: 5
+
+smokes: 7
 smokeSize: 4
-smokeRad: 20
+smokeRad: 25
 }
+
 despawnEffect: {
 type: ExplosionEffect
+
 waveLife: 10
 waveStroke: 4
 waveRad: 30
-waveColor: e8eaff
-sparks: 4
+waveColor: ffffff
+
+sparks: 6
 sparkStroke: 4
-sparkRad: 20
+sparkRad: 25
 sparkLen: 4
-smokes: 5
+
+smokes: 7
 smokeSize: 4
-smokeRad: 20
-}
-fragBullets: 6
-fragLifeMin: 0.2
-fragCone: 30
-speed: 4
-frontColor: e8eaff
-backColor: 837de8
-ammoMultiplier: 2
-fragBullet: {
-type: BasicBulletType
-width: 8
-height: 8
-lifetime: 30
-damage: 10
-hitEffect: flakExplosion
-despawnEffect: flakExplosion
-speed: 3
-frontColor: e8eaff
-backColor: 837de8
+smokeRad: 25
 }
 }
 }
+
 size: 3
 targetAir: false
-reloadTime: 100
+reloadTime: 125
 recoilAmount: 4
 minRange: 80
 range: 300
 inaccuracy: 3
 shootCone: 10
-shootLength: -5
+shootLength: 4
 shootSound: bang
 category: turret
 research: ripple

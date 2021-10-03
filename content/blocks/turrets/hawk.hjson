@@ -1,22 +1,49 @@
 type: PowerTurret
 requirements: [
 lead/250
-creostone/180
 silicon/150
 titanium/80
 ]
 range: 270
 chargeTime: 90
 chargeMaxDelay: 80
-chargeEffects: 7
+chargeEffects: 1
 recoilAmount: 3
 reloadTime: 180
 cooldown: 0.03
 powerUse: 8
 shootShake: 3
 smokeEffect: none
-chargeEffect: lancerLaserCharge
-chargeBeginEffect: lancerLaserChargeBegin
+chargeEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+line: true
+particles: 6
+baseLength: 10
+length: -10
+lifetime: 50
+sizeFrom: 3
+sizeTo: 1
+strokeFrom: 3
+strokeTo: 0
+colorFrom: f25555
+colorTo: f25555
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+cone: 180
+lifetime: 50
+sizeFrom: 0
+sizeTo: 3
+colorFrom: f25555
+colorTo: f25555
+}
+]
+}
 heatColor: ff0000
 size: 2
 targetGround: false
@@ -24,7 +51,7 @@ targetAir: true
 shootSound: laser
 shootType: {
 type: LaserBulletType
-colors: ["FF3C00", "FF5600", "FFFFFF"]
+colors: ["a14553", "f25555", "FFFFFF"]
 hitEffect: hitLancer
 despawnEffect: none
 hitSize: 5

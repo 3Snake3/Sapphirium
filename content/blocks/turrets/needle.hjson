@@ -1,23 +1,23 @@
 size: 4
-reloadTime: 260
+reloadTime: 280
 recoilAmount: 10
 shootShake: 6
 shootSound: railgun
 targetGround: true
 targetAir: true
 rotateSpeed: 2.5
-range: 450
+range: 530
 cooldown: 0.009
 restitution: 0.009
 coolantUsage: 2
 coolantMultiplier: 0.3
-maxAmmo: 30
-ammoPerShot: 2
+maxAmmo: 40
+ammoPerShot: 5
 ammoTypes: {
 creostone: {
 type: RailBulletType
 shootEffect: railShoot
-length: 450
+length: 530
 updateEffectSeg: 60
 pierceEffect: railHit
 updateEffect: railTrail
@@ -25,11 +25,36 @@ hitEffect: massiveExplosion
 hitShake: 6
 smokeEffect: shootBig2
 damage: 800
-ammoMultiplier: 2
-pierceDamageFactor: 2
-buildingDamageMultiplier: 1.30
+ammoMultiplier: 4
+pierceDamageFactor: 4
+buildingDamageMultiplier: 2
 status: disarmed
-statusDuration: 45
+statusDuration: 120
+}
+pyratite: {
+type: RailBulletType
+shootEffect: railShoot
+length: 530
+updateEffectSeg: 60
+pierceEffect: railHit
+updateEffect: railTrail
+hitEffect: massiveExplosion
+hitShake: 5
+smokeEffect: shootBig2
+damage: 650
+ammoMultiplier: 4
+pierceDamageFactor: 2
+reloadMultiplier: 1.5
+status: {
+name: flaming
+speedMultiplier: 0.6
+damage: 5
+effect: burning
+affinities: [tarred]
+opposites: [wet, freezing]
+transitionDamage: 60
+}
+statusDuration: 60
 }
 }
 consumes: {
@@ -37,9 +62,8 @@ power: 10
 }
 requirements: [
 creostone/1250
-silicon/450
-plastanium/290
-titanium/170
-surge-alloy/90
+silicon/760
+plastanium/600
+surge-alloy/250
 ]
 category: turret

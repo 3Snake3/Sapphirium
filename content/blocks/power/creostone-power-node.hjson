@@ -12,6 +12,7 @@ requirements: [
   titanium/2
   graphite/2
   creostone/2
+ metaglass/2
 ]
 
 research: power-node-large

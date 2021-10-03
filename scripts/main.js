@@ -9,3 +9,6 @@ require("blocks/turrets");
 require("statuses/statuses");
 require("techtree");
 require("units");
+require("weathers");
+require("liquids");
+require("items");
