@@ -6,10 +6,11 @@ hasPower: true
 hasItems: true
 hasLiquids: true
 itemCapacity: 16
+liquidCapacity: 12
 drawer: DrawSmelter
 consumes: {
 power: 4
-liquid: creotite/0.4
+liquid: creotite/0.2
 items: {
 items: [
 silicon/3

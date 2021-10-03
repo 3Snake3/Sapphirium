@@ -7,7 +7,7 @@ silicon/60
 thorium/45
 ]
 outputLiquid: creotite/0.4
-craftTime: 135
+craftTime: 80
 size: 3
 hasPower: true
 hasItems: true
@@ -23,9 +23,8 @@ sand/5
 ]
 }
 }
-health: 1500
 itemCapacity: 10
-liquidCapacity: 48
+liquidCapacity: 22
 rotate: false
 solid: true
 category: crafting

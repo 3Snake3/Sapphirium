@@ -1,5 +1,4 @@
 type: AttributeCrafter
-health: 1000
 outputItem: spore-pod/5
 craftTime: 200
 size: 3
@@ -7,6 +6,7 @@ hasLiquids: true
 hasPower: true
 hasItems: true
 itemCapacity: 20
+liquidCapacity: 24
 drawer: DrawCultivator
 attribute: spores
 legacyReadWarmup: true
@@ -16,7 +16,7 @@ power: 2
 liquid: water/0.4
 items: {
 items: [
-ice-cube/1
+ice-cube/2
 ]
 }
 }

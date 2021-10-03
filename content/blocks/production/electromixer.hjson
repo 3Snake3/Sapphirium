@@ -22,7 +22,7 @@ solid: true
 outputsLiquid: true
 drawer: DrawMixer
 size: 2
-craftTime: 125
+craftTime: 80
 liquidCapacity: 40
 category: crafting
 requirements: [

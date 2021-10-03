@@ -9,7 +9,7 @@ creostone/45
 metaglass/30
 ]
 outputLiquid: ledonite-liquid/0.4
-craftTime: 140
+craftTime: 100
 size: 3
 hasPower: true
 hasItems: true
@@ -27,7 +27,7 @@ titanium/4
 }
 health: 1000
 itemCapacity: 10
-liquidCapacity: 48
+liquidCapacity: 22
 rotate: false
 solid: true
 category: crafting

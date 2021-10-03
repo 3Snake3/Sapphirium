@@ -9,7 +9,7 @@ plastanium/70
 ]
 consumes: {
 power: 3.5
-liquid: slag/0.08
+liquid: slag/0.4
 items: {
 items: [
 copper/4
@@ -24,6 +24,7 @@ hasItems: true
 craftTime: 120
 drawer: DrawGlow
 itemCapacity: 20
+liquidCapacity: 24
 craftEffect: smeltsmoke
 category: crafting
 research: thorium-smelter

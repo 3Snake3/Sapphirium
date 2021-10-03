@@ -9,7 +9,7 @@ silicon/75
 titanium/60
 ]
 consumes: {
-liquid: creotite/0.12
+liquid: creotite/0.13
 power: 5
 }
 results: [
