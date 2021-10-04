@@ -4,11 +4,10 @@ health: 700
 hasPower: true
 powerProduction: 1.83
 requirements: [
-lead/300
-silicon/255
-titanium/200
-creostone/145
-phase-fabric/110
+titanium/185
+silicon/220
+graphite/70
+phase-fabric/45
 ]
 category: power
 research: solar-panel-large

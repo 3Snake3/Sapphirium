@@ -5,11 +5,11 @@ category: turret
 research: needle
 requirements: [
 lead/1000
-graphite/750
-silicon/500
-plastanium/240
-creostone/120
-surge-stone/80
+graphite/350
+silicon/225
+plastanium/125
+creostone/90
+surge-stone/65
 ]
 burstSpacing: 4
 reloadTime: 240

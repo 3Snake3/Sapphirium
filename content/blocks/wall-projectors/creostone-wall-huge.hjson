@@ -1,7 +1,6 @@
 health: 7200
 size: 3
 radius: 30
-hasLiquids: false
 shieldHealth: 1000
 cooldownNormal: 1
 phaseRadiusBoost: 150
@@ -15,4 +14,7 @@ requirements: [
 creostone/165
 silicon/80
 ]
-research: creotite-wall-turret
+research: {
+parent: creotite-wall-turret
+objectives: [force-projector]
+}

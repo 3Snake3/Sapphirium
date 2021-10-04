@@ -16,7 +16,7 @@ rotateSpeed: 10
 emitLight: true
 lightRadius: 75
 
-coolantMultiplier: 0.3
+coolantMultiplier: 0.2
 coolantUsage: 1
 
 group: projectors
@@ -175,10 +175,10 @@ statusDuration: 60
 }
 
 requirements: [
-  copper/200
-  graphite/95
-  silicon/70
-  titanium/80
+  graphite/125
+  thorium/75
+  silicon/50
+  plastanium/35
 ]
 
 consumes: {

@@ -79,61 +79,6 @@ creostoneProjector.consumes.item(Items.phaseFabric).boost();
 creostoneProjector.consumes.power(2);
 
 creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, creostoneProjector, {
-    updateTile(){
-        const customConsumer = trait => {
-            if(trait.team != this.paramEntity.team && trait.type.absorbable && Mathf.dst(this.paramEntity.x, this.paramEntity.y, trait.x, trait.y) <= this.realRadius()){
-                trait.absorb();
-                Fx.absorb.at(trait);
-                this.paramEntity.hit = 1;
-                this.paramEntity.buildup += trait.damage * this.paramEntity.warmup;
-            }
-        };
-        var phaseValid = creostoneProjector.consumes.get(ConsumeType.item).valid(this);
-        this.phaseHeat = Mathf.lerpDelta(this.phaseHeat, Mathf.num(phaseValid), 0.1);
-        if(phaseValid && !this.broken && this.timer.get(creostoneProjector.timerUse, creostoneProjector.phaseUseTime) && this.efficiency() > 0){
-            this.consume();
-        }
-
-        this.radscl = Mathf.lerpDelta(this.radscl, this.broken ? 0 : this.warmup, 0.05);
-
-        if(Mathf.chanceDelta(this.buildup / this.shieldHealth * 0.1)){
-            Fx.reactorsmoke.at(this.x + Mathf.range(Vars.tilesize / 2), this.y + Mathf.range(Vars.tilesize / 2));
-        }
-
-        this.warmup = Mathf.lerpDelta(this.warmup, this.efficiency(), 0.1);
-
-        if(this.buildup > 0){
-            var scale = !this.broken ? creostoneProjector.cooldownNormal : creostoneProjector.cooldownBrokenBase;
-            var cons = creostoneProjector.consumes.get(ConsumeType.liquid);
-            if(cons.valid(this)){
-                cons.update(this);
-                scale *= (creostoneProjector.cooldownLiquid * (1 + (this.liquids.current().heatCapacity - 0.4) * 0.9));
-            }
-
-            this.buildup -= this.delta() * scale;
-        }
-
-        if(this.broken && this.buildup <= 0){
-            this.broken = false;
-        }
-
-        if(this.buildup >= creostoneProjector.shieldHealth + creostoneProjector.phaseShieldBoost && !this.broken){
-            this.broken = true;
-            this.buildup = creostoneProjector.shieldHealth;
-            Fx.shieldBreak.at(this.x, this.y, this.realRadius(), this.team.color.cpy());
-        }
-
-        if(this.hit > 0){
-            this.hit -= 1 / 5 * Time.delta;
-        }
-
-        var realRadius = this.realRadius();
-
-        if(realRadius > 0 && !this.broken){
-            this.paramEntity = this;
-            Groups.bullet.intersect(this.x - realRadius, this.y - realRadius, realRadius * 2, realRadius * 2, customConsumer);
-        }
-    },
     drawShield(){
         if(!this.broken){
             var radius = this.realRadius();

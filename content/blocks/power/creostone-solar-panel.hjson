@@ -5,11 +5,10 @@ powerProduction: 6.7
 category: power
 placeableLiquid: true
 requirements: [
-graphite/560
-silicon/450
-creostone/200
-phase-fabric/150
-thorium/60
-metaglass/40
+graphite/345
+silicon/288
+creostone/115
+phase-fabric/75
+thorium/50
 ]
 research: solar-panel-gigantic

@@ -7,8 +7,8 @@ objectives: [cyclone]
 }
 requirements: [
 copper/125
-graphite/95
-titanium/70
+graphite/85
+titanium/60
 metaglass/40
 ]
 range: 180

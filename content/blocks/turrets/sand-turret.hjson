@@ -1,24 +1,22 @@
 type: ItemTurret
-health: 400
 ammoTypes: {
 sand: {
 type: ArtilleryBulletType
 width: 11
 height: 11
-damage: 14
 splashDamageRadius: 25
 splashDamage: 30
-knockback: 0.9
+knockback: 0.3
 collidesTiles: false
-lifetime: 60
-speed: 4
-collidesAir: true
+lifetime: 80
+speed: 3
+collidesAir: false
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
-fragBullets: 10
+fragBullets: 4
 fragCone: 360
 status: slow
-statusDuration: 65
+statusDuration: 60
 fragBullet: {
 type: BasicBulletType
 width: 7
@@ -27,18 +25,18 @@ damage: 5
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
 speed: 6
-lifetime: 30
+lifetime: 20
 }
 }
 }
 targetAir: true
-reloadTime: 69
+reloadTime: 80
 recoilAmount: 3
 range: 240
 inaccuracy: 3
 shots: 2
 spread: 4
-rotateSpeed: 10
+rotateSpeed: 8
 shootCone: 15
 shootSound: bang
 requirements: [

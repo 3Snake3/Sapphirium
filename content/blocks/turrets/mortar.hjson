@@ -2,9 +2,9 @@ type: ItemTurret
 
 requirements: [
 graphite/350
-titanium/325
-plastanium/160
-cinderblock/160
+titanium/125
+plastanium/125
+cinderblock/50
 ]
 
 ammoTypes: {

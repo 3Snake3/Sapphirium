@@ -171,6 +171,64 @@ const executioner = extend(PowerTurret, "executioner", {
 	shootType: laser,
 	})
 
+const liquids = require("liquids");
+
+const ledoShot = extend(LiquidBulletType, liquids.ledonite, {
+	knockback: 0.75,
+	drag: 0.01,
+	statusDuration: 60
+});
+
+const heavyLedoShot = extend(LiquidBulletType, liquids.ledonite, {
+	knockback: 0.75,
+	lifetime: 49,
+	speed: 4,
+	puddleSize: 8,
+    orbSize: 4,
+    drag: 0.001,
+    ammoMultiplier: 0.4,
+    statusDuration: 60,
+    damage: 0.2
+});
+
+const srgMassShot = extend(LiquidBulletType, liquids.surgeMass, {
+	knockback: 0.75,
+	drag: 0.01
+});
+
+const heavySrgMassShot = extend(LiquidBulletType, liquids.surgeMass, {
+	knockback: 0.75,
+	lifetime: 49,
+	speed: 4,
+	puddleSize: 8,
+    orbSize: 4,
+    drag: 0.001,
+    ammoMultiplier: 0.4,
+    statusDuration: 240,
+    damage: 0.2,
+    lightning: 3,
+    lightningLength: 2,
+    lightningDamage: 5
+});
+
+Blocks.wave.ammo(
+                Liquids.water, Bullets.waterShot,
+                Liquids.slag, Bullets.slagShot,
+                Liquids.cryofluid, Bullets.cryoShot,
+                Liquids.oil, Bullets.oilShot,
+                liquids.ledonite, ledoShot,
+                liquids.surgeMass, srgMassShot
+                );
+                
+Blocks.tsunami.ammo(
+                Liquids.water, Bullets.heavyWaterShot,
+                Liquids.slag, Bullets.heavySlagShot,
+                Liquids.cryofluid, Bullets.heavyCryoShot,
+                Liquids.oil, Bullets.heavyOilShot,
+                liquids.ledonite, heavyLedoShot,
+                liquids.surgeMass, heavySrgMassShot
+                );
+
 const warhead = extend(ItemTurret, "warhead", {})
 const needle = extend(ItemTurret, "needle", {})
 module.exports = {

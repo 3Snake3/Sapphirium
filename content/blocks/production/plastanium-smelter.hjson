@@ -1,7 +1,6 @@
 type: AttributeCrafter
 outputItem: plastanium/8
 size: 3
-health: 1250
 craftTime: 120
 updateEffect: plasticburn
 craftEffect: formsmoke
@@ -24,11 +23,10 @@ power: 5.0
  }
 }
 requirements: [
- graphite/230
- creostone/180
- titanium/140
- thorium/100
- plastanium/120
+ titanium/225
+ graphite/140
+ creostone/80
+ plastanium/65
 ]
 category: crafting
 research: plastanium-compressor

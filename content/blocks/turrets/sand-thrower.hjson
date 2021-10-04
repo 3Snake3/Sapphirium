@@ -1,5 +1,4 @@
 type: ItemTurret
-health: 850
 size: 2
 ammoTypes: {
 sand: {
@@ -9,15 +8,14 @@ speed: 6
 lifetime: 30
 damage: 10
 sprite: adc-circle-bullet
-splashDamageRadius: 20
-splashDamage: 20
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
 pierce: true
-pierceCap: 2
+pierceCap: 1
 fragBullets: 4
 fragCone: 70
 status: slow
+statusDuration: 70
 hitShake: 2
 fragBullet: {
 type: BasicBulletType
@@ -28,8 +26,6 @@ lifetime: 35
 damage: 5
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
-pierce: true
-pierceCap: 1
 }
 }
 creostone: {
@@ -43,24 +39,28 @@ splashDamageRadius: 25
 splashDamage: 30
 hitEffect: blastExplosion
 despawnEffect: blastExplosion
+backColor: bd5553
+frontColor: eb8778
 fragBullets: 6
 fragCone: 70
-status: blasted
+status: melting
 statusDuration: 65
 hitShake: 3
-ammoMultiplier: 1.5
-buildingDamageMultiplier: 0.35
-reloadMultiplier: 1.5
+ammoMultiplier: 2
+buildingDamageMultiplier: 1.25
+reloadMultiplier: 2
 hitSound: explosion
 fragBullet: {
 type: BasicBulletType
 width: 9
 height: 9
 speed: 6
-lifetime: 40
+lifetime: 25
 damage: 9
 hitEffect: blastExplosion
 despawnEffect: blastExplosion
+backColor: bd5553
+frontColor: eb8778
 }
 }
 }

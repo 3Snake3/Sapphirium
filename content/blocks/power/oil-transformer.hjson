@@ -5,13 +5,14 @@ research: {
 parent: spore-generator
 objectives: [oil-extractor]
 }
-researchCostMultiplier: 1.5
+researchCostMultiplier: 2
 requirements: [
-silicon/335
-creostone/220
-titanium/300
-plastanium/170
-metaglass/90
+graphite/325
+metaglass/135
+silicon/94
+thorium/75
+plastanium/45
+creostone/35
 ]
 powerProduction: 0.8
 generateEffect: {

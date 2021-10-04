@@ -1,27 +1,26 @@
 type: GenericCrafter
-outputItem: thorium/8
+outputItem: thorium/6
 requirements: [
-graphite/110
-silicon/100
-titanium/80
-thorium/120
-plastanium/70
+titanium/215
+thorium/110
+graphite/85
+plastanium/60
 ]
 consumes: {
 power: 3.5
 liquid: slag/0.4
 items: {
 items: [
-copper/4
-lead/5
-titanium/6
+copper/3
+lead/4
+titanium/4
 ]
 }
 }
 hasPower: true
 hasLiquids: true
 hasItems: true
-craftTime: 120
+craftTime: 145
 drawer: DrawGlow
 itemCapacity: 20
 liquidCapacity: 24

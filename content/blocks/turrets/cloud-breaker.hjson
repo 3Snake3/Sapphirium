@@ -9,9 +9,9 @@ scatter, swarmer
 }
 requirements: [
 thorium/350
-titanium/250
-silicon/200
-creostone/125
+titanium/180
+silicon/75
+creostone/50
 ]
 reloadTime: 200
 rotateSpeed: 3

@@ -11,6 +11,13 @@ const surgeMass = extend(Liquid, "surge-mass", {
 	lightColor: Color.valueOf("fff8a5"),
 });
 
+const statuses = require("statuses/statuses");
+
+const ledonite = extend(Liquid, "ledonite-liquid", {
+effect: statuses.superFreezing,
+});
+
 module.exports = {
-	surgeMass: surgeMass
+	surgeMass: surgeMass,
+	ledonite: ledonite
 	}

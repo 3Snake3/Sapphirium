@@ -12,11 +12,11 @@ placeableLiquid: true
 
 
 requirements: [
-  graphite/270
-  metaglass/220
-  silicon/175
-  titanium/90
-  thorium/90
+  graphite/225
+  metaglass/130
+  silicon/70
+  thorium/55
+  creostone/35
 ]
 
 consumes: {

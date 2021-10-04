@@ -12,7 +12,7 @@ lightRadius: 75
 heatColor: 91abff
 powerUse: 5
 consumes: {
-liquid: water/2
+liquid: water/0.5
 }
 shootType: {
 sprite: adc-none-bullet
@@ -20,7 +20,7 @@ width: 3
 height: 3
 hitEffect: none
 despawnEffect: none
-knockback: 4
+knockback: 3.5
 damage: 0
 pierce: true
 pierceBuilding: true
@@ -47,8 +47,8 @@ shootSound: release
 requirements: [
 copper/225
 graphite/125
-plastanium/85
-phase-fabric/60
+plastanium/65
+phase-fabric/40
 ]
 research: {
 parent: force-projector

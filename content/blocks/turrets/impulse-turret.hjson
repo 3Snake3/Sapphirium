@@ -4,13 +4,6 @@ size: 3
 category: turret
 research: {
 parent: segment
-requirements: [
-copper/8500
-graphite/6500
-silicon/4200
-thorium/2450
-phase-fabric/1200
-]
 objectives: [spraying-projector, clothing-phase-factory, thorium-smelter]
 }
 reloadTime: 180
@@ -59,8 +52,8 @@ despawnEffect: none
 }
 requirements: [
 titanium/650
-thorium/380
-creostone/265
-plastanium/200
-phase-fabric/125
+thorium/225
+creostone/110
+plastanium/80
+phase-fabric/60
 ]

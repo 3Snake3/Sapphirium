@@ -4,12 +4,11 @@ health: 900
 hasPower: true
 powerProduction: 3.43
 requirements: [
-lead/500
-silicon/435
-titanium/430
-plastanium/345
-thorium/230
-phase-fabric/210
+thorium/380
+silicon/200
+plastanium/125
+surge-alloy/85
+phase-fabric/60
 ]
 category: power
 research: solar-panel-huge

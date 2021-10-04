@@ -72,7 +72,7 @@ colorTo: ffffff
 }
 requirements: [
 graphite/350
-titanium/200
-thorium/185
-plastanium/120
+titanium/125
+thorium/85
+plastanium/30
 ]

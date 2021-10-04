@@ -62,8 +62,8 @@ power: 10
 }
 requirements: [
 creostone/1250
-silicon/760
-plastanium/600
-surge-alloy/250
+silicon/360
+plastanium/225
+surge-alloy/120
 ]
 category: turret

@@ -21,8 +21,8 @@ sand/8
 }
 category: crafting
 requirements: [
-copper/100
-graphite/75
+copper/125
+graphite/85
 silicon/50
 titanium/50
 ]

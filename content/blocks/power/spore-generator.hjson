@@ -1,5 +1,4 @@
 type: ThermalGenerator
-health: 640
 category: power
 research: {
 parent: hydrogenerator
@@ -7,11 +6,11 @@ objectives: [spore-extractor]
 }
 requirements: [
 creostone/85
-silicon/70
-metaglass/60
-titanium/65
+silicon/65
+metaglass/45
+titanium/30
 ]
-powerProduction: 3
+powerProduction: 2.5
 generateEffect: {
 type: ParticleEffect
 particles: 5

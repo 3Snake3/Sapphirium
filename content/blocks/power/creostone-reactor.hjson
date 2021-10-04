@@ -2,37 +2,36 @@ type: NuclearReactor
 category: power
 
 size: 3
-health: 1000
+health: 2600
 itemCapacity: 20
 liquidCapacity: 20
 itemDuration: 360
-powerProduction: 22
+powerProduction: 25
 
 lightColor: e7221f
 heating: 0.04
 smokeThreshold: 0.5
 flashThreshold: 0.48
-explosionRadius: 28
-explosionDamage: 2200
+explosionRadius: 30
+explosionDamage: 3000
 coolantPower: 0.7
 
 ambientSound: hum
 ambientSoundVolume: 0.22
 
 requirements: [
-  copper/350
-  lead/280
-  silicon/170
-  graphite/100
-  creostone/110
-  metaglass/40
+  copper/335
+  graphite/196
+  thorium/80
+  creostone/60
+  metaglass/45
 ]
 
 consumes: {
-  liquid: ledonite-liquid/0.083
+  liquid: ledonite-liquid/0.09
   items: {
     items: [
-      creostone/2
+      creostone/3
     ]
   }
 }
