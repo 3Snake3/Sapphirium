@@ -71,7 +71,6 @@ const superFreezing = extendContent(StatusEffect, "super-freezing", {
       
     speedMultiplier: 0.001,
     disarm: true,
-    reactive: true,
     transitionDamage: 10,
     damage: 0.5,
     effect: Fx.freezing,

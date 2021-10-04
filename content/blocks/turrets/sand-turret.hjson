@@ -29,7 +29,7 @@ lifetime: 20
 }
 }
 }
-targetAir: true
+targetAir: false
 reloadTime: 80
 recoilAmount: 3
 range: 240

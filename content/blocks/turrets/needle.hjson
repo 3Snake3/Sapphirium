@@ -39,6 +39,7 @@ updateEffectSeg: 60
 pierceEffect: railHit
 updateEffect: railTrail
 hitEffect: massiveExplosion
+buildingDamageMultiplier: 0.2
 hitShake: 5
 smokeEffect: shootBig2
 damage: 650

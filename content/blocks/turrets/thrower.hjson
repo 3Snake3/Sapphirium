@@ -80,7 +80,7 @@ height: 9
 damage: 15
 speed: 3
 lifetime: 60
-reloadMultiplier: 1.7
+reloadMultiplier: 0.8
 ammoMultiplier: 5
 homingPower: 0.10
 pierce: true
@@ -116,7 +116,7 @@ inaccuracy: 3
 pierce: true
 pierceCap: 2
 ammoMultiplier: 6
-reloadMultiplier: 1.4
+reloadMultiplier: 0.75
 pierce: true
 pierceCap: 4
 }

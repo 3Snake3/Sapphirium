@@ -21,6 +21,8 @@ splashDamage: 30
 
 collidesGround: true
 
+buildingDamageMultiplier: 1.15
+
 hitEffect: {
 type: ExplosionEffect
 
@@ -127,6 +129,8 @@ knockback: 0.5
 
 splashDamage: 60
 splashDamageRadius: 60
+
+buildingDamageMultiplier: 1.6
 
 status: corroded
 statusDuration: 180

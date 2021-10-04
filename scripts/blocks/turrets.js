@@ -176,7 +176,7 @@ const liquids = require("liquids");
 const ledoShot = extend(LiquidBulletType, liquids.ledonite, {
 	knockback: 0.75,
 	drag: 0.01,
-	statusDuration: 60
+	statusDuration: 40
 });
 
 const heavyLedoShot = extend(LiquidBulletType, liquids.ledonite, {
@@ -187,7 +187,7 @@ const heavyLedoShot = extend(LiquidBulletType, liquids.ledonite, {
     orbSize: 4,
     drag: 0.001,
     ammoMultiplier: 0.4,
-    statusDuration: 60,
+    statusDuration: 45,
     damage: 0.2
 });
 
@@ -205,10 +205,7 @@ const heavySrgMassShot = extend(LiquidBulletType, liquids.surgeMass, {
     drag: 0.001,
     ammoMultiplier: 0.4,
     statusDuration: 240,
-    damage: 0.2,
-    lightning: 3,
-    lightningLength: 2,
-    lightningDamage: 5
+    damage: 0.2
 });
 
 Blocks.wave.ammo(

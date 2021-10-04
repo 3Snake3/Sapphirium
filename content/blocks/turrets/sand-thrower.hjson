@@ -48,7 +48,7 @@ statusDuration: 65
 hitShake: 3
 ammoMultiplier: 2
 buildingDamageMultiplier: 1.25
-reloadMultiplier: 2
+reloadMultiplier: 0.4
 hitSound: explosion
 fragBullet: {
 type: BasicBulletType
@@ -64,7 +64,7 @@ frontColor: eb8778
 }
 }
 }
-reloadTime: 10
+reloadTime: 12
 recoilAmount: 4
 rotateSpeed: 8
 spread: 6
