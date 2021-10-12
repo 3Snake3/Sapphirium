@@ -4,9 +4,7 @@ power: 2
 liquid: surge-mass/0.25
 items: {
 items: [
-charged-lead/1
-silicon/2
-titanium/1
+titanium/2
 ]
 }
 }

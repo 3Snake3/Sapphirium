@@ -4,9 +4,7 @@ power: 1.7
 liquid: surge-mass/0.3
 items: {
 items: [
-charged-lead/1
-silicon/2
-graphite/1
+graphite/3
 ]
 }
 }
