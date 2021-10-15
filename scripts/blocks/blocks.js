@@ -142,9 +142,32 @@ Blocks.snow.attributes.set(cold, 0.2);
 Blocks.iceSnow.attributes.set(cold, 0.45);
 Blocks.ice.attributes.set(cold, 0.7);*/
 
+const powerProduction = 7.5;
+const generationType = Stat.basePowerGeneration;
 const coreCage = extend(CoreBlock, "core-cage", {
+	hasPower: true,
+	outputsPower: true,
+	consumesPower: false,
+	setStats(){
+        this.super$setStats();
+        this.stats.add(generationType, powerProduction * 60, StatUnit.powerSecond);
+    },
+    setBars(){
+        this.super$setBars();
+        this.bars.add("power", entity => new Bar(() => Core.bundle.format("bar.poweroutput", Strings.fixed(entity.getPowerProduction() * 60 * entity.timeScale(), 1)), () => Pal.powerBar, () => entity.productionEfficiency));
+    },
+	baseExplosiveness: 10,
 	thrusterLength: 46/4,
+	flags: EnumSet.of(BlockFlag.core, BlockFlag.generator),
 	});
+	
+coreCage.buildType = () => extendContent(CoreBlock.CoreBuild, coreCage, {
+var generateTime = 50;
+var productionEfficiency = 1.0;
+        getPowerProduction(){
+            return powerProduction * productionEfficiency;
+        }
+    });
 	
 const ledoniteLiquid = extendContent(Floor, "ledonite", {
 	isLiquid: true,
@@ -160,4 +183,4 @@ const upgPump = extend(Pump, "upgraded-pump", {});
 module.exports = {
   multi: multi,
   upgPump: upgPump
-} 
+}
