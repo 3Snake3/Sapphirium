@@ -161,9 +161,8 @@ const coreCage = extend(CoreBlock, "core-cage", {
 	flags: EnumSet.of(BlockFlag.core, BlockFlag.generator),
 	});
 	
+const productionEfficiency = 1.0;
 coreCage.buildType = () => extendContent(CoreBlock.CoreBuild, coreCage, {
-var generateTime = 50;
-var productionEfficiency = 1.0;
         getPowerProduction(){
             return powerProduction * productionEfficiency;
         }
