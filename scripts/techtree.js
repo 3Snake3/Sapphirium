@@ -4,13 +4,14 @@ const items = require("items");
 
 function newNode(parent, content, req, objectives){
 	
-var parnode = TechTree.get(parent);
-var node = new TechTree.TechNode(parnode, content, req = null ? content.researchRequirements() : req);
-var used = new ObjectSet();
+    var parnode = TechTree.get(parent);
+    var node = new TechTree.TechNode(parnode, content, req = null ? content.researchRequirements() : req);
+    var used = new ObjectSet();
   
     node.objectives.addAll(objectives = null ? null : objectives);
 }
-  
+
+
 //blocks
 newNode(Blocks.parallax, turrets.impaler, ItemStack.with(Items.titanium, 7500, Items.silicon, 6900, Items.plastanium, 4450, Items.phaseFabric, 2000), Seq.with(new Objectives.SectorComplete(SectorPresets.impact0078)));
 newNode(Blocks.ripple, turrets.warhead, ItemStack.with(Items.lead, 8600, Items.graphite, 6400, Items.silicon, 2300, items.creostone, 1800, Items.plastanium, 1300), Seq.with(new Objectives.SectorComplete(SectorPresets.extractionOutpost), new Objectives.Research(Blocks.spectre)));
