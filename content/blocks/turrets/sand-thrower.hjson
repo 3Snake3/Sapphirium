@@ -73,10 +73,10 @@ restitution: 0.2
 range: 180
 shootSound: throw
 requirements: [
-copper/125
+copper/145
 lead/85
-creostone/60
-graphite/40
+graphite/50
+metaglass/35
 ]
 category: turret
 research: salvo

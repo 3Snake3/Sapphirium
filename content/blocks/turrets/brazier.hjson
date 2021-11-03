@@ -42,7 +42,7 @@ particles: 15
 sizeFrom: 4
 sizeTo: 0
 lifetime: 43
-length: 165
+length: 205
 cone: 5
 colorFrom: d99e6a
 colorTo: a86d39
@@ -50,10 +50,10 @@ colorTo: a86d39
 shootEffect: {
 type: ParticleEffect
 particles: 30
-sizeFrom: 4.5
+sizeFrom: 5.5
 sizeTo: 0
 lifetime: 43
-length: 165
+length: 205
 interp: circleOut
 cone: 5
 colorFrom: f2e879

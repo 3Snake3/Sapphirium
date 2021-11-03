@@ -59,7 +59,7 @@ hitSize: 5
 lifetime: 20
 width: 20
 length: 270
-damage: 400
+damage: 280
 collidesAir: true
 collidesGround: false
 status: bleeding
