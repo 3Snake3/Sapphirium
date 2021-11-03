@@ -1,0 +1,13 @@
+category: turret
+research: {
+parent: beam-LS
+objectives: [meltdown]
+}
+requirements: [
+titanium/125
+plastanium/85
+silicon/65
+surge-alloy/35
+surge-stone/25
+]
+size: 2

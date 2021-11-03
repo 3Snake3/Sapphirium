@@ -3,7 +3,7 @@ metaglass: fragGlass
 ice-cube: {
 type: FlakBulletType
 speed: 5
-damage: 6
+damage: 4
 ammoMultiplier: 4
             shootEffect: shootSmall
             reloadMultiplier: 0.85

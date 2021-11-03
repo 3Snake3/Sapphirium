@@ -7,6 +7,7 @@ lead/10
 ice-cube/14
 ]
 category: defense
+playerControllable: false
 research: ice-cube-wall
 reloadTime: 9
 recoilAmount: 2
@@ -31,8 +32,8 @@ height: 13
 damage: 10
 speed: 7
 lifetime: 16
-status: freezing
-statusDuration: 80
+status: wet
+statusDuration: 60
 pierce: true
 pierceCap: 1.5
 }

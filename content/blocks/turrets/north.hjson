@@ -1,6 +1,6 @@
-type: PowerTurret
+
 size: 3
-range: 170
+range: 220
 reloadTime: 8
 xRand: 2
 recoilAmount: 3
@@ -8,29 +8,32 @@ rotateSpeed: 10
 inaccuracy: 7
 shootCone: 25
 shootSound: lasershoot
+health: 980
 powerUse: 5
 shootType: {
 sprite: adc-spear-bullet
 speed: 6
-width: 12
+width: 10
 height: 18
-damage: 10
-lifetime: 30
+damage: 15
+lifetime: 36.6
 status: freezing
-statusDuration: 85
+statusDuration: 60
 frontColor: e8eaff
 backColor: 837de8
 hitEffect: shockwave
 despawnEffect: shockwave
 shootEffect: shockwave
 pierce: true
+pierceCap: 1
 weaveScale: 4
-weaveMag: 2
-homingPower: 6
+weaveMag: 1
+homingPower: 2
+homingRange: 45
 }
 category: turret
 research: {
-parent: segment
+parent: multishocker
 objectives: [sparrow, overgrowth]
 }
 requirements: [

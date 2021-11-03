@@ -4,7 +4,7 @@ size: 3
 category: turret
 research: {
 parent: segment
-objectives: [spraying-projector, clothing-phase-factory, thorium-smelter]
+objectives: [spraying-projector, clothing-phase-factory, thorium-mine]
 }
 reloadTime: 180
 recoilAmount: 0
@@ -14,6 +14,7 @@ shootLength: 0
 inaccuracy: 0
 range: 230
 shootSound: release
+playerControllable: false
 shots: 360
 spread: 1
 powerUse: 8

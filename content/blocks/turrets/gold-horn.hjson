@@ -1,5 +1,6 @@
 type: PowerTurret
 size: 3
+health: 1120
 category: turret
 research: beam-LS
 reloadTime: 120
@@ -54,6 +55,9 @@ status: shocked
 statusDuration: 80
 lifetime: 51
 collidesAir: false
+absorbable: false
+hittable: false
+reflectable: false
 backColor: d99e6a
 frontColor: f3e979
 fragCone: 360

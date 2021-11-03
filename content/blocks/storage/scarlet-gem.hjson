@@ -1,0 +1,9 @@
+requirements: [
+lead/3800
+silicon/3400
+titanium/2000
+thorium/2000
+]
+research: core-foundation
+category: effect
+unitType: scarlet-moth

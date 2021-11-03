@@ -1,10 +1,10 @@
 requirements: [
-titanium/3500
-silicon/2000
-plastanium/1650
-surge-alloy/1200
-surge-stone/800
-creostone/645
+titanium/2800
+plastanium/2400
+silicon/1600
+creostone/1350
+surge-alloy/860
+thorium/760
 ]
 buildCostMultiplier: 0.85
 range: 550

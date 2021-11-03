@@ -1,0 +1,23 @@
+type: GenericCrafter
+drawer: {
+type: DrawRotator
+drawSpinSprite: true
+spinSpeed: 5
+}
+health: 460
+size: 2
+outputItem: sand/1
+craftTime: 45
+consumes: {
+power: 0.7
+}
+craftEffect: mineBig
+updateEffect: pulverizeMedium
+hasPower: true
+category: production
+research: water-extractor
+requirements: [
+copper/45
+graphite/45
+lead/30
+]

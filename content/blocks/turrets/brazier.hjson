@@ -4,7 +4,7 @@ category: turret
 research: {
 parent: gold-horn
 objectives: [
-scorch, tsunami, plastanium-smelter
+scorch, tsunami
 ]
 }
 reloadTime: 7
@@ -13,11 +13,14 @@ inaccuracy: 5
 rotateSpeed: 5
 cooldown: 0.10
 range: 165
-coolantMultiplier: 2.5
+coolantMultiplier: 2
 shootCone: 25
 shootSound: flame
+consumes: {
+liquid: cryofluid/0.5
+}
 shootType: {
-type: BasicBulletType
+sprite: adc-none-bullet
 speed: 5
 lifetime: 33
 damage: 15
@@ -32,44 +35,44 @@ statusDuration: 80
 despawnEffect: none
 hittable: false
 reflectable: false
+smokeEffect: {
+type: ParticleEffect
+interp: circleOut
+particles: 15
+sizeFrom: 4
+sizeTo: 0
+lifetime: 43
+length: 165
+cone: 5
+colorFrom: d99e6a
+colorTo: a86d39
+}
 shootEffect: {
-type: MultiEffect
-effects: [{
 type: ParticleEffect
 particles: 30
-sizeFrom: 3
-sizeTo: 3
-lifetime: 33
-length: 165
-cone: 7
-colorFrom: f3e979
-colorTo: ffffff
-offset: 3
-}
-{
-type: ParticleEffect
-particles: 7
-sizeFrom: 3
-sizeTo: 3
+sizeFrom: 4.5
+sizeTo: 0
 lifetime: 43
-length: 175
-cone: 8
-colorFrom: d99e6a
-colorTo: cc894e
-}]
+length: 165
+interp: circleOut
+cone: 5
+colorFrom: f2e879
+colorTo: d99e6a
 }
 hitEffect: {
 type: ParticleEffect
 particles: 18
 lifetime: 20
 length: 20
-sizeFrom: 5
-sizeTo: 0
+sizeFrom: 3
+interp: circleOut
+sizeTo: 0.25
 cone: 360
-colorFrom: f3e979
-colorTo: ffffff
+colorFrom: d99e6a
+colorTo: d99e6a
 }
 }
+health: 980
 requirements: [
 graphite/350
 titanium/125

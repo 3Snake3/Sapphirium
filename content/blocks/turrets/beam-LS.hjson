@@ -10,6 +10,7 @@ titanium/60
 plastanium/45
 ]
 range: 180
+health: 600
 recoilAmount: 2
 reloadTime: 30
 powerUse: 7

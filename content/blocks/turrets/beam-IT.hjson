@@ -376,3 +376,4 @@ shootCone: 12
 ammoPerShot: 5
 ammoUseEffect: casing2
 shootSound: shootBig
+health: 600

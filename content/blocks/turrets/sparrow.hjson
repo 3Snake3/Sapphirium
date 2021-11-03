@@ -1,27 +1,30 @@
 type: PowerTurret
 requirements: [
-lead/80
-graphite/60
-titanium/45
+lead/70
+graphite/70
+titanium/40
 ]
 category: turret
 shootType: {
 type: LightningBulletType
-damage: 80
-lightningColor: FF4F00
-lightningLength: 45
+damage: 45
+lightningColor: ff6666
+lightningLength: 37
 collidesAir: true
 collidesGround: false
+status: bleeding
 }
-reloadTime: 75
+reloadTime: 35
 shootCone: 60
-rotateSpeed: 6
-powerUse: 6
-targetAir: true
+rotateSpeed: 8
+powerUse: 4.5
 targetGround: false
-range: 170
+range: 160
 heatColor: ff0000
 recoilAmount: 1
-health: 340
+health: 300
 shootSound: spark
-research: lancer
+research: {
+parent: lancer
+objectives: [scarlet-gem]
+}

@@ -1,5 +1,6 @@
 type: ItemTurret
 size: 2
+health: 480
 ammoTypes: {
 sand: {
 width: 12

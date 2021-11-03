@@ -11,6 +11,7 @@ graphite/85
 titanium/60
 metaglass/40
 ]
+health: 600
 range: 180
 ammoTypes: {
 copper: {

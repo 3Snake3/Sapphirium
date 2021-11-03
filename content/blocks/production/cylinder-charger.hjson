@@ -1,6 +1,8 @@
-type: GenericCrafter
+type: AttributeCrafter
+attribute: heat
+maxBoost: 3.5
 consumes: {
-power: 2.5
+power: 3
 liquid: surge-mass/0.6
 items: {
 items: [
@@ -12,7 +14,16 @@ charged-ingot/2
 }
 outputItem: charged-cylinder/2
 craftTime: 145
-drawer: DrawSmelter
+drawer: {
+type: DrawArcSmelter
+flameColor: fff587
+midColor: ffe680
+flameRad: 1.5
+circleSpace: 2
+circleStroke: 1.5
+alpha: 0.76
+particles: 30
+}
 itemCapacity: 14
 liquidCapacity: 30
 craftEffect: {
@@ -22,8 +33,8 @@ cone: 360
 sizeFrom: 6
 sizeTo: 0
 region: adc-rhombus
-lifetime: 33
-length: 30
+lifetime: 40
+length: 15
 colorFrom: fff480
 colorTo: e8d174
 }

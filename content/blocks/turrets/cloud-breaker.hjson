@@ -13,6 +13,7 @@ titanium/180
 silicon/75
 creostone/50
 ]
+health: 980
 reloadTime: 200
 rotateSpeed: 3
 recoilAmount: 6
@@ -48,9 +49,8 @@ sparkRad: 30
 sparkLen: 10
 }
 despawnHit: true
-trailLength: 60
-trailChance: 0.8
-trailWidth: 0.9
+trailLength: 15
+trailWidth: 10
 backColor: f68021
 frontColor: f8ad42
 trailColor: f68021
@@ -101,9 +101,8 @@ sparkRad: 40
 sparkLen: 10
 }
 despawnHit: true
-trailLength: 60
-trailChance: 0.8
-trailWidth: 0.9
+trailLength: 15
+trailWidth: 10
 backColor: e58956
 frontColor: ffd2ae
 trailColor: e58956
@@ -156,9 +155,8 @@ sparkRad: 50
 sparkLen: 10
 }
 despawnHit: true
-trailLength: 60
-trailChance: 0.8
-trailWidth: 0.9
+trailLength: 15
+trailWidth: 10
 backColor: f9a3c7
 frontColor: ffffff
 trailColor: f9a3c7
@@ -211,9 +209,8 @@ sparkRad: 50
 sparkLen: 20
 }
 despawnHit: true
-trailLength: 60
-trailChance: 0.8
-trailWidth: 0.9
+trailLength: 15
+trailWidth: 10
 backColor: e58956
 frontColor: ffd2ae
 trailColor: e58956

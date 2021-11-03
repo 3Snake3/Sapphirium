@@ -87,6 +87,15 @@ show: false
 duration: 120
 range: 30
 reload: 210
-applyEffect: heal
-activeEffect: overdriveWave
+applyEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 30
+strokeFrom: 4
+strokeTo: 0
+lifetime: 25
+colorFrom: ffd37f
+colorTo: ffd37f
+}
 }]

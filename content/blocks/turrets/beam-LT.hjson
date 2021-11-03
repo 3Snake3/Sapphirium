@@ -19,6 +19,7 @@ lightningColor: f3e979
 status: shocked
 statusDuration: 120
 }
+health: 600
 reloadTime: 40
 shots: 4
 shootCone: 60

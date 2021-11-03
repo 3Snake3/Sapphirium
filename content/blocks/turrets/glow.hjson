@@ -1,0 +1,51 @@
+type: PowerTurret
+reloadTime: 15
+alternate: true
+spread: 8
+inaccuracy: 5
+coolantMultiplier: 0.7
+coolantUsage: 1
+restitution: 0.2
+recoilAmount: 4
+shootCone: 24
+shots: 2
+shootEffect: lancerLaserShoot
+size: 4
+health: 2350
+range: 255
+powerUse: 8
+shootShake: 3
+smokeEffect: none
+shootSound: laser
+shootType: {
+sprite: adc-laser-bullet
+width: 30
+height: 100
+damage: 65
+speed: 7
+lifetime: 36.42
+pierce: true
+pierceBuilding: true
+absorbable: false
+hittable: false
+reflectable: false
+status: shocked
+statusDuration: 85
+lightning: 6
+lightningLength: 15
+lightningDamage: 20
+lightningColor: a9d8ff
+backColor: a9d8ff
+frontColor: ffffff
+hitEffect: hitLancer
+despawnHit: true
+}
+category: turret
+research: impaler
+requirements: [
+copper/1200
+silicon/335
+surge-alloy/255
+graphite/250
+phase-fabric/120
+]

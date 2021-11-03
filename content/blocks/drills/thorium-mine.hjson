@@ -1,0 +1,22 @@
+maxBoost: 2
+craftTime: 40
+craftEffect: mineBig
+updateEffect: pulverizeMedium
+hasPower: true
+hasLiquids: true
+consumes: {
+power: 4
+liquid: cryofluid/0.2
+}
+outputItem: thorium/1
+attribute: water
+research: laser-drill
+size: 3
+health: 870
+requirements: [
+copper/80
+graphite/35
+silicon/35
+titanium/40
+]
+category: production

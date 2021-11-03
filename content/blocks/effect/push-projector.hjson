@@ -5,6 +5,7 @@ recoilAmount: 0
 rotateSpeed: 0
 shootLength: 0
 shootCone: 360
+playerControllable: false
 shots: 360
 group: projectors
 emitLight: true
@@ -32,12 +33,11 @@ shootEffect: {
 type: WaveEffect
 sides: 6
 sizeFrom: 0
-sizeTo: 150
+sizeTo: 180
 strokeFrom: 4
 strokeTo: 0
-colorFrom: 6a75c4
-colorTo: 8ca4f5
 lifetime: 25
+rotation: 135
 }
 smokeEffect: none
 }

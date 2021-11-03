@@ -77,20 +77,41 @@ const superFreezing = extendContent(StatusEffect, "super-freezing", {
     color: Color.valueOf("6fdded")
 });
 
-const effect = extend(ParticleEffect, {});
-effect.particles = 1;
-effect.sizeFrom = 0;
-effect.sizeTo = 5;
-effect.region = "adc-stun";
-effect.lifetime = 100;
-effect.length = 0;
-
 const stun = extend(StatusEffect, "stunned", {
 	speedMultiplier: 0.001,
 	disarm: true,
-	effect: effect,
 	})
-		
+	
+const flaming = extend(StatusEffect, "flaming", {
+speedMultiplier: 0.6,
+damage: 5,
+effect: Fx.burning,
+transitionDamage: 60,
+init(){
+                
+        this.opposite(StatusEffects.wet, StatusEffects.freezing, superFreezing)
+                
+        this.affinity(StatusEffects.tarred, ((unit, time, newTime, result) => {
+                    
+            unit.damagePierce(this.transitionDamage);
+            Fx.burning.at(unit.x + Mathf.range(unit.bounds() / 2), unit.y + Mathf.range(unit.bounds() / 2));
+                    
+            result.set(flaming, time);
+        }))
+    }
+});
+
+const bled = new Effect(11, e => {
+        Draw.color(Color.valueOf("f25555"));
+        Lines.stroke(e.fout() * 2);
+        Lines.circle(e.x, e.y, 2 + e.finpow() * 7);
+        });
+const bleeding = extend(StatusEffect, "bleeding", {
+damage: 0.2,
+healthMultiplier: 0.95,
+permanent: true
+});
+bleeding.effect = bled;
 
 module.exports = {
 	weakened: weakened,

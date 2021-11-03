@@ -9,6 +9,7 @@ shots: 360
 shootCone: 360
 range: 200
 shootSound: release
+playerControllable: false
 shootLength: 0
 inaccuracy: 0
 rotateSpeed: 10
@@ -30,7 +31,7 @@ shootEffect: {
 type: WaveEffect
 sides: 0
 sizeFrom: 0
-sizeTo: 200
+sizeTo: 230
 strokeFrom: 4
 strokeTo: 4
 colorFrom: f6e096
@@ -58,7 +59,7 @@ type: WaveEffect
 lifetime: 20
 sides: 0
 sizeFrom: 0
-sizeTo: 200
+sizeTo: 230
 strokeFrom: 4
 strokeTo: 4
 colorFrom: a488eb
@@ -83,7 +84,7 @@ type: WaveEffect
 lifetime: 20
 sides: 0
 sizeFrom: 0
-sizeTo: 200
+sizeTo: 230
 strokeFrom: 4
 strokeTo: 4
 colorFrom: eb8778
@@ -108,7 +109,7 @@ type: WaveEffect
 lifetime: 20
 sides: 0
 sizeFrom: 0
-sizeTo: 200
+sizeTo: 230
 strokeFrom: 4
 strokeTo: 4
 colorFrom: f9a3c7
@@ -133,7 +134,7 @@ type: WaveEffect
 lifetime: 20
 sides: 0
 sizeFrom: 0
-sizeTo: 200
+sizeTo: 230
 strokeFrom: 4
 strokeTo: 4
 colorFrom: 8ca4f5
@@ -158,7 +159,7 @@ type: WaveEffect
 lifetime: 20
 sides: 0
 sizeFrom: 0
-sizeTo: 200
+sizeTo: 230
 strokeFrom: 4
 strokeTo: 4
 colorFrom: 86ceeb

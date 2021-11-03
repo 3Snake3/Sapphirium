@@ -7,6 +7,7 @@ targetGround: true
 targetAir: true
 rotateSpeed: 2.5
 range: 530
+health: 2230
 cooldown: 0.009
 restitution: 0.009
 coolantUsage: 2
@@ -23,6 +24,7 @@ pierceEffect: railHit
 updateEffect: railTrail
 hitEffect: massiveExplosion
 hitShake: 6
+collides: true
 smokeEffect: shootBig2
 damage: 800
 ammoMultiplier: 4
@@ -46,15 +48,7 @@ damage: 650
 ammoMultiplier: 4
 pierceDamageFactor: 2
 reloadMultiplier: 1.5
-status: {
-name: flaming
-speedMultiplier: 0.6
-damage: 5
-effect: burning
-affinities: [tarred]
-opposites: [wet, freezing]
-transitionDamage: 60
-}
+status: flaming
 statusDuration: 60
 }
 }

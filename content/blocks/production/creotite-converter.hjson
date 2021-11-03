@@ -1,13 +1,21 @@
 type: AttributeCrafter
-craftTime: 100
-outputItem: creostone/6
+craftTime: 115
+outputItem: creostone/5
 craftEffect: redgeneratespark
 hasPower: true
 hasItems: true
 hasLiquids: true
 itemCapacity: 16
 liquidCapacity: 12
-drawer: DrawSmelter
+drawer: {
+type: DrawArcSmelter
+flameColor: ff9686
+midColor: ffbe8c
+flameRad: 1.5
+circleSpace: 2
+circleStroke: 1.5
+alpha: 0.76
+}
 consumes: {
 power: 4
 liquid: creotite/0.2
@@ -15,7 +23,7 @@ items: {
 items: [
 silicon/3
 coal/5
-sand/8
+sand/7
 ]
 }
 }
@@ -29,3 +37,4 @@ titanium/50
 size: 3
 research: creotite-mixer
 attribute: heat
+maxBoost: 3

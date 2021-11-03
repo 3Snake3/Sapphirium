@@ -8,6 +8,7 @@ lead/90
 metaglass/65
 silicon/40
 ]
+health: 980
 shootEffect: shootBig
 reloadTime: 15
 recoilAmount: 4.5

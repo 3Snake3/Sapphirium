@@ -1,7 +1,7 @@
 type: PowerTurret
 category: turret
 
-health: 60
+health: 100
 reloadTime: 10
 recoilAmount: 0
 rotateSpeed: 6
@@ -17,18 +17,45 @@ damage: 5
 lightningLength: 12.5
 lightningColor: f3e979
 shootEffect: none
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 3
+strokeFrom: 3
+strokeTo: 0
+colorFrom: f3e979
+colorTo: ffffff
+}
+{
+type: ParticleEffect
+particles: 6
+line: true
+length: 15
+sizeFrom: 2.5
+sizeTo: 0
+strokeFrom: 2
+strokeTo: 0
+}
+]
+}
 }
 
 targetable: false
+solid: false
+playerControllable: false
 
 requirements: [
-copper/60
-lead/60
-silicon/40
-surge-stone/20
+copper/40
+lead/40
+silicon/25
+surge-stone/10
 ]
 
 research: {
 parent: arc
-objectives: [parallax]
+objectives: [segment]
 }
