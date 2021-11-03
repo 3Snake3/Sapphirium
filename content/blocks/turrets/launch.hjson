@@ -24,8 +24,14 @@ ammoPerShot: 4
 spread: 10
 ammoUseEffect: casing3
 consumes: {
-power: 3.5
-liquid: ledonite-liquid/0.5
+power: 3
+liquid: {
+liquid: ledonite-liquid
+amount: 0.5
+update: true
+booster: true
+optional: true
+}
 }
 ammoEjectBack: 2
 burstSpacing: 4
@@ -90,8 +96,8 @@ fragCone: 125
 inaccuracy: 8
 fragBullet: {
 type: BasicBulletType
-width: 10
-height: 15
+width: 6
+height: 6
 hitEffect: flakExplosion
 despawnHit: true
 damage: 7
