@@ -4,7 +4,7 @@ requirements: [
 lead/155
 silicon/85
 titanium/100
-creostone/60
+graphite/60
 metaglass/40
 ]
 outputLiquid: ledonite-liquid/0.4
