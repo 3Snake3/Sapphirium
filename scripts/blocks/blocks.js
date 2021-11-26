@@ -141,7 +141,7 @@ Blocks.snow.attributes.set(cold, 0.2);
 Blocks.iceSnow.attributes.set(cold, 0.45);
 Blocks.ice.attributes.set(cold, 0.7);*/
 
-const powerProduction = 7.5;
+const powerProduction = 9;
 const generationType = Stat.basePowerGeneration;
 
 const coreCage = extend(CoreBlock, "core-cage", {
@@ -168,6 +168,13 @@ const coreCage = extend(CoreBlock, "core-cage", {
     thrusterLength: 46/4,
     flags: EnumSet.of(BlockFlag.core, BlockFlag.generator),
 });
+
+const productionEfficiency = 1.0;
+coreCage.buildType = () => extendContent(CoreBlock.CoreBuild, coreCage, {
+        getPowerProduction(){
+            return powerProduction * productionEfficiency;
+        }
+    });
 	
 	
 const ledoniteLiquid = extendContent(Floor, "ledonite", {
