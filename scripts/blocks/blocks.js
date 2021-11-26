@@ -143,29 +143,32 @@ Blocks.ice.attributes.set(cold, 0.7);*/
 
 const powerProduction = 7.5;
 const generationType = Stat.basePowerGeneration;
+
 const coreCage = extend(CoreBlock, "core-cage", {
-	hasPower: true,
-	outputsPower: true,
-	consumesPower: false,
-	setStats(){
+	
+    hasPower: true,
+    outputsPower: true,
+    consumesPower: false,
+	
+    setStats(){
         this.super$setStats();
         this.stats.add(generationType, powerProduction * 60, StatUnit.powerSecond);
     },
+	
     setBars(){
         this.super$setBars();
-        this.bars.add("poweroutput", entity => new Bar(() => Core.bundle.format("bar.poweroutput", entity.getPowerProduction() * 60 * entity.timeScale(), 1), () => Pal.powerBar, () => entity.productionEfficiency));
+        this.bars.add("poweroutput", entity => new Bar(
+	    () => Core.bundle.format("bar.poweroutput", powerProduction * 60), 
+	    () => Pal.powerBar, 
+	    () => 1
+	));
     },
-	baseExplosiveness: 10,
-	thrusterLength: 46/4,
-	flags: EnumSet.of(BlockFlag.core, BlockFlag.generator),
-	});
+
+    baseExplosiveness: 10,
+    thrusterLength: 46/4,
+    flags: EnumSet.of(BlockFlag.core, BlockFlag.generator),
+});
 	
-const productionEfficiency = 1.0;
-coreCage.buildType = () => extendContent(CoreBlock.CoreBuild, coreCage, {
-        getPowerProduction(){
-            return powerProduction * productionEfficiency;
-        }
-    });
 	
 const ledoniteLiquid = extendContent(Floor, "ledonite", {
 	isLiquid: true,
