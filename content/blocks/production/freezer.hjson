@@ -10,4 +10,6 @@ silicon/30
 graphite/35
 ]
 size: 2
+liquidCapacity: 12
+itemCapacity: 12
 research: cryofluid-mixer
