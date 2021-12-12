@@ -2,13 +2,13 @@ const blocks = require("blocks/blocks");
 const turrets = require("blocks/turrets");
 const items = require("items");
 
-function newNode(parent, content, req, objectives = null){
+function newNode(parent, content, req, objectives){
 	
     var parnode = TechTree.get(parent);
     var node = new TechTree.TechNode(parnode, content, req = null ? content.researchRequirements() : req);
     var used = new ObjectSet();
   
-    node.objectives.addAll(objectives);
+    node.objectives.addAll(objectives = null ? null : objectives);
 }
 
 
