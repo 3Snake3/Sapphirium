@@ -1,4 +1,4 @@
-const expCreotite = extend(SectorPreset, "experiment-creotite", serpulo, 194, {
+const expCreotite = extendContent(SectorPreset, "experiment-creotite", Planets.serpulo, 194, {
 captureWave: 50,
 difficulty: 6
 });
