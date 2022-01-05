@@ -11,8 +11,8 @@ const creotitePowerStation = extendContent(SectorPreset, "creotite-power-station
     this.super$loadIcon();
     //may be custom icon
     if(Icon.map != null){
-      this.uiIcon = Icon.planet.getRegion();
-      this.fullIcon = Icon.planet.getRegion();
+      this.uiIcon = Icon.map.getRegion();
+      this.fullIcon = Icon.map.getRegion();
     }
   }
 });
