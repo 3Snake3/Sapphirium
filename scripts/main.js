@@ -7,10 +7,11 @@ mod.meta.author = "[green]Snake[white] & [red]Super[green]Jaba[red]2000";
 require("blocks/blocks");
 require("blocks/turrets");
 require("statuses/statuses");
-require("techtree");
 require("units");
 require("weathers");
 require("liquids");
 require("items");
 
 require("sectors");
+
+require("techtree");
