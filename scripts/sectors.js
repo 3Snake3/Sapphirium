@@ -8,8 +8,6 @@ const creotitePowerStation = extendContent(SectorPreset, "creotite-power-station
   alwaysUnlocked: true,
   
   loadIcon() {
-    this.super$loadIcon();
-    //may be custom icon
     if(Icon.map != null){
       this.uiIcon = Icon.map.getRegion();
       this.fullIcon = Icon.map.getRegion();
