@@ -6,9 +6,12 @@ const sectors = require("sectors");
 function newNode(parent, content, req, objectives){
 	
     var parnode = TechTree.get(parent);
-    var node = new TechTree.TechNode(parnode, content, req == null ? content.researchRequirements() : req);
-    if(req == 0)
-      node = new TechTree.TechNode(parnode, content, null);
+    
+    if(req == 0){
+      var node = new TechTree.TechNode(parnode, content, null);
+    }else{
+      var node = new TechTree.TechNode(parnode, content, req == null ? content.researchRequirements() : req);    
+    }
   
     node.objectives.addAll(objectives == null ? null : objectives);
 }
