@@ -12,3 +12,5 @@ require("units");
 require("weathers");
 require("liquids");
 require("items");
+
+require("sectors");
