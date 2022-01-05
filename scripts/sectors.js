@@ -4,6 +4,9 @@ const creotitePowerStation = extendContent(SectorPreset, "creotite-power-station
   difficulty: 9,
   startWaveTimeMultiplier: 1,
   
+  //for debug
+  alwaysUnlocked: true,
+  
   loadIcon() {
     this.super$loadIcon();
     //may be custom icon
