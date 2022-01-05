@@ -7,7 +7,8 @@ function newNode(parent, content, req, objectives){
 	
     var parnode = TechTree.get(parent);
     var node = new TechTree.TechNode(parnode, content, req == null ? content.researchRequirements() : req);
-    var used = new ObjectSet();
+    if(req == 0)
+      node = new TechTree.TechNode(parnode, content, null);
   
     node.objectives.addAll(objectives == null ? null : objectives);
 }
