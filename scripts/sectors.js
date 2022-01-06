@@ -2,7 +2,7 @@ const creotitePowerStation = new SectorPreset( "creotite-power-station", Planets
   
   creotitePowerStation.localizedName = "Creotite Power Station";
   creotitePowerStation.description = "A power plant destroyed by an explosion of an overheated creotite reactor. [red]Don't repeat the mistakes of the past!";
-  creotitePowerStation.captureWave = 45;
+  creotitePowerStation.captureWave = 20;
   creotitePowerStation.difficulty = 10;
   //for debug
-  creotitePowerStation.alwaysUnlocked = true;
+  creotitePowerStation.alwaysUnlocked = false;
