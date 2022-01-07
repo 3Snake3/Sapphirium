@@ -1,11 +1,14 @@
 color: eb8778
 liquid: creotite
+
 status: burning
 statusDuration: 45
 statusGround: false
+
 sound: rain
 soundVol: 0.25
+
 attrs: {
-light: -0.2
-heat: 0.1
+  light: -0.2
+  heat: 0.1
 }
