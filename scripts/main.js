@@ -4,6 +4,7 @@ mod.meta.description = "Adds a lot of additional content like turrets, factories
 mod.meta.author = "[green]Snake[white] & [red]Super[green]Jaba[red]2000";
 
 require("blocks/blocks");
+require("sectors");
 require("blocks/turrets");
 require("statuses/statuses");
 require("units");
@@ -12,4 +13,3 @@ require("liquids");
 require("items");
 
 require("techtree");
-require("sectors");
