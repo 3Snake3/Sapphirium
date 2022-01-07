@@ -1,18 +1,17 @@
-type: PowerTurret
+
 size: 2
 category: turret
 research: {
 parent: parallax
-objectives: [swarmer]
+objectives: [swarmer, indigo]
 }
 requirements: [
 lead/60
-graphite/45
-silicon/35
-titanium/35
-plastanium/15
+silicon/45
+globium/35
+plastanium/25
 ]
-reloadTime: 35
+reloadTime: 40
 powerUse: 1.5
 shots: 3
 burstSpacing: 8
@@ -33,8 +32,8 @@ backColor: a9d8ff
 frontColor: ffffff
 weaveScale: 8
 weaveMag: 1
-damage: 15
-homingPower: 0.12
+damage: 30
+homingPower: 0.15
 homingRange: 60
 shrinkY: 0
 drag: -0.003
@@ -51,7 +50,7 @@ lightningLength: 7.5
 lightningDamage: 5
 lightningColor: a9d8ff
 pierce: true
-pierceCap: 2
+pierceCap: 4
 pierceBuilding: true
 status: shocked
 statusDuration: 80

@@ -1,4 +1,4 @@
-type: PowerTurret
+
 category: turret
 
 health: 100
@@ -17,6 +17,15 @@ damage: 5
 lightningLength: 12.5
 lightningColor: f3e979
 shootEffect: none
+fragBullets: 1
+hitSound: spark
+fragCone: 0
+fragBullet: {
+type: LightningBulletType
+damage: 5
+lightningLength: 12.5
+lightningColor: f3e979
+}
 hitEffect: {
 type: MultiEffect
 effects: [

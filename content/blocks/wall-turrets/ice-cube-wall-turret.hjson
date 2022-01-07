@@ -7,7 +7,6 @@ lead/10
 ice-cube/14
 ]
 category: defense
-playerControllable: false
 research: ice-cube-wall
 reloadTime: 9
 recoilAmount: 2

@@ -1,0 +1,116 @@
+
+requirements: [
+graphite/220
+silicon/180
+plastanium/180
+titanium/135
+cinderblock/60
+]
+category: turret
+size: 3
+reloadTime: 125
+shots: 4
+burstSpacing: 6
+powerUse: 8
+inaccuracy: 8
+xRand: 4
+range: 320
+health: 1250
+shootSound: shootBig
+unitSort: strongest
+shootEffect: {
+type: ParticleEffect
+particles: 5
+cone: 45
+length: 30
+sizeFrom: 5
+sizeTo: 0
+lifetime: 20
+colorFrom: 61ad7e
+colorTo: 61ad7e
+}
+shootType: {
+sprite: adc-acid-bullet
+width: 12
+height: 25
+damage: 40
+lightRadius: 4
+lightOpacity: 2
+lightColor: 70ff88
+speed: 6
+lifetime: 53.33
+homingPower: 1
+homingRange: 60
+backColor: 61ad7e
+hitShake: 2
+frontColor: 98ffa9
+status: adc-acid-corrosion
+statusDuration: 220
+hitEffect: {
+type: MultiEffect
+effects: [hitBulletBig, {
+type: ParticleEffect
+particles: 6
+cone: 360
+length: 35
+lifetime: 60
+sizeFrom: 11
+sizeTo: 0
+colorFrom: 98ffa9
+colorTo: 61ad7e
+}
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 100
+lifetime: 30
+strokeFrom: 3
+strokeTo: 0
+colorFrom: 98ffa9
+colorTo: 98ffa9
+}]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [{
+type: ParticleEffect
+particles: 6
+cone: 360
+length: 35
+lifetime: 60
+sizeFrom: 11
+sizeTo: 0
+colorFrom: 98ffa9
+colorTo: 61ad7e
+}
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 130
+lifetime: 20
+strokeFrom: 3
+strokeTo: 0
+colorFrom: 98ffa9
+colorTo: 98ffa9
+}]
+}
+fragBullets: 200
+fragCone: 360
+fragBullet: {
+width: 0.001
+height: 0.001
+speed: 6
+lifetime: 20
+damage: 2
+pierce: true
+pierceBuilding: true
+hittable: false
+reflectable: false
+hitEffect: none
+despawnEffect: none
+hitColor: 98ffa9
+}
+}
+research: toxin

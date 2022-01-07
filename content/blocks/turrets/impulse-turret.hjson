@@ -1,10 +1,10 @@
-type: PowerTurret
-health: 2000
+
+health: 1650
 size: 3
 category: turret
 research: {
 parent: segment
-objectives: [spraying-projector, clothing-phase-factory, thorium-mine]
+objectives: [spraying-projector, clothing-phase-factory]
 }
 reloadTime: 180
 recoilAmount: 0
@@ -14,7 +14,17 @@ shootLength: 0
 inaccuracy: 0
 range: 230
 shootSound: release
-playerControllable: false
+shootEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 240
+strokeFrom: 16
+strokeTo: 0
+lifetime: 39
+colorFrom: 96abd9
+colorTo: 96abd900
+}
 shots: 360
 spread: 1
 powerUse: 8
@@ -47,14 +57,13 @@ hitSize: 36
 knockback: 3
 backColor: 6a76a1
 frontColor: 96abd9
-shootEffect: none
 smokeEffect: none
 despawnEffect: none
 }
 requirements: [
-titanium/650
-thorium/225
-creostone/110
-plastanium/80
-phase-fabric/60
+graphite/320
+titanium/320
+thorium/260
+silicon/200
+phase-fabric/120
 ]

@@ -1,9 +1,9 @@
-type: PowerTurret
+
 size: 3
 health: 1120
 category: turret
 research: beam-LS
-reloadTime: 120
+reloadTime: 60
 recoilAmount: 4
 range: 230
 rotateSpeed: 3
@@ -36,7 +36,7 @@ lifetime: 40
 }
 ]
 }
-chargeTime: 60
+chargeTime: 30
 powerUse: 8.5
 smokeEffect: none
 shootEffect: {
@@ -70,21 +70,21 @@ despawnEffect: flakExplosionBig
 buildingDamageMultiplier: 0.75
 fragBullets: 8
 fragBullet: {
-width: 20
-height: 15
+width: 40
+height: 25
 sprite: adc-wave-bullet
 speed: 7
-lifetime: 20
-damage: 9
+lifetime: 30
+damage: 12
 pierce: true
 backColor: f3e979
 frontColor: ffffff
 }
 }
 requirements: [
-graphite/200
-silicon/100
-thorium/75
-plastanium/60
-creostone/50
+lead/220
+titanium/220
+plastanium/145
+silicon/120
+creostone/65
 ]

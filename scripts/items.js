@@ -12,5 +12,6 @@ const creosand = extend(Item, "creosand", {});
 
 module.exports = {
 surgeStone: surgeStone,
-creostone: creostone
+creostone: creostone,
+globium: globium
 }

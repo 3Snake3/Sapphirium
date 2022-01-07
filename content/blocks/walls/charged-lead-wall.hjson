@@ -1,0 +1,9 @@
+health: 2000
+size: 2
+powerProduction: 1
+category: defense
+research: surge-wall
+requirements: [
+  charged-lead/20
+  silicon/20
+]

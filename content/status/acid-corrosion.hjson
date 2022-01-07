@@ -1,0 +1,19 @@
+name: acid-corrosion
+damage: 1.5
+healthMultiplier: 0.7
+speedMultiplier: 0.7
+effect: {
+type: MultiEffect
+effects: [melting, {
+type: ParticleEffect
+sizeFrom: 4
+sizeTo: 0
+lifetime: 25
+particles: 3
+cone: 360
+length: 2
+colorFrom: 84f591
+colorTo: 61ad7e50
+}]
+}
+color: 84f591

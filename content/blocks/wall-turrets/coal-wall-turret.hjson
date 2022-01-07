@@ -10,7 +10,6 @@ shootSound: shotgun
 shootCone: 30
 group: walls
 priority: turret
-playerControllable: false
 shootType: {
 type: ShrapnelBulletType
 length: 75

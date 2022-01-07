@@ -11,4 +11,7 @@ creostone/115
 phase-fabric/75
 thorium/50
 ]
-research: solar-panel-gigantic
+research: {
+parent: solar-panel-gigantic
+objectives: [creotite-converter]
+}

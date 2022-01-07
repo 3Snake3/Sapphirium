@@ -3,9 +3,9 @@ updateEffect: {
 type: ParticleEffect
 particles: 6
 region: adc-rhombus
-length: 25
-lifetime: 18
-sizeFrom: 5
+length: 20
+lifetime: 20
+sizeFrom: 6
 sizeTo: 0
 colorFrom: ffa166
 colorTo: ffa166
@@ -26,11 +26,7 @@ silicon/70
 ]
 size: 3
 consumes: {
-power: {
-usage: 3
-capacity: 1000
-buffered: true
-}
+power: 3
 liquid: water/0.3
 items: {
 items: [

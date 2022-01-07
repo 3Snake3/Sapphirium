@@ -17,12 +17,79 @@ ammoPerShot: 5
 ammoTypes: {
 creostone: {
 type: RailBulletType
-shootEffect: railShoot
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+lifetime: 30
+sizeFrom: 45
+sizeTо: 45
+strokeFrom: 3
+strokeTo: 0
+colorFrom: bd5553
+colorTo: bd5553
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 50
+colorFrom: bd5553
+colorTo: bd5553
+region: adc-rail-hit
+}
+]
+}
 length: 530
 updateEffectSeg: 60
-pierceEffect: railHit
-updateEffect: railTrail
-hitEffect: massiveExplosion
+pierceEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 40
+colorFrom: bd5553ff
+colorTo: bd5553ff
+region: adc-pierce-effect
+}
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 50
+sizeTo: 50
+strokeFrom: 3
+strokeTo: 0
+lifetime: 30
+colorFrom: bd5553ff
+colorTo: bd5553ff
+}
+]
+}
+updateEffect: {
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 40
+colorFrom: bd5553ff
+colorTo: bd5553ff
+region: adc-rail
+}
+hitEffect: {
+type: ExplosionEffect
+waveRad: 50
+smokeRad: 40
+smokeSize: 8
+waveLife: 15
+waveColor: bd5553ff
+sparks: 0
+}
 hitShake: 6
 collides: true
 smokeEffect: shootBig2
@@ -35,12 +102,94 @@ statusDuration: 120
 }
 pyratite: {
 type: RailBulletType
-shootEffect: railShoot
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+lifetime: 30
+sizeFrom: 45
+sizeTо: 45
+strokeFrom: 3
+strokeTo: 0
+colorFrom: ffb855
+colorTo: ffb855
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 50
+colorFrom: ffb855
+colorTo: ffb855
+region: adc-rail-hit
+}
+]
+}
 length: 530
 updateEffectSeg: 60
-pierceEffect: railHit
-updateEffect: railTrail
-hitEffect: massiveExplosion
+pierceEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 50
+colorFrom: ffb855
+colorTo: ffb855
+region: adc-pierce-effect
+}
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 50
+sizeTo: 50
+strokeFrom: 3
+strokeTo: 0
+lifetime: 30
+colorFrom: ffb855
+colorTo: db661c
+}
+]
+}
+updateEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 40
+colorFrom: ffb855
+colorTo: ffb855
+region: adc-rail
+}
+{
+type: ParticleEffect
+particles: 6
+length: 20
+lifetime: 20
+sizeFrom: 4
+sizeTo: 0
+colorFrom: ffb855
+colorTo: db661c
+}
+]
+}
+hitEffect: {
+type: ExplosionEffect
+waveRad: 50
+smokeRad: 40
+smokeSize: 8
+waveLife: 15
+waveColor: ffb855
+sparks: 0
+}
 buildingDamageMultiplier: 0.2
 hitShake: 5
 smokeEffect: shootBig2

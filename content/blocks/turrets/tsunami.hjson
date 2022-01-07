@@ -11,10 +11,10 @@ knockback: 1.5
 puddleSize: 8
 orbSize: 4
 ammoMultiplier: 0.5
-status: corroded
+status: super-melting
 statusDuration: 220
 drag: 0.001
-damage: 4
+damage: 0
 liquid: creotite
 }
 }

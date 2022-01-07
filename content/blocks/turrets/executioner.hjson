@@ -36,7 +36,4 @@ liquid: ledonite-liquid/2
 }
 research: {
 parent: foreshadow
-objectives: [
-ledonite-mixer, overdrive-dome, plastanium-smelter
-]
 }

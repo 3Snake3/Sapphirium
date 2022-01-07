@@ -1,0 +1,99 @@
+
+requirements: [
+lead/15
+silicon/25
+]
+category: turret
+reloadTime: 75
+recoilAmount: 2
+shootSound: bang
+shootEffect: shootHeal
+powerUse: 2
+health: 250
+smokeEffect: {
+type: ParticleEffect
+particles: 4
+sizeFrom: 4
+sizeTo: 0
+lifetime: 20
+length: 10
+colorFrom: 70ff88
+colorTo: 61ad7e
+}
+inaccuracy: 0
+range: 180
+shootType: {
+width: 9
+height: 15
+speed: 6
+lifetime: 50
+damage: 15
+splashDamage: 30
+sprite: adc-acid-bullet
+splashDamageRadius: 30
+hitSound: plasmaboom
+hitShake: 1
+trailWidth: 2
+trailLength: 7
+trailParam: 4
+trailColor: 61ad7eff
+backColor: 61ad7e
+frontColor: 70ff88
+status: adc-acid-corrosion
+statusDuration: 80
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 30
+strokeFrom: 4
+strokeTo: 0
+lifetime: 20
+colorFrom: 70ff88ff
+colorTo: 70ff88ff
+}
+{
+type: ParticleEffect
+particles: 6
+cone: 360
+length: 13
+lifetime: 50
+sizeFrom: 4
+sizeTo: 0
+colorFrom: 61ad7e
+colorTo: 61ad7e00
+}
+]
+}
+despawnffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 30
+strokeFrom: 4
+strokeTo: 0
+lifetime: 20
+colorFrom: 70ff88ff
+colorTo: 70ff88ff
+}
+{
+type: ParticleEffect
+particles: 6
+cone: 360
+length: 13
+lifetime: 50
+sizeFrom: 4
+sizeTo: 0
+colorFrom: 61ad7e
+colorTo: 61ad7e00
+}
+]
+}
+}
+research: warhead

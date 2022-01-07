@@ -1,17 +1,46 @@
-type: PowerTurret
+
 requirements: [
 lead/70
 graphite/70
 titanium/40
 ]
 category: turret
+outlineColor: 1d1d21
 shootType: {
 type: LightningBulletType
 damage: 45
-lightningColor: ff6666
+lightningColor: d94848
 lightningLength: 37
+lifetime: 15
 collidesAir: true
 collidesGround: false
+lightningType: {
+sprite: circle-bullet
+width: 5
+height: 5
+damage: 5
+speed: 0.5
+lifetime: 15
+collides: false
+collidesTiles: false
+splashDamage: 10
+splashDamageRadius: 25
+backColor: d94848
+frontColor: d94848
+hitColor: d94848
+despawnEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 8
+strokeFrom: 4
+strokeTo: 0
+lifetime: 20
+colorFrom: d94848
+colorTo: d94848
+}
+status: bleeding
+}
 status: bleeding
 }
 reloadTime: 35

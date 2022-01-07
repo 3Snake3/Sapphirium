@@ -1,0 +1,11 @@
+type: StorageBlock
+requirements: [
+copper/125
+graphite/140
+silicon/80
+]
+category: defense
+health: 1275
+itemCapacity: 100
+size: 2
+research: distributor

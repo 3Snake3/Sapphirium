@@ -12,7 +12,6 @@ xRand: 4
 category: defense
 group: walls
 priority: turret
-playerControllable: false
 shootType: {
 type: MissileBulletType
 width: 9

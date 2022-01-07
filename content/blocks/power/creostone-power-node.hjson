@@ -15,4 +15,7 @@ requirements: [
  metaglass/2
 ]
 
-research: power-node-large
+research: {
+parent: power-node-large
+objectives: [creotite-converter]
+}

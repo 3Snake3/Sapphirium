@@ -5,7 +5,7 @@ cryofluid: cryoShot
 oil: oilShot
 creotite: {
 type: LiquidBulletType
-status: corroded
+status: super-melting
 statusDuration: 100
 drag: 0.01
 damage: 2

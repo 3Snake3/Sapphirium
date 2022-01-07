@@ -1,8 +1,8 @@
-type: ItemTurret
+
 size: 2
 category: turret
 research: {
-parent: salvo
+parent: cast
 objectives: [cyclone]
 }
 requirements: [
@@ -30,7 +30,7 @@ graphite: {
 sprite: adc-dartt
 width: 9
 height: 12
-damage: 20
+damage: 16
 speed: 3.5
 lifetime: 51
 reloadMultiplier: 0.6
@@ -51,8 +51,8 @@ fragBullets: 5
 fragCone: 90
 fragBullet: {
 type: BasicBulletType
-width: 9
-height: 9
+width: 7
+height: 7
 speed: 5
 lifetime: 20
 damage: 5
@@ -65,7 +65,7 @@ thorium: {
 sprite: adc-dartt
 width: 10
 height: 13
-damage: 32
+damage: 24
 speed: 4
 lifetime: 45
 shootEffect: shootBig
@@ -78,7 +78,7 @@ silicon: {
 sprite: adc-dartt
 width: 7
 height: 9
-damage: 15
+damage: 14
 speed: 3
 lifetime: 60
 reloadMultiplier: 0.8
@@ -91,12 +91,13 @@ pyratite: {
 sprite: adc-dartt
 width: 10
 height: 12
-damage: 12
+damage: 14
 speed: 3.2
 lifetime: 56.25
 frontColor: f8ad42
 backColor: f68021
 status: burning
+statusDuration: 110
 makeFire: true
 inaccuracy: 4
 pierce: true
@@ -106,16 +107,15 @@ creostone: {
 sprite: adc-dartt
 width: 12
 height: 14
-damage: 37
+damage: 30
 speed: 5
 lifetime: 36
 frontColor: eb8778
 backColor: bd5553
-status: corroded
+status: melting
+statusDuration: 110
 homingPower: 0.20
 inaccuracy: 3
-pierce: true
-pierceCap: 2
 ammoMultiplier: 6
 reloadMultiplier: 0.75
 pierce: true

@@ -1,4 +1,4 @@
-type: LiquidConverter
+
 drawer: DrawMixer
 requirements: [
 copper/95
@@ -28,4 +28,4 @@ liquidCapacity: 22
 rotate: false
 solid: true
 category: crafting
-research: cryofluid-megamixer
+research: cryofluid-mixer

@@ -11,7 +11,7 @@ type: BombBulletType
 speed: 1
 lifetime: 10
 hittable: false
-instantDisappeared: true
+instantDisappear: true
 splashDamage: 85
 splashDamageRadius: 45
 damage: 0

@@ -7,7 +7,6 @@ shootCone: 30
 range: 70
 group: walls
 priority: turret
-playerControllable: false
 shootType: {
 type: BasicBulletType
 width: 10

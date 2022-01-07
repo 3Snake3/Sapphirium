@@ -1,4 +1,4 @@
-type: ItemTurret
+
 size: 3
 category: turret
 research: {
@@ -107,7 +107,7 @@ backColor: e58956
 frontColor: ffd2ae
 trailColor: e58956
 status: blasted
-statusDuration: 80
+statusDuration: 120
 fragBullets: 3
 fragCone: 75
 sprite: adc-missile-large
@@ -160,8 +160,6 @@ trailWidth: 10
 backColor: f9a3c7
 frontColor: ffffff
 trailColor: f9a3c7
-status: corroded
-statusDuration: 100
 fragBullets: 3
 fragCone: 75
 sprite: adc-missile-large
@@ -214,8 +212,8 @@ trailWidth: 10
 backColor: e58956
 frontColor: ffd2ae
 trailColor: e58956
-status: melting
-statusDuration: 80
+status: super-melting
+statusDuration: 180
 hitSound: explosion
 fragBullets: 4
 fragCone: 85

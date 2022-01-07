@@ -1,4 +1,4 @@
-type: ItemTurret
+
 size: 3
 category: turret
 research: sand-thrower
@@ -33,7 +33,7 @@ speed: 6
 lifetime: 33.3
 reloadMultiplier: 1.45
 status: slow
-statusDuration: 60
+statusDuration: 110
 damage: 12
 hitEffect: {
 type: ExplosionEffect
@@ -88,8 +88,8 @@ lifetime: 40
 backColor: bd5553
 frontColor: eb8778
 buildingDamageMultiplier: 1.2
-status: melting
-statusDuration: 80
+status: super-melting
+statusDuration: 125
 splashDamage: 50
 splashDamageRadius: 45
 hitEffect: {
@@ -148,6 +148,10 @@ lifetime: 33.3
 status: blasted
 statusDuration: 150
 splashDamage: 30
+collides: false
+collidesTiles: false
+drag: 0.005
+keepVelocity: false
 splashDamageRadius: 42
 homingPower: 1
 homingRange: 40
@@ -191,6 +195,118 @@ trailChance: 1
     region: particle
   }
  ammoMultiplier: 2
+ fragBullets: 1
+fragCone: 45
+fragAngle: 180
+fragBullet: {
+sprite: adc-circle-bullet
+width: 15
+height: 15
+damage: 25
+speed: 6
+lifetime: 33.3
+status: blasted
+statusDuration: 150
+splashDamage: 30
+splashDamageRadius: 42
+homingPower: 1
+homingRange: 40
+homingDelay: 1
+hitSound: explosion
+hitEffect: {
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 42
+waveLife: 15
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 40
+sparkLen: 20
+smokeSize: 4
+smokeRad: 40
+}
+despawnEffect: {
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 42
+waveLife: 15
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 40
+sparkLen: 20
+smokeSize: 4
+smokeRad: 40
+}
+trailChance: 1
+  trailEffect: {
+    type: ParticleEffect
+    length: 0
+    layer: 100
+    particles: 1
+    lifetime: 40
+    sizeFrom: 6
+    sizeTo: 0
+    region: particle
+  }
+  fragBullets: 1
+fragCone: 45
+fragAngle: 180
+fragBullet: {
+sprite: adc-circle-bullet
+width: 15
+height: 15
+damage: 25
+speed: 6
+lifetime: 33.3
+status: blasted
+statusDuration: 150
+splashDamage: 30
+splashDamageRadius: 42
+homingPower: 1
+homingRange: 40
+homingDelay: 1
+hitSound: explosion
+hitEffect: {
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 42
+waveLife: 15
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 40
+sparkLen: 20
+smokeSize: 4
+smokeRad: 40
+}
+despawnEffect: {
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 42
+waveLife: 15
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 40
+sparkLen: 20
+smokeSize: 4
+smokeRad: 40
+}
+trailChance: 1
+  trailEffect: {
+    type: ParticleEffect
+    length: 0
+    layer: 100
+    particles: 1
+    lifetime: 40
+    sizeFrom: 6
+    sizeTo: 0
+    region: particle
+  }
+ }
+ }
  }
  }
 

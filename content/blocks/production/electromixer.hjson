@@ -1,11 +1,7 @@
 type: LiquidConverter
 outputLiquid: surge-mass/0.25
 consumes: {
-power: {
-usage: 2
-capacity: 240
-buffered: true
-}
+power: 2
 liquid: slag/0.25
 items: {
 items: [

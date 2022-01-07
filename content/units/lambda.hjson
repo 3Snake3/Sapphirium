@@ -1,5 +1,6 @@
 flying: true
 isCounted: false
+lowAltitude: true
 mineSpeed: 9.5
 mineTier: 3
 buildSpeed: 1.15
@@ -47,9 +48,20 @@ rotate: true
 inaccuracy: 3
 velocityRnd: 0.2
 shootSound: missile
+shootStatus: {
+name: adc-gain
+damageMultiplier: 1.2
+speedMultiplier: 1.2
+healthMultiplier: 1.2
+reloadMultiplier: 0.8
+effect: overclocked
+effectChance: 0.07
+color: ffd37f
+show: false
+}
+shootStatusDuration: 30
 bullet: {
-sprite: adc-star
-spin: 10
+type: MissileBulletType
 width: 7
 height: 7
 shrinkY: 0
@@ -69,33 +81,5 @@ hitEffect: blastExplosion
 despawnEffect: blastExplosion
 weaveScale: 6
 weaveMag: 1
-}
-}]
-abilities: [{
-type: StatusFieldAbility
-effect: {
-name: adc-gain
-damageMultiplier: 1.2
-speedMultiplier: 1.2
-healthMultiplier: 1.2
-reloadMultiplier: 0.8
-effect: overclocked
-effectChance: 0.07
-color: ffd37f
-show: false
-}
-duration: 120
-range: 30
-reload: 210
-applyEffect: {
-type: WaveEffect
-sides: 0
-sizeFrom: 0
-sizeTo: 30
-strokeFrom: 4
-strokeTo: 0
-lifetime: 25
-colorFrom: ffd37f
-colorTo: ffd37f
 }
 }]

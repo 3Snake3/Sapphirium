@@ -1,18 +1,16 @@
-type: PowerTurret
+
 health: 2400
 size: 4
 category: turret
 research: needle
 requirements: [
-lead/1000
-graphite/350
-silicon/225
-plastanium/125
-creostone/90
-surge-stone/65
+lead/1120
+titanium/825
+creostone/500
+thorium/512
+surge-alloy/220
 ]
-burstSpacing: 4
-reloadTime: 240
+reloadTime: 190
 recoilAmount: 4
 shootShake: 3
 shootSound: shotgun
@@ -31,58 +29,10 @@ sizeTo: 10
 colorFrom: 9497ff
 colorTo: 9497ff
 }
-range: 250
-shootCone: 145
-inaccuracy: 8
-cooldown: 0.08
-restitution: 0.08
-shootLength: 4
+range: 300
+shootCone: 80
+inaccuracy: 0
+shootLength: 3
 rotateSpeed: 5
-shots: 3
-shootType: {
-width: 25
-height: 25
-speed: 6
-lifetime: 42
-damage: 100
-spin: 20
-pierce: true
-sprite: adc-circular-saw-bullet
-backColor: 767ae3
-frontColor: 9497ff
-hitEffect: {
-type: ExplosionEffect
-waveColor: 9497ff
-smokeColor: 5c5e9e
-sparkColor: 9497ff
-waveRad: 35
-waveStroke: 4
-waveLife: 25
-sparkStroke: 3 
-sparkRad: 40
-sparkLen: 20
-smokeSize: 5
-smokeRad: 25
-smokes: 5
-sparks: 5
-}
-despawnEffect: {
-type: ExplosionEffect
-smokeColor: 5c5e9e
-sparkColor: 9497ff
-waveRad: 0
-waveStroke: 0
-waveLife: 0
-smokeSize: 5
-smokeRad: 25
-smokes: 5
-sparks: 0
-}
-splashDamage: 80
-splashDamageRadius: 35
-hitSound: sawblade-hit
-hitShake: 2
-hitSoundVolume: 0.4
-}
 coolantUsage: 1
 coolantMultiplier: 0.4

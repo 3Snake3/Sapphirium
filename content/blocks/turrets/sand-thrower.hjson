@@ -1,4 +1,4 @@
-type: ItemTurret
+
 size: 2
 health: 480
 ammoTypes: {
@@ -75,7 +75,7 @@ shootSound: throw
 requirements: [
 copper/145
 lead/85
-graphite/50
+silicon/50
 metaglass/35
 ]
 category: turret

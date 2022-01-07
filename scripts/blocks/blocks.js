@@ -61,6 +61,8 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
 }
 });
 
+const creoMixer = extend(LiquidConverter, "creotite-mixer", {});
+
 const creostoneProjector = new JavaAdapter(ForceProjector, {
   drawPlace(x, y, rotation, valid){
     Draw.color(Vars.player.team().color.cpy().mul(1, 0.75, 0.25, 1));
@@ -103,6 +105,51 @@ creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, cr
     }
 });
 
+const items = require("items");
+
+const indBar = new JavaAdapter(ForceProjector, {
+  drawPlace(x, y, rotation, valid){
+        this.super$drawPlace(x, y, rotation, valid);
+
+        Draw.color(Pal.lancerLaser);
+        Lines.stroke(3);
+        Lines.poly(x * Vars.tilesize + this.offset, y * Vars.tilesize + this.offset, 8, this.radius);
+        Draw.color(Pal.lancerLaser);
+        Lines.stroke(1);
+        Lines.poly(x * Vars.tilesize + this.offset, y * Vars.tilesize + this.offset, 8, this.radius);
+        Draw.color();
+    }
+}, "indigo-barrier");
+
+indBar.consumes.item(items.globium).boost();
+indBar.consumes.power(8);
+
+indBar.buildType = () => extendContent(ForceProjector.ForceBuild, indBar, {
+    drawShield(){
+        if(!this.broken){
+            var radius = this.realRadius();
+
+            var flash = 10 * (this.phaseHeat - 0.46);
+            flash += flash * Time.delta;
+
+            Draw.color(Pal.lancerLaser, Pal.lancerLaser, Mathf.absin(flash, 9, 1));
+
+            Draw.z(Layer.shields);
+            if(Core.settings.getBool("animatedshields")){
+                Fill.poly(this.x, this.y, 8, radius);
+            }else{
+                Lines.stroke(1.5);
+                Draw.alpha(0.09 + Mathf.clamp(0.08 * this.hit));
+                Fill.poly(this.x, this.y, radius);
+                Draw.alpha(1);
+                Lines.poly(this.x, this.y, radius);
+                Draw.reset();
+            }
+        }
+        Draw.reset();
+    }
+});
+
 const massDriver = extendContent(MassDriver, "compact-driver", {});
 massDriver.bullet = extend(MassDriverBolt, {});
 
@@ -132,6 +179,35 @@ flags: EnumSet.of(BlockFlag.turret),
 
 const cinderblockWT = extend(PowerTurret, "cinderblock-wall-turret", {
 flags: EnumSet.of(BlockFlag.turret),
+});
+
+var lightningChance = 0.08;
+var lightningDamage = 60;
+var lightningLength = 16;
+var lightningColor = Pal.surge;
+var lightningSound = Sounds.spark;
+const chargedLW = extend(SolarGenerator, "charged-lead-wall", {
+setStats(){
+        this.super$setStats();
+        if(lightningChance > 0){
+            this.stats.add(Stat.lightningChance, lightningChance * 100, StatUnit.percent);
+            this.stats.add(Stat.lightningDamage, lightningDamage, StatUnit.none);
+        }
+    }
+});
+chargedLW.buildType = () => extendContent(SolarGenerator.SolarGeneratorBuild, chargedLW, {
+	collision(bullet){
+            this.super$collision(bullet);
+            var hit = 1;
+            //create lightning if necessary
+            if(lightningChance > 0){
+                if(Mathf.chance(lightningChance)){
+                    Lightning.create(this.team, lightningColor, lightningDamage, this.x, this.y, bullet.rotation() + 180, lightningLength);
+                    lightningSound.at(this.tile, Mathf.random(0.9, 1.1));
+                }
+            }
+      return true;
+}
 });
 
 const statuses = require("statuses/statuses");
@@ -269,6 +345,54 @@ this.stats.add(Stat.buildTime, this.buildCost / 60, StatUnit.seconds);
         }
      }
  });
+ 
+ var LC = 0.08;
+var LD = 80;
+var LL = 25;
+var LCO = Pal.lancerLaser;
+var LS = Sounds.spark;
+ const indigo = extend(CoreBlock, "indigo", {
+	health: 5000,
+	size: 4,
+	itemCapacity: 3000,
+	unitCapModifier: 3,
+	thrusterLength: 34/4,
+	researchCostMultiplier: 0.07,
+	canPlaceOn(tile, team, rotation){
+        return true;
+    },
+    canReplace(other){
+    if(other instanceof CoreBlock) return false;
+    return this.super$canReplace(other);
+},
+    canBreak(tile){
+    	return true;
+    },
+    setStats(){
+this.super$setStats();
+if(this.canBeBuilt() && this.requirements.length > 0){
+this.stats.add(Stat.buildTime, this.buildCost / 60, StatUnit.seconds);
+        }
+if(LC > 0){
+            this.stats.add(Stat.lightningChance, LC * 100, StatUnit.percent);
+            this.stats.add(Stat.lightningDamage, LD, StatUnit.none);
+        }
+    }
+ });
+indigo.buildType = () => extendContent(CoreBlock.CoreBuild, indigo, {
+	collision(bullet){
+            this.super$collision(bullet);
+            var hitl = 1;
+            //create lightning if necessary
+            if(LC > 0){
+                if(Mathf.chance(LC)){
+                    Lightning.create(this.team, LCO, LD, this.x, this.y, bullet.rotation() + 180, LL);
+                    LS.at(this.tile, Mathf.random(0.9, 1.1));
+                }
+            }
+      return true;
+}
+});
 
 const tm = extend(AttributeCrafter, "thorium-mine", {
 	load(){
@@ -312,28 +436,18 @@ draw(){
     }
   });
 
-//It works incorrect
-/*var bullet2 = Bullets.artilleryIncendiary;
-var shots2 = 2;
-var inaccuracy2 = 5;
-const creomine = extend(ShockMine, "creostone-mine", {
-shots: 1,
-tendrils: 5
-});
+const sectors = require("sectors");
 
-creomine.buildType = () => extendContent(ShockMine.ShockMineBuild, creomine, {
-	triggered(){
-            for(var i = 0; i < creomine.tendrils; i++){
-                Lightning.create(this.team, creomine.lightningColor, creomine.damage, this.x, this.y, Mathf.random(360), creomine.length);
-            }
-                for(var ii = 0; i < creomine.shots; ii++){
-                    creomine.bullet.create(this, this.x, this.y, (360 / creomine.shots) * ii + Mathf.random(creomine.inaccuracy));
-                }
-            for(var iii = 0; iii < shots2; iii++){
-                bullet2.create(this, this.x, this.y, (360 / shots2) * iii + Mathf.random(inaccuracy2));
-            }
-         }
-     });*/
+const​ ​node​ ​=​ ​(​parent​,​ ​contentType​,​ ​requirements​,​ ​objectives​)​ ​=>​ ​{ 
+ ​    ​const​ ​tnode​ ​=​ ​new​ ​TechTree​.​TechNode​(​TechTree​.​get​(​parent​)​,​ ​contentType​,​ ​requirements​ ​!=​ ​null​ ? ​requirements​ : ​contentType​.​researchRequirements​(​)​)​; 
+ ​    ​let​ ​used​ ​=​ ​new​ ​ObjectSet​(​)​; 
+ ​     
+ ​    ​if​(​objectives​ ​!=​ ​null​)​{ 
+ ​        ​tnode​.​objectives​.​addAll​(​objectives​)​; 
+ ​    ​}​; 
+ ​}​;
+ 
+node(Blocks.cryofluidMixer, creoMixer, ItemStack.with(Items.copper, 6500, Items.lead, 4500, Items.silicon, 3000, Items.thorium, 2250), Seq.with(new Objectives.SectorComplete(sectors.creotitePowerStation)));
      
 module.exports = {
   multi: multi,

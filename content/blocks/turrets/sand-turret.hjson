@@ -1,4 +1,4 @@
-type: ItemTurret
+
 ammoTypes: {
 sand: {
 type: ArtilleryBulletType
@@ -42,7 +42,7 @@ shootSound: bang
 requirements: [
 copper/25
 lead/15
-silicon/20
+graphite/20
 ]
 category: turret
 research: hail

@@ -17,7 +17,6 @@ cooldown: 0.02
 shootSound: laser
 group: walls
 priority: turret
-playerControllable: false
 shootType: {
 type: LaserBulletType
 colors: [96abd9, 6a76a1, 7a7a7a]

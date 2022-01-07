@@ -20,7 +20,7 @@ splashDamage: 57
 backColor: bd5553
 frontColor: ffc299
 trailColor: bd5553
-status: melting
-statusDuration: 60
+status: super-melting
+statusDuration: 220
 }
 }

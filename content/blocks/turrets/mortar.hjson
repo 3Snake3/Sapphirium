@@ -1,10 +1,11 @@
-type: ItemTurret
+
 
 requirements: [
-graphite/350
-titanium/125
-plastanium/125
-cinderblock/50
+lead/260
+cinderblock/245
+titanium/130
+graphite/85
+plastanium/40
 ]
 
 health: 780
@@ -20,6 +21,7 @@ lifetime: 100
 
 splashDamageRadius: 30
 splashDamage: 30
+reloadMultiplier: 1.35
 
 collidesGround: true
 
@@ -80,7 +82,6 @@ splashDamageRadius: 45
 collidesAir: false
 
 ammoMultiplier: 4
-reloadMultiplier: 1.25
 
 hitEffect: {
 type: ExplosionEffect
@@ -141,7 +142,6 @@ collidesAir: false
 shootEffect: shootBig
 
 ammoMultiplier: 6
-reloadMultiplier: 1.45
 
 hitEffect: {
 type: ExplosionEffect
@@ -199,7 +199,7 @@ statusDuration: 40
 collidesAir: false
 
 ammoMultiplier: 3
-reloadMultiplier: 1.3
+reloadMultiplier: 0.4
 
 backColor: d8d97f
 frontColor: fffac6
@@ -208,7 +208,7 @@ fragBullets: 4
 fragLifeMin: 0.3
 fragCone: 180
 fragBullet: {
-type: ArtilleryBullerType
+type: ArtilleryBulletType
 
 width: 13
 height: 13
@@ -272,7 +272,7 @@ effects: [
 type: WaveEffect
 
 strokeFrom: 4
-strokeTo: 4
+strokeTo: 0
 
 sizeFrom: 0
 sizeTo: 30
@@ -344,7 +344,7 @@ smokeRad: 25
 
 size: 3
 targetAir: false
-reloadTime: 125
+reloadTime: 160
 recoilAmount: 4
 minRange: 80
 range: 300

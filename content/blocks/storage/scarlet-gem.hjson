@@ -1,8 +1,9 @@
 requirements: [
-lead/3800
-silicon/3400
-titanium/2000
-thorium/2000
+lead/8000
+silicon/8000
+titanium/6000
+thorium/3800
+creostone/3800
 ]
 research: core-foundation
 category: effect

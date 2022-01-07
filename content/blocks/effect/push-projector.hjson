@@ -13,7 +13,13 @@ lightRadius: 75
 heatColor: 91abff
 powerUse: 5
 consumes: {
-liquid: water/0.5
+liquid: {
+liquid: water
+amount: 0.5
+booster: true
+optional: true
+update: true
+}
 }
 shootType: {
 sprite: adc-none-bullet
@@ -21,7 +27,7 @@ width: 3
 height: 3
 hitEffect: none
 despawnEffect: none
-knockback: 3.5
+knockback: 5
 damage: 0
 pierce: true
 pierceBuilding: true
@@ -31,13 +37,13 @@ speed: 6
 lifetime: 25
 shootEffect: {
 type: WaveEffect
-sides: 6
+sides: 4
 sizeFrom: 0
 sizeTo: 180
 strokeFrom: 4
 strokeTo: 0
 lifetime: 25
-rotation: 135
+rotation: 90
 }
 smokeEffect: none
 }

@@ -1,15 +1,13 @@
-type: ItemTurret
+
 size: 3
 category: turret
 health: 1120
 research: thrower
 requirements: [
-copper/225
-graphite/150
-metaglass/85
+copper/200
+graphite/170
 titanium/85
-thorium/45
-creostone/45
+creostone/60
 ]
 shootSound: throw
 shootEffect: shootBig
@@ -56,7 +54,6 @@ ammoMultiplier: 1.5
 reloadMultiplier: 0.85
 pierce: true
 pierceCap: 1
-accel: 0.05
 }
 pyratite: {
 width: 7
@@ -72,11 +69,10 @@ pierceCap: 2
 backColor: f68021
 frontColor: f8ad42
 status: burning
-statusDuration: 60
+statusDuration: 220
 makeFire: true
 hitEffect: blastExplosion
 despawnHit: true
-accel: 0.05
 }
 metaglass: {
 width: 7
@@ -95,7 +91,7 @@ fragLifeMin: 0.3
 fragCone: 125
 inaccuracy: 8
 fragBullet: {
-type: BasicBulletType
+type: FlakBulletType
 width: 6
 height: 6
 hitEffect: flakExplosion
@@ -111,19 +107,15 @@ blast-compound: {
 width: 8
 height: 11
 sprite: adc-dartt
-accel: 0.05
 damage: 20
 speed: 5
 lifetime: 40
 ammoMultiplier: 3
 reloadMultiplier: 0.8
 status: blasted
-statusDuration: 60
-makeFire: true
+statusDuration: 220
 hitEffect: blastExplosion
 despawnHit: true
-splashDamage: 30
-splashDamageRadius: 25
 inaccuracy: 5
 }
 silicon: {
@@ -131,7 +123,6 @@ width: 7
 height: 9
 sprite: adc-dartt
 damage: 25
-accel: 0.05
 speed: 6
 lifetime: 33.3
 ammoMultiplier: 3
@@ -151,15 +142,12 @@ width: 9
 height: 12
 sprite: adc-dartt
 damage: 40
-accel: 0.05
 speed: 5
 lifetime: 40
 ammoMultiplier: 4
 reloadMultiplier: 0.75
 pierce: true
 pierceCap: 5
-status: corroded
-statusDuration: 60
 inaccuracy: 12
 }
 creostone: {
@@ -168,15 +156,17 @@ height: 11
 sprite: adc-dartt
 speed: 5
 lifetime: 40
+damage: 60
 ammoMultiplier: 5
-accel: 0.05
 reloadMultiplier: 0.5
 inaccuracy: 15
-splashDamage: 50
-splashDamageRadius: 45
 hitEffect: blastExplosion
 despawnHit: true
 homingPower: 2
+status: small-flaming
+statusDuration: 180
+backColor: bd5553
+frontColor: ffb380
 homingRange: 30
 pierce: true
 pierceCap: 5

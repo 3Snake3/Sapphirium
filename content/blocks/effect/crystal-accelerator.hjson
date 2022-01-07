@@ -1,0 +1,31 @@
+type: OverdriveProjector
+requirements: [
+lead/280
+titanium/200
+silicon/200
+cinderblock/105
+plastanium/60
+surge-stone/35
+]
+
+category: effect
+size: 3
+health: 850
+range: 330
+baseColor: d94848
+
+consumes: {
+power: 13.5
+items: {
+items: [
+phase-fabric/2
+silicon/1
+]
+}
+}
+
+speedBoost: 4
+useTime: 280
+hasBoost: false
+research: scarlet-gem
+

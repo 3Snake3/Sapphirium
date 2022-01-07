@@ -1,4 +1,4 @@
-type: PowerTurret
+
 category: turret
 size: 2
 
@@ -24,14 +24,23 @@ lifetime: 10
 lightningLength: 19.16
 lightningColor: f3e979
 shootEffect: none
+hitSound: spark
+fragBullets: 1
+fragCone: 0
+fragBullet: {
+type: LightningBulletType
+damage: 15
+lifetime: 10
+lightningLength: 19.16
+lightningColor: f3e979
+}
 }
 
 requirements: [
-copper/125
-graphite/100
-silicon/65
-charged-cylinder/45
-surge-stone/20
+copper/180
+silicon/100
+charged-cylinder/65
+surge-stone/40
 ]
 
 research: hidden-tesla

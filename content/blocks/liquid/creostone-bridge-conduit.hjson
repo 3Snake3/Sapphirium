@@ -9,7 +9,7 @@ placeableLiquid: true
 requirements: [
   graphite/4
   metaglass/2
-  creostone/4
+  creostone/6
 ]
 
 research: bridge-conduit

@@ -1,4 +1,4 @@
-type: ItemTurret
+
 size: 2
 category: turret
 requirements: [

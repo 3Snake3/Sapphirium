@@ -1,4 +1,4 @@
-type: PowerTurret
+
 requirements: [
 lead/125
 silicon/80
@@ -8,6 +8,7 @@ range: 270
 health: 1650
 chargeTime: 90
 chargeMaxDelay: 80
+outlineColor: 1d1d21
 chargeEffects: 7
 recoilAmount: 3
 reloadTime: 180
@@ -52,14 +53,24 @@ targetAir: true
 shootSound: laser
 shootType: {
 type: LaserBulletType
-colors: ["a14553", "f25555", "FFFFFF"]
+colors: ["8a3340", "d94848", "ff6e6e"]
 hitEffect: hitLancer
-despawnEffect: none
+despawnEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 7
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: ff6e6e
+colorTo: 8a3340
+}
 hitSize: 5
 lifetime: 20
-width: 20
+width: 23
 length: 270
-damage: 280
+damage: 300
 collidesAir: true
 collidesGround: false
 status: bleeding

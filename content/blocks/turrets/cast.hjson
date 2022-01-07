@@ -1,0 +1,66 @@
+requirements: [
+copper/60
+graphite/45
+metaglass/20
+]
+reloadTime: 30
+recoilAmount: 2
+inaccuracy: 0
+range: 130
+category: turret
+ammoUseEffect: casing1
+ammoPerShot: 1
+maxAmmo: 20
+shootSound: throw
+ammoTypes: {
+copper: {
+width: 9
+height: 12
+sprite: adc-dartt
+speed: 6
+lifetime: 22
+damage: 10
+pierce: true
+pierceCap: 1
+}
+graphite: {
+width: 9
+height: 12
+sprite: adc-dartt
+speed: 6
+lifetime: 25
+damage: 15
+pierce: true
+pierceCap: 3
+ammoMultiplier: 1.5
+}
+metaglass: {
+width: 9
+height: 12
+sprite: adc-dartt
+speed: 6
+lifetime: 18
+damage: 10
+pierce: true
+pierceCap: 2
+fragBullets: 3
+reloadMultiplier: 1.25
+fragCone: 70
+fragBullet: {
+type: FlakBulletType
+width: 8
+height: 8
+speed: 4
+lifetime: 22
+sprite: shell
+damage: 0
+splashDamage: 5.5
+splashDamageRadius: 20
+hitEffect: flakExplosion
+despawnEffect: flakExplosion
+status: slow
+statusDuration: 65
+}
+}
+}
+research: salvo
