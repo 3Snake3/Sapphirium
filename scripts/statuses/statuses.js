@@ -77,7 +77,7 @@ const superFreezing = extendContent(StatusEffect, "super-freezing", {
     color: Color.valueOf("6fdded")
 });
 
-const stun = extend(StatusEffect, "stunned", {
+const stun = extend(StatusEffect, "stunne", {
 	speedMultiplier: 0.001,
 	disarm: true,
 	})

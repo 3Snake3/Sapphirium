@@ -1,6 +1,6 @@
-const creotitePowerStation = extendContent(SectorPreset, "creotite-power-station1", Planets.serpulo, 140, {});
+const creotitePowerStation = extendContent(SectorPreset, "creotite-power-station", Planets.serpulo, 140, {});
   creotitePowerStation.captureWave = 55;
-  creotitePowerStation.difficulty = 9;
+  creotitePowerStation.difficulty = 7;
   creotitePowerStation.alwaysUnlocked = false;
   creotitePowerStation.startWaveTimeMultiplier = 1;
 
@@ -13,7 +13,7 @@ const​ ​node​ ​=​ ​(​parent​,​ ​contentType​,​ ​r
  ​    ​}​; 
  ​}​;
  
-node(SectorPresets.nuclearComplex, creotitePowerStation, null, Seq.with(new Objectives.SectorComplete(SectorPresets.nuclearComplex)));
+node(SectorPresets.groundZero, creotitePowerStation, null, Seq.with(new Objectives.SectorComplete(SectorPresets.groundZero)));
 
 module.exports = {
 creotitePowerStation: creotitePowerStation

@@ -7,7 +7,12 @@ status: statuses.superFreezing,
 statusDuration: 120,
 });
 
+const rf = extend(ParticleWeather, "radioactive-fog", {
+duration: 17 * Time.toMinutes
+});
+
 module.exports = {
 cp: cp,
-lp: lp
+lp: lp,
+rf: rf
 }

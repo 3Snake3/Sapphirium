@@ -140,9 +140,9 @@ indBar.buildType = () => extendContent(ForceProjector.ForceBuild, indBar, {
             }else{
                 Lines.stroke(1.5);
                 Draw.alpha(0.09 + Mathf.clamp(0.08 * this.hit));
-                Fill.poly(this.x, this.y, radius);
+                Fill.poly(this.x, this.y, 8, radius);
                 Draw.alpha(1);
-                Lines.poly(this.x, this.y, radius);
+                Lines.poly(this.x, this.y, 8, radius);
                 Draw.reset();
             }
         }

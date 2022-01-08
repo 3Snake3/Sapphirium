@@ -12,8 +12,8 @@ accel: 0.28
 itemCapacity: 100
 health: 450
 armor: 5
-engineOffset: 7
-engineSize: 4
+engineOffset: 8
+engineSize: 2.5
 hitSize: 13
 commandLimit: 6
 weapons: [{
@@ -165,3 +165,14 @@ colorTo: ffffff
 }
 }
 }]
+abilities: [
+{
+type: MoveLightningAbility
+damage: 35
+chance: 0.09
+length: 9.3
+minSpeed: 1
+maxSpeed: 2
+color: a9d8ff
+}
+]
