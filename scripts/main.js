@@ -8,7 +8,7 @@ require("blocks/blocks");
 require("blocks/turrets");
 require("statuses/statuses");
 require("units");
-require("weathers");
 require("liquids");
+require("weathers");
 require("items");
 require("sectors");
