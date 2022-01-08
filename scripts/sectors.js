@@ -1,10 +1,8 @@
-const creotitePowerStation = extendContent(SectorPreset, "creotite-power-station", Planets.serpulo, 140, {
-     localizedName: "Creotite Power Station",
-     description: "A power plant destroyed by an explosion of an overheated creotite reactor. [red]Don't repeat the mistakes of the past!",
-     difficulty: 4,
-     alwaysUnlocked: false,
-     captureWave: 20,
-});
+const creotitePowerStation = extendContent(SectorPreset, "creotite-power-station1", Planets.serpulo, 140, {});
+  creotitePowerStation.captureWave = 55;
+  creotitePowerStation.difficulty = 9;
+  creotitePowerStation.alwaysUnlocked = false;
+  creotitePowerStation.startWaveTimeMultiplier = 1;
 
 const​ ​node​ ​=​ ​(​parent​,​ ​contentType​,​ ​requirements​,​ ​objectives​)​ ​=>​ ​{ 
  ​    ​const​ ​tnode​ ​=​ ​new​ ​TechTree​.​TechNode​(​TechTree​.​get​(​parent​)​,​ ​contentType​,​ ​requirements​ ​!=​ ​null​ ? ​requirements​ : ​contentType​.​researchRequirements​(​)​)​; 
