@@ -1,8 +1,7 @@
-const creotitePowerStation = extendContent(SectorPreset, "creotite-power-station", Planets.serpulo, 140, {});
+const creotitePowerStation = extendContent(SectorPreset, "creotite-power-station", Planets.serpulo, 256, {});
   creotitePowerStation.captureWave = 55;
   creotitePowerStation.difficulty = 7;
-  creotitePowerStation.alwaysUnlocked = false;
-  creotitePowerStation.startWaveTimeMultiplier = 1;
+  creotitePowerStation.alwaysUnlocked = true;
 
 const​ ​node​ ​=​ ​(​parent​,​ ​contentType​,​ ​requirements​,​ ​objectives​)​ ​=>​ ​{ 
  ​    ​const​ ​tnode​ ​=​ ​new​ ​TechTree​.​TechNode​(​TechTree​.​get​(​parent​)​,​ ​contentType​,​ ​requirements​ ​!=​ ​null​ ? ​requirements​ : ​contentType​.​researchRequirements​(​)​)​; 
