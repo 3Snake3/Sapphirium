@@ -1,0 +1,14 @@
+type: StackConveyor
+requirements: [
+globium/1
+silicon/1
+titanium/1
+]
+category: distribution
+health: 125
+speed: 7
+itemCapacity: 25
+research: {
+parent: gc
+objectives: [plastanium-conveyor]
+}
