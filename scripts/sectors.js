@@ -12,7 +12,7 @@ const​ ​node​ ​=​ ​(​parent​,​ ​contentType​,​ ​r
  ​    ​}​; 
  ​}​;
  
-node(SectorPresets.groundZero, creotitePowerStation, null, Seq.with(new Objectives.SectorComplete(SectorPresets.groundZero)));
+node(SectorPresets.nuclearComplex, creotitePowerStation, null, Seq.with(new Objectives.SectorComplete(SectorPresets.nuclearComplex)));
 
 module.exports = {
 creotitePowerStation: creotitePowerStation
