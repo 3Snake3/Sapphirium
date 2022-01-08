@@ -438,16 +438,16 @@ draw(){
 
 const sectors = require("sectors");
 
-const​ ​node​ ​=​ ​(​parent​,​ ​contentType​,​ ​requirements​,​ ​objectives​)​ ​=>​ ​{ 
- ​    ​const​ ​tnode​ ​=​ ​new​ ​TechTree​.​TechNode​(​TechTree​.​get​(​parent​)​,​ ​contentType​,​ ​requirements​ ​!=​ ​null​ ? ​requirements​ : ​contentType​.​researchRequirements​(​)​)​; 
- ​    ​let​ ​used​ ​=​ ​new​ ​ObjectSet​(​)​; 
- ​     
- ​    ​if​(​objectives​ ​!=​ ​null​)​{ 
- ​        ​tnode​.​objectives​.​addAll​(​objectives​)​; 
- ​    ​}​; 
- ​}​;
+function newNode(parent, content, req, objectives){
+	
+    var parnode = TechTree.get(parent);
+    var node = new TechTree.TechNode(parnode, content, req = null ? content.researchRequirements() : req);
+    var used = new ObjectSet();
+  
+    node.objectives.addAll(objectives = null ? null : objectives);
+}
  
-node(Blocks.cryofluidMixer, creoMixer, ItemStack.with(Items.copper, 6500, Items.lead, 4500, Items.silicon, 3000, Items.thorium, 2250), Seq.with(new Objectives.SectorComplete(sectors.creotitePowerStation)));
+newNode(Blocks.cryofluidMixer, creoMixer, ItemStack.with(Items.copper, 6500, Items.lead, 4500, Items.silicon, 3000, Items.thorium, 2250), Seq.with(new Objectives.SectorComplete(sectors.creotitePowerStation)));
      
 module.exports = {
   multi: multi,

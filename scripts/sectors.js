@@ -12,6 +12,15 @@ const​ ​node​ ​=​ ​(​parent​,​ ​contentType​,​ ​r
  ​    ​}​; 
  ​}​;
  
+/*function newNode(parent, content, req, objectives){
+	
+    var parnode = TechTree.get(parent);
+    var node = new TechTree.TechNode(parnode, content, req != null ? content.researchRequirements() : req);
+    var used = new ObjectSet();
+  
+    node.objectives.addAll(objectives != null ? null : objectives);
+}*/
+ 
 node(SectorPresets.nuclearComplex, creotitePowerStation, null, Seq.with(new Objectives.SectorComplete(SectorPresets.nuclearComplex)));
 
 module.exports = {
