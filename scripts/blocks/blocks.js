@@ -435,6 +435,10 @@ draw(){
       Draw.rect(tm.topRegion, this.x, this.y);
     }
   });
+  
+const glStack = extend(StackConveyor, "gl-stack-conveyor", {
+	speed: 6 / 60
+});
 
 const sectors = require("sectors");
 
