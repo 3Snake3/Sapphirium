@@ -1,5 +1,5 @@
-# Indigo Shield
-![IndigoShield](https://github.com/3Snake3/Pictures/blob/master/icon3.png)
+# Sapphirium
+![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/icon3.png)
 This mod adds a lot of additional content and small changes to some vanilla sprites.
 <br>Mod includes a few factions, that contain their own blocks and units.
 
@@ -10,6 +10,7 @@ This mod adds a lot of additional content and small changes to some vanilla spri
 <br>`Golden Thread` - Includes blocks with black, white and golden colors. I still think about this faction, what blocks will it include, statuses, items, I think about the distinctive features.
 <br>`Beam` - Includes blocks with black or white colors and yellow decal. It have own resources - charged items. This faction is mainly associated with high energy, electric current, statuses are also associated with this.
 <br>`Dart` - Includes blocks with brown, blue and white colors. This faction is mainly associated with high speed, and it's statuses are also will be associated with this.
+<br>`Sandbank` - Includes blocks with black and sand colors. This faction is mainly associated with sand and with several stones like silicon, creostone. The main status effect is - `«Slow»`.
 <br>`Emerald Light` - ...In development...
 
 # Number of included content:
@@ -22,7 +23,9 @@ This mod adds a lot of additional content and small changes to some vanilla spri
 <br>`Maps:` 1
 <br>`Weathers:` 3
 
-# My discord username:
+# My discord username and server:
 Creator - `Snake#2132`
+<br>`https://discord.gg/zRER9xz6YH`
+
 
 
