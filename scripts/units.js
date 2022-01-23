@@ -43,7 +43,6 @@ const exampleEngines = [
 ];
 
 
-//function
 function drawMultyEngine(unit, engines){
   for(let engine of engines){
     
