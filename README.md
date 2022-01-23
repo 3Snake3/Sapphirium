@@ -3,7 +3,7 @@
 This mod adds a lot of additional content and small changes to some vanilla sprites.
 <br>Mod includes a few factions, that contain their own blocks and units.
 
-# Factions:
+# Fractions:
 `Crimson Agate` - Includes blocks with scarlet and black colors, its own status effect - `«Bleeding»`, soon it will get its own resource.
 <br>`Indigo` - Includes blocks with white and blue colors, Its status effects also have blue colors. Globium - own resource.
 <br>`Military Defense` - Includes blocks with dark/black colors, it is main color of the blocks, decal can be of different colors here. Don't have own statuses, but have a creostone and blocks that made of it.
