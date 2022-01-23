@@ -1,29 +1,16 @@
-const lambda = extend(UnitType, "lambda", {});
-lambda.constructor = () => extend(UnitEntity, {});
-lambda.defaultController = () => extend(BuilderAI, {});
-
-const sm = extend(UnitType, "scarlet-moth", {});
-sm.constructor = () => extend(UnitEntity, {});
-sm.defaultController = () => extend(BuilderAI, {});
-
-
-
-
-
-
-
 const exampleEngines = [
   {
     name: "main-massive-engine",
     power: 10,
     
     size: 5,
+    innerSize: 4,
     
-    offsetX: 20,
+    offsetX: 0,
     offsetY: 10,
     
     mainColor: (unit) => unit.team.color,
-    innerColor: Color.valueOf('#888888'),
+    innerColor: Color.valueOf('#FFFFFF'),
   },
   
   {
@@ -31,12 +18,13 @@ const exampleEngines = [
     power: 10,
     
     size: 3,
+    innerSize: 2,
     
-    offsetX: 10,
-    offsetY: 12,
+    offsetX: -5,
+    offsetY: 9,
     
     mainColor: (unit) => unit.team.color,
-    innerColor: Color.valueOf('#888888'),
+    innerColor: Color.valueOf('#FFFFFF'),
   },
   
   {
@@ -44,12 +32,13 @@ const exampleEngines = [
     power: 10,
     
     size: 3,
+    innerSize: 2,
     
-    offsetX: 30,
-    offsetY: 12,
+    offsetX: 5,
+    offsetY: 9,
     
     mainColor: (unit) => unit.team.color,
-    innerColor: Color.valueOf('#888888'),
+    innerColor: Color.valueOf('#FFFFFF'),
   },
 ];
 
@@ -64,21 +53,40 @@ function drawMultyEngine(unit, engines){
     let offsetY = engine.offsetY/2 + engine.offsetY/2*scale;
 
     let engineSize = engine.size;
+    let innerSize = engine.innerSize;
+	
+    //let part = Math.ceil( (unit.rotation+0.001)/45 );
+    //let isVertic = !( part == 8 ||  part == 1 || part == 4 || part == 5 );
     
     Draw.color(engine.mainColor(unit));
-    Fill.circle(
-      unit.x + Angles.trnsx(unit.rotation + 180, offsetX),
-      unit.y + Angles.trnsy(unit.rotation + 180, offsetY),
-      (engineSize + Mathf.absin(Time.time, 2, engineSize / 4)) * scale
-    );
+        Fill.circle(
+            unit.x + Angles.trnsx(unit.rotation + 180, offsetY) + Angles.trnsx(unit.rotation + 90, offsetX),
+            unit.y + Angles.trnsy(unit.rotation + 180, offsetY) + Angles.trnsy(unit.rotation + 90, offsetX),
+           (engineSize + Mathf.absin(Time.time, 2, engineSize / 4)) * scale
+        );
     
     Draw.color(engine.innerColor);
-    Fill.circle(
-      unit.x + Angles.trnsx(unit.rotation + 180, offsetX - 1),
-      unit.y + Angles.trnsy(unit.rotation + 180, offsetY - 1),
-      (engineSize + Mathf.absin(Time.time, 2, engineSize / 4)) / 2 * scale
-    );
+        Fill.circle(
+	    unit.x + Angles.trnsx(unit.rotation + 180, offsetY-1) + Angles.trnsx(unit.rotation + 90, offsetX),
+	    unit.y + Angles.trnsy(unit.rotation + 180, offsetY-1) + Angles.trnsy(unit.rotation + 90, offsetX),
+           ((innerSize + Mathf.absin(Time.time, 2, innerSize / 4))) * scale
+        );
     
     Draw.color();
   }
 };
+
+
+
+
+const lambda = extend(UnitType, "lambda", {
+	drawEngine(unit){
+		drawMultyEngine( unit, exampleEngines );
+	}
+});
+lambda.constructor = () => extend(UnitEntity, {});
+lambda.defaultController = () => extend(BuilderAI, {});
+
+const sm = extend(UnitType, "scarlet-moth", {});
+sm.constructor = () => extend(UnitEntity, {});
+sm.defaultController = () => extend(BuilderAI, {});

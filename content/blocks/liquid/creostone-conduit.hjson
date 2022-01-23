@@ -6,6 +6,8 @@ liquidCapacity: 20
 liquidPressure: 1.025
 placeableLiquid: true
 
+bridgeReplacement: creostone-bridge-conduit
+
 requirements: [
   titanium/4
   metaglass/4

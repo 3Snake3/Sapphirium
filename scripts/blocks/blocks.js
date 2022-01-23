@@ -107,9 +107,9 @@ creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, cr
 
 const items = require("items");
 
-const indBar = new JavaAdapter(ForceProjector, {
+const indBar = extendContent(ForceProjector, "indigo-barrier", {
   drawPlace(x, y, rotation, valid){
-        this.super$drawPlace(x, y, rotation, valid);
+        this.drawPotentialLinks(x, y);
 
         Draw.color(Pal.lancerLaser);
         Lines.stroke(3);
@@ -119,7 +119,7 @@ const indBar = new JavaAdapter(ForceProjector, {
         Lines.poly(x * Vars.tilesize + this.offset, y * Vars.tilesize + this.offset, 8, this.radius);
         Draw.color();
     }
-}, "indigo-barrier");
+});
 
 indBar.consumes.item(items.globium).boost();
 indBar.consumes.power(8);
