@@ -1,5 +1,16 @@
 const multiLib = require("multi-lib");
 
+const smallDrill = extend(Drill, "smalldrill", {
+	setStats(){
+		this.super$setStats();
+		this.stats.remove(Stat.boostEffect);
+	},
+	setBars(){
+		this.super$setBars();
+		this.bars.remove("liquid");
+		}
+});
+
 const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafterBuild, "freezer", [
     {
       input: {
