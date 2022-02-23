@@ -11,6 +11,8 @@ const smallDrill = extend(Drill, "smalldrill", {
 		}
 });
 
+const copperTransformer = extend(SingleTypeGenerator, "copper-transformer", {});
+
 const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafterBuild, "freezer", [
     {
       input: {
@@ -165,10 +167,6 @@ const massDriver = extendContent(MassDriver, "compact-driver", {});
 massDriver.bullet = extend(MassDriverBolt, {});
 
 const graphiteWT = extend(PowerTurret, "graphite-wall-turret", {
-flags: EnumSet.of(BlockFlag.turret),
-});
-
-const coalWT = extend(PowerTurret, "coal-wall-turret", {
 flags: EnumSet.of(BlockFlag.turret),
 });
 
