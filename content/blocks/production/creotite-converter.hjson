@@ -1,6 +1,6 @@
-type: AttributeCrafter
+
 craftTime: 115
-outputItem: creostone/5
+outputItem: creostone/3
 craftEffect: redgeneratespark
 hasPower: true
 hasItems: true
@@ -22,8 +22,8 @@ liquid: creotite/0.2
 items: {
 items: [
 silicon/3
-coal/5
-sand/7
+coal/4
+sand/4
 ]
 }
 }
@@ -35,6 +35,9 @@ silicon/50
 titanium/50
 ]
 size: 3
-research: creotite-mixer
+research: {
+parent: creostone-smelter
+objectives: [creostone-reactor]
+}
 attribute: heat
 maxBoost: 3

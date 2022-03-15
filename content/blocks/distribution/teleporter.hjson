@@ -1,0 +1,45 @@
+
+health: 125
+knockback: 0
+rotateSpeed: 300
+hasPower: true
+range: 1600
+reloadTime: 1
+bulletSpeed: 100
+minDistribute: 1
+translasion: 1
+bulletLifetime: 15
+shootEffect: shootHeal
+shake: 0
+shootSound: lasershoot
+itemCapacity: 500
+smokeEffect: {
+type: ParticleEffect
+particles: 3
+length: 15
+lifetime: 25
+cone: 360
+sizeFrom: 3
+sizeTo: 0
+colorFrom: 84f591
+colorTo: 61ad7e
+}
+receiveEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 8
+sizeTo: 0
+strokeFrom: 3
+strokeTo: 0
+colorFrom: 84f591
+colorTo: 84f591
+lifetime: 25
+}
+category: distribution
+requirements: [
+titanium/25
+silicon/40
+]
+consumes: {
+power: 0.8
+}

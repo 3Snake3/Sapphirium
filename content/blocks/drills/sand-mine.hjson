@@ -1,4 +1,4 @@
-type: GenericCrafter
+
 drawer: {
 type: DrawRotator
 drawSpinSprite: true
@@ -10,8 +10,10 @@ outputItem: sand/1
 craftTime: 45
 consumes: {
 power: 0.7
+liquid: water/0.2
 }
 craftEffect: mineBig
+liquidCapacity: 12
 updateEffect: pulverizeMedium
 hasPower: true
 category: production

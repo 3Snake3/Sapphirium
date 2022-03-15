@@ -1,7 +1,7 @@
-type: SingleTypeGenerator
+
 requirements: [
-lead/50
-graphite/50
+lead/35
+graphite/35
 ]
 category: power
 consumes: {
@@ -13,7 +13,7 @@ sand/1
 }
 }
 itemDuration: 80
-powerProduction: 0.5
+powerProduction: 0.4
 hasLiquids: true
 hasItems: true
 ambientSound: smelter

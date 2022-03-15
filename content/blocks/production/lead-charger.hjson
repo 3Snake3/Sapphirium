@@ -1,7 +1,7 @@
-type: GenericCrafter
+
 consumes: {
 power: 1
-liquid: surge-mass/0.2
+liquid: surge-mass/0.1
 items: {
 items: [
 lead/2
@@ -11,7 +11,6 @@ lead/2
 outputItem: charged-lead/1
 craftTime: 60
 drawer: DrawSmelter
-liquidCapacity: 12
 craftEffect: {
 type: ParticleEffect
 particles: 6

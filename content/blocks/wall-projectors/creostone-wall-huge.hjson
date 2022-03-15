@@ -1,9 +1,9 @@
 health: 7200
 size: 3
-radius: 30
-shieldHealth: 1000
+radius: 25
+shieldHealth: 3000
 cooldownNormal: 1
-phaseRadiusBoost: 150
+phaseRadiusBoost: 0
 phaseShieldBoost: 800
 placeableLiquid: true
 category: defense

@@ -1,0 +1,36 @@
+reloadTime: 60
+recoilAmount: 4
+shootCone: 45
+inaccuracy: 0
+shootShake: 3
+restitution: 0.1
+range: 200
+shootSound: shootBig
+health: 440
+category: turret
+size: 2
+requirements: [
+copper/85
+titanium/70
+]
+research: lancer
+ammoTypes: {
+lead: {
+type: ShrapnelBulletType
+length: 210
+damage: 33
+ammoMultiplier: 2
+reloadMultiplier: 1.25
+toColor: 8c7fa9
+width: 12
+serrations: 3
+}
+titanium: {
+type: ShrapnelBulletType
+length: 210
+damage: 55
+ammoMultiplier: 4
+width: 12
+serrations: 3
+}
+}

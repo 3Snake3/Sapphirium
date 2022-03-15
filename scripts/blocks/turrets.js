@@ -38,37 +38,6 @@ collidesGround: true,
 collidesTeam: true,
 })
 
-const laser = extend(LaserBulletType, {
-colors: [Color.valueOf("98ffa9"), Color.valueOf("98FFA9"), Color.valueOf("FFFFFF")],
-length: 570,
-damage: 2000,
-width: 60,
-lifetime: 60,
-lightningSpacing: 40,
-lightningLength: 40,
-lightningDelay: 1.1,
-lightningLengthRand: 70,
-lightningDamage: 200,
-lightningAngleRand: 40,
-largeHit: true,
-lightColor: Color.valueOf("98ffa9"),
-lightningColor: Color.valueOf("98ffa9"),
-collidesGround: true,
-collidesAir: true,
-collidesTiles: true,
-collidesTeam: true,
-sideAngle: 15,
-sideWidth: 0,
-sideLength: 0,
-healPercent: 50,
-hitSound: Sounds.spark,
-fragBullets: 5,
-fragCone: 100,
-fragBullet: frag,
-status: statuses.stun,
-statusDuration: 120,
-})
-
 const multishock = extend(PowerTurret, "multishocker", {});
 
 const north = extend(PowerTurret, "north", {});
@@ -76,7 +45,7 @@ const north = extend(PowerTurret, "north", {});
 const impaler = extend(PowerTurret, "impaler", {});
 impaler.shootType = spear;
 
-const arrow = extend(PowerTurret, "arrow", {});
+const bow = extend(PowerTurret, "bow", {});
 
 const glow = extend(PowerTurret, "glow", {});
 
@@ -88,13 +57,44 @@ const reagent = extend(PowerTurret, "reagent", {});
 
 const endoxin = extend(PowerTurret, "endoxin", {});
 
-const executioner = extend(PowerTurret, "executioner", {
-	shootType: laser,
-	})
+const greenLaser = extend(LaserBulletType, {
+	damage: 100,
+	colors: [Pal.heal, Pal.heal, Color.white],
+	drawSize: 200,
+	width: 25,
+	length: 560,
+shake: 1,
+despawnEffect: Fx.smokeCloud,
+smokeEffect: Fx.none,
+healPercent: 5,
+collidesTeam: true,
+});
+
+const executioner = extend(LaserTurret, "executioner", {});
+executioner.consumes.add(new ConsumeCoolant(2)).update = false;
+executioner.buildType = () => extend(LaserTurret.LaserTurretBuild, executioner, {
+	creload : 0,
+    updateTile(){
+        this.super$updateTile();
+        let wx = this.x + Mathf.range(14.25, -14.25)
+        let wy = this.y + Mathf.range(22, -22)
+
+        if(this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5 && this.creload >= 60){
+            this.creload = 0
+            greenLaser.create(this, this.team, wx, wy, this.rotation)
+            Fx.shootBigSmoke2.at(wx, wy)
+            Sounds.laserblast.at(this)
+            
+        }
+        else{
+            if(this.creload < 60){this.creload += 1} 
+        }
+    },
+});
 
 const liquids = require("liquids");
 
-const ledoShot = extend(LiquidBulletType, liquids.ledonite, {
+/*const ledoShot = extend(LiquidBulletType, liquids.ledonite, {
 	knockback: 0.75,
 	drag: 0.01,
 	statusDuration: 40
@@ -145,21 +145,23 @@ Blocks.tsunami.ammo(
                 Liquids.oil, Bullets.heavyOilShot,
                 liquids.ledonite, heavyLedoShot,
                 liquids.surgeMass, heavySrgMassShot
-                );
+                );*/
                 
 const contLaser = extend(ContinuousLaserBulletType, {
 damage: 1,
 length: 95,
 shake: 0,
 width: 4,
-colors: [Color.valueOf("de9559"), Color.valueOf("f7c265"), Color.valueOf("ffe18f"), Color.white],
+colors: [Pal.surge, Pal.surge, Pal.surge, Color.white],
 });
                 
-const shock = extend(ItemTurret, "beam-IT", {});
+const shock = extend(ItemTurret, "shock", {});
 
-const discharge = extend(PowerTurret, "beam-LT", {});
+const discharge = extend(PowerTurret, "discharge", {});
 
-const pierce = extend(PowerTurret, "beam-LS", {});
+const pierce = extend(PowerTurret, "pierce", {});
+
+const electron = extend(TractorBeamTurret, "electron", {});
                 
 const infiniteLSA = extend(LaserTurret, "infinite-laser-array", {
 health: 2000,
@@ -216,7 +218,7 @@ const sawBack = extend(BasicBulletType, {
     speed: 6,
     lifetime: 60,
     pierce: true,
-    sprite: "adc-spinner",
+    sprite: "adc-circular-saw-bullet",
     spin: -20,
     status: StatusEffects.sapped,
     statusDuration: 180,
@@ -227,6 +229,7 @@ const sawBack = extend(BasicBulletType, {
     frontColor: Color.valueOf("ffffff"),
     backColor: Color.valueOf("bd99ff"),
     hitSoundVolume: 0.4,
+    shrinkY: 0,
 
 });
 
@@ -238,7 +241,7 @@ const saw = extend(BasicBulletType, {
     speed: 6,
     lifetime: 60,
     pierce: true,
-    sprite: "adc-spinner",
+    sprite: "adc-circular-saw-bullet",
     spin: 20,
     
     status: StatusEffects.sapped,
@@ -250,6 +253,7 @@ const saw = extend(BasicBulletType, {
     frontColor: Color.valueOf("ffffff"),
     backColor: Color.valueOf("bd99ff"),
     hitSoundVolume: 0.4,
+    shrinkY: 0,
 
     despawned(b){
         sawBack.create(b, b.x, b.y, b.rotation() - 180, 1, 1);
@@ -261,6 +265,8 @@ const sandT = extend(ItemTurret, "sand-turret", {});
 const sandTh = extend(ItemTurret, "sand-thrower", {});
 
 const dune = extend(ItemTurret, "dune", {});
+
+const pyramid = extend(ItemTurret, "pyramid", {});
 
 const cast = extend(ItemTurret, "cast", {});
 
@@ -274,6 +280,155 @@ const hawk = extend(PowerTurret, "hawk", {});
 
 const scrStar = extend(PowerTurret, "scarlet-star", {});
 
+const bloodsap = extend(SapBulletType, {
+	sapStrength: 0.95,
+	damage: 80,
+	lifetime: 20,
+	length: 400,
+	color: Color.valueOf("ff6e6e"),
+	hitColor: Color.valueOf("ff6e6e"),
+	status: statuses.bleeding,
+	statusDuration: 280,
+	width: 0.9
+});
+
+const bloodlust = extend(PowerTurret, "bloodlust", {});
+bloodlust.buildType = () => extend(PowerTurret.PowerTurretBuild, bloodlust, {
+	creload : 0,
+    updateTile(){
+        this.super$updateTile();
+        let sx = this.x + Mathf.range(9.75, -9.75)
+        let sy = this.y + Mathf.range(10.5, -10.5)
+
+        if(this.isShooting() && this.hasAmmo() && this.power.status > 0.5 && this.creload >= 20){
+            this.creload = 0
+            bloodsap.create(this, this.team, sx, sy, this.rotation)
+            Fx.none.at(sx, sy)
+            Sounds.sap.at(this)
+        }
+        else{
+            if(this.creload < 20){this.creload += 1} 
+        }
+    },
+});
+
+const lightningFrag = extend(BasicBulletType, {
+	width: 7,
+	height: 7,
+	despawnEffect: Fx.none,
+	hitEffect: Fx.none,
+	speed: 0,
+	lifetime: 10,
+	damage: 10,
+	backColor: Color.valueOf("8a3340"),
+	frontColor: Color.valueOf("ff6e6e"),
+});
+
+const sharpLaser = extend(LaserBulletType, {
+	width: 25,
+	length: 400,
+	sideWidth: 2.5,
+	sideAngle: 70,
+	colors: [Color.valueOf("8a3340"), Color.valueOf("ff6e6e"), Color.valueOf("ff6e6e")], 
+	damage: 300,
+	lightningSpacing: 15,
+	lightningDelay: 1,
+	lightningLength: 12,
+	lightningDamage: 30,
+	lightColor: Color.valueOf("ff6e6e"),
+	lightningColor: Color.valueOf("ff6e6e"),
+	lightningType: lightningFrag,
+	status: statuses.bleeding,
+	statusDuration: 240
+});
+
+const injection = extend(ItemTurret, "injection", {});
+/*injection.consumes.powerCond(3, TurretBuild.isActive);*/
+injection.buildType = () => extend(ItemTurret.ItemTurretBuild, injection, {
+	creload : 0,
+    updateTile(){
+        this.super$updateTile();
+        let ty = this.y + Mathf.range(8.5)
+
+        if(this.isShooting() && this.hasAmmo() && this.creload >= 320){
+            this.creload = 0
+            sharpLaser.create(this, this.team, this.x, ty, this.rotation)
+            Fx.none.at(this.x, ty)
+            Sounds.laser.at(this)
+            Effect.shake(4, 4, this)
+            this.recoil = 4
+        }
+        else{
+            if(this.creload < 320){this.creload += 1} 
+        }
+    },
+});
+
+const goldenPollination = extend(StatusEffect, "golden-pollination", {
+	healthMultiplier: 1.4,
+	speedMultiplier: 0.3,
+	reloadMultiplier: 0.3
+});
+
+const goldenHit = extend(ParticleEffect, {
+	particles: 6,
+	sizeFrom: 4,
+	sizeTo: 0,
+	lifetime: 25,
+	length: 15,
+	cone: 360,
+	colorFrom: Pal.surge,
+	colorTo: Pal.surge
+});
+
+const goldenFire = extend(ParticleEffect, {
+particles: 30,
+sizeFrom: 3.5,
+sizeTo: 0,
+lifetime: 20,
+length: 230,
+//interp: Interp.circleOut,
+cone: 5,
+colorFrom: Pal.surge,
+colorTo: Color.valueOf("d99e6a")
+});
+
+const goldenFireBullet = extend(BasicBulletType, {
+	width: 0.01,
+	height: 0.01,
+	damage: 20,
+	lifetime: 14,
+	sprite: "circle-bullet",
+	status: goldenPollination,
+	statusDuration: 370,
+	hitEffect: goldenHit,
+	despawnEffect: Fx.none,
+	frontColor: Color.white,
+	backColor: Pal.surge,
+	speed: 9,
+});
+	
+
+const enlight = extend(PowerTurret, "enlightenment", {});
+enlight.buildType = () => extend(PowerTurret.PowerTurretBuild, enlight, {
+    creload : 0,
+    updateTile(){
+        this.super$updateTile();
+        let fx = this.x + Mathf.range(-2.5, 2.5)
+        let fy = this.y + Mathf.range(-6.5, 6.5)
+
+        if(this.isShooting() && this.power.status > 0.1 && this.hasAmmo() && this.creload >= 5){
+            this.creload = 0
+            goldenFireBullet.create(this, this.team, fx, fy, this.rotation)
+            goldenFire.at(fx, fy, this.rotation)
+            Sounds.flame.at(this)
+        }
+        else{
+            if(this.creload < 5){this.creload += 1} 
+        }
+    },
+});
+
 const gold = extend(PowerTurret, "gold-horn", {});
 
 const brazier = extend(PowerTurret, "brazier", {});
@@ -283,6 +438,8 @@ const hiddenTesla = extend(PowerTurret, "hidden-tesla", {});
 const teslaCoil = extend(PowerTurret, "tesla-coil", {});
 
 const cloudRip = extend(ItemTurret, "cloud-breaker", {});
+
+const equalizer = extend(ItemTurret, "equalizer", {});
 
 const photon = extend(ItemTurret, "photon", {});
 
@@ -294,17 +451,182 @@ const warhead = extend(ItemTurret, "warhead", {});
 
 const shotgun = extend(ItemTurret, "shotgun", {});
 
+const energySparkLightning = extend(LightningBulletType, {
+	lifetime: 70,
+	lightningColor: Pal.surge,
+	lightningLength: 14,
+	damage: 12,
+	collidesGround: false,
+	collidesAir: true,
+});
+
+const energySpark = extend(FlakBulletType, {
+	width: 7,
+	height: 7,
+	speed: 6,
+	lifetime: 45,
+	hitEffect: Fx.flakExplosion,
+	despawnEffect: Fx.flakExplosion,
+	damage: 20,
+	splashDamage: 40,
+	splashDamageRadius: 45,
+	explodeRange: 45,
+	fragBullets: 2,
+	fragCone: 360,
+	fragBullet: energySparkLightning,
+	collidesGround: false
+});
+
+const energyExplode = extend(ExplosionEffect, {
+	waveRad: 185,
+	waveColor: Pal.bulletYellow,
+	waveLife: 25,
+	smokeRad: 195,
+	smokeSize: 4,
+	smokeColor: Pal.darkerMetal,
+	smokes: 6,
+	sparkRad: 195,
+	sparkLen: 5,
+	sparks: 6,
+	sparkColor: Pal.unitFront,
+});
+
+const energyBall = extend(BasicBulletType, {
+	sprite: "circle-bullet",
+	width: 15,
+	height: 15,
+	shrinkX: 2,
+	shrinkY: 2,
+	speed: 0,
+	lifetime: 185,
+	damage: 0,
+	collides: false,
+	collidesGround: false,
+	collidesAir: true,
+	collidesTiles: false,
+	splashDamage: 225,
+	splashDamageRadius: 185,
+	backColor: Pal.bulletYellowBack,
+	frontColor: Pal.bulletYellow,
+	despawnEffect: energyExplode,
+	hitEffect: Fx.none,
+	fragBullets: 8,
+	fragCone: 360,
+	fragLifeMin: 0.3,
+	fragBullet: energySpark,
+	hitSound: Sounds.explosion
+});
+
+const trembling = extend(PowerTurret, "trembling", {});
+trembling.buildType = () => extend(PowerTurret.PowerTurretBuild, trembling, {
+    creload : 0,
+    updateTile(){
+        this.super$updateTile();
+
+        if(this.isShooting() && this.power.status > 0.1 && this.hasAmmo() && this.creload >= 180){
+            this.creload = 0
+            energyBall.create(this, this.team, this.x, this.y, this.rotation)
+            Sounds.artillery.at(this)
+        }
+        else{
+            if(this.creload < 180){this.creload += 1} 
+        }
+    },
+});
+
+const decay = extend(ItemTurret, "decay", {});
+
 const blade = extend(PowerTurret, "blade", {
 shootType: saw
 });
 
-const mineDep = extend(ItemTurret, "mine-deployer", {});
+const bombThrower = extend(ItemTurret, "bomb-thrower", {});
 
 const needle = extend(ItemTurret, "needle", {});
 
 const mortar = extend(ItemTurret, "mortar", {});
 
 const neutron = extend(PowerTurret, "neutron", {});
+
+const pulse = extend(PowerTurret, "pulse", {});
+
+const pressure = extend(PowerTurret, "pressure", {});
+
+const regen = extend(ParticleEffect, {
+	region: "adc-rhombus",
+	length: 0,
+	sizeFrom: 4,
+	sizeTo: 0,
+	lifetime: 35,
+	colorFrom: Pal.heal,
+	colorTo: Pal.heal,
+	particles: 1
+});
+
+const regeneration = extend(StatusEffect, "regeneration", {
+	speedMultiplier: 1.5,
+	damageMultiplier: 1.5,
+	relooadMultiplier: 1.5,
+	healthMultiplier: 0.7,
+	damage: -0.2,
+	effect: regen,
+	effectChance: 0.07,
+	color: Pal.heal,
+});
+
+const GainTurret = extend(RepairPoint, "gain-turret", {});
+GainTurret.buildType = () => extendContent(RepairPoint.RepairPointBuild, GainTurret, {
+	updateTile() { 
+ let multiplier = 1; 
+   
+ if(this.acceptCoolant) { 
+ let liq = this.consumes.get(ConsumeType.liquid); 
+ multiplier = liq.valid(this) ? 1 + this.liquids.current().heatCapacity * this.coolantMultiplier : 1; 
+ } 
+ 
+ if(this.target != null && (this.target.dead || this.target.dst(this) - this.target.hitSize/2 > this.block.repairRadius)){ 
+ this.target = null; 
+ } 
+ 
+ if(this.target == null){ 
+ this.offset.setZero(); 
+ } 
+ 
+ let gained = false; 
+ 
+ if( this.target != null && this.consValid() ){ 
+ let angle = Angles.angle( this.x, this.y, this.target.x + this.offset.x, this.target.y + this.offset.y ); 
+ 
+ if(Angles.angleDist(angle, this.rotation) < 30){ 
+ gained = true; 
+ //status effect apply
+ this.target.apply(regeneration, 600) 
+ } 
+ this.rotation = Mathf.slerpDelta(this.rotation, angle, 0.5 * this.efficiency() * this.timeScale); 
+ } 
+ 
+ this.strength = Mathf.lerpDelta(this.strength, gained ? 1 : 0, 0.08 * Time.delta); 
+ 
+ let rect = new Rect();
+ 
+ if(this.block.timerTarget, 20){ 
+ rect.setSize(this.block.repairRadius * 2).setCenter(this.x, this.y); 
+ this.target = Units.closest(this.team, this.x, this.y, this.block.repairRadius, (u) => u.damaged() ); 
+ } 
+},
+});
+
+/*function newNode(parent, content, req, objectives){
+	
+    var parnode = TechTree.get(parent);
+    var node = new TechTree.TechNode(parnode, content, req = null ? content.researchRequirements() : req);
+    var used = new ObjectSet();
+  
+    node.objectives.addAll(objectives = null ? null : objectives);
+}
+ 
+newNode(Blocks.ripple, torpedo, ItemStack.with(Items.copper, 6500, Items.lead, 4500, Items.silicon, 3000, Items.thorium, 2250), Seq.with(new Objectives.SectorComplete(sectors.creotitePowerStation)));*/
+
 module.exports = {
 warhead: warhead,
 impaler: impaler,

@@ -15,11 +15,11 @@ hasLiquids: true
 outputsLiquid: true
 consumes: {
 power: 5.5
-liquid: ledonite-liquid/0.4
+liquid: cryofluid/0.4
 items: {
 items: [
-pyratite/2
-sand/5
+pyratite/4
+thorium/3
 ]
 }
 }

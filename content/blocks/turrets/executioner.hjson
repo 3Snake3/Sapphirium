@@ -6,34 +6,49 @@ creostone/1350
 surge-alloy/860
 thorium/760
 ]
-buildCostMultiplier: 0.85
+buildCostMultiplier: 0.75
 range: 550
-chargeTime: 300
-chargeMaxDelay: 290
-chargeEffects: 10
+chargeTime: 590
+chargeMaxDelay: 580
+chargeEffects: 1
 recoilAmount: 10
 reloadTime: 600
 cooldown: 600
-powerUse: 21
-shootShake: 14
+powerUse: 30
+shootShake: 4
+shootCone: 60
+shootDuration: 600
+firingMoveFract: 0.8
+shootType: {
+type: ContinuousLaserBulletType
+damage: 166
+length: 560
+hitEffect: hitMeltHeal
+drawSize: 480
+shake: 2
+despawnEffect: smokeCloud
+smokeEffect: none
+incendChance: 0.3
+incendSpread: 6
+incendAmount: 1
+healPercent: 5
+collidesTeam: true
+colors: [98ffa9, 98ffa9, 98ffa9, ffffff]
+}
 shootLength: 10
-liquidCapacity: 40
+liquidCapacity: 120
 rotateSpeed: 1.5
-shootEffect: greenLaserCharge
+shootEffect: shootBigSmoke2
 smokeEffect: none
 chargeEffect: greenLaserCharge
 chargeBeginEffect: greenLaserCharge
-shootSound: laserblast
+shootSound: beam
+loopSound: laserbig
 chargeSound: lasercharge
-heatColor: ff0000
 size: 8
-health: 18500
-coolantMultiplier: 2.5
-coolantUsage: 4
+health: 12800
 category: turret
-consumes: {
-liquid: ledonite-liquid/2
-}
+coolantUsage: 1.5
 research: {
 parent: foreshadow
 }

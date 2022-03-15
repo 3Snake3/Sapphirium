@@ -32,4 +32,25 @@ status: freezing
 }
 fragBullets: 6
 }
+charged-lead: {
+type: FlakBulletType
+speed: 4
+damage: 4
+lifetime: 60
+ammoMultiplier: 5
+shootEffect: shootSmall
+reloadMultiplier: 0.5
+width: 7
+height: 9
+hitEffect: flakExplosion
+splashDamage: 50
+splashDamageRadius: 25
+status: shocked
+backColor: f3e979
+frontColor: fff8e8
+lightning: 1
+lightningLength: 7
+lightningColor: f3e979
+lightningDamage: 8
+}
 }

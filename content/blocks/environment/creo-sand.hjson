@@ -1,4 +1,4 @@
-type: Floor
+
 //itemDrop: creosand
 damageTaken: 0.8
 status: corroded

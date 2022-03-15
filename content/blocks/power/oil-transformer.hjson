@@ -1,4 +1,4 @@
-type: ThermalGenerator
+
 health: 1850
 category: power
 research: {

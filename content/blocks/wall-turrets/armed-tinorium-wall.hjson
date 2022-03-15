@@ -1,0 +1,39 @@
+health: 12300
+category: defense
+research: tinorium-wall-large
+requirements: [
+tinorium/85
+silicon/25
+]
+size: 3
+reloadTime: 60
+powerUse: 3
+shots: 2
+inaccuracy: 4
+shootCone: 45
+burstSpacing: 4
+rotateSpeed: 4
+recoilAmount: 4
+shootSound: artillery
+range: 240
+shootType: {
+type: ArtilleryBulletType
+sprite: adc-tinorium-shard
+width: 20
+height: 20
+spin: -5
+speed: 4
+lifetime: 60
+splashDamage: 60
+splashDamageRadius: 50
+status: spore-slowed
+statusDuration: 180
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+backColor: 6d56bf
+frontColor: bf92f9
+trailColor: 6d56bf
+hitColor: bf92f9
+}
+shootLength: 1
+group: walls

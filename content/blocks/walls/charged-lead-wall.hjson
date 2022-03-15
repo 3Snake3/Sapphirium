@@ -4,6 +4,7 @@ powerProduction: 1
 category: defense
 research: surge-wall
 requirements: [
-  charged-lead/20
-  silicon/20
+  charged-lead/35
+  silicon/40
 ]
+group: walls

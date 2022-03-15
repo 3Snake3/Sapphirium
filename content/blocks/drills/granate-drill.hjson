@@ -1,0 +1,35 @@
+
+drawer: {
+type: DrawRotator
+drawSpinSprite: true
+spinSpeed: 7
+}
+health: 840
+size: 3
+outputItem: granate/1
+craftTime: 50
+consumes: {
+power: 2
+liquid: water/0.4
+}
+liquidCapacity: 24
+craftEffect: {
+type: ParticleEffect
+region: adc-rhombus
+sizeFrom: 6
+sizeTo: 0
+lifetime: 15
+particles: 4
+length: 5
+colorFrom: ff6e6e
+colorTo: d94848
+}
+hasPower: true
+category: production
+research: oil-extractor
+requirements: [
+copper/125
+graphite/80
+titanium/80
+lead/65
+]

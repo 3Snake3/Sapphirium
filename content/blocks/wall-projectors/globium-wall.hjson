@@ -1,0 +1,19 @@
+health: 800
+radius: 9
+shieldHealth: 800
+cooldownNormal: 1
+phaseRadiusBoost: 0
+phaseShieldBoost: 0
+group: walls
+category: defense
+absorbLasers: true
+insulated: true
+requirements: [
+globium/12
+titanium/6
+silicon/3
+]
+research: {
+parent: plastanium-wall-large
+objectives: [indigo]
+}

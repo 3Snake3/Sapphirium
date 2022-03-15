@@ -3,7 +3,6 @@ size: 2
 category: turret
 research: {
 parent: cast
-objectives: [cyclone]
 }
 requirements: [
 copper/125
@@ -12,15 +11,15 @@ titanium/60
 metaglass/40
 ]
 health: 600
-range: 180
+range: 200
 ammoTypes: {
 copper: {
 sprite: adc-dartt
-width: 7
-height: 9
+width: 10
+height: 13
 damage: 9
-speed: 3
-lifetime: 60
+speed: 5
+lifetime: 40
 shootEffect: shootSmall
 smokeEffect: shootSmallSmoke
 pierce: true
@@ -28,11 +27,11 @@ pierceCap: 1
 }
 graphite: {
 sprite: adc-dartt
-width: 9
-height: 12
+width: 10
+height: 13
 damage: 16
-speed: 3.5
-lifetime: 51
+speed: 4.5
+lifetime: 44.44
 reloadMultiplier: 0.6
 ammoMultiplier: 3
 pierce: true
@@ -40,15 +39,15 @@ pierceCap: 2
 }
 metaglass: {
 sprite: adc-dartt
-width: 9
-height: 12
+width: 10
+height: 13
 damage: 12
-speed: 5
-lifetime: 36
+speed: 7
+lifetime: 29
 reloadMultiplier: 0.8
 ammoMultiplier: 2
 fragBullets: 5
-fragCone: 90
+fragCone: 245
 fragBullet: {
 type: BasicBulletType
 width: 7
@@ -66,8 +65,8 @@ sprite: adc-dartt
 width: 10
 height: 13
 damage: 24
-speed: 4
-lifetime: 45
+speed: 4.5
+lifetime: 46
 shootEffect: shootBig
 smokeEffect: shootBigSmoke
 ammoMultiplier: 4
@@ -76,11 +75,11 @@ pierceCap: 3
 }
 silicon: {
 sprite: adc-dartt
-width: 7
-height: 9
+width: 10
+height: 13
 damage: 14
-speed: 3
-lifetime: 60
+speed: 5
+lifetime: 40
 reloadMultiplier: 0.8
 ammoMultiplier: 5
 homingPower: 0.10
@@ -90,10 +89,10 @@ pierceCap: 2
 pyratite: {
 sprite: adc-dartt
 width: 10
-height: 12
+height: 13
 damage: 14
-speed: 3.2
-lifetime: 56.25
+speed: 5
+lifetime: 40
 frontColor: f8ad42
 backColor: f68021
 status: burning
@@ -103,28 +102,12 @@ inaccuracy: 4
 pierce: true
 pierceCap: 2
 }
-creostone: {
-sprite: adc-dartt
-width: 12
-height: 14
-damage: 30
-speed: 5
-lifetime: 36
-frontColor: eb8778
-backColor: bd5553
-status: melting
-statusDuration: 110
-homingPower: 0.20
-inaccuracy: 3
-ammoMultiplier: 6
-reloadMultiplier: 0.75
-pierce: true
-pierceCap: 4
-}
 }
 reloadTime: 8
 recoilAmount: 3
 rotateSpeed: 8
+shots: 2
+alternate: true
 health: 960
 shootShake: 1
 ammoEjectBack: 1

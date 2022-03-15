@@ -1,4 +1,4 @@
-type: PowerTurret
+
 category: defense
 research: plastanium-wall-large
 playerControllable: false
@@ -30,17 +30,7 @@ speed: 2
 lifetime: 15
 damage: 0
 pierce: true
-status: {
-name: overfreezing
-speedMultiplier: 0.1
-reloadMultiplier: 1.85
-damageMultiplier: 1.5
-damage: 0.025
-opposites: [burning, melting]
-affinities: [blasted, shocked]
-transitionDamage: 10
-effect: freezing
-}
+status: adc-overfreezing
 statusDuration: 80
 hitEffect: none
 despawnEffect: none

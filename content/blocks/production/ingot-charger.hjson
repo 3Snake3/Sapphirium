@@ -1,7 +1,7 @@
-type: GenericCrafter
+
 consumes: {
 power: 2
-liquid: surge-mass/0.25
+liquid: surge-mass/0.1
 items: {
 items: [
 titanium/2
@@ -9,8 +9,7 @@ titanium/2
 }
 }
 outputItem: charged-ingot/1
-craftTime: 100
-liquidCapacity: 15
+craftTime: 60
 drawer: DrawSmelter
 craftEffect: {
 type: ParticleEffect

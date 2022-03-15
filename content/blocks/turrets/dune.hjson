@@ -3,19 +3,17 @@ size: 3
 category: turret
 research: sand-thrower
 requirements: [
-copper/165
-lead/90
-metaglass/65
-silicon/40
+copper/125
+lead/125
+graphite/80
+titanium/80
 ]
 health: 980
 shootEffect: shootBig
-reloadTime: 15
+reloadTime: 10
 recoilAmount: 4.5
 rotateSpeed: 6
 range: 200
-ammoPerShot: 5
-maxAmmo: 60
 shots: 3
 xRand: 3
 spread: 5
@@ -33,8 +31,8 @@ speed: 6
 lifetime: 33.3
 reloadMultiplier: 1.45
 status: slow
-statusDuration: 110
-damage: 12
+statusDuration: 125
+damage: 25
 hitEffect: {
 type: ExplosionEffect
 sparks: 0
@@ -57,7 +55,7 @@ hitSound: explosion
 fragBullet: {
 width: 9
 height: 9
-damage: 3
+damage: 9
 speed: 5
 lifetime: 20
 hitEffect: {
@@ -82,7 +80,131 @@ creostone: {
 sprite: adc-circle-bullet
 width: 15
 height: 15
-damage: 33
+damage: 40
+speed: 5
+lifetime: 40
+backColor: bd5553
+frontColor: eb8778
+buildingDamageMultiplier: 1.2
+status: super-melting
+statusDuration: 125
+splashDamage: 50
+splashDamageRadius: 45
+hitEffect: {
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 45
+waveLife: 15
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 50
+sparkLen: 30
+smokeSize: 5
+smokeRad: 45
+waveColor: eb8778
+smokeColor: bd5553
+}
+despawnEffect: {
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 45
+waveLife: 15
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 50
+sparkLen: 30
+smokeSize: 5
+smokeRad: 45
+waveColor: eb8778
+smokeColor: bd5553
+}
+trailChance: 1
+  trailEffect: {
+    type: ParticleEffect
+    length: 0
+    layer: 100
+    particles: 1
+    lifetime: 40
+    sizeFrom: 6
+    sizeTo: 0
+    colorFrom: eb8778
+    colorTo: eb8778
+    region: particle
+  }
+ ammoMultiplier: 4
+ hitSound: explosion
+ fragBullets: 1
+fragCone: 45
+fragAngle: 180
+fragBullet: {
+sprite: adc-circle-bullet
+width: 15
+height: 15
+damage: 40
+speed: 5
+lifetime: 40
+backColor: bd5553
+frontColor: eb8778
+buildingDamageMultiplier: 1.2
+status: super-melting
+statusDuration: 125
+splashDamage: 50
+splashDamageRadius: 45
+hitEffect: {
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 45
+waveLife: 15
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 50
+sparkLen: 30
+smokeSize: 5
+smokeRad: 45
+waveColor: eb8778
+smokeColor: bd5553
+}
+despawnEffect: {
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 45
+waveLife: 15
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 50
+sparkLen: 30
+smokeSize: 5
+smokeRad: 45
+waveColor: eb8778
+smokeColor: bd5553
+}
+trailChance: 1
+  trailEffect: {
+    type: ParticleEffect
+    length: 0
+    layer: 100
+    particles: 1
+    lifetime: 40
+    sizeFrom: 6
+    sizeTo: 0
+    colorFrom: eb8778
+    colorTo: eb8778
+    region: particle
+  }
+ ammoMultiplier: 4
+ hitSound: explosion
+ fragBullets: 1
+fragCone: 45
+fragAngle: 180
+fragBullet: {
+sprite: adc-circle-bullet
+width: 15
+height: 15
+damage: 40
 speed: 5
 lifetime: 40
 backColor: bd5553
@@ -138,11 +260,13 @@ trailChance: 1
  ammoMultiplier: 4
  hitSound: explosion
  }
+ }
+ }
 silicon: {
 sprite: adc-circle-bullet
 width: 15
 height: 15
-damage: 25
+damage: 30
 speed: 6
 lifetime: 33.3
 status: blasted
@@ -202,7 +326,7 @@ fragBullet: {
 sprite: adc-circle-bullet
 width: 15
 height: 15
-damage: 25
+damage: 30
 speed: 6
 lifetime: 33.3
 status: blasted
@@ -257,7 +381,7 @@ fragBullet: {
 sprite: adc-circle-bullet
 width: 15
 height: 15
-damage: 25
+damage: 30
 speed: 6
 lifetime: 33.3
 status: blasted

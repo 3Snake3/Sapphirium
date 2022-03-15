@@ -1,6 +1,5 @@
-type: AttributeCrafter
-attribute: water
-craftTime: 150
+
+craftTime: 100
 outputItem: globium/2
 craftEffect: smeltsmoke
 hasPower: true
@@ -8,23 +7,21 @@ itemCapacity: 15
 boostScale: 0.20
 drawer: DrawSmelter
 consumes: {
-power: 4.5
-liquid: ledonite-liquid/0.2
+power: 4
 items: {
 items: [
-lead/5
-titanium/5
-thorium/4
+lead/3
+titanium/4
+thorium/2
 ]
 }
 }
 size: 3
 category: crafting
 requirements: [
-copper/225
-lead/140
-silicon/85
-creostone/75
-metaglass/45
+copper/160
+graphite/120
+titanium/80
+metaglass/60
 ]
 research: creotite-converter

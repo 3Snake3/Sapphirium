@@ -32,10 +32,7 @@ homingPower: 2
 homingRange: 45
 }
 category: turret
-research: {
-parent: multishocker
-objectives: [sparrow, overgrowth]
-}
+research: multishocker
 requirements: [
 copper/200
 titanium/125

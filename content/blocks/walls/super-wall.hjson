@@ -1,4 +1,4 @@
-type: Wall
+
 health: 8000
 insulated: true
 absorbLasers: true

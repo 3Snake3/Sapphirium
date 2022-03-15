@@ -1,0 +1,16 @@
+
+health: 16000
+itemCapacity: 23000
+unitCapModifier: 45
+unitType: war
+size: 7
+researchCostMultiplier: 0.23
+category: effect
+requirements: [
+graphite/10000
+titanium/8500
+plastanium/7000
+creostone/7000
+silicon/6450
+]
+research: core-victory

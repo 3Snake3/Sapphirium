@@ -66,5 +66,5 @@ surge-stone/10
 
 research: {
 parent: arc
-objectives: [segment]
+objectives: [cyclone]
 }

@@ -1,5 +1,5 @@
 const exampleEngines = [
-  {
+  /*{
     name: "main-massive-engine",
     power: 10,
     
@@ -11,7 +11,7 @@ const exampleEngines = [
     
     mainColor: (unit) => unit.team.color,
     innerColor: Color.valueOf('#FFFFFF'),
-  },
+  },*/
   
   {
     name: "left-turntable",

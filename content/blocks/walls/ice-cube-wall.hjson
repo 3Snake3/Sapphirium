@@ -1,4 +1,4 @@
-type: Wall
+
 health: 450
 absorbLasers: true
 requirements: [

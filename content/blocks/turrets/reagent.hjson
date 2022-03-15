@@ -8,12 +8,12 @@ cinderblock/60
 ]
 category: turret
 size: 3
-reloadTime: 125
+reloadTime: 60
 shots: 4
-burstSpacing: 6
 powerUse: 8
 inaccuracy: 8
-xRand: 4
+spread: 5
+xRand: 6
 range: 320
 health: 1250
 shootSound: shootBig
@@ -30,87 +30,168 @@ colorFrom: 61ad7e
 colorTo: 61ad7e
 }
 shootType: {
-sprite: adc-acid-bullet
-width: 12
-height: 25
-damage: 40
-lightRadius: 4
-lightOpacity: 2
-lightColor: 70ff88
+type: MissileBulletType
+width: 15
+height: 20
 speed: 6
 lifetime: 53.33
-homingPower: 1
-homingRange: 60
+splashDamage: 80
+splashDamageRadius: 60
+sprite: adc-acid-bullet
+hitSound: plasmaboom
+weaveScale: 6
+weaveMag: 3
+hitShake: 3
+trailWidth: 4
+trailLength: 9
+trailParam: 6
+trailColor: 61ad7eff
 backColor: 61ad7e
-hitShake: 2
-frontColor: 98ffa9
+frontColor: 70ff88
 status: adc-acid-corrosion
-statusDuration: 220
+statusDuration: 125
 hitEffect: {
 type: MultiEffect
-effects: [hitBulletBig, {
-type: ParticleEffect
-particles: 6
-cone: 360
-length: 35
-lifetime: 60
-sizeFrom: 11
-sizeTo: 0
-colorFrom: 98ffa9
-colorTo: 61ad7e
-}
+effects: [
 {
 type: WaveEffect
 sides: 0
 sizeFrom: 0
-sizeTo: 100
-lifetime: 30
-strokeFrom: 3
+sizeTo: 45
+strokeFrom: 4
 strokeTo: 0
-colorFrom: 98ffa9
-colorTo: 98ffa9
-}]
+lifetime: 20
+colorFrom: 70ff88ff
+colorTo: 70ff88ff
+}
+{
+type: ParticleEffect
+particles: 6
+cone: 360
+length: 13
+lifetime: 50
+sizeFrom: 4
+sizeTo: 0
+colorFrom: 61ad7e
+colorTo: 61ad7e00
+}
+]
 }
 despawnEffect: {
 type: MultiEffect
-effects: [{
-type: ParticleEffect
-particles: 6
-cone: 360
-length: 35
-lifetime: 60
-sizeFrom: 11
-sizeTo: 0
-colorFrom: 98ffa9
-colorTo: 61ad7e
-}
+effects: [
 {
 type: WaveEffect
 sides: 0
 sizeFrom: 0
-sizeTo: 130
-lifetime: 20
-strokeFrom: 3
+sizeTo: 45
+strokeFrom: 4
 strokeTo: 0
-colorFrom: 98ffa9
-colorTo: 98ffa9
-}]
-}
-fragBullets: 200
-fragCone: 360
-fragBullet: {
-width: 0.001
-height: 0.001
-speed: 6
 lifetime: 20
-damage: 2
+colorFrom: 70ff88ff
+colorTo: 70ff88ff
+}
+{
+type: ParticleEffect
+particles: 6
+cone: 360
+length: 13
+lifetime: 50
+sizeFrom: 4
+sizeTo: 0
+colorFrom: 61ad7e
+colorTo: 61ad7e00
+}
+]
+}
+fragBullets: 3
+fragCone: 180
+lightRadius: 4
+lightOpacity: 2
+lightColor: 70ff88
+fragBullet: {
+type: MissileBulletType
+weaveScale: 4
+weaveMag: 3
+width: 10
+height: 15
+speed: 5
+lifetime: 25
+damage: 15
+splashDamage: 20
+lightRadius: 3
+lightOpacity: 1.5
+lightColor: 70ff88
+splashDamageRadius: 25
+hitSound: plasmaboom
+hitShake: 2
+trailWidth: 2
+trailLength: 7
+trailParam: 5
+trailColor: 61ad7eff
+backColor: 61ad7e
+frontColor: 70ff88
+status: adc-acid-corrosion
+statusDuration: 60
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 25
+strokeFrom: 4
+strokeTo: 0
+lifetime: 20
+colorFrom: 70ff88ff
+colorTo: 70ff88ff
+}
+{
+type: ParticleEffect
+particles: 6
+cone: 360
+length: 13
+lifetime: 50
+sizeFrom: 4
+sizeTo: 0
+colorFrom: 61ad7e
+colorTo: 61ad7e00
+}
+]
+}
+despawnffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 25
+strokeFrom: 4
+strokeTo: 0
+lifetime: 20
+colorFrom: 70ff88ff
+colorTo: 70ff88ff
+}
+{
+type: ParticleEffect
+particles: 6
+cone: 360
+length: 13
+lifetime: 50
+sizeFrom: 4
+sizeTo: 0
+colorFrom: 61ad7e
+colorTo: 61ad7e00
+}
+]
+}
+homingPower: 3
+homingRange: 30
+homingDelay: 3
 pierce: true
-pierceBuilding: true
-hittable: false
-reflectable: false
-hitEffect: none
-despawnEffect: none
-hitColor: 98ffa9
+pierceCap: 3
 }
 }
 research: toxin

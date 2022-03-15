@@ -1,0 +1,53 @@
+
+health: 700
+size: 2
+category: turret
+research: shock
+requirements: [
+copper/125
+lead/85
+titanium/60
+charged-lead/60
+]
+range: 150
+shootType: {
+type: LightningBulletType
+damage: 45
+lightningLength: 35
+lightningColor: f3e979
+lifetime: 75
+lightningType: {
+width: 9
+height: 9
+speed: 0
+damage: 5
+hitEffect: none
+despawnEffect: none
+lightningLength: 5
+lightningColor: f3e979
+lightning: 1
+lightningCone: 180
+lightningDamage: 8
+fragBullets: 1
+fragCone: 180
+fragBullet: {
+type: LightningBulletType
+damage: 8
+lightningLength: 10
+lightningColor: f3e979
+}
+}
+statusDuration: 300
+}
+health: 600
+reloadTime: 100
+shots: 2
+shootCone: 60
+rotateSpeed: 7
+spread: 6
+powerUse: 6.4
+targetGround: true
+targetAir: true
+heatColor: FF8900
+recoilAmount: 2
+shootSound: spark

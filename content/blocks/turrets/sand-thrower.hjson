@@ -8,7 +8,7 @@ height: 12
 speed: 6
 lifetime: 30
 damage: 10
-sprite: adc-circle-bullet
+sprite: adc-sand-shard
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
 pierce: true
@@ -17,6 +17,7 @@ fragBullets: 4
 fragCone: 70
 status: slow
 statusDuration: 70
+spin: 5
 hitShake: 2
 fragBullet: {
 type: BasicBulletType
@@ -30,7 +31,8 @@ despawnEffect: flakExplosion
 }
 }
 creostone: {
-sprite: adc-circle-bullet
+sprite: adc-creostone-shard
+spin: 3
 width: 13
 height: 13
 speed: 5.5

@@ -1,0 +1,185 @@
+
+size: 3
+category: turret
+requirements: [
+lead/200
+creostone/215
+titanium/160
+silicon/80
+]
+research: cloud-breaker
+reloadTime: 300
+recoilAmount: 4
+cooldown: 0.001
+restitution: 0.001
+shootCone: 70
+inaccuracy: 8
+health: 2000
+maxAmmo: 40
+ammoPerShot: 5
+ammoUseEffect: none
+range: 300
+shootSound: artillery
+shootEffect: shootBig
+targetAir: false
+ammoTypes: {
+pyratite: {
+width: 16
+height: 16
+sprite: adc-bomb
+drag: 0.03
+keepVelocity: false
+speed: 5
+lifetime: 260
+splashDamage: 200
+collidesAir: false
+collidesTiles: false
+damage: 0
+shrinkY: 0
+hitSound: explosion
+splashDamageRadius: 35
+status: burning
+statusDuration: 225
+incendChance: 0.8
+incendAmount: 1
+incendSpread: 10
+despawnHit: true
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+region: adc-spinner
+spin: 7
+lifetime: 100
+sizeFrom: 30
+sizeTo: 0
+length: 0
+particles: 1
+colorFrom: f6e096
+colorTo: f6e096
+}
+{
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 50
+waveLife: 17
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 55
+sparkLen: 30
+smokeSize: 5
+smokeRad: 55
+waveColor: f6e096
+smokeColor: db661c
+}
+]
+}
+}
+blast-compound: {
+width: 16
+height: 16
+sprite: adc-bomb
+drag: 0.03
+keepVelocity: false
+speed: 5
+lifetime: 320
+splashDamage: 320
+collidesAir: false
+collidesTiles: false
+damage: 0
+shrinkY: 0
+hitSound: explosion
+splashDamageRadius: 40
+status: super-melting
+statusDuration: 225
+despawnHit: true
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+region: adc-spinner
+spin: 7
+lifetime: 100
+sizeFrom: 30
+sizeTo: 0
+length: 0
+particles: 1
+colorFrom: eb8778
+colorTo: eb8778
+}
+{
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 50
+waveLife: 17
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 55
+sparkLen: 30
+smokeSize: 5
+smokeRad: 55
+waveColor: eb8778
+smokeColor: bd5553
+}
+]
+}
+}
+creostone: {
+width: 16
+height: 16
+sprite: adc-bomb
+drag: 0.03
+keepVelocity: false
+speed: 5
+lifetime: 290
+splashDamage: 200
+collidesAir: false
+collidesTiles: false
+damage: 0
+shrinkY: 0
+hitSound: explosion
+splashDamageRadius: 50
+status: super-melting
+statusDuration: 225
+incendAmount: 2
+incendChance: 0.8
+makeFire: true
+despawnHit: true
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+region: adc-spinner
+spin: 7
+lifetime: 100
+sizeFrom: 30
+sizeTo: 0
+length: 0
+particles: 1
+colorFrom: eb8778
+colorTo: eb8778
+}
+{
+type: ExplosionEffect
+sparks: 5
+smokes: 5
+waveRad: 50
+waveLife: 17
+waveStroke: 4
+sparkStroke: 4
+sparkRad: 55
+sparkLen: 30
+smokeSize: 5
+smokeRad: 55
+waveColor: eb8778
+smokeColor: bd5553
+}
+]
+}
+}
+}

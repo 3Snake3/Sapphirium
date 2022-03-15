@@ -6,8 +6,8 @@ titanium/45
 ]
 range: 270
 health: 1650
-chargeTime: 90
-chargeMaxDelay: 80
+chargeTime: 170
+chargeMaxDelay: 160
 outlineColor: 1d1d21
 chargeEffects: 7
 recoilAmount: 3
@@ -68,7 +68,54 @@ colorTo: 8a3340
 }
 hitSize: 5
 lifetime: 20
-width: 23
+width: 24
+shootEffect: {
+type: ParticleEffect
+particles: 3
+length: 270
+cone: 0
+lifetime: 20
+sizeFrom: 15
+sizeTo: 0
+colorFrom: ff6e6e
+colorTo: ff6e6e
+region: adc-sharp-laser
+}
+fragBullets: 1
+fragCone: 0
+fragBullet: {
+width: 12
+height: 22
+damage: 15
+lifetime: 600
+speed: 0
+pierce: true
+status: bleeding
+backColor: 8a3340
+frontColor: ff6e6e
+hitEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 7
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: ff6e6e
+colorTo: 8a3340
+}
+despawnEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 7
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: ff6e6e
+colorTo: 8a3340
+}
+}
 length: 270
 damage: 300
 collidesAir: true

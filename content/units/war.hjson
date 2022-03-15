@@ -1,0 +1,181 @@
+type: payload
+health: 8350
+armor: 18
+hitSize: 36
+speed: 2
+lowAltitude: true
+outlineColor: 282b3b
+rotateSpeed: 2.5
+flags: [generator, reactor]
+Immunities: [melting]
+accel: 0.06
+drag: 0.017
+flying: true
+engineOffset: 12
+engineSize: 6
+payloadCapacity: 9
+buildSpeed: 3.2
+buildBeamOffset: 7.5
+commandLimit: 4
+weapons: [
+{
+name: war-cannon
+x: 0
+y: 13
+mirror: false
+top: false
+reload: 60
+recoil: 0
+shootSound: artillery
+bullet: {
+shootEffect: {
+type: ParticleEffect
+particles: 12
+cone: 360
+length: 10
+line: true
+sizeFrom: 16
+sizeTo: 0
+strokeFrom: 3
+strokeTo: 0
+colorFrom: a488eb
+colorTo: a488eb
+lifetime: 40
+}
+smokeEffect: shootBigSmoke2
+lifetime: 60
+sprite: circle-bullet
+backColor: 5c5e9e
+frontColor: a488eb
+width: 16
+height: 16
+speed: 5
+trailLength: 20
+trailWidth: 4
+trailColor: 5c5e9e
+splashDamage: 80
+splashDamageRadius: 125
+hitShake: 4
+hitSound: explosion
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+status: spore-slowed
+statusDuration: 180
+}
+}
+{
+name: triumph-artillery
+x: 8.5
+y: 7.25
+reload: 45
+recoil: 4
+rotate: true
+rotateSpeed: 4
+alternate: true
+shake: 3
+shootSound: artillery
+shootEffect: shootBig
+ejectEffect: casing2
+bullet: {
+width: 18
+height: 18
+splashDamage: 60
+splashDamageRadius: 60
+damage: 0
+speed: 5
+lifetime: 60
+backColor: 5c5e9e
+frontColor: a488eb
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+buildingDamageMultiplier: 0.25
+status: spore-slowed
+statusDuration: 180
+}
+}
+{
+name: triumph-missile
+y: 2.5
+x: 19.25
+reload: 30
+recoil: 2
+shootSound: missile
+rotate: true
+rotateSpeed: 6
+alternate: true
+bullet: {
+type: MissileBulletType
+width: 10
+height: 15
+damage: 40
+homingRange: 60
+status: spore-slowed
+statusDuration: 180
+backColor: 5c5e9e
+frontColor: a488eb
+trailColor: 5c5e9e
+drag: -0.09
+speed: 1
+lifetime: 60
+sprite: adc-sharp-missile
+splashDamage: 45
+splashDamageRadius: 45
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+keepVelocity: false
+weaveScale: 6
+weaveMag: 2.5
+buildingDamageMultiplier: 0.25
+pierceBuilding: true
+pierce: true
+pierceCap: 3
+}
+}
+{
+name: triumph-missile
+y: -4.5
+x: 12.5
+reload: 30
+recoil: 2
+shootSound: missile
+rotate: true
+rotateSpeed: 6
+alternate: true
+bullet: {
+type: MissileBulletType
+width: 10
+height: 15
+damage: 40
+homingRange: 60
+status: spore-slowed
+statusDuration: 180
+backColor: 5c5e9e
+frontColor: a488eb
+trailColor: 5c5e9e
+drag: -0.09
+speed: 1
+lifetime: 60
+sprite: adc-sharp-missile
+splashDamage: 45
+splashDamageRadius: 45
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+keepVelocity: false
+weaveScale: 6
+weaveMag: 2.5
+buildingDamageMultiplier: 0.25
+pierce: true
+pierceCap: 3
+pierceBuilding: true
+}
+}
+]
+abilities: [
+{
+type: StatusFieldAbility
+duration: 180
+reload: 300
+range: 60
+effect: adc-spore-shield
+}
+]

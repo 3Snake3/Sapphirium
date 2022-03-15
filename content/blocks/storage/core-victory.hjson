@@ -1,0 +1,16 @@
+
+health: 12500
+itemCapacity: 20000
+unitCapModifier: 40
+unitType: fight
+size: 6
+researchCostMultiplier: 0.18
+category: effect
+requirements: [
+lead/9000
+titanium/8000
+silicon/8000
+creostone/6500
+plastanium/6500
+]
+research: core-nucleus

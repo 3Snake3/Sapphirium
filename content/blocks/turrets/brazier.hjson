@@ -7,6 +7,7 @@ objectives: [
 scorch, tsunami
 ]
 }
+shootLength: 1.25
 reloadTime: 6
 recoilAmount: 0
 inaccuracy: 5
@@ -48,18 +49,18 @@ interp: circleOut
 particles: 15
 sizeFrom: 4
 sizeTo: 0
-lifetime: 43
+lifetime: 50
 length: 205
 cone: 5
 colorFrom: d99e6a
-colorTo: a86d39
+colorTo: a86d3970
 }
 shootEffect: {
 type: ParticleEffect
 particles: 30
-sizeFrom: 5.5
+sizeFrom: 6.6
 sizeTo: 0
-lifetime: 43
+lifetime: 50
 length: 205
 interp: circleOut
 cone: 5
@@ -81,8 +82,8 @@ colorTo: d99e6a
 }
 health: 980
 requirements: [
-graphite/230
-titanium/230
-thorium/125
+copper/220
+silicon/200
+titanium/125
 plastanium/80
 ]

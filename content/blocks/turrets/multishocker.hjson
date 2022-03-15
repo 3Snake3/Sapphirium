@@ -3,7 +3,7 @@ size: 2
 category: turret
 research: {
 parent: parallax
-objectives: [swarmer, indigo]
+objectives: [swarmer]
 }
 requirements: [
 lead/60

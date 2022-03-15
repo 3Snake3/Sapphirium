@@ -1,0 +1,36 @@
+requirements: [
+globium/1
+silicon/1
+titanium/1
+]
+category: distribution
+health: 125
+itemCapacity: 25
+loadEffect: {
+type: ParticleEffect
+particles: 4
+sizeFrom: 3
+sizeTo: 0
+lifetime: 20
+length: 1
+cone: 80
+colorFrom: 8ca4f5
+colorTo: 6a75c4
+region: adc-rhombus
+}
+unloadEffect: {
+type: ParticleEffect
+particles: 4
+sizeFrom: 3
+sizeTo: 0
+lifetime: 20
+length: 1
+cone: 80
+colorFrom: 8ca4f5
+colorTo: 6a75c4
+region: adc-rhombus
+}
+research: {
+parent: gc
+objectives: [plastanium-conveyor]
+}

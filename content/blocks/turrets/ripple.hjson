@@ -23,4 +23,27 @@ trailColor: bd5553
 status: super-melting
 statusDuration: 220
 }
+surge-stone: {
+type: ArtilleryBulletType
+speed: 2.5
+damage: 24
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+knockback: 0.9
+lifetime: 80
+width: 15
+height: 15
+collidesTiles: false
+splashDamageRadius: 44
+splashDamage: 65
+backColor: f3e979
+frontColor: fff8e8
+lightning: 2
+lightningLength: 7
+lightningColor: f3e979
+lightningDamage: 10
+trailColor: f3e979
+status: shocked
+statusDuration: 220
+}
 }

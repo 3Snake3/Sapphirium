@@ -29,7 +29,7 @@ pierceBuilding: true
 absorbable: false
 hittable: false
 reflectable: false
-status: shocked
+status: super-freezing
 statusDuration: 85
 lightning: 6
 lightningLength: 15
@@ -55,7 +55,7 @@ colorTo: 757fcb
 }
 }
 category: turret
-research: impaler
+research: bow
 requirements: [
 copper/1200
 silicon/335

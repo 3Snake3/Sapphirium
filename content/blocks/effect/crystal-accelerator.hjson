@@ -1,4 +1,4 @@
-type: OverdriveProjector
+
 requirements: [
 lead/280
 titanium/200
@@ -18,8 +18,7 @@ consumes: {
 power: 13.5
 items: {
 items: [
-phase-fabric/2
-silicon/1
+granate/3
 ]
 }
 }

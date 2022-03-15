@@ -1,0 +1,9 @@
+
+name: overfreezing
+speedMultiplier: 0.1
+reloadMultiplier: 0.15
+damage: 0.025
+opposites: [burning, melting]
+affinities: [blasted, shocked]
+transitionDamage: 20
+effect: freezing

@@ -1,4 +1,4 @@
-type: ThermalGenerator
+
 category: power
 research: {
 parent: hydrogenerator

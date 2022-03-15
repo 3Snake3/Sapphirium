@@ -1,12 +1,12 @@
-type: SolarGenerator
+
 size: 4
 health: 700
 hasPower: true
 powerProduction: 1.83
 requirements: [
-titanium/185
-silicon/220
-graphite/70
+lead/145
+silicon/185
+titanium/80
 phase-fabric/45
 ]
 category: power

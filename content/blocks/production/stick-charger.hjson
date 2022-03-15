@@ -1,17 +1,16 @@
-type: GenericCrafter
+
 consumes: {
 power: 1.7
-liquid: surge-mass/0.3
+liquid: surge-mass/0.1
 items: {
 items: [
-graphite/3
+graphite/2
 ]
 }
 }
 outputItem: charged-stick/1
-craftTime: 65
+craftTime: 60
 drawer: DrawSmelter
-liquidCapacity: 24
 craftEffect: {
 type: ParticleEffect
 particles: 6

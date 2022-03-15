@@ -11,40 +11,7 @@ const weakened = extendContent(StatusEffect, "weakened", {
     color: Pal.gray      
 })
 
-const superMelting = extendContent(StatusEffect, "super-melting", {
-            
-    init(){
-                
-        this.opposite(StatusEffects.wet, StatusEffects.freezing, superFreezing)
-                
-                
-        this.affinity(StatusEffects.tarred, ((unit, time, newTime, result) => {
-                    
-            unit.damagePierce(this.transitionDamage);
-            Fx.burning.at(unit.x + Mathf.range(unit.bounds() / 2), unit.y + Mathf.range(unit.bounds() / 2));
-                    
-            result.set(superMelting, time);
-        }))
-                
-                
-        this.affinity(StatusEffects.melting, ((unit, time, newTime, result) => {
-                    
-            unit.damagePierce(this.transitionDamage);
-            Fx.melting.at(unit.x + Mathf.range(unit.bounds() / 2), unit.y + Mathf.range(unit.bounds() / 2));
-                    
-            result.set(superMelting, time);
-        }))
-                
-                
-        this.affinity(StatusEffects.burning, ((unit, time, newTime, result) => {
-                    
-            unit.damagePierce(this.transitionDamage);
-            Fx.burning.at(unit.x + Mathf.range(unit.bounds() / 2), unit.y + Mathf.range(unit.bounds() / 2));
-                    
-            result.set(superMelting, time);
-        }))
-    },
-            
+const superMelting = extend(StatusEffect, "super-melting", {
     healthMultiplier: 0.5,
     speedMultiplier: 0.5,
     reloadMultiplier: 1.5,
@@ -64,14 +31,18 @@ const superFreezing = extendContent(StatusEffect, "super-freezing", {
                     
             unit.damagePierce(this.transitionDamage);
             Fx.freezing.at(unit.x + Mathf.range(unit.bounds() / 2), unit.y + Mathf.range(unit.bounds() / 2));
+            /*if(unit.speed > 0){
+            	unit.speed = 0;
+           }*/
                     
-            result.set(superFreezing, time);
+            result.set(superFreezing, Math.min(time + result.time, 400));
         }))
     },
       
     speedMultiplier: 0.001,
     disarm: true,
     transitionDamage: 10,
+    reactive: true,
     damage: 0.5,
     effect: Fx.freezing,
     color: Color.valueOf("6fdded")
@@ -96,7 +67,7 @@ init(){
             unit.damagePierce(this.transitionDamage);
             Fx.burning.at(unit.x + Mathf.range(unit.bounds() / 2), unit.y + Mathf.range(unit.bounds() / 2));
                     
-            result.set(flaming, time);
+            result.set(flaming, Math.min(time + result.time, 400));
         }))
     }
 });
@@ -117,5 +88,6 @@ module.exports = {
 	weakened: weakened,
 	superMelting: superMelting,
 	superFreezing: superFreezing,
-	stun: stun
+	stun: stun,
+	bleeding: bleeding,
 }

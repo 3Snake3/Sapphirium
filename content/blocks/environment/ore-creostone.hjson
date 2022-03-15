@@ -1,4 +1,4 @@
-type: OreBlock
+
 itemDrop: creostone
 oreDefault: true
 oreThreshold: 0.908

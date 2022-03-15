@@ -2,18 +2,19 @@
 category: turret
 size: 2
 
-reloadTime: 15
+reloadTime: 60
 recoilAmount: 0
 rotateSpeed: 4
 
 range: 115
 xRand: 3
 powerUse: 4.5
-shootCone: 360
+shootCone: 30
 shootSound: spark
 smokeEffect: none
-shots: 2
-spread: 360
+shots: 4
+burstSpacing: 5
+spread: 8
 
 health: 650
 
@@ -25,14 +26,14 @@ lightningLength: 19.16
 lightningColor: f3e979
 shootEffect: none
 hitSound: spark
-fragBullets: 1
-fragCone: 0
-fragBullet: {
+lightningType: {
 type: LightningBulletType
-damage: 15
+damage: 5
 lifetime: 10
-lightningLength: 19.16
+lightningLength: 7
 lightningColor: f3e979
+shootEffect: none
+hitSound: spark
 }
 }
 

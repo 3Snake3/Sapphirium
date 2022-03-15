@@ -5,14 +5,14 @@ size: 2
 hasItems: true
 hasLiquids: false
 itemDuration: 120
-powerProduction: 1.2
+powerProduction: 0.7
 ambientSound: steam
 ambientSoundVolume: 0.04
 
 requirements: [
-  copper/65
-  lead/60
-  graphite/45
+  copper/60
+  lead/40
+  graphite/35
 ]
 
 consumes: {

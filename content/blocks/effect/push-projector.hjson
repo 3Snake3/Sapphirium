@@ -1,4 +1,4 @@
-type: PowerTurret
+
 reloadTime: 180
 size: 3
 recoilAmount: 0
@@ -35,16 +35,6 @@ hittable: false
 reflectable: false
 speed: 6
 lifetime: 25
-shootEffect: {
-type: WaveEffect
-sides: 4
-sizeFrom: 0
-sizeTo: 180
-strokeFrom: 4
-strokeTo: 0
-lifetime: 25
-rotation: 90
-}
 smokeEffect: none
 }
 range: 150
@@ -58,5 +48,4 @@ phase-fabric/40
 ]
 research: {
 parent: force-projector
-objectives: [core-nucleus]
 }

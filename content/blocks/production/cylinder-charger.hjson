@@ -1,9 +1,9 @@
-type: AttributeCrafter
+
 attribute: heat
 maxBoost: 3.5
 consumes: {
 power: 3
-liquid: surge-mass/0.6
+liquid: surge-mass/0.4
 items: {
 items: [
 charged-lead/2
@@ -12,8 +12,8 @@ charged-ingot/2
 ]
 }
 }
-outputItem: charged-cylinder/2
-craftTime: 145
+outputItem: charged-cylinder/3
+craftTime: 130
 drawer: {
 type: DrawArcSmelter
 flameColor: fff587
@@ -24,8 +24,8 @@ circleStroke: 1.5
 alpha: 0.76
 particles: 30
 }
-itemCapacity: 14
-liquidCapacity: 30
+itemCapacity: 16
+liquidCapacity: 25
 craftEffect: {
 type: ParticleEffect
 particles: 6

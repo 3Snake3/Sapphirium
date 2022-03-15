@@ -1,0 +1,137 @@
+reloadTime: 180
+recoilAmount: 4
+powerUse: 12
+size: 4
+outlineColor: 1d1d21
+shootShake: 6
+coolantUsage: 1
+shootLength: 2
+shots: 4
+burstSpacing: 8
+shootCone: 24
+range: 400
+shootSound: railgun
+shootType: {
+type: PointBulletType
+shootEffect: {
+type: MultiEffect
+effects: [{
+type: WaveEffect
+sides: 0
+sizeFrom: 20
+sizeTo: 20
+strokeFrom: 3.5
+strokeTo: 0
+colorFrom: ff6e6e
+colorTo: ff6e6e
+lifetime: 22
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 24
+sizeFrom: 45
+colorFrom: ff6e6e
+colorTo: ff6e6e
+region: adc-rail-hit
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 24
+sizeFrom: 45
+colorFrom: ff6e6e
+colorTo: ff6e6e
+region: adc-rail-shoot
+}]
+}
+hitEffect: {
+type: MultiEffect
+effects: [{
+type: WaveEffect
+sides: 0
+sizeFrom: 20
+sizeTo: 20
+strokeFrom: 3.5
+strokeTo: 0
+colorFrom: ff6e6e
+colorTo: ff6e6e
+lifetime: 22
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 24
+sizeFrom: 20
+colorFrom: ff6e6e
+colorTo: ff6e6e
+region: adc-pierce2
+}]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [{
+type: WaveEffect
+sides: 0
+sizeFrom: 20
+sizeTo: 20
+strokeFrom: 3.5
+strokeTo: 0
+colorFrom: ff6e6e
+colorTo: ff6e6e
+lifetime: 22
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 24
+sizeFrom: 20
+colorFrom: ff6e6e
+colorTo: ff6e6e
+region: adc-rail-hit
+}]
+}
+smokeEffect: smokeCloud
+trailEffect: {
+type: MultiEffect
+effects: [{
+type: ParticleEffect
+length: 0
+particles: 1
+lifetime: 24
+sizeFrom: 20
+colorFrom: ff6e6e
+colorTo: ff6e6e
+region: adc-sharp-traill
+}
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 25
+sizeTo: 0
+lifetime: 24
+strokeFrom: 3
+strokeTo: 0
+colorFrom: ff6e6e
+colorTo: ff6e6e
+}]
+}
+damage: 500
+speed: 400
+trailSpacing: 30
+buildingDamageMultiplier: 0.2
+hitShake: 6
+}
+category: turret
+requirements: [
+lead/1230
+granate/890
+tinorium/780
+silicon/700
+surge-alloy/560
+]
+research: scarlet-star

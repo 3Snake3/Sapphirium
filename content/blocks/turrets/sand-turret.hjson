@@ -5,11 +5,11 @@ type: ArtilleryBulletType
 width: 11
 height: 11
 splashDamageRadius: 25
-splashDamage: 30
+splashDamage: 15
 knockback: 0.3
 collidesTiles: false
-lifetime: 80
-speed: 3
+lifetime: 45
+speed: 4
 collidesAir: false
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
@@ -24,20 +24,41 @@ height: 7
 damage: 5
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
-speed: 6
+speed: 4
 lifetime: 20
 }
 }
+coal: {
+type: ArtilleryBulletType
+width: 11
+height: 11
+splashDamageRadius: 25
+splashDamage: 25
+knockback: 0.4
+collidesTiles: false
+lifetime: 60
+speed: 3
+collidesAir: false
+status: adc-flammability
+ammoMultiplier: 5
+reloadMultiplier: 0.8
+frontColor: 636363
+backColor: 313131
+trailColor: 313131
+trailChance: 0.5
+}
 }
 targetAir: false
-reloadTime: 80
+reloadTime: 120
 recoilAmount: 3
-range: 240
+range: 180
 inaccuracy: 3
-shots: 2
+maxAmmo: 60
+ammoPerShot: 4
+shots: 3
 spread: 4
 rotateSpeed: 8
-shootCone: 15
+shootCone: 25
 shootSound: bang
 requirements: [
 copper/25

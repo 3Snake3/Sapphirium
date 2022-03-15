@@ -1,4 +1,4 @@
-type: GenericCrafter
+
 drawer: DrawWeave
 size: 3
 craftTime: 100
@@ -7,7 +7,7 @@ craftEffect: smeltsmoke
 hasItems: true
 hasLiquids: true
 hasPower: true
-itemCapacity: 30
+itemCapacity: 32
 liquidCapacity: 30
 consumes: {
 power: 8

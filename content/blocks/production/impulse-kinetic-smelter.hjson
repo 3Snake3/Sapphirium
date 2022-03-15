@@ -1,0 +1,44 @@
+
+attribute: heat
+size: 4
+craftTime: 145
+outputItem: surge-alloy/4
+craftEffect: {
+type: ExplosionEffect
+lifetime: 30
+waveRad: 20
+waveColor: f3e979
+waveLife: 10
+smokeRad: 30
+smokeColor: ffffff
+smokes: 6
+sparks: 6
+sparkRad: 30
+sparkStroke: 2
+sparkLen: 3.5
+sparkColor: f3e979
+}
+itemCapacity: 40
+consumes: {
+power: 7
+liquid: slag/0.4
+items: {
+items: [
+copper/7
+lead/6
+titanium/5
+silicon/6
+]
+}
+}
+hasPower: true
+hasLiquids: true
+drawer: DrawSmelter
+category: crafting
+requirements: [
+silicon/160 
+lead/220
+thorium/170
+plastanium/120
+]
+research: alloy-smelter

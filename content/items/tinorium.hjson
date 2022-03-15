@@ -1,0 +1,5 @@
+research: {
+parent: graphite
+objectives: [spore-pod]
+}
+color: a488eb
