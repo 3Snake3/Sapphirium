@@ -26,6 +26,3 @@ This mod adds a lot of additional content and small changes to some vanilla spri
 # My discord username and server:
 Creator - `Snake#2132`
 <br>[Server](https://discord.gg/zRER9xz6YH)
-
-
-
