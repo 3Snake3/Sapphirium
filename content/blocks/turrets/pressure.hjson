@@ -8,19 +8,19 @@ rotateSpeed: 6
 health: 760
 shootCone: 24
 powerUse: 8
-range: 250
+range: 255
 shootType: {
 type: LaserBoltBulletType
 width: 3
 height: 10
 speed: 6
-lifetime: 42
+lifetime: 42.5
 collidesTeam: true
 healPercent: 12.5
 backColor: 98ffa9
 frontColor: ffffff
 damage: 25
-fragBullets: 4
+fragBullets: 5
 fragCone: 360
 fragBullet: {
 width: 0.001
@@ -30,18 +30,20 @@ splashDamage: 0
 collides: false
 collidesTiles: false
 speed: 10
-lifetime: 15
+lifetime: 5
 pierce: true
 pierceBuilding: true
 fragBullets: 1
 fragCone: 0
 fragAngle: 180
+hitEffect: none
+despawnEffect: none
 fragBullet: {
 type: LaserBoltBulletType
 width: 3
 height: 10
 speed: 6
-lifetime: 42
+lifetime: 42.5
 collidesTeam: true
 healPercent: 12.5
 backColor: 98ffa9
@@ -55,7 +57,7 @@ size: 2
 category: turret
 research: pulse
 requirements: [
-copper/115
-lead/50
+copper/85
+silicon/65
 titanium/50
 ]

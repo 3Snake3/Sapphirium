@@ -6,7 +6,7 @@ titanium/670
 graphite/340
 plastanium/240
 silicon/140
-surge-alloy/160
+surge-alloy/115
 ]
 reloadTime: 45
 recoilAmount: 4
@@ -17,7 +17,7 @@ shots: 6
 burstSpacing: 7
 alternate: true
 xRand: 7
-range: 360
+range: 363
 powerUse: 10
 shootEffect: {
 type: MultiEffect
@@ -39,7 +39,7 @@ type: MissileBulletType
 width: 13
 height: 20
 speed: 5
-lifetime: 72
+lifetime: 72.6
 weaveScale: 6
 weaveMag: 3
 damage: 0

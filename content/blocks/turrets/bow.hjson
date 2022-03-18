@@ -7,7 +7,7 @@ lead/120
 silicon/70
 titanium/70
 ]
-reloadTime: 100
+reloadTime: 70
 targetGround: false
 shootEffect: {
 type: MultiEffect

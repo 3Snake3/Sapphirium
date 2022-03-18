@@ -47,9 +47,9 @@ smokeEffect: none
 despawnEffect: none
 }
 requirements: [
-graphite/320
-titanium/320
-thorium/260
-silicon/200
-phase-fabric/120
+copper/240
+graphite/200
+titanium/200
+silicon/120
+thorium/65
 ]

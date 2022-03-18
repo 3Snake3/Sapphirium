@@ -3,7 +3,6 @@ requirements: [
 graphite/120
 silicon/80
 titanium/65
-cinderblock/40
 ]
 category: turret
 size: 2

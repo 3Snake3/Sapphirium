@@ -112,10 +112,10 @@ toColor: bfecff
 }
 category: turret
 requirements: [
-copper/125
-graphite/80
-thorium/60
-creostone/60
+copper/180
+graphite/120
+thorium/80
+creostone/40
 ]
 research: fuse
 

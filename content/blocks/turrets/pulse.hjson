@@ -19,8 +19,8 @@ backColor: ffffff
 frontColor: 98ffa9
 }
 requirements: [
-copper/60
-plastanium/20
+copper/35
+silicon/25
 ]
 category: turret
 research: core-shard

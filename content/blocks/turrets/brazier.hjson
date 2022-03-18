@@ -13,7 +13,7 @@ recoilAmount: 0
 inaccuracy: 5
 rotateSpeed: 5
 cooldown: 0.10
-range: 165
+range: 170
 coolantMultiplier: 2
 powerUse: 4
 shootCone: 25

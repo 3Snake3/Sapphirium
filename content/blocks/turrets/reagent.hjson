@@ -2,9 +2,8 @@
 requirements: [
 graphite/220
 silicon/180
-plastanium/180
-titanium/135
-cinderblock/60
+plastanium/135
+titanium/85
 ]
 category: turret
 size: 3
@@ -14,7 +13,7 @@ powerUse: 8
 inaccuracy: 8
 spread: 5
 xRand: 6
-range: 320
+range: 325
 health: 1250
 shootSound: shootBig
 unitSort: strongest
@@ -34,7 +33,7 @@ type: MissileBulletType
 width: 15
 height: 20
 speed: 6
-lifetime: 53.33
+lifetime: 55
 splashDamage: 80
 splashDamageRadius: 60
 sprite: adc-acid-bullet

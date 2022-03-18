@@ -6,17 +6,17 @@ parent: parallax
 objectives: [swarmer]
 }
 requirements: [
-lead/60
-silicon/45
-globium/35
-plastanium/25
+lead/80
+titanium/80
+silicon/60
+plastanium/20
 ]
 reloadTime: 40
 powerUse: 1.5
 shots: 3
 burstSpacing: 8
 inaccuracy: 8
-range: 235
+range: 240
 xRand: 6
 health: 1400
 shootEffect: lightningShoot
@@ -27,7 +27,7 @@ sprite: adc-spear-bullet
 width: 8
 height: 12
 speed: 4.4
-lifetime: 53.40
+lifetime: 55
 backColor: a9d8ff
 frontColor: ffffff
 weaveScale: 8

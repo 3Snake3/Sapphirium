@@ -16,10 +16,10 @@ size: 3
 targetAir: true
 shootSound: laser
 requirements: [
+copper/220
 titanium/180
-silicon/120
-plastanium/70
-phase-fabric/45
+silicon/145
+thorium/80
 ]
 category: turret
 research: north
