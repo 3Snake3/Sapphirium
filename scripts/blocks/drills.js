@@ -48,7 +48,7 @@ draw(){
       Draw.alpha(Mathf.absin(this.totalProgress, glowScale, glowAmount) * this.warmup);
       Draw.rect(tm.bottomGlow, this.x, this.y);
       Draw.reset();
-      if(drawSpinSprite){
+      if(this.block.drawSpinSprite){
       Drawf.spinSprite(tm.rotatorRegion, this.x, this.y, this.totalProgress * rotateSpeed);
       Drawf.spinSprite(tm.rotatorRegion2, this.x, this.y, -this.totalProgress * rotateSpeed2);
       }else{
