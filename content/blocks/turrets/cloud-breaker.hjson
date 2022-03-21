@@ -47,7 +47,7 @@ sparkLen: 10
 }
 despawnHit: true
 trailLength: 15
-trailWidth: 10
+trailWidth: 7
 backColor: f68021
 frontColor: f8ad42
 trailColor: f68021
@@ -101,7 +101,7 @@ sparkLen: 10
 }
 despawnHit: true
 trailLength: 15
-trailWidth: 10
+trailWidth: 7
 backColor: e58956
 frontColor: ffd2ae
 trailColor: e58956
@@ -158,7 +158,7 @@ sparkLen: 20
 }
 despawnHit: true
 trailLength: 15
-trailWidth: 10
+trailWidth: 7
 backColor: e58956
 frontColor: ffd2ae
 trailColor: e58956

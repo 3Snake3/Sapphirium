@@ -31,6 +31,6 @@ colorTo: 6a75c4
 region: adc-rhombus
 }
 research: {
-parent: gc
+parent: globium-conveyor
 objectives: [plastanium-conveyor]
 }

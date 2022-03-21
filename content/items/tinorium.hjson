@@ -1,5 +1,5 @@
 research: {
-parent: graphite
+parent: thorium
 objectives: [spore-pod]
 }
 color: a488eb

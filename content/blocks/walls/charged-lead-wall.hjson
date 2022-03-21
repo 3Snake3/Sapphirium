@@ -6,5 +6,5 @@ research: surge-wall
 requirements: [
   charged-lead/35
   silicon/40
-]
+ ]
 group: walls

@@ -11,9 +11,7 @@ shootCone: 360
 range: 30
 shots: 360
 powerUse: 3
-
 group: walls
-
 shootEffect: {
 type: WaveEffect
 sides: 0

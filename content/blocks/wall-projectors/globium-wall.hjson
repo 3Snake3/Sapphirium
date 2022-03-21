@@ -4,7 +4,7 @@ shieldHealth: 800
 cooldownNormal: 1
 phaseRadiusBoost: 0
 phaseShieldBoost: 0
-group: walls
+
 category: defense
 absorbLasers: true
 insulated: true

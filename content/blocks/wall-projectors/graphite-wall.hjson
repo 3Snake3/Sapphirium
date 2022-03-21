@@ -6,11 +6,11 @@ parent: copper-wall-large
 objectives: [
 graphite-press,
 multi-press,
-silicon-smelter
 ]
 }
 reload: 15
 healPercent: 1.5
+group: walls
 range: 40
 baseColor: 96abd9
 phaseColor: 96abd9

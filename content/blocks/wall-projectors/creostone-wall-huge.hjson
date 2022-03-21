@@ -9,12 +9,11 @@ placeableLiquid: true
 category: defense
 researchCostMultiplier: 2.5
 buildCostMultiplier: 2.5
-group: walls
 requirements: [
 creostone/165
 silicon/80
 ]
 research: {
-parent: creotite-wall-turret
+parent: creostone-wall-turret
 objectives: [force-projector]
 }

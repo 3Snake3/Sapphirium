@@ -2,7 +2,7 @@ reloadTime: 45
 recoilAmount: 2
 targetHealing: true
 rotateSpeed: 5
-shake: 0
+shootShake: 0
 shootSound: lasershoot
 shootEffect: shootHeal
 shots: 2
@@ -23,4 +23,4 @@ copper/35
 silicon/25
 ]
 category: turret
-research: core-shard
+research: arc

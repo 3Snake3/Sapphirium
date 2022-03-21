@@ -1,9 +1,11 @@
 
 health: 3000
 recoilAmount: 1.5
-reloadTime: 70
-range: 85
-shootCone: 15
+reloadTime: 120
+shots: 3
+range: 145
+burstSpacing: 4
+shootCone: 45
 targetAir: true
 ammoUseEffect: none
 powerUse: 0.70
@@ -16,11 +18,14 @@ shootType: {
 type: LiquidBulletType
 liquid: cryofluid
 puddleSize: 8
+speed: 2
 orbSize: 6
-damage: 8
+damage: 12
 status: freezing
-lifetime: 45
+statusDuration: 180
+lifetime: 72.5
 pierce: true
+pierceCap: 1
 }
 requirements: [
 cryocube/20
@@ -30,12 +35,4 @@ lead/5
 category: defense
 research: {
 parent: cryocube-wall
-requirements: [
-copper/8500
-graphite/6500
-silicon/4200
-thorium/2450
-phase-fabric/1200
-]
-objectives: [tsunami]
 }

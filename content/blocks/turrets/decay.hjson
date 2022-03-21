@@ -1,7 +1,7 @@
 reloadTime: 200
 recoilAmount: 10
 rotateSpeed: 2.5
-shake: 4
+shootShake: 4
 ammoUseEffect: casing3
 maxAmmo: 65
 ammoPerShot: 4

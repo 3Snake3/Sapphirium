@@ -3,37 +3,49 @@ category: defense
 research: tinorium-wall-large
 requirements: [
 tinorium/85
-silicon/25
+silicon/65
 ]
 size: 3
-reloadTime: 60
-powerUse: 3
-shots: 2
-inaccuracy: 4
+reloadTime: 20
+group: walls
+priority: turret
+powerUse: 6
+shots: 5
+inaccuracy: 8
 shootCone: 45
-burstSpacing: 4
+burstSpacing: 6
+xRand: 6
 rotateSpeed: 4
-recoilAmount: 4
-shootSound: artillery
-range: 240
+recoilAmount: 6
+shootSound: shootBig
+range: 200
 shootType: {
-type: ArtilleryBulletType
-sprite: adc-tinorium-shard
-width: 20
-height: 20
-spin: -5
+type: BasicBulletType
+width: 17
+height: 23
 speed: 4
-lifetime: 60
-splashDamage: 60
-splashDamageRadius: 50
+lifetime: 50
+damage: 45
 status: spore-slowed
 statusDuration: 180
-hitEffect: sapExplosion
-despawnEffect: sapExplosion
 backColor: 6d56bf
 frontColor: bf92f9
-trailColor: 6d56bf
+hitColor: bf92f9
+fragBullets: 6
+fragCone: 90
+fragBullet: {
+type: BasicBulletType
+width: 10
+height: 10
+speed: 4
+lifetime: 15
+damage: 0
+splashDamage: 15
+splashDamageRadius: 25
+status: spore-slowed
+statusDuration: 180
+backColor: 6d56bf
+frontColor: bf92f9
 hitColor: bf92f9
 }
-shootLength: 1
-group: walls
+}

@@ -4,7 +4,6 @@ const items = require("items");
 const creostoneWall = extend(OverdriveProjector, "creostone-wall", {});
 
 const creostoneWT = extend(PowerTurret, "creostone-wall-turret", {
-flags: EnumSet.of(BlockFlag.turret),
 });
 
 const creostoneProjector = new JavaAdapter(ForceProjector, {
@@ -344,34 +343,63 @@ granateWallLarge.buildType = () => extendContent(Wall.WallBuild, granateWallLarg
 }
 });
 
+/**var lLength = 13;
+var lColor = Pal.surge;
+var lDamage = 22;
+var lSound = Sounds.spark;
+var lChance = 0.15;
+const lType = extend(BasicBulletType, {
+	width: 8,
+	height: 8,
+speed: 0,
+lifetime: 10,
+damage: 5,
+backColor: Pal.surge,
+frontColor: Color.white,
+status: StatusEffects.shocked,
+statusDuration: 80,
+});
+const lLightning = extend(LightningBulletType, {
+	damage: lDamage,
+	lightningLength: lLength,
+	lightningColor: lColor,
+	lightningType: lType,
+});
+const armedSurgeStoneWall = extend(PowerTurret, "armed-surge-stone-wall", {
+	collision(bullet){
+            this.super$collision(bullet);
+            
+            //create lightning if necessary
+            if(lChance > 0){
+                if(Mathf.chance(lChance)){
+                    ILightning.create(this.team, lColor, lDamage, this.x, this.y, bullet.rotation() + 180, lLength);
+                    lightningSound.at(tile, Mathf.random(0.9f, 1.1f));
+                }
+            }**/
+	
+
 const graphiteWall = extend(MendProjector, "graphite-wall", {});
 
-const graphiteWT = extend(PowerTurret, "graphite-wall-turret", {
-flags: EnumSet.of(BlockFlag.turret),
-});
+const graphiteWT = extend(PowerTurret, "graphite-wall-turret", {});
 
 const siliconWall = extend(Wall, "silicon-wall", {});
 
 const siliconWT = extend(PowerTurret, "silicon-wall-turret", {
-flags: EnumSet.of(BlockFlag.turret),
 });
 
 const cryocubeWall = extend(PowerTurret, "cryocube-wall", {});
 
 const cryocubeWT = extend(PowerTurret, "cryocube-wall-turret", {
-flags: EnumSet.of(BlockFlag.extinguisher, BlockFlag.turret),
 });
 
 const icecubeWall = extend(Wall, "ice-cube-wall", {});
 
 const icecubeWT = extend(PowerTurret, "ice-cube-wall-turret", {
-flags: EnumSet.of(BlockFlag.turret),
 });
 
 const cinderblockWall = extend(Wall, "cinderblock-wall", {});
 
 const cinderblockWT = extend(PowerTurret, "cinderblock-wall-turret", {
-flags: EnumSet.of(BlockFlag.turret),
 });
 
 var lightningChance = 0.08;
