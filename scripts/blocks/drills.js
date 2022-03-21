@@ -37,6 +37,7 @@ icons(){
   }
 });
 
+var drawSpinSprite = true;
 tm.buildType = () => extendContent(AttributeCrafter.AttributeCrafterBuild, tm, {
 draw(){
       var rotateSpeed = 5;
@@ -48,7 +49,7 @@ draw(){
       Draw.alpha(Mathf.absin(this.totalProgress, glowScale, glowAmount) * this.warmup);
       Draw.rect(tm.bottomGlow, this.x, this.y);
       Draw.reset();
-      if(this.block.drawSpinSprite){
+      if(drawSpinSprite){
       Drawf.spinSprite(tm.rotatorRegion, this.x, this.y, this.totalProgress * rotateSpeed);
       Drawf.spinSprite(tm.rotatorRegion2, this.x, this.y, -this.totalProgress * rotateSpeed2);
       }else{
