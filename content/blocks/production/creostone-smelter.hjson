@@ -8,7 +8,7 @@ silicon/60
 titanium/25
 ]
 outputItem: creostone/1
-craftTime: 80
+craftTime: 70
 consumes: {
 power: 2.5
 liquid: creotite/0.16

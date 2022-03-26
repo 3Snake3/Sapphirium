@@ -29,15 +29,14 @@ sand/4
 }
 category: crafting
 requirements: [
-copper/125
-graphite/85
-silicon/50
-titanium/50
+copper/225
+graphite/125
+thorium/65
+silicon/80
 ]
 size: 3
 research: {
 parent: creostone-smelter
-objectives: [creostone-reactor]
 }
 attribute: heat
 maxBoost: 3
