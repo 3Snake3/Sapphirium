@@ -1,6 +1,6 @@
 
-craftTime: 115
-outputItem: creostone/3
+craftTime: 145
+outputItem: creostone/4
 craftEffect: redgeneratespark
 hasPower: true
 hasItems: true
@@ -21,7 +21,7 @@ power: 4
 liquid: creotite/0.2
 items: {
 items: [
-silicon/3
+silicon/4
 coal/4
 sand/4
 ]

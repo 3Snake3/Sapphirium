@@ -6,8 +6,8 @@ lead/75
 silicon/60
 thorium/45
 ]
-outputLiquid: creotite/0.4
-craftTime: 80
+outputLiquid: creotite/0.3
+craftTime: 120
 size: 3
 hasPower: true
 hasItems: true
@@ -15,16 +15,16 @@ hasLiquids: true
 outputsLiquid: true
 consumes: {
 power: 5.5
-liquid: cryofluid/0.4
+liquid: cryofluid/0.3
 items: {
 items: [
-pyratite/4
-thorium/3
+pyratite/2
+thorium/2
 ]
 }
 }
 itemCapacity: 10
-liquidCapacity: 22
+liquidCapacity: 18
 rotate: false
 solid: true
 category: crafting
