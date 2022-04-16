@@ -20,7 +20,10 @@ const massBullet = extend(MassDriverBolt, {
         Draw.rect("shell", b.x, b.y, w, h, b.rotation() + 90);
 
         Draw.reset();
-    }
+    },
+    despawnEffect: Fx.none,
+    hitEffect: Fx.none,
+    collides: false,
 });
 const teleporter = extend(MassDriver, "teleporter", {
 bullet: massBullet

@@ -6,6 +6,7 @@ range: 7
 placeableLiquid: true
 speed: 80
 bufferCapacity: 20
+itemCapacity: 14
 
 requirements: [
   copper/9
