@@ -12,6 +12,6 @@ objectives: [surge-tower]
 requirements: [
 creostone/35
 titanium/25
-lead/12
-silicon/8
+lead/25
+silicon/15
 ]

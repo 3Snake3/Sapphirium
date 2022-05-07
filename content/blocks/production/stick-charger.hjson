@@ -1,7 +1,7 @@
 
 consumes: {
 power: 1.7
-liquid: surge-mass/0.1
+liquid: surge-mass/0.07
 items: {
 items: [
 graphite/2
@@ -9,7 +9,7 @@ graphite/2
 }
 }
 outputItem: charged-stick/1
-craftTime: 60
+craftTime: 45
 drawer: DrawSmelter
 craftEffect: {
 type: ParticleEffect
@@ -27,10 +27,10 @@ category: crafting
 ambientSound: respawning
 ambientSoundVolume: 0.15
 requirements: [
-titanium/65
-graphite/65
-silicon/45
-surge-alloy/20
+leaded-copper/75
+silicon/80
+titanium/45
+surge-alloy/40
 ]
 research: lead-charger
 size: 2

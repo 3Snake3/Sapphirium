@@ -75,7 +75,7 @@ type: ShrapnelBulletType
 length: 120
 width: 16
 serrations: 5
-damage: 66
+damage: 60
 status: melting
 statusDuration: 60
 fromColor: ffffff
@@ -102,7 +102,7 @@ fragBullet: {
 type: ShrapnelBulletType
 width: 15
 serrations: 4
-damage: 45
+damage: 20
 status: freezing
 statusDuration: 80
 fromColor: ffffff

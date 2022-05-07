@@ -1,0 +1,27 @@
+requirements: [
+copper/45
+lead/30
+]
+category: crafting
+craftEffect: smeltsmoke
+outputItem: leaded-copper/1
+craftTime: 40
+size: 2
+hasPower: true
+hasLiquids: false
+drawer: {
+type: DrawSmelter
+flameColor: ffef99
+}
+ambientSound: smelter
+ambientSoundVolume: 0.07
+consumes: {
+power: 0.6
+items: {
+items: [
+copper/1
+lead/1
+]
+}
+}
+research: graphite-press

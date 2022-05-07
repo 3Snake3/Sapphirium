@@ -22,7 +22,7 @@ function newNode(parent, content, req, objectives){
     node.objectives.addAll(objectives = null ? null : objectives);
 }
  
-newNode(SectorPresets.nuclearComplex, creotitePowerStation, ItemStack.with(Items.copper, 1), Seq.with(new Objectives.SectorComplete(SectorPresets.nuclearComplex)));
+newNode(SectorPresets.tarFields, creotitePowerStation, ItemStack.with(Items.copper, 1), Seq.with(new Objectives.SectorComplete(SectorPresets.nuclearComplex)));
 
 module.exports = {
 creotitePowerStation: creotitePowerStation

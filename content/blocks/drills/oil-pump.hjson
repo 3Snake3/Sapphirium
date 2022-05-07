@@ -10,8 +10,7 @@ pumpAmount: 0.07
 rotateSpeed: 1.5
 
 requirements: [
-  copper/70
-  lead/70
+  leaded-copper/180
   graphite/50
   silicon/50
   plastanium/30

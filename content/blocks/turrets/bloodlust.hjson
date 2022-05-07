@@ -1,12 +1,12 @@
-reloadTime: 180
+reloadTime: 240
 recoilAmount: 4
-powerUse: 12
+powerUse: 22
 size: 4
 outlineColor: 1d1d21
 shootShake: 6
 coolantUsage: 1
 shootLength: 2
-shots: 4
+shots: 3
 burstSpacing: 8
 shootCone: 24
 range: 400
@@ -120,7 +120,7 @@ colorFrom: ff6e6e
 colorTo: ff6e6e
 }]
 }
-damage: 500
+damage: 450
 speed: 400
 trailSpacing: 30
 buildingDamageMultiplier: 0.2

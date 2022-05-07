@@ -1,0 +1,9 @@
+health: 320
+placeableLiquid: true
+requirements: [
+leaded-copper/6
+]
+research: titanium-wall
+category: defense
+chanceDeflect: 3
+flashHit: true

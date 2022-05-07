@@ -1,14 +1,14 @@
 
 requirements: [
-graphite/120
-silicon/80
-titanium/65
+graphite/200
+silicon/100
+titanium/60
 ]
 category: turret
 size: 2
-reloadTime: 60
+reloadTime: 70
 recoilAmount: 3
-powerUse: 4
+powerUse: 5
 shootEffect: {
 type: MultiEffect
 effects: [shootHeal, {
@@ -36,9 +36,9 @@ width: 12
 height: 20
 speed: 5
 lifetime: 50
-damage: 30
-splashDamage: 45
-splashDamageRadius: 45
+damage: 15
+splashDamage: 15
+splashDamageRadius: 15
 sprite: adc-acid-bullet
 hitSound: plasmaboom
 hitShake: 3
@@ -49,7 +49,7 @@ trailColor: 61ad7eff
 backColor: 61ad7e
 frontColor: 70ff88
 status: adc-acid-corrosion
-statusDuration: 125
+statusDuration: 60
 hitEffect: {
 type: MultiEffect
 effects: [
@@ -114,13 +114,14 @@ width: 10
 height: 15
 speed: 5
 lifetime: 25
-damage: 15
-splashDamage: 20
+damage: 5
+splashDamage: 10
 lightRadius: 3
 lightOpacity: 1.5
 lightColor: 70ff88
-splashDamageRadius: 25
+splashDamageRadius: 15
 hitSound: plasmaboom
+collidesTiles: false
 hitShake: 2
 trailWidth: 2
 trailLength: 7
@@ -129,7 +130,7 @@ trailColor: 61ad7eff
 backColor: 61ad7e
 frontColor: 70ff88
 status: adc-acid-corrosion
-statusDuration: 60
+statusDuration: 25
 hitEffect: {
 type: MultiEffect
 effects: [
@@ -184,11 +185,9 @@ colorTo: 61ad7e00
 }
 ]
 }
-homingPower: 3
+homingPower: 0.2
 homingRange: 30
 homingDelay: 3
-pierce: true
-pierceCap: 3
 }
 }
 research: melinite

@@ -1,0 +1,10 @@
+health: 540
+speed: 0.05
+displayedSpeed: 7
+requirements: [
+leaded-copper/1
+cinderblock/2
+]
+category: distribution
+research: titanium-conveyor
+placeableLiquid: true

@@ -1,9 +1,10 @@
+//TODO
 const liquidUnloader = extendContent(LiquidBlock, 'liquid-unloader', {
 	
 	//keys
 	
 	localizedName : "Liquid Unloader",
-	description: "Хуй",
+	description: "H",
 	
 	buildVisibility: BuildVisibility.shown,
 	

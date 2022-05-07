@@ -1,0 +1,11 @@
+health: 1200
+category: defense
+requirements: [
+surge-stone/10
+]
+research: surge-wall-large
+emitLight: true
+lightRadius: 85
+consumes: {
+power: 1
+}

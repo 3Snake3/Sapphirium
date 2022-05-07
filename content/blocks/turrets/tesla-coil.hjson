@@ -9,10 +9,10 @@ rotateSpeed: 4
 range: 115
 xRand: 3
 powerUse: 4.5
+inaccuracy: 360
 shootCone: 30
 shootSound: spark
 smokeEffect: none
-shots: 4
 burstSpacing: 5
 spread: 8
 
@@ -20,7 +20,7 @@ health: 650
 
 shootType: {
 type: LightningBulletType
-damage: 15
+damage: 34
 lifetime: 10
 lightningLength: 19.16
 lightningColor: f3e979

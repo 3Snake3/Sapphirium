@@ -2,12 +2,12 @@
 size: 3
 category: turret
 requirements: [
-copper/200
-lead/120
-silicon/70
-titanium/70
+leaded-copper/340
+silicon/125
+titanium/85
+globium/70
 ]
-reloadTime: 70
+reloadTime: 120
 targetGround: false
 shootEffect: {
 type: MultiEffect
@@ -51,26 +51,26 @@ health: 1450
 alternate: true
 shootSound: missile
 unitSort: weakest
-range: 200
-powerUse: 6
+range: 600
+powerUse: 8
 shootType: {
 width: 20
 height: 35
 speed: 7
-damage: 60
+damage: 25
 lifetime: 100
 sprite: adc-arrow-arrow
-collidesAir: false
+collidesGround: false
 inaccuracy: 8
 backColor: a9d8ff
 frontColor: ffffff
 mixColorTo: a9d8ff
 pierce: true
 hittable: false
-homingPower: 3
+homingPower: 0.12
 homingRange: 75
 keepVelocity: false
-status: weakened
+status: freezing
 statusDuration: 125
 trailChance: 1
 trailEffect: {

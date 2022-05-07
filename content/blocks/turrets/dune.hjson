@@ -10,7 +10,7 @@ titanium/80
 ]
 health: 980
 shootEffect: shootBig
-reloadTime: 10
+reloadTime: 40
 recoilAmount: 4.5
 rotateSpeed: 6
 range: 200
@@ -31,7 +31,7 @@ speed: 6
 lifetime: 33.3
 reloadMultiplier: 1.45
 status: slow
-statusDuration: 125
+statusDuration: 25
 damage: 25
 hitEffect: {
 type: ExplosionEffect
@@ -88,8 +88,8 @@ frontColor: eb8778
 buildingDamageMultiplier: 1.2
 status: super-melting
 statusDuration: 125
-splashDamage: 50
-splashDamageRadius: 45
+splashDamage: 40
+splashDamageRadius: 25
 hitEffect: {
 type: ExplosionEffect
 sparks: 5
@@ -211,9 +211,9 @@ backColor: bd5553
 frontColor: eb8778
 buildingDamageMultiplier: 1.2
 status: super-melting
-statusDuration: 125
-splashDamage: 50
-splashDamageRadius: 45
+statusDuration: 32
+splashDamage: 40
+splashDamageRadius: 15
 hitEffect: {
 type: ExplosionEffect
 sparks: 5
@@ -266,7 +266,7 @@ silicon: {
 sprite: adc-circle-bullet
 width: 15
 height: 15
-damage: 30
+damage: 20
 speed: 6
 lifetime: 33.3
 status: blasted
@@ -326,7 +326,7 @@ fragBullet: {
 sprite: adc-circle-bullet
 width: 15
 height: 15
-damage: 30
+damage: 20
 speed: 6
 lifetime: 33.3
 status: blasted
@@ -381,7 +381,7 @@ fragBullet: {
 sprite: adc-circle-bullet
 width: 15
 height: 15
-damage: 30
+damage: 20
 speed: 6
 lifetime: 33.3
 status: blasted

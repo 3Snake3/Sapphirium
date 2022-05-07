@@ -2,7 +2,10 @@
 health: 2400
 size: 4
 category: turret
-research: needle
+research: {
+parent: decay
+objectives: [spectre]
+}
 requirements: [
 lead/1120
 titanium/825

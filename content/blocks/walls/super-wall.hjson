@@ -1,10 +1,8 @@
 
-health: 8000
-insulated: true
+health: 4800
 absorbLasers: true
-lightningChance: 0.5
-chanceDeflect: 10
-placeableLiquid: true
+lightningChance: 0.05
+chanceDeflect: 0.5
 size: 2
 requirements: [
 plastanium/7

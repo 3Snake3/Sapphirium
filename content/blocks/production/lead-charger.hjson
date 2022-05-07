@@ -1,7 +1,7 @@
 
 consumes: {
 power: 1
-liquid: surge-mass/0.1
+liquid: surge-mass/0.07
 items: {
 items: [
 lead/2
@@ -27,13 +27,12 @@ category: crafting
 ambientSound: respawning
 ambientSoundVolume: 0.15
 requirements: [
-lead/65
-graphite/65
-silicon/45
+leaded-copper/45
+titanium/45
+silicon/30
 surge-alloy/15
 ]
 research: {
-parent: silicon-smelter
-objectives: [freezer]
+parent: plastanium-compressor
 }
 size: 2

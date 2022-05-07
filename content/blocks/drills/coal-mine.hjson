@@ -1,0 +1,23 @@
+drawer: {
+type: DrawRotator
+drawSpinSprite: true
+spinSpeed: 7
+}
+health: 460
+size: 2
+outputItem: coal/2
+craftTime: 180
+consumes: {
+power: 1.2
+liquid: water/0.2
+}
+craftEffect: mineBig
+liquidCapacity: 12
+updateEffect: pulverizeMedium
+hasPower: true
+category: production
+research: sand-mine
+requirements: [
+leaded-copper/180
+graphite/80
+]

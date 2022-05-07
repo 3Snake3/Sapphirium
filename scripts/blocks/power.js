@@ -1,5 +1,6 @@
 const sandGenerator = extend(SingleTypeGenerator, "sand-generator", {});
 const copperTransformer = extend(SingleTypeGenerator, "copper-transformer", {});
+const strongPowerNode = extend(PowerNode, "strong-power-node", {});
 
 const solarPanelMedium = extend(SolarGenerator, "solar-panel-medium", {});
 const solarPanelHuge = extend(SolarGenerator, "solar-panel-huge", {});
@@ -21,6 +22,7 @@ return item.charge;
 
 const creostonePowerNode = extend(PowerNode, "creostone-power-node", {});
 const creostonePowerNodeLarge = extend(PowerNode, "creostone-power-node-large", {});
+const creostoneBattery = extend(Battery, "creostone-battery", {});
 const creostonePowerTower = extend(PowerNode, "creostone-power-tower", {});
 
 const creostoneReactor = extend(NuclearReactor, "creostone-reactor", {});

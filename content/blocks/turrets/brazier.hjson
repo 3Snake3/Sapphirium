@@ -8,13 +8,15 @@ scorch, tsunami
 ]
 }
 shootLength: 1.25
-reloadTime: 6
+reloadTime: 215
+shots: 8
+burstSpacing: 9
 recoilAmount: 0
 inaccuracy: 5
 rotateSpeed: 5
 cooldown: 0.10
 range: 170
-coolantMultiplier: 2
+coolantUsage: 0.4
 powerUse: 4
 shootCone: 25
 shootSound: flame
@@ -22,16 +24,15 @@ consumes: {
 liquid: {
 liquid: cryofluid
 amount: 0.5
-optional: true
-booster: true
-update: true
+optional: false
+update: false
 }
 }
 shootType: {
 sprite: adc-none-bullet
 speed: 5
 lifetime: 33
-damage: 15
+damage: 60
 backColor: f3e979
 frontColor: ffffff
 hitSize: 15

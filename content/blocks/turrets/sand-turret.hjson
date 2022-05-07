@@ -4,8 +4,8 @@ sand: {
 type: ArtilleryBulletType
 width: 11
 height: 11
-splashDamageRadius: 25
-splashDamage: 15
+splashDamageRadius: 10
+splashDamage: 9
 knockback: 0.3
 collidesTiles: false
 lifetime: 45
@@ -16,7 +16,7 @@ despawnEffect: flakExplosion
 fragBullets: 4
 fragCone: 360
 status: slow
-statusDuration: 60
+statusDuration: 16
 fragBullet: {
 type: BasicBulletType
 width: 7
@@ -32,14 +32,15 @@ coal: {
 type: ArtilleryBulletType
 width: 11
 height: 11
-splashDamageRadius: 25
-splashDamage: 25
+splashDamageRadius: 13
+splashDamage: 15
 knockback: 0.4
 collidesTiles: false
 lifetime: 60
 speed: 3
 collidesAir: false
 status: adc-flammability
+statusDuration: 20
 ammoMultiplier: 5
 reloadMultiplier: 0.8
 frontColor: 636363

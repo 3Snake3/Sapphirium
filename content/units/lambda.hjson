@@ -4,7 +4,7 @@ lowAltitude: true
 mineSpeed: 9.5
 mineTier: 3
 buildSpeed: 1.15
-drag: 0.05
+drag: 0.016
 speed: 4.15
 rotateSpeed: 21
 accel: 0.21
@@ -12,7 +12,7 @@ itemCapacity: 90
 health: 300
 engineOffset: 8
 engineSize: 4
-hitSize: 13
+hitSize: 15
 commandLimit: 6
 weapons: [{
 name: small-basic-weapon

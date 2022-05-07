@@ -6,7 +6,7 @@ research: {
 parent: segment
 objectives: [spraying-projector, clothing-phase-factory]
 }
-reloadTime: 180
+reloadTime: 240
 recoilAmount: 0
 rotateSpeed: 0
 shootCone: 360
@@ -30,7 +30,7 @@ shootType: {
 width: 0.001
 height: 0.001
 damage: 0
-splashDamage: 55
+splashDamage: 25
 splashDamageRadius: 240
 speed: 0
 lifetime: 1
@@ -41,7 +41,7 @@ hittable: false
 absorbable: true
 reflectable: false
 collidesTiles: true
-knockback: 3
+knockback: 5
 hitEffect: none
 smokeEffect: none
 despawnEffect: none

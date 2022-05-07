@@ -1,0 +1,13 @@
+health: 540
+requirements: [
+leaded-copper/2
+cinderblock/2
+]
+category: distribution
+speed: 26
+capacity: 8
+research: {
+parent: junction
+objectives: [strong-conveyor]
+}
+placeableLiquid: true

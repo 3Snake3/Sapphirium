@@ -1,0 +1,146 @@
+health: 3450
+size: 4
+reloadTime: 450
+recoilAmount: 6
+shootCone: 45
+shootSound: railgun
+shootShake: 6
+shots: 3
+burstSpacing: 23
+range: 400
+rotateSpeed: 2
+ammoUseEffect: none
+ammoPerShot: 10
+maxAmmo: 80
+consumes: {
+power: 15
+liquid: {
+liquid: ledonite-liquid
+amount: 1
+booster: true
+optional: true
+}
+}
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+lifetime: 30
+sizeFrom: 40
+sizeTo: 0
+strokeFrom: 4
+strokeTo: 0
+colorFrom: bf92f9
+colorTo: bf92f9
+}
+{
+type: ParticleEffect
+particles: 1
+region: adc-shadow-rail2
+lifetime: 30
+sizeFrom: 40
+sizeTo: 0
+colorFrom: bf92f9
+colorTo: bf92f9
+length: 0
+}
+]
+}
+smokeEffect: {
+type: MultiEffect
+effects: [shootBigSmoke2, {
+type: ParticleEffect
+particles: 8
+lifetime: 40
+sizeFrom: 6
+sizeTo: 0
+colorFrom: bf92f9
+colorTo: bf92f985
+length: 40
+cone: 360
+}]
+}
+ammoTypes: {
+tinorium: {
+type: RailBulletType
+updateEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 40
+colorFrom: 6d56bf
+colorTo: 6d56bf
+region: adc-rail
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 40
+colorFrom: bf92f9
+colorTo: bf92f9
+region: adc-shadow-rail
+}]
+}
+pierceEffect: {
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 50
+colorFrom: bf92f9
+colorTo: bf92f9
+region: adc-pierce-effect
+}
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: ExplosionEffect
+waveRad: 34
+smokeRad: 44
+smokeSize: 8
+waveLife: 15
+waveColor: bf92f9
+sparks: 0
+}
+{
+type: ParticleEffect
+particles: 8
+lifetime: 40
+sizeFrom: 6
+sizeTo: 0
+colorFrom: bf92f9
+colorTo: bf92f985
+length: 40
+cone: 360
+}
+]
+}
+buildingDamageMultiplier: 0.2
+hitShake: 6
+damage: 1000
+ammoMultiplier: 1
+pierceDamageFactor: 2
+status: sapped
+statusDuration: 180
+length: 400
+updateEffectSeg: 60
+}
+}
+category: turret
+research: punch
+requirements: [
+leaded-copper/2300
+silicon/890
+tinorium/645
+thorium/600
+surge-alloy/300
+]

@@ -1,0 +1,147 @@
+health: 4800
+category: defense
+reloadTime: 80
+recoilAmount: 3
+powerUse: 5
+shootShake: 1
+shootCone: 12
+emitLight: true
+lightRadius: 85
+size: 2
+shootEffect: sparkShoot
+shootSound: plasmadrop
+smokeEffect: none
+range: 200
+shootType: {
+sprite: circle-bullet
+shrinkY: 0
+backColor: f2e879
+frontColor: ffffff
+width: 10
+height: 10
+damage: 10
+splashDamage: 30
+splashDamageRadius: 35
+homingRange: 80
+lightning: 4
+lightningColor: f2e879
+lightningLength: 10
+lightningDamage: 10
+lightningCone: 360
+status: shocked
+statusDuration: 180
+hitSound: spark
+speed: 2
+lifetime: 100
+hitEffect: {
+type: ExplosionEffect
+waveRad: 35
+waveLife: 15
+waveColor: f2e879
+sparkLen: 5
+sparkStroke: 3
+sparkRad: 40
+sparks: 6
+smokes: 0
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 35
+waveLife: 15
+waveColor: f2e879
+sparkLen: 5
+sparkStroke: 3
+sparkRad: 40
+sparks: 6
+smokes: 0
+}
+fragBullets: 1
+fragCone: 360
+fragBullet: {
+type: LightningBulletType
+damage: 10
+lightningLength: 10
+lightningColor: f2e879
+lightningType: {
+sprite: circle-bullet
+shrinkY: 0
+backColor: f2e879
+frontColor: ffffff
+width: 8
+height: 8
+damage: 5
+splashDamage: 10
+splashDamageRadius: 15
+status: shocked
+statusDuration: 180
+speed: 0
+lifetime: 10
+hitEffect: {
+type: ExplosionEffect
+waveRad: 15
+waveLife: 10
+waveColor: f2e879
+sparkLen: 3
+sparkStroke: 2
+sparkRad: 20
+sparks: 4
+smokes: 0
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 15
+waveLife: 10
+waveColor: f2e879
+sparkLen: 3
+sparkStroke: 2
+sparkRad: 20
+sparks: 4
+smokes: 0
+}
+fragBullets: 2
+fragCone: 180
+fragBullet: {
+sprite: circle-bullet
+shrinkY: 0
+backColor: f2e879
+frontColor: ffffff
+width: 5
+height: 5
+damage: 5
+splashDamage: 10
+splashDamageRadius: 15
+status: shocked
+statusDuration: 180
+speed: 5
+lifetime: 30
+hitEffect: {
+type: ExplosionEffect
+waveRad: 15
+waveLife: 10
+waveColor: f2e879
+sparkLen: 3
+sparkStroke: 2
+sparkRad: 20
+sparks: 4
+smokes: 0
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 15
+waveLife: 10
+waveColor: f2e879
+sparkLen: 3
+sparkStroke: 2
+sparkRad: 20
+sparks: 4
+smokes: 0
+}
+}
+}
+}
+}
+requirements: [
+surge-stone/40
+silicon/20
+]
+research: surge-wall-large

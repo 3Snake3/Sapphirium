@@ -18,13 +18,14 @@ baseEfficiency: 1
 itemUseTime: 50
 category: production
 requirements: [
-copper/110
-thorium/110
-graphite/80
-lead/110
-silicon/70
+copper/200
+lead/160
+thorium/75
+silicon/55
+plastanium/30
 ]
 size: 3
+research: oil-pump
 consumes: {
 power: 3
 liquid: water/0.3

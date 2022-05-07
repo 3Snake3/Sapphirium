@@ -6,8 +6,9 @@ speed: 2
 lowAltitude: true
 outlineColor: 282b3b
 rotateSpeed: 2.5
-flags: [generator, reactor]
-Immunities: [melting]
+targetFlags: [reactor]
+playerTargetFlags: [reactor]
+immunities: [melting]
 accel: 0.06
 drag: 0.017
 flying: true

@@ -5,6 +5,7 @@ health: 100
 hasPower: false
 range: 7
 placeableLiquid: true
+liquidCapacity: 14
 
 requirements: [
   graphite/4

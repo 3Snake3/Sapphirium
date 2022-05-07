@@ -1,7 +1,7 @@
 health: 1250
 reloadTime: 120
-chargeTime: 40
-chargeMaxDelay: 30
+chargeTime: 60
+chargeMaxDelay: 50
 chargeEffects: 7
 recoilAmount: 3
 range: 290
@@ -11,15 +11,28 @@ shootShake: 3
 shootEffect: lancerLaserShoot
 smokeEffect: none
 chargeEffect: lancerLaserCharge
-chargeBeginEffect: lancerLaserChargeBegin
+chargeBeginEffect: {
+type: MultiEffect
+effects: [lancerLaserChargeBegin, {
+type: WaveEffect
+sides: 0
+lifetime: 30
+sizeFrom: 16
+sizeTo: 0
+strokeFrom: 3
+strokeTo: 0
+colorFrom: a9d8ff
+colorTo: a9d8ff
+}]
+}
 size: 3
 targetAir: true
 shootSound: laser
 requirements: [
-copper/220
-titanium/180
-silicon/145
-thorium/80
+leaded-copper/320
+titanium/135
+graphite/80
+silicon/125
 ]
 category: turret
 research: north

@@ -1,14 +1,13 @@
 
 attribute: heat
-maxBoost: 3.5
+maxBoost: 3
 consumes: {
-power: 3
-liquid: surge-mass/0.4
+power: 5
 items: {
 items: [
 charged-lead/2
 charged-stick/2
-charged-ingot/2
+charged-ingot/1
 ]
 }
 }
@@ -42,10 +41,10 @@ category: crafting
 ambientSound: respawning
 ambientSoundVolume: 0.15
 requirements: [
-titanium/125
-graphite/75
-silicon/55
-surge-alloy/35
+leaded-copper/450
+silicon/200
+titanium/120
+surge-alloy/230
 ]
 research: ingot-charger
 size: 3

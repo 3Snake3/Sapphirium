@@ -1,0 +1,14 @@
+size: 3
+health: 4500
+unitCapModifier: 0
+itemCapacity: 2500
+unitType: trident
+category: effect
+research: core-shard
+requirements: [
+leaded-copper/4000
+titanium/4000
+silicon/3000
+emerald/3000
+]
+researchCostMultiplier: 0.05

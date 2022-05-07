@@ -7,10 +7,13 @@ size: 6
 researchCostMultiplier: 0.18
 category: effect
 requirements: [
-lead/9000
-titanium/8000
-silicon/8000
-creostone/6500
-plastanium/6500
+lead/12000
+titanium/1200
+silicon/9500
+creostone/7500
+surge-stone/5400
 ]
-research: core-nucleus
+research: {
+parent: core-ocean
+objectives: [core-cage]
+}

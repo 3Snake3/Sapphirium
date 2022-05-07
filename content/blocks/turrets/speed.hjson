@@ -1,0 +1,92 @@
+health: 840
+size: 2
+reloadTime: 14
+recoilAmount: 4
+shootSound: shootBig
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+range: 200
+shots: 2
+xRand: 4
+spread: 4
+inaccuracy: 4
+shootCone: 25
+ammoUseEffect: casing2Double
+ammoPerShot: 3
+ammoTypes: {
+copper: {
+width: 9
+height: 13
+speed: 8
+lifetime: 45
+damage: 9
+reloadMultiplier: 1.15
+buildingDamageMultiplier: 0.6
+trailWidth: 1
+trailLength: 25
+trailColor: f9c27a
+drag: -0.03
+keepVelocity: false
+}
+lead: {
+width: 9.5
+height: 14
+speed: 7
+lifetime: 34
+damage: 14
+buildingDamageMultiplier: 0.8
+trailWidth: 1.5
+trailLength: 25
+trailColor: f9c27a
+drag: -0.03
+keepVelocity: false
+}
+leaded-copper: {
+width: 10
+height: 15
+speed: 7
+lifetime: 40
+damage: 20
+buildingDamageMultiplier: 1.15
+backColor: ffe18f
+trailWidth: 2
+trailLength: 25
+trailColor: f9c27a
+drag: -0.03
+keepVelocity: false
+}
+titanium: {
+width: 10
+height: 14
+speed: 7
+lifetime: 40
+damage: 24
+buildingDamageMultiplier: 1.2
+trailWidth: 2
+trailLength: 25
+trailColor: f9c27a
+drag: -0.03
+keepVelocity: false
+}
+thorium: {
+width: 11
+height: 16
+speed: 6.8
+lifetime: 50
+damage: 35
+reloadMultiplier: 0.85
+buildingDamageMultiplier: 1.5
+trailWidth: 2
+trailLength: 25
+trailColor: f9c27a
+drag: -0.03
+keepVelocity: false
+}
+}
+category: turret
+requirements: [
+leaded-copper/180
+thorium/80
+graphite/60
+]
+research: salvo

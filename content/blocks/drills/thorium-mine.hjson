@@ -5,18 +5,21 @@ updateEffect: pulverizeMedium
 hasPower: true
 hasLiquids: true
 consumes: {
-power: 4
-liquid: cryofluid/0.2
+power: 1.8
+liquid: cryofluid/0.09
 }
 outputItem: thorium/1
 attribute: water
-research: laser-drill
+research: {
+parent: titanium-extractor
+objectives: [laser-drill]
+}
 size: 3
 health: 870
 requirements: [
-copper/80
-graphite/35
-silicon/35
-titanium/40
+copper/145
+graphite/70
+silicon/45
+titanium/35
 ]
 category: production

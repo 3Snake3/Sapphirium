@@ -1,7 +1,7 @@
 
 requirements: [
 lead/70
-graphite/70
+granate/70
 titanium/40
 ]
 category: turret

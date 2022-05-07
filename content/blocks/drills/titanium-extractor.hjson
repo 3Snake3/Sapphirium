@@ -1,0 +1,27 @@
+size: 2
+craftTime: 600
+outputItem: titanium/8
+itemCapacity: 16
+liquidCapacity: 12
+consumes: {
+power: 2
+liquid: water/0.2
+}
+craftEffect: {
+type: ParticleEffect
+particles: 6
+length: 30
+lifetime: 60
+sizeFrom: 5
+sizeTo: 0
+region: adc-rhombus
+colorFrom: a9d8ff
+colorTo: a9d8ff
+cone: 360
+}
+category: production
+requirements: [
+leaded-copper/220
+graphite/35
+]
+research: pneumatic-drill

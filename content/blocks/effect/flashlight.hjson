@@ -7,7 +7,7 @@ brightness: 1.5
 radius: 500
 
 requirements: [
-  graphite/150
+  light-crystall/150
   silicon/100
   creostone/80
 ]

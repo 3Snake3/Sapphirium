@@ -1,10 +1,11 @@
 
 consumes: {
 power: 2
-liquid: surge-mass/0.1
+liquid: surge-mass/0.07
 items: {
 items: [
-titanium/2
+titanium/1
+silicon/1
 ]
 }
 }
@@ -27,10 +28,10 @@ category: crafting
 ambientSound: respawning
 ambientSoundVolume: 0.15
 requirements: [
-titanium/65
-graphite/65
-silicon/45
-surge-alloy/20
+leaded-copper/65
+titanium/85
+silicon/80
+surge-alloy/30
 ]
 research: stick-charger
 size: 2

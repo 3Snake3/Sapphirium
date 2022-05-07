@@ -2,7 +2,7 @@
 requirements: [
 lead/125
 silicon/80
-titanium/45
+granate/45
 ]
 range: 270
 health: 1650

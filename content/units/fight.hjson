@@ -1,11 +1,12 @@
 
 health: 1280
 armor: 12
-hitSize: 20
+hitSize: 25
 speed: 2
 miningRange: 120
 mineTier: 4
 mineSpeed: 6
+drag: 0.016
 
 
 payloadCapacity: 5

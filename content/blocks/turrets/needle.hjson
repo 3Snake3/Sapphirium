@@ -213,5 +213,4 @@ surge-alloy/120
 category: turret
 research: {
 parent: bomb-thrower
-objectives: [meltdown]
 }

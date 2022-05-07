@@ -6,7 +6,8 @@ const smallDrill = extend(Drill, "smalldrill", {
 	setBars(){
 		this.super$setBars();
 		this.bars.remove("liquid");
-		}
+		},
+	liquidCapacity: 0
 });
 
 const oilPump = extend(SolidPump, "oil-pump", {});
@@ -15,7 +16,40 @@ const slagExtractor = extend(Fracker, "slag-extractor", {});
 
 const sandMine = extend(GenericCrafter, "sand-mine", {});
 
+const coalMine = extend(GenericCrafter, "coal-mine", {});
+
 const sporeExtractor = extend(AttributeCrafter, "spore-extractor", {});
+
+const titaniumExtractor = extend(GenericCrafter, "titanium-extractor", {
+	load(){
+this.super$load();
+this.region = Core.atlas.find(this.name + "-bottom");
+this.liquidRegion = Core.atlas.find(this.name + "-liquid");
+this.glowRegion = Core.atlas.find(this.name + "-glow");
+this.topRegion = Core.atlas.find(this.name + "-top");
+},
+icons(){
+    return [
+      this.region,
+      this.topRegion
+      ]
+  }
+});
+
+titaniumExtractor.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, titaniumExtractor, {
+draw(){
+      var glowwAmount = 0.9;
+      var glowwScale = 3;
+      Draw.rect(titaniumExtractor.region, this.x, this.y);
+      Drawf.liquid(titaniumExtractor.liquidRegion, this.x, this.y, this.liquids.total() / titaniumExtractor.liquidCapacity, this.liquids.current().color);
+      Draw.alpha(Mathf.absin(this.totalProgress, glowwScale, glowwAmount) * this.warmup);
+      Draw.rect(titaniumExtractor.glowRegion, this.x, this.y);
+      Draw.reset();
+      Draw.rect(titaniumExtractor.topRegion, this.x, this.y);
+    }
+  });
+  
+const emeraldDrill = extend(GenericCrafter, "emerald-drill", {});
 
 const tm = extend(AttributeCrafter, "thorium-mine", {
 	load(){
@@ -24,20 +58,17 @@ this.region = Core.atlas.find(this.name);
 this.liquidRegion = Core.atlas.find(this.name + "-liquid");
 this.bottomGlow = Core.atlas.find(this.name + "-bottom-glow");
 this.rotatorRegion = Core.atlas.find(this.name + "-rotator");
-this.rotatorRegion2 = Core.atlas.find(this.name + "-rotator2");
 this.topRegion = Core.atlas.find(this.name + "-top");
 },
 icons(){
     return [
       this.region,
       this.rotatorRegion,
-      this.rotatorRegion2,
       this.topRegion
       ]
   }
 });
 
-var drawSpinSprite = true;
 tm.buildType = () => extendContent(AttributeCrafter.AttributeCrafterBuild, tm, {
 draw(){
       var rotateSpeed = 5;
@@ -49,18 +80,28 @@ draw(){
       Draw.alpha(Mathf.absin(this.totalProgress, glowScale, glowAmount) * this.warmup);
       Draw.rect(tm.bottomGlow, this.x, this.y);
       Draw.reset();
-      if(drawSpinSprite){
       Drawf.spinSprite(tm.rotatorRegion, this.x, this.y, this.totalProgress * rotateSpeed);
-      Drawf.spinSprite(tm.rotatorRegion2, this.x, this.y, -this.totalProgress * rotateSpeed2);
-      }else{
-      Draw.rect(tm.rotatorRegion, this.x, this.y, this.totalProgress * rotateSpeed);
-      Draw.rect(tm.rotatorRegion2, this.x, this.y, -this.totalProgress * rotateSpeed2);
-      }
       Draw.rect(tm.topRegion, this.x, this.y);
     }
   });
 
 const granateDrill = extend(GenericCrafter, "granate-drill", {});
+
+const lightCrystallizer = extend(AttributeCrafter, "light-crystallizer", {
+    attribute: Attribute.water,
+    maxBoost: 3,
+    init(){
+    this.outputsLiquid = this.outputLiquid != null;
+        if(this.outputItems == null && this.outputItem != null){
+            this.outputItems = new ItemStack(this.outputItem);
+        }
+    this.emitLight = true;
+    this.lightRadius = 65 * this.size;
+    this.super$init();
+    }
+});
+
+const creostoneDrill = extend(Drill, "creostone-drill", {});
 
 const lightningDrill = extend(Drill, "lightning-drill", {});
 

@@ -1,5 +1,5 @@
 requirements: [
-copper/60
+leaded-copper/65
 graphite/45
 metaglass/20
 ]
@@ -22,6 +22,18 @@ lifetime: 22
 damage: 10
 pierce: true
 pierceCap: 1
+}
+leaded-copper: {
+width: 9
+height: 12
+sprite: adc-dartt
+speed: 6
+lifetime: 22
+damage: 12
+pierce: true
+pierceCap: 2
+reloadMultiplier: 1.15
+buildingDamageMultiplier: 1.15
 }
 graphite: {
 width: 9

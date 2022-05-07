@@ -1,6 +1,8 @@
 const multiLib = require("multi-lib");
 const sectors = require("sectors");
 
+const leadedCopperSmelter = extend(GenericCrafter, "leaded-copper-smelter", {});
+
 const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafterBuild, "freezer", [
     {
       input: {
@@ -24,7 +26,17 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
         },
         {
           input: {
-            liquids: ["water/3", "slag/3"],
+            liquids: ["adc-ledonite-liquid/3.5"],
+            power: 0.8
+          },
+          output: {
+            items: ["adc-ledonite-cube/2"]
+          },
+          craftTime: 120
+        },
+        {
+          input: {
+            liquids: ["slag/6"],
             power: 0.6
           },
           output: {
@@ -34,10 +46,11 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
         },
         {
           input: {
-            liquids: ["oil/10"]
+            liquids: ["oil/10"],
+            power: 1
           },
           output: {
-            items: ["coal/2"],
+            items: ["coal/3"],
             power: 3
           },
           craftTime: 160

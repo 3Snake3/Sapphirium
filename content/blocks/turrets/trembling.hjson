@@ -1,14 +1,14 @@
-reloadTime: 60
+reloadTime: 180
 recoilAmount: 0
 shootCone: 360
-rotateSpeed: 25
+rotateSpeed: 10
 health: 1265
 spread: 0
 inaccuracy: 0
 burstSpacing: 0
 shootSound: none
 shootEffect: none
-powerUse: 8
+powerUse: 16
 range: 185
 size: 3
 shootType: {
@@ -50,7 +50,7 @@ colorTo: ffa665
 ]
 }
 status: stunne
-statusDuration: 40
+statusDuration: 20
 hitSound: plasmaboom
 sprite: circle-bullet
 }

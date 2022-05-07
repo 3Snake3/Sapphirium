@@ -8,17 +8,19 @@ plastanium/240
 silicon/140
 surge-alloy/115
 ]
-reloadTime: 45
+reloadTime: 125
 recoilAmount: 4
-inaccuracy: 16
+inaccuracy: 13
 spread: 4
 shootCone: 80
 shots: 6
-burstSpacing: 7
+burstSpacing: 6
 alternate: true
 xRand: 7
 range: 363
-powerUse: 10
+consumes: {
+power: 15
+}
 shootEffect: {
 type: MultiEffect
 effects: [shootHeal, {
@@ -34,7 +36,8 @@ colorTo: 61ad7e
 }]
 }
 shootSound: bang
-shootType: {
+ammoTypes: {
+plastanium: {
 type: MissileBulletType
 width: 13
 height: 20
@@ -44,7 +47,7 @@ weaveScale: 6
 weaveMag: 3
 damage: 0
 splashDamage: 60
-splashDamageRadius: 80
+splashDamageRadius: 35
 homingPower: 0.98
 homingRange: 100
 homingDelay: 6
@@ -57,7 +60,7 @@ trailColor: 61ad7eff
 backColor: 61ad7e
 frontColor: 70ff88
 status: adc-acid-corrosion
-statusDuration: 600
+statusDuration: 30
 hitEffect: {
 type: MultiEffect
 effects: [
@@ -115,5 +118,6 @@ colorTo: 61ad7e00
 lightRadius: 4
 lightOpacity: 2
 lightColor: 70ff88
+}
 }
 research: reagent

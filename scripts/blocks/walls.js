@@ -1,6 +1,44 @@
 const statuses = require("statuses/statuses");
 const items = require("items");
 
+const icecubeWall = extend(Wall, "ice-cube-wall", {});
+
+const icecubeWT = extend(PowerTurret, "ice-cube-wall-turret", {
+});
+
+//var armor = 5;
+const leadedCopperWall = extend(Wall, "leaded-copper-wall", {
+	//tried to put armor to the wall
+/*setStats(){
+		this.super$setStats();
+		this.stats.add(Stat.armor, armor);
+	}*/
+});
+
+const leadedCopperWallLarge = extend(Wall, "leaded-copper-wall-large", {
+});
+
+const strongStorage = extend(StorageBlock, "strong-storage", {});
+
+const graphiteWall = extend(MendProjector, "graphite-wall", {});
+
+const graphiteWT = extend(PowerTurret, "graphite-wall-turret", {});
+
+const siliconWall = extend(Wall, "silicon-wall", {});
+
+const siliconWT = extend(PowerTurret, "silicon-wall-turret", {
+});
+
+const cinderblockWall = extend(Wall, "cinderblock-wall", {});
+
+const cinderblockWT = extend(PowerTurret, "cinderblock-wall-turret", {
+});
+
+const cryocubeWall = extend(PowerTurret, "cryocube-wall", {});
+
+const cryocubeWT = extend(PowerTurret, "cryocube-wall-turret", {
+});
+
 const creostoneWall = extend(OverdriveProjector, "creostone-wall", {});
 
 const creostoneWT = extend(PowerTurret, "creostone-wall-turret", {
@@ -343,7 +381,58 @@ granateWallLarge.buildType = () => extendContent(Wall.WallBuild, granateWallLarg
 }
 });
 
-/**var lLength = 13;
+const healBullet = extend(LaserBoltBulletType, {
+	speed: 5.3,
+	damage: 10,
+	homingPower: 0.1,
+	homingRange: 80,
+	collidesTeam: true,
+	healPercent: 5,
+	backColor: Pal.heal,
+	frontColor: Color.white,
+});
+	
+const emeraldWall = extend(Wall, "emerald-wall", {
+	health: 800,
+	category: Category.defense,
+});
+emeraldWall.buildType = () => extendContent(Wall.WallBuild, emeraldWall, {
+	collision(bullet){
+            this.super$collision(bullet);
+            //create heal bullet
+    	if(0.5 > 0){
+    if(Mathf.chance(0.5)){
+    	for(var i = 0; i < 4; i++){
+            healBullet.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
+            Sounds.lasershoot.at(this)
+      }
+      }
+      }
+            return true;
+}
+});
+
+const emeraldWallLarge = extend(Wall, "emerald-wall-large", {
+	health: 3200,
+	category: Category.defense,
+});
+emeraldWallLarge.buildType = () => extendContent(Wall.WallBuild, emeraldWallLarge, {
+	collision(bullet){
+            this.super$collision(bullet);
+            //create heal bullet
+    	if(0.5 > 0){
+    if(Mathf.chance(0.5)){
+    	for(var i = 0; i < 6; i++){
+            healBullet.create(this, this.x, this.y, (360 / 6) * i + Mathf.random(16));
+            Sounds.lasershoot.at(this)
+      }
+      }
+      }
+            return true;
+}
+});
+
+var lLength = 13;
 var lColor = Pal.surge;
 var lDamage = 22;
 var lSound = Sounds.spark;
@@ -365,42 +454,40 @@ const lLightning = extend(LightningBulletType, {
 	lightningColor: lColor,
 	lightningType: lType,
 });
-const armedSurgeStoneWall = extend(PowerTurret, "armed-surge-stone-wall", {
+const surgeStoneWall = extend(Wall, "surge-stone-wall", {});
+surgeStoneWall.buildType = () => extendContent(Wall.WallBuild, surgeStoneWall, {
 	collision(bullet){
             this.super$collision(bullet);
             
             //create lightning if necessary
             if(lChance > 0){
                 if(Mathf.chance(lChance)){
-                    ILightning.create(this.team, lColor, lDamage, this.x, this.y, bullet.rotation() + 180, lLength);
-                    lightningSound.at(tile, Mathf.random(0.9f, 1.1f));
+                	for(var i = 0; i < 6; i++){
+                    lLightning.create(this, this.x, this.y, (360 / 6) * i + Mathf.random(16));
+                    }
+                    lightningSound.at(this.tile, Mathf.random(0.9, 1.1));
                 }
-            }**/
-	
-
-const graphiteWall = extend(MendProjector, "graphite-wall", {});
-
-const graphiteWT = extend(PowerTurret, "graphite-wall-turret", {});
-
-const siliconWall = extend(Wall, "silicon-wall", {});
-
-const siliconWT = extend(PowerTurret, "silicon-wall-turret", {
-});
-
-const cryocubeWall = extend(PowerTurret, "cryocube-wall", {});
-
-const cryocubeWT = extend(PowerTurret, "cryocube-wall-turret", {
-});
-
-const icecubeWall = extend(Wall, "ice-cube-wall", {});
-
-const icecubeWT = extend(PowerTurret, "ice-cube-wall-turret", {
-});
-
-const cinderblockWall = extend(Wall, "cinderblock-wall", {});
-
-const cinderblockWT = extend(PowerTurret, "cinderblock-wall-turret", {
-});
+              }
+                return true;
+            }
+         });
+const armedSurgeStoneWall = extend(PowerTurret, "armed-surge-stone-wall", {});
+armedSurgeStoneWall.buildType = () => extendContent(PowerTurret.PowerTurretBuild, armedSurgeStoneWall, {
+	collision(bullet){
+            this.super$collision(bullet);
+            
+            //create lightning if necessary
+            if(lChance > 0){
+                if(Mathf.chance(lChance)){
+                    for(var i = 0; i < 6; i++){
+                    lLightning.create(this, this.x, this.y, (360 / 6) * i + Mathf.random(16));
+                    }
+                    lightningSound.at(this.tile, Mathf.random(0.9, 1.1));
+                }
+              }
+                return true;
+            }
+         });
 
 var lightningChance = 0.08;
 var lightningDamage = 60;
@@ -430,7 +517,5 @@ chargedLW.buildType = () => extendContent(SolarGenerator.SolarGeneratorBuild, ch
       return true;
 }
 });
-
-const strongStorage = extend(StorageBlock, "strong-storage", {});
 
 const superWall = extend(Wall, "super-wall", {});
