@@ -22,7 +22,7 @@ requirements: [
   titanium/1350
   plastanium/600
   surge-alloy/300
-  light-crystal/180
+  light-crystall/180
 ]
 
 consumes: {

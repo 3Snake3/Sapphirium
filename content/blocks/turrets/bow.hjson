@@ -51,7 +51,7 @@ health: 1450
 alternate: true
 shootSound: missile
 unitSort: weakest
-range: 600
+range: 300
 powerUse: 8
 shootType: {
 width: 20

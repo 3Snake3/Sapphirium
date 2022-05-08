@@ -1221,7 +1221,7 @@ const pulse = extend(PowerTurret, "pulse", {});
 
 const pressure = extend(PowerTurret, "pressure", {});
 
-const revival = extend(PowerTurret, "revival", {});
+const revival = extend(ItemTurret, "revival", {});
 
 const recovery = extend(ItemTurret, "recovery", {});
 

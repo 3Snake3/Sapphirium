@@ -89,20 +89,11 @@ const granateDrill = extend(GenericCrafter, "granate-drill", {});
 
 const lightCrystallizer = extend(AttributeCrafter, "light-crystallizer", {
     attribute: Attribute.water,
-    maxBoost: 3,
-    init(){
-    this.outputsLiquid = this.outputLiquid != null;
-        if(this.outputItems == null && this.outputItem != null){
-            this.outputItems = new ItemStack(this.outputItem);
-        }
-    this.emitLight = true;
-    this.lightRadius = 65 * this.size;
-    this.super$init();
-    }
+    maxBoost: 3
 });
 
 const creostoneDrill = extend(Drill, "creostone-drill", {});
 
 const lightningDrill = extend(Drill, "lightning-drill", {});
 
-const laserCrushingPlant = extend(Drill, "laser-crushing-plant", {});
+const lightDrillingRig = extend(Drill, "light-drilling-rig", {});

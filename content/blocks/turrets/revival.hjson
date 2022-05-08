@@ -59,7 +59,9 @@ rotateSpeed: 3
 cooldown: 0.009
 restitution: 0.009
 coolantUsage: 1.5
-powerUse: 7.5
+consumes: {
+power: 7.5
+}
 unitSort: strongest
 ammoTypes: {
 emerald: {
