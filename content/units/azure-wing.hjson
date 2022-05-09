@@ -7,7 +7,7 @@ mineSpeed: 9
 mineTier: 3
 buildSpeed: 2
 drag: 0.06
-speed: 4.98
+speed: 4
 rotateSpeed: 22
 accel: 0.28
 itemCapacity: 100
@@ -83,8 +83,8 @@ fragCone: 90
 fragBullet: {
 width: 16
 height: 22
-homingPower: 0.64
-homingRange: 45
+weaveMag: 6
+weaveScale: 4
 buildingDamageMultiplier: 0.25
 hitSound: laser
 sprite: adc-azure-spear
@@ -94,6 +94,7 @@ speed: 5
 lifetime: 25
 damage: 45
 pierce: true
+pierceCap: 1
 pierceBuilding: true
 knockback: 1
 weaveScale: 6
@@ -126,8 +127,6 @@ fragBullet: {
 width: 16
 height: 22
 sprite: adc-azure-spear
-homingPower: 0.64
-homingRange: 60
 buildingDamageMultiplier: 0.1
 backColor: a9d8ff
 frontColor: ffffff
@@ -137,9 +136,10 @@ lifetime: 25
 damage: 45
 pierce: true
 pierceBuilding: true
+pierceCap: 1
 knockback: 1
-weaveScale: 6
-weaveMag: 2
+weaveScale: 4
+weaveMag: 6
 hitEffect: {
 type: WaveEffect
 sides: 0

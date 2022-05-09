@@ -6,13 +6,7 @@ const icecubeWall = extend(Wall, "ice-cube-wall", {});
 const icecubeWT = extend(PowerTurret, "ice-cube-wall-turret", {
 });
 
-//var armor = 5;
 const leadedCopperWall = extend(Wall, "leaded-copper-wall", {
-	//tried to put armor to the wall
-/*setStats(){
-		this.super$setStats();
-		this.stats.add(Stat.armor, armor);
-	}*/
 });
 
 const leadedCopperWallLarge = extend(Wall, "leaded-copper-wall-large", {

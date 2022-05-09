@@ -170,20 +170,12 @@ weaveScale: 5,
 weaveMag: 5
 });
 
-//It was for tests
-/*const greenLightning = extend(LightningBulletType, {
-	damage: 20,
-	lightningColor: Color.valueOf("84f591"),
-	lightningLength: 59,
-});*/
-
 const corroding = extend(ItemTurret, "corroding", {
 shootLength: 1,
 setStats(){
         this.super$setStats();
         this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, acidShell)));
         this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, acidShell2)));
-        /*this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, greenLightning)));*/
     }
 });
 corroding.buildType = () => extend(ItemTurret.ItemTurretBuild, corroding, {
@@ -195,8 +187,6 @@ corroding.buildType = () => extend(ItemTurret.ItemTurretBuild, corroding, {
             this.creload = 0
             acidShell.create(this, this.team, this.x, this.y + 1, this.rotation)
             acidShell2.create(this, this.team, this.x, this.y + 1, this.rotation)
-            /*greenLightning.create(this, this.team, this.x, this.y + 1, this.rotation)
-            Sounds.spark.at(this)*/
             Fx.none.at(this.x, this.y + 1)
             
         }
@@ -248,60 +238,6 @@ executioner.buildType = () => extend(LaserTurret.LaserTurretBuild, executioner, 
 });
 
 const liquids = require("liquids");
-
-//perhaps a wave and a tsunami will shoot ledonite and surge mass
-/*const ledoShot = extend(LiquidBulletType, liquids.ledonite, {
-	knockback: 0.75,
-	drag: 0.01,
-	statusDuration: 40
-});
-
-const heavyLedoShot = extend(LiquidBulletType, liquids.ledonite, {
-	knockback: 0.75,
-	lifetime: 49,
-	speed: 4,
-	puddleSize: 8,
-    orbSize: 4,
-    drag: 0.001,
-    ammoMultiplier: 0.4,
-    statusDuration: 45,
-    damage: 0.2
-});
-
-const srgMassShot = extend(LiquidBulletType, liquids.surgeMass, {
-	knockback: 0.75,
-	drag: 0.01
-});
-
-const heavySrgMassShot = extend(LiquidBulletType, liquids.surgeMass, {
-	knockback: 0.75,
-	lifetime: 49,
-	speed: 4,
-	puddleSize: 8,
-    orbSize: 4,
-    drag: 0.001,
-    ammoMultiplier: 0.4,
-    statusDuration: 240,
-    damage: 0.2
-});
-
-Blocks.wave.ammo(
-                Liquids.water, Bullets.waterShot,
-                Liquids.slag, Bullets.slagShot,
-                Liquids.cryofluid, Bullets.cryoShot,
-                Liquids.oil, Bullets.oilShot,
-                liquids.ledonite, ledoShot,
-                liquids.surgeMass, srgMassShot
-                );
-                
-Blocks.tsunami.ammo(
-                Liquids.water, Bullets.heavyWaterShot,
-                Liquids.slag, Bullets.heavySlagShot,
-                Liquids.cryofluid, Bullets.heavyCryoShot,
-                Liquids.oil, Bullets.heavyOilShot,
-                liquids.ledonite, heavyLedoShot,
-                liquids.surgeMass, heavySrgMassShot
-                );*/
                 
 const contLaser = extend(ContinuousLaserBulletType, {
 damage: 1,
@@ -313,33 +249,8 @@ colors: [Pal.surge, Pal.surge, Pal.surge, Color.white],
                 
 const shock = extend(ItemTurret, "shock", {});
 
-/*const shockLightning = extend(LightningBulletType, {
-	lightningLength: 80,
-	damage: 120,
-	lightningColor: Pal.surge,
-});*/
 const discharge = extend(PowerTurret, "discharge", {
-/*setStats(){
-        this.super$setStats();
-        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, shockLightning)));
-    }*/
 });
-/*discharge.buildType = () => extend(PowerTurret.PowerTurretBuild, discharge, {
-	creload : 0,
-    updateTile(){
-        this.super$updateTile();
-
-        if(this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5 && this.creload >= 300){
-            this.creload = 0
-            shockLightning.create(this, this.team, this.x, this.x + 2, this.rotation)
-            Sounds.spark.at(this)
-            
-        }
-        else{
-            if(this.creload < 300){this.creload += 1} 
-        }
-    },
-});*/
 
 const pierce = extend(PowerTurret, "pierce", {});
 
@@ -990,23 +901,6 @@ shootType: saw
 
 const punch = extend(ItemTurret, "punch", {});
 
-//test thing
-/*const shadowShrapnel = extend(ShrapnelBulletType, {
-	length: 410,
-    damage: 80,
-    width: 15,
-    serrationLenScl: 7,
-    serrationFadeOffset: 0,
-    serrations: 10,
-    serrationWidth: 6,
-    fromColor: Pal.sapBullet,
-    toColor: Pal.sapBulletBack,
-    shootEffect: Fx.sparkShoot,
-    smokeEffect: Fx.sparkShoot,
-    status: StatusEffects.sapped,
-    statusDuration: 100
-});*/
-
 const shadowSplashEffect = extend(WaveEffect, {
 	sides: 0,
 	lifetime: 25,
@@ -1059,7 +953,6 @@ const shadowEmp = extend(BasicBulletType, {
 const shadow = extend(ItemTurret, "shadow", {
 setStats(){
         this.super$setStats();
-        /*this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, shadowShrapnel)));*/
         this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, shadowEmp)));
     },
     shootLength: -2.75
@@ -1074,8 +967,6 @@ shadow.buildType = () => extend(ItemTurret.ItemTurretBuild, shadow, {
             this.creload = 0
             shadowEmp.create(this, this.team, shX, shY, this.rotation)
             Sounds.laser.at(this)
-            /*shadowShrapnel.create(this, this.team, this.x, this.y - 2.75, this.rotation)
-            Sounds.shotgun.at(this)*/
             Effect.shake(5, 5, this)
         }
         else{
@@ -1135,45 +1026,9 @@ bayonet.buildType = () => extend(ItemTurret.ItemTurretBuild, bayonet, {
     },
 });
 
-/*const hearthExplosion = extend(BasicBulletType, {
-	width: 0.001,
-	height: 0.001,
-	speed: 0,
-	lifetime: 1,
-	damage: 0,
-	collides: false,
-	backColor: Color.valueOf("ffffff00"),
-	frontColor: Color.valueOf("ffffff00"),
-	hitEffect: Fx.none,
-	despawnEffect: Fx.massiveExplosion,
-	splashDamage: 60,
-	splashDamageRadius: 60,
-	status: StatusEffects.blasted,
-	statusDuration: 180,
-});*/
-
 const hearth = extend(ItemTurret, "hearth", {
-/*setStats(){
-        this.super$setStats();
-        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, hearthExplosion)));
-    },*/
     shootLength: 7.25
 });
-/*hearth.buildType = () => extend(ItemTurret.ItemTurretBuild, hearth, {
-    creload : 0,
-    updateTile(){
-        this.super$updateTile();
-
-        if(this.isShooting() && this.hasAmmo() && this.creload >= 230){
-            this.creload = 0
-            hearthExplosion.create(this, this.team, this.x, this.y + 7.25, this.rotation)
-            Sounds.explosion.at(this)
-        }
-        else{
-            if(this.creload < 230){this.creload += 1} 
-        }
-    },
-});*/
 
 const fireBullet = extend(BasicBulletType, {
 width: 12,
