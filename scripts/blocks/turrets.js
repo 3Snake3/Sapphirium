@@ -940,7 +940,6 @@ const shadowEmp = extend(EmpBulletType, {
 	lightOpacity: 0.7,
 	backColor: Pal.sapBulletBack,
 	frontColor: Pal.sapBullet,
-	damage: 60,
 	hitEffect: shadowSplashEffect,
 	shootEffect: shadowEmpSparks,
 	smokeEffect: Fx.shootBigSmoke2,
