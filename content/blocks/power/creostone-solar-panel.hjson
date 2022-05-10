@@ -5,12 +5,11 @@ powerProduction: 6.7
 category: power
 placeableLiquid: true
 requirements: [
-graphite/345
-silicon/288
-creostone/115
-phase-fabric/75
-thorium/50
+creostone/435
+silicon/200
+leaded-copper/120
 ]
+buildCostMultiplier: 2
 research: {
 parent: solar-panel-gigantic
 objectives: [creotite-converter]

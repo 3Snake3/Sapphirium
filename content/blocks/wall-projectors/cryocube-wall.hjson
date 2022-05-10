@@ -9,9 +9,9 @@ recoilAmount: 0
 rotateSpeed: 0
 shootCone: 360
 range: 30
-shots: 360
 powerUse: 3
 group: walls
+acceptCoolant: false
 shootEffect: {
 type: WaveEffect
 sides: 0
@@ -24,8 +24,8 @@ colorTo: bfecff
 
 shootType: {
 sprite: adc-none-bullet
-speed: 2
-lifetime: 15
+speed: 0
+lifetime: 5
 damage: 0
 pierce: true
 status: adc-overfreezing

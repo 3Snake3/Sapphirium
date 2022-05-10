@@ -72,8 +72,9 @@ bullet: {
 type: ArtilleryBulletType
 width: 18
 height: 18
+damage: 10
 splashDamage: 50
-splashDamageRadius: 50
+splashDamageRadius: 35
 speed: 4
 lifetime: 40
 collidesTiles: true
@@ -87,9 +88,9 @@ y: -5
 x: 7
 reload: 30
 recoil: 2
-inaccuracy: 4
-spacing: 4
-shots: 3
+inaccuracy: 5
+spacing: 3
+shots: 2
 shootCone: 65
 shootSound: missile
 rotate: true
@@ -101,7 +102,7 @@ width: 10
 height: 12
 damage: 25
 homingRange: 60
-drag: -0.005
+drag: -0.003
 speed: 3
 lifetime: 44
 splashDamage: 45

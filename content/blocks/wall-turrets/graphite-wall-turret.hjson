@@ -25,6 +25,7 @@ collidesAir: true
 damage: 40
 lifetime: 14
 drawSize: 200
+pierceCap: 3
 hitSize: 2
 hitEffect: hitLancer
 despawnEffect: none

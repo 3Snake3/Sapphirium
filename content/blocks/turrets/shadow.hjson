@@ -5,15 +5,14 @@ recoilAmount: 6
 shootCone: 45
 shootSound: railgun
 shootShake: 6
-shots: 3
-burstSpacing: 23
+unitSorts: strongest
 range: 400
 rotateSpeed: 2
 ammoUseEffect: none
 ammoPerShot: 10
 maxAmmo: 80
 consumes: {
-power: 15
+power: 18
 liquid: {
 liquid: ledonite-liquid
 amount: 1
@@ -28,7 +27,7 @@ effects: [
 type: WaveEffect
 sides: 0
 lifetime: 30
-sizeFrom: 40
+sizeFrom: 30
 sizeTo: 0
 strokeFrom: 4
 strokeTo: 0
@@ -40,7 +39,7 @@ type: ParticleEffect
 particles: 1
 region: adc-shadow-rail2
 lifetime: 30
-sizeFrom: 40
+sizeFrom: 30
 sizeTo: 0
 colorFrom: bf92f9
 colorTo: bf92f9
@@ -64,8 +63,8 @@ cone: 360
 }
 ammoTypes: {
 tinorium: {
-type: RailBulletType
-updateEffect: {
+type: PointBulletType
+trailEffect: {
 type: MultiEffect
 effects: [
 {
@@ -73,7 +72,7 @@ type: ParticleEffect
 particles: 1
 length: 0
 lifetime: 30
-sizeFrom: 40
+sizeFrom: 30
 colorFrom: 6d56bf
 colorTo: 6d56bf
 region: adc-rail
@@ -83,56 +82,82 @@ type: ParticleEffect
 particles: 1
 length: 0
 lifetime: 30
-sizeFrom: 40
+sizeFrom: 30
 colorFrom: bf92f9
 colorTo: bf92f9
 region: adc-shadow-rail
 }]
 }
-pierceEffect: {
-type: ParticleEffect
-particles: 1
-length: 0
-lifetime: 30
-sizeFrom: 50
-colorFrom: bf92f9
-colorTo: bf92f9
-region: adc-pierce-effect
-}
 hitEffect: {
 type: MultiEffect
 effects: [
 {
-type: ExplosionEffect
-waveRad: 34
-smokeRad: 44
-smokeSize: 8
-waveLife: 15
-waveColor: bf92f9
-sparks: 0
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 30
+colorFrom: bf92f9
+colorTo: bf92f9
+region: adc-shadow-rail
 }
 {
-type: ParticleEffect
-particles: 8
-lifetime: 40
-sizeFrom: 6
-sizeTo: 0
+type: WaveEffect
+sides: 0
+lifetime: 30
+sizeFrom: 30
 colorFrom: bf92f9
-colorTo: bf92f985
-length: 40
-cone: 360
+colorTo: bf92f9
+strokeTo: 0
+}
+]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 30
+colorFrom: bf92f9
+colorTo: bf92f9
+region: adc-shadow-rail
+}
+{
+type: WaveEffect
+sides: 0
+lifetime: 30
+sizeFrom: 30
+colorFrom: bf92f9
+colorTo: bf92f9
+strokeTo: 0
 }
 ]
 }
 buildingDamageMultiplier: 0.2
 hitShake: 6
-damage: 1000
+damage: 800
 ammoMultiplier: 1
 pierceDamageFactor: 2
 status: sapped
 statusDuration: 180
 length: 400
-updateEffectSeg: 60
+trailSpacing: 18
+fragBullets: 4
+fragCone: 360
+fragBullet: {
+type: ShrapnelBulletType
+length: 60
+width: 10
+serrations: 0
+damage: 40
+toColor: bf92f9
+shootEffect: none
+smokeEffect: none
+pierceCap: 4
+}
 }
 }
 category: turret

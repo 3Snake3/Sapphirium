@@ -28,8 +28,8 @@ sizeFrom: 45
 sizeTо: 45
 strokeFrom: 3
 strokeTo: 0
-colorFrom: bd5553
-colorTo: bd5553
+colorFrom: ffb380
+colorTo: ffb380
 }
 {
 type: ParticleEffect
@@ -37,8 +37,8 @@ particles: 1
 length: 0
 lifetime: 30
 sizeFrom: 50
-colorFrom: bd5553
-colorTo: bd5553
+colorFrom: ffb380
+colorTo: ffb380
 region: adc-rail-hit
 }
 ]
@@ -54,8 +54,8 @@ particles: 1
 length: 0
 lifetime: 30
 sizeFrom: 40
-colorFrom: bd5553ff
-colorTo: bd5553ff
+colorFrom: ffb380ff
+colorTo: ffb380ff
 region: adc-pierce-effect
 }
 {
@@ -66,8 +66,8 @@ sizeTo: 50
 strokeFrom: 3
 strokeTo: 0
 lifetime: 30
-colorFrom: bd5553ff
-colorTo: bd5553ff
+colorFrom: ffb380ff
+colorTo: ffb380ff
 }
 ]
 }
@@ -77,8 +77,8 @@ particles: 1
 length: 0
 lifetime: 30
 sizeFrom: 40
-colorFrom: bd5553ff
-colorTo: bd5553ff
+colorFrom: ffb380ff
+colorTo: ffb380ff
 region: adc-rail
 }
 hitEffect: {
@@ -87,7 +87,7 @@ waveRad: 50
 smokeRad: 40
 smokeSize: 8
 waveLife: 15
-waveColor: bd5553ff
+waveColor: ffb380ff
 sparks: 0
 }
 hitShake: 6
@@ -202,11 +202,11 @@ statusDuration: 60
 }
 }
 consumes: {
-power: 10
+power: 12
 }
 requirements: [
 creostone/1250
-silicon/360
+silicon/460
 plastanium/225
 surge-alloy/120
 ]

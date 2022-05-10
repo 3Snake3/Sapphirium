@@ -1,10 +1,10 @@
 
 health: 3000
 recoilAmount: 1.5
-reloadTime: 120
+reloadTime: 180
 shots: 3
 range: 145
-burstSpacing: 4
+burstSpacing: 8
 shootCone: 45
 targetAir: true
 ammoUseEffect: none
@@ -15,17 +15,35 @@ shootEffect: shootLiquid
 group: walls
 priority: turret
 shootType: {
-type: LiquidBulletType
-liquid: cryofluid
-puddleSize: 8
-speed: 2
-orbSize: 6
-damage: 12
+width: 12
+height: 12
+sprite: circle-bullet
+damage: 5
+splashDamage: 10
+splashDamageRadius: 15
 status: freezing
-statusDuration: 180
-lifetime: 72.5
-pierce: true
-pierceCap: 1
+statusDuration: 60
+backColor: 86ceeb
+frontColor: bfecff
+shrinkY: 0
+hitEffect: {
+type: ParticleEffect
+particles: 6
+sizeFrom: 5
+sizeTo: 0
+colorFrom: bfecff
+colorTo: 6485b080
+lifetime: 60
+}
+despawnEffect: {
+type: ParticleEffect
+particles: 6
+sizeFrom: 5
+sizeTo: 0
+colorFrom: bfecff
+colorTo: 6485b080
+lifetime: 60
+}
 }
 requirements: [
 cryocube/20

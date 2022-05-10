@@ -18,16 +18,18 @@ width: 9
 height: 12
 speed: 5
 lifetime: 20
-damage: 5
-splashDamage: 10
+damage: 10
+splashDamage: 15
 splashDamageRadius: 15
+drag: -0.003
+keepVelocity: false
 homingRange: 35
 weaveScale: 3
 weaveMag: 3
 hitEffect: blastExplosion
 despawnEffect: blastExplosion
 }
-powerUse: 1.5
+powerUse: 2.5
 requirements: [
 silicon/40
 creostone/10

@@ -27,11 +27,14 @@ shootSound: missile
 bullet: {
 type: MissileBulletType
 speed: 4
+damage: 15
 splashDamage: 30
 splashDamageRadius: 45
 width: 11
 height: 11
 lifetime: 80
+keepVelocity: false
+drag: -0.003
 status: bleeding
 frontColor: d94848
 backColor: 8a3340
@@ -113,6 +116,7 @@ colorTo: d94848
 effectChance: 0.07
 show: false
 }
+activeEffect: none
 duration: 80
 range: 20
 reload: 210

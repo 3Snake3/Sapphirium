@@ -3,8 +3,6 @@ const copperTransformer = extend(SingleTypeGenerator, "copper-transformer", {});
 const strongPowerNode = extend(PowerNode, "strong-power-node", {});
 
 const solarPanelMedium = extend(SolarGenerator, "solar-panel-medium", {});
-const solarPanelHuge = extend(SolarGenerator, "solar-panel-huge", {});
-const solarPanelGigantic = extend(SolarGenerator, "solar-panel-gigantic", {});
 
 const hydrogenerator = extend(ThermalGenerator, "hydrogenerator", {});
 const sporeGenerator = extend(ThermalGenerator, "spore-generator", {});

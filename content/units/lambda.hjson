@@ -4,10 +4,10 @@ lowAltitude: true
 mineSpeed: 9.5
 mineTier: 3
 buildSpeed: 1.15
-drag: 0.016
+drag: 0.06
 speed: 4.15
 rotateSpeed: 21
-accel: 0.21
+accel: 0.12
 itemCapacity: 90
 health: 300
 engineOffset: 8
@@ -65,7 +65,7 @@ type: MissileBulletType
 width: 7
 height: 7
 shrinkY: 0
-drag: -0.002
+drag: -0.003
 homingRange: 35
 trailChance: 0.2
 trailColor: f9c27a

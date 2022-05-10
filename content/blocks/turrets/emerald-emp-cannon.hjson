@@ -1,6 +1,6 @@
 health: 2200
 size: 4
-reloadTime: 65
+reloadTime: 120
 recoilAmount: 4
 rotateSpeed: 2
 shootShake: 5

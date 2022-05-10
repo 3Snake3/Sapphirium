@@ -1,5 +1,5 @@
 health: 2400
-reloadTime: 80
+reloadTime: 100
 recoilAmount: 4
 shootSound: spark
 shootCone: 45
@@ -8,12 +8,12 @@ smokeEffect: none
 alternate: true
 range: 210
 shots: 4
-burstSpacing: 5
+burstSpacing: 8
 emitLight: true
 lightRadius: 80
 size: 4
 consumes: {
-power: 8.5
+power: 22
 }
 ammoTypes: {
 charged-cylinder: {
@@ -41,8 +41,7 @@ lightningDamage: 15
 category: turret
 research: tesla-coil
 requirements: [
-copper/1200
-lead/800
+leaded-copper/1350
 silicon/560
 charged-cylinder/380
 plastanium/230

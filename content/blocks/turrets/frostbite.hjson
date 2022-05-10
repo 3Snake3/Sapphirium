@@ -27,7 +27,7 @@ backColor: ffffff
 trailColor: ffffff
 frontColor: ffffff
 trailChance: 0.5
-fragBullets: 6
+fragBullets: 3
 fragCone: 90
 fragBullet: {
 type: FlakBulletType

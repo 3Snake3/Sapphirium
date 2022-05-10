@@ -660,7 +660,7 @@ const goldenFireBullet = extend(BasicBulletType, {
 	lifetime: 14,
 	sprite: "circle-bullet",
 	status: goldenPollination,
-	statusDuration: 370,
+	statusDuration: 250,
 	hitEffect: goldenHit,
 	despawnEffect: Fx.none,
 	frontColor: Color.white,
@@ -858,7 +858,7 @@ const energyBall = extend(BasicBulletType, {
 	collidesGround: false,
 	collidesAir: true,
 	collidesTiles: false,
-	splashDamage: 225,
+	splashDamage: 115,
 	splashDamageRadius: 185,
 	backColor: Pal.bulletYellowBack,
 	frontColor: Pal.bulletYellow,
@@ -924,12 +924,13 @@ const shadowEmpSparks = extend(WaveEffect, {
 	colorTo: Pal.sapBulletBack
 });
 
-const shadowEmp = extend(BasicBulletType, {
+const shadowEmp = extend(EmpBulletType, {
 	width: 12,
 	height: 12,
 	speed: 5,
 	lifetime: 80,
-	splashDamage: 70,
+	damage: 50,
+	splashDamage: 60,
 	splashDamageRadius: 100,
 	sprite: "circle-bullet",
 	hitColor: Pal.sap,
@@ -947,7 +948,8 @@ const shadowEmp = extend(BasicBulletType, {
 	trailLength: 22,
 	trailWidth: 6,
 	trailColor: Pal.sapBulletBack,
-	status: StatusEffects.sapped
+	status: StatusEffects.sapped,
+	hitPowerEffect: shadowSplashEffect
 });
 	
 const shadow = extend(ItemTurret, "shadow", {
@@ -995,8 +997,8 @@ const bayonetFireball = extend(BasicBulletType, {
 	frontColor: Pal.lightishOrange,
 	trailEffect: Fx.fireHit,
 	damage: 40,
-	splashDamage: 60,
-	splashDamageRadius: 60,
+	splashDamage: 50,
+	splashDamageRadius: 40,
 	status: StatusEffects.burning,
 	statusDuration: 180,
 	homingPower: 0.1,
@@ -1094,9 +1096,9 @@ const regen = extend(ParticleEffect, {
 });
 
 const regeneration = extend(StatusEffect, "regeneration", {
-	speedMultiplier: 1.5,
-	damageMultiplier: 1.5,
-	relooadMultiplier: 1.5,
+	speedMultiplier: 1.35,
+	damageMultiplier: 1.35,
+	relooadMultiplier: 1.35,
 	healthMultiplier: 0.7,
 	damage: -0.2,
 	effect: regen,
@@ -1130,7 +1132,7 @@ GainTurret.buildType = () => extendContent(RepairPoint.RepairPointBuild, GainTur
  if(Angles.angleDist(angle, this.rotation) < 30){ 
  gained = true; 
  //status effect apply
- this.target.apply(regeneration, 600) 
+ this.target.apply(regeneration, 350) 
  } 
  this.rotation = Mathf.slerpDelta(this.rotation, angle, 0.5 * this.efficiency() * this.timeScale); 
  } 

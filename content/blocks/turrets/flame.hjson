@@ -59,7 +59,7 @@ pierceCap: 2
 backColor: ed7358
 frontColor: ff9c59
 fragBullets: 5
-fragCone: 90
+fragCone: 360
 fragBullet: {
 width: 8
 height: 8
@@ -103,8 +103,8 @@ pierceBuilding: true
 pierceCap: 3
 backColor: ed7358
 frontColor: ff9c59
-fragBullets: 6
-fragCone: 90
+fragBullets: 5
+fragCone: 360
 fragBullet: {
 width: 8
 height: 8
@@ -121,6 +121,9 @@ effects: [blastExplosion, fireHit]
 backColor: ed7358
 frontColor: ff9c59
 damage: 24
+pierce: true
+pierceCap: 2
+pierceBuilding: true
 }
 }
 }
