@@ -3,7 +3,7 @@ cost: 0.9,
 color: Color.valueOf("ffe18f")
 });
 const iceCube = extend(Item, "ice-cube", {
-lowPriority: true
+lowPriority: true,
 });
 const cryoCube = extend(Item, "cryocube", {});
 const ledoniteCube = extend(Item, "ledonite-cube", {});
