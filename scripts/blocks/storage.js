@@ -46,7 +46,7 @@ this.stats.add(Stat.buildTime, this.buildCost / 60, StatUnit.seconds);
         }
     }
 });
-emeraldCore.buildType = () => extendContent(CoreBlock.CoreBuild, emeraldCore, {
+emeraldCore.buildType = () => extend(CoreBlock.CoreBuild, emeraldCore, {
 	//the event of a bullet hitting the core
 collision(bullet){
             this.super$collision(bullet);
@@ -62,7 +62,7 @@ collision(bullet){
                 }
                 }
             }
-          //can bullets hit the core
+          //can enemy bullets hit the core
       return true;
 }
 });
@@ -86,8 +86,17 @@ const coreCage = extend(CoreBlock, "core-cage", {
 	
 	//for bars
     setBars(){
+    	/*
         this.super$setBars();
-        this.bars.add("poweroutput", entity => new Bar(
+        if(this.hasPower && this.outputsPower && this.consPower != null){
+        this.addBar("power", entity => new Bar(
+	    () => Core.bundle.format("bar.poweroutput", Strings.fixed(entity.getPowerProduction() * 60 * entity.timeScale(), 1)),
+	    () => Pal.powerBar, 
+	    () => entity.productionEfficiency));
+	}
+    },*/
+    this.super$setBars();
+        this.addBar("poweroutput", entity => new Bar(
 	    () => Core.bundle.format("bar.poweroutput", powerProduction * 60), 
 	    () => Pal.powerBar, 
 	    () => 1
@@ -100,7 +109,7 @@ const coreCage = extend(CoreBlock, "core-cage", {
 
 //efficiency multiplier 
 const productionEfficiency = 1.0;
-coreCage.buildType = () => extendContent(CoreBlock.CoreBuild, coreCage, {
+coreCage.buildType = () => extend(CoreBlock.CoreBuild, coreCage, {
 	//endowing the core with the ability to produce power
         getPowerProduction(){
             return powerProduction * productionEfficiency;
@@ -168,7 +177,7 @@ if(LC > 0){
         }
     }
  });
-indigo.buildType = () => extendContent(CoreBlock.CoreBuild, indigo, {
+indigo.buildType = () => extend(CoreBlock.CoreBuild, indigo, {
 	collision(bullet){
             this.super$collision(bullet);
             var hitl = 1;
@@ -231,7 +240,7 @@ this.stats.add(Stat.buildTime, this.buildCost / 60, StatUnit.seconds);
         }
     }
  });
-coreOcean.buildType = () => extendContent(CoreBlock.CoreBuild, coreOcean, {
+coreOcean.buildType = () => extend(CoreBlock.CoreBuild, coreOcean, {
 	collision(bullet){
             this.super$collision(bullet);
             //create water wave if necessary

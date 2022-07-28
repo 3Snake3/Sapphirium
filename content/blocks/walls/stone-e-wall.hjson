@@ -1,0 +1,8 @@
+
+health: 680
+category: defense
+requirements: [
+stone/8
+]
+research: ice-cube-wall
+envDisabled: 17

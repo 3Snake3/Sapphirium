@@ -1,0 +1,20 @@
+
+requirements: [
+lead/35
+graphite/15
+]
+category: power
+consumes: {
+items: {
+items: [
+sand/2
+]
+}
+}
+itemDuration: 70
+powerProduction: 0.33
+hasLiquids: false
+hasItems: true
+ambientSound: smelter
+ambientSoundVolume: 0.03
+research: core-shard

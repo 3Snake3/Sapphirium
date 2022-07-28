@@ -1,0 +1,12 @@
+health: 540
+requirements: [
+leaded-copper/1
+stone/2
+]
+envDisabled: 17
+category: distribution
+research: {
+parent: router
+objectives: [strong-conveyor]
+}
+placeableLiquid: true

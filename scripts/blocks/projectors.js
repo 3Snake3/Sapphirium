@@ -15,7 +15,7 @@ const flashlight = extend(LightBlock, "flashlight", {});
 
 const creostoneMine = extend(ShockMine, "creostone-mine", {});
 
-const indBar = extendContent(ForceProjector, "indigo-barrier", {
+const indBar = extend(ForceProjector, "indigo-barrier", {
   drawPlace(x, y, rotation, valid){
         this.drawPotentialLinks(x, y);
 
@@ -29,10 +29,10 @@ const indBar = extendContent(ForceProjector, "indigo-barrier", {
     }
 });
 
-indBar.consumes.item(items.globium).boost();
-indBar.consumes.power(8);
+indBar.consumeItem(items.globium).boost();
+indBar.consumePower(8);
 
-indBar.buildType = () => extendContent(ForceProjector.ForceBuild, indBar, {
+indBar.buildType = () => extend(ForceProjector.ForceBuild, indBar, {
     drawShield(){
         if(!this.broken){
             var radius = this.realRadius();

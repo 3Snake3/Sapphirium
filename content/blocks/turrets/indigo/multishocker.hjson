@@ -1,0 +1,63 @@
+
+size: 2
+category: turret
+research: {
+parent: icicle
+}
+requirements: [
+leaded-copper/145
+titanium/80
+silicon/80
+]
+reload: 120
+consumes: {
+power: 6
+}
+shoot: {
+type: ShootAlternate
+shots: 3
+shotDelay: 8
+barrels: 3
+spread: 3.5
+}
+inaccuracy: 8
+range: 240
+health: 1400
+shootEffect: lightningShoot
+heatColor: ff0000
+shootSound: missile
+shootType: {
+sprite: adc-spear-bullet
+width: 8
+height: 12
+speed: 4.4
+lifetime: 55
+backColor: a9d8ff
+frontColor: ffffff
+weaveScale: 8
+weaveMag: 1
+damage: 30
+homingPower: 0.15
+homingRange: 60
+shrinkY: 0
+drag: -0.003
+keepVelocity: false
+lightRadius: 60
+lightOpacity: 0.7
+lightColor: a9d8ff
+trailWidth: 3.07
+trailLength: 10
+trailColor: a9d8ff
+hitSound: spark
+lightning: 2
+lightningLength: 7.5
+lightningDamage: 5
+lightningColor: a9d8ff
+pierce: true
+pierceCap: 3
+pierceBuilding: true
+status: shocked
+statusDuration: 80
+hitEffect: hitLancer
+despawnEffect: hitLancer
+}

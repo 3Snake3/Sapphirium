@@ -1,0 +1,16 @@
+category: liquid
+
+health: 320
+botColor: 38393f
+leaks: false
+liquidCapacity: 35
+liquidPressure: 1.03
+health: 380
+researchCostMultiplier: 3
+underBullets: true
+
+requirements: [
+  creostone/2
+]
+
+research: reinforced-conduit

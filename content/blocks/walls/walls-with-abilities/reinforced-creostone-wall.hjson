@@ -1,0 +1,13 @@
+
+health: 890
+armor: 18
+buildCostMultiplier: 8
+baseExplosiveness: 8
+category: defense
+flashHit: true
+chanceDeflect: 5
+requirements: [
+creostone/10
+]
+research: tungsten-wall
+envEnabled: 17

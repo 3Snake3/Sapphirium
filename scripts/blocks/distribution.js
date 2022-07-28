@@ -35,16 +35,5 @@ const teleporter = extend(MassDriver, "teleporter", {
 bullet: massBullet
 });
 
-const massDriver = extendContent(MassDriver, "compact-driver", {});
+const massDriver = extend(MassDriver, "compact-driver", {});
 massDriver.bullet = extend(MassDriverBolt, {});
-
-/*function newNode(parent, content, req, objectives){
-	
-    var parnode = TechTree.get(parent);
-    var node = new TechTree.TechNode(parnode, content, req = null ? content.researchRequirements() : req);
-    var used = new ObjectSet();
-  
-    node.objectives.addAll(objectives = null ? null : objectives);
-}
-
-newNode(Blocks.massDriver, teleporter, ItemStack.with(Items.titanium, 2000, Items.silicon, 4000, Items.plastanium, 1200), Seq.with(new Objectives.SectorComplete(SectorPresets.impact0078)));*/

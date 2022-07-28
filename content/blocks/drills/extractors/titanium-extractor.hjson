@@ -1,0 +1,56 @@
+size: 2
+craftTime: 600
+outputItem: titanium/8
+hasLiquids: true
+hasItems: true
+hasPower: true
+itemCapacity: 16
+liquidCapacity: 12
+consumes: {
+power: 2
+liquid: water/0.2
+}
+craftEffect: {
+type: ParticleEffect
+particles: 6
+length: 30
+lifetime: 60
+sizeFrom: 5
+sizeTo: 0
+region: adc-rhombus
+colorFrom: a9d8ff
+colorTo: a9d8ff
+cone: 360
+}
+category: production
+requirements: [
+leaded-copper/220
+lead/120
+silicon/65
+]
+research: pneumatic-drill
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawRegion
+suffix: "-bottom"
+}
+{
+type: DrawGlowRegion
+suffix: "-glow"
+color: a8d8ff
+}
+{
+type: DrawLiquidRegion
+drawLiquid: water
+}
+{
+type: DrawRegion
+suffix: "-top"
+}
+]
+}

@@ -1,0 +1,93 @@
+type: multicraft.MultiCrafter
+craftEffect: smeltsmoke
+category: crafting
+menu: transform
+recipes: [
+{
+input: {
+fluids: [water/0.05]
+power: 0.3
+craftTime: 30
+}
+output: {
+items: [
+adc-ice-cube/1
+]
+}
+}
+{
+input: {
+fluids: [cryofluid/0.05]
+power: 0.5
+craftTime: 4
+}
+output: {
+items: [
+adc-cryocube/1
+]
+}
+}
+{
+input: {
+fluids: [adc-ledonite-liquid/0.05]
+power: 0.6
+craftTime: 55
+}
+output: {
+items: [
+adc-ledonite-cube/1
+]
+}
+}
+{
+input: {
+fluids: [slag/0.05]
+power: 0.7
+craftTime: 50
+}
+output: {
+items: [
+adc-stone/1
+]
+}
+}
+{
+input: {
+fluids: [oil/0.15]
+power: 0.5
+craftTime: 60
+}
+output: {
+items: [
+coal/2
+]
+power: 2.5
+}
+}
+{
+input: {
+fluids: [adc-surge-mass/0.05]
+power: 1.5
+craftTime: 80
+}
+output: {
+items: [
+adc-surge-stone/1
+]
+power: 4
+}
+}]
+requirements: [
+leaded-copper/70
+graphite/60
+]
+envDisabled: 17
+size: 2
+liquidCapacity: 10
+itemCapacity: 10
+research: {
+parent: graphite-press
+objectives: [
+mechanical-pump
+]
+}

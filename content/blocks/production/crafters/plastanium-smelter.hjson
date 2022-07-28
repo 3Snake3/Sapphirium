@@ -1,0 +1,41 @@
+
+outputItem: plastanium/8
+size: 3
+craftTime: 230
+updateEffect: plasticburn
+craftEffect: formsmoke
+itemCapacity: 30
+liquidCapacity: 35
+ambientSound: techloop
+ambientSoundVolume: 0.19
+drawer: {
+type: DrawMulti
+drawers: [DrawDefault, {
+type: DrawGlowRegion
+color: ecf2aa
+suffix: "-top"
+}]
+}
+consumes: {
+power: 12
+ items: {
+  items: [
+   titanium/5
+   spore-pod/1
+  ]
+ }
+ liquid:{
+ liquid:oil
+ amount: 0.7
+ }
+}
+requirements: [
+ leaded-copper/440
+ titanium/280
+ plastanium/200
+ creostone/90
+ graphite/90
+]
+category: crafting
+research: plastanium-compressor
+attribute: oil

@@ -1,0 +1,16 @@
+
+health: 3000
+size: 5
+powerProduction: 6.7
+category: power
+placeableLiquid: true
+requirements: [
+creostone/435
+silicon/200
+leaded-copper/120
+]
+envDisabled: 17
+buildCostMultiplier: 2
+research: {
+parent: solar-panel-large
+}

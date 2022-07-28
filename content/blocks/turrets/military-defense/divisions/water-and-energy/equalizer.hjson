@@ -1,0 +1,36 @@
+reload: 60
+recoil: 4
+shootCone: 45
+inaccuracy: 0
+shake: 3
+recoilTime: 0.1
+range: 200
+shootSound: shootBig
+health: 440
+category: turret
+size: 2
+requirements: [
+leaded-copper/140
+titanium/70
+]
+research: salvo
+ammoTypes: {
+lead: {
+type: ShrapnelBulletType
+length: 210
+damage: 33
+ammoMultiplier: 2
+reloadMultiplier: 1.25
+toColor: 8c7fa9
+width: 12
+serrations: 3
+}
+titanium: {
+type: ShrapnelBulletType
+length: 210
+damage: 55
+ammoMultiplier: 4
+width: 12
+serrations: 3
+}
+}

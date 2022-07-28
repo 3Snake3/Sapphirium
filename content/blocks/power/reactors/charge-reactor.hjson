@@ -1,0 +1,81 @@
+requirements: [
+leaded-copper/800
+creostone/450
+graphite/600
+thorium/270
+surge-alloy/340
+metaglass/340
+]
+category: power
+size: 4
+health: 2000
+powerProduction: 245
+explosionDamage: 3000
+explosionRadius: 30
+plasma1: f2e879
+plasma2: d99e6a
+destroyBullet: {
+type: BasicBulletType
+width: 0.001
+height: 0.001
+lifetime: 1
+damage: 0
+hitEffect: none
+despawnEffect: none
+collides: false
+collidesTiles: false
+collidesGround: false
+collidesAir: false
+fragBullets: 8
+fragRandomSpread: 360
+fragSpread: 45
+despawnSound: spark
+fragBullet: {
+type: LightningBulletType
+damage: 125
+collidesTeam: true
+collidesAir: true
+lightningLength: 15
+lightningLengthRand: 18
+lightningColor: f2e879
+lightningType: {
+width: 0.001
+height: 0.001
+lifetime: 10
+damage: 0
+hitEffect: none
+despawnEffect: {
+type: ParticleEffect
+particles: 8
+cone: 360
+length: 15
+line: true
+lenFrom: 4
+lenTo: 0
+colorFrom: f2e879
+colorTo: f2e879
+strokeTo: 0
+}
+collides: false
+collidesTiles: false
+collidesGround: false
+collidesAir: false
+}
+}
+}
+itemDuration: 140
+ambientSound: pulse
+ambientSoundVolume: 0.08
+consumes: {
+power: 30
+items: {
+items: [
+charged-cylinder/4
+]
+}
+liquid: ledonite-liquid/0.35
+}
+research: {
+parent: impact-reactor
+objectives: [electrogenerator]
+}

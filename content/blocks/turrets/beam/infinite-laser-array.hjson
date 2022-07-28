@@ -1,0 +1,11 @@
+category: turret
+research: {
+parent: pierce
+}
+requirements: [
+leaded-copper/160
+titanium/80
+silicon/80
+surge-alloy/40
+]
+size: 2

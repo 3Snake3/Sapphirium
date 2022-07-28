@@ -14,9 +14,9 @@ require("blocks/environment");
 require("blocks/production");
 require("blocks/drills");
 require("blocks/turrets");
-/*require("blocks/liquidUnloader");*/
 require("statuses/statuses");
 require("units");
+require("blocks/erekir-content");
 require("liquids");
 require("weathers");
 require("items");

@@ -23,9 +23,9 @@ const siliconWall = extend(Wall, "silicon-wall", {});
 const siliconWT = extend(PowerTurret, "silicon-wall-turret", {
 });
 
-const cinderblockWall = extend(Wall, "cinderblock-wall", {});
+const stoneWall = extend(Wall, "stone-e-wall", {});
 
-const cinderblockWT = extend(PowerTurret, "cinderblock-wall-turret", {
+const stoneWT = extend(PowerTurret, "stone-wall-turret", {
 });
 
 const cryocubeWall = extend(PowerTurret, "cryocube-wall", {});
@@ -51,10 +51,10 @@ const creostoneProjector = new JavaAdapter(ForceProjector, {
   }
 }, "creostone-wall-huge");
 
-creostoneProjector.consumes.item(Items.phaseFabric).boost();
-creostoneProjector.consumes.power(2);
+creostoneProjector.consumeItem(Items.phaseFabric).boost();
+creostoneProjector.consumePower(2);
 
-creostoneProjector.buildType = () => extendContent(ForceProjector.ForceBuild, creostoneProjector, {
+creostoneProjector.buildType = () => extend(ForceProjector.ForceBuild, creostoneProjector, {
     drawShield(){
         if(!this.broken){
             var radius = this.realRadius();
@@ -106,10 +106,10 @@ setStats(){
   }
 }, "globium-wall");
 
-globiumWall.consumes.item(items.globium).boost();
-globiumWall.consumes.power(2);
+globiumWall.consumeItem(items.globium).boost();
+globiumWall.consumePower(2);
 
-globiumWall.buildType = () => extendContent(ForceProjector.ForceBuild, globiumWall, {
+globiumWall.buildType = () => extend(ForceProjector.ForceBuild, globiumWall, {
     drawShield(){
         if(!this.broken){
             var radius = this.realRadius();
@@ -168,10 +168,10 @@ setStats(){
   }
 }, "globium-wall-large");
 
-globiumWallLarge.consumes.item(items.globium).boost();
-globiumWallLarge.consumes.power(4);
+globiumWallLarge.consumeItem(items.globium).boost();
+globiumWallLarge.consumePower(4);
 
-globiumWallLarge.buildType = () => extendContent(ForceProjector.ForceBuild, globiumWallLarge, {
+globiumWallLarge.buildType = () => extend(ForceProjector.ForceBuild, globiumWallLarge, {
     drawShield(){
         if(!this.broken){
             var radius = this.realRadius();
@@ -250,7 +250,7 @@ var sapEffectLarge = extend(WaveEffect, {
 	colorTo: Color.valueOf("6d56bf"),
 });
 const tinorWall = extend(Wall, "tinorium-wall", {});
-tinorWall.buildType = () => extendContent(Wall.WallBuild, tinorWall, {
+tinorWall.buildType = () => extend(Wall.WallBuild, tinorWall, {
 	collision(bullet){
             this.super$collision(bullet);
             //create shockwave and sapping bullet
@@ -269,7 +269,7 @@ tinorWall.buildType = () => extendContent(Wall.WallBuild, tinorWall, {
 }
 });
 const tinorWallLarge = extend(Wall, "tinorium-wall-large", {});
-tinorWallLarge.buildType = () => extendContent(Wall.WallBuild, tinorWallLarge, {
+tinorWallLarge.buildType = () => extend(Wall.WallBuild, tinorWallLarge, {
 	collision(bullet){
             this.super$collision(bullet);
             //create shockwave and sapping bullet
@@ -288,7 +288,7 @@ tinorWallLarge.buildType = () => extendContent(Wall.WallBuild, tinorWallLarge, {
 }
 });
 const armedTinoriumWall = extend(PowerTurret, "armed-tinorium-wall", {});
-armedTinoriumWall.buildType = () => extendContent(PowerTurret.PowerTurretBuild, armedTinoriumWall, {
+armedTinoriumWall.buildType = () => extend(PowerTurret.PowerTurretBuild, armedTinoriumWall, {
 	collision(bullet){
             this.super$collision(bullet);
             //create shockwave and sapping bullet
@@ -338,7 +338,7 @@ const crystal = extend(BasicBulletType, {
 const granateWall = extend(Wall, "granate-wall", {
 	health: 760,
 });
-granateWall.buildType = () => extendContent(Wall.WallBuild, granateWall, {
+granateWall.buildType = () => extend(Wall.WallBuild, granateWall, {
 	collision(bullet){
             this.super$collision(bullet);
             //create crystal bullet
@@ -358,7 +358,7 @@ granateWall.buildType = () => extendContent(Wall.WallBuild, granateWall, {
 const granateWallLarge = extend(Wall, "granate-wall-large", {
 	health: 2680,
 });
-granateWallLarge.buildType = () => extendContent(Wall.WallBuild, granateWallLarge, {
+granateWallLarge.buildType = () => extend(Wall.WallBuild, granateWallLarge, {
 	collision(bullet){
             this.super$collision(bullet);
             //create crystal bullet
@@ -390,7 +390,7 @@ const emeraldWall = extend(Wall, "emerald-wall", {
 	health: 800,
 	category: Category.defense,
 });
-emeraldWall.buildType = () => extendContent(Wall.WallBuild, emeraldWall, {
+emeraldWall.buildType = () => extend(Wall.WallBuild, emeraldWall, {
 	collision(bullet){
             this.super$collision(bullet);
             //create heal bullet
@@ -410,7 +410,7 @@ const emeraldWallLarge = extend(Wall, "emerald-wall-large", {
 	health: 3200,
 	category: Category.defense,
 });
-emeraldWallLarge.buildType = () => extendContent(Wall.WallBuild, emeraldWallLarge, {
+emeraldWallLarge.buildType = () => extend(Wall.WallBuild, emeraldWallLarge, {
 	collision(bullet){
             this.super$collision(bullet);
             //create heal bullet
@@ -449,7 +449,7 @@ const lLightning = extend(LightningBulletType, {
 	lightningType: lType,
 });
 const surgeStoneWall = extend(Wall, "surge-stone-wall", {});
-surgeStoneWall.buildType = () => extendContent(Wall.WallBuild, surgeStoneWall, {
+surgeStoneWall.buildType = () => extend(Wall.WallBuild, surgeStoneWall, {
 	collision(bullet){
             this.super$collision(bullet);
             
@@ -466,7 +466,7 @@ surgeStoneWall.buildType = () => extendContent(Wall.WallBuild, surgeStoneWall, {
             }
          });
 const armedSurgeStoneWall = extend(PowerTurret, "armed-surge-stone-wall", {});
-armedSurgeStoneWall.buildType = () => extendContent(PowerTurret.PowerTurretBuild, armedSurgeStoneWall, {
+armedSurgeStoneWall.buildType = () => extend(PowerTurret.PowerTurretBuild, armedSurgeStoneWall, {
 	collision(bullet){
             this.super$collision(bullet);
             
@@ -497,7 +497,7 @@ setStats(){
         }
     }
 });
-chargedLW.buildType = () => extendContent(SolarGenerator.SolarGeneratorBuild, chargedLW, {
+chargedLW.buildType = () => extend(SolarGenerator.SolarGeneratorBuild, chargedLW, {
 	collision(bullet){
             this.super$collision(bullet);
             var hit = 1;
@@ -512,4 +512,4 @@ chargedLW.buildType = () => extendContent(SolarGenerator.SolarGeneratorBuild, ch
 }
 });
 
-const superWall = extend(Wall, "super-wall", {});
+const reinforcedWall = extend(Wall, "reinforced-wall", {});

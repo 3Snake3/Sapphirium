@@ -1,0 +1,30 @@
+
+health: 1850
+category: power
+research: {
+parent: spore-generator
+objectives: [oil-extractor]
+}
+researchCostMultiplier: 2
+requirements: [
+leaded-copper/650
+plastanium/300
+thorium/230
+titanium/145
+silicon/180
+]
+powerProduction: 0.8
+generateEffect: {
+type: ParticleEffect
+particles: 4
+lifetime: 60
+sizeFrom: 5
+sizeTo: 0
+length: 25
+colorFrom: 61615b
+colorTo: 61615b70
+}
+size: 3
+ambientSound: hum
+ambientSoundVolume: 0.06
+attribute: oil

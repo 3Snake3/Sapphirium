@@ -1,9 +1,9 @@
 type: payload
 health: 890
-armor: 15
+armor: 8
 speed: 1.25
 hitSize: 13
-miningRange: 100
+mineRange: 100
 mineTier: 4
 mineSpeed: 5.8
 drag: 0.016
@@ -11,8 +11,6 @@ drag: 0.016
 lowAltitude: false
 flying: true
 
-commandLimit: 8
-commandRadius: 160
 engineOffset: 2.75
 engineSize: 3.15
 
@@ -28,12 +26,16 @@ name: flood-weapon
 x: 7.5
 y: 0.5
 mirror: false
+shoot: {
+type: ShootPattern
 shots: 2
+shotDelay: 3
+}
 top: false
 rotate: false
 reload: 45
 recoil: 3
-shotDelay: 3
+
 shootSound: bang
 ejectEffect: none
 bullet: {
@@ -85,7 +87,7 @@ mirror: false
 reload: 120
 shootY: 0
 shootCone: 180
-ingoreRotation: true
+ignoreRotation: true
 ejectEffect: none
 shootSound: none
 bullet: {

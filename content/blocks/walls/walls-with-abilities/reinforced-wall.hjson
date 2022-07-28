@@ -1,0 +1,12 @@
+
+health: 4500
+absorbLasers: true
+lightningChance: 0.05
+size: 2
+requirements: [
+plastanium/12
+surge-alloy/12
+]
+category: defense
+research: surge-wall-large
+envDisabled: 17

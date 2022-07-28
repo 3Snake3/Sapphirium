@@ -5,3 +5,4 @@ requirements: [
 silicon/6
 ]
 research: cryocube-wall-turret
+envDisabled: 17

@@ -1,0 +1,48 @@
+
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: "-bottom"
+}
+{
+type: DrawLiquidTile
+drawLiquid: ledonite-liquid
+}
+{
+type: DrawDefault
+}
+]
+}
+requirements: [
+leaded-copper/225
+silicon/140
+thorium/80
+graphite/60
+]
+envDisabled: 17
+outputLiquid: ledonite-liquid/0.4
+craftTime: 120
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+outputsLiquid: true
+consumes: {
+power: 4.7
+liquid: cryofluid/0.4
+items: {
+items: [
+ice-cube/4
+titanium/4
+]
+}
+}
+health: 1000
+itemCapacity: 10
+liquidCapacity: 22
+rotate: false
+solid: true
+category: crafting
+research: cryofluid-megamixer

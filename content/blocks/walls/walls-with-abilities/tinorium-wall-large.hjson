@@ -1,0 +1,8 @@
+health: 3000
+category: defense
+research: tinorium-wall
+requirements: [
+tinorium/32
+]
+size: 2
+envDisabled: 17

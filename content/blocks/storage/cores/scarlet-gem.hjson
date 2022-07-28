@@ -1,0 +1,10 @@
+requirements: [
+lead/10000
+silicon/10000
+titanium/8000
+thorium/5800
+creostone/3800
+]
+research: core-nucleus
+category: effect
+unitType: scarlet-moth

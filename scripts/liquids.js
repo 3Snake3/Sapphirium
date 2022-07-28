@@ -1,3 +1,13 @@
+const statuses = require("statuses/statuses");
+
+const ledonite = extend(Liquid, "ledonite-liquid", {
+effect: statuses.superFreezing,
+});
+
+const creotite = extend(Liquid, "creotite", {
+effect: statuses.superMelting,
+});
+
 const charge = 1;
 const surgeMass = extend(Liquid, "surge-mass", {
 	setStats(){
@@ -9,12 +19,6 @@ const surgeMass = extend(Liquid, "surge-mass", {
 	effect: StatusEffects.shocked,
 	color: Pal.surge,
 	lightColor: Color.valueOf("fff8a5"),
-});
-
-const statuses = require("statuses/statuses");
-
-const ledonite = extend(Liquid, "ledonite-liquid", {
-effect: statuses.superFreezing,
 });
 
 module.exports = {

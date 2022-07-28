@@ -1,5 +1,16 @@
 const statuses = require("statuses/statuses");
 
+var impalerSpearCharge = extend(WaveEffect, {
+sides: 0,
+lifetime: 30,
+sizeFrom: 16,
+sizeTo: 0,
+strokeFrom: 3,
+strokeTo: 0,
+colorFrom: Pal.lancerLaser,
+colorTo: Pal.lancerLaser
+});
+
 const spear = extend(BasicBulletType, 8, 35, "adc-spear-bullet", {
   
     width: 15,
@@ -18,6 +29,8 @@ const spear = extend(BasicBulletType, 8, 35, "adc-spear-bullet", {
   
     status: StatusEffects.freezing,
     statusDuration: 180,
+    
+    chargeEffect: new MultiEffect(Fx.lancerLaserCharge, impalerSpearCharge),
 })
 
 const frag = extend(LightningBulletType, {
@@ -215,7 +228,7 @@ setStats(){
         this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, greenLaser)));
     }
 });
-executioner.consumes.add(new ConsumeCoolant(2)).update = false;
+executioner.consume(new ConsumeCoolant(2)).update = false;
 executioner.buildType = () => extend(LaserTurret.LaserTurretBuild, executioner, {
 	creload : 0,
     updateTile(){
@@ -271,7 +284,7 @@ loopSoundVolume: 0.8,
 shootType: contLaser,
 powerUse: 3,
 });
-infiniteLSA.consumes.add(new ConsumeCoolant(0.3)).update = false;
+infiniteLSA.consume(new ConsumeCoolant(0.3)).update = false;
 
 const sawHit = extend(ExplosionEffect, {
 waveColor: Color.valueOf("9497ff"),
@@ -301,8 +314,6 @@ smokes: 5,
 sparks: 0
 });
 
-const sawHitSnd = loadSound("sawblade-hit");
-
 const sawBack = extend(BasicBulletType, {
     width: 24,
     height: 24,
@@ -316,7 +327,7 @@ const sawBack = extend(BasicBulletType, {
     status: StatusEffects.sapped,
     statusDuration: 180,
 
-    hitSound: sawHitSnd,
+    hitSound: Sounds.laser,
     hitEffect: sawHit,
     despawnEffect: sawDesp,
     frontColor: Color.valueOf("ffffff"),
@@ -340,7 +351,7 @@ const saw = extend(BasicBulletType, {
     status: StatusEffects.sapped,
     statusDuration: 180,
 
-    hitSound: sawHitSnd,
+    hitSound: Sounds.laser,
     hitEffect: sawHit,
     despawnEffect: sawDesp,
     frontColor: Color.valueOf("ffffff"),
@@ -367,7 +378,7 @@ const thrower = extend(ItemTurret, "thrower", {});
 
 const speed = extend(ItemTurret, "speed", {});
 
-//So far in development. MultiTurret lib It was taken from the old Progressed Materials
+//This is broken
 /*const multiTLib = require("multiTurretType");
 
 const unoBullet = extend(BasicBulletType, {
@@ -702,95 +713,6 @@ const hiddenTesla = extend(PowerTurret, "hidden-tesla", {});
 
 const teslaCoil = extend(PowerTurret, "tesla-coil", {});
 
-const phaseLightning = extend(LightningBulletType, {
-	lightningColor: Pal.surge,
-	damage: 35,
-	lightningLength: 55,
-});
-const phaseLightning2 = extend(LightningBulletType, {
-	lightningColor: Pal.surge,
-	damage: 35,
-	lightningLength: 55,
-});
-const phaseLightning3 = extend(LightningBulletType, {
-	lightningColor: Pal.surge,
-	damage: 35,
-	lightningLength: 55,
-});
-const phaseLaser = extend(LaserBulletType, {
-	colors: [Pal.surge, Pal.surge, Color.white],
-	damage: 80,
-	length: 220,
-	width: 17,
-	lightningColor: Pal.surge,
-	lightningDamage: 35,
-	lightningSpacing: 30,
-	lightningLength: 10,
-	reloadMultiplier: 1.5
-});
-const shockFrag = extend(BasicBulletType, {
-	width: 8,
-	height: 8,
-	damage: 15,
-	speed: 7,
-	lifetime: 60,
-	backColor: Pal.surge,
-	frontColor: Color.white,
-	lightningColor: Pal.surge,
-	lightning: 1,
-	lightningCone: 360,
-	lightningLength: 5,
-	pierceBuilding: true,
-	pierce: true
-});
-const phaseShockBullet = extend(BasicBulletType, {
-	width: 18,
-	height: 22,
-	damage: 35,
-	speed: 7,
-	lifetime: 60,
-	backColor: Pal.surge,
-	frontColor: Color.white,
-	lightningColor: Pal.surge,
-	lightning: 4,
-	lightningCone: 45,
-	lightningLength: 8,
-	fragBullets: 6,
-	fragBullet: shockFrag
-});
-
-const phase = extend(ItemTurret, "phase", {
-	setStats(){
-        this.super$setStats();
-        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, phaseLightning)));
-        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, phaseLaser)));
-        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, phaseShockBullet)));
-    }
-});
-phase.buildType = () => extend(ItemTurret.ItemTurretBuild, phase, {
-    creload : 0,
-    updateTile(){
-        this.super$updateTile();
-
-        if(this.isShooting() && this.power.status > 0.1 && this.hasAmmo() && this.creload >= 140){
-            this.creload = 0
-            phaseLightning.create(this, this.team, this.x, this.y, this.rotation)
-            Sounds.spark.at(this)
-            phaseLightning2.create(this, this.team, this.x, this.y, this.rotation)
-            Sounds.spark.at(this)
-            phaseLightning3.create(this, this.team, this.x, this.y, this.rotation)
-            Sounds.spark.at(this)
-            phaseLaser.create(this, this.team, this.x, this.y, this.rotation)
-            Sounds.laser.at(this)
-            phaseShockBullet.create(this, this.team, this.x, this.y, this.rotation)
-            Sounds.shootBig.at(this)
-        }
-        else{
-            if(this.creload < 140){this.creload += 1} 
-        }
-    },
-});
-
 const equalizer = extend(ItemTurret, "equalizer", {});
 
 const photon = extend(ItemTurret, "photon", {});
@@ -901,77 +823,73 @@ shootType: saw
 
 const punch = extend(ItemTurret, "punch", {});
 
-const shadowSplashEffect = extend(WaveEffect, {
-	sides: 0,
-	lifetime: 25,
-	sizeFrom: 100,
-	sizeTo: 110,
-	strokeTo: 0,
-	colorFrom: Pal.sapBullet,
-	colorTo: Pal.sapBulletBack
-});
+const shadowShellHit = extend(ExplosionEffect, {
+		waveRad: 55,
+		waveColor: Pal.sap,
+		waveStroke: 3.5,
+		waveLife: 12,
+		sparks: 6,
+		sparkRad: 55,
+		sparkStroke: 2.5,
+		sparkLen: 3,
+		sparkColor: Pal.sap,
+		smokes: 6,
+		smokeRad: 55,
+		smokeSize: 5,
+		smokeColor: Color.valueOf("665c9f70"),
+		});
+		
+const shadowShellShrapnel = extend(ShrapnelBulletType, {
+		length: 80,
+		width: 15,
+		toColor: Pal.sap,
+		serrations: 4,
+		damage: 35,
+		});
 
-const shadowEmpSparks = extend(WaveEffect, {
-	particles: 6,
-	lifetime: 35,
-	sizeFrom: 6,
-	sizeTo: 0,
-	strokeTo: 0,
-	line: true,
-	length: 35,
-	cone: 360,
-	colorFrom: Pal.sapBullet,
-	colorTo: Pal.sapBulletBack
-});
-
-const shadowEmp = extend(EmpBulletType, {
-	width: 12,
-	height: 12,
-	speed: 5,
-	lifetime: 80,
-	damage: 50,
-	splashDamage: 60,
-	splashDamageRadius: 100,
-	sprite: "circle-bullet",
-	hitColor: Pal.sap,
-	lightColor: Pal.sap,
-	lightRadius: 80,
-	hitSound: Sounds.plasmaboom,
-	lightOpacity: 0.7,
+const shadowShell = extend(BasicBulletType, 4, 45, "shell", {
+	width: 14,
+	height: 17,
+	splashDamage: 65,
+	splashDamageRadius: 55,
+	drag: 0.003,
+	lifetime: 100,
+	status: StatusEffects.sporeSlowed,
+	statusDuration: 125,
+	hitSound: Sounds.explosion,
 	backColor: Pal.sapBulletBack,
 	frontColor: Pal.sapBullet,
-	hitEffect: shadowSplashEffect,
-	shootEffect: shadowEmpSparks,
-	smokeEffect: Fx.shootBigSmoke2,
-	hitShake: 5,
-	trailLength: 22,
-	trailWidth: 6,
+	hitColor: Pal.sap,
+	hitEffect: shadowShellHit,
 	trailColor: Pal.sapBulletBack,
-	status: StatusEffects.sapped,
-	hitPowerEffect: shadowSplashEffect
-});
-	
+	trailLength: 17,
+	trailWidth: 3,
+	fragBullets: 4,
+	fragCone: 360,
+	fragAngle: 0,
+	fragBullet: shadowShellShrapnel,
+	shrinkX: 0,
+	shrinkY: 0,
+	});
+
 const shadow = extend(ItemTurret, "shadow", {
 setStats(){
         this.super$setStats();
-        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, shadowEmp)));
-    },
-    shootLength: -2.75
+        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, shadowShell)));
+    }
 });
 shadow.buildType = () => extend(ItemTurret.ItemTurretBuild, shadow, {
     creload : 0,
     updateTile(){
         this.super$updateTile();
-        let shX = this.x + Mathf.range(-10, 10)
-        let shY = this.y + 6.25
-        if(this.isShooting() && this.hasAmmo() && this.power.status >= 0.3 && this.creload >= 80){
+
+        if(this.isShooting() && this.power.status > 0.1 && this.hasAmmo() && this.creload >= 280){
             this.creload = 0
-            shadowEmp.create(this, this.team, shX, shY, this.rotation)
+            shadowShell.create(this, this.team, this.x, this.y, this.rotation)
             Sounds.laser.at(this)
-            Effect.shake(5, 5, this)
         }
         else{
-            if(this.creload < 80){this.creload += 1} 
+            if(this.creload < 280){this.creload += 1} 
         }
     },
 });
@@ -979,56 +897,13 @@ shadow.buildType = () => extend(ItemTurret.ItemTurretBuild, shadow, {
 const cloudRip = extend(ItemTurret, "cloud-breaker", {});
 
 const bombThrower = extend(ItemTurret, "bomb-thrower", {});
-
-const bayonetFireball = extend(BasicBulletType, {
-	width: 12,
-	height: 12,
-	sprite: "circle-bullet",
-	speed: 4,
-	lifetime: 100,
-	pierce: true,
-	pierceBuilding: true,
-	absorbable: false,
-	reflectable: false,
-	hittable: false,
-	trailColor: Pal.lightOrange,
-	backColor: Pal.lightOrange,
-	frontColor: Pal.lightishOrange,
-	trailEffect: Fx.fireHit,
-	damage: 40,
-	splashDamage: 50,
-	splashDamageRadius: 40,
-	status: StatusEffects.burning,
-	statusDuration: 180,
-	homingPower: 0.1,
-	homingRange: 60
-});
 	
 const bayonet = extend(ItemTurret, "bayonet", {
-setStats(){
-        this.super$setStats();
-        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, bayonetFireball)));
-    },
-    shootLength: 7.25
-});
-bayonet.buildType = () => extend(ItemTurret.ItemTurretBuild, bayonet, {
-    creload : 0,
-    updateTile(){
-        this.super$updateTile();
-
-        if(this.isShooting() && this.hasAmmo() && this.creload >= 180){
-            this.creload = 0
-            bayonetFireball.create(this, this.team, this.x, this.y + 7.25, this.rotation)
-            Sounds.flame.at(this)
-        }
-        else{
-            if(this.creload < 180){this.creload += 1} 
-        }
-    },
+    shootY: 7.25
 });
 
 const hearth = extend(ItemTurret, "hearth", {
-    shootLength: 7.25
+    shootY: 7.25
 });
 
 const fireBullet = extend(BasicBulletType, {
@@ -1079,7 +954,7 @@ const pressure = extend(PowerTurret, "pressure", {});
 
 const revival = extend(ItemTurret, "revival", {});
 
-const recovery = extend(ItemTurret, "recovery", {});
+const recoveryMortar = extend(ItemTurret, "recovery-mortar", {});
 
 const emeraldEmpCannon = extend(ItemTurret, "emerald-emp-cannon", {});
 
@@ -1105,19 +980,16 @@ const regeneration = extend(StatusEffect, "regeneration", {
 	color: Pal.heal,
 });
 
-const GainTurret = extend(RepairPoint, "gain-turret", {});
-GainTurret.buildType = () => extendContent(RepairPoint.RepairPointBuild, GainTurret, {
+const GainTurret = extend(RepairTurret, "gain-turret", {});
+GainTurret.buildType = () => extend(RepairTurret.RepairPointBuild, GainTurret, {
 	updateTile() { 
- let multiplier = 1; 
-   
  if(this.acceptCoolant) { 
- let liq = this.consumes.get(ConsumeType.liquid); 
- multiplier = liq.valid(this) ? 1 + this.liquids.current().heatCapacity * this.coolantMultiplier : 1; 
+ this.multiplier = 1 + this.liquids.current().heatCapacity * this.coolantMultiplier * this.optionalEfficiency;
  } 
  
- if(this.target != null && (this.target.dead || this.target.dst(this) - this.target.hitSize/2 > this.block.repairRadius)){ 
- this.target = null; 
- } 
+ if(this.target != null && (this.target.dead || this.target.dst(this) - this.target.hitSize/2 > this.block.repairRadius || this.target.health >= this.target.maxHealth)){
+                this.target = null;
+            }
  
  if(this.target == null){ 
  this.offset.setZero(); 
@@ -1125,7 +997,7 @@ GainTurret.buildType = () => extendContent(RepairPoint.RepairPointBuild, GainTur
  
  let gained = false; 
  
- if( this.target != null && this.consValid() ){ 
+ if( this.target != null && this.efficiency > 0){ 
  let angle = Angles.angle( this.x, this.y, this.target.x + this.offset.x, this.target.y + this.offset.y ); 
  
  if(Angles.angleDist(angle, this.rotation) < 30){ 
@@ -1133,7 +1005,7 @@ GainTurret.buildType = () => extendContent(RepairPoint.RepairPointBuild, GainTur
  //status effect apply
  this.target.apply(regeneration, 350) 
  } 
- this.rotation = Mathf.slerpDelta(this.rotation, angle, 0.5 * this.efficiency() * this.timeScale); 
+ this.rotation = Mathf.slerpDelta(this.rotation, angle, 0.5 * this.efficiency * this.timeScale); 
  } 
  
  this.strength = Mathf.lerpDelta(this.strength, gained ? 1 : 0, 0.08 * Time.delta); 
@@ -1146,23 +1018,3 @@ GainTurret.buildType = () => extendContent(RepairPoint.RepairPointBuild, GainTur
  } 
 },
 });
-
-//temporarily not working
-/*function newNode(parent, content, req, objectives){
-	
-    var parnode = TechTree.get(parent);
-    var node = new TechTree.TechNode(parnode, content, req = null ? content.researchRequirements() : req);
-    var used = new ObjectSet();
-  
-    node.objectives.addAll(objectives = null ? null : objectives);
-}
- 
-newNode(Blocks.ripple, torpedo, ItemStack.with(Items.copper, 6500, Items.lead, 4500, Items.silicon, 3000, Items.thorium, 2250), Seq.with(new Objectives.SectorComplete(sectors.creotitePowerStation)));*/
-
-module.exports = {
-warhead: warhead,
-impaler: impaler,
-needle: needle,
-executioner: executioner,
-north: north
-}

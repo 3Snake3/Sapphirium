@@ -1,0 +1,58 @@
+
+craftTime: 145
+outputItem: creostone/4
+craftEffect: redgeneratespark
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemCapacity: 16
+liquidCapacity: 12
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: "-bottom"
+}
+{
+type: DrawArcSmelt
+flameColor: ff9686
+midColor: ffbe8c
+flameRad: 1.5
+circleSpace: 2
+circleStroke: 1.5
+alpha: 0.76
+}
+{
+type: DrawRegion
+suffix: "-top"
+}
+{
+type: DrawDefault
+}
+]
+}
+consumes: {
+power: 4
+liquid: creotite/0.2
+items: {
+items: [
+silicon/3
+coal/3
+sand/4
+]
+}
+}
+category: crafting
+requirements: [
+leaded-copper/180
+metaglass/90
+creostone/75
+plastanium/60
+]
+size: 3
+research: {
+parent: creostone-smelter
+}
+attribute: heat
+maxBoost: 3

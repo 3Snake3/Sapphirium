@@ -1,0 +1,11 @@
+health: 540
+speed: 0.05
+displayedSpeed: 7
+requirements: [
+leaded-copper/1
+stone/2
+]
+envDisabled: 17
+category: distribution
+research: titanium-conveyor
+placeableLiquid: true

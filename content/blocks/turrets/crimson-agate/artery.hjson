@@ -1,0 +1,64 @@
+size: 3
+health: 2290
+reload: 60
+recoil: 0
+rotateSpeed: 4
+shootCone: 12
+shootSound: sap
+shootEffect: none
+smokeEffect: none
+ammoUseEffect: none
+outlineColor: 1d1d21
+range: 240
+category: turret
+drawer: {
+type: DrawTurret
+basePrefix: "crimson-agate-"
+}
+research: {
+parent: injection
+}
+requirements: [
+copper/165
+granate/125
+silicon/70
+titanium/40
+]
+consumes: {
+power: 3
+}
+ammoTypes: {
+granate: {
+type: SapBulletType
+length: 240
+sapStrength: 0.7
+damage: 80
+width: 1
+lifetime: 30
+color: ff6e6e
+hitColor: ff6e6e
+status: bleeding
+hitEffect: {
+type: WaveEffect
+sides: 4
+lifetime: 30
+sizeFrom: 0
+sizeTo: 5
+strokeFrom: 3
+strokeTo: 0
+colorFrom: ff6e6e
+colorTo: ff6e6e
+}
+despawnEffect: {
+type: WaveEffect
+sides: 4
+lifetime: 30
+sizeFrom: 0
+sizeTo: 8
+strokeFrom: 4
+strokeTo: 0
+colorFrom: ff6e6e
+colorTo: ff6e6e
+}
+}
+}

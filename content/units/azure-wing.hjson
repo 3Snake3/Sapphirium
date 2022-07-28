@@ -1,8 +1,6 @@
 type: flying
 targetFlags: [generator]
-playerTargetFlags: [generator]
 flying: true
-isCounted: false
 mineSpeed: 9
 mineTier: 3
 buildSpeed: 2
@@ -16,7 +14,6 @@ armor: 5
 engineOffset: 8
 engineSize: 2.5
 hitSize: 16
-commandLimit: 6
 weapons: [{
 name: azure-weapon
 reload: 60
@@ -26,6 +23,21 @@ top: false
 shootSound: laser
 x: 0
 y: 0
+shoot: {
+firstShotDelay: 39
+}
+bullet: {
+width: 16
+height: 22
+sprite: adc-azure-spear
+backColor: a9d8ff
+frontColor: ffffff
+speed: 6
+lifetime: 25
+damage: 45
+pierce: true
+pierceBuilding: true
+buildingDamageMultiplier: 0.5
 shootEffect: {
 type: MultiEffect
 effects: [lancerLaserCharge, {
@@ -40,19 +52,6 @@ colorFrom: a9d8ff
 colorTo: ffffff
 }]
 }
-firstShotDelay: 39
-bullet: {
-width: 16
-height: 22
-sprite: adc-azure-spear
-backColor: a9d8ff
-frontColor: ffffff
-speed: 6
-lifetime: 25
-damage: 45
-pierce: true
-pierceBuilding: true
-buildingDamageMultiplier: 0.5
 pierceCap: 1
 knockback: 1
 hitSound: laser
@@ -79,7 +78,8 @@ colorFrom: a9d8ff
 colorTo: ffffff
 }
 fragBullets: 2
-fragCone: 90
+fragSpread: 90
+fragRandomSpread: 0
 fragBullet: {
 width: 16
 height: 22
@@ -122,7 +122,8 @@ colorFrom: a9d8ff
 colorTo: ffffff
 }
 fragBullets: 2
-fragCone: 90
+fragSpread: 90
+fragRandomSpread: 0
 fragBullet: {
 width: 16
 height: 22

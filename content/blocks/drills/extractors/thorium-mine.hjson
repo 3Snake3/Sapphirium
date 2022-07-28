@@ -1,0 +1,52 @@
+maxBoost: 2
+craftTime: 40
+craftEffect: mineBig
+updateEffect: pulverizeMedium
+hasPower: true
+hasLiquids: true
+consumes: {
+power: 5
+liquid: cryofluid/0.09
+}
+outputItem: thorium/1
+attribute: water
+research: {
+parent: titanium-extractor
+objectives: [laser-drill]
+}
+size: 3
+health: 870
+requirements: [
+leaded-copper/230
+lead/110
+titanium/85
+silicon/85
+]
+category: production
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawGlowRegion
+suffix: "-bottom-glow"
+color: cebaff
+}
+{
+type: DrawRegion
+suffix: "-rotator"
+spinSprite: true
+rotateSpeed: 7
+}
+{
+type: DrawLiquidRegion
+drawLiquid: cryofluid
+}
+{
+type: DrawRegion
+suffix: "-top"
+}
+]
+}

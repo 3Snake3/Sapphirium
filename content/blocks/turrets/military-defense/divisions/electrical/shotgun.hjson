@@ -1,0 +1,167 @@
+
+size: 3
+category: turret
+requirements: [
+copper/200
+graphite/180
+plastanium/85
+creostone/65
+]
+research: cyclone
+shootSound: shotgun-shoot
+inaccuracy: 16
+shoot: {
+type: ShootPattern
+shots: 5
+}
+reload: 60
+recoil: 6
+ammoEjectBack: 6
+ammoUseEffect: casing3Double
+ammoPerShot: 4
+maxAmmo: 60
+cooldownTime: 0.02
+
+shake: 3
+range: 130
+health: 1110
+ammoTypes: {
+graphite: {
+width: 13
+height: 13
+damage: 25
+speed: 7
+lifetime: 19
+knockback: 2.5
+hitEffect: flakExplosion
+hitSound: explosion
+}
+silicon: {
+width: 13
+height: 13
+damage: 19
+speed: 7
+lifetime: 22
+knockback: 2
+keepVelocity: false
+homingPower: 0.9
+homingRange: 45
+hitEffect: flakExplosion
+hitSound: explosion
+}
+pyratite: {
+width: 13
+height: 13
+damage: 28
+speed: 7
+lifetime: 19
+knockback: 2.3
+makeFire: true
+frontColor: f8ad42
+backColor: f68021
+hitEffect: blastExplosion
+hitSound: explosion
+ammoMultiplier: 4
+status: burning
+statusDuration: 720
+trailEffect: {
+type: ParticleEffect
+particles: 6
+length: -15
+lifetime: 15
+sizeFrom: 3
+sizeTo: 0
+colorFrom: ffb855
+colorTo: db661c
+}
+trailChance: 1
+}
+blast-compound: {
+width: 13
+height: 13
+damage: 35
+speed: 7
+lifetime: 19
+knockback: 2.3
+frontColor: ffd2ae
+backColor: e58956
+hitEffect: blastExplosion
+hitSound: explosion
+ammoMultiplier: 4
+status: blasted
+}
+plastanium: {
+width: 13
+height: 13
+damage: 30
+speed: 7.3
+lifetime: 18
+knockback: 3.3
+frontColor: fffac6
+backColor: d8d97f
+hitEffect: plasticExplosion
+hitSound: explosion
+ammoMultiplier: 4
+fragBullets: 8
+fragRandomSpread: 45
+fragBullet: {
+width: 8
+height: 8
+damage: 15
+speed: 5
+lifetime: 15
+knockback: 1
+frontColor: ffd2ae
+backColor: e58956
+hitEffect: plasticExplosion
+hitSound: explosion
+status: slow
+statusDuration: 60
+}
+}
+creostone: {
+width: 14
+height: 14
+damage: 40
+speed: 6.8
+lifetime: 19.11
+knockback: 3.6
+frontColor: ffb380
+backColor: bd5553
+hitEffect: blastExplosion
+hitSound: explosion
+ammoMultiplier: 4
+status: small-flaming
+statusDuration: 600
+homingPower: 1
+homingRange: 60
+reloadMultiplier: 0.85
+}
+surge-stone: {
+width: 14
+height: 14
+damage: 45
+speed: 6.8
+lifetime: 19.11
+knockback: 3.8
+hitEffect: {
+type: ExplosionEffect
+waveColor: f3e979
+sparkColor: f3e979
+waveLife: 15
+sparkRad: 7
+waveRad: 5
+smokes: 3
+smokeRad: 7
+sparks: 4
+}
+hitSound: explosion
+ammoMultiplier: 4
+status: shocked
+reloadMultiplier: 0.85
+lightning: 3
+lightningLength: 6.5
+lightningDamage: 8
+lightningColor: f3e979
+}
+}

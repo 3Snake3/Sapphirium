@@ -1,0 +1,44 @@
+health: 10000
+category: defense
+research: {
+parent: tinorium-wall-large
+objectives: [ice-cube-wall-turret]
+}
+requirements: [
+tinorium/85
+silicon/65
+]
+envDisabled: 17
+size: 3
+reload: 30
+group: walls
+
+consumes: {
+power: 6
+}
+shoot: {
+type: ShootAlternate
+shots: 5
+shotDelay: 6
+barrels: 5
+spread: 3
+}
+inaccuracy: 8
+shootCone: 45
+rotateSpeed: 4
+recoil: 6
+shootSound: shootBig
+range: 170
+shootType: {
+type: BasicBulletType
+width: 12
+height: 14
+speed: 4
+lifetime: 42.5
+damage: 5
+status: spore-slowed
+statusDuration: 60
+backColor: 6d56bf
+frontColor: bf92f9
+hitColor: bf92f9
+}

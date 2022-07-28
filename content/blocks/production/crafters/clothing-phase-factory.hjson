@@ -1,0 +1,47 @@
+
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: "-bottom"
+}
+{
+type: DrawWeave
+}
+{
+type: DrawDefault
+}
+]
+}
+size: 3
+craftTime: 270
+outputItem: phase-fabric/8
+craftEffect: smeltsmoke
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 32
+liquidCapacity: 30
+consumes: {
+power: 10
+liquid: water/0.5
+items: {
+items: [
+thorium/6
+sand/16
+]
+}
+}
+ambientSound: techloop
+ambientSoundVolume: 0.03
+category: crafting
+requirements: [
+leaded-copper/285
+creostone/240
+thorium/80
+graphite/80
+]
+envDisabled: 17
+research: phase-weaver
+

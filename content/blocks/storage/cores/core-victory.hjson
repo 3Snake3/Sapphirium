@@ -1,0 +1,19 @@
+
+health: 12500
+itemCapacity: 20000
+unitCapModifier: 40
+unitType: fight
+size: 6
+researchCostMultiplier: 0.18
+category: effect
+requirements: [
+lead/12000
+titanium/1200
+silicon/9500
+creostone/7500
+surge-stone/5400
+]
+research: {
+parent: core-ocean
+objectives: [core-cage]
+}

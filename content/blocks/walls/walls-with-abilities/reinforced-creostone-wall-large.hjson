@@ -1,0 +1,14 @@
+
+health: 3560
+armor: 18
+buildCostMultiplier: 5
+size: 2
+baseExplosiveness: 10
+category: defense
+flashHit: true
+chanceDeflect: 5
+requirements: [
+creostone/35
+]
+research: erekir-creostone-wall
+envEnabled: 17

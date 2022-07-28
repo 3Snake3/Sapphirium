@@ -1,5 +1,5 @@
-const sandGenerator = extend(SingleTypeGenerator, "sand-generator", {});
-const copperTransformer = extend(SingleTypeGenerator, "copper-transformer", {});
+const sandGenerator = extend(ConsumeGenerator, "sand-generator", {});
+const copperTransformer = extend(ConsumeGenerator, "copper-transformer", {});
 const strongPowerNode = extend(PowerNode, "strong-power-node", {});
 
 const solarPanelMedium = extend(SolarGenerator, "solar-panel-medium", {});
@@ -8,15 +8,17 @@ const hydrogenerator = extend(ThermalGenerator, "hydrogenerator", {});
 const sporeGenerator = extend(ThermalGenerator, "spore-generator", {});
 const oilTransformer = extend(ThermalGenerator, "oil-transformer", {});
 
-const ChargeGenerator = extend(ItemLiquidGenerator, "electrogenerator", {
+const ChargeGenerator = extend(ConsumeGenerator, "electrogenerator", {
 hasItems: true,
 hasLiquids: false,
 envEnabled: Env.any,
-
-getItemEfficiency(item){
-return item.charge;
-}
 });
+ChargeGenerator.consume(new ConsumeItemCharged);
+
+const thoriumGenerator = extend(ConsumeGenerator, "thorium-generator", {
+});
+
+const chargeReactor = extend(ImpactReactor, "charge-reactor", {});
 
 const creostonePowerNode = extend(PowerNode, "creostone-power-node", {});
 const creostonePowerNodeLarge = extend(PowerNode, "creostone-power-node-large", {});
@@ -40,7 +42,7 @@ icons(){
   }
 });
 
-creostoneSP.buildType = () => extendContent(SolarGenerator.SolarGeneratorBuild, creostoneSP, {
+creostoneSP.buildType = () => extend(SolarGenerator.SolarGeneratorBuild, creostoneSP, {
 draw(){
       var b = creostoneSP;
       var rotatorSpeed = 3;

@@ -1,0 +1,25 @@
+health: 1250
+reload: 120
+
+recoil: 3
+range: 290
+cooldownTime: 0.03
+consumes: {
+power: 8
+}
+
+shake: 3
+shootEffect: lancerLaserShoot
+smokeEffect: none
+
+size: 3
+targetAir: true
+shootSound: laser
+requirements: [
+leaded-copper/320
+titanium/135
+graphite/80
+silicon/125
+]
+category: turret
+research: north

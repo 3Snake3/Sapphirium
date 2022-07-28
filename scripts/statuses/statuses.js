@@ -1,4 +1,4 @@
-const weakened = extendContent(StatusEffect, "weakened", {
+const weakened = extend(StatusEffect, "weakened", {
             
     init(){
         this.opposite(StatusEffects.overdrive, StatusEffects.overclock);
@@ -7,21 +7,21 @@ const weakened = extendContent(StatusEffect, "weakened", {
     speedMultiplier: 0.8,
     healthMultiplier: 0.8,
     damageMultiplier: 0.8,
-    reloadMultiplier: 1.2,
+    reloadMultiplier: 0.8,
     color: Pal.gray      
 })
 
 const superMelting = extend(StatusEffect, "super-melting", {
-    healthMultiplier: 0.5,
-    speedMultiplier: 0.5,
-    reloadMultiplier: 1.5,
-    transitionDamage: 75,
-    damage: 0.25,
+    healthMultiplier: 0.6,
+    speedMultiplier: 0.9,
+    reloadMultiplier: 0.8,
+    transitionDamage: 25,
+    damage: 0.2,
     effect: Fx.melting,
     color: Color.valueOf("dd6f58")       
 });
         
-const superFreezing = extendContent(StatusEffect, "super-freezing", {
+const superFreezing = extend(StatusEffect, "super-freezing", {
             
     init(){
                 
@@ -31,10 +31,7 @@ const superFreezing = extendContent(StatusEffect, "super-freezing", {
                     
             unit.damagePierce(this.transitionDamage);
             Fx.freezing.at(unit.x + Mathf.range(unit.bounds() / 2), unit.y + Mathf.range(unit.bounds() / 2));
-            /*if(unit.speed > 0){
-            	unit.speed = 0;
-           }*/
-                    
+            
             result.set(superFreezing, Math.min(time + result.time, 400));
         }))
     },
@@ -71,6 +68,8 @@ init(){
         }))
     }
 });
+
+const gap = extend(StatusEffect, "gap", {});
 
 const bled = new Effect(11, e => {
         Draw.color(Color.valueOf("f25555"));

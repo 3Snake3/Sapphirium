@@ -1,5 +1,5 @@
 flying: true
-isCounted: false
+
 lowAltitude: true
 mineSpeed: 9.5
 mineTier: 3
@@ -13,17 +13,19 @@ health: 300
 engineOffset: 8
 engineSize: 4
 hitSize: 15
-commandLimit: 6
+
 weapons: [{
 name: small-basic-weapon
 reload: 20
-alternate: true
+
 x: 3
 y: 3.5
+shoot: {
+type: ShootPattern
 shots: 3
-spacing: 1
-inaccuracy: 1
 shotDelay: 4
+}
+inaccuracy: 1
 ejectEffect: casing1
 bullet: {
 type: BasicBulletType
@@ -43,7 +45,6 @@ name: missile-weapon-mount
 x: 6.5
 y: -4
 reload: 45
-alternate: true
 rotate: true
 inaccuracy: 3
 velocityRnd: 0.2
@@ -59,7 +60,7 @@ effectChance: 0.07
 color: ffd37f
 show: false
 }
-shootStatusDuration: 30
+shootStatusDuration: 25
 bullet: {
 type: MissileBulletType
 width: 7

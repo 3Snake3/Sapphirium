@@ -6,6 +6,6 @@ const creostoneLiquidRouter = extend(LiquidRouter, "creostone-liquid-router", {}
 
 const globiumConduit = extend(ArmoredConduit, "globium-conduit", {});
 
-const creostoneBridgeConduit = extend(LiquidExtendingBridge, "creostone-bridge-conduit", {});
+const creostoneBridgeConduit = extend(LiquidBridge, "creostone-bridge-conduit", {});
 
 const upgPump = extend(Pump, "upgraded-pump", {});

@@ -7,7 +7,6 @@ lowAltitude: true
 outlineColor: 282b3b
 rotateSpeed: 2.5
 targetFlags: [reactor]
-playerTargetFlags: [reactor]
 immunities: [melting]
 accel: 0.06
 drag: 0.017
@@ -17,7 +16,7 @@ engineSize: 6
 payloadCapacity: 9
 buildSpeed: 3.2
 buildBeamOffset: 7.5
-commandLimit: 4
+
 weapons: [
 {
 name: war-cannon
@@ -56,7 +55,7 @@ trailWidth: 4
 trailColor: 5c5e9e
 damage: 20
 splashDamage: 80
-splashDamageRadius: 60
+splashDamageRadius: 30
 hitShake: 4
 hitSound: explosion
 hitEffect: sapExplosion
@@ -73,16 +72,17 @@ reload: 45
 recoil: 4
 rotate: true
 rotateSpeed: 4
-alternate: true
+
 shake: 3
 shootSound: artillery
-shootEffect: shootBig
+
 ejectEffect: casing2
 bullet: {
 width: 18
 height: 18
 splashDamage: 60
-splashDamageRadius: 60
+splashDamageRadius: 30
+shootEffect: shootBig
 damage: 0
 speed: 5
 lifetime: 60
@@ -104,7 +104,7 @@ recoil: 2
 shootSound: missile
 rotate: true
 rotateSpeed: 6
-alternate: true
+
 bullet: {
 type: MissileBulletType
 width: 10
@@ -121,7 +121,7 @@ speed: 1
 lifetime: 60
 sprite: adc-sharp-missile
 splashDamage: 50
-splashDamageRadius: 40
+splashDamageRadius: 30
 hitEffect: sapExplosion
 despawnEffect: sapExplosion
 keepVelocity: false
@@ -142,7 +142,7 @@ recoil: 2
 shootSound: missile
 rotate: true
 rotateSpeed: 6
-alternate: true
+
 bullet: {
 type: MissileBulletType
 width: 10
@@ -159,7 +159,7 @@ speed: 1
 lifetime: 60
 sprite: adc-sharp-missile
 splashDamage: 50
-splashDamageRadius: 40
+splashDamageRadius: 30
 hitEffect: sapExplosion
 despawnEffect: sapExplosion
 keepVelocity: false
