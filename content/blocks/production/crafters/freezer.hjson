@@ -79,9 +79,10 @@ power: 4
 }]
 requirements: [
 leaded-copper/70
+lead/40
 graphite/60
 ]
-envDisabled: 17
+buildVisibility: hidden
 size: 2
 liquidCapacity: 10
 itemCapacity: 10
