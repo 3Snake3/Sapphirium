@@ -46,27 +46,6 @@ sprite: adc-humiliation-bullet
 drawer: {
 type: DrawTurret
 basePrefix: "reinforced-"
-parts: [
-{
-type: ShapePart
-circle: true
-sides: 0
-radius: 7
-hollow: true
-stroke: 3
-x: 0
-y: 3.5
-rotation: 0
-moveX: 0
-moveY: 0
-moveRot: 0
-color: d1efff
-progress: {
-type: warmup
-delay: 0.9
-}
-}
-]
 }
 consumes: {
 power: 6
