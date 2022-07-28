@@ -26,7 +26,7 @@ suffix: "-top"
 }]
 }
 hasLiquids: true
-outputLiquid: water/0.003
+outputLiquid: water/0.03
 liquidCapacity: 30
 fogRadius: 3
 research: vent-condenser
