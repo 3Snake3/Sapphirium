@@ -25,7 +25,7 @@ silicon/65
 thorium/70
 graphite/50
 ]
-envDisabled: 17
+envDisabled: 16
 outputLiquid: creotite/0.3
 craftTime: 120
 size: 3

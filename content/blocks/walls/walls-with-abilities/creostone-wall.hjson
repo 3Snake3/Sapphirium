@@ -11,7 +11,7 @@ requirements: [
 creostone/8
 silicon/4
 ]
-envDisabled: 17
+envDisabled: 16
 category: defense
 research: {
 parent: thorium-wall-large

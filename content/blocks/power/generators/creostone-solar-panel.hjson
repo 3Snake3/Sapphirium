@@ -9,7 +9,7 @@ creostone/435
 silicon/200
 leaded-copper/120
 ]
-envDisabled: 17
+envDisabled: 16
 buildCostMultiplier: 2
 research: {
 parent: solar-panel-large

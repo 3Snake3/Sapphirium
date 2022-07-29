@@ -10,7 +10,7 @@ requirements: [
 graphite/22
 silicon/12
 ]
-envDisabled: 17
+envDisabled: 16
 range: 100
 shootEffect: lancerLaserShoot
 recoil: 2

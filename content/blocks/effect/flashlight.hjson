@@ -11,7 +11,7 @@ requirements: [
   silicon/100
   creostone/80
 ]
-envDisabled: 17
+envDisabled: 16
 
 consumes: {
   power: 1

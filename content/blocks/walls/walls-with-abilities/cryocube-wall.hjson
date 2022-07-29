@@ -42,7 +42,7 @@ hitEffect: none
 despawnEffect: none
 }
 
-envDisabled: 17
+envDisabled: 16
 requirements: [
 cryocube/15
 silicon/10

@@ -36,7 +36,7 @@ requirements: [
 creostone/22
 silicon/12
 ]
-envDisabled: 17
+envDisabled: 16
 category: defense
 research: {
 parent: creostone-wall

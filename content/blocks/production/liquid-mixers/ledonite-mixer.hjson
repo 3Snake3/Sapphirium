@@ -21,7 +21,7 @@ silicon/140
 thorium/80
 graphite/60
 ]
-envDisabled: 17
+envDisabled: 16
 outputLiquid: ledonite-liquid/0.4
 craftTime: 120
 size: 3

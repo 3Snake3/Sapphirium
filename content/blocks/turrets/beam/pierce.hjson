@@ -10,7 +10,7 @@ graphite/125
 silicon/85
 charged-ingot/85
 ]
-envDisabled: 17
+envDisabled: 16
 range: 180
 health: 600
 recoil: 2

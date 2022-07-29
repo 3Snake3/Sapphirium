@@ -3,7 +3,7 @@ requirements: [
 leaded-copper/2
 stone/2
 ]
-envDisabled: 17
+envDisabled: 16
 category: distribution
 speed: 26
 capacity: 8

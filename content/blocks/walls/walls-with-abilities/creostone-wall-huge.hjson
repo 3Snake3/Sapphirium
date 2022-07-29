@@ -13,7 +13,7 @@ requirements: [
 creostone/165
 silicon/80
 ]
-envDisabled: 17
+envDisabled: 16
 research: {
 parent: creostone-wall-turret
 objectives: [force-projector]

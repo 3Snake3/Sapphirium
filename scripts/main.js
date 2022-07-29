@@ -20,4 +20,3 @@ require("blocks/erekir-content");
 require("liquids");
 require("weathers");
 require("items");
-require("sectors");

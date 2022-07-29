@@ -2,7 +2,7 @@ requirements: [
 leaded-copper/30
 graphite/25
 ]
-envDisabled: 17
+envDisabled: 16
 reload: 30
 recoil: 2
 inaccuracy: 0

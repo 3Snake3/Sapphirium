@@ -81,7 +81,7 @@ requirements: [
 surge-stone/40
 silicon/30
 ]
-envDisabled: 17
+envDisabled: 16
 research: {
 parent: surge-stone-wall
 objectives: [ice-cube-wall-turret]

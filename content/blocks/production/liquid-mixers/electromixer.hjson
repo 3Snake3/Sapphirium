@@ -45,7 +45,7 @@ leaded-copper/130
 silicon/60
 thorium/45
 ]
-envDisabled: 17
+envDisabled: 16
 research: {
 parent: cryofluid-mixer
 objectives: [surge-smelter]

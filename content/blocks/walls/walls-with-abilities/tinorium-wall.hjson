@@ -4,4 +4,4 @@ research: graphite-wall-turret
 requirements: [
 tinorium/8
 ]
-envDisabled: 17
+envDisabled: 16

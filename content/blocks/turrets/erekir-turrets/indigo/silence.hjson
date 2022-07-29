@@ -1,9 +1,9 @@
 requirements: [
 sapphire/225
-silicon/125
-graphite/125
+silicon/180
+graphite/80
+beryllium/80
 ]
-envEnabled: 17
 category: turret
 size: 3
 reload: 20
@@ -43,5 +43,5 @@ colors: [d1efff, d1efff, ffffff]
 }
 }
 research: {
-parent: reinforced-core-indigo
+parent: branch
 }

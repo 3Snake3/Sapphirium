@@ -8,7 +8,7 @@ requirements: [
 tinorium/85
 silicon/65
 ]
-envDisabled: 17
+envDisabled: 16
 size: 3
 reload: 30
 group: walls

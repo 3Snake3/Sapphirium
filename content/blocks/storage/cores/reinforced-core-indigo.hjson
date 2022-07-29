@@ -1,9 +1,9 @@
 requirements: [
-graphite/2500
+beryllium/1250
+graphite/1250
 silicon/2500
 sapphire/2000
 ]
-envEnabled: 17
 category: effect
 unitType: firmament
 health: 6000
@@ -17,5 +17,4 @@ unitCapModifier: 18
 researchCostMultiplier: 0.07
 research: {
 parent: core-bastion
-name: "erekir"
 }

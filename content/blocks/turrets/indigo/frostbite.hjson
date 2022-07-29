@@ -52,7 +52,6 @@ status: freezing
 }
 }
 category: turret
-envDisabled: 17
 requirements: [
 lead/45
 silicon/50

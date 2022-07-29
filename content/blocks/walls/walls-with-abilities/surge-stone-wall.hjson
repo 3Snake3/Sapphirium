@@ -9,4 +9,4 @@ lightRadius: 85
 consumes: {
 power: 1
 }
-envDisabled: 17
+envDisabled: 16

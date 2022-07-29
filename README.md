@@ -1,5 +1,5 @@
 # Sapphirium
-![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/icon3.png)
+![Sapphirium](https://github.com/3Snake3/Sapphirium/icon.png)
 This mod adds a lot of additional content and small changes to some vanilla sprites.
 <br>Mod includes a few factions, that contain their own blocks and units(will be). Most of the blocks have their own abilities turrets have an additional attack, walls can attack enemies in response, accelerate buildings, heal them, as well as cover them with their own force field, store resources, fluids(will be), and power(will be).
 
@@ -14,12 +14,12 @@ This mod adds a lot of additional content and small changes to some vanilla spri
 <br>`Emerald Light` - A support faction with healing power. Consists of white and green colors.
 
 # Number of included content:
-`Blocks:` 117
-<br>`Turrets:` 73
-<br>`Items:` 17
+`Blocks:` 132
+<br>`Turrets:` 89
+<br>`Items:` 18
 <br>`Liquids:` 3
-<br>`Units:` 6
-<br>`Status Effects:` 12
+<br>`Units:` 7
+<br>`Status Effects:` 14
 <br>`Maps:` 1
 <br>`Weathers:` 3
 

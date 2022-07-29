@@ -7,5 +7,5 @@ requirements: [
   charged-lead/35
   silicon/40
  ]
- envDisabled: 17
+ envDisabled: 16
 group: walls

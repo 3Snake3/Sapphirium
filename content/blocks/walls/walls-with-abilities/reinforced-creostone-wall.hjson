@@ -10,4 +10,4 @@ requirements: [
 creostone/10
 ]
 research: tungsten-wall
-envEnabled: 17
+envDisabled: 1
