@@ -1,5 +1,5 @@
 # Sapphirium
-![Sapphirium](https://github.com/3Snake3/Sapphirium/icon.png)
+![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/icon3.png)
 This mod adds a lot of additional content and small changes to some vanilla sprites.
 <br>Mod includes a few factions, that contain their own blocks and units(will be). Most of the blocks have their own abilities turrets have an additional attack, walls can attack enemies in response, accelerate buildings, heal them, as well as cover them with their own force field, store resources, fluids(will be), and power(will be).
 
