@@ -5,7 +5,6 @@ graphite/45
 category: production
 craftTime: 180
 outputItem: sapphire/3
-envDisabled: 1
 size: 2
 hasLiquids: true
 hasItems: true
