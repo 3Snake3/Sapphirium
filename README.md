@@ -23,6 +23,9 @@ This mod adds a lot of additional content and small changes to some vanilla spri
 <br>`Maps:` 1
 <br>`Weathers:` 3
 
+# MultiLib Link
+[MultiCrafter Lib](https://github.com/liplum/MultiCrafterLib)
+
 # My discord username and server:
 Creator - `Snake#2132`
 <br>[Server](https://discord.gg/zRER9xz6YH)
