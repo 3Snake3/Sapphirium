@@ -10,5 +10,5 @@ chanceDeflect: 5
 requirements: [
 creostone/35
 ]
-research: erekir-creostone-wall
+research: reinforced-creostone-wall
 envDisabled: 1
