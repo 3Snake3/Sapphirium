@@ -238,6 +238,6 @@ emerald/180
 ]
 category: turret
 research: {
-parent: lancer
-objectives: [pressure]
+parent: pressure
+objectives: [lancer]
 }

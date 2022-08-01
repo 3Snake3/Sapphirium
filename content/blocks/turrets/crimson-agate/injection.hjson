@@ -243,8 +243,8 @@ strokeTo: 0
 }
 category: turret
 research: {
-parent: ripple
-objectives: [scarlet-star]
+parent: scarlet-star
+objectives: [ripple]
 }
 drawer: {
 type: DrawTurret
