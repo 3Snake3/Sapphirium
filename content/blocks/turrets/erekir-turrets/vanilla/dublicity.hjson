@@ -861,6 +861,7 @@ scaledHealth: 400
 rotateSpeed: 1.8
 recoil: 6
 recoilTime: 300
+cooldownTime: 300
 shake: 6
 size: 5
 research: malign

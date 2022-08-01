@@ -6,8 +6,8 @@ category: turret
 targetAir: false
 ammoTypes: {
 stone: {
-width: 9
-height: 9
+width: 8
+height: 8
 sprite: circle-bullet
 collidesAir: false
 damage: 35
@@ -16,7 +16,7 @@ lifetime: 27
 buildingDamageMultiplier: 2
 backColor: 6e7080
 trailColor: 6e7080
-trailWidth: 1.5
+trailWidth: 2.5
 trailLength: 15
 hitColor: bec1cc
 hitEffect: hitBulletColor

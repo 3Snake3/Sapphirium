@@ -11,6 +11,9 @@ size: 3
 range: 225
 outlineColor: 1d1d21
 shootSound: shootBig
+consumes: {
+power: 10
+}
 shootEffect: {
 type: ParticleEffect
 particles: 8
