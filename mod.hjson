@@ -1,6 +1,6 @@
 name: "adc"
 displayName: "Sapphirium"
-description: "Adds several new factions that include their own unique content. Notice: Before download this mod install liplum/MultiCrafterLib"
+description: "Adds several new factions that include their own unique content. Uses some java classes."
 author: "Snake"
 minGameVersion: "136"
 version: "15.0"
