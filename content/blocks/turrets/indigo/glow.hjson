@@ -6,9 +6,9 @@ spread: 11.5
 }
 inaccuracy: 5
 coolantMultiplier: 0.7
-recoilTime: 0.5
 recoil: 4
-shootCone: 24
+recoilTime: 0.5
+shootCone: 12
 shootEffect: lancerLaserShoot
 size: 4
 health: 2350

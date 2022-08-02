@@ -7,14 +7,13 @@ titanium/85
 ]
 category: turret
 size: 3
-reload: 180
+reload: 225
 recoil: 3
 shake: 3
 shoot: {
 type: ShootAlternate
-shots: 2
-barrels: 4
-spread: 4
+shots: 4
+spread: 9.25
 }
 consumes: {
 power: 10
@@ -40,10 +39,12 @@ plastanium: {
 type: MissileBulletType
 width: 15
 height: 20
-speed: 6
-lifetime: 55
-splashDamage: 30
-splashDamageRadius: 30
+speed: 1
+lifetime: 120
+drag: 0.03
+damage: 30
+splashDamage: 40
+splashDamageRadius: 25
 sprite: adc-acid-bullet
 hitSound: plasmaboom
 weaveScale: 6
@@ -203,6 +204,6 @@ pierceCap: 3
 }
 }
 research: {
-parent: swarmer
-objectives: [toxin]
+parent: toxin
+objectives: [swarmer]
 }

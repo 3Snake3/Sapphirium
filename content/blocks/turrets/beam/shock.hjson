@@ -16,7 +16,7 @@ charged-lead: {
 width: 10
 height: 13
 splashDamage: 15
-splashDamageRadius: 25
+splashDamageRadius: 16
 damage: 10
 speed: 6
 lifetime: 27
@@ -100,7 +100,7 @@ charged-ingot: {
 width: 11
 height: 13
 splashDamage: 18
-splashDamageRadius: 25
+splashDamageRadius: 16
 damage: 24
 speed: 6
 lifetime: 28
@@ -143,7 +143,7 @@ charged-cylinder: {
 width: 12
 height: 15
 splashDamage: 24
-splashDamageRadius: 30
+splashDamageRadius: 16
 damage: 35
 speed: 6
 lifetime: 28.1

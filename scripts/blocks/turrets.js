@@ -1,6 +1,6 @@
 const statuses = require("statuses/statuses");
 
-var impalerSpearCharge = extend(WaveEffect, {
+const impalerSpearCharge = extend(WaveEffect, {
 sides: 0,
 lifetime: 30,
 sizeFrom: 16,
@@ -26,6 +26,8 @@ const spear = extend(BasicBulletType, 8, 35, "adc-spear-bullet", {
     keepVelocity: false,
     hitSize: 4,
     pierceBuilding: true,
+    hitEffect: Fx.hitLancer,
+    despawnEffect: Fx.hitLancer,
   
     status: StatusEffects.freezing,
     statusDuration: 180,
@@ -108,105 +110,8 @@ const reagent = extend(ItemTurret, "reagent", {});
 
 const endoxin = extend(ItemTurret, "endoxin", {});
 
-const acidWave = extend(WaveEffect, {
-sides: 0,
-lifetime: 25,
-sizeFrom: 0,
-sizeTo: 18,
-strokeTo: 0,
-colorFrom: Color.valueOf("84f591"),
-colorTo: Color.valueOf("84f591"),
-});
-
-const acidSmoke = extend(ParticleEffect, {
-particles: 6,
-length: 65,
-cone: 360,
-lifetime: 30,
-sizeFrom: 8,
-sizeTo: 0,
-colorFrom: Color.valueOf("84f591"),
-colorTo: Color.valueOf("84f59170"),
-});
-
-const acidSparks = extend(ParticleEffect, {
-particles: 6,
-length: 65,
-cone: 360,
-lifetime: 30,
-sizeFrom: 8,
-sizeTo: 0,
-line: true,
-strokeFrom: 2,
-strokeTo: 0,
-colorFrom: Color.valueOf("84f591"),
-colorTo: Color.valueOf("84f591"),
-});
-
-const acidShell = extend(BasicBulletType, {
-width: 13,
-height: 20,
-speed: 9,
-lifetime: 40,
-damage: 30,
-sprite: "adc-acid-bullet",
-pierce: true,
-backColor: Color.valueOf("84f591"),
-frontColor: Color.white,
-trailColor: Color.valueOf("84f591"),
-trailChance: 0.9,
-shrinkY: 0,
-buildingDamageMultiplier: 0.75,
-hitEffect: new MultiEffect(acidWave, acidSmoke, acidSparks),
-despawnEffect: new MultiEffect(acidWave, acidSmoke),
-weaveScale: 5,
-weaveMag: 5
-});
-
-const acidShell2 = extend(BasicBulletType, {
-width: 13,
-height: 20,
-speed: 9,
-lifetime: 40,
-damage: 30,
-sprite: "adc-acid-bullet",
-pierce: true,
-backColor: Color.valueOf("84f591"),
-frontColor: Color.white,
-trailColor: Color.valueOf("84f591"),
-trailChance: 0.9,
-shrinkY: 0,
-buildingDamageMultiplier: 0.75,
-hitEffect: new MultiEffect(acidWave, acidSmoke, acidSparks),
-despawnEffect: new MultiEffect(acidWave, acidSmoke),
-weaveScale: 5,
-weaveMag: 5
-});
-
 const corroding = extend(ItemTurret, "corroding", {
 shootLength: 1,
-setStats(){
-        this.super$setStats();
-        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, acidShell)));
-        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, acidShell2)));
-    }
-});
-corroding.buildType = () => extend(ItemTurret.ItemTurretBuild, corroding, {
-	creload : 0,
-    updateTile(){
-        this.super$updateTile();
-        
-        if(this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5 && this.creload >= 60){
-            this.creload = 0
-            acidShell.create(this, this.team, this.x, this.y + 1, this.rotation)
-            acidShell2.create(this, this.team, this.x, this.y + 1, this.rotation)
-            Fx.none.at(this.x, this.y + 1)
-            
-        }
-        else{
-            if(this.creload < 60){this.creload += 1} 
-        }
-    },
 });
 
 const greenLaser = extend(LaserBulletType, {
@@ -378,99 +283,6 @@ const thrower = extend(ItemTurret, "thrower", {});
 
 const speed = extend(ItemTurret, "speed", {});
 
-//This is broken
-/*const multiTLib = require("multiTurretType");
-
-const unoBullet = extend(BasicBulletType, {
-  speed: 2,
-  damage: 7,
-  width: 3.5,
-  height: 4.5,
-  homingPower: 0.02,
-  lifetime: 50,
-  
-});
-
-const unoMount = multiTLib.newWeapon(unoBullet, "adc-unoM");
-unoMount.reloadTime = 15;
-unoMount.ammoPerShot = 5;
-unoMount.x = 2.75;
-unoMount.y = 2.75;
-unoMount.shootY = 13/4;
-unoMount.recoilAmount = 1;
-unoMount.range = 9 * 8;
-unoMount.title = "Uno"
-
-const hailBullet = extend(ArtilleryBulletType, {
-  speed: 1.5,
-  damage: 5,
-  knockback: 0.5,
-  lifetime: 105,
-  width: 5.5,
-  height: 5.5,
-  splashDamageRadius: 14,
-  splashDamage: 18
-});
-
-const hailMount = multiTLib.newWeapon(hailBullet, "adc-hailM");
-hailMount.targetAir = false;
-hailMount.reloadTime = 60;
-hailMount.ammoPerShot = 20;
-hailMount.x = -3.75;
-hailMount.y = -4;
-hailMount.shootY = 18/4;
-hailMount.recoilAmount = 2.5;
-hailMount.range = 18 * 8;
-hailMount.title = "Mini Hail"
-hailMount.shootSound = Sounds.bang;
-
-const miniSlag = extend(LiquidBulletType, {
-  collidesAir: false,
-  liquid: Liquids.slag,
-  damage: 1,
-  drag: 0.03,
-  puddleSize: 2,
-  orbSize: 1
-});
-
-const waveMount = multiTLib.newWeapon(miniSlag, "adc-waveM");
-waveMount.targetAir = false;
-waveMount.reloadTime = 3;
-waveMount.x = 4.25;
-waveMount.y = -3.5;
-waveMount.shootY = 16/4;
-waveMount.recoilAmount = 1;
-waveMount.range = 13 * 8;
-waveMount.title = "Mini Wave";
-waveMount.loop = true;
-waveMount.shootSound = Sounds.none;
-waveMount.loopSound = Sounds.spray;
-
-const weapons = [unoMount, waveMount, hailMount];
-
-const mainBullet = extend(BasicBulletType, {
-  ammoMultiplier: 45,
-  speed: 2.5,
-  damage: 9,
-  width: 5.5,
-  height: 7,
-  lifetime: 60,
-  shootEffect: Fx.shootSmall,
-  smokeEffect: Fx.shootSmallSmoke
-});
-
-//Aggregate -> Assimilation -> Amalgamation
-const jumble = multiTLib.newMultiTurret("multi-i", weapons, Items.graphite, mainBullet, 80, 20, "Aggregate");
-jumble.size = 2;
-jumble.range = 15 * 8;
-jumble.maxAmmo = 225;
-jumble.ammoPerShot = 12;
-jumble.recoil = 2;
-jumble.reloadTime = 21;
-jumble.requirements = ItemStack.with(Items.copper, 135, Items.lead, 75, Items.metaglass, 40, Items.graphite, 80, Items.silicon, 50);
-jumble.category = Category.turret;
-jumble.buildVisibility = BuildVisibility.shown;*/
-
 const launch = extend(ItemTurret, "launch", {});
 
 const missileFrag = extend(BasicBulletType, {
@@ -551,7 +363,7 @@ const bloodsap = extend(SapBulletType, {
 	width: 0.9
 });
 
-const bloodlust = extend(PowerTurret, "bloodlust", {
+const bloodlust = extend(ItemTurret, "bloodlust", {
 setStats(){
         this.super$setStats();
         this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, bloodsap)));
@@ -612,7 +424,6 @@ setStats(){
         this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, sharpLaser)));
     }
 });
-/*injection.consumes.powerCond(3, TurretBuild.isActive);*/
 injection.buildType = () => extend(ItemTurret.ItemTurretBuild, injection, {
 	creload : 0,
     updateTile(){
@@ -847,51 +658,7 @@ const shadowShellShrapnel = extend(ShrapnelBulletType, {
 		damage: 35,
 		});
 
-const shadowShell = extend(BasicBulletType, 4, 45, "shell", {
-	width: 14,
-	height: 17,
-	splashDamage: 65,
-	splashDamageRadius: 55,
-	drag: 0.003,
-	lifetime: 100,
-	status: StatusEffects.sporeSlowed,
-	statusDuration: 125,
-	hitSound: Sounds.explosion,
-	backColor: Pal.sapBulletBack,
-	frontColor: Pal.sapBullet,
-	hitColor: Pal.sap,
-	hitEffect: shadowShellHit,
-	trailColor: Pal.sapBulletBack,
-	trailLength: 17,
-	trailWidth: 3,
-	fragBullets: 4,
-	fragCone: 360,
-	fragAngle: 0,
-	fragBullet: shadowShellShrapnel,
-	shrinkX: 0,
-	shrinkY: 0,
-	});
-
 const shadow = extend(ItemTurret, "shadow", {
-setStats(){
-        this.super$setStats();
-        this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, shadowShell)));
-    }
-});
-shadow.buildType = () => extend(ItemTurret.ItemTurretBuild, shadow, {
-    creload : 0,
-    updateTile(){
-        this.super$updateTile();
-
-        if(this.isShooting() && this.power.status > 0.1 && this.hasAmmo() && this.creload >= 280){
-            this.creload = 0
-            shadowShell.create(this, this.team, this.x, this.y, this.rotation)
-            Sounds.laser.at(this)
-        }
-        else{
-            if(this.creload < 280){this.creload += 1} 
-        }
-    },
 });
 
 const cloudRip = extend(ItemTurret, "cloud-breaker", {});

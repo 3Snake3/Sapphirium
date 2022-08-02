@@ -1,7 +1,7 @@
 reload: 240
 recoil: 4
 consumes: {
-power: 22
+power: 18
 }
 size: 4
 outlineColor: 1d1d21
@@ -15,7 +15,11 @@ shotDelay: 8
 shootCone: 24
 range: 400
 shootSound: railgun
-shootType: {
+ammoPerShot: 5
+maxAmmo: 50
+ammoUseEffect: none
+ammoTypes: {
+granate: {
 type: PointBulletType
 shootEffect: {
 type: MultiEffect
@@ -130,6 +134,7 @@ trailSpacing: 30
 buildingDamageMultiplier: 0.2
 hitShake: 6
 }
+}
 category: turret
 requirements: [
 leaded-copper/1230
@@ -139,6 +144,6 @@ silicon/700
 surge-alloy/560
 ]
 research: {
-parent: meltdown
-objectives: [scarlet-star]
+parent: scarlet-star
+objectives: [foreshadow]
 }

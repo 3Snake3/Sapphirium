@@ -147,6 +147,8 @@ damage: 40
 speed: 5
 lifetime: 40
 backColor: bd5553
+collides: false
+collidesTiles: false
 frontColor: eb8778
 buildingDamageMultiplier: 1.2
 status: super-melting
@@ -209,6 +211,8 @@ damage: 40
 speed: 5
 lifetime: 40
 backColor: bd5553
+collides: false
+collidesTiles: false
 frontColor: eb8778
 buildingDamageMultiplier: 1.2
 status: super-melting
@@ -273,8 +277,6 @@ lifetime: 33.3
 status: blasted
 statusDuration: 150
 splashDamage: 30
-collides: false
-collidesTiles: false
 drag: 0.005
 keepVelocity: false
 splashDamageRadius: 42
@@ -332,6 +334,8 @@ speed: 6
 lifetime: 33.3
 status: blasted
 statusDuration: 150
+collides: false
+collidesTiles: false
 splashDamage: 30
 splashDamageRadius: 42
 homingPower: 1
@@ -386,6 +390,8 @@ damage: 20
 speed: 6
 lifetime: 33.3
 status: blasted
+collides: false
+collidesTiles: false
 statusDuration: 150
 splashDamage: 30
 splashDamageRadius: 42

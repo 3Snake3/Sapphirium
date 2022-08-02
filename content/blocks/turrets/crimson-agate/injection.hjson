@@ -12,7 +12,7 @@ range: 225
 outlineColor: 1d1d21
 shootSound: shootBig
 consumes: {
-power: 10
+power: 7.5
 }
 shootEffect: {
 type: ParticleEffect
@@ -244,7 +244,6 @@ strokeTo: 0
 category: turret
 research: {
 parent: scarlet-star
-objectives: [ripple]
 }
 drawer: {
 type: DrawTurret
