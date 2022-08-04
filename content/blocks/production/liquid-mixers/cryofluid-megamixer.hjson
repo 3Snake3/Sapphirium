@@ -8,7 +8,7 @@ suffix: "-bottom"
 }
 {
 type: DrawLiquidTile
-drawLiquid: creotite
+drawLiquid: cryofluid
 }
 {
 type: DrawRegion

@@ -1,6 +1,5 @@
 requirements: [
-leaded-copper/30
-graphite/25
+copper/45
 ]
 envDisabled: 16
 reload: 30

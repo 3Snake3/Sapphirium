@@ -22,7 +22,7 @@ backColor: ffffff
 frontColor: 98ffa9
 }
 requirements: [
-leaded-copper/35
+lead/35
 silicon/25
 ]
 envDisabled: 16

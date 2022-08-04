@@ -1,40 +1,5 @@
 const statuses = require("statuses/statuses");
 
-const impalerSpearCharge = extend(WaveEffect, {
-sides: 0,
-lifetime: 30,
-sizeFrom: 16,
-sizeTo: 0,
-strokeFrom: 3,
-strokeTo: 0,
-colorFrom: Pal.lancerLaser,
-colorTo: Pal.lancerLaser
-});
-
-const spear = extend(BasicBulletType, 8, 35, "adc-spear-bullet", {
-  
-    width: 15,
-    height: 60,
-    frontColor: Color.white,
-    backColor: Pal.lancerLaser,
-
-    lifetime: 36.3,
-    pierce: true,
-    hittable: false,
-    absorbable: false,
-    reflectable: false,
-    keepVelocity: false,
-    hitSize: 4,
-    pierceBuilding: true,
-    hitEffect: Fx.hitLancer,
-    despawnEffect: Fx.hitLancer,
-  
-    status: StatusEffects.freezing,
-    statusDuration: 180,
-    
-    chargeEffect: new MultiEffect(Fx.lancerLaserCharge, impalerSpearCharge),
-})
-
 const frag = extend(LightningBulletType, {
 lightningColor: Color.valueOf("98ffa9"),
 lightningLength: 25,
@@ -96,7 +61,6 @@ const multishock = extend(PowerTurret, "multishocker", {});
 const north = extend(PowerTurret, "north", {});
 
 const impaler = extend(PowerTurret, "impaler", {});
-impaler.shootType = spear;
 
 const bow = extend(PowerTurret, "bow", {});
 

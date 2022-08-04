@@ -12,14 +12,14 @@ height: 12
 damage: 5
 speed: 6
 lifetime: 30
-drag: 0.02
+drag: -0.003
 splashDamage: 10
 splashDamageRadius: 15
 status: freezing
 statusDuration: 60
 homingPower: 0.1
 homingRange: 45
-weaveScale: 6
+weaveScale: 3
 weaveMag: 3
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
@@ -30,8 +30,6 @@ trailChance: 0.5
 fragBullets: 3
 fragRandomSpread: 90
 fragBullet: {
-type: FlakBulletType
-explodeRange: 30
 width: 8
 height: 8
 damage: 5
@@ -41,7 +39,7 @@ pierce: true
 pierceCap: 1
 backColor: ffffff
 frontColor: ffffff
-weaveScale: 6
+weaveScale: 3
 weaveMag: 3
 homingPower: 0.1
 homingRange: 30
@@ -53,8 +51,7 @@ status: freezing
 }
 category: turret
 requirements: [
-lead/45
-silicon/50
-graphite/15
+copper/30
+lead/30
 ]
 research: duo

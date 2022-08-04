@@ -64,7 +64,7 @@ rotateSpeed: 8
 shootCone: 25
 shootSound: bang
 requirements: [
-leaded-copper/50
+copper/50
 graphite/30
 ]
 envDisabled: 16

@@ -25,9 +25,8 @@ smokeEffect: none
 targetAir: false
 category: turret
 requirements: [
-copper/30
-lead/40
-silicon/20
+lead/35
+silicon/35
 ]
 research: {
 parent: arc
@@ -41,7 +40,9 @@ colors: [a9d8ff, a9d8ff, ffffff]
 hitEffect: hitLancer
 hitSize: 2
 width: 10
-sideAngle: 55
+lifetime: 22
+sideAngle: -55
+sideWidth: 1.3
 status: super-freezing
-pierceCap: 3
+pierceCap: 2
 }
