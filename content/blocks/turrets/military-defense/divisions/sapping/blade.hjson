@@ -13,7 +13,7 @@ creostone/500
 thorium/512
 surge-alloy/220
 ]
-reload: 190
+reload: 120
 recoil: 4
 shake: 3
 shootSound: shotgun

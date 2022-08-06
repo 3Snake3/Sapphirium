@@ -13,7 +13,7 @@ recoil: 10
 reload: 1200
 cooldownTime: 600
 shoot: {
-firstShotDelay: 1190
+firstShotDelay: 50
 shotDelay: 1190
 }
 consumes: {

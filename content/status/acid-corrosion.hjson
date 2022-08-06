@@ -1,7 +1,7 @@
 name: acid-corrosion
-damage: 0.5
-healthMultiplier: 0.7
-speedMultiplier: 0.7
+damage: 1
+healthMultiplier: 0.9
+speedMultiplier: 0.65
 effect: {
 type: MultiEffect
 effects: [melting, {

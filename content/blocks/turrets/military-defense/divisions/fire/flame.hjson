@@ -54,7 +54,7 @@ type: MultiEffect
 effects: [blastExplosion, fireHit]
 }
 status: burning
-statusDuration: 180
+statusDuration: 240
 pierce: true
 pierceBuilding: true
 pierceCap: 2
@@ -76,7 +76,7 @@ type: MultiEffect
 effects: [blastExplosion, fireHit]
 }
 status: burning
-statusDuration: 60
+statusDuration: 240
 backColor: ed7358
 frontColor: ff9c59
 damage: 18
@@ -87,7 +87,7 @@ width: 12
 height: 17
 speed: 8
 lifetime: 37.5
-damage: 70
+damage: 55
 ammoMultiplier: 4
 reloadMultiplier: 0.9
 hitEffect: {
@@ -99,7 +99,7 @@ type: MultiEffect
 effects: [blastExplosion, fireHit]
 }
 status: adc-small-flaming
-statusDuration: 240
+statusDuration: 120
 pierce: true
 pierceBuilding: true
 pierceCap: 3
