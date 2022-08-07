@@ -41,7 +41,7 @@ width: 15
 height: 20
 speed: 1
 lifetime: 120
-drag: 0.03
+drag: -0.03
 damage: 30
 splashDamage: 40
 splashDamageRadius: 25

@@ -333,7 +333,7 @@ setStats(){
         this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, bloodsap)));
     }
 });
-bloodlust.buildType = () => extend(PowerTurret.PowerTurretBuild, bloodlust, {
+bloodlust.buildType = () => extend(ItemTurret.ItemTurretBuild, bloodlust, {
 	creload : 0,
     updateTile(){
         this.super$updateTile();

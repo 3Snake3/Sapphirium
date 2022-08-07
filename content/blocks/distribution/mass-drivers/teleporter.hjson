@@ -1,13 +1,13 @@
 
 knockback: 0
-rotateSpeed: 300
+rotateSpeed: 1520
 hasPower: true
 range: 1520
-reload: 5
-bulletSpeed: 100
+reload: 1
+bulletSpeed: 1520
 minDistribute: 1
 translation: 1
-bulletLifetime: 15
+bulletLifetime: 1
 shake: 0
 shootSound: lasershoot
 itemCapacity: 20
