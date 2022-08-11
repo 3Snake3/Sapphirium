@@ -4,5 +4,5 @@ description: "Adds several new factions that include their own unique content. U
 author: "Snake"
 minGameVersion: "136"
 version: "15.0"
-main: MultiCrafterAdapter
+main: adc.AdcMod
 java: true
