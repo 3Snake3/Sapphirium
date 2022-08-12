@@ -17,20 +17,20 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
       - name: Build Mod Jar
         run: |
           chmod +x gradlew
           ./gradlew deploy
+          python .github/workflows/upload/unzip_jar.py
 
       - uses: actions/upload-artifact@v2
         with:
-          name: CyberIO-Unzip-This
-          path: build/tmp/deploy/*.jar
-
-      - uses: actions/setup-python@v4
-        if: ${{ contains(github.event.head_commit.message,'[upload]') }}
-        with:
-          python-version: '3.9'
+          name: Sapphirium
+          path: UnzipJar/**
 
       - name: Upload Java back-end
         if: ${{ contains(github.event.head_commit.message,'[upload]') }}
@@ -44,6 +44,5 @@ jobs:
           git config --global user.email "Li_plum@outlook.com"
           git config --global user.name "liplum"
           git add .
-          ls -a
-          git commit --allow-empty -m "Java back-end update"
+          git commit -m "Java back-end update"
           git push https://3Snake3:${{ secrets.SAPP_TOKEN }}@github.com/3Snake3/Sapphirium
