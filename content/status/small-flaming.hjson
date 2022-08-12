@@ -1,7 +1,0 @@
-name: small-flaming
-speedMultiplier: 0.8
-damage: 0.5
-transitionDamage: 45
-effect: burning
-affinities: [tarred]
-opposites: [wet, freezing, super-freezing]

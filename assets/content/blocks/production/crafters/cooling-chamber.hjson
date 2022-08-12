@@ -1,0 +1,20 @@
+craftEffect: smeltsmoke
+category: crafting
+size: 2
+liquidCapacity: 10
+itemCapacity: 10
+hasItems: true
+hasLiquids: true
+hasPower: true
+consumes: {
+power: 0.3
+liquid: slag/0.09
+}
+outputItem: stone/1
+requirements: [
+beryllium/45
+]
+research: {
+parent: cliff-crusher
+children: [silicon-arc-furnace]
+}

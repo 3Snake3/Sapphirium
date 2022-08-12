@@ -1,0 +1,61 @@
+
+health: 1650
+size: 3
+category: turret
+research: {
+parent: lancer
+objectives: [spraying-projector]
+}
+reload: 240
+recoil: 0
+rotateSpeed: 0
+shootCone: 360
+shootY: 0
+inaccuracy: 360
+range: 230
+shootSound: release
+shoot: {
+type: ShootSpread
+spread: 360
+shots: 360
+}
+shootEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 240
+strokeFrom: 16
+strokeTo: 0
+lifetime: 33
+colorFrom: 96abd9
+colorTo: 96abd9
+}
+smokeEffect: none
+consumes: {
+power: 8
+}
+shootType: {
+width: 0.001
+height: 0.001
+damage: 5
+speed: 7
+lifetime: 33
+pierce: true
+pierceBuilding: true
+pierceCap: 5
+hittable: false
+absorbable: true
+reflectable: false
+collidesTiles: true
+knockback: 5
+hitEffect: none
+smokeEffect: none
+despawnEffect: none
+status: wet
+}
+requirements: [
+leaded-copper/325
+titanium/130
+silicon/130
+plastanium/80
+]

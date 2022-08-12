@@ -1,0 +1,10 @@
+requirements: [
+lead/9000
+silicon/9000
+titanium/7500
+plastanium/6500
+globium/4200
+]
+research: core-nucleus
+category: effect
+unitType: azure-wing

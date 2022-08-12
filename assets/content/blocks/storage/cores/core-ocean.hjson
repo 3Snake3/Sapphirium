@@ -1,0 +1,15 @@
+health: 8650
+unitCapModifier: 3
+itemCapacity: 3000
+unitType: flood
+size: 4
+researchCostMultiplier: 0.09
+research: core-nucleus
+requirements: [
+copper/7600
+titanium/7600
+stone/6400
+silicon/6000
+graphite/3800
+]
+category: effect

@@ -1,0 +1,41 @@
+
+requirements: [
+silicon/160
+titanium/120
+charged-cylinder/80
+surge-alloy/80
+]
+category: production
+drillTime: 160
+size: 4
+drawRim: true
+hasPower: true
+tier: 7
+updateEffect: {
+type: ParticleEffect
+particles: 5
+lifetime: 30
+sizeFrom: 6
+sizeTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+length: 10
+}
+updateEffectChance: 0.03
+drillEffect: mineHuge
+rotateSpeed: 8
+itemCapacity: 40
+liquidCapacity: 12
+consumes: {
+power: 6
+liquid: {
+liquid: ledonite-liquid
+amount: 0.2
+booster: true
+optional: true
+update: true
+}
+}
+research: blast-drill
+
+

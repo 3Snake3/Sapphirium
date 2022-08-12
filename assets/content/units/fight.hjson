@@ -1,0 +1,131 @@
+
+health: 1280
+armor: 12
+hitSize: 25
+speed: 2
+mineRange: 120
+mineTier: 4
+mineSpeed: 6
+drag: 0.016
+
+
+payloadCapacity: 5
+lowAltitude: true
+flying: true
+
+engineOffset: 8.75
+engineSize: 3
+
+buildSpeed: 3
+buildBeamOffset: 1.1
+forceMultiTarget: true
+outlineColor: 282b3b
+
+weapons: [
+{
+name: fight-bullet-mount
+top: false
+x: 0
+y: 1.1
+mirror: false
+reload: 9
+recoil: 0
+shootSound: shootSnap
+ejectEffect: casing3Double
+shootStatus: {
+name: speed-boost
+reloadMultiplier: 1.2
+damageMultiplier: 1.2
+speedMultiplier: 1.2
+show: false
+opposites: [weakened]
+effect: overdriven
+}
+shootStatusDuration: 80
+bullet: {
+width: 9
+height: 13
+speed: 6
+lifetime: 35
+damage: 20
+buildingDamageMultiplier: 0.2
+trailWidth: 0.98
+trailLength: 15
+}
+}
+{
+name: fight-artillery
+x: 7.75
+y: 4.75
+reload: 45
+recoil: 3
+rotate: true
+rotateSpeed: 4
+shake: 2
+shootSound: artillery
+
+ejectEffect: casing2
+bullet: {
+type: ArtilleryBulletType
+width: 18
+height: 18
+damage: 10
+shootEffect: shootBig
+splashDamage: 50
+splashDamageRadius: 35
+speed: 4
+lifetime: 40
+collidesTiles: true
+collidesAir: true
+buildingDamageMultiplier: 0.1
+}
+}
+{
+name: fight-missile
+y: -5
+x: 7
+reload: 30
+recoil: 2
+inaccuracy: 5
+shoot: {
+type: ShootPattern
+shots: 2
+}
+shootCone: 65
+shootSound: missile
+rotate: true
+rotateSpeed: 6
+bullet: {
+type: MissileBulletType
+width: 10
+height: 12
+damage: 25
+homingRange: 60
+drag: -0.003
+speed: 3
+lifetime: 44
+splashDamage: 45
+splashDamageRadius: 35
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+keepVelocity: false
+weaveScale: 6
+weaveMag: 2.5
+buildingDamageMultiplier: 0.2
+}
+}
+]
+abilities: [
+{
+type: StatusFieldAbility
+duration: 120
+reload: 300
+range: 45
+effect: {
+name: shield
+show: false
+healthMultiplier: 4
+speedMultiplier: 0.8
+}
+}
+]

@@ -1,0 +1,56 @@
+
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawGlowRegion
+suffix: "-top"
+color: ff7878
+}
+]
+}
+health: 840
+size: 3
+outputItem: granate/5
+craftTime: 300
+consumes: {
+power: 5
+liquid: water/0.4
+}
+liquidCapacity: 24
+craftEffect: {
+type: MultiEffect
+effects: [{
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 15
+lifetime: 15
+colorFrom: ff6e6e
+colorTo: d94848
+strokeFrom: 4
+strokeTo: 0
+}
+{
+type: ParticleEffect
+region: adc-rhombus
+sizeFrom: 6
+sizeTo: 0
+lifetime: 20
+particles: 6
+length: 5
+colorFrom: ff6e6e
+colorTo: d94848
+}]
+}
+hasPower: true
+category: production
+research: cultivator
+requirements: [
+leaded-copper/230
+silicon/90
+titanium/80
+]

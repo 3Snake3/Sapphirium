@@ -1,0 +1,6 @@
+requirements: [
+granate/6
+]
+category: defense
+research: tinorium-wall
+envDisabled: 16

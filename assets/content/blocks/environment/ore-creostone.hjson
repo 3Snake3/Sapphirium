@@ -1,0 +1,5 @@
+
+itemDrop: creostone
+oreDefault: true
+oreThreshold: 0.908
+oreScale: 26

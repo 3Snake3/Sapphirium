@@ -1,0 +1,197 @@
+
+size: 2
+category: turret
+requirements: [
+copper/185
+graphite/85
+silicon/60
+surge-alloy/45
+]
+research: {
+parent: salvo
+objectives: [lancer]
+}
+ammoTypes: {
+charged-lead: {
+width: 10
+height: 13
+splashDamage: 15
+splashDamageRadius: 16
+damage: 10
+speed: 6
+lifetime: 27
+reloadMultiplier: 1.2
+backColor: f3e979
+frontColor: ffffff
+lightning: 2
+lightningLength: 7
+hitEffect: {
+type: MultiEffect
+effects: [hitBulletColor, {
+type: ExplosionEffect
+waveLife: 10
+waveRad: 25
+waveColor: f3e979
+sparks: 6
+sparkLen: 3
+sparkRad: 28
+sparkStroke: 2
+smokes: 0
+}]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [hitBulletColor, {
+type: ExplosionEffect
+waveLife: 10
+waveRad: 25
+waveColor: f3e979
+sparks: 6
+sparkLen: 3
+sparkRad: 28
+sparkStroke: 2
+smokes: 0
+}]
+}
+}
+charged-stick: {
+width: 10
+height: 15
+pierce: true
+pierceCap: 1
+damage: 18
+speed: 6
+lifetime: 28
+backColor: f3e979
+frontColor: ffffff
+lightning: 2
+lightningLength: 7
+rangeChange: 7.5
+hitEffect: {
+type: MultiEffect
+effects: [hitBulletColor, {
+type: ExplosionEffect
+waveLife: 10
+waveRad: 25
+waveColor: f3e979
+sparks: 6
+sparkLen: 3
+sparkRad: 28
+sparkStroke: 2
+smokes: 0
+}]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [hitBulletColor, {
+type: ExplosionEffect
+waveLife: 10
+waveRad: 25
+waveColor: f3e979
+sparks: 6
+sparkLen: 3
+sparkRad: 28
+sparkStroke: 2
+smokes: 0
+}]
+}
+}
+charged-ingot: {
+width: 11
+height: 13
+splashDamage: 18
+splashDamageRadius: 16
+damage: 24
+speed: 6
+lifetime: 28
+backColor: f3e979
+frontColor: ffffff
+lightning: 3
+lightningLength: 7
+lightningDamage: 12
+rangeChange: 7.5
+hitEffect: {
+type: MultiEffect
+effects: [hitBulletColor, {
+type: ExplosionEffect
+waveLife: 10
+waveRad: 25
+waveColor: f3e979
+sparks: 6
+sparkLen: 3
+sparkRad: 28
+sparkStroke: 2
+smokes: 0
+}]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [hitBulletColor, {
+type: ExplosionEffect
+waveLife: 10
+waveRad: 25
+waveColor: f3e979
+sparks: 6
+sparkLen: 3
+sparkRad: 28
+sparkStroke: 2
+smokes: 0
+}]
+}
+}
+charged-cylinder: {
+width: 12
+height: 15
+splashDamage: 24
+splashDamageRadius: 16
+damage: 35
+speed: 6
+lifetime: 28.1
+backColor: f3e979
+frontColor: ffffff
+lightning: 4
+lightningLength: 7
+rangeChange: 8.5
+hitEffect: {
+type: MultiEffect
+effects: [hitBulletColor, {
+type: ExplosionEffect
+waveLife: 10
+waveRad: 30
+waveColor: f3e979
+sparks: 6
+sparkLen: 3
+sparkRad: 28
+sparkStroke: 2
+smokes: 0
+}]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [hitBulletColor, {
+type: ExplosionEffect
+waveLife: 10
+waveRad: 30
+waveColor: f3e979
+sparks: 6
+sparkLen: 3
+sparkRad: 28
+sparkStroke: 2
+smokes: 0
+}]
+}
+}
+}
+range: 160
+reload: 20
+ammoEjectBack: 4
+recoil: 4
+shoot: {
+type: ShootAlternate
+spread: 8
+shots: 2
+}
+shootCone: 24
+ammoUseEffect: casing2
+shootSound: shootBig
+health: 600

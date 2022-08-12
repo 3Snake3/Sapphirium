@@ -1,0 +1,317 @@
+health: 1750
+size: 3
+reload: 300
+recoil: 6
+shootCone: 45
+shootSound: artillery
+consumes: {
+power: 10
+}
+targetHealing: true
+shootEffect: {
+type: WaveEffect
+sides: 6
+sizeFrom: 0
+sizeTo: 16
+lifetime: 20
+strokeTo: 0
+colorFrom: 85ff94
+colorTo: 85ff94
+}
+smokeEffect: {
+type: ParticleEffect
+particles: 6
+length: 45
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+region: adc-rhombus
+colorFrom: 85ff94
+colorTo: 85ff94
+cone: 360
+}
+range: 300
+minRange: 80
+targetAir: false
+ammoUseEffect: none
+ammoTypes: {
+emerald: {
+type: ArtilleryBulletType
+width: 16
+height: 16
+speed: 4
+lifetime: 75
+sprite: circle-bullet
+damage: 0
+splashDamage: 120
+splashDamageRadius: 130
+hitShake: 3
+collidesTiles: fals
+backColor: 85ff93
+frontColor: ffffff
+trailColor: 85ff93
+trailChance: 0.8
+trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 1
+length: 0
+spin: 8
+region: adc-green-trail
+sizeFrom: 5
+sizeTo: 0
+lifetime: 30
+colorFrom: 85ff93
+colorTo: 85ff93
+}
+]
+}
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+lifetime: 20
+sizeFrom: 120
+sizeTo: 135
+strokeFrom: 4
+strokeTo: 0
+colorFrom: 85ff93
+colorTo: 85ff93
+}
+{
+type: ParticleEffect
+particles: 6
+length: 45
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+region: adc-rhombus
+colorFrom: 85ff94
+colorTo: 85ff94
+cone: 360
+}
+]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+lifetime: 20
+sizeFrom: 120
+sizeTo: 135
+strokeFrom: 4
+strokeTo: 0
+colorFrom: 85ff93
+colorTo: 85ff93
+}
+{
+type: ParticleEffect
+particles: 6
+length: 45
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+region: adc-rhombus
+colorFrom: 85ff94
+colorTo: 85ff94
+cone: 360
+}
+]
+}
+healPercent: 20
+collidesTeam: true
+hitSound: plasmaboom
+fragBullets: 1
+fragBullet: {
+type: BombBulletType
+width: 20
+height: 20
+shrinkY: 0
+shrinkX: 0
+lifetime: 180
+speed: 0
+damage: 0
+splashDamage: 120
+splashDamageRadius: 200
+hitShake: 3
+backColor: 85ff94
+frontColor: ffffff
+collides: false
+sprite: adc-crystal-bomb
+hitSound: plasmaboom
+hitEffect: {
+type: ParticleEffect
+line: true
+particles: 6
+length: 30
+lifetime: 20
+sizeFrom: 4
+sizeTo: 0
+strokeTo: 0
+colorFrom: 85ff94
+colorTo: 85ff94
+}
+despawnEffect: {
+type: WaveEffect
+sizeFrom: 180
+sizeTo: 200
+sides: 0
+lifetime: 20
+colorFrom: 85ff94
+colorTo: 85ff94
+strokeTo: 0
+}
+}
+}
+plastanium: {
+type: ArtilleryBulletType
+width: 16
+height: 16
+speed: 4
+lifetime: 75
+sprite: circle-bullet
+damage: 0
+splashDamage: 180
+splashDamageRadius: 130
+reloadMultiplier: 0.5
+ammoMultiplier: 4
+hitShake: 4
+collidesTiles: false
+backColor: 85ff93
+frontColor: ffffff
+trailColor: 85ff93
+trailChance: 0.8
+trailEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 1
+length: 0
+spin: 8
+region: adc-green-trail
+sizeFrom: 5
+sizeTo: 0
+lifetime: 30
+colorFrom: 85ff93
+colorTo: 85ff93
+}
+]
+}
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+lifetime: 20
+sizeFrom: 120
+sizeTo: 135
+strokeFrom: 4
+strokeTo: 0
+colorFrom: 85ff93
+colorTo: 85ff93
+}
+{
+type: ParticleEffect
+particles: 6
+length: 45
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+region: adc-rhombus
+colorFrom: 85ff94
+colorTo: 85ff94
+cone: 360
+}
+]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+lifetime: 20
+sizeFrom: 120
+sizeTo: 135
+strokeFrom: 4
+strokeTo: 0
+colorFrom: 85ff93
+colorTo: 85ff93
+}
+{
+type: ParticleEffect
+particles: 6
+length: 45
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+region: adc-rhombus
+colorFrom: 85ff94
+colorTo: 85ff94
+cone: 360
+}
+]
+}
+healPercent: 25
+collidesTeam: true
+hitSound: plasmaboom
+fragBullets: 4
+fragBullet: {
+type: BombBulletType
+width: 11
+height: 11
+shrinkY: 0
+shrinkX: 0
+lifetime: 60
+speed: 0
+damage: 0
+splashDamage: 18
+splashDamageRadius: 80
+backColor: 85ff93
+frontColor: ffffff
+hitShake: 3
+collides: false
+sprite: adc-crystal-bomb
+hitSound: plasmaboom
+spin: 8
+hitEffect: {
+type: ParticleEffect
+line: true
+particles: 6
+length: 30
+lifetime: 40
+sizeFrom: 4
+sizeTo: 0
+strokeTo: 0
+colorFrom: 85ff94
+colorTo: 85ff94
+}
+despawnEffect: {
+type: WaveEffect
+sizeFrom: 40
+sizeTo: 85
+sides: 0
+lifetime: 40
+colorFrom: 85ff94
+colorTo: 85ff94
+strokeTo: 0
+}
+}
+}
+}
+category: turret
+research: revival
+requirements: [
+leaded-copper/600
+titanium/320
+plastanium/200
+emerald/145
+]

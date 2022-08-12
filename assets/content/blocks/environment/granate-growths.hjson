@@ -1,0 +1,8 @@
+
+size: 2
+health: 220
+targetable: false
+requirements: [
+granate/10
+]
+buildVisibility: editorOnly

@@ -1,0 +1,12 @@
+
+category: production
+
+drillTime: 600
+tier: 2
+
+requirements: [
+  copper/6
+]
+
+research: core-shard
+alwaysUnlocked: true

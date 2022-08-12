@@ -1,0 +1,180 @@
+type: flying
+targetFlags: [generator]
+flying: true
+mineSpeed: 9
+mineTier: 3
+buildSpeed: 2
+drag: 0.06
+speed: 4
+rotateSpeed: 22
+accel: 0.28
+itemCapacity: 100
+health: 450
+armor: 5
+engineOffset: 8
+engineSize: 2.5
+hitSize: 16
+weapons: [{
+name: azure-weapon
+reload: 60
+recoil: 0
+mirror: false
+top: false
+shootSound: laser
+x: 0
+y: 0
+shoot: {
+firstShotDelay: 39
+}
+bullet: {
+width: 16
+height: 22
+sprite: adc-azure-spear
+backColor: a9d8ff
+frontColor: ffffff
+speed: 6
+lifetime: 25
+damage: 45
+pierce: true
+pierceBuilding: true
+buildingDamageMultiplier: 0.5
+shootEffect: {
+type: MultiEffect
+effects: [lancerLaserCharge, {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 5
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: a9d8ff
+colorTo: ffffff
+}]
+}
+pierceCap: 1
+knockback: 1
+hitSound: laser
+hitEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 5
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: a9d8ff
+colorTo: ffffff
+}
+despawnEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 5
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: a9d8ff
+colorTo: ffffff
+}
+fragBullets: 2
+fragSpread: 90
+fragRandomSpread: 0
+fragBullet: {
+width: 16
+height: 22
+weaveMag: 6
+weaveScale: 4
+buildingDamageMultiplier: 0.25
+hitSound: laser
+sprite: adc-azure-spear
+backColor: a9d8ff
+frontColor: ffffff
+speed: 5
+lifetime: 25
+damage: 45
+pierce: true
+pierceCap: 1
+pierceBuilding: true
+knockback: 1
+weaveScale: 6
+weaveMag: 2
+hitEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 5
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: a9d8ff
+colorTo: ffffff
+}
+despawnEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 5
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: a9d8ff
+colorTo: ffffff
+}
+fragBullets: 2
+fragSpread: 90
+fragRandomSpread: 0
+fragBullet: {
+width: 16
+height: 22
+sprite: adc-azure-spear
+buildingDamageMultiplier: 0.1
+backColor: a9d8ff
+frontColor: ffffff
+hitSound: laser
+speed: 6
+lifetime: 25
+damage: 45
+pierce: true
+pierceBuilding: true
+pierceCap: 1
+knockback: 1
+weaveScale: 4
+weaveMag: 6
+hitEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 5
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: a9d8ff
+colorTo: ffffff
+}
+despawnEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 5
+strokeFrom: 3
+strokeTo: 0
+lifetime: 20
+colorFrom: a9d8ff
+colorTo: ffffff
+}
+}
+}
+}
+}]
+abilities: [
+{
+type: MoveLightningAbility
+damage: 35
+chance: 0.09
+length: 9.3
+minSpeed: 1
+maxSpeed: 2
+color: a9d8ff
+}
+]

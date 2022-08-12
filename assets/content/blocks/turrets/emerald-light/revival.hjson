@@ -1,0 +1,243 @@
+health: 2300
+reload: 360
+size: 3
+recoil: 6
+targetHealing: true
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+lifetime: 30
+sizeFrom: 30
+sizeTo: 30
+strokeFrom: 3
+strokeTo: 0
+colorFrom: 98ffa9
+colorTo: 98ffa9
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 30
+colorFrom: 98ffa9
+colorTo: 98ffa9
+region: adc-heal-rail-hit
+spin: 8
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 30
+colorFrom: 98ffa9
+colorTo: 98ffa9
+region: adc-heal-rail-hit
+spin: -8
+}
+]
+}
+smokeEffect: {
+type: ParticleEffect
+particles: 6
+cone: 360
+length: 80
+lifetime: 120
+sizeFrom: 5
+sizeTo: 0
+colorFrom: 98ffa9
+colorTo: 98ffa970
+}
+range: 390
+shake: 4
+shootSound: railgun
+rotateSpeed: 3
+cooldownTime: 0.009
+recoilTime: 0.009
+
+consumes: {
+power: 7.5
+}
+unitSort: strongest
+ammoTypes: {
+emerald: {
+type: PointBulletType
+speed: 400
+damage: 300
+healPercent: 20
+status: unmoving
+statusDuration: 80
+fragBullets: 4
+fragRandomSpread: 180
+collidesTeam: true
+fragBullet: {
+width: 0.001
+height: 0.001
+speed: 10
+lifetime: 5
+damage: 0
+collides: false
+hitEffect: none
+despawnEffect: none
+fragBullets: 1
+fragAngle: 180
+
+hittable: false
+absorbable: false
+reflectable: false
+
+fragBullet: {
+type: MissileBulletType
+width: 25
+height: 30
+damage: 50
+hitSound: plasmaboom
+sprite: adc-heal-shell
+pierceBuilding: true
+pierceCap: 1
+healPercent: 12
+collidesTeam: true
+status: regeneration
+statusDuration: 180
+speed: 8
+lifetime: 60
+drag: -0.03
+homingPower: 0.1
+homingRange: 80
+frontColor: ffffff
+backColor: 98ffa9
+trailColor: 98ffa9
+splashDamage: 50
+splashDamageRadius: 65
+hitEffect: {
+type: MultiEffect
+effects: [{
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 65
+strokeTo: 0
+colorFrom: 98ffa9
+colorTo: 98ffa9
+lifetime: 17
+}
+{
+type: ParticleEffect
+particles: 8
+cone: 360
+length: 30
+sizeFrom: 5.5
+sizeTo: 0
+lifetime: 60
+colorFrom: 98ffa9
+colorTo: 98ffa970
+}
+]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [{
+type: WaveEffect
+sides: 0
+sizeFrom: 0
+sizeTo: 65
+strokeTo: 0
+colorFrom: 98ffa9
+colorTo: 98ffa9
+lifetime: 17
+}
+{
+type: ParticleEffect
+particles: 8
+cone: 360
+length: 30
+sizeFrom: 5.5
+sizeTo: 0
+lifetime: 60
+colorFrom: 98ffa9
+colorTo: 98ffa970
+}
+]
+}
+}
+}
+trailEffect: {
+type: ParticleEffect
+length: 0
+particles: 1
+lifetime: 24
+sizeFrom: 20
+colorFrom: 98ffa9
+colorTo: 98ffa9
+region: adc-heal-rail
+}
+hitEffect: {
+type: MultiEffect
+effects: [{
+type: WaveEffect
+sides: 0
+sizeFrom: 20
+sizeTo: 20
+strokeFrom: 3.5
+strokeTo: 0
+colorFrom: 98ffa9
+colorTo: 98ffa9
+lifetime: 22
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 24
+sizeFrom: 35
+colorFrom: 98ffa9
+colorTo: 98ffa9
+region: adc-pierce2
+}]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [{
+type: WaveEffect
+sides: 0
+sizeFrom: 20
+sizeTo: 20
+strokeFrom: 3.5
+strokeTo: 0
+colorFrom: 98ffa9
+colorTo: 98ffa9
+lifetime: 22
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 24
+sizeFrom: 20
+colorFrom: 98ffa9
+colorTo: 98ffa9
+region: adc-heal-rail-hit
+spin: 8
+}]
+}
+trailSpacing: 20
+buildingDamageMultiplier: 0.5
+hitShake: 4
+}
+}
+requirements: [
+leaded-copper/420
+titanium/385
+silicon/340
+plastanium/180
+emerald/180
+]
+category: turret
+research: {
+parent: pressure
+objectives: [lancer]
+}

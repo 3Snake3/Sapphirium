@@ -1,0 +1,39 @@
+requirements: [
+graphite/25
+silicon/35
+beryllium/60
+]
+category: crafting
+hasLiquids: true
+hasItems: true
+hasPower: true
+buildVisibility: debugOnly
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawGlowRegion
+color: ff8c8c
+}
+{
+type: DrawLiquidRegion
+drawLiquid: water
+}
+{
+type: DrawRegion
+suffix: "-top"
+}
+]
+}
+size: 2
+liquidCapacity: 12
+outputItem: granate/2
+craftTime: 180
+consumes: {
+power: 0.5
+liquid: water/0.1
+}
+research: sapphire-extractor

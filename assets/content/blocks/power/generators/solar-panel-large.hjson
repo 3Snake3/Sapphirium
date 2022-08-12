@@ -1,0 +1,6 @@
+research: solar-panel-medium
+requirements: [
+lead/200
+silicon/230
+phase-fabric/80
+]

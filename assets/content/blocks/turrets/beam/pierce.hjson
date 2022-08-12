@@ -1,0 +1,68 @@
+
+size: 2
+category: turret
+research: {
+parent: discharge
+}
+requirements: [
+leaded-copper/145
+graphite/125
+silicon/85
+charged-ingot/85
+]
+envDisabled: 16
+range: 180
+health: 600
+recoil: 2
+reload: 30
+consumes: {
+power: 7
+}
+shake: 3
+smokeEffect: none
+heatColor: FF8900
+targetGround: true
+targetAir: true
+shootSound: laser
+shootType: {
+type: LaserBulletType
+length: 180
+colors: ["f3e979", "f3e979", FFFFFF"]
+hitEffect: {
+type: ParticleEffect
+particles: 12
+length: 10
+lifetime: 20
+line: true
+sizeFrom: 0
+sizeTo: 8
+colorFrom: f3e979
+colorTo: f3e979
+}
+despawnEffect: none
+damage: 50
+shootEffect: shockwave
+pierceCap: 3
+fragBullets: 1
+fragRandomSpread: 0
+hitSound: laser
+fragBullet: {
+type: LaserBulletType
+length: 180
+colors: ["f3e979", "f3e979", FFFFFF"]
+hitEffect: {
+type: ParticleEffect
+particles: 6
+length: 10
+lifetime: 20
+line: true
+sizeFrom: 0
+sizeTo: 4
+colorFrom: f3e979
+colorTo: f3e979
+}
+despawnEffect: none
+damage: 30
+}
+}
+shootCone: 25

@@ -1,0 +1,10 @@
+
+attributes: {
+water: 1.15
+heat: -1.15
+}
+blendGroup: darksand
+emitLight: true
+lightRadius: 50
+lightColor: c1f4ff
+variants: 3

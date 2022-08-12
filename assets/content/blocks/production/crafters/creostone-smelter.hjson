@@ -1,0 +1,26 @@
+
+health: 140
+size: 2
+category: crafting
+requirements: [
+leaded-copper/50
+silicon/35
+titanium/35
+]
+drawer: {
+type: DrawMulti
+drawers: [DrawDefault, DrawFlame]
+}
+outputItem: creostone/1
+craftTime: 70
+consumes: {
+power: 2.5
+liquid: creotite/0.16
+items: {
+items: [
+silicon/2
+]
+}
+}
+craftEffect: redgeneratespark
+research: creotite-mixer

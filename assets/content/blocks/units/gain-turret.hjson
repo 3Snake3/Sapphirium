@@ -1,0 +1,16 @@
+repairRadius: 200
+powerUse: 6.5
+beamWidth: 1.5
+pulseRadius: 6.5
+coolantUse: 0.21
+coolantMultiplier: 2
+acceptCoolant: true
+category: units
+size: 2
+requirements: [
+lead/125
+silicon/125
+phase-fabric/65
+]
+research: repair-turret
+laserColor: 98f499

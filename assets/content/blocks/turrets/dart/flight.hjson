@@ -1,0 +1,399 @@
+reload: 80
+recoil: 6
+maxAmmo: 60
+
+shootY: 3.75
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+
+shootSound: shootBig
+shootCone: 60
+inaccuracy: 16
+
+shake: 4
+
+shoot: {
+type: ShootAlternate
+barrels: 5
+spread: 10
+}
+
+ammoPerShot: 10
+range: 480
+minRange: 180
+
+unitSort: farthest
+ammoTypes: {
+copper: {
+width: 12
+height: 20
+sprite: adc-rocket
+
+speed: 8
+lifetime: 60
+damage: 25
+knockback: 0.8
+
+drag: -0.003
+keepVelocity: false
+
+buildingDamageMultiplier: 1.2
+splashDamage: 35
+splashDamageRadius: 35
+
+reloadMultiplier: 1.15
+hitShake: 3
+hitSound: explosion
+
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+
+trailChance: 0.5
+trailColor: f9c27a
+}
+
+graphite: {
+width: 12
+height: 20
+sprite: adc-rocket
+
+drag: -0.003
+keepVelocity: false
+
+speed: 8
+lifetime: 60
+damage: 25
+knockback: 1
+ammoMultiplier: 3
+buildingDamageMultiplier: 1.5
+
+splashDamage: 45
+splashDamageRadius: 40
+
+hitShake: 4
+hitSound: explosion
+
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+
+trailChance: 0.5
+trailColor: f9c27a
+}
+
+silicon: {
+width: 12
+height: 20
+sprite: adc-rocket
+
+drag: -0.003
+keepVelocity: false
+
+speed: 8
+lifetime: 60
+damage: 25
+ammoMultiplier: 4
+knockback: 2
+buildingDamageMultiplier: 1.5
+
+splashDamage: 35
+splashDamageRadius: 40
+
+reloadMultiplier: 1.2
+hitShake: 4
+hitSound: explosion
+
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+
+homingPower: 0.1
+homingRange: 100
+
+trailChance: 0.5
+trailColor: f9c27a
+}
+
+creostone: {
+width: 12
+height: 20
+sprite: adc-rocket
+
+knockback: 1.2
+
+drag: -0.003
+keepVelocity: false
+speed: 8
+lifetime: 60
+damage: 30
+ammoMultiplier: 6
+reloadMultiplier: 0.6
+buildingDamageMultiplier: 1.8
+
+splashDamage: 50
+splashDamageRadius: 45
+
+status: adc-small-flaming
+statusDuration: 180
+hitShake: 4
+hitSound: explosion
+
+hitEffect: massiveExplosion
+despawnEffect: massiveExplosion
+
+homingPower: 0.1
+homingRange: 100
+
+trailChance: 0.5
+trailColor: f9c27a
+}
+
+plastanium: {
+width: 12
+height: 20
+sprite: adc-rocket
+knockback: 2.5
+
+drag: -0.003
+keepVelocity: false
+
+speed: 8
+lifetime: 60
+damage: 50
+ammoMultiplier: 3
+
+splashDamage: 30
+splashDamageRadius: 40
+buildingDamageMultiplier: 1.65
+
+hitShake: 5
+hitSound: explosion
+
+hitEffect: plasticExplosion
+despawnEffect: plasticExplosion
+
+backColor: d8d97f
+frontColor: fffac6
+
+fragBullets: 10
+fragBullet: {
+width: 10
+height: 10
+
+damage: 18
+lifetime: 15
+backColor: d8d97f
+frontColor: fffac6
+
+speed: 10
+despawnEffect: none
+}
+
+trailChance: 0.5
+trailColor: d8d97f
+}
+
+thorium: {
+sprite: adc-rocket
+width: 12
+height: 20
+knockback: 1.5
+
+drag: -0.003
+keepVelocity: false
+speed: 8
+lifetime: 60
+damage: 45
+ammoMultiplier: 6
+buildingDamageMultiplier: 1.7
+
+splashDamage: 60
+splashDamageRadius: 45
+
+reloadMultiplier: 0.7
+hitShake: 6
+hitSound: explosion
+
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+
+trailChance: 0.5
+trailColor: f9c27a
+}
+
+pyratite: {
+sprite: adc-rocket
+width: 12
+height: 20
+knockback: 1.3
+drag: -0.003
+keepVelocity: false
+
+speed: 8
+lifetime: 60
+damage: 30
+ammoMultiplier: 4
+
+splashDamage: 45
+splashDamageRadius: 40
+buildingDamageMultiplier: 1.35
+
+reloadMultiplier: 1.15
+hitShake: 4
+hitSound: explosion
+
+status: burning
+statusDuration: 125
+
+backColor: f68021
+frontColor: f8ad42
+
+hitEffect: {
+type: MultiEffect
+effects: [blastExplosion, fireHit]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [blastExplosion, fireHit]
+}
+
+makeFire: true
+
+trailChance: 0.5
+trailColor: f68021
+}
+
+blast-compound: {
+sprite: adc-rocket
+width: 12
+height: 20
+drag: -0.003
+keepVelocity: false
+
+knockback: 1.3
+speed: 8
+lifetime: 60
+damage: 20
+ammoMultiplier: 4
+buildingDamageMultiplier: 1.65
+
+splashDamage: 65
+splashDamageRadius: 55
+
+hitShake: 5
+hitSound: explosion
+
+status: blasted
+statusDuration: 125
+
+backColor: e58956
+frontColor: ffd2ae
+
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+
+trailChance: 0.5
+trailColor: e58956
+}
+
+tinorium: {
+sprite: adc-rocket
+width: 12
+height: 20
+drag: -0.003
+keepVelocity: false
+
+speed: 8
+lifetime: 60
+damage: 35
+ammoMultiplier: 5
+buildingDamageMultiplier: 1.55
+
+knockback: 1.5
+
+splashDamage: 45
+splashDamageRadius: 45
+
+hitShake: 5
+hitSound: explosion
+
+status: sapped
+statusDuration: 125
+
+backColor: 6d56bf
+frontColor: bf92f9
+
+hitEffect: sapExplosion
+despawnEffect: sapExplosion
+
+fragBullets: 8
+fragBullet: {
+width: 8
+height: 8
+
+damage: 15
+speed: 11
+lifetime: 18
+
+status: sapped
+statusDuration: 125
+
+backColor: 6d56bf
+frontColor: bf92f9
+
+hitEffect: sapExplosion
+despawnEffect: none
+}
+
+trailChance: 0.5
+trailColor: 6d56bf
+}
+
+surge-stone: {
+sprite: adc-rocket
+width: 12
+height: 20
+drag: -0.003
+keepVelocity: false
+
+speed: 8
+lifetime: 60
+damage: 55
+ammoMultiplier: 7
+
+knockback: 2
+
+splashDamage: 70
+splashDamageRadius: 65
+buildingDamageMultiplier: 2
+
+hitShake: 7
+hitSound: explosion
+
+status: shocked
+statusDuration: 125
+
+hitEffect: blastExplosion
+despawnEffect: blastExplosion
+
+lightning: 4
+lightningCone: 360
+lightningDamage: 20
+lightningColor: f2e879
+lightningLength: 11
+
+trailChance: 0.5
+trailColor: 6d56bf
+}
+}
+
+category: turret
+requirements: [
+leaded-copper/1800
+silicon/880
+titanium/645
+creostone/220
+surge-alloy/180
+]
+size: 4
+research: {
+parent: launch
+}

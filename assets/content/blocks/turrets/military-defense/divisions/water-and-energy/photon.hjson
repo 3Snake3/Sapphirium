@@ -1,0 +1,123 @@
+
+size: 3
+health: 1560
+reload: 20
+inaccuracy: 5
+recoil: 2
+shootSound: shootBig
+shootCone: 30
+shake: 3
+range: 120
+shoot: {
+type: ShootAlternate
+spread: 6.25
+}
+
+maxAmmo: 70
+ammoTypes: {
+titanium: {
+type: ShrapnelBulletType
+length: 120
+width: 15
+serrations: 4
+damage: 30
+fragBullets: 1
+knockback: 1.5
+fragRandomSpread: 0
+hitSound: shootBig
+fragBullet: {
+type: ShrapnelBulletType
+length: 120
+width: 15
+serrations: 4
+damage: 30
+}
+}
+thorium: {
+type: ShrapnelBulletType
+length: 120
+width: 15
+serrations: 5
+damage: 45
+fragBullets: 1
+knockback: 1.8
+fromColor: ffffff
+toColor: f9a3c7
+ammoMultiplier: 2
+fragRandomSpread: 0
+hitSound: shootBig
+fragBullet: {
+type: ShrapnelBulletType
+length: 120
+width: 15
+serrations: 4
+damage: 45
+fromColor: ffffff
+toColor: f9a3c7
+}
+}
+creostone: {
+type: ShrapnelBulletType
+length: 120
+width: 16
+serrations: 6
+damage: 60
+fragBullets: 1
+knockback: 2
+status: melting
+statusDuration: 60
+reloadMultiplier: 0.8
+ammoMultiplier: 3
+fromColor: ffffff
+toColor: ffba8c
+hitSound: shootBig
+fragRandomSpread: 0
+fragBullet: {
+type: ShrapnelBulletType
+length: 120
+width: 16
+serrations: 5
+damage: 60
+status: melting
+statusDuration: 60
+fromColor: ffffff
+toColor: ffba8c
+}
+}
+cryocube: {
+type: ShrapnelBulletType
+length: 120
+width: 15
+serrations: 4
+damage: 20
+fragBullets: 1
+knockback: 1
+status: freezing
+statusDuration: 80
+reloadMultiplier: 1.3
+ammoMultiplier: 3
+fromColor: ffffff
+toColor: bfecff
+fragRandomSpread: 0
+hitSound: shootBig
+fragBullet: {
+type: ShrapnelBulletType
+width: 15
+serrations: 4
+damage: 20
+status: freezing
+statusDuration: 80
+fromColor: ffffff
+toColor: bfecff
+}
+}
+}
+category: turret
+requirements: [
+copper/180
+graphite/120
+thorium/80
+creostone/40
+]
+research: fuse
+

@@ -1,0 +1,55 @@
+
+reload: 180
+size: 3
+recoil: 0
+rotateSpeed: 0
+shootY: 0
+shootCone: 360
+playerControllable: false
+shoot: {
+type: ShootSpread
+spread: 360
+shots: 360
+}
+group: projectors
+emitLight: true
+lightRadius: 75
+heatColor: 91abff
+consumes: {
+liquid: {
+liquid: water
+amount: 0.5
+booster: true
+optional: true
+update: true
+}
+power: 5
+}
+shootType: {
+sprite: adc-none-bullet
+width: 3
+height: 3
+hitEffect: none
+despawnEffect: none
+knockback: 5
+damage: 0
+pierce: true
+pierceBuilding: true
+hittable: false
+reflectable: false
+speed: 6
+lifetime: 25
+smokeEffect: none
+}
+range: 150
+category: effect
+shootSound: release
+requirements: [
+leaded-copper/220
+silicon/85
+titanium/60
+phase-fabric/35
+]
+research: {
+parent: force-projector
+}

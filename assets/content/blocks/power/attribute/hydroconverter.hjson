@@ -1,0 +1,32 @@
+requirements: [
+sapphire/80
+silicon/30
+]
+envEnabled: 17
+category: power
+attribute: steam
+displayEfficiencyScale: 1
+minEfficiency: 0.1
+powerProduction: 0.17
+displayEfficiency: false
+generateEffect: none
+effectChance: 0
+size: 3
+ambientSound: hum
+ambientSoundVolume: 0.06
+drawer: {
+type: DrawMulti
+drawers: [DrawDefault, {
+type: DrawLiquidRegion
+drawLiquid: water
+}
+{
+type: DrawRegion
+suffix: "-top"
+}]
+}
+hasLiquids: true
+outputLiquid: water/0.03
+liquidCapacity: 30
+fogRadius: 3
+research: vent-condenser

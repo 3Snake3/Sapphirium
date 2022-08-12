@@ -1,0 +1,10 @@
+
+//itemDrop: creosand
+damageTaken: 0.8
+status: corroded
+statusDuration: 180
+playerUnmineable: true
+attributes: {
+heat: 0.15
+oil: 0.15
+}
