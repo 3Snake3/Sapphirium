@@ -1,0 +1,23 @@
+name: Create release draft
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: |
+      contains(github.event.head_commit.message,'[release]')
+      github.repository == '3Snake3/Sapphirium'
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Upload Java back-end
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd ../
+          python Sapphirium/.github/workflows/upload/release.py
+          gh release create new --draft Sapphirium.zip

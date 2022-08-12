@@ -1,8 +1,5 @@
-import sys
 import os
-from zipfile import ZipFile
-import shutil
-
+from fi import *
 """
 In Python
 ------
@@ -31,21 +28,6 @@ assets = [
     "mod.hjson",
     "icon.png"
 ]
-
-
-def removeFileOrFolder(path):
-    if os.path.isfile(path):
-        os.remove(path)
-    elif os.path.isdir(path):
-        shutil.rmtree(path)
-
-
-def copyFileOrFolder(src, dst):
-    if os.path.isfile(src):
-        shutil.copy(src, dst)
-    elif os.path.isdir(dst):
-        shutil.copytree(src, dst)
-
 
 def main():
     for asset in assets:
