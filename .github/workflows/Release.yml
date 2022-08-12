@@ -20,4 +20,4 @@ jobs:
         run: |
           cd ../
           python Sapphirium/.github/workflows/upload/release.py
-          gh release create new --draft Sapphirium.zip
+          gh release create new --draft *.jar

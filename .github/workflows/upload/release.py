@@ -40,7 +40,7 @@ def main():
     for ex in excluded:
         file = os.path.join(release, ex)
         removeFileOrFolder(file)
-    with zipfile.ZipFile('Sapphirium.zip', 'w', zipfile.ZIP_DEFLATED) as zipf:
+    with zipfile.ZipFile('Sapphirium.jar', 'w', zipfile.ZIP_DEFLATED) as zipf:
         zipFilesInDir(release, zipf)
 
 
