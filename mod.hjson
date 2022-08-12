@@ -5,4 +5,4 @@ author: "Snake"
 minGameVersion: "136"
 version: "15.0"
 main: adc.AdcMod
-java: true 
+java: true

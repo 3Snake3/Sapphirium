@@ -1,0 +1,16 @@
+name: Pull Request Testing
+
+on: [ pull_request ]
+
+jobs:
+  buildJar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Upload mod zip
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ github.event.repository.name }} Pull Request
+          path: /**
