@@ -1,4 +1,4 @@
-name: Build Push Changes
+name: Upload changes to back-end
 on: push
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
           python-version: '3.9'
 
       - name: Upload Json front-end
-        if: !contains(github.event.head_commit.message,'[back-end]')
+        if: contains(github.event.head_commit.message,'[back-end]') == false
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
