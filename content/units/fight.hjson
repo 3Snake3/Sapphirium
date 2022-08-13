@@ -1,24 +1,23 @@
-
-health: 1280
+type: payload
+health: 980
 armor: 12
 hitSize: 25
 speed: 2
-mineRange: 120
+mineRange: 210
 mineTier: 4
 mineSpeed: 6
 drag: 0.016
-
+range: 210
 
 payloadCapacity: 5
 lowAltitude: true
 flying: true
 
-engineOffset: 8.75
-engineSize: 3
+engineOffset: 9.75
+engineSize: 4
 
 buildSpeed: 3
 buildBeamOffset: 1.1
-forceMultiTarget: true
 outlineColor: 282b3b
 
 weapons: [
@@ -33,10 +32,10 @@ recoil: 0
 shootSound: shootSnap
 ejectEffect: casing3Double
 shootStatus: {
-name: speed-boost
-reloadMultiplier: 1.2
-damageMultiplier: 1.2
-speedMultiplier: 1.2
+name: stats-boost
+reloadMultiplier: 1.15
+damageMultiplier: 1.15
+speedMultiplier: 1.15
 show: false
 opposites: [weakened]
 effect: overdriven
@@ -124,7 +123,7 @@ range: 45
 effect: {
 name: shield
 show: false
-healthMultiplier: 4
+healthMultiplier: 3
 speedMultiplier: 0.8
 }
 }

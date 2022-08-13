@@ -10,16 +10,16 @@ accel: 0.30
 itemCapacity: 80
 health: 260
 armor: 2
-outlineColor: 363640
+outlineColor: 1b1b1f
 engineOffset: 5
 hitSize: 10
 
 weapons: [{
 name: scarlet-weapon
 reload: 30
-x: -4
+x: -4.25
 y: 0
-inaccuracy: 8
+recoil: 2
 ejectEffect: casing1
 shootSound: missile
 bullet: {
