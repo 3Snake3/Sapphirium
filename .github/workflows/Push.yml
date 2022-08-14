@@ -23,6 +23,7 @@ jobs:
           cd BackEndBranch
           git config --global user.email "Li_plum@outlook.com"
           git config --global user.name "liplum"
+          git status --porcelain
           if [ -n "$(git status --porcelain)" ]; then
             git add .
             git commit -m "Json front-end update"

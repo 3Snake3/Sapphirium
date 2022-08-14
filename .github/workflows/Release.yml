@@ -21,13 +21,13 @@ jobs:
           python Sapphirium/.github/workflows/upload/release.py
 
       - name: Create release draft
-        if: ${{ contains(github.event.head_commit.message,'[release]' }}
+        if: ${{ contains(github.event.head_commit.message,'[release]') }}
         run: |
           gh release create new --draft *.jar
 
       - name: Fetch latest version
         id: fetchTag
-        if: ${{ contains(github.event.head_commit.message,'[update]' }}
+        if: ${{ contains(github.event.head_commit.message,'[update]') }}
         run: |
           pip install -r Sapphirium/.github/workflows/requirements.txt
           python Sapphirium/.github/workflows/upload/fetch.py

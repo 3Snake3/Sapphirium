@@ -32,15 +32,17 @@ assets = [
 
 
 def main():
+    print("front2back started...")
     for asset in assets:
         front = os.path.join(sapphirium, asset)
         back = os.path.join(backEndBranch, asset)
         # Delete old assets
         removeFileOrFolder(back)
-        print(f"[front2back] {asset} in old {back} is removed.")
+        print(f"The {asset} in old {os.path.abspath(back)} is removed.")
         # Copy new assets
         copyFileOrFolder(src=front, dst=back)
-        print(f"[front2back] new {asset} in front {front} is added.")
+        print(f"A new {asset} in front {os.path.abspath(front)} is added.")
+    print("front2back ended...")
 
 
 if __name__ == '__main__':
