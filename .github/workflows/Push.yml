@@ -16,7 +16,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python .github/workflows/upload/front2back.py
           cd ../
           git clone --depth 1 --single-branch --branch back-end https://github.com/3Snake3/Sapphirium.git BackEndBranch
           python Sapphirium/.github/workflows/upload/front2back.py
