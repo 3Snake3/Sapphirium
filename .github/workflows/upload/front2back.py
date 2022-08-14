@@ -16,19 +16,20 @@ Out Python
 Git push to `back-end`
 """
 
-backEndBranch = "BackEndBranch/assets"
+backEndBranch = "BackEndBranch"
+backEndBranchAssets = "BackEndBranch/assets"
 sapphirium = "Sapphirium"
 
 IsFile = False
 IsDir = True
 
 
-def File(s):
-    return s, IsFile
+def File(s, to=backEndBranch):
+    return s, IsFile, to
 
 
-def Dir(s):
-    return s, IsDir
+def Dir(s, to=backEndBranchAssets):
+    return s, IsDir, to
 
 
 assets = [
@@ -49,10 +50,10 @@ def toStatus(b):
 
 def main():
     print("front2back started...")
-    for asset, isDir in assets:
+    for asset, isDir, to in assets:
         front = os.path.join(sapphirium, asset)
-        back = os.path.join(backEndBranch, asset)
-        print(f"back<{asset}> {toStatus(os.path.exists(back))};front<{asset}> {toStatus(os.path.exists(front))}")
+        back = os.path.join(to, asset)
+        print(f"<{asset}> {toStatus(os.path.exists(back))} --> <{asset}> {toStatus(os.path.exists(front))}.")
         # Delete old assets
         removeFileOrFolder(back)
         # Copy new assets
