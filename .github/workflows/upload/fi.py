@@ -12,11 +12,11 @@ def removeFileOrFolder(path):
         shutil.rmtree(path)
 
 
-def copyFileOrFolder(src, dst):
-    if isfile(src):
-        shutil.copy(src, dst)
-    elif isdir(dst):
+def copyFileOrFolder(src, dst, isDir=False):
+    if isdir(src) or isDir:
         shutil.copytree(src, dst, dirs_exist_ok=True)
+    elif isfile(src):
+        shutil.copy(src, dst)
 
 
 def zipFilesInDir(path, ziph: zipfile.ZipFile):
