@@ -23,8 +23,8 @@ jobs:
           cd BackEndBranch
           git config --global user.email "Li_plum@outlook.com"
           git config --global user.name "liplum"
-          git add .
           if [ -n "$(git status --porcelain)" ]; then
+            git add .
             git commit -m "Json front-end update"
             git push https://3Snake3:${{ secrets.SAPP_TOKEN }}@github.com/3Snake3/Sapphirium
           fi
