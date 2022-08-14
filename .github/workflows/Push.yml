@@ -20,12 +20,12 @@ jobs:
           git clone --depth 1 --single-branch --branch back-end https://github.com/3Snake3/Sapphirium.git BackEndBranch
           python Sapphirium/.github/workflows/upload/front2back.py
           cd BackEndBranch
-          each "Enter BackEndBranch"
+          echo "Enter BackEndBranch"
           git config --global user.email "Li_plum@outlook.com"
           git config --global user.name "liplum"
-          each "Git config added"
+          echo "Git config added"
           git status --porcelain
-          each "Check if any file was changed."
+          echo "Check if any file was changed."
           if [ -n "$(git status --porcelain)" ]; then
             git add .
             git commit -m "Json front-end update"
