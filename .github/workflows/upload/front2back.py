@@ -36,12 +36,13 @@ def main():
     for asset in assets:
         front = os.path.join(sapphirium, asset)
         back = os.path.join(backEndBranch, asset)
+        print(f"back<{asset}> exists = {os.path.exists(back)}")
+        print(f"front<{asset}> exists = {os.path.exists(front)}")
         # Delete old assets
         removeFileOrFolder(back)
-        print(f"The {asset} in old {os.path.abspath(back)} is removed.")
         # Copy new assets
         copyFileOrFolder(src=front, dst=back)
-        print(f"A new {asset} in front {os.path.abspath(front)} is added.")
+        print(f"Copied {asset} from {os.path.abspath(back)} to {os.path.abspath(front)}.")
     print("front2back ended...")
 
 
