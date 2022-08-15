@@ -34,5 +34,5 @@ This mod adds a lot of additional content and small changes to some vanilla spri
 
 <!----------------------------------[ Badges ]--------------------------------->
 
-[Badge Discord]: https://img.shields.io/discord/896304738864341013?color=8ba9e8&style=for-the-badge
-[Badge Download]: https://img.shields.io/github/downloads/3Snake3/Sapphirium/total?color=8ba9e8&style=for-the-badge
+[Badge Discord]: https://img.shields.io/discord/896304738864341013?color=8ba9e8&label=Discord&logo=Discord&logoColor=8ba9e8&style=for-the-badge
+[Badge Download]: https://img.shields.io/github/downloads/3Snake3/Sapphirium/total?color=8ba9e8&logo=github&logoColor=8ba9e8&style=for-the-badge
