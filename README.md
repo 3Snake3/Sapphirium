@@ -3,6 +3,10 @@
 This mod adds a lot of additional content and small changes to some vanilla sprites.
 <br>Mod includes a few factions, that contain their own blocks and units(will be). Most of the blocks have their own abilities turrets have an additional attack, walls can attack enemies in response, accelerate buildings, heal them, as well as cover them with their own force field, store resources, fluids(will be), and power(will be).
 
+# Links and Downloads
+[![Badge Discord]][Discord]
+[![Badge Download]][Download]
+
 # Factions:
 `Crimson Agate` - A bloody faction consisting of black and scarlet colors. It has a bloody power, sometimes its source is the blood crystal "Granate".
 <br>`Indigo` - Ice Fraction containing blue and white colors. Has the power of ice and electricity. Globium is a source of electrical power.
@@ -23,9 +27,12 @@ This mod adds a lot of additional content and small changes to some vanilla spri
 <br>`Maps:` 1
 <br>`Weathers:` 3
 
-# MultiLib Link
-[MultiCrafter Lib](https://github.com/liplum/MultiCrafterLib)
+<!----------------------------------------------------------------------------->
 
-# My discord username and server:
-Creator - `Snake#2132`
-<br>[Server](https://discord.gg/zRER9xz6YH)
+[Discord]: https://discord.gg/zRER9xz6YH
+[Download]: https://github.com/3Snake3/Sapphirium/releases/latest
+
+<!----------------------------------[ Badges ]--------------------------------->
+
+[Badge Discord]: https://img.shields.io/discord/896304738864341013?color=d1efff&label=8ba9e8&logo=Discord&logoColor=d1efff&style=for-the-badge
+[Badge Download]: https://img.shields.io/github/downloads/3Snake3/Sapphirium/total?color=ffffff&label=8ba9e8&logo=Download&logoColor=d1efff&style=for-the-badge
