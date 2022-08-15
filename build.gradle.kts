@@ -33,10 +33,10 @@ mindustry {
         arc on "v136.1"
     }
     client {
-        mindustry official "v136.1"
+        mindustry official "v137"
     }
     server {
-        mindustry official "v136.1"
+        mindustry official "v137"
     }
     deploy {
         baseName = project.name
