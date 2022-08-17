@@ -2,7 +2,7 @@ import sys
 import os
 from zipfile import ZipFile
 import shutil
-
+from fi import removeFileOrFolder
 """
 In Python
 ------
@@ -26,12 +26,16 @@ deployJarFile = "Sapphirium/build/tmp/deploy/Sapphirium.jar"
 outJarFile = "OutJar"
 masterBranch = "MasterBranch"
 excluded = [
-    "mod.hjson"
+    "mod.hjson",
+    "icon.png",
+    "bundles",
+    "content",
+    "maps",
+    "scripts",
+    "sounds",
+    "sprites",
+    "sprites-override"
 ]
-
-def removeFile(path):
-    if os.path.isfile(path):
-        os.remove(path)
 
 def unzipDeployJar():
     with ZipFile(deployJarFile, 'r') as jar:
@@ -41,7 +45,7 @@ def unzipDeployJar():
 def deleteExcludedFiles():
     for name in excluded:
         file = f"{outJarFile}/{name}"
-        removeFile(file)
+        removeFileOrFolder(file)
 
 
 def copyIntoMaster():
