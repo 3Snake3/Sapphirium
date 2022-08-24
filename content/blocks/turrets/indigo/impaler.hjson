@@ -39,7 +39,7 @@ effects: [lancerLaserCharge,
 {
 type: WaveEffect
 sides: 0
-lifetime: 30
+lifetime: 110
 sizeFrom: 16
 sizeTo: 0
 strokeFrom: 3

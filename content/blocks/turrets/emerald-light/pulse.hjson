@@ -1,16 +1,11 @@
-reload: 45
+reload: 30
 recoil: 2
 targetHealing: true
 rotateSpeed: 5
 shake: 0
 shootSound: lasershoot
 shootEffect: shootHeal
-shoot: {
-type: ShootPattern
-shots: 2
-shotDelay: 4
-}
-range: 159
+range: 150
 shootType: {
 type: LaserBoltBulletType
 speed: 5.3
@@ -23,7 +18,7 @@ frontColor: 98ffa9
 }
 requirements: [
 lead/35
-silicon/25
+emerald/25
 ]
 envDisabled: 16
 category: turret
