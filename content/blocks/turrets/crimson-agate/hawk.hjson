@@ -11,6 +11,8 @@ shoot: {
 firstShotDelay: 170
 shotDelay: 170
 }
+moveWhileCharging: false
+accurateDelay: false
 outlineColor: 1d1d21
 recoil: 3
 reload: 180

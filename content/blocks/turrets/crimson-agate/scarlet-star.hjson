@@ -16,6 +16,8 @@ power: 4
 shootSound: laser
 outlineColor: 1d1d21
 chargeSound: lasercharge2
+moveWhileCharging: false
+accurateDelay: false
 shootEffect: {
 type: WaveEffect
 strokeFrom: 0

@@ -10,7 +10,8 @@ rotateSpeed: 3
 shootSound: release
 chargeSound: lasercharge2
 targetAir: false
-
+moveWhileCharging: false
+accurateDelay: false
 shoot: {
 firstShotDelay: 50
 shotDelay: 50
