@@ -6,3 +6,5 @@ leaded-copper/6
 research: copper-wall
 category: defense
 envDisabled: 16
+chanceDeflect: 4
+flashHit: true
