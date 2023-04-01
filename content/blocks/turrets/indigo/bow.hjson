@@ -1,13 +1,12 @@
-
 size: 3
 category: turret
 requirements: [
-leaded-copper/340
-silicon/125
-titanium/85
-globium/70
+dense-alloy/200
+titanium/145
+metaglass/125
 ]
-reload: 120
+reload: 75
+health: 1000
 targetGround: false
 shootEffect: {
 type: MultiEffect
@@ -21,7 +20,7 @@ sizeTo: 0
 lifetime: 30
 colorFrom: a9d8ff60
 colorTo: a9d8ff60
-region: adc-arrow-effect
+region: sapphirium-arrow-effect
 offsetX: 6
 lightOpacity: 1.5
 }
@@ -34,35 +33,35 @@ sizeTo: 0
 lifetime: 30
 colorFrom: a9d8ff
 colorTo: a9d8ff
-region: adc-arrow-effect
+region: sapphirium-arrow-effect
 offsetX: -6
 lightOpacity: 1.5
 }
 ]
 }
 recoil: 2
-shoot: {
-type: ShootPattern
-shotDelay: 6
-shots: 3
-}
 inaccuracy: 6
-shootCone: 60
+shootCone: 35
 rotateSpeed: 5
-health: 1450
 shootSound: missile
 unitSort: weakest
 range: 300
-consumes: {
-power: 8
+shoot: {
+type: ShootSpread
+spread: 45
+shots: 3
 }
-shootType: {
+consumes: {
+power: 5
+}
+ammoTypes: {
+cryo-cube: {
 width: 20
 height: 35
 speed: 7
-damage: 25
+damage: 77
 lifetime: 100
-sprite: adc-arrow-arrow
+sprite: sapphirium-arrow-arrow
 collidesGround: false
 inaccuracy: 8
 backColor: a9d8ff
@@ -119,4 +118,13 @@ lightOpacity: 2
 }
 despawnHit: true
 }
-research: impaler
+}
+research: {
+parent: hoarfrost
+objectives: [
+{
+type: SectorComplete
+preset: greyland
+}
+]
+}

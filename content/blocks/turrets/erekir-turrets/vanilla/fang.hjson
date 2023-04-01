@@ -21,7 +21,7 @@ shots: 3
 shotDelay: 6
 }
 category: turret
-research: disarmament
+research: conductor
 requirements: [
 beryllium/210
 silicon/270
@@ -51,8 +51,8 @@ trailColor: b1dd7e
 trailChance: 1
 shrinkY: 0
 shrinkX: 0
-sprite: adc-teeth
-backSprite: adc-teeth-back
+sprite: sapphirium-teeth
+backSprite: sapphirium-teeth-back
 spawnBullets: [
 {
 type: LaserBulletType
@@ -84,8 +84,8 @@ effects: [hitBulletColor, blastExplosion]
 despawnEffect: blastExplosion
 damage: 45
 backColor: 768a9a
-sprite: adc-teeth
-backSprite: adc-teeth-back
+sprite: sapphirium-teeth
+backSprite: sapphirium-teeth-back
 frontColor: ffffff
 trailColor: 768a9a
 trailChance: 1
@@ -115,8 +115,8 @@ speed: 6
 lifetime: 35
 drag: -0.03
 keepVelocity: false
-sprite: adc-teeth
-backSprite: adc-teeth-back
+sprite: sapphirium-teeth
+backSprite: sapphirium-teeth-back
 hitEffect: {
 type: MultiEffect
 effects: [hitBulletColor, blastExplosion]

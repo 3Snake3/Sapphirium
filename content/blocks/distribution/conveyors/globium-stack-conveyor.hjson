@@ -1,7 +1,8 @@
 requirements: [
-globium/1
-silicon/1
-titanium/1
+globium/3
+silicon/2
+plastanium/1
+ledonite-cube/1
 ]
 category: distribution
 health: 125
@@ -16,7 +17,7 @@ length: 1
 cone: 80
 colorFrom: 8ca4f5
 colorTo: 6a75c4
-region: adc-rhombus
+region: sapphirium-rhombus
 }
 unloadEffect: {
 type: ParticleEffect
@@ -28,7 +29,7 @@ length: 1
 cone: 80
 colorFrom: 8ca4f5
 colorTo: 6a75c4
-region: adc-rhombus
+region: sapphirium-rhombus
 }
 research: {
 parent: globium-conveyor

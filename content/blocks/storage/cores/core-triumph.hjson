@@ -1,17 +1,20 @@
 
 health: 16000
 itemCapacity: 23000
-unitCapModifier: 45
+unitCapModifier: 40
 unitType: war
 size: 7
 researchCostMultiplier: 0.23
 category: effect
 requirements: [
-copper/16000
-lead/16000
-tinorium/10000
-silicon/10000
-titanium/8000
-thorium/8000
+tinorium/18000
+thorium/18000
+silicon/14000
+creostone/12000
+phase-fabric/12000
+charged-ingot/7000
 ]
-research: core-victory
+research: {
+parent: core-victory
+objectives: [core-cage]
+}

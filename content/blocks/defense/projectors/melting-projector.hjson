@@ -15,7 +15,7 @@ suffix: "-bottom"
 {
 type: DrawLiquidTile
 drawLiquid: creotite
-padding: 2.25
+padding: 3
 }
 {
 type: DrawDefault
@@ -26,9 +26,6 @@ type: DrawGlowRegion
 ]
 }
 rotateSpeed: 0
-consumes: {
-power: 1
-}
 ammoTypes: {
 creotite: {
 width: 0.001
@@ -62,7 +59,7 @@ colorFrom: ffb380
 colorTo: ffb380
 }
 consumes: {
-power: 1
+power: 4
 }
 targetAir: false
 shootY: 0

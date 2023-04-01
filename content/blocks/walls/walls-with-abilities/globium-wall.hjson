@@ -15,5 +15,5 @@ silicon/3
 ]
 research: {
 parent: plastanium-wall-large
-objectives: [indigo]
+objectives: [snow-monolith]
 }

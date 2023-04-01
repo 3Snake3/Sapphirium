@@ -1,7 +1,6 @@
 
 category: power
 
-size: 2
 hasItems: true
 hasLiquids: false
 itemDuration: 120
@@ -10,10 +9,13 @@ ambientSound: steam
 ambientSoundVolume: 0.04
 
 requirements: [
-  copper/60
-  lead/40
-  graphite/35
+  copper/35
 ]
+
+drawer: {
+type: DrawMulti
+drawers: [DrawDefault, DrawWarmupRegion]
+}
 
 consumes: {
   items: {
@@ -23,4 +25,4 @@ consumes: {
   }
 }
 
-research: combustion-generator
+research: mechanical-drill

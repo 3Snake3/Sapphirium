@@ -1,8 +1,9 @@
 
 requirements: [
-graphite/200
-silicon/100
+dense-alloy/120
+silicon/80
 titanium/60
+graphite/50
 ]
 category: turret
 size: 2
@@ -26,13 +27,13 @@ colorTo: 61ad7e50
 }
 shoot: {
 type: ShootAlternate
-spread: 4.75
+spread: 5.5
 }
 shootCone: 24
 rotateSpeed: 4
 inaccuracy: 5
 range: 250
-health: 500
+health: 680
 shootSound: artillery
 shootType: {
 width: 12
@@ -42,7 +43,7 @@ lifetime: 50
 damage: 15
 splashDamage: 15
 splashDamageRadius: 15
-sprite: adc-acid-bullet
+sprite: sapphirium-acid-bullet
 hitSound: plasmaboom
 hitShake: 3
 trailWidth: 4
@@ -51,7 +52,7 @@ trailParam: 6
 trailColor: 61ad7eff
 backColor: 61ad7e
 frontColor: 70ff88
-status: adc-acid-corrosion
+status: sapphirium-acid-corrosion
 statusDuration: 60
 hitEffect: {
 type: MultiEffect
@@ -132,7 +133,7 @@ trailParam: 5
 trailColor: 61ad7eff
 backColor: 61ad7e
 frontColor: 70ff88
-status: adc-acid-corrosion
+status: sapphirium-acid-corrosion
 statusDuration: 25
 hitEffect: {
 type: MultiEffect

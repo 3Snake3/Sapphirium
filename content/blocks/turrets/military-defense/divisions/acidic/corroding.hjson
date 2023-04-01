@@ -1,5 +1,5 @@
 health: 2350
-reload: 85
+reload: 60
 recoil: 4
 rotateSpeed: 4
 inaccuracy: 0
@@ -10,7 +10,7 @@ type: MultiEffect
 effects: [{
 type: ParticleEffect
 particles: 1
-region: adc-shoot
+region: sapphirium-shoot
 lifetime: 15
 sizeFrom: 5
 sizeTo: 0
@@ -43,10 +43,10 @@ width: 13
 height: 20
 speed: 9
 lifetime: 40
-damage: 45
-status: adc-acid-corrosion
+damage: 250
+status: sapphirium-acid-corrosion
 statusDuration: 180
-sprite: adc-acid-bullet
+sprite: sapphirium-acid-bullet
 pierce: true
 pierceBuilding: true
 hitEffect: {
@@ -123,10 +123,10 @@ width: 13
 height: 20
 speed: 9
 lifetime: 40
-damage: 25
-status: adc-acid-corrosion
+damage: 150
+status: sapphirium-acid-corrosion
 statusDuration: 180
-sprite: adc-acid-bullet
+sprite: sapphirium-acid-bullet
 pierce: true
 hitEffect: {
 type: MultiEffect
@@ -204,10 +204,10 @@ width: 13
 height: 20
 speed: 9
 lifetime: 40
-damage: 25
-status: adc-acid-corrosion
+damage: 150
+status: sapphirium-acid-corrosion
 statusDuration: 180
-sprite: adc-acid-bullet
+sprite: sapphirium-acid-bullet
 pierce: true
 hitEffect: {
 type: MultiEffect
@@ -286,9 +286,10 @@ weaveMag: 4
 category: turret
 research: endoxin
 requirements: [
-leaded-copper/1280
-silicon/645
-plastanium/230
-titanium/140
-surge-alloy/140
+dense-alloy/1000
+graphite/445
+thorium/400
+plastanium/325
+silicon/345
+charged-ingot/200
 ]

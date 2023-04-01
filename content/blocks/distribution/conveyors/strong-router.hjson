@@ -1,7 +1,7 @@
 health: 540
 requirements: [
-leaded-copper/1
-stone/2
+dense-alloy/3
+stone/4
 ]
 envDisabled: 16
 category: distribution

@@ -1,0 +1,51 @@
+flying: true
+health: 720
+targetable: false
+hittable: false
+playerControllable: false
+physics: false
+hitSize: 20
+rotateSpeed: 6
+hidden: true
+speed: 0
+engineSize: 0
+lowAltitude: true
+abilities: [
+{
+type: ShieldArcAbility
+radius: 36
+angle: 361
+whenShooting: false
+regen: 6
+max: 360
+cooldown: 200
+}
+{
+type: StatusFieldAbility
+range: 0.1
+effect: self-destruct-3
+duration: 1080
+applyEffect: none
+activeEffect: none
+display: false
+}
+]
+weapons: [
+{
+type: PointDefenseWeapon
+name: shielder-point-defense
+x: 5
+y: 3
+reload: 9
+targetInterval: 9
+targetSwitchInterval: 12
+recoil: 0
+shootSound: lasershoot
+bullet: {
+shootEffect: sparkShoot
+hitEffect: pointHit
+maxRange: 46
+damage: 42
+}
+}
+]

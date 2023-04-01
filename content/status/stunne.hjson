@@ -6,5 +6,5 @@ sizeFrom: 4
 sizeTo: 0
 lifetime: 100
 colorTo: 00000000
-region: adc-stun
+region: sapphirium-stun
 }

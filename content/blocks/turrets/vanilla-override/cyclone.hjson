@@ -41,8 +41,8 @@ ammoMultiplier: 4
             hitEffect: flakExplosion
             splashDamage: 50
             splashDamageRadius: 25
-            status: freezing
-            statusDuration: 60
+            status: wet
+            statusDuration: 15
             fragBullet: {
             type: BasicBulletType
             speed: 4
@@ -54,8 +54,8 @@ ammoMultiplier: 4
             backColor: 00BCFF
             frontColor: ffffff
             despawnEffect: none
-            status: freezing
-            statusDuration: 30
+            status: wet
+            statusDuration: 5
         }
             fragBullets: 4
             explodeRange: 20

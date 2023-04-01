@@ -40,7 +40,7 @@ sizeFrom: 8
 sizeTo: 0
 }
 ammoTypes: {
-tungsten: {
+stone: {
 width: 16
 height: 16
 sprite: circle-bullet
@@ -170,11 +170,32 @@ inaccuracy: 10
 drawer: {
 type: DrawTurret
 basePrefix: "reinforced-"
+parts: [
+{
+type: RegionPart
+suffix: "-side"
+moveX: 3
+progress: {
+type: warmup
+}
+heatProgress: recoil
+under: true
+moves: [
+{
+progress: recoil
+x: 0
+y: -4
+}
+]
+mirror: true
+heatColor: ff0000
+}
+]
 }
 category: turret
 research: stone-turret
 requirements: [
 beryllium/290
 silicon/180
-creostone/160
+stone/160
 ]

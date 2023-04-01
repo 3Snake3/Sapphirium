@@ -1,20 +1,20 @@
-
 knockback: 0
-rotateSpeed: 1520
+rotateSpeed: 100
 hasPower: true
-range: 1520
+range: 7000
+size: 2
 reload: 1
-bulletSpeed: 1520
+bulletSpeed: 100
 minDistribute: 1
-translation: 1
-bulletLifetime: 1
+translation: 5
+bulletLifetime: 100
 shake: 0
-shootSound: lasershoot
+shootSound: none
 itemCapacity: 20
 smokeEffect: none
 receiveEffect: {
 type: WaveEffect
-sides: 0
+sides: 4
 sizeFrom: 8
 sizeTo: 0
 strokeFrom: 3
@@ -25,14 +25,19 @@ lifetime: 25
 }
 category: distribution
 requirements: [
-titanium/70
-silicon/70
-charged-lead/50
+dense-alloy/1200
+charged-cylinder/450
+diamond/550
 ]
 consumes: {
-power: 1
+power: 133.333333
 }
 research: {
 parent: mass-driver
-objectives: [overdrive-projector]
+objectives: [charge-reactor, 
+{
+type: SectorComplete
+preset: impact0078
+}
+]
 }

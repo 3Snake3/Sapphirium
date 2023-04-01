@@ -1,0 +1,126 @@
+trailColor: 84f591
+engineColor: 84f591
+engineSize: 2.75
+engineLayer: 110
+engineOffset: 6.75
+speed: 1.8
+flying: true
+outlineColor: 565666
+targetable: false
+isEnemy: false
+health: 130
+playerControllable: false
+logicControllable: false
+weapons: [
+{
+shootCone: 360
+mirror: false
+reload: 600
+shoot: {
+firstShotDelay: 599
+}
+shootOnDeath: true
+shootSound: plasmaboom
+bullet: {
+type: ExplosionBulletType
+splashDamage: 180
+splashDamage: 25
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 25
+sizeTo: 25
+strokeFrom: 4
+lifetime: 30
+colorFrom: 84f591
+colorTo: ffffff
+}
+{
+type: ParticleEffect
+particles: 1
+region: sapphirium-rail
+length: 0
+sizeFrom: 35
+sizeTo: 0
+colorFrom: 84f591
+colorTo: ffffff
+lifetime: 30
+}
+{
+type: ParticleEffect
+particles: 1
+region: sapphirium-rail-hit
+length: 0
+sizeFrom: 35
+sizeTo: 0
+colorFrom: 84f591
+colorTo: ffffff
+lifetime: 30
+}
+]
+}
+}
+}
+{
+name: missiles-mount
+x: 2
+y: 0
+rotate: true
+rotateSpeed: 3
+reload: 60
+recoil: 2
+shootSound: missile
+bullet: {
+type: MissileBulletType
+width: 9
+height: 9
+speed: 4
+lifetime: 10
+damage: 12
+splashDamage: 14
+splashDamageRadius: 16
+weaveScale: 3
+weaveMag: 4
+inaccuracy: 6
+sprite: mine-bullet
+shrinkY: 0
+backColor: 98ffa9
+frontColor: ffffff
+hitEffect: {
+type: ExplosionEffect
+lifetime: 23
+waveStroke: 4
+waveLife: 10
+waveColor: 98ffa9
+waveRad: 15
+smokes: 6
+smokeColor: ffffff
+sparkColor: 98ffa9
+sparks: 6
+sparkRad: 20
+sparkStroke: 1.5
+sparkLen: 4
+}
+despawnEffect: {
+type: ExplosionEffect
+lifetime: 23
+waveStroke: 4
+waveLife: 10
+waveColor: 98ffa9
+waveRad: 15
+smokes: 6
+smokeColor: ffffff
+sparkColor: 98ffa9
+sparks: 6
+sparkRad: 20
+sparkStroke: 1.5
+sparkLen: 4
+}
+shootEffect: shootSmallColor
+homingRange: 45
+}
+}
+]

@@ -1,7 +1,7 @@
 requirements: [
-beryllium/400
-silicon/320
-tungsten/200
+beryllium/640
+tungsten/320
+stone/220
 oxide/180
 ]
 category: turret
@@ -9,14 +9,12 @@ range: 480
 ammoTypes: {
 beryllium: {
 type: BasicBulletType
-width: 13
-height: 22
-hitSize: 8
+width: 20
+height: 26
 shootEffect: {
 type: MultiEffect
 effects: [shootBigColor, colorSparkBig]
 }
-sprite: adc-aspiration-shell-beryllium
 smokeEffect: shootBigSmoke
 ammoMultiplier: 1
 speed: 12
@@ -29,9 +27,9 @@ trailLength: 15
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 hitSound: explosion
-status: cut
-statusDuration: 1
 fragBullets: 5
+fragSpread: 90
+fragRandomSpread: 0
 fragBullet: {
 type: BasicBulletType
 width: 8
@@ -53,20 +51,17 @@ despawnEffect: hitBulletColor
 }
 tungsten: {
 type: BasicBulletType
-width: 13
-height: 22
-hitSize: 8
+width: 20
+height: 26
 shootEffect: {
 type: MultiEffect
 effects: [shootBigColor, colorSparkBig]
 }
-sprite: adc-aspiration-shell-tungsten
 smokeEffect: shootBigSmoke
-ammoMultiplier: 3
+ammoMultiplier: 2
 reloadMultiplier: 0.7
 status: cut
 statusDuration: 1
-rangeChange: 40
 speed: 12
 damage: 180
 hitColor: 768a9a
@@ -102,18 +97,16 @@ silicon: {
 type: BasicBulletType
 status: cut
 statusDuration: 1
-width: 13
-height: 22
+width: 20
+height: 26
 hitSize: 8
 shootEffect: {
 type: MultiEffect
 effects: [shootBigColor, colorSparkBig]
 }
-sprite: adc-aspiration-shell-silicon
 smokeEffect: shootBigSmoke
-ammoMultiplier: 4
+ammoMultiplier: 5
 reloadMultiplier: 0.7
-rangeChange: 40
 speed: 12
 damage: 145
 hitColor: 8d8f96
@@ -161,21 +154,21 @@ basePrefix: "reinforced-"
 }
 shootY: 0
 outlineColor: 2d2f39
-size: 3
+size: 4
 recoil: 4
 shootCone: 1
 scaledHealth: 260
 rotateSpeed: 0.9
-unitSort: strongest
+unitSort: farthest
 consumes: {
 liquid: ozone/0.05
 }
 research: {
 parent: breach
-objectives: [
+objectives: [electrolyzer, oxidation-chamber, 
 {
 type: SectorComplete
-preset: intersect
+preset: marsh
 }
 ]
 }

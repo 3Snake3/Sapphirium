@@ -1,3 +1,7 @@
+const armoredContainer = extend(StorageBlock, "armored-container", {});
+
+const armoredVault = extend(StorageBlock, "armored-vault", {});
+
 //the bullet being created
 const healBullet = extend(LaserBoltBulletType, {
 width: 3,
@@ -25,16 +29,18 @@ var healBulletSound = Sounds.lasershoot;
 
 //name of object, type of your content, file-name
 const emeraldCore = extend(CoreBlock, "emerald-core", {
-//is it possible to build a core regardless of another core
+	targetable: false,
+	buildCostMultiplier: 3,
+//is it possible to build a core regardless of another core, true or false.
 canPlaceOn(tile, team, rotation){
         return true;
     },
-//can this core replace another one.
+//can this core replace another one
     canReplace(other){
     if(other instanceof CoreBlock) return false;
     return this.super$canReplace(other);
 },
-//is it possible to disassemble the core
+//is it possible to break the core
     canBreak(tile){
     	return true;
     },
@@ -47,7 +53,7 @@ this.stats.add(Stat.buildTime, this.buildCost / 60, StatUnit.seconds);
     }
 });
 emeraldCore.buildType = () => extend(CoreBlock.CoreBuild, emeraldCore, {
-	//the event of a bullet hitting the core
+	//enemy bullet hitting the block
 collision(bullet){
             this.super$collision(bullet);
             //bullet create chance
@@ -86,15 +92,6 @@ const coreCage = extend(CoreBlock, "core-cage", {
 	
 	//for bars
     setBars(){
-    	/*
-        this.super$setBars();
-        if(this.hasPower && this.outputsPower && this.consPower != null){
-        this.addBar("power", entity => new Bar(
-	    () => Core.bundle.format("bar.poweroutput", Strings.fixed(entity.getPowerProduction() * 60 * entity.timeScale(), 1)),
-	    () => Pal.powerBar, 
-	    () => entity.productionEfficiency));
-	}
-    },*/
     this.super$setBars();
         this.addBar("poweroutput", entity => new Bar(
 	    () => Core.bundle.format("bar.poweroutput", powerProduction * 60), 
@@ -125,12 +122,18 @@ const scarlet = extend(CoreBlock, "scarlet-gem", {
 	unitCapModifier: 2,
 	thrusterLength: 34/4,
 	researchCostMultiplier: 0.05,
+	targetable: false,
+	buildCostMultiplier: 3,
 	canPlaceOn(tile, team, rotation){
         return true;
     },
     canBreak(tile){
     	return true;
     },
+    canReplace(other){
+    if(other instanceof CoreBlock) return false;
+    return this.super$canReplace(other);
+},
     setStats(){
 this.super$setStats();
 if(this.canBeBuilt() && this.requirements.length > 0){
@@ -140,7 +143,7 @@ this.stats.add(Stat.buildTime, this.buildCost / 60, StatUnit.seconds);
  });
 
 //lightning chance
- var LC = 0.08;
+ var LC = 0.05;
 //damage
 var LD = 80;
 //length
@@ -149,13 +152,48 @@ var LL = 25;
 var LCO = Pal.lancerLaser;
 //shoot sound
 var LS = Sounds.spark;
- const indigo = extend(CoreBlock, "indigo", {
+const hoarfrostEffect = extend(ParticleEffect, {
+	line: true,
+	lenFrom: 6,
+	lenTo: 0,
+	strokeFrom: 1.6,
+	lifetime: 20,
+	length: 40,
+	colorFrom: Pal.lancerLaser,
+	colorTo: Pal.lancerLaser,
+	cone: 180,
+});
+//lightning type
+const frostBranchType = extend(BasicBulletType, {
+	width: 6,
+	height: 6,
+	shrinkY: 0,
+	damage: 0,
+	collides: false,
+	collidesTiles: false,
+	lifetime: 1,
+	hitEffect: Fx.none,
+	despawnEffect: hoarfrostEffect,
+	speed: 0,
+});
+//lightning itself
+const frostBranch = extend(LightningBulletType, {
+	damage: LD,
+	lightningLength: LL,
+	lightningColor: LCO,
+	lightningType: frostBranchType,
+	status: StatusEffects.freezing,
+	statusDuration: 120,
+});
+ const snowMonolith = extend(CoreBlock, "snow-monolith", {
 	health: 5000,
 	size: 4,
 	itemCapacity: 3000,
 	unitCapModifier: 3,
 	thrusterLength: 34/4,
 	researchCostMultiplier: 0.07,
+	targetable: false,
+	buildCostMultiplier: 3,
 	canPlaceOn(tile, team, rotation){
         return true;
     },
@@ -177,14 +215,16 @@ if(LC > 0){
         }
     }
  });
-indigo.buildType = () => extend(CoreBlock.CoreBuild, indigo, {
+snowMonolith.buildType = () => extend(CoreBlock.CoreBuild, snowMonolith, {
 	collision(bullet){
             this.super$collision(bullet);
             var hitl = 1;
             //create lightning if necessary
             if(LC > 0){
                 if(Mathf.chance(LC)){
-                    Lightning.create(this.team, LCO, LD, this.x, this.y, bullet.rotation() + 180, LL);
+                	for(var i = 0; i < 1; i++){
+                    frostBranch.create(this, this.team, this.x, this.y, (360 / 1) * i + Math.random(16));
+                    }
                     LS.at(this.tile, Mathf.random(0.9, 1.1));
                 }
             }
@@ -192,37 +232,9 @@ indigo.buildType = () => extend(CoreBlock.CoreBuild, indigo, {
 }
 });
 
-var oceanWaveEffect = extend(WaveEffect, {
-	sides: 0,
-	sizeFrom: 50,
-	sizeTo: 50,
-	strokeFrom: 3,
-	strokeTo: 0,
-	lifetime: 20,
-	colorFrom: Color.valueOf("8ca4f5"),
-	colorTo: Color.valueOf("6a75c4")
-});
-var oceanWaveSound = Sounds.plasmadrop;
-var oceanWaveChance = 0.08;
-var oceanWaveRadius = 50;
-var oceanWaveDamage = 25;
-const oceanWave = extend(BasicBulletType, {
-	width: 0.001,
-	height: 0.001,
-	sprite: "circle-bullet",
-	damage: 0,
-	collides: false,
-	speed: 0,
-	lifetime: 1,
-	splashDamage: oceanWaveDamage,
-	splashDamageRadius: oceanWaveRadius,
-	hitEffect: Fx.none,
-	despawnEffect: oceanWaveEffect,
-	status: StatusEffects.wet,
-	statusDuration: 180,
-});
-	
 const coreOcean = extend(CoreBlock, "core-ocean", {
+	targetable: false,
+	buildCostMultiplier: 3,
 	canPlaceOn(tile, team, rotation){
         return true;
     },
@@ -240,21 +252,6 @@ this.stats.add(Stat.buildTime, this.buildCost / 60, StatUnit.seconds);
         }
     }
  });
-coreOcean.buildType = () => extend(CoreBlock.CoreBuild, coreOcean, {
-	collision(bullet){
-            this.super$collision(bullet);
-            //create water wave if necessary
-            if(oceanWaveChance > 0){
-    if(Mathf.chance(oceanWaveChance)){
-            oceanWaveSound.at(this);
-            for(var i = 0; i < 1; i++){
-                    oceanWave.create(this, this.x, this.y, (360 / 1) * i + Mathf.random(0));
-                }
-      }
-  }
-            return true;
-}
-});
 
 const victory = extend(CoreBlock, "core-victory", {});
 

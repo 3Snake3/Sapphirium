@@ -1,18 +1,20 @@
 requirements: [
-granate/480
+ruby/480
 sapphire/320
 silicon/280
-tungsten/280
+stone/280
 ]
 category: turret
 size: 3
-reload: 8
+reload: 13
 recoil: 4
 shake: 1
 range: 200
 unitSort: strongest
 shootEffect: shootBigColor
-shootType: {
+shootCone: 2
+ammoTypes: {
+ruby: {
 type: BasicBulletType
 width: 14
 height: 22
@@ -53,7 +55,7 @@ fragBullets: 1
 fragRandomSpread: 0
 fragSpread: 0
 fragOnHit: true
-status: bleeding
+status: active-bloodrage
 statusDuration: 180
 fragBullet: {
 type: ShrapnelBulletType
@@ -63,8 +65,9 @@ buildingDamageMultiplier: 1.15
 pierceCap: 3
 toColor: ff6e6e
 serrations: 4
-status: bleeding
+status: active-bloodrage
 statusDuration: 180
+}
 }
 }
 drawer: {
@@ -72,11 +75,8 @@ type: DrawTurret
 basePrefix: "reinforced-"
 }
 shootY: -2.5
-consumes: {
-power: 4
-}
 rotateSpeed: 3.5
-buildVisibility: debugOnly
+
 research: {
 parent: aspiration
 objectives: [

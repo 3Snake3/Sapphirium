@@ -5,7 +5,7 @@ recoil: 4
 shootCone: 10
 range: 300
 rotateSpeed: 1.5
-size: 3
+size: 4
 shootY: 6.75
 inaccuracy: 5
 outlineColor: 2d2f39
@@ -14,12 +14,8 @@ ammoUseEffect: none
 shootSound: bang
 ammoPerShot: 3
 shoot: {
-type: ShootAlternate
-shots: 4
-barrels: 3
-spread: 8
-shotDelay: 30
-barrelOffset: 6.25
+shots: 6
+shotDelay: 20
 }
 ammoTypes: {
 graphite: {
@@ -28,7 +24,7 @@ width: 15
 height: 15
 speed: 3
 lifetime: 100
-damage: 0
+damage: 40
 splashDamage: 40
 splashDamageRadius: 35
 hitShake: 4
@@ -99,9 +95,9 @@ height: 15
 speed: 3
 lifetime: 107
 hitShake: 4
-damage: 0
+damage: 40
 splashDamage: 40
-splashDamageRadius: 38
+splashDamageRadius: 35
 homingPower: 0.1
 homingRange: 80
 rangeChange: 20
@@ -165,17 +161,18 @@ colorTo: d1e4ff07
 }
 collidesTiles: false
 }
-tungsten: {
+stone: {
 type: ArtilleryBulletType
 width: 15
 height: 15
 speed: 3
 lifetime: 107
-splashDamage: 65
+damage: 55
+splashDamage: 55
 hitShake: 5
 splashDamageRadius: 40
 ammoMultiplier: 6
-reloadMultiplier: 0.8
+reloadMultiplier: 0.7
 rangeChange: 20
 knockback: 0.9
 backColor: 97a5f7
@@ -241,15 +238,68 @@ collidesTiles: false
 drawer: {
 type: DrawTurret
 basePrefix: "reinforced-"
+parts: [
+{
+type: RegionPart
+suffix: -barrel
+mirror: false
+under: false
+moveY: -4
+progress: recoil
+}
+{
+type: RegionPart
+suffix: -side
+mirror: true
+under: false
+moveRot: -30
+progress: warmup
+}
+{
+type: RegionPart
+suffix: -side-glow
+blending: additive
+mirror: true
+moveRot: -30
+under: false
+outline: false
+progress: warmup
+color: d1efff
+}
+{
+type: RegionPart
+suffix: -down-side
+mirror: true
+under: false
+moveX: 2
+moveY: -2
+progress: warmup
+}
+{
+type: RegionPart
+suffix: -down-side-glow
+blending: additive
+mirror: true
+moveX: 2
+moveY: -2
+under: false
+outline: false
+progress: warmup
+color: d1efff
+}
+]
 }
 category: turret
 research: {
 parent: push
-objectives: [disperse]
+objectives: [{
+type: SectorComplete
+preset: aegis
+}]
 }
 requirements: [
 beryllium/380
 silicon/230
-graphite/230
+stone/230
 tungsten/125
 ]

@@ -1,7 +1,0 @@
-health: 700
-category: defense
-research: graphite-wall-turret
-requirements: [
-tinorium/8
-]
-envDisabled: 16

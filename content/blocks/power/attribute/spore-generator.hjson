@@ -1,14 +1,18 @@
-
 category: power
 research: {
 parent: hydrogenerator
-objectives: [spore-extractor]
+objectives: [
+{
+type: SectorComplete
+preset: fungalPass
+}
+]
 }
 requirements: [
-leaded-copper/220
-metaglass/100
-titanium/70
-silicon/85
+dense-alloy/45
+lead/50
+metaglass/40
+silicon/30
 ]
 powerProduction: 2.5
 generateEffect: {

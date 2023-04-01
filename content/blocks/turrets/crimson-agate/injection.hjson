@@ -1,5 +1,5 @@
 reload: 35
-
+health: 2200
 recoil: 4
 shootCone: 24
 inaccuracy: 12
@@ -10,10 +10,11 @@ spread: 12
 size: 3
 range: 225
 outlineColor: 1d1d21
-shootSound: shootBig
+shootSound: rockBreak
 consumes: {
-power: 7.5
+power: 6
 }
+heatColor: ff6e6e
 shootEffect: {
 type: ParticleEffect
 particles: 8
@@ -30,18 +31,18 @@ smokeEffect: none
 ammoUseEffect: casing3
 shake: 2
 ammoTypes: {
-granate: {
+ruby: {
 width: 17
 height: 20
 speed: 6
 lifetime: 37.5
 damage: 35
-sprite: adc-crystal
+sprite: sapphirium-crystal
 backColor: 8a3340
 frontColor: ff6e6e
 pierce: true
 pierceCap: 3
-status: bleeding
+status: passive-bloodrage
 statusDuration: 320
 hitEffect: {
 type: MultiEffect
@@ -106,12 +107,12 @@ height: 20
 speed: 5
 lifetime: 45
 damage: 15
-sprite: adc-crystal
+sprite: sapphirium-crystal
 backColor: 8a3340
 frontColor: ff6e6e
 pierce: true
 pierceCap: 2
-status: bleeding
+status: passive-bloodrage
 statusDuration: 320
 hitEffect: {
 type: MultiEffect
@@ -176,10 +177,10 @@ height: 20
 speed: 4
 lifetime: 56.25
 damage: 10
-sprite: adc-crystal
+sprite: sapphirium-crystal
 backColor: 8a3340
 frontColor: ff6e6e
-status: bleeding
+status: passive-bloodrage
 statusDuration: 320
 hitEffect: {
 type: MultiEffect
@@ -250,9 +251,8 @@ type: DrawTurret
 basePrefix: "crimson-agate-"
 }
 requirements: [
-leaded-copper/230
-granate/185
-silicon/85
-titanium/60
-graphite/45
+dense-alloy/325
+ruby/325
+titanium/240
+silicon/280
 ]

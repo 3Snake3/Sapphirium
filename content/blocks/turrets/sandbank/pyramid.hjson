@@ -20,17 +20,16 @@ ammoPerShot: 5
 ammoUseEffect: casing3Double
 ammoEjectBack: 4
 shake: 6
-health: 3000
+health: 2800
 consumes: {
-power: 13
+power: 38.3333333
 }
 ammoTypes: {
-
 sand: {
 type: ArtilleryBulletType
 width: 17
 height: 17
-sprite: adc-sand-shard
+sprite: sapphirium-sand-shard
 buildingDamageMultiplier: 0.45
 
 trailColor: d4ad8e
@@ -82,7 +81,7 @@ type: ArtilleryBulletType
 width: 12
 height: 12
 hitShake: 4
-sprite: adc-sand-shard
+sprite: sapphirium-sand-shard
 buildingDamageMultiplier: 0.45
 
 trailColor: d4ad8e
@@ -130,7 +129,7 @@ fragBullet: {
 type: ArtilleryBulletType
 width: 8
 height: 8
-sprite: adc-sand-shard
+sprite: sapphirium-sand-shard
 
 trailColor: d4ad8e
 lifetime: 60
@@ -178,7 +177,7 @@ silicon: {
 type: ArtilleryBulletType
 width: 17
 height: 17
-sprite: adc-silicon-shard
+sprite: sapphirium-silicon-shard
 
 trailColor: 5d5f6e
 lifetime: 141.33
@@ -238,7 +237,7 @@ fragBullet: {
 type: ArtilleryBulletType
 width: 12
 height: 12
-sprite: adc-silicon-shard
+sprite: sapphirium-silicon-shard
 buildingDamageMultiplier: 0.45
 
 hitShake: 5
@@ -295,7 +294,7 @@ creostone: {
 type: ArtilleryBulletType
 width: 17
 height: 17
-sprite: adc-creostone-shard
+sprite: sapphirium-creostone-shard
 buildingDamageMultiplier: 0.45
 
 trailColor: eb8778
@@ -360,7 +359,7 @@ fragBullet: {
 type: ArtilleryBulletType
 width: 12
 height: 12
-sprite: adc-creostone-shard
+sprite: sapphirium-creostone-shard
 buildingDamageMultiplier: 0.45
 hitShake: 5
 
@@ -416,7 +415,7 @@ surge-stone: {
 type: ArtilleryBulletType
 width: 17
 height: 17
-sprite: adc-surge-shard
+sprite: sapphirium-surge-shard
 
 trailColor: d99e6a
 lifetime: 141.33
@@ -429,7 +428,7 @@ buildingDamageMultiplier: 0.45
 splashDamage: 80
 splashDamageRadius: 50
 
-status: adc-overload
+status: sapphirium-overload
 
 lightning: 4
 lightningLength: 12
@@ -480,7 +479,7 @@ fragBullet: {
 type: ArtilleryBulletType
 width: 12
 height: 12
-sprite: adc-surge-shard
+sprite: sapphirium-surge-shard
 
 hitShake: 5
 buildingDamageMultiplier: 0.45
@@ -538,9 +537,9 @@ sparkLen: 4
 category: turret
 research: dune
 requirements: [
-leaded-copper/1250
-silicon/430
-titanium/225
-plastanium/180
-surge-alloy/80
+dense-alloy/1000
+stone/440
+thorium/400
+plastanium/325
+surge-alloy/120
 ]

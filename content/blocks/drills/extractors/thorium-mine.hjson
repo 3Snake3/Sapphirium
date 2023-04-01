@@ -1,26 +1,38 @@
 maxBoost: 2
-craftTime: 40
+minEfficiency: 0.3
+craftTime: 80
 craftEffect: mineBig
 updateEffect: pulverizeMedium
 hasPower: true
 hasLiquids: true
 consumes: {
-power: 5
-liquid: cryofluid/0.09
+power: 16.8
+liquid: cryofluid/0.15
+items: {
+items: [
+blast-compound/3
+]
 }
-outputItem: thorium/1
+}
+outputItem: thorium/5
 attribute: water
 research: {
 parent: titanium-extractor
-objectives: [laser-drill]
+objectives: [cryofluid-mixer, blast-mixer,
+{
+type: SectorComplete
+preset: tarFields
+}
+]
 }
 size: 3
-health: 870
+health: 540
 requirements: [
-leaded-copper/230
-lead/110
-titanium/85
-silicon/85
+dense-alloy/120
+metaglass/80
+graphite/145
+titanium/80
+silicon/65
 ]
 category: production
 drawer: {

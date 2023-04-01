@@ -1,4 +1,4 @@
-health: 205
+health: 200
 liquidBoostIntensity: 3
 size: 2
 rotateSpeed: 5
@@ -19,10 +19,9 @@ update: true
 }
 }
 requirements: [
-copper/50
-creostone/85
-thorium/35
-silicon/40
+dense-alloy/40
+thorium/25
+silicon/30
 ]
 category: production
 research: laser-drill

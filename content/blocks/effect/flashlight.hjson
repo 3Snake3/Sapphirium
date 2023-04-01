@@ -2,14 +2,13 @@
 category: effect
 
 size: 4
-health: 560
 brightness: 1.5
 radius: 500
 
 requirements: [
-  light-crystall/150
+  diamond/150
   silicon/100
-  creostone/80
+  dense-alloy/80
 ]
 envDisabled: 16
 

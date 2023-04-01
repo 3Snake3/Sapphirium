@@ -37,6 +37,6 @@ incendSpread: 6
 category: effect
 requirements: [
 beryllium/35
-creostone/15
+creostone/10
 ]
 research: melting-projector

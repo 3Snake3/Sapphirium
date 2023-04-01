@@ -1,28 +1,39 @@
-const sandGenerator = extend(ConsumeGenerator, "sand-generator", {});
 const copperTransformer = extend(ConsumeGenerator, "copper-transformer", {});
 const strongPowerNode = extend(PowerNode, "strong-power-node", {});
 
 const solarPanelMedium = extend(SolarGenerator, "solar-panel-medium", {});
 
 const hydrogenerator = extend(ThermalGenerator, "hydrogenerator", {});
+/*hydrogenerator.buildType = () => extend(ThermalGenerator.ThermalGeneratorBuild, hydrogenerator, {
+		drawLight(){
+            Drawf.light(this.x, this.y, (40 + Mathf.absin(10, 5)) * Math.min(this.productionEfficiency, 2) * this.size, Color.valueOf("8ca4f5"), 0.4);
+        }
+   });*/
 const sporeGenerator = extend(ThermalGenerator, "spore-generator", {});
+/*sporeGenerator.buildType = () => extend(ThermalGenerator.ThermalGeneratorBuild, sporeGenerator, {
+		drawLight(){
+            Drawf.light(this.x, this.y, (40 + Mathf.absin(10, 5)) * Math.min(this.productionEfficiency, 2) * this.size, Color.valueOf("c093fa"), 0.4);
+        }
+   });*/
 const oilTransformer = extend(ThermalGenerator, "oil-transformer", {});
-
-const ChargeGenerator = extend(ConsumeGenerator, "electrogenerator", {
-hasItems: true,
-hasLiquids: false,
-envEnabled: Env.any,
-});
-ChargeGenerator.consume(new ConsumeItemCharged);
+/*oilTransformer.buildType = () => extend(ThermalGenerator.ThermalGeneratorBuild, oilTransformer, {
+		drawLight(){
+            Drawf.light(this.x, this.y, (40 + Mathf.absin(10, 5)) * Math.min(this.productionEfficiency, 2) * this.size, Items.plastanium.color, 0.4);
+        }
+   });*/
 
 const thoriumGenerator = extend(ConsumeGenerator, "thorium-generator", {
 });
 
 const chargeReactor = extend(ImpactReactor, "charge-reactor", {});
 
+const hiddenPowerNode = extend(PowerNode, "hidden-node", {});
+
 const creostonePowerNode = extend(PowerNode, "creostone-power-node", {});
 const creostonePowerNodeLarge = extend(PowerNode, "creostone-power-node-large", {});
-const creostoneBattery = extend(Battery, "creostone-battery", {});
+const creostoneBattery = extend(Wall, "creostone-battery", {
+envDisabled: Env.scorching,
+});
 const creostonePowerTower = extend(PowerNode, "creostone-power-tower", {});
 
 const creostoneReactor = extend(NuclearReactor, "creostone-reactor", {});

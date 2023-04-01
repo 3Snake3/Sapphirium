@@ -9,6 +9,7 @@ flashHit: true
 chanceDeflect: 5
 requirements: [
 creostone/35
+tungsten/6
 ]
 research: reinforced-creostone-wall
 envDisabled: 1

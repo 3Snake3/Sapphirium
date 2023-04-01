@@ -2,193 +2,111 @@
 size: 2
 category: turret
 requirements: [
-copper/185
-graphite/85
-silicon/60
-surge-alloy/45
+dense-alloy/120
+titanium/80
+silicon/50
 ]
-research: {
-parent: salvo
-objectives: [lancer]
-}
+research: wire
 ammoTypes: {
-charged-lead: {
+lead: {
 width: 10
 height: 13
-splashDamage: 15
-splashDamageRadius: 16
 damage: 10
 speed: 6
 lifetime: 27
-reloadMultiplier: 1.2
+ammoMultiplier: 1
 backColor: f3e979
 frontColor: ffffff
 lightning: 2
 lightningLength: 7
-hitEffect: {
-type: MultiEffect
-effects: [hitBulletColor, {
-type: ExplosionEffect
-waveLife: 10
-waveRad: 25
-waveColor: f3e979
-sparks: 6
-sparkLen: 3
-sparkRad: 28
-sparkStroke: 2
-smokes: 0
-}]
+lightningDamage: 6
+lightningColor: f3e979
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
 }
-despawnEffect: {
-type: MultiEffect
-effects: [hitBulletColor, {
-type: ExplosionEffect
-waveLife: 10
-waveRad: 25
-waveColor: f3e979
-sparks: 6
-sparkLen: 3
-sparkRad: 28
-sparkStroke: 2
-smokes: 0
-}]
-}
-}
-charged-stick: {
+titanium: {
 width: 10
-height: 15
-pierce: true
-pierceCap: 1
-damage: 18
-speed: 6
-lifetime: 28
-backColor: f3e979
-frontColor: ffffff
-lightning: 2
-lightningLength: 7
-rangeChange: 7.5
-hitEffect: {
-type: MultiEffect
-effects: [hitBulletColor, {
-type: ExplosionEffect
-waveLife: 10
-waveRad: 25
-waveColor: f3e979
-sparks: 6
-sparkLen: 3
-sparkRad: 28
-sparkStroke: 2
-smokes: 0
-}]
-}
-despawnEffect: {
-type: MultiEffect
-effects: [hitBulletColor, {
-type: ExplosionEffect
-waveLife: 10
-waveRad: 25
-waveColor: f3e979
-sparks: 6
-sparkLen: 3
-sparkRad: 28
-sparkStroke: 2
-smokes: 0
-}]
-}
-}
-charged-ingot: {
-width: 11
 height: 13
-splashDamage: 18
-splashDamageRadius: 16
-damage: 24
+damage: 18
+ammoMultiplier: 2
+reloadMultiplier: 0.65
 speed: 6
-lifetime: 28
+lifetime: 27
 backColor: f3e979
 frontColor: ffffff
 lightning: 3
-lightningLength: 7
-lightningDamage: 12
-rangeChange: 7.5
-hitEffect: {
-type: MultiEffect
-effects: [hitBulletColor, {
-type: ExplosionEffect
-waveLife: 10
-waveRad: 25
-waveColor: f3e979
-sparks: 6
-sparkLen: 3
-sparkRad: 28
-sparkStroke: 2
-smokes: 0
-}]
+lightningLength: 5
+lightningDamage: 8
+lightningColor: f3e979
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
 }
-despawnEffect: {
-type: MultiEffect
-effects: [hitBulletColor, {
-type: ExplosionEffect
-waveLife: 10
-waveRad: 25
-waveColor: f3e979
-sparks: 6
-sparkLen: 3
-sparkRad: 28
-sparkStroke: 2
-smokes: 0
-}]
-}
-}
-charged-cylinder: {
-width: 12
-height: 15
-splashDamage: 24
-splashDamageRadius: 16
-damage: 35
+silicon: {
+width: 10
+height: 13
+damage: 16
+ammoMultiplier: 2
+reloadMultiplier: 0.75
+homingPower: 0.1
+homingRange: 40
 speed: 6
-lifetime: 28.1
+lifetime: 27
 backColor: f3e979
 frontColor: ffffff
-lightning: 4
+lightning: 2
 lightningLength: 7
-rangeChange: 8.5
-hitEffect: {
-type: MultiEffect
-effects: [hitBulletColor, {
-type: ExplosionEffect
-waveLife: 10
-waveRad: 30
-waveColor: f3e979
-sparks: 6
-sparkLen: 3
-sparkRad: 28
-sparkStroke: 2
-smokes: 0
-}]
+lightningDamage: 6
+lightningColor: f3e979
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
 }
-despawnEffect: {
-type: MultiEffect
-effects: [hitBulletColor, {
-type: ExplosionEffect
-waveLife: 10
-waveRad: 30
-waveColor: f3e979
-sparks: 6
-sparkLen: 3
-sparkRad: 28
-sparkStroke: 2
-smokes: 0
-}]
+plastanium: {
+width: 10
+height: 13
+damage: 13
+pierceArmor: true
+reloadMultiplier: 0.85
+ammoMultiplier: 3
+speed: 6
+lifetime: 27
+backColor: f3e979
+frontColor: ffffff
+lightning: 2
+lightningLength: 7
+lightningDamage: 6
+lightningColor: f3e979
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+fragBullets: 6
+fragRandomSpread: 360
+fragBullet: {
+width: 8
+height: 8
+damage: 5
+pierceArmor: true
+speed: 3
+lifetime: 15
+backColor: f3e979
+frontColor: ffffff
+lightning: 2
+lightningLength: 5
+lightningDamage: 4
+lightningColor: f3e979
+hitEffect: none
+despawnEffect: none
 }
 }
 }
 range: 160
 reload: 20
 ammoEjectBack: 4
-recoil: 4
+recoil: 3
+consumes: {
+  coolant: {}
+}
 shoot: {
 type: ShootAlternate
-spread: 8
+spread: 5
 shots: 2
 }
 shootCone: 24

@@ -2,6 +2,6 @@ name: flammability
 show: true
 permanent: true
 affinities: [burning]
-opposites: [wet, freezing, super-freezing, adc-overfreezing]
+opposites: [wet, freezing, super-freezing, sapphirium-overfreezing]
 damage: 0
 transitionDamage: 30

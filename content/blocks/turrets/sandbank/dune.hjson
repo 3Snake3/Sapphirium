@@ -1,14 +1,13 @@
-
 size: 3
 category: turret
 research: sand-thrower
 requirements: [
-leaded-copper/265
-silicon/120
+dense-alloy/160
+stone/85
 titanium/75
-graphite/40
+silicon/60
 ]
-health: 980
+health: 900
 shootEffect: shootBig
 reload: 40
 recoil: 4.5
@@ -16,14 +15,14 @@ rotateSpeed: 6
 range: 200
 shoot: {
 type: ShootAlternate
-spread: 12.75
+spread: 13.5
 }
 shootCone: 75
 
 shootSound: throw
 ammoTypes: {
 sand: {
-sprite: adc-circle-bullet
+sprite: circle-bullet
 width: 15
 height: 15
 speed: 6
@@ -78,7 +77,7 @@ waveRad: 20
 }
 }
 creostone: {
-sprite: adc-circle-bullet
+sprite: circle-bullet
 width: 15
 height: 15
 damage: 40
@@ -140,7 +139,7 @@ trailChance: 1
 fragRandomSpread: 45
 fragAngle: 180
 fragBullet: {
-sprite: adc-circle-bullet
+sprite: circle-bullet
 width: 15
 height: 15
 damage: 40
@@ -204,7 +203,7 @@ trailChance: 1
 fragRandomSpread: 45
 fragAngle: 180
 fragBullet: {
-sprite: adc-circle-bullet
+sprite: circle-bullet
 width: 15
 height: 15
 damage: 40
@@ -268,7 +267,7 @@ trailChance: 1
  }
  }
 silicon: {
-sprite: adc-circle-bullet
+sprite: circle-bullet
 width: 15
 height: 15
 damage: 20
@@ -326,7 +325,7 @@ trailChance: 1
 fragRandomSpread: 45
 fragAngle: 180
 fragBullet: {
-sprite: adc-circle-bullet
+sprite: circle-bullet
 width: 15
 height: 15
 damage: 20
@@ -383,7 +382,7 @@ trailChance: 1
 fragRandomSpread: 45
 fragAngle: 180
 fragBullet: {
-sprite: adc-circle-bullet
+sprite: circle-bullet
 width: 15
 height: 15
 damage: 20

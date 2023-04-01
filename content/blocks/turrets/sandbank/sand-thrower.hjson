@@ -1,87 +1,64 @@
-
 size: 2
-health: 480
+health: 640
 ammoTypes: {
 sand: {
 width: 12
 height: 12
 speed: 6
 lifetime: 30
-damage: 10
-sprite: adc-sand-shard
+damage: 8
+sprite: sapphirium-sand-shard
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
-pierce: true
-pierceCap: 1
 fragBullets: 4
-fragRandomSpread: 70
+fragRandomSpread: 360
 status: slow
-statusDuration: 70
+statusDuration: 50
 spin: 5
 hitShake: 2
 fragBullet: {
 type: BasicBulletType
 width: 8
 height: 8
-speed: 7
-lifetime: 35
-damage: 5
+speed: 3
+lifetime: 15
+damage: 3
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
 }
 }
-creostone: {
-sprite: adc-creostone-shard
+stone: {
+sprite: sapphirium-silicon-shard
 spin: 3
-width: 13
-height: 13
+width: 12
+height: 12
 speed: 5.5
 lifetime: 38
-damage: 25
-splashDamageRadius: 25
-splashDamage: 30
+damage: 34
+splashDamageRadius: 24
+splashDamage: 35
 hitEffect: blastExplosion
 despawnEffect: blastExplosion
-backColor: bd5553
-frontColor: eb8778
-fragBullets: 6
-fragRandomSpread: 70
-status: melting
-statusDuration: 65
 hitShake: 3
-ammoMultiplier: 2
+ammoMultiplier: 4
 buildingDamageMultiplier: 1.25
-reloadMultiplier: 0.4
+reloadMultiplier: 0.6
 hitSound: explosion
-fragBullet: {
-type: BasicBulletType
-width: 9
-height: 9
-speed: 6
-lifetime: 25
-damage: 9
-hitEffect: blastExplosion
-despawnEffect: blastExplosion
-backColor: bd5553
-frontColor: eb8778
-}
 }
 }
 reload: 12
-recoil: 4
+recoil: 3
 shake: 2
 rotateSpeed: 8
 inaccuracy: 6
-recoikTime: 0.2
 range: 180
 shootSound: throw
 requirements: [
-leaded-copper/130
-titanium/80
+dense-alloy/70
+stone/60
 graphite/45
 ]
 category: turret
 research: {
 parent: sand-turret
-objectives: [salvo]
 }

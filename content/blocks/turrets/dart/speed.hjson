@@ -1,4 +1,4 @@
-health: 840
+health: 960
 size: 2
 reload: 20
 recoil: 4
@@ -44,7 +44,7 @@ trailColor: f9c27a
 drag: -0.03
 keepVelocity: false
 }
-leaded-copper: {
+dense-alloy: {
 width: 10
 height: 15
 speed: 7
@@ -88,9 +88,9 @@ keepVelocity: false
 }
 category: turret
 requirements: [
-leaded-copper/180
-thorium/80
-graphite/60
+dense-alloy/120
+titanium/80
+metaglass/40
 ]
 envDisabled: 16
-research: salvo
+research: thrower

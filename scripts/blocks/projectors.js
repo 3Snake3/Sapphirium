@@ -1,6 +1,14 @@
 const items = require("items");
 
-const sprayingProjector = extend(ItemTurret, "spraying-projector", {});
+const energyFieldProjector = extend(DroneCenter, "energy-field-projector", {
+	status: StatusEffects.none,
+	droneRange: 140,
+	droneConstructTime: 60,
+	init(){
+		this.super$init();
+		this.droneType.aiController = () => extend(FlyingAI, {});
+		},
+	});
 
 const pushWave = new Effect(15, 180, e => {
         Draw.color(Color.white, Pal.lancerLaser, e.fin());
@@ -26,10 +34,11 @@ const indBar = extend(ForceProjector, "indigo-barrier", {
         Lines.stroke(1);
         Lines.poly(x * Vars.tilesize + this.offset, y * Vars.tilesize + this.offset, 8, this.radius);
         Draw.color();
-    }
+    },
+   envDisabled: Env.scorching
 });
 
-indBar.consumeItem(items.globium).boost();
+/*ndBar.itemConsumer = consumeItem(items.globium).boost();*/
 indBar.consumePower(8);
 
 indBar.buildType = () => extend(ForceProjector.ForceBuild, indBar, {
@@ -58,5 +67,6 @@ indBar.buildType = () => extend(ForceProjector.ForceBuild, indBar, {
     }
 });
 
-const crystalAccelerator = extend(OverdriveProjector, "crystal-accelerator", {});
-
+const crystalAccelerator = extend(OverdriveProjector, "crystal-accelerator", {
+envDisabled: Env.scorching
+});

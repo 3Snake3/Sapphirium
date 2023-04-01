@@ -1,26 +1,17 @@
-
 category: liquid
-research: thermal-pump
-
-size: 3
-health: 860
-pumpAmount: 0.40
-liquidCapacity: 60
-
+research: impulse-pump
+size: 4
+pumpAmount: 0.42
+liquidCapacity: 100
 hasPower: true
 placeableLiquid: true
-
-
-
 requirements: [
-  graphite/225
-  metaglass/130
-  silicon/70
-  thorium/55
-  creostone/35
+  dense-alloy/300
+  metaglass/280
+  thorium/220
+  silicon/215
+  tinorium/180
 ]
-
 consumes: {
-  power: 3
+  power: 17
 }
-

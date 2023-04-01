@@ -1,13 +1,13 @@
-health: 3200
+health: 3800
 size: 4
 reload: 120
 recoil: 4
 rotateSpeed: 2
 shake: 5
-cooldownTime: 55
+cooldownTime: 120
 shootSound: laser
 maxAmmo: 55
-ammoPerShot: 3
+ammoPerShot: 6
 ammoUseEffect: none
 range: 300
 consumes: {
@@ -21,7 +21,7 @@ height: 12
 damage: 60
 speed: 5
 lifetime: 60
-
+ammoMultiplier: 1
 lightOpacity: 0.7
 unitDamageScl: 3
 healPercent: 20
@@ -46,7 +46,7 @@ hitShake: 4
 trailRotation: true
 status: electrified
 hitSound: plasmaboom
-hitEffect: {
+hitEffect: [hitEmpSpark, {
 type: WaveEffect
 sides: 0
 lifetime: 40
@@ -55,13 +55,13 @@ sizeTo: 100
 strokeTo: 0
 colorFrom: 98ffa9
 colorTo: 98ffa9
-}
+}]
 trailEffect: {
 type: ParticleEffect
 particles: 1
 length: 0
 baseLength: -5
-region: adc-rail-hit
+region: sapphirium-rail-hit
 lifetime: 16
 sizeFrom: 30
 sizeTo: 4
@@ -70,13 +70,18 @@ colorTo: 98ffa9
 }
 }
 }
+drawer: {
+type: DrawTurret
+basePrefix: emerald-
+}
+envDisabled: 16
 category: turret
 requirements: [
-leaded-copper/1450
-emerald/645
-titanium/500
-thorium/345
-plastanium/300
+dense-alloy/1300
+emerald/640
+globium/400
+silicon/425
+thorium/225
 surge-alloy/300
 ]
 research: recovery-mortar

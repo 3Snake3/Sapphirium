@@ -1,50 +1,50 @@
-health: 700
-size: 2
+scaledHealth: 300
+size: 3
 category: turret
 research: {
-parent: lancer
-objectives: [shock]
+parent: shock
 }
 requirements: [
-leaded-copper/125
-lead/85
-titanium/60
-charged-lead/60
+dense-alloy/180
+titanium/120
+silicon/80
+plastanium/80
 ]
-range: 150
+range: 200
 shootType: {
 type: LightningBulletType
 damage: 45
-lightningLength: 35
-lightningLengthRand: 38
+lightningLength: 34
+lightningLengthRand: 10
 lightningColor: f3e979
-lifetime: 75
 lightningType: {
 width: 9
 height: 9
 speed: 0
 damage: 9
-hitEffect: none
-despawnEffect: none
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+lifetime: 1
 backColor: f3e979
 frontColor: ffffff
-lightning: 2
-lightningLength: 6
+status: shocked
 }
 statusDuration: 300
 }
-health: 600
-reload: 100
+reload: 300
 shoot: {
-type: ShootPattern
-shots: 2
-shotDelay: 2
+type: ShootAlternate
+spread: 2.75
+shots: 6
+shotDelay: 10
+barrels: 3
 }
 shootCone: 60
 rotateSpeed: 7
 consumes: {
-power: 6.4
+power: 8
+coolant: {}
 }
 heatColor: FF8900
-recoil: 2
+recoil: 3
 shootSound: spark

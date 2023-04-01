@@ -1,34 +1,33 @@
 
 requirements: [
-lead/440
-leaded-copper/300
-silicon/235
-granate/180
-phase-fabric/80
-surge-alloy/80
+dense-alloy/400
+ruby/330
+silicon/330
+globium/280
+charged-cylinder/320
 ]
 
 category: effect
 size: 3
-health: 850
-range: 330
+health: 625
+range: 168
 baseColor: d94848
 
 consumes: {
 power: 18
 items: {
 items: [
-granate/3
+ruby/3
 phase-fabric/3
 ]
 }
 }
 
-speedBoost: 4
-useTime: 280
+speedBoost: 3.25
+useTime: 240
 hasBoost: false
 research: {
 parent: overdrive-dome
-objectives: [scarlet-gem]
+objectives: [scarlet-gem, ruby-drill]
 }
 

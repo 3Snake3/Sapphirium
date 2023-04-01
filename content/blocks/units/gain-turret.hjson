@@ -8,9 +8,9 @@ acceptCoolant: true
 category: units
 size: 2
 requirements: [
-lead/125
-silicon/125
-phase-fabric/65
+emerald/125
+silicon/100
+stone/80
 ]
 research: repair-turret
 laserColor: 98f499

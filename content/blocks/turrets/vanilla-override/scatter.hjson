@@ -75,7 +75,8 @@ type: BasicBulletType
 sprite: bullet
 speed: 3
 damage: 5
-status: freezing
+status: wet
+statusDuration: 10
 width: 5
 height: 12
 shrinkY: 1

@@ -1,0 +1,46 @@
+abilities: [
+{
+type: ShieldArcAbility
+radius: 24
+angle: 270
+region: sapphirium-shield-unit-shield
+regen: 11.16
+max: 670
+cooldown: 300
+width: 20
+y: 2
+}
+{
+type: StatusFieldAbility
+range: 0.1
+effect: self-destruct-3
+duration: 1080
+applyEffect: none
+activeEffect: none
+display: false
+}
+]
+drawBody: false
+weapons: [
+{
+x: 0
+y: 0
+mirror: false
+reload: 9
+recoil: 0
+shootSound: none
+bullet: {
+shootEffect: none
+hitEffect: none
+despawnEffect: none
+maxRange: 192
+rangeOverride: 192
+width: 0
+height: 0
+damage: 0
+collides: false
+collidesTiles: false
+smokeEffect: none
+}
+}
+]

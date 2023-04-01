@@ -4,8 +4,9 @@ absorbLasers: true
 lightningChance: 0.05
 size: 2
 requirements: [
-plastanium/12
-surge-alloy/12
+plastanium/20
+surge-alloy/20
+metaglass/12
 ]
 category: defense
 research: surge-wall-large

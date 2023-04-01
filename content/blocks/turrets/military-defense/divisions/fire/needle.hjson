@@ -7,7 +7,7 @@ targetGround: true
 targetAir: true
 rotateSpeed: 2.5
 range: 530
-health: 2230
+health: 2800
 cooldownTime: 0.009
 recoilTime: 0.009
 coolantMultiplier: 0.3
@@ -39,7 +39,7 @@ lifetime: 30
 sizeFrom: 50
 colorFrom: ffb380
 colorTo: ffb380
-region: adc-rail-hit
+region: sapphirium-rail-hit
 }
 ]
 }
@@ -56,7 +56,7 @@ lifetime: 30
 sizeFrom: 40
 colorFrom: ffb380ff
 colorTo: ffb380ff
-region: adc-pierce-effect
+region: sapphirium-pierce-effect
 }
 {
 type: WaveEffect
@@ -79,7 +79,7 @@ lifetime: 30
 sizeFrom: 40
 colorFrom: ffb380ff
 colorTo: ffb380ff
-region: adc-rail
+region: sapphirium-rail
 }
 hitEffect: {
 type: ExplosionEffect
@@ -125,7 +125,7 @@ lifetime: 30
 sizeFrom: 50
 colorFrom: ffb855
 colorTo: ffb855
-region: adc-rail-hit
+region: sapphirium-rail-hit
 }
 ]
 }
@@ -141,7 +141,7 @@ lifetime: 30
 sizeFrom: 50
 colorFrom: ffb855
 colorTo: ffb855
-region: adc-pierce-effect
+region: sapphirium-pierce-effect
 }
 {
 type: WaveEffect
@@ -167,7 +167,7 @@ lifetime: 30
 sizeFrom: 40
 colorFrom: ffb855
 colorTo: ffb855
-region: adc-rail
+region: sapphirium-rail
 }
 {
 type: ParticleEffect
@@ -205,15 +205,16 @@ consumes: {
 power: 12
 }
 requirements: [
-leaded-copper/1300
-creostone/640
-titanium/430
-thorium/300
-surge-alloy/125
+dense-alloy/1300
+metaglass/300
+silicon/325
+thorium/280
+creostone/220
+surge-alloy/240
 ]
 category: turret
 research: {
-parent: bomb-thrower
+parent: flame
 objectives: [
 {
 type: OnSector

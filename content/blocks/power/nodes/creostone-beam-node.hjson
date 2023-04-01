@@ -1,8 +1,9 @@
 
-maxNodes: 3
+maxNodes: 2
 laserColor1: ffffff
 laserColor2: eb8778
-laserRange: 12
+laserRange: 4
+laserScale: 0.45
 health: 140
 fogRadius: 1
 category: power

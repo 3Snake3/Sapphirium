@@ -15,6 +15,5 @@ silicon/80
 ]
 envDisabled: 16
 research: {
-parent: creostone-wall-turret
-objectives: [force-projector]
+parent: armed-creostone-wall
 }

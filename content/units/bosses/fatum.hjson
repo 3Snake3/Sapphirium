@@ -1,0 +1,329 @@
+speed: 0.08
+playerControllable: false
+logicControllable: false
+hitSize: 58
+health: 340000
+armor: 46
+lightRadius: 260
+rotateSpeed: 1.4
+drownTimeMultiplier: 99
+legExtension: 4
+legCount: 12
+legMoveSpace: 2.5
+legGroupSize: 6
+legSpeed: 0.1
+legForwardScl: 3
+legBaseOffset: 5,
+mechStepParticles: true
+lockLegBase: true
+legContinuousMove: true
+baseLegStraightness: 0.8
+outlineColor: 262327
+healColor: cf735f
+parts: [
+{
+type: RegionPart
+suffix: -glow
+color: ff0000
+outline: false
+mirror: false
+blending: additive
+}
+{
+type: RegionPart
+suffix: -decal
+outline: true
+mirror: false
+}
+{
+type: RegionPart
+suffix: -decal-glow
+color: ff0000
+outline: false
+mirror: false
+blending: additive
+}
+]
+deathExplosionEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 1
+length: 0
+sizeFrom: 70
+sizeTo: 0
+lifetime: 120
+colorFrom: cf735f
+colorTo: cf735f
+region: sapphirium-rail
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+sizeFrom: 70
+sizeTo: 0
+lifetime: 120
+colorFrom: cf735f
+colorTo: cf735f
+region: sapphirium-rail-hit
+}
+{
+type: ExplosionEffect
+waveRad: 70
+waveColor: cf735f
+waveStroke: 5
+waveLife: 30
+sparks: 16
+sparkRad: 80
+sparkColor: cf735f
+sparkLen: 5
+sparkStroke: 3
+smokes: 10
+smokeRad: 65
+smokeColor: 565666
+}
+]
+}
+legPairOffset: 6
+legLength: 100
+legGroupSize: 1
+legBaseOffset: -17
+stepShake: 4
+legExtension: -30
+legForwardScl: 3
+legLengthScl: 1.2
+rippleScale: 7
+legSpeed: 1.5
+legSplashDamage: 2800
+legSplashRange: 40
+hovering: true
+groundLayer: 76
+shadowElevation: 1.25
+range: 350
+weapons: [
+{
+name: earth-weapon
+x: 0
+y: 0
+shootY: 0
+reload: 720
+cooldownTime: 400
+parts: [
+{
+type: RegionPart
+suffix: -glow
+color: c093fa
+outline: false
+mirror: false
+blending: additive
+}
+]
+recoil: 5
+recoilTime: 290
+mirror: false
+shootSound: railgun
+shake: 5
+bullet: {
+type: PointBulletType
+speed: 350
+range: 700
+trailSpacing: 20
+collides: true
+lifetime: 1
+hitShake: 5
+damage: 66666
+fragBullets: 64
+fragLifeMin: 0.9
+fragRandomSpread: 360
+fragBullet: {
+type: BasicBulletType
+speed: 3
+damage: 55
+splashDamage: 20
+splashDamageRadius: 2
+hitEffect: blastExplosion
+knockback: 0.6
+lifetime: 20
+width: 12
+height: 12
+status: super-melting
+statusDuration: 1400
+backColor: ae773a
+frontColor: e0C89f
+sprite: circle-bullet
+}
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 1
+length: 0
+sizeFrom: 38
+sizeTo: 0
+lifetime: 30
+colorFrom: cf735f
+colorTo: cf735f
+region: sapphirium-pierce2
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+sizeFrom: 38
+sizeTo: 0
+lifetime: 30
+colorFrom: cf735f
+colorTo: cf735f
+region: sapphirium-rail
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+sizeFrom: 38
+sizeTo: 0
+lifetime: 30
+colorFrom: cf735f
+colorTo: cf735f
+region: sapphirium-rail-hit
+}
+]
+}
+trailEffect: {
+type: ParticleEffect
+particles: 1
+length: 0
+sizeFrom: 38
+sizeTo: 0
+lifetime: 30
+colorFrom: cf735f
+colorTo: cf735f
+region: sapphirium-rail
+}
+hitEffect: {
+type: MultiEffect
+effects: [
+{
+particles: 1
+length: 0
+sizeFrom: 38
+sizeTo: 0
+lifetime: 30
+colorFrom: cf735f
+colorTo: cf735f
+region: sapphirium-rail-hit
+}
+{
+particles: 1
+length: 0
+sizeFrom: 38
+sizeTo: 0
+lifetime: 30
+colorFrom: cf735f
+colorTo: cf735f
+region: sapphirium-rail
+}
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 38
+sizeTo: 0
+lifetime: 30
+colorFrom: cf735f
+colorTo: cf735f
+}
+]
+}
+despawnEffect: {
+type: MultiEffect
+effects: [
+{
+particles: 1
+length: 0
+sizeFrom: 38
+sizeTo: 0
+lifetime: 30
+colorFrom: cf735f
+colorTo: cf735f
+region: sapphirium-rail
+}
+{
+particles: 1
+length: 0
+sizeFrom: 38
+sizeTo: 0
+lifetime: 30
+colorFrom: cf735f
+colorTo: cf735f
+region: sapphirium-rail-hit
+}
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 38
+sizeTo: 0
+lifetime: 30
+colorFrom: cf735f
+colorTo: cf735f
+}
+]
+}
+smokeEffect: {
+type: ParticleEffect
+particles: 12
+length: 26
+lifetime: 80
+cone: 360
+sizeFrom: 6
+sizeTo: 0
+colorFrom: cf735f
+colorTo: cf735f
+}
+}
+}
+{
+x: 0
+y: 0
+shootY: 0
+reload: 420
+mirror: false
+shoot: {
+shots: 4
+shotDelay: 90
+}
+shootCone: 360
+bullet: {
+speed: 0
+hitShake: 8
+layer: 74
+damage: 0
+splashDamage: 300
+splashDamageRadius: 70
+lifetime: 1
+hitEffect: none
+status: stunne
+statusDuration: 120
+despawnEffect: {
+type: WaveEffect
+sides: 0
+sizeFrom: 60
+sizeTo: 70
+lifetime: 60
+strokeFrom: 5
+colorFrom: cf735f
+colorTo: cf735f
+}
+hitSound: plasmaboom
+}
+}
+]
+abilities: [
+{
+type: RegenAbility
+amount: 26
+}
+]
+immunities: [freezing, unmoving, disarmed, slow, wet, muddy, melting, sapped, electrified, spore-slowed, tarred, corroded, acid-corrosion, golden-pollination, overfreezing, super-freezing, overload, shock-stun, sleep-mode, stunne, super-melting]

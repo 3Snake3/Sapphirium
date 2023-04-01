@@ -80,6 +80,7 @@ lifetime: 60
 ammoMultiplier: 6
 reloadMultiplier: 0.7
 status: super-melting
+statusDuration: 20
 splashDamage: 10
 splashDamage: 18
 pierce: true

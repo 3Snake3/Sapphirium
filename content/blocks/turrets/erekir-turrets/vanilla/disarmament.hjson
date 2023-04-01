@@ -17,8 +17,7 @@ shoot: {
 type: ShootAlternate
 shots: 3
 barrels: 3
-spread: 5.5
-barrelOffset: 6.25
+spread: 12
 }
 ammoTypes: {
 beryllium: {
@@ -33,13 +32,11 @@ knockback: 1.5
 speed: 7
 lifetime: 33
 damage: 45
-splashDamage: 45
-splashDamageRadius: 25
 status: disarmed
 statusDuration: 30
 hitSound: explosion
-sprite: adc-large-shell
-backSprite: adc-large-shell-back
+sprite: sapphirium-large-shell
+backSprite: sapphirium-large-shell-back
 trailWidth: 2.1
 trailLength: 15
 hitEffect: blastExplosion
@@ -85,10 +82,8 @@ rangeChange: 24
 speed: 7
 lifetime: 37
 damage: 65
-splashDamage: 65
-splashDamageRadius: 25
 hitSound: explosion
-sprite: adc-large-shell
+sprite: sapphirium-large-shell
 trailWidth: 2.1
 trailLength: 15
 hitEffect: blastExplosion
@@ -134,10 +129,8 @@ knockback: 2.5
 lifetime: 37
 damage: 85
 rangeChange: 32
-splashDamage: 85
-splashDamageRadius: 30
 hitSound: explosion
-sprite: adc-large-shell
+sprite: sapphirium-large-shell
 reloadMultiplier: 0.6
 ammoMultiplier: 6
 status: disarmed
@@ -180,9 +173,17 @@ type: DrawTurret
 basePrefix: "reinforced-"
 }
 category: turret
-research: conductor
+research: {
+parent: fang
+objectives: [creostone-crucible, 
+{
+type: SectorComplete
+preset: basin
+}
+]
+}
 requirements: [
 beryllium/240
 silicon/240
-tungsten/120
+creostone/120
 ]

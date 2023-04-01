@@ -2,29 +2,32 @@
 category: power
 research: {
 parent: thermal-generator
-objectives: [water-extractor]
+objectives: [
+{
+type: SectorComplete
+preset: greyland
+}
+]
 }
 requirements: [
-lead/70
-graphite/60
-metaglass/45
-silicon/35
+dense-alloy/60
+metaglass/50
+titanium/30
+silicon/20
 ]
-powerProduction: 1.2
+powerProduction: 0.4
+effectChance: 0.011
 generateEffect: {
 type: ParticleEffect
-particles: 3
+particles: 1
 lifetime: 60
-sizeFrom: 5
+sizeFrom: 4
 sizeTo: 0
 length: 20
-colorFrom: 7191eb
+colorFrom: 7191eb90
 colorTo: 7191eb70
 }
-outputLiquid: water/0.05
-liquidCapacity: 10
 size: 2
-floating: true
 ambientSound: hum
 ambientSoundVolume: 0.06
 attribute: water

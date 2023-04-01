@@ -1,10 +1,10 @@
 requirements: [
-titanium/2800
-plastanium/2400
-silicon/1600
-creostone/1350
-surge-alloy/860
-thorium/760
+globium/2400
+thorium/2100
+plastanium/1450
+silicon/1480
+charged-cylinder/800
+surge-alloy/600
 ]
 buildCostMultiplier: 0.75
 range: 550
@@ -47,12 +47,13 @@ liquidCapacity: 120
 rotateSpeed: 1.5
 shootEffect: shootBigSmoke2
 smokeEffect: none
-
+moveWhileCharging: false
+accurateDelay: false
 shootSound: beam
 loopSound: laserbig
 chargeSound: lasercharge
 size: 8
-health: 12800
+health: 5400
 category: turret
 research: {
 parent: foreshadow

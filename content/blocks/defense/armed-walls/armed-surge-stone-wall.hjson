@@ -1,4 +1,4 @@
-health: 4800
+health: 4220
 category: defense
 reload: 60
 recoil: 3
@@ -84,5 +84,4 @@ silicon/30
 envDisabled: 16
 research: {
 parent: surge-stone-wall
-objectives: [ice-cube-wall-turret]
 }

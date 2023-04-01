@@ -1,4 +1,4 @@
-health: 2140
+health: 2000
 size: 4
 reload: 12
 recoil: 6
@@ -98,7 +98,7 @@ despawnEffect: {
 type: MultiEffect
 effects: [blastExplosion, fireHit]
 }
-status: adc-small-flaming
+status: sapphirium-small-flaming
 statusDuration: 120
 pierce: true
 pierceBuilding: true
@@ -130,12 +130,12 @@ pierceBuilding: true
 }
 }
 requirements: [
-copper/1250
-graphite/450
-silicon/645
-creostone/300
-surge-alloy/335
+dense-alloy/1200
+thorium/325
+silicon/300
+creostone/200
+surge-alloy/230
 ]
 research: {
-parent: hearth
+parent: bayonet
 }

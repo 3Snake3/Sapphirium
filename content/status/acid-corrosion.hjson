@@ -1,5 +1,5 @@
 name: acid-corrosion
-damage: 1
+damage: 0.75
 healthMultiplier: 0.9
 speedMultiplier: 0.65
 effect: {

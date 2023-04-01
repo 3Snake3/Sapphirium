@@ -1,8 +1,8 @@
 requirements: [
-beryllium/180
-silicon/80
-oxide/45
-tungsten/95
+beryllium/240
+silicon/120
+oxide/70
+tungsten/80
 thorium/80
 ]
 size: 2

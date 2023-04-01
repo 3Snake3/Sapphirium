@@ -1,5 +1,5 @@
 
-health: 1650
+health: 2240
 reload: 120
 shoot: {
 firstShotDelay: 110
@@ -11,7 +11,7 @@ targetAir: false
 range: 160
 size: 3
 consumes: {
-power: 4
+power: 10
 }
 shootSound: laser
 outlineColor: 1d1d21
@@ -71,7 +71,7 @@ type: ParticleEffect
 particles: 1
 sizeFrom: 0
 sizeTo: 8
-lifetime: 50
+lifetime: 110
 colorFrom: ff6e6e
 colorTo: ff6e6e
 length: 0
@@ -79,16 +79,16 @@ baseLength: 0
 }
 ]
 }
-sprite: adc-circle-bullet
+sprite: circle-bullet
 width: 15
 height: 15
 backColor: d94848
 frontColor: ff6e6e
 inaccuracy: 0
-damage: 40
+damage: 44
 speed: 6
 lifetime: 26.66
-splashDamage: 60
+splashDamage: 66
 splashDamageRadius: 60
 reflectable: false
 hittable: false
@@ -104,18 +104,19 @@ width: 20
 hitEffect: hitLancer
 despawnEffect: none
 hitSize: 5
-damage: 40
+damage: 44
 colors: ["8a3340", "d94848", "ff6e6e"]
 collidesAir: false
 hitSound: spark
+status: passive-bloodrage
 }
 lightning: 4
 lightningCone: 360
 lightningAngle: 45
 lightningColor: d94848
-lightningDamage: 25
+lightningDamage: 28
 lightningLength: 10
-status: bleeding
+status: active-bloodrage
 trailWidth: 6
 trailLength: 10
 trailColor: d94848
@@ -147,10 +148,10 @@ research: {
 parent: hawk
 objectives: [scarlet-gem]
 }
+envDisabled: 16
 requirements: [
-leaded-copper/300
-granate/125
-silicon/100
-plastanium/65
-titanium/40
+dense-alloy/440
+ruby/400
+thorium/220
+silicon/180
 ]

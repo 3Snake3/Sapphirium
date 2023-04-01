@@ -1,3 +1,4 @@
 cost: 0.28
 color: 6fdedc
-research: cryocube
+research: cryo-cube
+hiddenOnPlanets: [erekir]

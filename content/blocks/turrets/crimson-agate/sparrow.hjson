@@ -1,8 +1,7 @@
 
 requirements: [
-lead/70
-granate/70
-titanium/40
+dense-alloy/50
+ruby/70
 ]
 category: turret
 outlineColor: 1d1d21
@@ -21,7 +20,6 @@ height: 5
 damage: 5
 speed: 0.5
 lifetime: 15
-collides: false
 collidesTiles: false
 splashDamage: 10
 splashDamageRadius: 25
@@ -39,9 +37,9 @@ lifetime: 20
 colorFrom: d94848
 colorTo: d94848
 }
-status: bleeding
+status: passive-bloodrage
 }
-status: bleeding
+status: active-bloodrage
 }
 reload: 35
 shootCone: 60
@@ -53,8 +51,9 @@ targetGround: false
 range: 160
 heatColor: ff0000
 recoil: 1
-health: 300
+health: 260
 shootSound: spark
 research: {
 parent: lancer
 }
+envDisabled: 16

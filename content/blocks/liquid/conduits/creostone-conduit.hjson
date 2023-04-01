@@ -1,7 +1,7 @@
 
 category: liquid
 
-health: 110
+health: 115
 liquidCapacity: 20
 liquidPressure: 1.025
 placeableLiquid: true

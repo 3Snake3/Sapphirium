@@ -3,10 +3,15 @@ category: defense
 requirements: [
 surge-stone/10
 ]
-research: surge-wall-large
+research: {
+parent: creostone-wall-turret
+objectives: [surge-wall-large]
+}
 emitLight: true
 lightRadius: 85
 consumes: {
-power: 1
+power: {
+usage: 0.8
+}
 }
 envDisabled: 16

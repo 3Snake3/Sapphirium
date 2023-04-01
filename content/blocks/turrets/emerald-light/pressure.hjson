@@ -1,14 +1,13 @@
 reload: 45
 recoil: 4
-
 shootEffect: shootHeal
 shootSound: lasershoot
 targetHealing: true
 rotateSpeed: 6
-health: 760
+health: 960
 shootCone: 24
 consumes: {
-power: 8
+power: 5
 }
 range: 255
 shootType: {
@@ -18,12 +17,16 @@ height: 10
 speed: 6
 lifetime: 42.5
 collidesTeam: true
-healPercent: 12.5
+healPercent: 4.17
 backColor: 98ffa9
 frontColor: ffffff
 damage: 25
 fragBullets: 5
 fragRandomSpread: 360
+fragLifeMin: 1
+fragLifeMax: 1
+fragVelocityMin: 1
+fragVelocityMax: 1
 fragBullet: {
 width: 0.001
 height: 0.001
@@ -38,6 +41,10 @@ pierceBuilding: true
 fragBullets: 1
 fragRandomSpread: 0
 fragAngle: 180
+fragLifeMin: 1
+fragLifeMax: 1
+fragVelocityMin: 1
+fragVelocityMax: 1
 hitEffect: none
 despawnEffect: none
 fragBullet: {
@@ -47,7 +54,7 @@ height: 10
 speed: 6
 lifetime: 42.5
 collidesTeam: true
-healPercent: 12.5
+healPercent: 4.17
 backColor: 98ffa9
 frontColor: ffffff
 damage: 10
@@ -55,11 +62,15 @@ homingPower: 0.85
 }
 }
 }
+drawer: {
+type: DrawTurret
+basePrefix: emerald-
+}
 size: 2
 category: turret
 research: pulse
 requirements: [
-copper/85
-silicon/65
-titanium/50
+dense-alloy/80
+emerald/60
+titanium/60
 ]

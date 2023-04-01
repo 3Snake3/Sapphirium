@@ -12,6 +12,7 @@ type: ShootPattern
 shots: 3
 shotDelay: 8
 }
+health: 2600
 shootCone: 24
 range: 400
 shootSound: railgun
@@ -19,7 +20,7 @@ ammoPerShot: 5
 maxAmmo: 50
 ammoUseEffect: none
 ammoTypes: {
-granate: {
+ruby: {
 type: PointBulletType
 shootEffect: {
 type: MultiEffect
@@ -42,7 +43,7 @@ lifetime: 24
 sizeFrom: 45
 colorFrom: ff6e6e
 colorTo: ff6e6e
-region: adc-rail-hit
+region: sapphirium-rail-hit
 }
 {
 type: ParticleEffect
@@ -52,7 +53,7 @@ lifetime: 24
 sizeFrom: 45
 colorFrom: ff6e6e
 colorTo: ff6e6e
-region: adc-rail-shoot
+region: sapphirium-rail-shoot
 }]
 }
 hitEffect: {
@@ -76,7 +77,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: ff6e6e
 colorTo: ff6e6e
-region: adc-pierce2
+region: sapphirium-pierce2
 }]
 }
 despawnEffect: {
@@ -100,7 +101,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: ff6e6e
 colorTo: ff6e6e
-region: adc-rail-hit
+region: sapphirium-rail-hit
 }]
 }
 smokeEffect: smokeCloud
@@ -114,7 +115,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: ff6e6e
 colorTo: ff6e6e
-region: adc-sharp-traill
+region: sapphirium-sharp-traill
 }
 {
 type: WaveEffect
@@ -132,16 +133,19 @@ damage: 450
 speed: 400
 trailSpacing: 30
 buildingDamageMultiplier: 0.2
+ammoMultiplier: 1
 hitShake: 6
+status: active-bloodrage
 }
 }
 category: turret
+envDisabled: 16
 requirements: [
-leaded-copper/1230
-granate/890
-plastanium/780
-silicon/700
-surge-alloy/560
+dense-alloy/1200
+ruby/680
+silicon/640
+globium/440
+surge-alloy/330
 ]
 research: {
 parent: scarlet-star

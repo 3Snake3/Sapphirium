@@ -6,6 +6,7 @@ shake: 4
 reload: 180
 recoil: 4
 cooldownTime: 30
+heatColor: 00B5E2
 recoilTime: 30
 shootSound: bang
 range: 320
@@ -31,10 +32,10 @@ ammoUseEffect: none
 ammoPerShot: 5
 maxAmmo: 60
 ammoTypes: {
-tungsten: {
+stone: {
 type: MissileBulletType
-sprite: adc-reaper-missile
-backSprite: adc-reaper-missile-back
+sprite: sapphirium-reaper-missile
+backSprite: sapphirium-reaper-missile-back
 width: 9
 height: 13
 speed: 7
@@ -106,8 +107,8 @@ frontColor: ffffff
 }
 thorium: {
 type: MissileBulletType
-sprite: adc-reaper-missile
-backSprite: adc-reaper-missile-back
+sprite: sapphirium-reaper-missile
+backSprite: sapphirium-reaper-missile-back
 width: 9
 height: 13
 speed: 7
@@ -187,19 +188,37 @@ type: ShootAlternate
 shots: 3
 shotDelay: 6
 barrels: 3
-spread: 9.5
+spread: 14
 }
 drawer: {
 type: DrawTurret
 basePrefix: "reinforced-"
+parts: [
+{
+type: RegionPart
+suffix: "-mid"
+progress: recoil
+moveY: -5
+heatColor: 00B5E2
+mirror: false
+}
+]
 }
 scaledHealth: 400
 
 category: turret
 requirements: [
 beryllium/440
-creostone/200
+stone/200
 silicon/220
 thorium/120
 ]
-research: multimortar
+research: {
+parent: multimortar
+objectives: [
+{
+type: OnSector
+preset: stronghold
+}
+]
+}

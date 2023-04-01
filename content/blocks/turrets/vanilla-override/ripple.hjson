@@ -114,6 +114,7 @@ reloadMultiplier: 1.4
 homingPower: 0.1
 homingRange: 58
 status: super-melting
+statusDuration: 20
 }
 surge-stone: {
 type: ArtilleryBulletType

@@ -1,13 +1,14 @@
 requirements: [
-sapphire/125
-silicon/80
-tungsten/80
+sapphire/70
+beryllium/65
+stone/80
 ]
 category: turret
 size: 2
 reload: 120
 recoil: 0.5
 range: 280
+absorbLasers: true
 shootType: {
 type: LightningBulletType
 damage: 25
@@ -40,7 +41,7 @@ trailColor: d1efff
 hitColor: d1efff
 trailWidth: 1.5
 trailLength: 16
-sprite: adc-humiliation-bullet
+sprite: sapphirium-humiliation-bullet
 }
 }
 drawer: {
@@ -52,7 +53,10 @@ power: 6
 }
 shootY: 3.5
 outlineColor: 2d2f39
-shootCone: 25
+shootCone: 2
 scaledHealth: 95
 rotateSpeed: 5
-research: reinforced-core-indigo
+research: {
+parent: tesla
+objectives: [sapphire-extractor]
+}

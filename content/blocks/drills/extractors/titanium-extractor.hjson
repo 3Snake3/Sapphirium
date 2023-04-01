@@ -1,34 +1,43 @@
 size: 2
 craftTime: 600
-outputItem: titanium/8
+outputItem: titanium/5
 hasLiquids: true
 hasItems: true
 hasPower: true
-itemCapacity: 16
-liquidCapacity: 12
+itemCapacity: 10
+liquidCapacity: 24
 consumes: {
-power: 2
-liquid: water/0.2
+power: 8
+liquid: water/0.4
 }
 craftEffect: {
 type: ParticleEffect
 particles: 6
-length: 30
-lifetime: 60
-sizeFrom: 5
+length: 40
+lifetime: 120
+sizeFrom: 6
 sizeTo: 0
-region: adc-rhombus
-colorFrom: a9d8ff
-colorTo: a9d8ff
+region: sapphirium-rhombus
+colorFrom: a9d8ff75
+colorTo: a9d8ff75
 cone: 360
 }
 category: production
 requirements: [
-leaded-copper/220
-lead/120
-silicon/65
+dense-alloy/45
+metaglass/30
+graphite/45
 ]
-research: pneumatic-drill
+health: 220
+research: {
+parent: sand-mine
+objectives: [mechanical-pump,
+{
+type: SectorComplete
+preset: stainedMountains
+}
+]
+}
 drawer: {
 type: DrawMulti
 drawers: [

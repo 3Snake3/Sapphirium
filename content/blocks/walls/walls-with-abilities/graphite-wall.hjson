@@ -1,34 +1,23 @@
-
 health: 380
 category: defense
 research: {
-parent: copper-wall-large
-objectives: [
-graphite-press,
-multi-press,
-]
+parent: armed-ice-cube-wall
 }
-reload: 15
-healPercent: 1.5
+reload: 25
+healPercent: 0.8
 group: walls
 range: 40
 baseColor: 96abd9
 phaseColor: 96abd9
-phaseBoost: 5
-phaseRangeBoost: 15
-useTime: 400
+phaseBoost: 0
+phaseRangeBoost: 0
+useTime: 300
+canOverdrive: false
 consumes: {
-power: 1.5
-items: {
-items: [
-graphite/1
-]
-booster: true
-optional: true
-}
+power: 0.7
 }
 requirements: [
-graphite/15
+graphite/8
 silicon/8
 ]
 envDisabled: 16

@@ -1,7 +1,7 @@
 requirements: [
 sapphire/225
 silicon/180
-graphite/80
+stone/80
 beryllium/80
 ]
 category: turret
@@ -16,6 +16,7 @@ ammoPerShot: 4
 ammoUseEffect: none
 rotateSpeed: 8
 range: 180
+absorbLasers: true
 targetGround: false
 targetAir: true
 shootSound: shootSnap

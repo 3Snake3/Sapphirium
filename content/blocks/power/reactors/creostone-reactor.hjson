@@ -2,11 +2,11 @@
 category: power
 
 size: 3
-health: 1250
+health: 880
 itemCapacity: 20
 liquidCapacity: 20
 itemDuration: 360
-powerProduction: 25
+powerProduction: 35
 fuelItem: creostone
 
 lightColor: e7221f
@@ -74,7 +74,7 @@ sizeFrom: 12
 sizeTo: 12
 lifetime: 800
 colorTo: ffffff00
-region: adc-exploded-creostone-reactor
+region: sapphirium-exploded-creostone-reactor
 }
 {
 type: ParticleEffect
@@ -84,7 +84,7 @@ sizeFrom: 12
 sizeTo: 12
 lifetime: 125
 colorTo: ffffff00
-region: adc-creostone-reactor-cap
+region: sapphirium-creostone-reactor-cap
 spin: 4
 }]
 }
@@ -96,11 +96,11 @@ ambientSound: hum
 ambientSoundVolume: 0.22
 
 requirements: [
-  lead/325
-  silicon/220
-  creostone/165
-  graphite/110
-  metaglass/80
+  dense-alloy/400
+  metaglass/150
+  creostone/250
+  thorium/250
+  silicon/300
 ]
 
 consumes: {
@@ -114,6 +114,6 @@ consumes: {
 
 research: {
 parent: thorium-reactor
-objectives: [creotite-converter]
+objectives: [ledonite-mixer]
 }
 

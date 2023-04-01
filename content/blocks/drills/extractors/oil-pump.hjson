@@ -2,18 +2,18 @@
 category: production
 
 size: 2
-health: 300
+health: 200
 liquidCapacity: 30
 result: oil
 attribute: oil
-pumpAmount: 0.07
+pumpAmount: 0.0566666667
 rotateSpeed: 1.5
 
 requirements: [
-  leaded-copper/180
-  graphite/50
-  silicon/50
-  plastanium/30
+  dense-alloy/80
+  thorium/40
+  metaglass/80
+  silicon/80
 ]
 
 consumes: {

@@ -1,0 +1,20 @@
+requirements: [
+amethyst/180
+stone/160
+silicon/80
+]
+category: turret
+size: 3
+consumes: {
+power: 4
+items: {
+items: [
+amethyst/45
+]
+}
+}
+squareSprite: false
+unitsSpawned: 1
+droneType: mourning
+itemCapacity: 90
+buildVisibility: debugOnly

@@ -1,4 +1,4 @@
-health: 2300
+health: 1980
 reload: 360
 size: 3
 recoil: 6
@@ -25,7 +25,7 @@ lifetime: 30
 sizeFrom: 30
 colorFrom: 98ffa9
 colorTo: 98ffa9
-region: adc-heal-rail-hit
+region: sapphirium-heal-rail-hit
 spin: 8
 }
 {
@@ -36,7 +36,7 @@ lifetime: 30
 sizeFrom: 30
 colorFrom: 98ffa9
 colorTo: 98ffa9
-region: adc-heal-rail-hit
+region: sapphirium-heal-rail-hit
 spin: -8
 }
 ]
@@ -58,7 +58,7 @@ shootSound: railgun
 rotateSpeed: 3
 cooldownTime: 0.009
 recoilTime: 0.009
-
+ammoPerShot: 4
 consumes: {
 power: 7.5
 }
@@ -67,8 +67,8 @@ ammoTypes: {
 emerald: {
 type: PointBulletType
 speed: 400
-damage: 300
-healPercent: 20
+damage: 220
+healPercent: 6
 status: unmoving
 statusDuration: 80
 fragBullets: 4
@@ -81,10 +81,15 @@ speed: 10
 lifetime: 5
 damage: 0
 collides: false
+collidesTiles: false
 hitEffect: none
 despawnEffect: none
 fragBullets: 1
 fragAngle: 180
+fragLifeMin: 1
+fragLifeMax: 1
+fragVelocityMin: 1
+fragVelocityMax: 1
 
 hittable: false
 absorbable: false
@@ -94,25 +99,25 @@ fragBullet: {
 type: MissileBulletType
 width: 25
 height: 30
-damage: 50
+damage: 30
 hitSound: plasmaboom
-sprite: adc-heal-shell
+sprite: sapphirium-heal-shell
 pierceBuilding: true
 pierceCap: 1
-healPercent: 12
+healPercent: 2
 collidesTeam: true
 status: regeneration
 statusDuration: 180
 speed: 8
-lifetime: 60
-drag: -0.03
+lifetime: 20
+drag: -0.003
 homingPower: 0.1
 homingRange: 80
 frontColor: ffffff
 backColor: 98ffa9
 trailColor: 98ffa9
-splashDamage: 50
-splashDamageRadius: 65
+splashDamage: 20
+splashDamageRadius: 32
 hitEffect: {
 type: MultiEffect
 effects: [{
@@ -173,7 +178,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: 98ffa9
 colorTo: 98ffa9
-region: adc-heal-rail
+region: sapphirium-heal-rail
 }
 hitEffect: {
 type: MultiEffect
@@ -196,7 +201,7 @@ lifetime: 24
 sizeFrom: 35
 colorFrom: 98ffa9
 colorTo: 98ffa9
-region: adc-pierce2
+region: sapphirium-pierce2
 }]
 }
 despawnEffect: {
@@ -220,7 +225,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: 98ffa9
 colorTo: 98ffa9
-region: adc-heal-rail-hit
+region: sapphirium-heal-rail-hit
 spin: 8
 }]
 }
@@ -229,12 +234,15 @@ buildingDamageMultiplier: 0.5
 hitShake: 4
 }
 }
+drawer: {
+type: DrawTurret
+basePrefix: emerald-
+}
 requirements: [
-leaded-copper/420
-titanium/385
-silicon/340
-plastanium/180
-emerald/180
+dense-alloy/425
+emerald/300
+titanium/240
+silicon/280
 ]
 category: turret
 research: {

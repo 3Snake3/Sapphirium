@@ -4,5 +4,5 @@ category: defense
 requirements: [
 silicon/6
 ]
-research: cryocube-wall-turret
+research: armed-graphite-wall
 envDisabled: 16

@@ -1,0 +1,21 @@
+requirements: [
+ruby/180
+tungsten/160
+silicon/80
+stone/50
+]
+size: 3
+unitsSpawned: 1
+droneType: composure
+itemCapacity: 90
+squareSprite: false
+consumes: {
+power: 4
+items: {
+items: [
+ruby/45
+]
+}
+}
+category: turret
+buildVisibility: debugOnly

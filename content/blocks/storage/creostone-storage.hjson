@@ -1,15 +1,13 @@
 
 requirements: [
-titanium/225
-plastanium/180
-creostone/300
+creostone/400
+dense-alloy/345
+thorium/225
 ]
-absorbLasers: true
-health: 2200
+health: 695
 itemCapacity: 5000
 category: effect
 size: 3
 research: {
 parent: vault
-objectives: [creotite-converter]
 }

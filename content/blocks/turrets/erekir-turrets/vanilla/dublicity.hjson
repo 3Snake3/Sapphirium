@@ -3,7 +3,7 @@ oxide/320
 surge-alloy/540
 phase-fabric/420
 carbide/600
-silicon/1000
+creostone/800
 ]
 category: turret
 ammoTypes: {
@@ -29,7 +29,7 @@ lifetime: 24
 sizeFrom: 65
 colorFrom: f0ca99
 colorTo: f0ca99
-region: adc-dublicity-shoot
+region: sapphirium-dublicity-shoot
 }
 ]
 }
@@ -41,7 +41,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: f0ca99
 colorTo: f0ca99
-region: adc-dublicity-shoot
+region: sapphirium-dublicity-shoot
 }
 despawnEffect: {
 type: MultiEffect
@@ -64,7 +64,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: f0ca99
 colorTo: f0ca99
-region: adc-dublicity-projectile-despawn
+region: sapphirium-dublicity-projectile-despawn
 }]
 }
 smokeEffect: smokeCloud
@@ -76,7 +76,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: f0ca99
 colorTo: f0ca99
-region: adc-dublicity-rail
+region: sapphirium-dublicity-rail
 }
 trailSpacing: 20
 damage: 2000
@@ -101,7 +101,7 @@ pierceCap: 3
 spawnBullets: [
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 7
 lifetime: 100
 damage: 60
@@ -156,7 +156,7 @@ statusDuration: 180
 }
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 7
 lifetime: 100
 damage: 60
@@ -211,7 +211,7 @@ statusDuration: 180
 }
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 5
 lifetime: 105
 weaveMag: 4
@@ -266,7 +266,7 @@ statusDuration: 180
 }
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 5
 lifetime: 105
 weaveMag: 4
@@ -321,7 +321,7 @@ statusDuration: 180
 }
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 3
 lifetime: 115
 weaveMag: 4
@@ -376,7 +376,7 @@ statusDuration: 180
 }
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 3
 lifetime: 115
 weaveMag: 4
@@ -441,7 +441,7 @@ lifetime: 24
 sizeFrom: 45
 colorFrom: f0ca99
 colorTo: f0ca99
-region: adc-dublicity-shoot
+region: sapphirium-dublicity-shoot
 }
 hitEffect: {
 type: ParticleEffect
@@ -451,7 +451,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: f0ca99
 colorTo: f0ca99
-region: adc-dublicity-shoot
+region: sapphirium-dublicity-shoot
 }
 despawnEffect: {
 type: MultiEffect
@@ -474,7 +474,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: f0ca99
 colorTo: f0ca99
-region: adc-dublicity-projectile-despawn
+region: sapphirium-dublicity-projectile-despawn
 }]
 }
 smokeEffect: smokeCloud
@@ -486,7 +486,7 @@ lifetime: 24
 sizeFrom: 20
 colorFrom: f0ca99
 colorTo: f0ca99
-region: adc-dublicity-rail
+region: sapphirium-dublicity-rail
 }
 trailSpacing: 20
 damage: 3000
@@ -512,7 +512,7 @@ toColor: f0ca99
 spawnBullets: [
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 7
 lifetime: 100
 damage: 60
@@ -567,7 +567,7 @@ statusDuration: 180
 }
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 7
 lifetime: 100
 damage: 60
@@ -622,7 +622,7 @@ statusDuration: 180
 }
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 5
 lifetime: 105
 weaveMag: 4
@@ -677,7 +677,7 @@ statusDuration: 180
 }
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 5
 lifetime: 105
 weaveMag: 4
@@ -732,7 +732,7 @@ statusDuration: 180
 }
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 3
 lifetime: 115
 weaveMag: 4
@@ -787,7 +787,7 @@ statusDuration: 180
 }
 {
 type: MissileBulletType
-sprite: adc-dublicity-impact-projectile
+sprite: sapphirium-dublicity-impact-projectile
 speed: 3
 lifetime: 115
 weaveMag: 4
@@ -850,6 +850,47 @@ liquid: nitrogen/0.2
 drawer: {
 type: DrawTurret
 basePrefix: "reinforced-"
+parts: [
+{
+type: RegionPart
+suffix: -barrel
+mirror: false
+outline: true
+under: false
+progress: recoil
+moveY: -6
+heatColor: ff0000
+}
+{
+type: RegionPart
+suffix: -bottom-side
+mirror: true
+outline: true
+under: false
+progress: recoil
+moveY: -6
+moveRot: 45
+}
+{
+type: RegionPart
+suffix: -wing
+mirror: true
+outline: true
+under: false
+progress: recoil
+moveX: 4
+moveY: -5
+}
+{
+type: RegionPart
+suffix: -side
+mirror: true
+outline: true
+under: false
+progress: recoil
+moveX: 2
+}
+]
 }
 shootY: -7.75
 reload: 600

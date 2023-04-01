@@ -5,9 +5,10 @@ shake: 3
 cooldownTime: 120
 size: 4
 category: turret
+absorbLasers: true
 shoot: {
 type: ShootAlternate
-spread: 6
+spread: 8
 }
 drawer: {
 type: DrawTurret

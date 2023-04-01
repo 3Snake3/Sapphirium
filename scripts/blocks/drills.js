@@ -12,11 +12,7 @@ const smallDrill = extend(Drill, "smalldrill", {
 
 const oilPump = extend(SolidPump, "oil-pump", {});
 
-const slagExtractor = extend(Fracker, "slag-extractor", {});
-
 const sandMine = extend(GenericCrafter, "sand-mine", {});
-
-const coalMine = extend(GenericCrafter, "coal-mine", {});
 
 const sporeExtractor = extend(AttributeCrafter, "spore-extractor", {});
 
@@ -24,15 +20,9 @@ const titaniumExtractor = extend(GenericCrafter, "titanium-extractor", {});
   
 const emeraldDrill = extend(GenericCrafter, "emerald-drill", {});
 
-const tm = extend(AttributeCrafter, "thorium-mine", {
-});
+const thoriumMine = extend(AttributeCrafter, "thorium-mine", {});
 
-const granateDrill = extend(GenericCrafter, "granate-drill", {});
-
-const lightCrystallizer = extend(AttributeCrafter, "light-crystallizer", {
-    attribute: Attribute.water,
-    maxBoost: 3
-});
+const rubyDrill = extend(GenericCrafter, "ruby-drill", {});
 
 const creostoneDrill = extend(Drill, "creostone-drill", {});
 

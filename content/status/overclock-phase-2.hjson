@@ -1,0 +1,6 @@
+name: overclock-phase-2
+damageMultiplier: 1.2
+reloadMultiplier: 2.15
+effectChance: 0.07
+effect: overclocked
+show: false

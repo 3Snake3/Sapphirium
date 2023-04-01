@@ -6,8 +6,8 @@ health: 360
 maxNodes: 22
 laserRange: 20
 placeableLiquid: true
-laserColor1: eb8778
-laserColor2: bd5553
+laserColor1: ffb380
+laserColor2: eb8778
 
 requirements: [
   titanium/5

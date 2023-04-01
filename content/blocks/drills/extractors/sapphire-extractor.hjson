@@ -1,11 +1,12 @@
 requirements: [
-beryllium/60
-graphite/45
+beryllium/120
+stone/80
+graphite/80
 ]
 category: production
 craftTime: 180
 outputItem: sapphire/3
-size: 2
+size: 3
 hasLiquids: true
 hasItems: true
 hasPower: true
@@ -28,4 +29,7 @@ consumes: {
 power: 0.5
 liquid: hydrogen/0.015
 }
-research: plasma-bore
+research: {
+parent: plasma-bore
+objectives: [cooling-chamber]
+}

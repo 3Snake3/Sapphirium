@@ -2,7 +2,7 @@ health: 2000
 size: 2
 powerProduction: 1
 category: defense
-research: surge-wall
+research: surge-wall-large
 requirements: [
   charged-lead/35
   silicon/40

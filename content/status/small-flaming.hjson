@@ -4,4 +4,4 @@ damage: 0.5
 transitionDamage: 45
 effect: burning
 affinities: [tarred]
-opposites: [wet, freezing, super-freezing]
+opposites: [wet, freezing, super-freezing, overfreezing]

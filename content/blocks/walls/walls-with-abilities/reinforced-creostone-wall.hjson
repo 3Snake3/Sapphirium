@@ -8,6 +8,7 @@ flashHit: true
 chanceDeflect: 5
 requirements: [
 creostone/10
+tungsten/2
 ]
 research: tungsten-wall
 envDisabled: 1

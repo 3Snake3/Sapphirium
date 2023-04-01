@@ -1,6 +1,6 @@
 
 health: 260
-reload: 60
+reload: 80
 recoil: 2
 shootCone: 3
 range: 130
@@ -33,7 +33,7 @@ lightColor: b1dd7e
 }
 {
 type: ParticleEffect
-region: adc-conduct-rail2
+region: sapphirium-conduct-rail2
 lightScl: 3
 lightColor: b1dd7e
 particles: 1
@@ -50,7 +50,7 @@ smokeEffect: none
 hitEffect: blastExplosion
 pointEffect: {
 type: ParticleEffect
-region: adc-conduct-rail
+region: sapphirium-conduct-rail
 lightScl: 3
 lightColor: b1dd7e
 particles: 1
@@ -63,7 +63,7 @@ colorTo: b1dd7e
 }
 pierceEffect: {
 type: ParticleEffect
-region: adc-conduct-pierce
+region: sapphirium-conduct-pierce
 lightScl: 3
 lightColor: b1dd7e
 particles: 1
@@ -100,7 +100,7 @@ lightColor: 768a9a
 }
 {
 type: ParticleEffect
-region: adc-conduct-rail2
+region: sapphirium-conduct-rail2
 particles: 1
 length: 0
 sizeFrom: 10
@@ -117,7 +117,7 @@ smokeEffect: none
 hitEffect: blastExplosion
 pointEffect: {
 type: ParticleEffect
-region: adc-conduct-rail
+region: sapphirium-conduct-rail
 particles: 1
 length: 0
 sizeFrom: 10
@@ -130,7 +130,7 @@ lightColor: 768a9a
 }
 pierceEffect: {
 type: ParticleEffect
-region: adc-conduct-pierce
+region: sapphirium-conduct-pierce
 particles: 1
 length: 0
 sizeFrom: 10
@@ -170,7 +170,7 @@ lightColor: ffb380
 }
 {
 type: ParticleEffect
-region: adc-conduct-rail2
+region: sapphirium-conduct-rail2
 particles: 1
 length: 0
 sizeFrom: 10
@@ -187,7 +187,7 @@ smokeEffect: none
 hitEffect: blastExplosion
 pointEffect: {
 type: ParticleEffect
-region: adc-conduct-rail
+region: sapphirium-conduct-rail
 particles: 1
 length: 0
 sizeFrom: 10
@@ -200,7 +200,7 @@ lightColor: ffb380
 }
 pierceEffect: {
 type: ParticleEffect
-region: adc-conduct-pierce
+region: sapphirium-conduct-pierce
 particles: 1
 length: 0
 sizeFrom: 10
@@ -219,7 +219,7 @@ hitColor: b1dd7e
 reloadMultiplier: 0.7
 ammoMultiplier: 6
 status: melting
-statusDuration: 45
+statusDuration: 30
 }
 }
 drawer: {
@@ -236,9 +236,12 @@ optional: true
 }
 }
 category: turret
-research: breach
+research: {
+parent: breach
+objectives: [creostone-crucible]
+}
 researchCostMultiplier: 0.15
 requirements: [
-beryllium/30
-graphite/40
+beryllium/60
+creostone/25
 ]

@@ -6,6 +6,7 @@ reload: 30
 recoil: 2
 inaccuracy: 0
 range: 130
+health: 260
 category: turret
 ammoUseEffect: casing1
 ammoPerShot: 1
@@ -15,17 +16,17 @@ ammoTypes: {
 copper: {
 width: 9
 height: 12
-sprite: adc-dartt
+sprite: sapphirium-dartt
 speed: 6
 lifetime: 22
 damage: 10
 pierce: true
 pierceCap: 1
 }
-leaded-copper: {
+dense-alloy: {
 width: 9
 height: 12
-sprite: adc-dartt
+sprite: sapphirium-dartt
 speed: 6
 lifetime: 22
 damage: 12
@@ -37,7 +38,7 @@ buildingDamageMultiplier: 1.15
 graphite: {
 width: 9
 height: 12
-sprite: adc-dartt
+sprite: sapphirium-dartt
 speed: 6
 lifetime: 25
 damage: 15
@@ -48,7 +49,7 @@ ammoMultiplier: 1.5
 metaglass: {
 width: 9
 height: 12
-sprite: adc-dartt
+sprite: sapphirium-dartt
 speed: 6
 lifetime: 18
 damage: 10

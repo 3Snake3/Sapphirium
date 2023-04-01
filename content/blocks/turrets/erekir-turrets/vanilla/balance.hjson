@@ -42,7 +42,7 @@ lifetime: 23
 sizeFrom: 15
 colorFrom: ffccde
 colorTo: ffccde
-region: adc-rail-hit
+region: sapphirium-rail-hit
 }
 ]
 }
@@ -67,7 +67,7 @@ lifetime: 23
 sizeFrom: 15
 colorFrom: ffccde
 colorTo: ffccde
-region: adc-pierce2
+region: sapphirium-pierce2
 }]
 }
 despawnEffect: {
@@ -91,7 +91,7 @@ lifetime: 23
 sizeFrom: 15
 colorFrom: ffccde
 colorTo: ffccde
-region: adc-rail-hit
+region: sapphirium-rail-hit
 }]
 }
 smokeEffect: {
@@ -113,7 +113,7 @@ lifetime: 23
 sizeFrom: 17
 colorFrom: ffccde
 colorTo: ffccde
-region: adc-balance-rail
+region: sapphirium-balance-rail
 }
 trailSpacing: 20
 damage: 550
@@ -146,7 +146,7 @@ lifetime: 23
 sizeFrom: 15
 colorFrom: 89e8b6
 colorTo: 89e8b6
-region: adc-rail-hit
+region: sapphirium-rail-hit
 }
 ]
 }
@@ -171,7 +171,7 @@ lifetime: 23
 sizeFrom: 15
 colorFrom: 89e8b6
 colorTo: 89e8b6
-region: adc-pierce2
+region: sapphirium-pierce2
 }]
 }
 despawnEffect: {
@@ -195,7 +195,7 @@ lifetime: 23
 sizeFrom: 15
 colorFrom: 89e8b6
 colorTo: 89e8b6
-region: adc-rail-hit
+region: sapphirium-rail-hit
 }]
 }
 smokeEffect: {
@@ -217,7 +217,7 @@ lifetime: 23
 sizeFrom: 17
 colorFrom: 89e8b6
 colorTo: 89e8b6
-region: adc-balance-rail
+region: sapphirium-balance-rail
 }
 trailSpacing: 20
 damage: 770

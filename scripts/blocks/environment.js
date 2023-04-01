@@ -9,17 +9,25 @@ const ledoniteLiquid = extend(Floor, "ledonite", {
 	speedMultiplier: 0.19,
 	lightColor: Color.valueOf("c1f4ff"),
 	});
+	
+const oreEmerald = extend(OreBlock, "ore-emerald", {});
 
-const creosand = extend(Floor, "creo-sand", {});
+const oreRuby = extend(OreBlock, "ore-ruby", {});
+
+const oreDiamond = extend(OreBlock, "ore-diamond", {});
 
 const oreCreostone = extend(OreBlock, "ore-creostone", {});
 
 const ledoniteSelections = extend(Floor, "ledonite-selections", {});
 
-const granateGrowths = extend(Wall, "granate-growths", {});
+const rubyGrowths = extend(Wall, "ruby-growths", {});
 
 const sapphiricFloor = extend(Floor, "sapphiric-floor", {
 variants: 4
+});
+
+const markingWall = extend(StaticWall, "marking-wall", {
+variants: 3
 });
 
 const sapphiricWall = extend(StaticWall, "sapphiric-wall", {});
@@ -34,4 +42,3 @@ const wallOreSapphire = extend(OreBlock, "ore-wall-sapphire", {
 	itemDrop: items.sapphire,
 	wallOre: true
 });
-

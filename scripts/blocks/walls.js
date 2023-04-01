@@ -1,44 +1,42 @@
 const statuses = require("statuses/statuses");
 const items = require("items");
 
+const denseWall = extend(Wall, "dense-wall", {
+});
+
+const denseWallLarge = extend(Wall, "dense-wall-large", {
+});
+
 const icecubeWall = extend(Wall, "ice-cube-wall", {});
 
-const icecubeWT = extend(PowerTurret, "ice-cube-wall-turret", {
+const armedIceCubeWall = extend(PowerTurret, "armed-ice-cube-wall", {
 });
-
-const leadedCopperWall = extend(Wall, "leaded-copper-wall", {
-});
-
-const leadedCopperWallLarge = extend(Wall, "leaded-copper-wall-large", {
-});
-
-const strongStorage = extend(StorageBlock, "strong-storage", {});
 
 const graphiteWall = extend(MendProjector, "graphite-wall", {});
 
-const graphiteWT = extend(PowerTurret, "graphite-wall-turret", {});
-
-const siliconWall = extend(Wall, "silicon-wall", {});
-
-const siliconWT = extend(PowerTurret, "silicon-wall-turret", {
-});
+const armedGraphiteWall = extend(PowerTurret, "armed-graphite-wall", {});
 
 const stoneWall = extend(Wall, "stone-e-wall", {});
 
-const stoneWT = extend(PowerTurret, "stone-wall-turret", {
+const armedStoneWall = extend(PowerTurret, "armed-stone-wall", {
+});
+
+const siliconWall = extend(Wall, "silicon-wall", {});
+
+const armedSiliconWall = extend(PowerTurret, "armed-silicon-wall", {
 });
 
 const cryocubeWall = extend(PowerTurret, "cryocube-wall", {});
 
-const cryocubeWT = extend(PowerTurret, "cryocube-wall-turret", {
+const armedCryocubeWall = extend(PowerTurret, "armed-cryocube-wall", {
 });
 
 const creostoneWall = extend(OverdriveProjector, "creostone-wall", {});
 
-const creostoneWT = extend(PowerTurret, "creostone-wall-turret", {
+const armedCreostoneWall = extend(PowerTurret, "armed-creostone-wall", {
 });
 
-const creostoneProjector = new JavaAdapter(ForceProjector, {
+const creostoneWallHuge = new JavaAdapter(ForceProjector, {
   drawPlace(x, y, rotation, valid){
     Draw.color(Vars.player.team().color.cpy().mul(1, 0.75, 0.25, 1));
     Lines.stroke(1);
@@ -51,10 +49,10 @@ const creostoneProjector = new JavaAdapter(ForceProjector, {
   }
 }, "creostone-wall-huge");
 
-creostoneProjector.consumeItem(Items.phaseFabric).boost();
-creostoneProjector.consumePower(2);
+creostoneWallHuge.consumeItem(Items.phaseFabric).boost();
+creostoneWallHuge.consumePower(2);
 
-creostoneProjector.buildType = () => extend(ForceProjector.ForceBuild, creostoneProjector, {
+creostoneWallHuge.buildType = () => extend(ForceProjector.ForceBuild, creostoneWallHuge, {
     drawShield(){
         if(!this.broken){
             var radius = this.realRadius();
@@ -80,7 +78,7 @@ creostoneProjector.buildType = () => extend(ForceProjector.ForceBuild, creostone
     }
 });
 
-var dischargeChance = 0.3;
+var dischargeChance = 0.1;
 var dischargeDamage = 60;
 var dischargeLength = 14;
 var dischargeColor = Pal.lancerLaser;
@@ -209,179 +207,13 @@ globiumWallLarge.buildType = () => extend(ForceProjector.ForceBuild, globiumWall
 }
 });
 
-var waveRadius = 60;
-var waveDamage = 60;
-var waveEffect = Fx.sapExplosion;
-var waveSound = Sounds.plasmadrop;
-var waveChance = 0.3;
-var waveStatus = StatusEffects.sapped;
-var waveStatusDuration = 180;
-var waveBullet = extend(BasicBulletType, {
-	width: 12,
-	height: 12,
-	damage: 5,
-	speed: 4,
-	lifetime: 30,
-	spin: 3,
-	status: waveStatus,
-	statusDuration: waveStatusDuration,
-	lightOpacity: 0,
-	hitSound: Sounds.explosion,
-	sprite: "adc-tinorium-shard"
-});
-var sapEffect = extend(WaveEffect, {
-	sides: 0,
-	sizeFrom: 0,
-	sizeTo: 75,
-	strokeFrom: 3,
-	strokeTo: 0,
-	lifetime: 20,
-	colorFrom: Color.valueOf("bf92f9"),
-	colorTo: Color.valueOf("6d56bf"),
-});
-var sapEffectLarge = extend(WaveEffect, {
-	sides: 0,
-	sizeFrom: 0,
-	sizeTo: 85,
-	strokeFrom: 4,
-	strokeTo: 0,
-	lifetime: 24,
-	colorFrom: Color.valueOf("bf92f9"),
-	colorTo: Color.valueOf("6d56bf"),
-});
-const tinorWall = extend(Wall, "tinorium-wall", {});
-tinorWall.buildType = () => extend(Wall.WallBuild, tinorWall, {
-	collision(bullet){
-            this.super$collision(bullet);
-            //create shockwave and sapping bullet
-    if(waveChance > 0){
-    if(Mathf.chance(waveChance)){
-            waveSound.at(this);
-            Damage.damage(this.x, this.y, waveRadius * Vars.tilesize, waveDamage * 1);
-            waveEffect.at(this.x, this.y);
-            //create a wall piece 
-           for(var i = 0; i < 2; i++){
-                    waveBullet.create(this, this.x, this.y, (360 / 2) * i + Mathf.random(10));
-                }
-      }
-  }
-            return true;
-}
-});
-const tinorWallLarge = extend(Wall, "tinorium-wall-large", {});
-tinorWallLarge.buildType = () => extend(Wall.WallBuild, tinorWallLarge, {
-	collision(bullet){
-            this.super$collision(bullet);
-            //create shockwave and sapping bullet
-    if(waveChance > 0){
-    if(Mathf.chance(waveChance)){
-            waveSound.at(this);
-            Damage.damage(this.x, this.y, 70 * Vars.tilesize, 70 * 1);
-            sapEffect.at(this.x, this.y);
-            //create a wall piece when enemies hit wall
-           for(var i = 0; i < 3; i++){
-                    waveBullet.create(this, this.x, this.y, (360 / 3) * i + Mathf.random(16));
-                }
-      }
-  }
-            return true;
-}
-});
-const armedTinoriumWall = extend(PowerTurret, "armed-tinorium-wall", {});
-armedTinoriumWall.buildType = () => extend(PowerTurret.PowerTurretBuild, armedTinoriumWall, {
-	collision(bullet){
-            this.super$collision(bullet);
-            //create shockwave and sapping bullet
-    if(waveChance > 0){
-    if(Mathf.chance(waveChance)){
-            waveSound.at(this);
-            Damage.damage(this.x, this.y, 80 * Vars.tilesize, 80 * 1);
-            sapEffectLarge.at(this.x, this.y);
-            //create a wall piece when enemies hit wall
-           /*for(var i = 0; i < 4; i++){
-                    waveBullet.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
-                }*/
-      }
-  }
-            return true;
-}
-});
-
-const crystalFrag = extend(BasicBulletType, {
-	width: 10,
-	height: 10,
-	speed: 6,
-	lifetime: 20,
-	damage: 6,
-	sprite: "adc-crystal",
-	backColor: Color.valueOf("8a3340"),
-	frontColor: Color.valueOf("ff6e6e"),
-});
-
-const crystal = extend(BasicBulletType, {
-	width: 18,
-	height: 24,
-	pierce: true,
-	pierceCap: 1,
-	lifetime: 25,
-	sprite: "adc-crystal",
-	backColor: Color.valueOf("8a3340"),
-	frontColor: Color.valueOf("ff6e6e"),
-	damage: 15,
-	speed: 5,
-	fragBullets: 3,
-	fragCone: 75,
-	fragBullet: crystalFrag
-});
-	
-
-const granateWall = extend(Wall, "granate-wall", {
-	health: 760,
-});
-granateWall.buildType = () => extend(Wall.WallBuild, granateWall, {
-	collision(bullet){
-            this.super$collision(bullet);
-            //create crystal bullet
-    if(this.health < 228){
-    	if(1.2 > 0){
-    if(Mathf.chance(1.2)){
-    	for(var i = 0; i < 4; i++){
-            crystal.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
-      }
-      }
-      }
-      }
-            return true;
-}
-});
-
-const granateWallLarge = extend(Wall, "granate-wall-large", {
-	health: 2680,
-});
-granateWallLarge.buildType = () => extend(Wall.WallBuild, granateWallLarge, {
-	collision(bullet){
-            this.super$collision(bullet);
-            //create crystal bullet
-    if(this.health < 1340){
-    	if(1.5 > 0){
-    if(Mathf.chance(1.5)){
-    	for(var i = 0; i < 4; i++){
-            crystal.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
-      }
-      }
-      }
-      }
-            return true;
-}
-});
-
 const healBullet = extend(LaserBoltBulletType, {
-	speed: 5.3,
-	damage: 10,
+	speed: 4,
+	damage: 0,
 	homingPower: 0.1,
 	homingRange: 80,
 	collidesTeam: true,
-	healPercent: 5,
+	healPercent: 0.33,
 	backColor: Pal.heal,
 	frontColor: Color.white,
 });
@@ -394,8 +226,8 @@ emeraldWall.buildType = () => extend(Wall.WallBuild, emeraldWall, {
 	collision(bullet){
             this.super$collision(bullet);
             //create heal bullet
-    	if(0.5 > 0){
-    if(Mathf.chance(0.5)){
+    	if(0.1 > 0){
+    if(Mathf.chance(0.1)){
     	for(var i = 0; i < 4; i++){
             healBullet.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
             Sounds.lasershoot.at(this)
@@ -414,11 +246,80 @@ emeraldWallLarge.buildType = () => extend(Wall.WallBuild, emeraldWallLarge, {
 	collision(bullet){
             this.super$collision(bullet);
             //create heal bullet
-    	if(0.5 > 0){
-    if(Mathf.chance(0.5)){
-    	for(var i = 0; i < 6; i++){
-            healBullet.create(this, this.x, this.y, (360 / 6) * i + Mathf.random(16));
+    	if(0.1 > 0){
+    if(Mathf.chance(0.1)){
+    	for(var i = 0; i < 4; i++){
+            healBullet.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
             Sounds.lasershoot.at(this)
+      }
+      }
+      }
+            return true;
+}
+});
+
+const crystalFrag = extend(BasicBulletType, {
+	width: 10,
+	height: 10,
+	speed: 6,
+	lifetime: 20,
+	damage: 6,
+	sprite: "sapphirium-crystal",
+	backColor: Color.valueOf("8a3340"),
+	frontColor: Color.valueOf("ff6e6e"),
+	status: statuses.passiveBloodrage,
+});
+
+const crystal = extend(BasicBulletType, {
+	width: 18,
+	height: 24,
+	pierce: true,
+	pierceCap: 1,
+	lifetime: 25,
+	sprite: "sapphirium-crystal",
+	backColor: Color.valueOf("8a3340"),
+	frontColor: Color.valueOf("ff6e6e"),
+	damage: 15,
+	speed: 5,
+	fragBullets: 3,
+	fragCone: 75,
+	fragBullet: crystalFrag,
+	status: statuses.passiveBloodrage,
+});
+
+const rubyWall = extend(Wall, "ruby-wall", {
+	health: 760,
+});
+rubyWall.buildType = () => extend(Wall.WallBuild, rubyWall, {
+	collision(bullet){
+            this.super$collision(bullet);
+            //create crystal bullet
+    if(this.health < 228){
+    	if(0.05 > 0){
+    if(Mathf.chance(0.05)){
+    	for(var i = 0; i < 4; i++){
+            crystal.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
+      }
+      }
+      }
+      }
+            return true;
+}
+});
+
+const rubyWallLarge = extend(Wall, "ruby-wall-large", {
+	health: 2680,
+});
+rubyWallLarge.buildType = () => extend(Wall.WallBuild, rubyWallLarge, {
+	collision(bullet){
+            this.super$collision(bullet);
+            //create crystal bullet
+    if(this.health < 1340){
+    	if(0.08 > 0){
+    if(Mathf.chance(0.08)){
+    	for(var i = 0; i < 4; i++){
+            crystal.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
+      }
       }
       }
       }
@@ -430,7 +331,7 @@ var lLength = 13;
 var lColor = Pal.surge;
 var lDamage = 22;
 var lSound = Sounds.spark;
-var lChance = 0.15;
+var lChance = 0.05;
 const lType = extend(BasicBulletType, {
 	width: 8,
 	height: 8,
@@ -456,8 +357,8 @@ surgeStoneWall.buildType = () => extend(Wall.WallBuild, surgeStoneWall, {
             //create lightning if necessary
             if(lChance > 0){
                 if(Mathf.chance(lChance)){
-                	for(var i = 0; i < 6; i++){
-                    lLightning.create(this, this.x, this.y, (360 / 6) * i + Mathf.random(16));
+                	for(var i = 0; i < 4; i++){
+                    lLightning.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
                     }
                     lightningSound.at(this.tile, Mathf.random(0.9, 1.1));
                 }
@@ -473,8 +374,8 @@ armedSurgeStoneWall.buildType = () => extend(PowerTurret.PowerTurretBuild, armed
             //create lightning if necessary
             if(lChance > 0){
                 if(Mathf.chance(lChance)){
-                    for(var i = 0; i < 6; i++){
-                    lLightning.create(this, this.x, this.y, (360 / 6) * i + Mathf.random(16));
+                    for(var i = 0; i < 4; i++){
+                    lLightning.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
                     }
                     lightningSound.at(this.tile, Mathf.random(0.9, 1.1));
                 }
@@ -484,7 +385,7 @@ armedSurgeStoneWall.buildType = () => extend(PowerTurret.PowerTurretBuild, armed
          });
 
 var lightningChance = 0.08;
-var lightningDamage = 60;
+var lightningDamage = 12;
 var lightningLength = 16;
 var lightningColor = Pal.surge;
 var lightningSound = Sounds.spark;

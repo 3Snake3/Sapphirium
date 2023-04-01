@@ -17,22 +17,28 @@ suffix: "-top"
 }
 ]
 }
-health: 460
 size: 2
 outputItem: sand/1
-craftTime: 45
+craftTime: 60
 consumes: {
 power: 0.7
-liquid: water/0.1
+liquid: water/0.11
 }
 craftEffect: mineBig
-liquidCapacity: 12
 updateEffect: pulverizeMedium
 hasPower: true
 category: production
-research: pneumatic-drill
+research: {
+parent: pneumatic-drill
+objectives: [
+{
+type: SectorComplete
+preset: craters
+}
+]
+}
 requirements: [
-leaded-copper/60
-graphite/45
+dense-alloy/35
+graphite/25
 ]
 envDisabled: 16

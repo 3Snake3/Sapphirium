@@ -1,10 +1,15 @@
 size: 2
-craftTime: 145
+craftTime: 100
 outputItem: emerald/2
 liquidCapacity: 24
 consumes: {
-power: 4
+power: 5.6
 liquid: cryofluid/0.2
+items: {
+items: [
+cryo-cube/2
+]
+}
 }
 craftEffect: {
 type: MultiEffect
@@ -25,7 +30,7 @@ length: 45
 lifetime: 45
 sizeFrom: 5
 sizeTo: 0
-region: adc-rhombus
+region: sapphirium-rhombus
 colorFrom: 85ff94
 colorTo: 85ff94
 cone: 360
@@ -46,8 +51,14 @@ color: a6ffb0
 }
 category: production
 requirements: [
-leaded-copper/320
-silicon/80
-titanium/60
+dense-alloy/95
+titanium/45
+graphite/45
 ]
-research: titanium-extractor
+research: {
+parent: titanium-extractor
+objectives: [freezer, cryofluid-mixer, {
+type: SectorComplete
+preset: greyland
+}]
+}

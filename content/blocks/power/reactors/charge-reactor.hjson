@@ -1,19 +1,34 @@
 requirements: [
-leaded-copper/800
-creostone/450
-graphite/600
-thorium/270
-surge-alloy/340
-metaglass/340
+dense-alloy/1250
+metaglass/650
+globium/800
+thorium/300
+silicon/650
+charged-cylinder/600
 ]
 category: power
 size: 4
-health: 2000
-powerProduction: 245
-explosionDamage: 3000
-explosionRadius: 30
+health: 1800
+powerProduction: 350
+explosionDamage: 5000
+explosionRadius: 56
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawPlasma
 plasma1: f2e879
 plasma2: d99e6a
+}
+{
+type: DrawDefault
+}
+]
+}
 destroyBullet: {
 type: BasicBulletType
 width: 0.001
@@ -67,15 +82,14 @@ itemDuration: 140
 ambientSound: pulse
 ambientSoundVolume: 0.08
 consumes: {
-power: 30
+power: 33.3333333
 items: {
 items: [
-charged-cylinder/4
+ledonite-cube/4
 ]
 }
-liquid: ledonite-liquid/0.35
+liquid: surge-mass/0.766666667
 }
 research: {
 parent: impact-reactor
-objectives: [electrogenerator]
 }

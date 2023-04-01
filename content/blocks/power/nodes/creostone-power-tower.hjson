@@ -5,6 +5,10 @@ maxNodes: 4
 laserRange: 80
 schematicPriority: -30
 category: power
+targetable: false
+laserScale: 0.85
+laserColor1: ffb380
+laserColor2: eb8778
 research: {
 parent: creostone-power-node-large
 objectives: [surge-tower]
@@ -14,4 +18,5 @@ creostone/35
 titanium/25
 lead/25
 silicon/15
+charged-stick/30
 ]

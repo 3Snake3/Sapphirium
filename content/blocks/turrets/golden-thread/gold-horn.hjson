@@ -1,9 +1,9 @@
 
 size: 3
-health: 1120
+health: 1240
 category: turret
-research: brazier
-reload: 60
+research: enlightenment
+reload: 80
 recoil: 4
 range: 230
 rotateSpeed: 3
@@ -13,87 +13,143 @@ targetAir: false
 moveWhileCharging: false
 accurateDelay: false
 shoot: {
-firstShotDelay: 50
-shotDelay: 50
+firstShotDelay: 79
+shotDelay: 79
 }
 consumes: {
 power: 8.5
 }
 smokeEffect: none
 shootEffect: {
-type: MultiEffect
-effects: [sparkShoot, shootBig]
-}
-shootType: {
-sprite: adc-circle-bullet
-chargeEffect: {
-type: MultiEffect
-effects: [
-{
 type: ParticleEffect
-particles: 6
-cone: 180
-length: 0
-sizeFrom: 0
-sizeTo: 10
-strokeFrom: 0
-strokeTo: 4
-}
-{
-type: WaveEffect
+particles: 12
+cone: 360
+length: 30
+line: true
+lenFrom: 6
+lenTo: 0
+lifetime: 40
+strokeFrom: 1.6
+strokeTo: 0
 colorFrom: f3e979
 colorTo: f3e979
-sizeFrom: 35
-sizeTo: 3
-sides: 0
-strokeFrom: 4
-strokeTo: 0
-lifetime: 40
 }
-]
-}
-width: 25
-height: 25
-speed: 4.5
-damage: 40
-splashDamage: 55
-splashDamageRadius: 45
-status: shocked
-statusDuration: 80
-lifetime: 51
-collidesAir: false
-absorbable: false
-hittable: false
-reflectable: false
-backColor: d99e6a
-frontColor: f3e979
-fragRandomSpread: 360
-shrinkY: 0
-shrinkX: 0
-lightning: 6
-lightningLength: 12
-lightningCone: 200
-lightningDamage: 30
-hitEffect: flakExplosionBig
-despawnEffect: flakExplosionBig
-buildingDamageMultiplier: 0.75
-fragBullets: 8
-fragBullet: {
-width: 40
-height: 25
-sprite: adc-wave-bullet
-speed: 7
-lifetime: 30
-damage: 12
+shootType: {
+type: BasicBulletType
+width: 18
+height: 18
+speed: 6
+damage: 60
 pierce: true
+pierceBuilding: true
+sprite: missile-large
+shrinkY: 0
+drag: -0.003
+keepVelocity: false
+lightRadius: 60
+lightColor: f3e979
+lightOpacity: 0.7
 backColor: f3e979
 frontColor: ffffff
+trailColor: f3e979
+lifetime: 38.4
+trailWidth: 5
+trailLength: 30
+status: golden-pollination
+hitEffect: {
+type: ParticleEffect
+particles: 12
+cone: 360
+length: 30
+line: true
+lenFrom: 6
+lenTo: 0
+lifetime: 40
+strokeFrom: 1.6
+strokeTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+despawnEffect: {
+type: ParticleEffect
+particles: 12
+cone: 360
+length: 30
+line: true
+lenFrom: 6
+lenTo: 0
+lifetime: 40
+strokeFrom: 1.6
+strokeTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+fragBullets: 2
+fragAngle: 180
+fragRandomSpread: 30
+fragOnHit: false
+fragLifeMax: 1
+fragLifeMin: 1
+fragVelocityMax: 1
+fragVelocityMin: 1
+fragBullet: {
+type: BasicBulletType
+width: 18
+height: 18
+speed: 6
+damage: 20
+pierce: true
+pierceBuilding: true
+hitEffect: {
+type: ParticleEffect
+particles: 12
+cone: 360
+length: 30
+line: true
+lenFrom: 6
+lenTo: 0
+lifetime: 40
+strokeFrom: 1.6
+strokeTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+despawnEffect: {
+type: ParticleEffect
+particles: 12
+cone: 360
+length: 30
+line: true
+lenFrom: 6
+lenTo: 0
+lifetime: 40
+strokeFrom: 1.6
+strokeTo: 0
+colorFrom: f3e979
+colorTo: f3e979
+}
+sprite: missile-large
+shrinkY: 0
+drag: -0.003
+keepVelocity: false
+lightRadius: 60
+lightColor: f3e979
+lightOpacity: 0.7
+backColor: f3e979
+frontColor: ffffff
+trailColor: f3e979
+lifetime: 38.4
+trailWidth: 5
+trailLength: 30
+status: golden-pollination
+weaveScale: 10
+weaveMag: 4
 }
 }
+envDisabled: 16
 requirements: [
-leaded-copper/315
-titanium/180
-silicon/120
-plastanium/120
-thorium/60
+dense-alloy/225
+thorium/200
+silicon/200
+globium/145
 ]

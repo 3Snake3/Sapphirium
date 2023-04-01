@@ -1,4 +1,4 @@
-health: 260
+health: 400
 reload: 35
 recoil: 2
 range: 125
@@ -7,35 +7,22 @@ power: 3
 }
 shootSound: laser
 shake: 1
-shootEffect: {
-type: MultiEffect
-effects: [lancerLaserShoot, {
-type: ParticleEffect
-cone: 8
-length: 200
-particles: 16
-sizeFrom: 3
-sizeTo: 0
-lifetime: 30
-colorFrom: a9d8ff
-colorTo: a9d8ff70
-}]
-}
+shootEffect: none
 smokeEffect: none
 targetAir: false
 category: turret
 requirements: [
-lead/35
-silicon/35
+dense-alloy/25
+lead/15
+silicon/20
 ]
 research: {
-parent: arc
-objectives: [frostbite]
+parent: frostbite
 }
 shootType: {
 type: LaserBulletType
-length: 160
-damage: 50
+length: 135
+damage: 35
 colors: [a9d8ff, a9d8ff, ffffff]
 hitEffect: hitLancer
 hitSize: 2
@@ -43,6 +30,6 @@ width: 10
 lifetime: 22
 sideAngle: -55
 sideWidth: 1.3
-status: super-freezing
-pierceCap: 2
+status: freezing
+statusDuration: 45
 }

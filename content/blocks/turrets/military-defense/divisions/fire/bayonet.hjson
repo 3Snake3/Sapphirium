@@ -91,16 +91,19 @@ effects: [blastExplosion, fireHit]
 }
 pierceCap: 2
 pierce: true
-status: adc-small-flaming
+status: sapphirium-small-flaming
 statusDuration: 120
 }
 }
 category: turret
-research: bomb-thrower
+research: {
+parent: salvo
+objectives: [creotite, creotite-converter, creostone]
+}
 requirements: [
-leaded-copper/330
-silicon/280
+dense-alloy/220
+creostone/130
 thorium/130
-creostone/136
+silicon/115
 ]
 envDisabled: 16

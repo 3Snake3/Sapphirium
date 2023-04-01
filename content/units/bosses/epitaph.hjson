@@ -1,0 +1,311 @@
+health: 240000
+hitSize: 110
+speed: 0.14
+armor: 74
+crushDamage: 80
+rotateSpeed: 0.09
+range: 160
+targetFlags: [turret, core]
+forceMultiTarget: true
+alwaysShootWhenMoving: true
+healColor: ff9c5a
+deathSound: titanExplosion
+treadFrames: 28
+groundLayer: 70.1
+parts: [
+{
+type: RegionPart
+suffix: -glow
+blending: additive
+color: ff0000
+mirror: false
+outline: false
+layer: 70.2
+}
+]
+treadRects: [
+{
+x: -200
+y: -200
+width: 133
+height: 140
+}
+]
+abilities: [
+{
+type: RegenAbility
+amount: 13.3333333
+}
+]
+immunities: [wet, freezing, burning, melting, tarred, slow, unmoving, stunne, shock-stun, muddy, sapped, electrified, spore-slowed, corroded]
+weapons: [
+{
+name: epitaph-weapon
+mirror: false
+top: false
+reload: 800
+continuous: true
+alternate: false
+shake: 6
+x: 0
+y: 0
+shootY: 35
+parentizeEffects: true
+shoot: {
+firstShotDelay: 160
+}
+parts: [
+{
+type: RegionPart
+mirror: true
+suffix: -side
+progress: heat
+moveRot: -14
+}
+]
+recoil: 0
+cooldownTime: 600
+shootSound: beam
+shootCone: 2
+shootStatusDuration: 610
+bullet: {
+type: ContinuousLaserBulletType
+damage: 75
+length: 1500
+drawSize: 420
+range: 450
+lifetime: 600
+despawnEffect: smokeCloud
+smokeEffect: none
+incendChance: 0.8
+incendSpread: 5
+incendAmount: 1
+colors: [ff9c5a, ff9c5a, ffffff, ffffff]
+}
+}
+{
+name: epitaph-railgun
+x: 0
+y: -15
+mirror: false
+reload: 600
+cooldownTime: 600
+alternate: false
+rotate: true
+rotateSpeed: 2
+recoil: 4
+shake: 5
+shootSound: railgun
+ignoreRotation: true
+shootCone: 2
+shoot: {
+shots: 6
+shotDelay: 100
+firstShotDelay: 590
+}
+bullet: {
+type: RailBulletType
+range: 120
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sides: 0
+lifetime: 30
+sizeFrom: 45
+sizeTo: 45
+strokeFrom: 3
+strokeTo: 0
+colorFrom: ffb380
+colorTo: ffb380
+}
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 50
+colorFrom: ffb380
+colorTo: ffb380
+region: sapphirium-rail-hit
+}
+]
+}
+length: 500
+pierceEffect: {
+type: MultiEffect
+effects: [
+{
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 40
+colorFrom: ffb380ff
+colorTo: ffb380ff
+region: sapphirium-pierce-effect
+}
+{
+type: WaveEffect
+sides: 0
+sizeFrom: 50
+sizeTo: 50
+strokeFrom: 3
+strokeTo: 0
+lifetime: 30
+colorFrom: ffb380ff
+colorTo: ffb380ff
+}
+]
+}
+pointEffect: {
+type: ParticleEffect
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 40
+colorFrom: ffb380ff
+colorTo: ffb380ff
+region: sapphirium-rail
+}
+hitEffect: {
+type: ExplosionEffect
+waveRad: 50
+smokeRad: 40
+smokeSize: 8
+waveLife: 15
+waveColor: ffb380ff
+sparks: 0
+}
+hitShake: 5
+collides: true
+smokeEffect: shootBig2
+damage: 500
+}
+}
+{
+name: epitaph-artillery-mount
+x: 22.5
+y: 20
+alternate: true
+reload: 60
+recoil: 4
+shake: 4
+shootSound: artillery
+rotate: true
+rotateSpeed: 5
+ignoreRotation: true
+shoot: {
+type: ShootSpread
+shots: 3
+spread: 15
+}
+bullet: {
+type: ArtilleryBulletType
+speed: 3
+lifetime: 60
+splashDamage: 220
+splashDamageRadius: 44
+knockback: 4
+backColor: eb8778
+frontColor: ffb380
+width: 18
+height: 18
+trailColor: eb8778
+collidesTiles: false
+hitEffect: {
+type: MultiEffect
+effects: [massiveExplosion, {
+type: ParticleEffect
+region: sapphirium-rail
+length: 0
+sizeFrom: 40
+sizeTo: 0
+lifetime: 20
+colorFrom: ffb380ff
+colorTo: ffb380ff
+}
+]
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 40
+waveColor: ffb380ff
+waveLife: 20
+waveStroke: 3
+sparks: 7
+sparkRad: 40
+sparkColor: ffb380ff
+sparkLen: 4
+smokes: 6
+smokeRad: 40
+smokeSize: 5
+}
+shootEffect: shootTitan
+smokeEffect: shootSmokeTitan
+}
+}
+{
+name: epitaph-minigun
+x: 34.25
+y: -14.5
+reload: 5
+rotate: true
+rotateSpeed: 4
+ignoreRotation: true
+recoil: 4
+shake: 2
+shootY: 21.25
+xRand: 13.75
+shootSound: shootBig
+parts: [
+{
+type: RegionPart
+suffix: -blade
+progress: recoil
+moveY: -3.25
+under: true
+outline: true
+mirror: true
+outlineLayerOffset: 0
+}
+{
+type: RegionPart
+suffix: -center
+progress: recoil
+moveY: -4.5
+mirror: false
+outline: true
+outlineLayerOffset: 0
+}
+]
+bullet: {
+shootEffect: shootTitan
+smokeEffect: shootSmokeTitan
+damage: 77
+speed: 12
+lifetime: 30
+range: 360
+maxRange: 360
+rangeOverride: 360
+width: 15
+height: 35
+hitEffect: flakExplosion
+despawnEffect: flakExplosion
+fragBullets: 3
+fragRandomSpread: 45
+fragBullet: {
+width: 12
+height: 12
+pierce: true
+pierceBuilding: true
+speed: 4
+damage: 20
+lifetime: 40
+hitEffect: flakExplosion
+despawnEffect: flakExplosion
+}
+}
+}
+]

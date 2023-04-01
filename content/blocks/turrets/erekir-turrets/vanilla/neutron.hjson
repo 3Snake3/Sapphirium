@@ -4,8 +4,9 @@ rotateSpeed: 1
 shootCone: 1
 reload: 230
 recoil: 4
-cooldownTime: 30
+cooldownTime: 230
 recoilTime: 0.04
+minWarmup: 0.9
 shootSound: laserblast
 range: 300
 shootEffect: {
@@ -70,12 +71,11 @@ parts: [
 {
 type: RegionPart
 suffix: "-front"
-moveX: 2
-moveY: -2
+progress: heat
+under: true
 moveRot: 0
-progress: {
-type: reload
-}
+moveX: 4
+moveY: -4
 mirror: true
 heatColor: ff0000
 }
@@ -90,7 +90,15 @@ category: turret
 requirements: [
 beryllium/430
 silicon/200
-tungsten/260
+stone/260
 surge-alloy/120
 ]
-research: reaper
+research: {
+parent: reaper
+objectives: [
+{
+type: SectorComplete
+preset: crevice
+}
+]
+}

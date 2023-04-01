@@ -1,19 +1,22 @@
-
-health: 1850
 category: power
 research: {
 parent: spore-generator
-objectives: [oil-extractor]
+objectives: [
+{
+type: SectorComplete
+preset: tarFields
 }
-researchCostMultiplier: 2
-requirements: [
-leaded-copper/650
-plastanium/300
-thorium/230
-titanium/145
-silicon/180
 ]
-powerProduction: 0.8
+}
+requirements: [
+dense-alloy/330
+globium/270
+thorium/200
+metaglass/140
+graphite/135
+silicon/135
+]
+powerProduction: 0.6
 generateEffect: {
 type: ParticleEffect
 particles: 4
@@ -22,7 +25,7 @@ sizeFrom: 5
 sizeTo: 0
 length: 25
 colorFrom: 61615b
-colorTo: 61615b70
+colorTo: 61615b75
 }
 size: 3
 ambientSound: hum

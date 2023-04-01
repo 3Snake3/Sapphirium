@@ -6,13 +6,17 @@ const strongJunction = extend(Junction, "strong-junction", {});
 
 const creostoneConveyor = extend(Conveyor, "creostone-conveyor", {});
 
+const creostoneRouter = extend(Router, "creostone-router", {});
+
+const creostoneJunction = extend(Junction, "creostone-junction", {});
+
+const creostoneBridgeConveyor = extend(BufferedItemBridge, "creostone-bridge-conveyor", {});
+
 const globiumConveyor = extend(ArmoredConveyor, "globium-conveyor", {});
 
 const globiumStackConveyor = extend(StackConveyor, "globium-stack-conveyor", {
 	speed: 6 / 60
 });
-
-const creostoneBridgeConveyor = extend(BufferedItemBridge, "creostone-bridge-conveyor", {});
 
 const massBullet = extend(MassDriverBolt, {
 	draw(b){
@@ -31,8 +35,11 @@ const massBullet = extend(MassDriverBolt, {
     hitEffect: Fx.none,
     collides: false,
 });
+
+
 const teleporter = extend(MassDriver, "teleporter", {
-bullet: massBullet
+bullet: massBullet,
+envDisabled: Env.scorching
 });
 
 const massDriver = extend(MassDriver, "compact-driver", {});

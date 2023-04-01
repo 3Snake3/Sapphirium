@@ -51,7 +51,7 @@ canOverdrive: false
 
 category: turret
 requirements: [
-beryllium/135
+stone/135
 silicon/65
 oxide/85
 ]
@@ -61,4 +61,10 @@ basePrefix: "reinforced-"
 }
 research: {
 parent: conductor
+objectives: [oxidation-chamber, 
+{
+type: OnSector
+preset: marsh
+}
+]
 }

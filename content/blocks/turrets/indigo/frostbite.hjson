@@ -2,7 +2,7 @@ reload: 45
 recoil: 2
 range: 100
 inaccuracy: 8
-health: 160
+health: 260
 shootSound: missile
 ammoTypes: {
 ice-cube: {
@@ -15,8 +15,8 @@ lifetime: 30
 drag: -0.003
 splashDamage: 10
 splashDamageRadius: 15
-status: freezing
-statusDuration: 60
+status: wet
+statusDuration: 35
 homingPower: 0.1
 homingRange: 45
 weaveScale: 3
@@ -45,13 +45,14 @@ homingPower: 0.1
 homingRange: 30
 hitEffect: flakExplosion
 despawnEffect: flakExplosion
-status: freezing
+status: wet
+statusDuration: 35
 }
 }
 }
 category: turret
 requirements: [
-copper/30
-lead/30
+dense-alloy/25
+lead/25
 ]
 research: duo

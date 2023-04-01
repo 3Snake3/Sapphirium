@@ -17,20 +17,23 @@ heatColor: FEFF00
 drawRim: true
 
 requirements: [
-  leaded-copper/3600
-  silicon/2300
-  titanium/1350
-  plastanium/600
+  globium/880
+  diamond/680
+  thorium/600
+  silicon/645
+  charged-cylinder/380
   surge-alloy/300
-  light-crystall/180
 ]
 
 consumes: {
-  power: 25
+  power: 80
   liquid: {
     liquid: ledonite-liquid
     amount: 1.5
   }
 }
 
-research: blast-drill
+research: {
+parent: lightning-drill
+objectives: [impulse-kinetic-smelter]
+}

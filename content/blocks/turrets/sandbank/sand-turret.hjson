@@ -39,7 +39,7 @@ collidesTiles: false
 lifetime: 60
 speed: 3
 collidesAir: false
-status: adc-flammability
+status: sapphirium-flammability
 statusDuration: 20
 ammoMultiplier: 5
 reloadMultiplier: 0.8
@@ -64,10 +64,10 @@ rotateSpeed: 8
 shootCone: 25
 shootSound: bang
 requirements: [
-copper/50
-graphite/30
+dense-alloy/35
+graphite/25
 ]
 envDisabled: 16
 category: turret
 research: hail
-health: 200
+health: 220
