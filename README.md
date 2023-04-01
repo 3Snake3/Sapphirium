@@ -25,7 +25,7 @@ Kostolom - Balance maker, map maker, source of ideas. Discord profile `kostolom#
 
 # Factions
 `Crimson Agate` - The scarlet-black faction that developed the «Bloodrage» software virus. Uses ruby as the main resource.
-<br>`Indigo` - Frosty fraction of blue-white flowers. Founds all frost technologies.
+<br>`Indigo` - Frosty fraction of blue-white colors. Founds all frost technologies.
 <br>`Military Defense` - A fraction divided into color divisions. Each division implies its own type of weapons. Orange - Fire, Yellow - Electricity, Blue - Water, Purple - Shadow, White - Light, Green - Acidic or Ionic.
 <br>`Golden Thread` - A faction of holy forces consisting of white, gold and black colors.
 <br>`Beam` - Electric power fraction consisting of white and yellow colors. It has put into circulation products called «Charged Resources».

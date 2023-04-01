@@ -3,6 +3,6 @@ displayName: "Sapphirium"
 description: "Adds several new factions that include their own unique content. Uses some java classes."
 author: "Snake"
 minGameVersion: "136"
-version: "16.0 beta"
+version: "16.0"
 main: "adc.AdcMod"
 java: true
