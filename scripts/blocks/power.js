@@ -31,7 +31,7 @@ const hiddenPowerNode = extend(PowerNode, "hidden-node", {});
 
 const creostonePowerNode = extend(PowerNode, "creostone-power-node", {});
 const creostonePowerNodeLarge = extend(PowerNode, "creostone-power-node-large", {});
-const creostoneBattery = extend(Wall, "creostone-battery", {
+const creostoneBattery = extend(Battery, "creostone-battery", {
 envDisabled: Env.scorching,
 });
 const creostonePowerTower = extend(PowerNode, "creostone-power-tower", {});
