@@ -104,9 +104,9 @@ trident.constructor = () => extend(UnitEntity, {});
 const harpoon = extend(UnitType, "harpoon", {});
 harpoon.constructor = () => extend(UnitEntity, {});
 
-const lambda = extend(UnitType, "lambda", {
-});
+const lambda = extend(UnitType, "lambda", {});
 lambda.constructor = () => extend(UnitEntity, {});
+lambda.aiController = () => extend(BuilderAI, {});
 
 const snowflake = extend(UnitType, "snowflake", {});
 snowflake.constructor = () => extend(UnitEntity, {});
