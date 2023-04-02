@@ -13,7 +13,7 @@ health: 320
 engineOffset: 8
 engineSize: 4
 hitSize: 15
-controller: BuilderAI
+defaultController: BuilderAI
 weapons: [{
 name: small-basic-weapon
 reload: 10
