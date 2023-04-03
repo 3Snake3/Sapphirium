@@ -13,7 +13,7 @@ Kostolom - Balance maker, map maker, source of ideas. Discord profile `kostolom#
 <br>Laim - Spriter, map maker, a small helper with a code. Discord profile `LaIm-Ik.json#5237`
 <br>Liplum - Java coder. Discord profile `Liplum#2623`
 <br>Ferret Fantasy - Spriter. Discord profile `sundered#8134`
-<br>Mr.Shramberg - A small script helper. Discord profile `ADG021222#7589`
+<br>Dr.Shramberg - A small script helper. Discord profile `ADG021222#7589`
 <br>Fox1va - A small helper. Discord profile `Fox1va_#3532`
 <br>Vervalamis - Spriter. Discord profile `Saigo no-nozomi#1206`
 <br>

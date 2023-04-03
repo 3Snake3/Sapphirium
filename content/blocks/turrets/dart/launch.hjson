@@ -19,7 +19,7 @@ silicon/120
 shootSound: missile
 shootEffect: shootBig
 smokeEffect: shootBigSmoke
-reload: 12
+reload: 15
 shootCone: 25
 recoil: 4
 ammoUseEffect: casing3
@@ -62,7 +62,7 @@ ammoMultiplier: 1.5
 reloadMultiplier: 0.85
 homingRange: 60
 pierce: true
-pierceCap: 3
+pierceCap: 1
 knockback: 0.8
 weaveScale: 3
 weaveMag: 3
@@ -82,7 +82,7 @@ lifetime: 43
 ammoMultiplier: 2.5
 reloadMultiplier: 1.15
 pierce: true
-pierceCap: 2
+pierceCap: 1
 backColor: f68021
 frontColor: f8ad42
 status: burning
@@ -107,7 +107,7 @@ lifetime: 43
 reloadMultiplier: 1.25
 knockback: 0.7
 pierce: true
-pierceCap: 3
+pierceCap: 1
 pierceBuilding: true
 hitEffect: flakExplosion
 despawnHit: true
@@ -166,7 +166,7 @@ lifetime: 43
 ammoMultiplier: 3
 reloadMultiplier: 1.1
 pierce: true
-pierceCap: 4
+pierceCap: 1
 status: slow
 statusDuration: 80
 homingPower: 1
@@ -190,7 +190,7 @@ lifetime: 45
 ammoMultiplier: 4
 reloadMultiplier: 0.75
 pierce: true
-pierceCap: 5
+pierceCap: 1
 inaccuracy: 12
 knockback: 1.2
 weaveScale: 5
@@ -221,7 +221,7 @@ backColor: bd5553
 frontColor: ffb380
 homingRange: 30
 pierce: true
-pierceCap: 5
+pierceCap: 1
 weaveScale: 6
 weaveMag: 3
 }
