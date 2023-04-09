@@ -6,14 +6,14 @@ shootEffect: shootBigColor
 smokeEffect: shootBigSmoke
 shootSound: shootBig
 shootCone: 60
-inaccuracy: 16
+inaccuracy: 18
 shake: 4
 shoot: {
 type: ShootAlternate
 spread: 7
 barrels: 5
 }
-ammoPerShot: 4
+ammoPerShot: 3
 health: 2740
 range: 580
 minRange: 200
@@ -25,7 +25,7 @@ width: 16
 height: 16
 sprite: sapphirium-dartt
 speed: 10
-damage: 15
+damage: 25
 lifetime: 58
 splashDamage: 35
 splashDamageRadius: 30
@@ -60,7 +60,7 @@ width: 16
 height: 16
 sprite: sapphirium-dartt
 speed: 10
-damage: 30
+damage: 40
 lifetime: 58
 splashDamage: 45
 weaveScale: 8
@@ -111,7 +111,7 @@ colorTo: 565666
 speed: 10
 weaveScale: 8
 weaveMag: 3
-damage: 25
+damage: 45
 lifetime: 58
 splashDamage: 60
 splashDamageRadius: 40
@@ -135,7 +135,7 @@ width: 16
 height: 16
 sprite: sapphirium-dartt
 speed: 10
-damage: 38
+damage: 48
 lifetime: 58
 weaveScale: 8
 weaveMag: 3

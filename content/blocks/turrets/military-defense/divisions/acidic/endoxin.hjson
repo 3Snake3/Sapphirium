@@ -131,9 +131,9 @@ lifetime: 90.75
 weaveScale: 6
 weaveMag: 3
 damage: 0
-splashDamage: 100
+splashDamage: 110
 splashDamageRadius: 21
-reloadMultiplier: 0.75
+reloadMultiplier: 0.55
 ammoMultiplier: 4
 homingPower: 0.1
 homingRange: 80

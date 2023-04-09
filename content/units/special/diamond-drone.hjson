@@ -34,7 +34,7 @@ ejectEffect: casing1
 bullet: {
 type: BasicBulletType
 speed: 10
-damage: 7
+damage: 24
 pierceArmor: true
 lifetime: 20
 range: 200

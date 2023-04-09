@@ -7,7 +7,6 @@ parent: cast
 requirements: [
 dense-alloy/140
 graphite/100
-titanium/80
 ]
 health: 960
 range: 200

@@ -1,4 +1,4 @@
-reload: 20
+reload: 24
 health: 260
 recoil: 2
 rotateSpeed: 8
@@ -15,7 +15,7 @@ width: 9
 height: 13
 speed: 6
 lifetime: 16
-damage: 34
+damage: 27
 hitEffect: {
 type: ExplosionEffect
 waveRad: 4

@@ -746,7 +746,7 @@ loopSound: Sounds.beam,
 loopSoundVolume: 0.8,
 shootType: contLaser,
 });
-infiniteLSA.consumePower(8);
+infiniteLSA.consumePower(5);
 
 const goldHorn = extend(PowerTurret, "gold-horn", {});
 

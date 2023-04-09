@@ -31,8 +31,8 @@ width: 15
 height: 15
 speed: 4
 lifetime: 81.25
-damage: 85
-splashDamage: 88
+damage: 55
+splashDamage: 76
 splashDamageRadius: 24
 status: acid-corrosion
 statusDuration: 60
