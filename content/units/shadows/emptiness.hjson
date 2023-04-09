@@ -113,6 +113,7 @@ knockback: -1.5
 color: a488eb
 sapStrength: 0
 rangeOverride: 100
+maxRange: 100
 }
 }
 {
@@ -149,6 +150,7 @@ damage: 37
 width: 20
 lifetime: 20
 rangeOverride: 100
+maxRange: 100
 }
 }
 ]

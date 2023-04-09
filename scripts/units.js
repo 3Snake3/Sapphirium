@@ -27,8 +27,8 @@ shadow.constructor = () => extend(MechUnit, {});
 const Void = extend(UnitType, "void", {});
 Void.constructor = () => extend(MechUnit, {});
 
-const nigil = extend(UnitType, "nigil", {});
-nigil.constructor = () => extend(MechUnit, {});
+const nihil = extend(UnitType, "nihil", {});
+nihil.constructor = () => extend(MechUnit, {});
 
 const beam = extend(UnitType, "beam", {});
 beam.constructor = () => extend(UnitEntity, {});

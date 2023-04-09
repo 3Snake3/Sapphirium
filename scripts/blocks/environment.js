@@ -18,7 +18,7 @@ const oreDiamond = extend(OreBlock, "ore-diamond", {});
 
 const oreCreostone = extend(OreBlock, "ore-creostone", {});
 
-const ledoniteSelections = extend(Floor, "ledonite-selections", {});
+const ledoniteSecretions = extend(Floor, "ledonite-secretions", {});
 
 const rubyGrowths = extend(Wall, "ruby-growths", {});
 
@@ -28,6 +28,10 @@ variants: 4
 
 const markingWall = extend(StaticWall, "marking-wall", {
 variants: 3
+});
+
+const plateWall = extend(StaticWall, "plate-wall", {
+variants: 2
 });
 
 const sapphiricWall = extend(StaticWall, "sapphiric-wall", {});

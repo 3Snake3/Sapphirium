@@ -3,14 +3,14 @@ engineColor: 84f591
 engineSize: 2.75
 engineLayer: 110
 engineOffset: 6.25
-speed: 2.8
+speed: 1.8
 flying: true
 outlineColor: 565666
 targetable: false
 isEnemy: false
 faceTarget: false
 circleTarget: true
-health: 287
+hitSize: 6
 playerControllable: false
 logicControllable: false
 targetFlags: [turret]
@@ -18,9 +18,9 @@ weapons: [
 {
 shootCone: 360
 mirror: false
-reload: 359
+reload: 10
 shoot: {
-firstShotDelay: 358
+firstShotDelay: 9
 }
 shootOnDeath: true
 shootSound: plasmaboom
