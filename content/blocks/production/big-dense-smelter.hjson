@@ -7,8 +7,8 @@ silicon/120
 category: crafting
 craftEffect: smeltsmoke
 updateEffect: smoke
-outputItem: dense-alloy/5
-outputLiquid: slag/0.125
+outputItem: dense-alloy/6
+outputLiquid: slag/0.2
 craftTime: 64
 size: 3
 hasPower: true

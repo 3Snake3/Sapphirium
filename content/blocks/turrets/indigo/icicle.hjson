@@ -1,7 +1,7 @@
 health: 400
-reload: 35
+reload: 42
 recoil: 2
-range: 125
+range: 75
 consumes: {
 power: 3
 }
@@ -22,7 +22,7 @@ parent: frostbite
 shootType: {
 type: LaserBulletType
 length: 135
-damage: 35
+damage: 28
 colors: [a9d8ff, a9d8ff, ffffff]
 hitEffect: hitLancer
 hitSize: 2

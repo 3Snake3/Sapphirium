@@ -15,11 +15,12 @@ requirements: [
 dense-alloy/325
 titanium/225
 silicon/120
+plastanium/15
 ]
 shootSound: missile
 shootEffect: shootBig
 smokeEffect: shootBigSmoke
-reload: 15
+reload: 18
 shootCone: 25
 recoil: 4
 ammoUseEffect: casing3
@@ -71,8 +72,8 @@ despawnEffect: blastExplosion
 }
 pyratite: {
 type: MissileBulletType
-splashDamage: 40
-splashDamageRadius: 35
+splashDamage: 25
+splashDamageRadius: 17
 homingRange: 70
 width: 12
 height: 15
@@ -96,8 +97,8 @@ weaveMag: 4
 }
 metaglass: {
 type: MissileBulletType
-splashDamage: 25
-splashDamageRadius: 40
+splashDamage: 17
+splashDamageRadius: 30
 homingRange: 70
 width: 12
 height: 15
@@ -136,10 +137,10 @@ blast-compound: {
 width: 12
 height: 15
 type: MissileBulletType
-splashDamage: 55
-splashDamageRadius: 45
+splashDamage: 45
+splashDamageRadius: 50
 homingRange: 70
-damage: 20
+damage: 10
 speed: 7
 lifetime: 43
 ammoMultiplier: 3
@@ -158,8 +159,8 @@ width: 12
 height: 15
 damage: 25
 type: MissileBulletType
-splashDamage: 38
-splashDamageRadius: 35
+splashDamage: 20
+splashDamageRadius: 24
 speed: 7
 knockback: 0.6
 lifetime: 43
@@ -181,8 +182,8 @@ thorium: {
 width: 12
 height: 15
 type: MissileBulletType
-splashDamage: 45
-splashDamageRadius: 40
+splashDamage: 25
+splashDamageRadius: 20
 homingRange: 70
 damage: 40
 speed: 7
@@ -202,12 +203,12 @@ creostone: {
 width: 12
 height: 15
 type: MissileBulletType
-splashDamage: 65
-splashDamageRadius: 50
+splashDamage: 45
+splashDamageRadius: 30
 homingRange: 70
 speed: 7
 lifetime: 45
-damage: 60
+damage: 4 0
 ammoMultiplier: 5
 reloadMultiplier: 0.5
 knockback: 1.5

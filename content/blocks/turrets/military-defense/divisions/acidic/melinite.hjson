@@ -33,7 +33,7 @@ lifetime: 50
 damage: 5
 splashDamage: 12
 sprite: sapphirium-acid-bullet
-splashDamageRadius: 30
+splashDamageRadius: 15
 hitSound: plasmaboom
 hitShake: 1
 trailWidth: 2
