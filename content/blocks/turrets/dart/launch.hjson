@@ -208,7 +208,7 @@ splashDamageRadius: 30
 homingRange: 70
 speed: 7
 lifetime: 45
-damage: 4 0
+damage: 40
 ammoMultiplier: 5
 reloadMultiplier: 0.5
 knockback: 1.5
