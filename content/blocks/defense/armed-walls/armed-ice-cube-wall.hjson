@@ -20,7 +20,9 @@ shots: 2
 shotDelay: 6
 }
 group: walls
-
+consumes: {
+power: 0.4
+}
 shootEffect: {
 type: MultiEffect
 effects: [shootSmall,
