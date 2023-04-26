@@ -5,7 +5,7 @@ dense-alloy/345
 thorium/225
 ]
 health: 695
-itemCapacity: 5000
+itemCapacity: 4000
 category: effect
 size: 3
 research: {

@@ -8,9 +8,9 @@ category: effect
 size: 3
 phaseRadiusBoost: 70
 radius: 250
-shieldHealth: 2100
-cooldownNormal: 8
-cooldownLiquid: 6
+shieldHealth: 1800
+cooldownNormal: 18
+cooldownLiquid: 10
 cooldownBrokenBase: 2
 research: {
 parent: force-projector

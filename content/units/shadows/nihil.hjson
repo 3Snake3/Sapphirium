@@ -3,7 +3,7 @@ health: 21000
 speed: 0.2
 rotateSpeed: 2.3
 hitSize: 32
-armor: 19
+armor: 21
 mechStepParticles: true
 stepShake: 1.2
 drownTimeMultiplier: 12
@@ -135,8 +135,8 @@ shootCone: 360
 shootSound: plasmaboom
 bullet: {
 type: ExplosionBulletType
-splashDamage: 800
-splashDamageRadius: 24
+splashDamage: 1600
+splashDamageRadius: 36
 shootEffect: [
 {
 type: WaveEffect
@@ -168,7 +168,7 @@ colorTo: c093fa75
 name: nihil-claws
 x: 0
 y: 0
-reload: 20
+reload: 15
 recoil: -24
 top: false
 alternate: true
@@ -209,7 +209,7 @@ type: ShrapnelBulletType
 length: 8
 width: 0
 serrations: 0
-damage: 375
+damage: 280
 hitColor: 240935FF
 status: slow
 hitSound: malignShoot
@@ -226,7 +226,7 @@ x: 0
 y: 0
 shootX: 0
 shootY: 0
-reload: 60
+reload: 40
 recoil: 0
 top: false
 mirror: false
@@ -234,9 +234,9 @@ shootSound: sap
 shootCone: 2
 bullet: {
 type: SapBulletType
-length: 140
+length: 170
 color: a488eb
-damage: 20
+damage: 80
 knockback: -20
 lifetime: 15
 hitColor: a488eb

@@ -10,7 +10,7 @@ translation: 5
 bulletLifetime: 100
 shake: 0
 shootSound: none
-itemCapacity: 20
+itemCapacity: 40
 smokeEffect: none
 receiveEffect: {
 type: WaveEffect

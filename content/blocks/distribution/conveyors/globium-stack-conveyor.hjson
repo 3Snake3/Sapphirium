@@ -5,8 +5,8 @@ plastanium/1
 ledonite-cube/1
 ]
 category: distribution
-health: 125
-itemCapacity: 25
+health: 145
+itemCapacity: 6
 loadEffect: {
 type: ParticleEffect
 particles: 4

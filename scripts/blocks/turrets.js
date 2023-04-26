@@ -271,7 +271,7 @@ yellowLaserCharge.rotWithParent = true;
 const pierceLaser = extend(LaserBulletType, {
 	length: 310,
 	colors: [Pal.surge, Pal.surge, Color.white],
-	damage: 200,
+	damage: 130,
 	lifetime: 65,
 	buildingDamageMultiplier: 0.1,
 	lightColor: Pal.surge,
@@ -280,7 +280,7 @@ const pierceLaser = extend(LaserBulletType, {
 	lightningLength: 4,
 	lightningLengthRand: 10,
 	width: 30,
-	lightningDamage: 30,
+	lightningDamage: 40,
 	lightningAngleRand: 40,
 	lightningDelay: 1.1,
 	chargeEffect: yellowLaserCharge,
@@ -299,32 +299,32 @@ pierce.buildType = () => extend(PowerTurret.PowerTurretBuild, pierce, {
 
         if(shooting)
         {
-            if(this.creload % 410 == 0 && this.creload != 450 && this.creload != 470 && this.creload != 480)
+            if(this.creload % 400 == 0 && this.creload != 800 && this.creload != 1200 && this.creload != 1600)
             {
                 pierceLaser.create(this, this.team, this.x, this.y, this.rotation);
                 Sounds.laserblast.at(this);
                 this.creload += 1;
             
             }
-            else if(this.creload == 450)
+            else if(this.creload == 800)
             {
                 pierceLaser.create(this, this.team, this.x, this.y, this.rotation);
                 Sounds.laserblast.at(this);
                 this.creload += 1;
             }
-            else if(this.creload == 470)
+            else if(this.creload == 1200)
             {
                 pierceLaser.create(this, this.team, this.x, this.y, this.rotation);
                 Sounds.laserblast.at(this);
                 this.creload += 1;
             }
-            else if(this.creload == 480)
+            else if(this.creload == 1300)
             {
                 pierceLaser.create(this, this.team, this.x, this.y, this.rotation);
                 Sounds.laserblast.at(this);
                 this.creload += 1;
             }
-            else if(this.creload >= 480)
+            else if(this.creload >= 1300)
             {
                 this.creload = 0
             }

@@ -23,7 +23,7 @@ rotateSpeed: 1.5
 range: 300
 health: 3200
 recoil: 4
-reload: 350
+reload: 400
 chargeSound: lasercharge
 consumes: {
 power: 24
