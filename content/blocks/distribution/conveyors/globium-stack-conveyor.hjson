@@ -6,7 +6,7 @@ ledonite-cube/1
 ]
 category: distribution
 health: 145
-itemCapacity: 6
+itemCapacity: 16
 loadEffect: {
 type: ParticleEffect
 particles: 4

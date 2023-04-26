@@ -4,13 +4,13 @@ hasPower: true
 range: 7000
 size: 2
 reload: 1
-bulletSpeed: 100
+bulletSpeed: 120
 minDistribute: 1
 translation: 5
 bulletLifetime: 100
 shake: 0
 shootSound: none
-itemCapacity: 40
+itemCapacity: 20
 smokeEffect: none
 receiveEffect: {
 type: WaveEffect
