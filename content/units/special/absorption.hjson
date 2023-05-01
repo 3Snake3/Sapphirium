@@ -8,7 +8,7 @@ regen: 11.16
 max: 670
 cooldown: 300
 width: 12
-y: -20
+y: -16
 }
 {
 type: StatusFieldAbility
