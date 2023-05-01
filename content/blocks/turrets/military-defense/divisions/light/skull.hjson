@@ -5,12 +5,13 @@ requirements: [
 globium/1000
 thorium/645
 diamond/400
-silicon/400
+silicon/350
 surge-alloy/330
 ]
 health: 3200
 range: 612
 ammoPerShot: 12
+envDisabled: 16
 maxAmmo: 40
 reload: 450
 recoil: 5

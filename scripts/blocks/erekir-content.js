@@ -41,32 +41,11 @@ const disarmament = extend(ItemTurret, "disarmament", {});
 const aspiration = extend(ItemTurret, "aspiration", {});
 const suffocation = extend(ItemTurret, "suffocation", {});
 suffocation.envDisabled = Env.spores | Env.groundOil | Env.groundWater | Env.oxygen;
-const composureFactory = extend(DroneCenter, "composure-factory", {
-	status: StatusEffects.none,
-	droneRange: 140,
-	droneConstructTime: 60,
-	configurable: false,
-	init(){
-		this.super$init();
-		this.droneType.aiController = () => extend(FlyingAI, {});
-		},
-	});
 const branch = extend(PowerTurret, "branch", {});
 const silence = extend(ItemTurret, "silence", {});
 const crackle = extend(ItemTurret, "crackle", {});
 const tranquilizer = extend(PowerTurret, "tranquilizer", {});
 const corkscrew = extend(PowerTurret, "corkscrew", {});
-const mourningFactory = extend(DroneCenter, "mourning-factory", {
-	status: StatusEffects.none,
-	droneRange: 140,
-	droneConstructTime: 60,
-	configurable: false,
-	init(){
-		this.super$init();
-		this.droneType.aiController = () => extend(FlyingAI, {});
-		},
-	});
-mourningFactory.envDisabled = Env.spores | Env.groundOil | Env.groundWater | Env.oxygen;
 const crucifix = extend(PowerTurret, "crucifix", {});
 const attraction = extend(ItemTurret, "attraction", {});
 const balance = extend(LiquidTurret, "balance", {});

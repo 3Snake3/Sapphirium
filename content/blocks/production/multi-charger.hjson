@@ -2,6 +2,7 @@ type: multicraft.MultiCrafter
 craftEffect: smeltsmoke
 category: crafting
 menu: transform
+envDisabled: 16
 recipes: [
 {
 input: {

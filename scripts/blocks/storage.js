@@ -114,6 +114,7 @@ coreCage.buildType = () => extend(CoreBlock.CoreBuild, coreCage, {
     });
 
 const creostoneStorage = extend(StorageBlock, "creostone-storage", {});
+creostoneStorage.envDisabled = Env.scorching;
     
 const scarlet = extend(CoreBlock, "scarlet-gem", {
 	health: 3400,
@@ -256,3 +257,4 @@ this.stats.add(Stat.buildTime, this.buildCost / 60, StatUnit.seconds);
 const victory = extend(CoreBlock, "core-victory", {});
 
 const triumph = extend(CoreBlock, "core-triumph", {});
+triumph.envDisabled = Env.scorching;
