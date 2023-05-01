@@ -1016,7 +1016,7 @@ adynamia.buildType = () => extend(ItemTurret.ItemTurretBuild, adynamia, {
             }
             else if(this.creload == 1081)
             {
-                absorbtion.spawn(this.team, this.x, this.y);
+                absorption.spawn(this.team, this.x, this.y);
                 this.creload += 1
             }
             else if(this.creload >= 1081)
