@@ -194,6 +194,7 @@ const toxin = extend(PowerTurret, "toxin", {});
 const reagent = extend(ItemTurret, "reagent", {});
 
 const endoxin = extend(ItemTurret, "endoxin", {});
+endoxin.envDisabled = Env.scorching;
 
 const corroding = extend(ItemTurret, "corroding", {
 shootLength: 1,
@@ -413,9 +414,10 @@ const saw = extend(BasicBulletType, {
     }
 });
 
-const sandT = extend(ItemTurret, "sand-turret", {});
+const sandTurret = extend(ItemTurret, "sand-turret", {});
 
-const sandTh = extend(ItemTurret, "sand-thrower", {});
+const sandThrower = extend(ItemTurret, "sand-thrower", {});
+sandThrower.envDisabled = Env.scorching;
 
 const dune = extend(ItemTurret, "dune", {});
 
@@ -424,6 +426,7 @@ const pyramid = extend(ItemTurret, "pyramid", {});
 const cast = extend(ItemTurret, "cast", {});
 
 const thrower = extend(ItemTurret, "thrower", {});
+thrower.envDisabled = Env.scorching;
 
 const speed = extend(ItemTurret, "speed", {});
 
@@ -617,6 +620,7 @@ setStats(){
     },
    shootY: -3.75
 });
+aorta.envDisabled = Env.scorching;
 aorta.buildType = () => extend(ItemTurret.ItemTurretBuild, aorta, {
     creload : 0,
     updateTile()
@@ -834,6 +838,7 @@ setStats(){
         this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, leftBullet)));
     }
 });
+brazier.envDisabled = Env.scorching;
 brazier.buildType = () => extend(ContinuousLiquidTurret.ContinuousLiquidTurretBuild, brazier, {
     creload : 0,
     updateTile(){
@@ -952,8 +957,9 @@ trembling.buildType = () => extend(PowerTurret.PowerTurretBuild, trembling, {
 });
 
 const decay = extend(ItemTurret, "decay", {});
+decay.envDisabled = Env.scorching;
 
-const shieldUnit = extend(UnitType, "shield-unit", {
+const absorption = extend(UnitType, "absorption", {
 	speed: 0,
 	hitSize: 0,
 	health: 720,
@@ -970,7 +976,7 @@ const shieldUnit = extend(UnitType, "shield-unit", {
 	targetable: false,
     hittable: false,
 });
-shieldUnit.constructor = () => extend(UnitEntity, {});
+absorption.constructor = () => extend(UnitEntity, {});
 
 const middleLaser = extend(LaserBulletType, {
 	damage: 25,
@@ -1010,7 +1016,7 @@ adynamia.buildType = () => extend(ItemTurret.ItemTurretBuild, adynamia, {
             }
             else if(this.creload == 1081)
             {
-                shieldUnit.spawn(this.team, this.x, this.y);
+                absorption.spawn(this.team, this.x, this.y);
                 this.creload += 1
             }
             else if(this.creload >= 1081)
@@ -1054,6 +1060,7 @@ setStats(){
         this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, fireBullet)));
     }
 });
+flame.envDisabled = Env.scorching;
 flame.buildType = () => extend(ItemTurret.ItemTurretBuild, flame, {
     creload : 0,
     updateTile(){
@@ -1176,8 +1183,10 @@ shine.buildType = () => extend(ItemTurret.ItemTurretBuild, shine, {
 });
 
 const skull = extend(ItemTurret, "skull", {});
+skull.envDisabled = Env.scorching;
 
 const draw = extend(ItemTurret, "draw", {});
+draw.envDisabled = Env.scorching;
 
 const pulse = extend(PowerTurret, "pulse", {});
 

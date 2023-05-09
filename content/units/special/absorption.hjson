@@ -2,13 +2,13 @@ abilities: [
 {
 type: ShieldArcAbility
 radius: 24
-angle: 270
-region: sapphirium-shield-unit-shield
+angle: 83
+region: sapphirium-absorption-shield
 regen: 11.16
 max: 670
 cooldown: 300
-width: 20
-y: 2
+width: 12
+y: -16
 }
 {
 type: StatusFieldAbility

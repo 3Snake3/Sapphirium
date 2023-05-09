@@ -23,9 +23,13 @@ const emeraldDrill = extend(GenericCrafter, "emerald-drill", {});
 const thoriumMine = extend(AttributeCrafter, "thorium-mine", {});
 
 const rubyDrill = extend(GenericCrafter, "ruby-drill", {});
+rubyDrill.envDisabled = Env.scorching;
 
 const creostoneDrill = extend(Drill, "creostone-drill", {});
+creostoneDrill.envDisabled = Env.scorching;
 
 const lightningDrill = extend(Drill, "lightning-drill", {});
+lightningDrill.envDisabled = Env.scorching;
 
 const lightDrillingRig = extend(Drill, "light-drilling-rig", {});
+lightDrillingRig.envDisabled = Env.scorching;
