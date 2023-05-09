@@ -13,7 +13,7 @@ type: ShootAlternate
 spread: 7
 barrels: 5
 }
-ammoPerShot: 3
+ammoPerShot: 4
 health: 2740
 range: 580
 minRange: 200
@@ -111,10 +111,10 @@ colorTo: 565666
 speed: 10
 weaveScale: 8
 weaveMag: 3
-damage: 45
+damage: 25
 lifetime: 58
-splashDamage: 60
-splashDamageRadius: 40
+splashDamage: 68
+splashDamageRadius: 35
 hitShake: 4
 trailChance: 0.8
 status: super-melting
@@ -135,13 +135,13 @@ width: 16
 height: 16
 sprite: sapphirium-dartt
 speed: 10
-damage: 48
+damage: 38
 lifetime: 58
 weaveScale: 8
 weaveMag: 3
 trailChance: 0.8
-splashDamage: 64
-splashDamageRadius: 40
+splashDamage: 56
+splashDamageRadius: 27
 trailEffect: [missileTrail,
 {
 particles: 3
