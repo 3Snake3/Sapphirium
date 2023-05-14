@@ -108,9 +108,9 @@ height: 15
 lifetime: 80
 collidesTiles: false
 ammoMultiplier: 6
-splashDamageRadius: 48
-splashDamage: 48
-reloadMultiplier: 1.4
+splashDamageRadius: 37
+splashDamage: 40
+reloadMultiplier: 1.1
 homingPower: 0.1
 homingRange: 58
 status: super-melting
@@ -119,7 +119,7 @@ statusDuration: 20
 surge-stone: {
 type: ArtilleryBulletType
 speed: 1.5
-damage: 35
+damage: 65
 sprite: shell
 hitEffect: blastExplosion
 knockback: 0.9
@@ -128,9 +128,9 @@ height: 15
 lifetime: 85
 collidesTiles: false
 ammoMultiplier: 6
-splashDamageRadius: 44
-splashDamage: 65
-reloadMultiplier: 1.8
+splashDamageRadius: 55
+splashDamage: 25
+reloadMultiplier: 1.3
 lightning: 2
 lightningLength: 7
 }
