@@ -113,8 +113,8 @@ weaveScale: 8
 weaveMag: 3
 damage: 25
 lifetime: 58
-splashDamage: 68
-splashDamageRadius: 35
+splashDamage: 64
+splashDamageRadius: 32
 hitShake: 4
 trailChance: 0.8
 status: super-melting
@@ -135,7 +135,7 @@ width: 16
 height: 16
 sprite: sapphirium-dartt
 speed: 10
-damage: 38
+damage: 28
 lifetime: 58
 weaveScale: 8
 weaveMag: 3
@@ -166,7 +166,7 @@ hitEffect: blastExplosion
 despawnEffect: blastExplosion
 homingPower: 0.1
 homingRange: 80
-lightning: 3
+lightning: 2
 lightningLength: 8
 lightningColor: f3e979
 }

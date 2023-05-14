@@ -108,7 +108,7 @@ height: 15
 lifetime: 80
 collidesTiles: false
 ammoMultiplier: 6
-splashDamageRadius: 35
+splashDamageRadius: 37
 splashDamage: 40
 reloadMultiplier: 1.1
 homingPower: 0.1

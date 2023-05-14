@@ -66,7 +66,7 @@ ammoMultiplier: 4
 creostone: {
 type: BasicBulletType
 speed: 3
-damage: 29
+damage: 28
 sprite: shell
 width: 11
 height: 14
@@ -81,8 +81,8 @@ ammoMultiplier: 4
 reloadMultiplier: 0.6
 status: super-melting
 statusDuration: 20
-splashDamage: 10
-splashDamageRadius: 14
+splashDamage: 12
+splashDamageRadius: 15
 pierce: true
 pierceCap: 1
 }
