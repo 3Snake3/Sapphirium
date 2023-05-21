@@ -118,12 +118,6 @@ observer.constructor = () => extend(PayloadUnit, {});
 const energySphere = extend(ErekirUnitType, "energy-sphere", {});
 energySphere.constructor = () => extend(BuildingTetherPayloadUnit, {});
 
-const composure = extend(ErekirUnitType, "composure", {});
-composure.constructor = () => extend(BuildingTetherPayloadUnit, {});
-
-const mourning = extend(ErekirUnitType, "mourning", {});
-mourning.constructor = () => extend(BuildingTetherPayloadUnit, {});
-
 const fatum = extend(ErekirUnitType, "fatum", {});
 fatum.constructor = () => extend(LegsUnit, {});
 
