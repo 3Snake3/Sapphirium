@@ -47,6 +47,13 @@ Kostolom - Balance maker, map maker, source of ideas. Discord profile `kostolom#
 ![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/preview.png)
 ![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/preview1.png)
 ![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/preview3.png)
+![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/greyland.png)
+![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/calamity.png)
+![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/fallenlegion.png)
+![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/duality.png)
+![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/pressure.png)
+![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/afterdark.png)
+![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/requiem.png)
 
 <!----------------------------------------------------------------------------->
 
