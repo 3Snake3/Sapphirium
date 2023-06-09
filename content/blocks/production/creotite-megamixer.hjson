@@ -51,5 +51,10 @@ solid: true
 category: crafting
 research: {
 parent: creotite-mixer
-objectives: [big-blast-mixer, ledonite-mixer, impulse-kinetic-smelter]
+objectives: [big-blast-mixer, ledonite-mixer, 
+{
+type: SectorComplete
+preset: pressure
+}
+]
 }

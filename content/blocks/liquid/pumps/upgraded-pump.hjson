@@ -1,5 +1,13 @@
 category: liquid
-research: impulse-pump
+research: {
+parent: impulse-pump
+objectives: [
+{
+type: SectorComplete
+preset: afterdark
+}
+]
+}
 size: 4
 pumpAmount: 0.42
 liquidCapacity: 100

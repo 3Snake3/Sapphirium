@@ -114,7 +114,15 @@ lifetime: 45
 }
 }
 }
-research: bloodlust
+research: {
+parent: bloodlust
+objectives: [
+{
+type: SectorComplete
+preset: pressure
+}
+]
+}
 drawer: {
 type: DrawTurret
 parts: [

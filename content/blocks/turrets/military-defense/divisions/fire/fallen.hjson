@@ -11,7 +11,15 @@ power: 12
 }
 category: turret
 size: 4
-research: needle
+research: {
+parent: needle
+objectives: [
+{
+type: SectorComplete
+preset: duality
+}
+]
+}
 ammoTypes: {
 creotite: {
 type: ContinuousFlameBulletType

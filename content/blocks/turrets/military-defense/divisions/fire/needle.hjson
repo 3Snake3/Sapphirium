@@ -217,8 +217,8 @@ research: {
 parent: flame
 objectives: [
 {
-type: OnSector
-preset: desolateRift
+type: SectorComplete
+preset: duality
 }
 ]
 }

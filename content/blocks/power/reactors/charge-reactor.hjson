@@ -9,7 +9,7 @@ charged-cylinder/600
 category: power
 size: 4
 health: 1800
-powerProduction: 350
+powerProduction: 417
 explosionDamage: 5000
 explosionRadius: 56
 drawer: {

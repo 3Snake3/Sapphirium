@@ -16,5 +16,10 @@ charged-lead/7000
 ]
 research: {
 parent: core-ocean
-objectives: [core-nucleus]
+objectives: [core-nucleus, 
+{
+type: SectorComplete
+preset: pressure
+}
+]
 }

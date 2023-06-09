@@ -28,6 +28,11 @@ useTime: 240
 hasBoost: false
 research: {
 parent: overdrive-dome
-objectives: [scarlet-gem, ruby-drill]
+objectives: [scarlet-gem, ruby-drill, 
+{
+type: SectorComplete
+preset: afterdark
+}
+]
 }
 

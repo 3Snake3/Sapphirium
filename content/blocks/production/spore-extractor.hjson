@@ -47,7 +47,7 @@ parent: cultivator
 objectives: [freezer,
 {
 type: SectorComplete
-preset: overgrowth
+preset: duality
 }
 ]
 }

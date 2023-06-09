@@ -57,4 +57,10 @@ health: 5400
 category: turret
 research: {
 parent: foreshadow
+objectives: [
+{
+type: SectorComplete
+preset: pressure
+}
+]
 }

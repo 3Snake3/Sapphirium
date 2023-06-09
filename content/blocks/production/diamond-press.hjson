@@ -48,7 +48,7 @@ parent: tinorium-crystallizer
 objectives: [
 {
 type: SectorComplete
-preset: tarFields
+preset: pressure
 }
 ]
 }

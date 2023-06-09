@@ -182,4 +182,10 @@ surge-alloy/220
 size: 4
 research: {
 parent: launch
+objectives: [
+{
+type: SectorComplete
+preset: fallenlegion
+}
+]
 }

@@ -44,5 +44,10 @@ surge-alloy/60
 envDisabled: 16
 research: {
 parent: electromixer
-objectives: [impulse-kinetic-smelter]
+objectives: [impulse-kinetic-smelter, 
+{
+type: SectorComplete
+preset: pressure
+}
+]
 }

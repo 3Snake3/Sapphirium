@@ -39,6 +39,11 @@ requirements: [
 category: crafting
 research: {
 parent: plastanium-compressor
-objectives: [blast-mixer, globium-smelter]
+objectives: [blast-mixer, globium-smelter, 
+{
+type: SectorComplete
+preset: fallenlegion
+}
+]
 }
 attribute: oil

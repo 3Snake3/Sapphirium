@@ -54,5 +54,10 @@ solid: true
 category: crafting
 research: {
 parent: cryofluid-mixer
-objectives: [freezer, rotary-pump]
+objectives: [freezer, rotary-pump, 
+{
+type: SectorComplete
+preset: duality
+}
+]
 }

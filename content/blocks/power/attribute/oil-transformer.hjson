@@ -4,7 +4,7 @@ parent: spore-generator
 objectives: [
 {
 type: SectorComplete
-preset: tarFields
+preset: duality
 }
 ]
 }

@@ -140,4 +140,12 @@ trailSpacing: 30
 }
 }
 category: turret
-research: glow
+research: {
+parent: glow
+objectives: [
+{
+type: SectorComplete
+preset: duality
+}
+]
+}

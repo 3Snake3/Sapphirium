@@ -8,7 +8,15 @@ surge-stone/440
 ]
 size: 7
 category: turret
-research: brazier
+research: {
+parent: brazier
+objectives: [
+{
+type: SectorComplete
+preset: pressure
+}
+]
+}
 rotateSpeed: 1
 reload: 180
 recoil: 5

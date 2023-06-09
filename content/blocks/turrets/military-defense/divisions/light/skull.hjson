@@ -13,7 +13,7 @@ range: 612
 ammoPerShot: 12
 envDisabled: 16
 maxAmmo: 40
-reload: 450
+reload: 300
 recoil: 5
 rotateSpeed: 2
 recoilTime: 440
@@ -185,7 +185,7 @@ width: 0.001
 height: 0.001
 speed: 0
 lifetime: 1
-splashDamage: 180
+splashDamage: 400
 splashDamageRadius: 40
 buildingDamageMultiplier: 0.2
 shootEffect: {
@@ -214,8 +214,8 @@ research: {
 parent: needle
 objectives: [
 {
-type: OnSector
-preset: planetaryTerminal
+type: SectorComplete
+preset: pressure
 }
 ]
 }

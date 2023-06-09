@@ -35,5 +35,10 @@ consumes: {
 
 research: {
 parent: lightning-drill
-objectives: [impulse-kinetic-smelter]
+objectives: [
+{
+type: SectorComplete
+preset: afterdark
+}
+]
 }

@@ -30,7 +30,7 @@ parent: logic-encoder
 objectives: [
 {
 type: SectorComplete
-preset: overgrowth
+preset: pressure
 }
 ]
 }

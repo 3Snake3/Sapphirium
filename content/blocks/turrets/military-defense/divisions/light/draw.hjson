@@ -8,7 +8,15 @@ surge-alloy/340
 ]
 size: 5
 category: turret
-research: skull
+research: {
+parent: skull
+objectives: [
+{
+type: SectorComplete
+preset: pressure
+}
+]
+}
 health: 4000
 targetUnderBlocks: false
 reload: 200

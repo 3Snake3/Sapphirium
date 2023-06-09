@@ -37,7 +37,7 @@ parent: mass-driver
 objectives: [charge-reactor, 
 {
 type: SectorComplete
-preset: impact0078
+preset: requiem
 }
 ]
 }

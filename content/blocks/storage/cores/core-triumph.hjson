@@ -16,5 +16,10 @@ charged-ingot/7000
 ]
 research: {
 parent: core-victory
-objectives: [core-cage]
+objectives: [core-cage, 
+{
+type: SectorComplete
+preset: afterdark
+}
+]
 }

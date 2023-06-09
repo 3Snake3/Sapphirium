@@ -28,5 +28,10 @@ upgrades: [
 ]
 research: {
 parent: electronic-modifier
-objectives: [big-dense-smelter, creotite-converter, creotite-megamixer]
+objectives: [big-dense-smelter, creotite-converter, creotite-megamixer,
+{
+type: SectorComplete
+preset: afterdark
+}
+]
 }

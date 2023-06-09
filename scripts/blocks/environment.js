@@ -34,6 +34,10 @@ const plateWall = extend(StaticWall, "plate-wall", {
 variants: 2
 });
 
+const metalTree = extend(StaticTree, "metal-tree", {
+variants: 1
+});
+
 const sapphiricWall = extend(StaticWall, "sapphiric-wall", {});
 sapphiricFloor.asFloor().wall = sapphiricWall;
 sapphiricWall.attributes.set(Attribute.sand, 0.9);
