@@ -34,8 +34,9 @@ const plateWall = extend(StaticWall, "plate-wall", {
 variants: 2
 });
 
-const metalTree = extend(StaticTree, "metal-tree", {
-variants: 1
+const metalTree = extend(TallBlock, "metal-tree", {
+variants: 1,
+clipSize: 160,
 });
 
 const sapphiricWall = extend(StaticWall, "sapphiric-wall", {});
