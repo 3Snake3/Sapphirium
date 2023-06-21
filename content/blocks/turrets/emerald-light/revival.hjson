@@ -246,6 +246,6 @@ silicon/280
 ]
 category: turret
 research: {
-parent: pressure
+parent: turret-pressure
 objectives: [lancer]
 }

@@ -1190,7 +1190,7 @@ draw.envDisabled = Env.scorching;
 
 const pulse = extend(PowerTurret, "pulse", {});
 
-const pressure = extend(PowerTurret, "pressure", {});
+const turretPressure = extend(PowerTurret, "turret-pressure", {});
 
 const revival = extend(ItemTurret, "revival", {});
 
