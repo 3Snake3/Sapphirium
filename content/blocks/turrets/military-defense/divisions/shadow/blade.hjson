@@ -43,3 +43,6 @@ shootCone: 1
 inaccuracy: 0
 shootY: 3
 rotateSpeed: 5
+consumes: {
+power: 27
+}
