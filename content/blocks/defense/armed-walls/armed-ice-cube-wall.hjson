@@ -38,6 +38,7 @@ cone: 30
 }
 ]
 }
+heatColor: e8eaff
 shootType: {
 sprite: sapphirium-ice-pin
 width: 10
@@ -47,6 +48,8 @@ speed: 7
 lifetime: 16
 status: freezing
 statusDuration: 30
+frontColor: e8eaff
+backColor: c1befa
 pierce: true
 pierceCap: 1
 }

@@ -22,12 +22,12 @@ shake: 2
 cooldownTime: 0.02
 shootSound: laser
 group: walls
-
+targetAir: false
 shootType: {
 type: LaserBulletType
-colors: [96abd9, 6a76a1, 7a7a7a]
+colors: [96abd9, 96abd9, ffffff]
 length: 115
-collidesAir: true
+collidesAir: false
 damage: 30
 lifetime: 14
 drawSize: 200
