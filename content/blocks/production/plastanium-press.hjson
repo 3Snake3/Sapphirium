@@ -47,3 +47,4 @@ preset: fallenlegion
 ]
 }
 attribute: oil
+boostScale: 0.075

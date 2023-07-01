@@ -1,7 +1,7 @@
 
 attribute: heat
-maxBoost: 2
-boostScale: 0.44
+maxBoost: 1.5
+boostScale: 0.125
 size: 4
 craftTime: 162
 outputItem: surge-alloy/6

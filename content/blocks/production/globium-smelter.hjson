@@ -4,7 +4,7 @@ outputItem: globium/2
 craftEffect: smeltsmoke
 hasPower: true
 itemCapacity: 15
-boostScale: 0.20
+boostScale: 0.15
 drawer: {
 type: DrawMulti
 drawers: [DrawDefault, DrawFlame]

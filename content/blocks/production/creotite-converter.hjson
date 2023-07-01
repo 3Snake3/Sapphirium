@@ -52,5 +52,4 @@ parent: creostone-smelter
 objectives: [blast-mixer]
 }
 attribute: heat
-boostScale: 0.2
-maxBoost: 3
+boostScale: 0.15

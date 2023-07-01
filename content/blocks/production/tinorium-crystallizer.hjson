@@ -1,6 +1,6 @@
 
 attribute: oil
-boostScale: 0.2
+boostScale: 0.075
 craftEffect: {
 type: ParticleEffect
 particles: 3
