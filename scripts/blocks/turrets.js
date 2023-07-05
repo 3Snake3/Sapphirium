@@ -461,7 +461,7 @@ const sharpLaser = extend(LaserBulletType, {
 	sideWidth: 2.5,
 	sideAngle: 70,
 	colors: [Color.valueOf("8a3340"), Color.valueOf("ff6e6e"), Color.valueOf("ff6e6e")], 
-	damage: 300,
+	damage: 250,
 	lightColor: Color.valueOf("ff6e6e"),
 	status: statuses.activeBloodrage,
 });
@@ -492,7 +492,7 @@ injection.buildType = () => extend(ItemTurret.ItemTurretBuild, injection, {
 
 const bloodsap = extend(SapBulletType, {
 	sapStrength: 0.95,
-	damage: 80,
+	damage: 45,
 	lifetime: 20,
 	length: 400,
 	color: Color.valueOf("ff6e6e"),
@@ -516,13 +516,13 @@ bloodlust.buildType = () => extend(ItemTurret.ItemTurretBuild, bloodlust, {
         let sx = this.x + Mathf.range(9.75, -9.75)
         let sy = this.y + Mathf.range(10.5, -10.5)
         
-     if(this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5 && this.creload >= 20){
+     if(this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5 && this.creload >= 35){
             this.creload = 0
             bloodsap.create(this, this.team, sx, sy, this.rotation)
             Sounds.sap.at(this)
             
         }else{
-            if(this.creload < 20){this.creload += 1} 
+            if(this.creload < 35){this.creload += 1}
         }
     },
 });
@@ -544,7 +544,7 @@ const weavingBullet = extend(BasicBulletType, {
 	height: 12,
 	speed: 5,
 	lifetime: 38.4,
-	damage: 44,
+	damage: 84,
 	weaveMag: 3,
 	weaveScale: 3,
 	trailWidth: 3,
@@ -578,9 +578,9 @@ const scarletArtilleryBullet = extend(ArtilleryBulletType, {
 	height: 12,
 	speed: 3,
 	lifetime: 45.34,
-	damage: 55,
-	splashDamage: 55,
-	splashDamageRadius: 24,
+	damage: 75,
+	splashDamage: 75,
+	splashDamageRadius: 44,
 	trailColor: Color.valueOf("ff6e6e"),
 	backColor: Color.valueOf("ff6e6e"),
 	frontColor: Color.white,
@@ -599,7 +599,7 @@ const scarletBullet = extend(BasicBulletType, {
 	height: 14,
 	speed: 4.5,
 	lifetime: 19.56,
-	damage: 35,
+	damage: 55,
 	backColor: Color.valueOf("ff6e6e"),
 	frontColor: Color.white,
 	status: statuses.passiveBloodrage,

@@ -129,7 +129,7 @@ colorFrom: ff6e6e
 colorTo: ff6e6e
 }]
 }
-damage: 450
+damage: 275
 speed: 400
 trailSpacing: 30
 buildingDamageMultiplier: 0.2

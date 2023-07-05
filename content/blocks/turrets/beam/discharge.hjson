@@ -13,15 +13,15 @@ plastanium/80
 range: 200
 shootType: {
 type: LightningBulletType
-damage: 45
+damage: 34
 lightningLength: 34
-lightningLengthRand: 10
+lightningLengthRand: 8
 lightningColor: f3e979
 lightningType: {
 width: 9
 height: 9
 speed: 0
-damage: 9
+damage: 17
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 lifetime: 1
@@ -31,18 +31,18 @@ status: shocked
 }
 statusDuration: 300
 }
-reload: 300
+reload: 460
 shoot: {
 type: ShootAlternate
 spread: 2.75
-shots: 6
+shots: 12
 shotDelay: 10
-barrels: 3
+barrels: 4
 }
 shootCone: 60
 rotateSpeed: 7
 consumes: {
-power: 8
+power: 36
 coolant: {}
 }
 heatColor: FF8900

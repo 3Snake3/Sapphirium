@@ -16,8 +16,8 @@ maxAmmo: 40
 reload: 300
 recoil: 5
 rotateSpeed: 2
-recoilTime: 440
-cooldownTime: 440
+recoilTime: 230
+cooldownTime: 330
 shake: 5
 shootCone: 2
 shootSound: railgun
@@ -185,7 +185,7 @@ width: 0.001
 height: 0.001
 speed: 0
 lifetime: 1
-splashDamage: 400
+splashDamage: 450
 splashDamageRadius: 40
 buildingDamageMultiplier: 0.2
 shootEffect: {
