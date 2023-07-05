@@ -9,7 +9,7 @@ height: 10,
 speed: 6,
 lifetime: 42.5,
 collidesTeam: true,
-healPercent: 8,
+healPercent: 1,
 backColor: Pal.heal,
 frontColor: Color.white,
 damage: 30,
@@ -17,11 +17,11 @@ homingPower: 0.1,
 homingRange: 60,
 });
 //chance of bullet creating
-var healChance = 0.1;
+var healChance = 0.05;
 //amount of bullets
-var healBullets = 10;
+var healBullets = 6;
 //all bullets will be summoned around the core
-var cone = 360;
+var cone = 180;
 //the inaccuracy of bullets
 var healBulletInaccuracy = 6;
 //shoot sound
