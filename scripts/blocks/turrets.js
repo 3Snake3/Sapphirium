@@ -1164,7 +1164,9 @@ curvature.buildType = () => extend(ItemTurret.ItemTurretBuild, curvature, {
 const diamondDrone = extend(UnitType, "diamond-drone", {});
 diamondDrone.constructor = () => extend(UnitEntity, {});
 
-const shine = extend(ItemTurret, "shine", {});
+const shine = extend(ItemTurret, "shine", {
+canOverdrive: false
+});
 shine.buildType = () => extend(ItemTurret.ItemTurretBuild, shine, {
     creload : 0,
     updateTile(){

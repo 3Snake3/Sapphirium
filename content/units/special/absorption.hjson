@@ -10,17 +10,7 @@ cooldown: 300
 width: 12
 y: -16
 }
-{
-type: StatusFieldAbility
-range: 0.1
-effect: self-destruct-3
-duration: 1080
-applyEffect: none
-activeEffect: none
-display: false
-}
 ]
-drawBody: false
 weapons: [
 {
 x: 0
@@ -40,6 +30,31 @@ height: 0
 damage: 0
 collides: false
 collidesTiles: false
+smokeEffect: none
+}
+}
+{
+x: 0
+y: 0
+reload: 940
+shoot: {
+firstShotDelay: 939
+}
+alwaysShooting: true
+mirror: false
+shootSound: none
+ejectEffect: none
+bullet: {
+sprite: sapphirium-none-bullet
+speed: 10
+lifetime: 10
+damage: 0
+collides: false
+collidesTiles: false
+killShooter: true
+hitEffect: none
+despawnEffect: none
+shootEffect: none
 smokeEffect: none
 }
 }

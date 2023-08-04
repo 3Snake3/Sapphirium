@@ -8,7 +8,6 @@ hitSize: 24
 flying: true
 targetPriority: -1
 isEnemy: false
-useUnitCap: false
 buildSpeed: 2
 allowedInPayloads: false
 lowAltitude: true

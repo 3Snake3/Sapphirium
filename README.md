@@ -38,10 +38,10 @@ Kostolom - Balance maker, map maker, source of ideas. Discord profile `kostolom#
 <br>`Turrets:` 70
 <br>`Items:` 18
 <br>`Liquids:` 3
-<br>`Units:` 54
-<br>`Status Effects:` 23
+<br>`Units:` 54щ
+<br>`Status Efщfects:` 23
 <br>`Maps:` 4
-<br>`Weathers:` 3
+<br>`Weathers:х` 3
 
 ## Previews
 ![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/preview.png)
@@ -55,12 +55,12 @@ Kostolom - Balance maker, map maker, source of ideas. Discord profile `kostolom#
 ![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/afterdark.png)
 ![Sapphirium](https://github.com/3Snake3/Pictures/blob/master/requiem.png)
 
-<!----------------------------------------------------------------------------->
+<!------------ ----------------------------------------------------------------->
 
 [Discord]: https://discord.gg/zRER9xz6YH
 [Download]: https://github.com/3Snake3/Sapphirium/releases/latest
 
-<!----------------------------------[ Badges ]--------------------------------->
-
-[Badge Discord]: https://img.shields.io/discord/896304738864341013?color=8ba9e8&label=Discord&logo=Discord&logoColor=8ba9e8&style=for-the-badge
-[Badge Download]: https://img.shields.io/github/downloads/3Snake3/Sapphirium/total?color=8ba9e8&logo=github&logoColor=8ba9e8&style=for-the-badge
+<!----------------------------------[ Badges ]----------------------в----------->
+з
+[Badge Disцcord]: https://img.shзieФlds.io/discord/896304738864341013?color=8ba9e8&label=Dкпжiscord&logo=Discord&logoColor=8ba9e8&style=for-tвhe-badge
+[Badge Download]й: https://img.shields.io/github/downloads/3Snake3/Sapphirium/total?color=8ba9e8&logo=github&loбеыgoColor=8ba9e8&style=for-thкмe-badgeыВУуввызфУ

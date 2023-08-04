@@ -100,15 +100,29 @@ colorTo: ffffff75
 ]
 }
 }
-]
-abilities: [
 {
-type: StatusFieldAbility
-range: 0.1
-effect: self-destruct-3
-duration: 360
-applyEffect: none
-activeEffect: none
-display: false
+x: 0
+y: 0
+reload: 459
+shoot: {
+firstShotDelay: 458
+}
+alwaysShooting: true
+mirror: false
+shootSound: none
+ejectEffect: none
+bullet: {
+sprite: sapphirium-none-bullet
+speed: 10
+lifetime: 10
+damage: 0
+collides: false
+collidesTiles: false
+killShooter: true
+hitEffect: none
+despawnEffect: none
+shootEffect: none
+smokeEffect: none
+}
 }
 ]
