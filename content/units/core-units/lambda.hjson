@@ -3,6 +3,7 @@ isEnemy: false
 lowAltitude: true
 mineSpeed: 9.5
 mineTier: 3
+defaultController: BuilderAI
 buildSpeed: 1.3
 drag: 0.05
 speed: 4.15
