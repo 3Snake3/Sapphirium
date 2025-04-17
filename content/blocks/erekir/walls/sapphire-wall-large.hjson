@@ -15,5 +15,5 @@ hasLiquids: false
 research: sapphire-wall
 baseColor: 98dbff
 group: walls
-range: 8
-healPercent: 2
+range: 1
+healPercent: 0.03

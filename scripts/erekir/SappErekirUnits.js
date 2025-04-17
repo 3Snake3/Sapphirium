@@ -1,11 +1,51 @@
 const statuses = require("SappStatuses");
 
 //Hunters faction
+const houndDeath = new MultiEffect(
+           extend(ExplosionEffect, {
+           	lifetime: 30,
+               waveLife: 8,
+               waveRad: 16,
+               waveStroke: 2.5,
+               waveColor: Color.valueOf("ffe18f"),
+               sparks: 8,
+               sparkRad: 20,
+               sparkLen: 4,
+               sparkStroke: 2,
+               sparkColor: Color.valueOf("ffe18f"),
+               smokes: 8,
+               smokeRad: 20,
+               smokeSize: 4,
+               smokeColor: Color.valueOf("ffe18f70"),
+               }),
+           extend(ParticleEffect, {
+           	particles: 1,
+           	region: "sapphirium-rhombus",
+               sizeInterp: Interp.slope,
+               length: 0,
+               lifetime: 60,
+               sizeFrom: 8,
+               sizeTo: 0,
+               colorFrom: Color.valueOf("ffe18f"),
+               colorTo: Color.valueOf("ffe18f"),
+               }),
+               extend(ParticleEffect, {
+           	particles: 1,
+           	region: "sapphirium-rhombus",
+               length: 0,
+               lifetime: 120,
+               sizeFrom: 8,
+               sizeTo: 0,
+               colorFrom: Color.valueOf("ffe18f"),
+               colorTo: Color.valueOf("ffe18f"),
+               })
+          );
 const houndWeapon = extend(Weapon, "sapphirium-hound-weapon", {
 	top: false,
 	x: 4,
 	y: 0,
 	ejectEffect: Fx.casing1,
+	reload: 60,
 	bullet: extend(BasicBulletType, 4, 44, {
 		width: 8,
 		height: 10,
@@ -87,10 +127,60 @@ const houndWeapon = extend(Weapon, "sapphirium-hound-weapon", {
         lifetime: 40
         })
         });
-const hound = extend(ErekirUnitType, "hound", {});
+const hound = extend(ErekirUnitType, "hound", {
+deathExplosionEffect: houndDeath,
+});
 hound.constructor = () => extend(MechUnit, {});
 hound.weapons.add(houndWeapon);
 
+const rampageDeath = new MultiEffect(
+           extend(ExplosionEffect, {
+           	lifetime: 30,
+               waveLife: 8,
+               waveRad: 24,
+               waveStroke: 2.5,
+               waveColor: Color.valueOf("ffe18f"),
+               sparks: 14,
+               sparkRad: 28,
+               sparkLen: 4,
+               sparkStroke: 2,
+               sparkColor: Color.valueOf("ffe18f"),
+               smokes: 14,
+               smokeRad: 28,
+               smokeSize: 4,
+               smokeColor: Color.valueOf("ffe18f70"),
+               }),
+           extend(ParticleEffect, {
+           	particles: 1,
+           	region: "sapphirium-rhombus",
+               length: 0,
+               lifetime: 180,
+               sizeFrom: 16,
+               sizeTo: 0,
+               colorFrom: Color.valueOf("ffe18f"),
+               colorTo: Color.valueOf("ffe18f"),
+               }),
+           extend(SeqEffect, {
+           	effects: [
+               extend(WaveEffect, {
+               	interp: Interp.slope,
+                   sizeFrom: 20,
+                   sizeTo: 25,
+                   lifetime: 90,
+                   colorFrom: Color.valueOf("ffe18f"),
+                   colorTo: Color.valueOf("ffe18f00"),
+                   }),
+               extend(WaveEffect, {
+               	interp: Interp.slope,
+                   sizeFrom: 25,
+                   sizeTo: 20,
+                   lifetime: 90,
+                   colorFrom: Color.valueOf("ffe18f"),
+                   colorTo: Color.valueOf("ffe18f00"),
+                   })
+                   ]
+               })
+          );
 const rampage = extend(ErekirUnitType, "rampage", {});
 rampage.constructor = () => extend(LegsUnit, {});
 
@@ -667,9 +757,9 @@ var mawBullEffect = new MultiEffect(
                       }),
                     );
 
-const mawBulletWeapon = extend(Weapon, "sapphirium-hound-weapon", {
-	x: 69 / 4,
-	y: 0,
+const mawBulletWeapon = extend(Weapon, "sapphirium-maw-bullet-weapon", {
+	x: 48 / 4,
+	y: -10,
 	reload: 60,
 	shoot: extend(ShootPattern, {
 		shots: 4,

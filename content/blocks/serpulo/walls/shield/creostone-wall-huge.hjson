@@ -10,6 +10,8 @@ destroyBullet: {
     height: 12
     sprite: circle-bullet
     bulletInterval: 60
+    shrinkY: -0.3
+    shrinkX: -0.3
     intervalBullet: {
     type: ExplosionBulletType
     splashDamageRadius: 32

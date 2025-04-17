@@ -29,11 +29,18 @@ const regeneration = extend(StatusEffect, "regeneration", {
 	speedMultiplier: 1.35,
 	damageMultiplier: 1.35,
 	relooadMultiplier: 1.35,
-	healthMultiplier: 0.7,
-	damage: -0.2,
+	damage: 0,
 	effect: regen,
 	effectChance: 0.07,
 	color: Pal.heal,
+	update(unit, time){
+		this.super$update(unit, time);
+		unit.heal((unit.maxHealth * 3 / 100) * Time.delta);
+		},
+	setStats(){
+		this.super$setStats();
+		this.stats.add(Stat.healing, 3, StatUnit.percent);
+		}
 });
 
 var activeEffect = extend(WaveEffect, {

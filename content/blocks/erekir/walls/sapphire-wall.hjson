@@ -14,5 +14,5 @@ group: walls
 hasPower: false
 hasItems: false
 hasLiquids: false
-range: 8
-healPercent: 2
+range: 1
+healPercent: 0.03
