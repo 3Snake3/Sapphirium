@@ -3,6 +3,6 @@ color: 6fdedc
 sound: rain
 soundVol: 0.25
 attrs: {
-light: -0.25
-water: 0.25
+    light: -0.25
+    water: 0.25
 }

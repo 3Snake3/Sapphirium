@@ -1,0 +1,14 @@
+
+category: distribution
+
+health: 240
+speed: 0.13
+displayedSpeed: 17.8
+
+requirements: [
+    metaglass/1
+    globium/2
+    plastanium/1
+]
+
+research: creostone-conveyor

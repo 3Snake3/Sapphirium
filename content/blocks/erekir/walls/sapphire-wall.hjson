@@ -1,0 +1,18 @@
+requirements: [
+    sapphire/10
+    tungsten/8
+]
+armor: 14
+buildCostMultiplier: 8
+health: 1020
+insulated: true
+absorbLasers: true
+category: defense
+research: tungsten-wall
+baseColor: 98dbff
+group: walls
+hasPower: false
+hasItems: false
+hasLiquids: false
+range: 8
+healPercent: 2

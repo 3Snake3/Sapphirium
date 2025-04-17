@@ -1,0 +1,164 @@
+
+health: 2240
+reload: 240
+shoot: {
+    type: ShootMulti
+    source: {
+        type: ShootSpread
+        shots: 3
+        shotDelay: 10
+    }
+    dest: [
+        {
+            firstShotDelay: 110
+            shotDelay: 110
+        }
+    ]
+}
+recoil: 2
+rotateSpeed: 3
+targetAir: false
+range: 270
+size: 3
+inaccuracy: 5
+velocityRnd: 0.3
+consumes: {
+    power: 10
+}
+shootSound: laser
+outlineColor: 1d1d21
+chargeSound: lasercharge2
+moveWhileCharging: false
+accurateDelay: false
+shootEffect: {
+    type: WaveEffect
+    strokeFrom: 0
+    strokeTo: 2
+    sizeFrom: 0
+    sizeTo: 20
+    sides: 0
+    colorFrom: ff6e6e
+    colorTo: ff6e6e
+    lifetime: 25
+}
+shootType: {
+    chargeEffect: [
+        {
+            type: WaveEffect
+            strokeFrom: 0
+            strokeTo: 3
+            sizeFrom: 30
+            sizeTo: 0
+            sides: 0
+            colorFrom: ff6e6e
+            colorTo: ff6e6e
+            lifetime: 30
+        }
+        {
+            type: WaveEffect
+            strokeFrom: 0
+            strokeTo: 3
+            sizeFrom: 45
+            sizeTo: 0
+            sides: 0
+            colorFrom: ff6e6e
+            colorTo: ff6e6e
+            lifetime: 33
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 4
+            sizeTo: 0
+            lifetime: 30
+            colorFrom: ff6e6e
+            colorTo: ff6e6e
+            baseLength: 20
+            length: -20
+        }
+        {
+            type: ParticleEffect
+            particles: 1
+            sizeFrom: 0
+            sizeTo: 8
+            lifetime: 110
+            colorFrom: ff6e6e
+            colorTo: ff6e6e
+            length: 0
+            baseLength: 0
+        }
+    ]
+    sprite: circle-bullet
+    width: 12
+    height: 12
+    backColor: d94848
+    frontColor: ff6e6e
+    damage: 44
+    speed: 6
+    lifetime: 45
+    splashDamage: 36
+    splashDamageRadius: 40
+    reflectable: false
+    hittable: false
+    collidesAir: false
+    hitSound: laser
+    fragBullets: 3
+    fragSpread: 120
+    fragBullet: {
+        type: LaserBulletType
+        length: 40
+        width: 16
+        hitEffect: hitLancer
+        despawnEffect: none
+        hitSize: 5
+        damage: 33
+        colors: ["8a3340", "d94848", "ff6e6e"]
+        collidesAir: false
+        hitSound: spark
+        status: passive-bloodrage
+    }
+    lightning: 2
+    lightningCone: 360
+    lightningAngle: 45
+    lightningColor: d94848
+    lightningDamage: 14
+    lightningLength: 10
+    status: active-bloodrage
+    trailWidth: 6
+    trailLength: 10
+    trailColor: d94848
+    hitEffect: {
+        type: WaveEffect
+        strokeFrom: 2
+        strokeTo: 0
+        sizeFrom: 60
+        sizeTo: 60
+        lifetime: 15
+        colorFrom: ff6e6e
+        colorTo: ff6e6e
+        sides: 0
+    }
+    despawnEffect: {
+        type: WaveEffect
+        strokeFrom: 2
+        strokeTo: 0
+        sizeFrom: 60
+        sizeTo: 60
+        lifetime: 15
+        colorFrom: ff6e6e
+        colorTo: ff6e6e
+        sides: 0
+    }
+}
+category: turret
+research: {
+    parent: hawk
+    objectives: [scarlet-gem]
+}
+envDisabled: 16
+requirements: [
+    dense-alloy/440
+    ruby/400
+    thorium/220
+    silicon/180
+]

@@ -1,0 +1,48 @@
+requirements: [
+    silicon/80
+    tungsten/80
+    oxide/40
+]
+category: crafting
+ambientSound: smelter
+ambientSoundVolume: 0.5
+craftTime: 120
+outputItem: sapphire/1
+size: 3
+hasLiquids: false
+heatRequirement: 10
+itemCapacity: 20
+hasItems: true
+hasPower: true
+craftEffect: none
+consumes: {
+    power: 2
+    items: {
+        items: [
+            tungsten/2
+        ]
+    }
+}
+drawer: [
+    {
+        type: DrawDefault
+    }
+    {
+        type: DrawHeatInput
+    }
+    {
+        type: DrawGlowRegion
+        color: d1efff
+    }
+    {
+        type: DrawGlowRegion
+        suffix: -blur-glow
+        color: d1efff
+    }
+    {
+        type: DrawHeatRegion
+        color: ff6060ff
+        suffix: -heat-top
+    }
+]
+research: oxidation-chamber

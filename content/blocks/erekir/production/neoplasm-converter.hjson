@@ -1,0 +1,150 @@
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            suffix: "-bottom"
+        }
+        {
+            type: DrawLiquidTile
+            drawLiquid: creotine
+        }
+        {
+            type: DrawRegion
+            suffix: "-mid"
+        }
+        {
+            type: DrawLiquidRegion
+            suffix: "-liquid"
+            drawLiquid: neoplasm
+        }
+        {
+            type: DrawGlowRegion
+            color: ffb380
+        }
+        {
+            type: DrawDefault
+        }
+    ]
+}
+requirements: [
+    beryllium/80
+    silicon/60
+    tungsten/70
+    carbide/50
+]
+outputLiquid: creotine/0.4
+craftTime: 120
+size: 3
+hasPower: true
+hasLiquids: true
+outputsLiquid: true
+consumes: {
+    power: 4
+    liquids: {
+        liquids: [
+            neoplasm/0.2
+            slag/0.1
+        ]
+    }
+}
+craftEffect:[
+    {
+        type: ParticleEffect
+        particles: 1
+        cone: 360
+        baseLength: 0
+        randLength: false
+        length: 0
+        cone: 360
+        sizeFrom: 7
+        sizeTo: 3
+        colorFrom: FEC4A0
+        colorTo: FFFFFF
+        lifetime: 80
+        layer:100.3
+    }
+    {
+        type: ParticleEffect
+        particles: 1
+        cone: 360
+        baseLength: 0
+        length: 0
+        cone: 360
+        sizeFrom: 7
+        sizeTo: 3
+        colorFrom: FEC4A0
+        colorTo: FFFFFF
+        lifetime: 90
+        layer:100.4
+    }
+    {
+        type: ParticleEffect
+        particles: 14
+        cone: 360
+        baseLength: 6
+        length: 12
+        cone: 360
+        sizeFrom: 4
+        sizeTo: 0
+        colorFrom: E4563C
+        colorTo: E4563C
+        lifetime: 85
+        layer:100.1
+    }
+    {
+        type: ParticleEffect
+        particles: 14
+        cone: 360
+        length: 14
+        cone: 360
+        sizeFrom: 5
+        sizeTo: 0
+        colorFrom: E4563C
+        colorTo: E4563C
+        lifetime: 115
+        layer:100.1
+    }
+    {
+        type: ParticleEffect
+        particles: 9
+        startDelay: 15
+        cone: 360
+        baseLength: 4
+        randLength: false
+        length: 9
+        cone: 360
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: FEC4A0
+        colorTo: FDAE7C
+        lifetime: 75
+        layer:100.3
+    }
+    {
+        type: ParticleEffect
+        particles: 6
+        cone: 360
+        startDelay: 55
+        baseLength: -4
+        randLength: false
+        length: 5
+        cone: 360
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: FEC4A0
+        colorTo: FFFFFF
+        lifetime: 95
+        layer:100.1
+    }
+]
+hasItems: false
+liquidCapacity: 24
+rotate: false
+solid: true
+category: crafting
+research: {
+parent: carbide-crucible
+objectives: [neoplasia-reactor]
+}

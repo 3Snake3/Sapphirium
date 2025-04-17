@@ -1,0 +1,81 @@
+maxBoost: 2
+minEfficiency: 0.3
+craftTime: 80
+craftEffect: mineBig
+updateEffect: [pulverizeMedium, {
+particles: 5
+line: true
+lenFrom: 7
+lenTo: 0
+strokeFrom: 2
+strokeTo: 0
+colorFrom: cebaff
+colorTo: cebaff
+lifetime: 45
+length: 18
+cone: 360
+interp: circleOut
+sizeInterp: circleOut
+}
+]
+hasPower: true
+hasLiquids: true
+consumes: {
+    power: 16.8
+    liquid: cryofluid/0.15
+    items: {
+        items: [
+            blast-compound/4
+        ]
+    }
+}
+outputItem: thorium/5
+attribute: water
+research: {
+    parent: titanium-extractor
+    objectives: [
+        cryofluid-mixer,
+        blast-mixer,
+        {
+        type: SectorComplete
+        preset: tarFields
+        }
+    ]
+}
+size: 3
+health: 540
+requirements: [
+    dense-alloy/120
+    metaglass/80
+    graphite/145
+    titanium/80
+    silicon/65
+]
+category: production
+drawer: {
+type: DrawMulti
+drawers: [
+    {
+        type: DrawDefault
+    }
+    {
+        type: DrawGlowRegion
+        suffix: "-bottom-glow"
+        color: cebaff
+    }
+    {
+        type: DrawRegion
+        suffix: "-rotator"
+        spinSprite: true
+        rotateSpeed: 7
+    }
+    {
+        type: DrawLiquidRegion
+        drawLiquid: cryofluid
+    }
+    {
+        type: DrawRegion
+        suffix: "-top"
+    }
+    ]
+}

@@ -1,0 +1,384 @@
+
+scaledHealth: 180
+reload: 180
+recoil: 4
+shootCone: 10
+range: 300
+rotateSpeed: 1.5
+size: 4
+shootY: 6.75
+inaccuracy: 6
+outlineColor: 2d2f39
+shake: 3
+ammoUseEffect: none
+shootSound: bang
+ammoPerShot: 6
+velocityRnd: 0.5
+targetAir: false
+shoot: {
+    shots: 6
+    shotDelay: 20
+}
+ammoTypes: {
+    tungsten: {
+        type: ArtilleryBulletType
+        width: 15
+        height: 15
+        speed: 3.2
+        lifetime: 120
+        damage: 70
+        splashDamage: 40
+        splashDamageRadius: 35
+        collidesAir: false
+        shootEffect: {
+            type: ParticleEffect
+            particles: 12
+            length: 45
+            cone: 30
+            lifetime: 40
+            sizeFrom: 5
+            sizeTo: 0
+            colorFrom: d1e4ff
+            colorTo: d1e4ff
+        }
+        hitShake: 4
+        knockback: 0.8
+        backColor: 97a5f7
+        trailColor: 97a5f7
+        frontColor: d1e4ff
+        trailWidth: 2.5
+        trailLength: 25
+        trailEffect: none
+        trailSinMag: 0.5
+        trailSinScl: 2
+        hitEffect: {
+            type: MultiEffect
+            effects: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 20
+                    sizeFrom: 0
+                    sizeTo: 40
+                    strokeTo: 0
+                    colorFrom: d1e4ff
+                    colorTo: d1e4ff
+                }
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    lifetime: 60
+                    sizeFrom: 10
+                    sizeTo: 0
+                    length: 45
+                    cone: 360
+                    colorFrom: d1e4ff
+                    colorTo: d1e4ff07
+                }
+            ]
+        }
+        despawnEffect: {
+            type: MultiEffect
+            effects: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 20
+                    sizeFrom: 0
+                    sizeTo: 40
+                    strokeTo: 0
+                    colorFrom: d1e4ff
+                    colorTo: d1e4ff
+                }
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    lifetime: 60
+                    sizeFrom: 10
+                    sizeTo: 0
+                    length: 45
+                    cone: 360
+                    colorFrom: d1e4ff
+                    colorTo: d1e4ff07
+                }
+            ]
+        }
+        collidesTiles: false
+    }
+    carved-alloy: {
+        type: ArtilleryBulletType
+        width: 15
+        height: 15
+        speed: 4.5
+        lifetime: 89
+        hitShake: 4
+        damage: 60
+        splashDamage: 40
+        splashDamageRadius: 35
+        collidesAir: false
+        trailEffect: none
+        trailSinMag: 0.5
+        trailSinScl: 2
+        shootEffect: {
+            type: ParticleEffect
+            particles: 12
+            length: 45
+            cone: 30
+            lifetime: 40
+            sizeFrom: 5
+            sizeTo: 0
+            colorFrom: 638CFF
+            colorTo: 638CFF
+        }
+        homingPower: 0.3
+        homingRange: 80
+        rangeChange: 60
+        knockback: 0.9
+        backColor: 638CFF
+        trailColor: 638CFF
+        frontColor: 989AA3
+        trailWidth: 2.0
+        trailLength: 200
+        despawnEffect: {
+            type: MultiEffect
+            effects: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 20
+                    sizeFrom: 0
+                    sizeTo: 40
+                    strokeTo: 0
+                    colorFrom: 638CFF
+                    colorTo: 989AA3
+                }
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    lifetime: 60
+                    sizeFrom: 10
+                    sizeTo: 0
+                    length: 45
+                    cone: 360
+                    colorFrom: 638CFF
+                    colorTo: 989AA3
+                }
+            ]
+        }
+        collidesTiles: false
+        hitEffect: {
+            type: MultiEffect
+            effects: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 20
+                    sizeFrom: 0
+                    sizeTo: 40
+                    strokeTo: 0
+                    colorFrom: 638CFF
+                    colorTo: 989AA3
+                }
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    lifetime: 60
+                    sizeFrom: 10
+                    sizeTo: 0
+                    length: 45
+                    cone: 360
+                    colorFrom: 989AA3
+                    colorTo: 989AA307
+                }
+            ]
+        }
+        fragBullets: 3
+        fragRandomSpread: 360
+        fragVelocityMin: 0.6
+        fragVelocityMax: 4
+        fragLifeMin: 1
+        fragLifeMax: 2
+        fragBullet: {
+            type: ArtilleryBulletType
+            width: 6
+            height: 6
+            speed: 3
+            drag:0.065
+            lifetime: 160
+            hitShake: 4
+            damage: 10
+            splashDamage: 10
+            splashDamageRadius: 35
+            collidesAir: false
+            trailEffect: none
+            homingPower: 0.06
+            homingRange: 80
+            rangeChange: 20
+            knockback: 0.9
+            backColor: 638CFF
+            trailColor: 638CFF
+            frontColor: 989AA3
+            trailWidth: 2.5
+            trailLength: 25
+            hitEffect: {
+                type: MultiEffect
+                effects: [
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        lifetime: 20
+                        sizeFrom: 0
+                        sizeTo: 40
+                        strokeTo: 0
+                        colorFrom: 989AA3
+                        colorTo: 989AA3
+                    }
+                    {
+                        type: ParticleEffect
+                        particles: 1
+                        lifetime: 60
+                        sizeFrom: 6
+                        sizeTo: 0
+                        length: 45
+                        cone: 360
+                        region: sapphirium-star-effect
+                        colorFrom: 989AA3
+                        colorTo: 989AA307
+                    }
+                ]
+            }
+            fragBullets: 2
+            fragRandomSpread: 360
+            fragVelocityMin: 0.9
+            fragVelocityMax: 1.3
+            fragLifeMin: 1
+            fragLifeMax: 1.7
+            fragBullet: {
+                type: BasicBulletType
+                width: 6
+                height: 6
+                speed: 0.5
+                drag:-0.03
+                lifetime: 45
+                hitShake: 2
+                damage: 50
+                pierce: true
+                pierceBuilding: true
+                pierceArmor: true
+                pierceCap: 20
+                splashDamage: 30
+                splashDamageRadius: 25
+                collidesAir: false
+                trailEffect: none
+                homingPower: 0.8
+                homingRange: 200
+                knockback: 0.9
+                backColor: 638CFF
+                trailColor: 638CFF
+                frontColor: 989AA3
+                trailWidth: 2.5
+                trailLength: 25
+                hitEffect: {
+                    type: MultiEffect
+                    effects: [
+                        {
+                            type: WaveEffect
+                            sides: 0
+                            lifetime: 20
+                            sizeFrom: 0
+                            sizeTo: 4
+                            strokeTo: 0
+                            colorFrom: 989AA3
+                            colorTo: 989AA3
+                        }
+                        {
+                            type: ParticleEffect
+                            particles: 1
+                            lifetime: 60
+                            sizeFrom: 3
+                            sizeTo: 0
+                            length: 45
+                            cone: 360
+                            region: sapphirium-star-effect
+                            colorFrom: 989AA3
+                            colorTo: 989AA307
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: "reinforced-"
+    parts: [
+        {
+            type: RegionPart
+            suffix: -main
+            mirror: false
+            under: true
+        }
+        {
+            type: RegionPart
+            suffix: -back
+            mirror: true
+            under: true
+            moveX: 1
+            moveY: -1
+            moveRot: -15
+            progress: warmup
+            heatColor: 4d8fac
+            heatProgress: warmup
+            heatLightOpacity: 0.9
+            moves: [
+                {
+                    progress: recoil
+                    y: -3
+                }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -side
+            mirror: true
+            under: true
+            moveRot: -15
+            progress: warmup
+            heatColor: 4d8fac
+            heatProgress: warmup
+            heatLightOpacity: 0.9
+        }
+        {
+            type: RegionPart
+            suffix: -side-top
+            mirror: true
+            under: true
+            moveRot: -15
+            moveX: 1.5
+            moveY: -1.5
+            progress: warmup
+            heatColor: 4d8fac
+            heatProgress: warmup
+            heatLightOpacity: 0.9
+        }
+        {
+            type: RegionPart
+            suffix: -barrel
+            mirror: false
+            under: false
+            moveY: -4
+            progress: recoil
+            heatColor: 4d8fac
+            heatLightOpacity: 0.9
+        }
+    ]
+}
+category: turret
+requirements: [
+    graphite/240
+    silicon/200
+    tungsten/120
+    oxide/60
+]
+research: afflict

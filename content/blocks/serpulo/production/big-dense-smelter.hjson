@@ -1,0 +1,61 @@
+requirements: [
+    dense-alloy/140
+    metaglass/100
+    titanium/210
+    silicon/120
+]
+category: crafting
+craftEffect: {
+particles: 12
+length: 17
+lifetime: 22
+sizeFrom: 5
+sizeTo: 1
+colorFrom: ffffff
+colorTo: ffffff
+cone: 360
+region: sapphirium-rhombus
+}
+updateEffect: smoke
+outputItem: dense-alloy/9
+outputLiquid: slag/0.3
+craftTime: 90
+size: 3
+hasPower: true
+hasLiquids: true
+itemCapacity: 30
+liquidCapacity: 36
+drawer: {
+    type: DrawMulti
+    drawers: [
+        DrawDefault,
+        DrawFlame,
+        {
+        type: DrawGlowRegion
+        suffix: "-vents"
+        color: ffe18f
+        }
+    ]
+}
+ambientSound: smelter
+ambientSoundVolume: 0.07
+consumes: {
+    power: 14
+    items: {
+        items: [
+            copper/6
+            lead/6
+            blast-compound/1
+        ]
+    }
+}
+research: {
+    parent: dense-smelter
+    objectives: [
+        blast-mixer,
+        {
+            type: SectorComplete
+            preset: greyland
+        }
+    ]
+}

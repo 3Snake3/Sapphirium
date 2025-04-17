@@ -1,0 +1,27 @@
+hasPower: true
+size: 2
+force: 20
+scaledForce: 10
+range: 240
+damage: 0.8
+scaledHealth: 180
+rotateSpeed: 8
+research: {
+    parent: shock
+}
+status: sapphirium-overload
+statusDuration: 300
+consumes: {
+    power: 7
+}
+requirements: [
+    dense-alloy/300
+    thorium/180
+    plastanium/100
+]
+category: turret
+shootSound: minebeam
+shootLength: 3.5
+laserColor: f3e979
+laserWidth: 1.25
+targetGround: true

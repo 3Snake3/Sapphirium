@@ -1,0 +1,23 @@
+health: 380
+category: defense
+research: {
+    parent: armed-ice-cube-wall
+}
+reload: 25
+healPercent: 0.8
+group: walls
+range: 40
+baseColor: 96abd9
+phaseColor: 96abd9
+phaseBoost: 0
+phaseRangeBoost: 0
+useTime: 300
+canOverdrive: false
+consumes: {
+    power: 0.7
+}
+requirements: [
+    graphite/8
+    silicon/8
+]
+envDisabled: 16

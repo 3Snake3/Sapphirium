@@ -1,0 +1,24 @@
+requirements: [
+silicon/200
+beryllium/150
+topaz/140
+]
+category: units
+size: 3
+configurable: false
+plans: [
+{
+unit: hound
+time: 2400
+requirements: [
+silicon/50
+topaz/50
+]
+}
+]
+regionSuffix: -dark
+fogRadius: 3
+consumes: {
+power: 2
+}
+research: tank-fabricator

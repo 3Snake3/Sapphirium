@@ -1,0 +1,32 @@
+reload: 20
+recoil: 2
+health: 260
+targetHealing: true
+rotateSpeed: 5
+shake: 0
+shootSound: lasershoot
+shootEffect: shootHeal
+range: 80
+consumes: {
+    power: 0.7
+}
+shootType: {
+    type: LaserBoltBulletType
+    speed: 5.3
+    damage: 7
+    collidesTeam: true
+    healPercent: 1.7
+    lifetime: 30
+    backColor: ffffff
+    frontColor: 98ffa9
+}
+requirements: [
+    lead/20
+    emerald/15
+]
+drawer: {
+    type: DrawTurret
+    basePrefix: emerald-
+}
+category: turret
+research: arc

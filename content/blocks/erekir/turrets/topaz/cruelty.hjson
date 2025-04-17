@@ -1,0 +1,130 @@
+requirements: [
+    topaz/1400
+    silicon/600
+    phase-fabric/400
+    surge-alloy/300
+    carbide/300
+]
+size: 5
+scaledHealth: 360
+range: 300
+rotateSpeed: 3.5
+shootCone: 15
+shootY: 17
+heatColor: ffe18f
+category: turret
+shoot: {
+    type: ShootBarrel
+    barrels: [-8, 2, 0, -2.5, 4, 0, 2.5, 4, 0, 8, 2, 0]
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+    parts: [
+        {
+            type: RegionPart
+            suffix: -barrel-1
+            progress: recoil
+            moveY: -5
+            recoilIndex: 0
+        }
+        {
+            type: RegionPart
+            suffix: -barrel-2
+            progress: recoil
+            moveY: -5
+            recoilIndex: 1
+        }
+        {
+            type: RegionPart
+            suffix: -barrel-3
+            progress: recoil
+            moveY: -5
+            recoilIndex: 2
+        }
+        {
+            type: RegionPart
+            suffix: -barrel-4
+            progress: recoil
+            moveY: -5
+            recoilIndex: 3
+        }
+        {
+            type: RegionPart
+            suffix: -main
+            progress: warmup
+            heatProgress: warmup
+            heatColor: ffe18f
+        }
+        {
+            type: RegionPart
+            suffix: -back
+            progress: warmup
+            moveY: 3.25
+            heatProgress: warmup
+            heatColor: ffe18f
+        }
+        {
+            type: RegionPart
+            suffix: -plate
+            progress: warmup
+            moveY: -3.5
+            mirror: true
+            moveX: 6.5
+            heatProgress: warmup
+            heatColor: ffe18f
+        }
+        {
+            type: RegionPart
+            suffix: -wing
+            progress: warmup
+            heatProgress: warmup
+            heatColor: ffe18f
+        }
+    ]
+}
+ammoTypes: {
+    tungsten: {
+        speed: 7
+        lifetime: 42.86
+        damage: 64
+        pierceArmor: true
+        hitColor: 768a9a
+        backColor: 768a9a
+        trailColor: 768a9a
+        frontColor: ffffff
+        trailWidth: 2.4
+        trailLength: 8
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        shootEffect: [
+            shootBigColor, 
+            colorSparkBig
+        ]
+        smokeEffect: shootBigSmoke
+        ammoMultiplier: 1
+        lightning: 1
+        lightningLength: 7
+        lightningDamage: 22
+        lightningColor: 768a9a
+    }
+}
+recoil: 2.2
+targetAir: true
+minWarmup: 0.94
+shootWarmupSpeed: 0.05
+warmupMaintainTime: 30
+shake: 3
+heatRequirement: 90
+maxHeatEfficiency: 2
+consumes: {
+    liquid: creotine/0.75
+}
+targetUnderBlocks: false
+reload: 10
+outlineColor: 2d2f39
+shootSound: shootBig
+research: {
+parent: greed
+planet: erekir
+}

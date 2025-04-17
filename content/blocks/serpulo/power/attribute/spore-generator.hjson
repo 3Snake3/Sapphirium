@@ -1,0 +1,32 @@
+category: power
+research: {
+    parent: hydrogenerator
+    objectives: [
+        {
+            type: SectorComplete
+            preset: fungalPass
+        }
+    ]
+}
+requirements: [
+    dense-alloy/45
+    lead/50
+    metaglass/40
+    silicon/30
+]
+powerProduction: 2.5
+generateEffect: {
+    type: ParticleEffect
+    particles: 5
+    lifetime: 60
+    sizeFrom: 5
+    sizeTo: 0
+    length: 20
+    colorFrom: c093fa
+    colorTo: c093fa70
+}
+size: 2
+floating: true
+ambientSound: hum
+ambientSoundVolume: 0.06
+attribute: spores

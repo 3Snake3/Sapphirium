@@ -1,0 +1,251 @@
+armor: 14
+health: 22000
+speed: 0.26025
+rotateSpeed: 0.3
+buildSpeed: 9
+mineSpeed: 14
+mineTier: 5
+itemCapacity: 600
+flying: true
+drag: 0.012
+accel: 0.06
+engineOffset: 40
+hitSize: 86
+engineSize: 6.5
+canHeal: true
+lowAltitude: true
+range: 190
+immunities: [unleash]
+weapons: [
+    {
+        name: shriek-central-weapon
+        x: 0
+        y: 0
+        reload: 100
+        recoil: 0
+        mirror: false
+        alternate: false
+        shootSound: bolt
+        shake: 3
+        shoot: {
+            type: ShootPattern
+            shots: 6
+            shotDelay: 101
+        }
+        shootY: 0
+        bullet: {
+            type: ShrapnelBulletType
+            length: 64
+            damage: 450
+            pierceArmor: true
+            fromColor: ffffff
+            toColor: 98ffa9
+            layer: 89.9
+            shootEffect: {
+                type: ParticleEffect
+                line: true
+                particles: 10
+                layer: 89.9
+                cone: 90
+                length: 24
+                lenFrom: 12
+                lenTo: 12
+                strokeFrom: 3
+                strokeTo: 0
+                colorFrom: 98ffa9
+                colorTo: 98ffa9
+                lifetime: 18
+            }
+            smokeEffect: none
+        }
+    }
+    {
+        name: shriek-cannon
+        x: -18.25
+        y: 2.5
+        rotateSpeed: 1.5
+        rotate: true
+        rotationLimit: 10
+        shootY: 30
+        reload: 90
+        recoil: 5
+        recoilTime: 89
+        shootSound: laser
+        shake: 5
+        mirror: true
+        alternate: true
+        bullet: {
+            type: BasicBulletType
+            width: 18
+            height: 18
+            sprite: circle-bullet
+            shrinkY: 0
+            speed: 2.8
+            lifetime: 20.29
+            damage: 700
+            splashDamage: 700
+            splashDamageRadius: 16
+            rangeOverride: 292
+            hitShake: 5
+            collidesTeam: true
+            healPercent: 35
+            hitSound: plasmaboom
+            backColor: 98ffa9
+            frontColor: ffffff
+            shootEffect: {
+                type: ParticleEffect
+                line: true
+                particles: 10
+                cone: 90
+                length: 24
+                lenFrom: 12
+                lenTo: 12
+                strokeFrom: 3
+                strokeTo: 0
+                colorFrom: 98ffa9
+                colorTo: 98ffa9
+                lifetime: 18
+            }
+            smokeEffect: {
+                type: ParticleEffect
+                particles: 10
+                cone: 360
+                length: 48
+                sizeFrom: 8
+                sizeTo: 0
+                colorFrom: 98ffa9
+                colorTo: 98ffa9
+                lifetime: 60
+            }
+            hitEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 16
+                    lifetime: 60
+                    strokeFrom: 4
+                    strokeTo: 0
+                    colorFrom: 98ffa9
+                    colorTo: 98ffa9
+                }
+                {
+                    type: ParticleEffect
+                    particles: 10
+                    cone: 360
+                    length: 24
+                    sizeFrom: 8
+                    sizeTo: 0
+                    colorFrom: 98ffa9
+                    colorTo: 98ffa9
+                    lifetime: 60
+                }
+                {
+                    type: ParticleEffect
+                    line: true
+                    particles: 10
+                    cone: 360
+                    length: 24
+                    lenFrom: 12
+                    lenTo: 12
+                    strokeFrom: 3
+                    strokeTo: 0
+                    colorFrom: 98ffa9
+                    colorTo: 98ffa9
+                    lifetime: 18
+                }
+            ]
+            despawnEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 16
+                    lifetime: 60
+                    strokeFrom: 4
+                    strokeTo: 0
+                    colorFrom: 98ffa9
+                    colorTo: 98ffa9
+                }
+                {
+                    type: ParticleEffect
+                    particles: 10
+                    cone: 360
+                    length: 24
+                    sizeFrom: 8
+                    sizeTo: 0
+                    colorFrom: 98ffa9
+                    colorTo: 98ffa9
+                    lifetime: 60
+                }
+                {
+                    type: ParticleEffect
+                    line: true
+                    particles: 10
+                    cone: 360
+                    length: 24
+                    lenFrom: 12
+                    lenTo: 12
+                    strokeFrom: 3
+                    strokeTo: 0
+                    colorFrom: 98ffa9
+                    colorTo: 98ffa9
+                    lifetime: 18
+                }
+            ]
+            status: electrified
+            statusDuration: 600
+            fragBullets: 34
+            fragVelocityMax: 1.5
+            fragLifeMax: 0.9
+            fragLifeMax: 1.5
+            fragRandomSpread: 16
+            fragBullet: {
+                type: LaserBoltBulletType
+                width: 3
+                speed: 6
+                lifetime: 32.5
+                damage: 84
+                collidesTeam: true
+                shrinkY: 0
+                healPercent: 2
+                backColor: 98ffa9
+                frontColor: ffffff
+                hitColor: 98ffa9
+                trailWidth: 1
+                trailLength: 10
+                trailColor: 98ffa9
+                status: electrified
+                statusDuration: 80
+            }
+        }
+    }
+]
+abilities: [
+    {
+        type: RepairFieldAbility
+        amount: 1200
+        range: 112
+        reload: 720
+        parentizeEffects: true
+    }
+    {
+        type: ShieldRegenFieldAbility
+        max: 600
+        amount: 600
+        reload: 500
+        range: 112
+        parentizeEffects: true
+    }
+]
+research: {
+    parent: whisper
+    objectives: [innard-decrypter]
+    requirements: [
+        silicon/30000
+        creostone/27000
+        charged-ingot/18000
+        diamond/10000
+        emerald/12000
+    ]
+}

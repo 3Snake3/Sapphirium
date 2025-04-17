@@ -1,0 +1,689 @@
+health: 21000
+speed: 0.4
+armor: 18
+drag: 0.1
+hitSize: 25
+fogRadius: 48
+rotateSpeed: 1.3
+hovering: true
+legContinuousMove: true
+legCount: 8
+legBaseOffset: 22
+legMoveSpace: 1.1
+legPairOffset: 12
+legLength: 86
+legLengthScl: 1.1
+legExtension: -30
+rippleScale: 0.24
+allowLegStep: true
+groundLayer: 75
+healColor: 9b88c2FF
+weapons: [
+    {
+        name: large-machine-gun
+        x: 17.2
+        y: -12.5
+
+        reload:84
+        recoil: 2
+        inaccuracy: 2
+        rotate: true
+        rotateSpeed: 2
+        mirror: true
+        alternate: true
+        shootY: -1.25
+        shootSound: spark
+        velocityRnd: 0.3
+        xRand: 3
+        shoot: {
+            type: ShootAlternate
+            shots: 8
+            spread: 4
+            shotDelay: 7
+        }
+        bullet: {
+            width: 9
+            height: 12
+            speed: 12
+            lifetime: 23.4
+            damage: 55
+            buildingDamageMultiplier: 1.5
+            pierceArmor: true
+            pierce: true
+            pierceCap: 3
+            pierceBuilding: true
+            weaveMag: 2
+            weaveScale: 2
+            backColor: 9b88c2
+            frontColor: ffffff
+            hitEffect: [
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    sizeFrom: 4
+                    sizeTo: 2
+                    length: 0
+                    lifetime: 45
+                    spin:-1.75
+                    colorFrom: ffffff
+                    colorTo: 9b88c2
+                    region: sapphirium-star-effect
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    startDelay:45
+                    sizeFrom: 2
+                    sizeTo: 0
+                    length: 0
+                    spin:-3
+                    lifetime: 35
+                    colorFrom: 9b88c2
+                    colorTo: 9b88c2
+                    region: sapphirium-star-effect
+                }
+            ]
+            despawnEffect:[
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    sizeFrom: 5
+                    sizeTo: 3
+                    length: 0
+                    lifetime: 75
+                    colorFrom: ffffff
+                    colorTo: 9b88c2
+                    region: sapphirium-star-effect
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    startDelay:75
+                    sizeFrom: 3
+                    sizeTo: 0
+                    length: 0
+                    spin:2
+                    lifetime: 75
+                    colorFrom: 9b88c2
+                    colorTo: 9b88c2
+                    region: sapphirium-star-effect
+                }
+            ]
+            trailColor: 9b88c2
+            trailWidth: 3
+            trailLength: 12
+            status: paganism
+            statusDuration: 16
+        }
+    }
+    {
+        name: front-weapon-1
+        x: 23
+        y: 15.25
+        reload: 25
+        mirror: true
+        rotate: true
+        rotateSpeed: 3
+        rotationLimit: 15
+        recoil: 3
+        alternate: true
+        shootSound: shootSnap
+        bullet: {
+            width: 14
+            height: 16
+            speed: 3.5
+            lifetime: 88
+            damage: 90
+            pierceArmor: true
+            pierce: true
+            pierceBuilding: true
+            buildingDamageMultiplier: 0.85
+            weaveMag: 2
+            weaveScale: 4
+            backColor: 9b88c2
+            frontColor: ffffff
+            hitEffect: {
+                type: ParticleEffect
+                particles: 3
+                sizeFrom: 4
+                sizeTo: 0
+                length: 7
+                lifetime:  45
+                spin:-1
+                colorFrom: ffffff
+                colorTo: 9b88c2
+                region: sapphirium-star-effect
+            }
+            despawnEffect: {
+                type: ParticleEffect
+                particles: 1
+                sizeFrom: 7
+                sizeTo: 0
+                length: 0
+                lifetime: 55
+                colorFrom: 9b88c2
+                colorTo: ffffff
+                region: sapphirium-star-effect
+            }
+            trailColor: 9b88c2
+            trailWidth: 2.5
+            trailLength: 20
+            status: paganism
+            statusDuration: 40
+        }
+    }
+
+    {
+        name: point-weapon
+        x: 0
+        y: 10.5
+        shootY: 0
+        rotate: false
+        mirror: false
+        heatColor: 9b88c2
+        shootSound: milestone-rain
+        reload: 650
+        inaccuracy: 2
+        bullet: {
+            type: BasicBulletType
+            width: 12
+            height: 50
+            speed: 9
+            lifetime: 11
+            damage: 330
+            status: execute
+            statusDuration: 10
+            sprite: sapphirium-diamond-shard
+            backColor: cca6ff
+            frontColor: ffffff
+            trailColor: cca6ff
+            hitColor: cca6ff
+            hitEffect: hitBulletColor
+            despawnEffect: [
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    cone: 360
+                    length: 0
+                    sizeFrom: 2
+                    sizeTo: 14
+                    lifetime: 210
+                    colorFrom: F08DD5
+                    colorTo: ffffff
+                    region: sapphirium-star-effect
+                }
+                {
+                    type: WaveEffect
+                    sizeFrom: 0
+                    sizeTo: 36
+                    lifetime: 240
+                    strokeFrom: 4
+                    strokeTo: 0
+                    colorFrom: F08DD5
+                    colorTo: ffffff00
+                }
+                {
+                    startDelay:210
+                    type: ParticleEffect
+                    particles: 1
+                    cone: 360
+                    length: 0
+                    sizeFrom: 14
+                    sizeTo: 0
+                    spin:0.5
+                    lifetime: 95
+                    colorFrom: F08DD5
+                    colorTo: F08DD5
+                    region: sapphirium-star-effect
+                }
+                {
+                    startDelay:225
+                    type: WaveEffect
+                    sizeFrom: 0
+                    sizeTo: 30
+                    lifetime: 20
+                    strokeFrom: 3
+                    strokeTo: 0
+                    colorFrom: F08DD5
+                    colorTo: ffffff00
+                }
+                {
+                    startDelay:255
+                    type: WaveEffect
+                    sizeFrom: 0
+                    sizeTo: 34
+                    lifetime: 20
+                    strokeFrom: 3
+                    strokeTo: 0
+                    colorFrom: F08DD5
+                    colorTo: ffffff00
+                }
+                {
+                    startDelay:275
+                    type: WaveEffect
+                    sizeFrom: 0
+                    sizeTo: 37
+                    lifetime: 20
+                    strokeFrom: 3
+                    strokeTo: 0
+                    colorFrom: F08DD5
+                    colorTo: ffffff00
+                }
+                {
+                    startDelay:305
+                    type: WaveEffect
+                    sizeFrom: 0
+                    sizeTo: 38
+                    lifetime: 45
+                    strokeFrom: 1
+                    strokeTo: 0
+                    colorFrom: F08DD5
+                    colorTo: ffffff00
+                }
+                {
+                    startDelay:305
+                    type: WaveEffect
+                    sizeFrom: 7
+                    sizeTo: 55
+                    lifetime: 35
+                    strokeFrom: 1
+                    strokeTo: 0
+                    colorFrom: F08DD5
+                    colorTo: ffffff00
+                }
+            ]
+            shootEffect: shootBigColor
+            smokeEffect: shootBigSmoke
+            trailLength: 90
+            trailWidth: 6
+            fragBullets: 3
+            fragSpread: 15
+            fragRandomSpread: 25
+            fragVelocityMin: 0.7
+            fragVelocityMax: 1.1
+            fragLifeMin: 1
+            fragLifeMax: 1.2
+            fragBullet: {
+                type: BasicBulletType
+                width: 12
+                height: 40
+                speed: 7
+                lifetime: 18
+                damage: 130
+                pierce: true
+                pierceBuilding: true
+                pierceCap: 2
+                status: execute
+                statusDuration: 10
+                sprite: sapphirium-diamond-shard
+                backColor: cca6ff
+                frontColor: ffffff
+                trailColor: cca6ff
+                trailLength: 160
+                trailWidth: 2
+                hitColor: cca6ff
+                hitEffect: hitBulletColor
+                shootEffect: shootBigColor
+                despawnEffect: [
+                    {
+                        type: ParticleEffect
+                        particles: 1
+                        cone: 360
+                        length: 0
+                        sizeFrom: 2
+                        sizeTo: 13
+                        lifetime: 155
+                        colorFrom: F08DD5
+                        colorTo: ffffff
+                        region: sapphirium-star-effect
+                    }
+                    {
+                        type: WaveEffect
+                        sizeFrom: 0
+                        sizeTo: 45
+                        lifetime: 170
+                        strokeFrom: 6
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        startDelay:155
+                        type: ParticleEffect
+                        particles: 1
+                        cone: 360
+                        length: 0
+                        sizeFrom: 13
+                        sizeTo: 0
+                        spin:0.5
+                        lifetime: 95
+                        colorFrom: F08DD5
+                        colorTo: F08DD5
+                        region: sapphirium-star-effect
+                    }
+                    {
+                        startDelay:170
+                        type: WaveEffect
+                        sizeFrom: 0
+                        sizeTo: 24
+                        lifetime: 20
+                        strokeFrom: 3
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        startDelay:200
+                        type: WaveEffect
+                        sizeFrom: 0
+                        sizeTo: 28
+                        lifetime: 20
+                        strokeFrom: 3
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        startDelay:230
+                        type: WaveEffect
+                        sizeFrom: 0
+                        sizeTo: 31
+                        lifetime: 20
+                        strokeFrom: 3
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        startDelay:250
+                        type: WaveEffect
+                        sizeFrom: 0
+                        sizeTo: 38
+                        lifetime: 35
+                        strokeFrom: 1
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        startDelay:250
+                        type: WaveEffect
+                        sizeFrom: 7
+                        sizeTo: 45
+                        lifetime: 35
+                        strokeFrom: 1
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                ]
+                backColor: cca6ff
+                frontColor: ffffff
+                trailColor: cca6ff
+                hitColor: cca6ff
+                hitEffect: hitBulletColor
+                despawnEffect: [
+                    {
+                        type: ParticleEffect
+                        particles: 1
+                        cone: 360
+                        length: 0
+                        sizeFrom: 2
+                        sizeTo: 9
+                        lifetime: 105
+                        colorFrom: F08DD5
+                        colorTo: ffffff
+                        region: sapphirium-star-effect
+                    }
+                    {
+                        type: WaveEffect
+                        sizeFrom: 0
+                        sizeTo: 32
+                        lifetime: 120
+                        strokeFrom: 6
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        startDelay:105
+                        type: ParticleEffect
+                        particles: 1
+                        cone: 360
+                        length: 0
+                        sizeFrom: 9
+                        sizeTo: 0
+                        spin:0.5
+                        lifetime: 95
+                        colorFrom: F08DD5
+                        colorTo: F08DD5
+                        region: sapphirium-star-effect
+                    }
+                    {
+                        startDelay:120
+                        type: WaveEffect
+                        sizeFrom: 0
+                        sizeTo: 24
+                        lifetime: 20
+                        strokeFrom: 3
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        startDelay:150
+                        type: WaveEffect
+                        sizeFrom: 0
+                        sizeTo: 28
+                        lifetime: 20
+                        strokeFrom: 3
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        startDelay:170
+                        type: WaveEffect
+                        sizeFrom: 0
+                        sizeTo: 31
+                        lifetime: 20
+                        strokeFrom: 3
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        startDelay:200
+                        type: WaveEffect
+                        sizeFrom: 0
+                        sizeTo: 38
+                        lifetime: 35
+                        strokeFrom: 1
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        startDelay:200
+                        type: WaveEffect
+                        sizeFrom: 7
+                        sizeTo: 45
+                        lifetime: 35
+                        strokeFrom: 1
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                ]
+                shootEffect: shootBigColor
+                smokeEffect: shootBigSmoke
+                trailLength: 300
+                trailWidth: 4
+                fragBullets: 4
+                fragRandomSpread: 35
+                fragSpread: 30
+                fragVelocityMin: 0.7
+                fragVelocityMax: 1.1
+                fragLifeMin: 1
+                fragLifeMax: 1.2
+                fragBullet: {
+                    type: BasicBulletType
+                    width: 11
+                    height: 35
+                    speed: 5
+                    lifetime: 22
+                    damage: 110
+                    pierce: true
+                    pierceBuilding: true
+                    pierceCap: 5
+                    status: execute
+                    statusDuration: 10
+                    backColor: cca6ff
+                    frontColor: ffffff
+                    trailColor: cca6ff
+                    trailLength: 400
+                    trailWidth: 4
+                    hitColor: cca6ff
+                    sprite: sapphirium-diamond-shard
+                    despawnEffect: [
+                        {
+                            type: ParticleEffect
+                            particles: 1
+                            cone: 360
+                            length: 0
+                            sizeFrom: 2
+                            sizeTo: 9
+                            lifetime: 105
+                            colorFrom: F08DD5
+                            colorTo: ffffff
+                            region: sapphirium-star-effect
+                        }
+                        {
+                            type: WaveEffect
+                            sizeFrom: 0
+                            sizeTo: 32
+                            lifetime: 120
+                            strokeFrom: 6
+                            strokeTo: 0
+                            colorFrom: F08DD5
+                            colorTo: ffffff00
+                        }
+                        {
+                            startDelay: 105
+                            type: ParticleEffect
+                            particles: 1
+                            cone: 360
+                            length: 0
+                            sizeFrom: 9
+                            sizeTo: 0
+                            spin:0.5
+                            lifetime: 95
+                            colorFrom: F08DD5
+                            colorTo: F08DD5
+                            region: sapphirium-star-effect
+                        }
+                        {
+                            startDelay: 120
+                            type: WaveEffect
+                            sizeFrom: 0
+                            sizeTo: 24
+                            lifetime: 20
+                            strokeFrom: 3
+                            strokeTo: 0
+                            colorFrom: F08DD5
+                            colorTo: ffffff00
+                        }
+                            {
+                            startDelay: 150
+                            type: WaveEffect
+                            sizeFrom: 0
+                            sizeTo: 28
+                            lifetime: 20
+                            strokeFrom: 3
+                            strokeTo: 0
+                            colorFrom: F08DD5
+                            colorTo: ffffff00
+                        }
+                        {
+                            startDelay: 170
+                            type: WaveEffect
+                            sizeFrom: 0
+                            sizeTo: 31
+                            lifetime: 20
+                            strokeFrom: 3
+                            strokeTo: 0
+                            colorFrom: F08DD5
+                            colorTo: ffffff00
+                        }
+                        {
+                            startDelay: 200
+                            type: WaveEffect
+                            sizeFrom: 0
+                            sizeTo: 38
+                            lifetime: 35
+                            strokeFrom: 1
+                            strokeTo: 0
+                            colorFrom: F08DD5
+                            colorTo: ffffff00
+                        }
+                        {
+                            startDelay: 200
+                            type: WaveEffect
+                            sizeFrom: 7
+                            sizeTo: 45
+                            lifetime: 35
+                            strokeFrom: 1
+                            strokeTo: 0
+                            colorFrom: F08DD5
+                            colorTo: ffffff00
+                        }
+                    ]
+                    backColor: cca6ff
+                    frontColor: ffffff
+                    trailColor: cca6ff
+                    hitEffect: [
+                        {
+                            startDelay: 20
+                            type: ParticleEffect
+                            particles: 1
+                            cone: 360
+                            length: 0
+                            sizeFrom: 0
+                            sizeTo: 6
+                            lifetime: 50
+                            colorFrom: F08DD5
+                            colorTo: F08DD5
+                            region: sapphirium-star-effect
+                        }
+                        {
+                            startDelay: 70
+                            type: ParticleEffect
+                            particles: 1
+                            cone: 360
+                            length: 0
+                            sizeFrom: 6
+                            sizeTo: 0
+                            spin:1
+                            lifetime: 95
+                            colorFrom: F08DD5
+                            colorTo: ffffff00
+                            region: sapphirium-star-effect
+                        }
+                    ]
+                    shootEffect: shootBigColor
+                    smokeEffect: shootBigSmoke
+                    trailLength: 205
+                    trailWidth: 2
+                }
+            }
+        }
+    }
+]
+abilities:[
+    {
+        type: RegenAbility
+        amount: 3
+    }
+]
+immunities: [paganism, unmoving, disarmed, stunne, unleash]
+research: faith-assembler

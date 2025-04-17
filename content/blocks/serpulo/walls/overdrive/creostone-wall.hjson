@@ -1,0 +1,17 @@
+health: 800
+range: 40
+speedBoost: 1.125
+hasBoost: false
+consumes: { 
+    power: 0.9
+}
+group: walls
+requirements: [
+    creostone/8
+    silicon/8
+]
+envDisabled: 16
+category: defense
+research: {
+    parent: armed-silicon-wall
+}

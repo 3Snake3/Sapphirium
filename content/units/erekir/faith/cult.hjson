@@ -1,0 +1,189 @@
+health: 4000
+speed: 0.65
+drag: 0.1
+hitSize: 21
+fogRadius: 40
+rotateSpeed: 3
+legStraightness: 0.3
+stepShake: 0
+legCount: 6
+legLength: 18
+lockLegBase: true
+legContinuousMove: true
+healColor: c093fa
+legExtension: -3
+legBaseOffset: 7
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.9
+legForwardScl: 0.9
+legGroupSize: 3
+rippleScale: 0.2
+
+legMoveSpace: 1
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.2
+groundLayer: 74
+
+weapons: [
+    {
+        name: cult-weapon
+        x: 8.75
+        y: 1.75
+
+        reload: 60
+        recoil: 3
+        rotate: true
+        rotateSpeed: 4
+        mirror: true
+        alternate: true
+        shootY: 2.25
+        shootSound: missile
+
+        parts: [
+            {
+                type: RegionPart
+                suffix: -main
+                mirror: false
+                outline: true
+                layer: 74.1
+            }
+            {
+                type: RegionPart
+                suffix: -blade
+                mirror: true
+                moveRot: -7
+                layer: 74.1
+                moves: [
+                    {
+                        progress: recoil
+                        y: -2
+                    }
+                ]
+            }
+        ]
+
+        bullet: {
+            type: BasicBulletType
+            speed: 6
+            lifetime: 30
+            damage: 140
+            pierce: true
+            pierceBuilding: true
+            buildingDamageMultiplier: 0.5
+            hittable: false
+            sprite: missile-large
+            width: 12
+            height: 12
+            trailColor: c093fa
+            backColor: c093fa
+            frontColor: ffffff
+            weaveMag: 4
+            weaveScale: 3
+            trailLength: 18
+            trailWidth: 3.15
+            hitColor: c093fa
+            status: paganism
+            statusDuration: 10.2
+            shootEffect: [
+                shootSmallColor, 
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    cone: 360
+                    length: 30
+                    lifetime: 20
+                    region: sapphirium-rhombus
+                    sizeFrom: 5
+                    sizeTo: 0
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                }
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    cone: 360
+                    length: 25
+                    lifetime: 20
+                    line: true
+                    strokeFrom: 3
+                    lenFrom: 6
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                }
+            ]
+            hitEffect: [
+                {
+                    type: WaveEffect
+                    sizeTo: 12
+                    strokeFrom: 2
+                    lifetime: 45
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                }
+                {
+                    type: ParticleEffect
+                    particles: 4
+                    cone: 360
+                    length: 34
+                    sizeFrom: 5
+                    sizeTo: 0
+                    lifetime: 65
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                }
+                {
+                    type: ParticleEffect
+                    particles: 2
+                    cone: 360
+                    length: 32
+                    sizeFrom: 4
+                    sizeTo: 0
+                    lifetime: 85
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-star-effect
+                }
+            ]
+            despawnEffect: [
+                {
+                    type: WaveEffect
+                    sizeTo: 12
+                    strokeFrom: 2
+                    lifetime: 20
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                }
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    cone: 360
+                    length: 34
+                    sizeFrom: 5
+                    sizeTo: 0
+                    lifetime: 40
+                    colorFrom: ffffff00
+                    colorTo: c093fa
+                    region: sapphirium-rhombus
+                }
+            ]
+        }
+    }
+]
+abilities: [
+    {
+        type: RegenAbility
+        amount: 2
+    }
+    {
+        type: UnitSpawnAbility
+        unit: phenomenon
+        spawnX: 0
+        spawnY: 0
+        spawnTime: 480
+    }
+]
+immunities: [paganism, unmoving, unleash]
+research: faction-refabricator

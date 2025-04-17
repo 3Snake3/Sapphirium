@@ -1,6 +1,0 @@
-name: spore-shield
-healthMultiplier: 4
-speedMultiplier: 0.8
-transitionDamage: 80
-affinities: [burning]
-color: a488eb

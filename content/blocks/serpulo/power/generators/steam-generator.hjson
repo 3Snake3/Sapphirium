@@ -1,0 +1,9 @@
+research: {
+    parent: power-node
+    objectives: [
+        {
+            type: SectorComplete
+            preset: craters
+        }
+    ]
+}

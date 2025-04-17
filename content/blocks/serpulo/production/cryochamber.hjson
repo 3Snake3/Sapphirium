@@ -1,0 +1,48 @@
+craftEffect: {
+particles: 8
+cone: 360
+sizeFrom: 4
+sizeTo: 1
+lifetime: 15
+length: 8
+colorFrom: bfecff
+colorTo: bfecff
+region: sapphirium-rhombus
+}
+category: crafting
+consumes: {
+power: 0.4
+liquid: cryofluid/0.1
+}
+requirements: [
+    dense-alloy/30
+    metaglass/30
+    titanium/10
+]
+drawer: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: cryofluid
+}
+{
+type: DrawDefault
+}
+]
+
+size: 2
+liquidCapacity: 10
+itemCapacity: 10
+outputItem: cryo-cube/1
+craftTime: 40
+research: {
+parent: freezer
+objectives: [cryofluid-mixer, {
+type: SectorComplete
+preset: greyland
+}
+]
+}

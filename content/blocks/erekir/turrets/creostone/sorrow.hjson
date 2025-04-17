@@ -1,0 +1,87 @@
+requirements: [
+    thorium/450
+    silicon/350
+    tungsten/250
+    creostone/150
+]
+size: 4
+category: turret
+consumes: {
+    liquid: creotine/0.08
+    power: 5
+}
+shootSound: laser
+shake: 3
+recoil: 3
+reload: 54
+recoilTime: 53
+canOverdrive: false
+shoot: {
+    shots: 3
+    shotDelay: 3
+}
+shootY: 0
+shootType: {
+    type: LaserBulletType
+    length: 24
+    damage: 22
+    colors: [eb8778, ffba8c, ffffff]
+    sideWidth: 0
+    sideLength: 0
+    width: 15
+}
+range: 104
+rotateSpeed: 3.5
+scaledHealth: 200
+outlineColor: 2d2f39
+shootWarmupSpeed: 0.08
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+    parts: [
+        {
+            type: RegionPart
+            suffix: -under-main
+            mirror: false
+            under: true
+        }
+        {
+            type: RegionPart
+            suffix: -back
+            mirror: true
+            moveRot: -15
+            progress: warmup
+            heatProgress: warmup
+            heatColor: ff0000
+        }
+        {
+            type: RegionPart
+            suffix: -side
+            mirror: true
+            moveRot: -15
+            progress: warmup
+            moves: [
+                {
+                    progress: recoil
+                    y: -3
+                }
+            ]
+            heatProgress: warmup
+            heatColor: ff0000
+        }
+        {
+            type: RegionPart
+            suffix: -main
+            mirror: false
+        }
+        {
+            type: RegionPart
+            suffix: -barrel
+            moveY: -3
+            moveRot: -15
+            mirror: true
+            progress: recoil
+        }
+    ]
+}
+research: addiction

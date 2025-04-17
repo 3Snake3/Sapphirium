@@ -1,0 +1,24 @@
+reload: 45
+recoil: 4
+shootEffect: shootHeal
+shootSound: laser
+targetHealing: true
+rotateSpeed: 6
+health: 960
+shootCone: 24
+consumes: {
+    power: 5
+}
+range: 270
+drawer: {
+    type: DrawTurret
+    basePrefix: emerald-
+}
+size: 2
+category: turret
+research: pulse
+requirements: [
+    dense-alloy/80
+    emerald/100
+    titanium/60
+]

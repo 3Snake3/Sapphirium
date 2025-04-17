@@ -1,0 +1,87 @@
+health: 4220
+category: defense
+reload: 60
+recoil: 3
+consumes: {
+    power: 5
+}
+shake: 1
+shootCone: 10
+emitLight: true
+lightRadius: 85
+size: 2
+shootEffect: sparkShoot
+shootSound: spark
+smokeEffect: none
+group: walls
+range: 130
+shootType: {
+    width: 10
+    height: 10
+    sprite: circle-bullet
+    speed: 5
+    lifetime: 26
+    damage: 15
+    splashDamage: 20
+    splashDamageRadius: 25
+    backColor: f3e979
+    frontColor: ffffff
+    lightColor: f3e979
+    lightRadius: 25
+    lightning: 4
+    lightningLength: 4.16
+    lightningDamage: 7
+    lightningColor: f3e979
+    shrinkX: 0
+    shrinkY: 0
+    intervalBullet: {
+        type: LightningBulletType
+        lightningLength: 4.16
+        lightningColor: f3e979
+        damage: 7
+        hitEffect: {
+            type: ParticleEffect
+            particles: 8
+            cone: 360
+            line: true
+            lenFrom: 4
+            lenTo: 0
+            strokeFrom: 2
+            strokeTo: 0
+            colorFrom: f3e979
+            colorTo: f3e979
+            lifetime: 20
+        }
+    }
+    intervalBullets: 2
+    hitEffect: {
+        type: ExplosionEffect
+        waveColor: f3e979
+        waveRad: 25
+        waveLife: 8
+        sparks: 6
+        sparkLen: 4
+        sparkColor: f3e979
+        sparkRad: 25
+        smokes: 0
+    }
+    despawnEffect: {
+        type: ExplosionEffect
+        waveColor: f3e979
+        waveRad: 25
+        waveLife: 8
+        sparks: 6
+        sparkLen: 4
+        sparkColor: f3e979
+        sparkRad: 25
+        smokes: 0
+    }
+}
+requirements: [
+    surge-stone/40
+    silicon/30
+]
+envDisabled: 16
+research: {
+    parent: surge-stone-wall    
+}

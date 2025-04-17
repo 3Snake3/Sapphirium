@@ -1,0 +1,71 @@
+health: 720
+targetable: false
+hittable: false
+playerControllable: false
+hovering: true
+physics: false
+drawShields: false
+isEnemy: false
+hitSize: 20
+rotateSpeed: 6
+speed: 0
+engineSize: 0
+lowAltitude: true
+hitSize: 16
+immunities: [unleash]
+abilities: [
+    {
+        type: ShieldArcAbility
+        radius: 38
+        angle: 361
+        whenShooting: false
+        regen: 6
+        max: 360
+        cooldown: 200
+    }
+]
+weapons: [
+    {
+        type: PointDefenseWeapon
+        name: shielder-point-defense
+        x: 5
+        y: 3
+        reload: 9
+        targetInterval: 9
+        targetSwitchInterval: 12
+        recoil: 0
+        shootSound: lasershoot
+        bullet: {
+            shootEffect: sparkShoot
+            hitEffect: pointHit
+            maxRange: 46
+            damage: 42
+        }
+    }
+    {
+        x: 0
+        y: 0
+        reload: 959
+        shoot: {
+            firstShotDelay: 958
+        }
+        alwaysShooting: true
+        mirror: false
+        shootSound: none
+        display: false
+        ejectEffect: none
+        bullet: {
+            sprite: sapphirium-none-bullet
+            speed: 10
+            lifetime: 10
+            damage: 0
+            collides: false
+            collidesTiles: false
+            killShooter: true
+            hitEffect: none
+            despawnEffect: none
+            shootEffect: none
+            smokeEffect: none
+        }
+    }
+]

@@ -1,0 +1,12 @@
+requirements: [
+    thorium/75
+    plastanium/75
+    metaglass/80
+    stone/40
+]
+liquidCapacity: 1740
+size: 3
+solid: true
+research: armored-liquid-container
+health: 1400
+category: liquid

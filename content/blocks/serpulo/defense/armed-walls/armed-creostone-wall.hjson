@@ -1,0 +1,69 @@
+
+health: 2700
+recoil: 0
+reload: 6
+range: 60
+shootCone: 45
+targetAir: true
+ammoUseEffect: none
+consumes: {
+    power: 0.8
+}
+size: 2
+shootSound: flame
+baseExplosiveness: 0.95
+group: walls
+inaccuracy: 10
+
+shootType: {
+    type: BasicBulletType
+    sprite: sapphirium-none-bullet
+    displayAmmoMultiplier: false
+    hitSize: 7
+    lifetime: 18
+    pierce: true
+    collidesAir: true
+    statusDuration: 360
+    shootEffect: {
+    particles: 14
+    cone: 10
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: ffba8c
+    colorTo: eb8778
+    length: 80
+    lifetime: 18
+    interp: pow2Out
+    sizeInterp: pow2Out
+    }
+    hitEffect: {
+    particles: 6
+    cone: 360
+    sizeFrom: 2.5
+    sizeTo: 0
+    colorFrom: ffba8c
+    colorTo: eb8778
+    length: 16
+    lifetime: 20
+    interp: circleOut
+    sizeInterp: circleOut
+    }
+    despawnEffect: none
+    status: burning
+    pierce: true
+    pierceBuilding: true
+    hittable: false
+    reflectable: false
+    speed: 3.35
+    damage: 15
+    makeFire: true
+}
+requirements: [
+    creostone/45
+    silicon/30
+]
+envDisabled: 16
+category: defense
+research: {
+    parent: creostone-wall
+}

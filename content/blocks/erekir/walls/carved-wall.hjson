@@ -1,0 +1,88 @@
+requirements: [
+    carved-alloy/4
+    tungsten/2
+]
+armor: 34
+buildCostMultiplier: 8
+health: 550
+absorbLasers: true
+category: defense
+research: carbide-wall
+destroyBullet: {
+speed: 0
+lifetime: 239
+width: 5
+height: 5
+sprite: circle-bullet
+damage: 0
+collides: false
+collidesTiles: false
+splashDamage: 100
+splashDamageRadius: 16
+backColor: ab8ea4
+frontColor: ffffff
+status: shock-stun
+statusDuration: 40
+despawnEffect: [
+{
+type: WaveEffect
+sizeFrom: 4
+sizeTo: 16
+interp: circleOut
+lifetime: 15
+colorFrom: ab8ea4
+colorTo: ab8ea4
+}
+{
+particles: 10
+length: 18
+cone: 360
+line: true
+lenFrom: 5
+lenTo: 0
+interp: circleOut
+sizeInterp: circleOut
+strokeFrom: 2
+strokeTo: 0
+colorFrom: ab8ea4
+colorTo: ab8ea4
+lifetime: 25
+}
+]
+intervalBullets: 1
+bulletInterval: 80
+intervalBullet: {
+type: ExplosionBulletType
+splashDamage: 0
+splashDamageRadius: 16
+status: shock-stun
+statusDuration: 40
+despawnEffect: [
+{
+type: WaveEffect
+sizeFrom: 4
+sizeTo: 16
+interp: circleOut
+lifetime: 15
+colorFrom: ab8ea4
+colorTo: ab8ea4
+}
+{
+particles: 10
+length: 18
+cone: 360
+line: true
+lenFrom: 5
+lenTo: 0
+interp: circleOut
+sizeInterp: circleOut
+strokeFrom: 2
+strokeTo: 0
+colorFrom: ab8ea4
+colorTo: ab8ea4
+lifetime: 25
+}
+]
+}
+}
+destroyBulletSameTeam: true

@@ -1,0 +1,62 @@
+updateEffect: {
+type: ExplosionEffect
+waveLife: 8
+waveRad: 5
+waveStroke: 1.8
+waveColor: f3e979
+sparks: 4
+sparkRad: 8
+sparkLen: 4
+sparkStroke: 2
+sparkColor: f3e979
+smokes: 0
+lifetime: 25
+}
+category: crafting
+consumes: {
+power: 3
+liquid: surge-mass/0.3
+items: {
+items: [
+stone/1
+]
+}
+}
+requirements: [
+    dense-alloy/140
+    metaglass/80
+    titanium/80
+    thorium/60
+]
+drawer: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: surge-mass
+}
+{
+type: DrawDefault
+}
+{
+type: DrawGlowRegion
+color: f3e97970
+}
+{
+type: DrawArcSmelt
+drawCenter: false
+midColor: f3e979
+}
+]
+
+size: 3
+liquidCapacity: 36
+itemCapacity: 10
+outputItem: surge-stone/1
+craftTime: 100
+research: {
+    parent: ledochamber
+    objectives: [electromixer]
+}

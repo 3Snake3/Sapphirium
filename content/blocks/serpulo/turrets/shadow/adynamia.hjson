@@ -1,0 +1,107 @@
+requirements: [
+    dense-alloy/180
+    tinorium/160
+    silicon/165
+    plastanium/120
+]
+reload: 12
+recoil: 2
+rotateSpeed: 5
+health: 1300
+shootSound: shootBig
+ammoPerShot: 2
+ammoUseEffect: casing3Double
+inaccuracy: 1
+range: 260
+shoot: {
+    type: ShootAlternate
+    barrels: 2
+    spread: 12
+}
+shootY: 8.5
+consumes: {
+    power: 6
+}
+ammoTypes: {
+    tinorium: {
+        type: BasicBulletType
+        width: 16
+        height: 18
+        speed: 5
+        lifetime: 52
+        damage: 45
+        backColor: 665c9e
+        frontColor: a488eb
+        shootEffect: shootBigColor
+        smokeEffect: shootBigSmoke
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        status: sapped
+        statusDuration: 120
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragVelocityMin: 1
+        fragBullet: {
+            type: LaserBulletType
+            length: 60
+            pierceCap: 3
+            damage: 25
+            pierceArmor: true
+            drawSize: 420
+            sideWidth: 0
+            sideLength: 0
+            colors: [665c9e75, 8b73c7, a488eb]
+            status: sapped
+            statusDuration: 60
+        }
+        spawnBullets: [
+            {
+                type: LaserBulletType
+                length: 60
+                pierceCap: 3
+                damage: 25
+                pierceArmor: true
+                drawSize: 420
+                sideWidth: 0
+                sideLength: 0
+                colors: [665c9e75, 8b73c7, a488eb]
+                status: sapped
+                statusDuration: 60
+                lifetime: 32
+            }
+        ]
+    }
+    thorium: {
+        type: BasicBulletType
+        width: 16
+        height: 18
+        speed: 7
+        lifetime: 27.43
+        damage: 40
+        rangeChange:-68
+        backColor: f9a3c7
+        frontColor: ffffff
+        shootEffect: shootBigColor
+        smokeEffect: shootBigSmoke
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        reloadMultiplier: 1.15
+        ammoMultiplier: 2
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragVelocityMin: 1
+        fragBullet: {
+            type: LaserBulletType
+            length: 38
+            pierceCap: 3
+            damage: 20
+            pierceArmor: true
+            drawSize: 420
+            sideWidth: 0
+            sideLength: 0
+            colors: [f9a3c7, f9a3c7, ffffff]
+        }
+    }
+}
+category: turret
+research: decay

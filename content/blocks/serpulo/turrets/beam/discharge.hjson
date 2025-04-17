@@ -1,0 +1,108 @@
+scaledHealth: 300
+size: 3
+category: turret
+research: {
+    parent: shock
+}
+requirements: [
+    dense-alloy/180
+    titanium/120
+    silicon/80
+    plastanium/80
+]
+range: 200
+shootY: 8
+shootType: {
+    speed: 8
+    lifetime: 25
+    damage: 34
+    width: 10
+    height: 14
+    pierce: true
+    pierceBuilding: true
+    pierceArmor: true
+    backColor: f3e979
+    hitColor: f3e979
+    frontColor: ffffff
+    hitEffect: {
+    type: ExplosionEffect
+    smokes: 0
+    sparks: 13
+    sparkLen: 4
+    sparkStroke: 3
+    waveRad: 16
+    waveLife: 14
+    waveColor: f3e979
+    sparkRad: 18
+    sparkColor: f3e979
+    }
+    despawnEffect: {
+    type: ExplosionEffect
+    smokes: 0
+    sparks: 13
+    sparkLen: 4
+    sparkStroke: 3
+    sparkColor: f3e979
+    sparkRad: 18
+    waveRad: 16
+    waveLife: 14
+    waveColor: f3e979
+    }
+    shootEffect: [shootBigColor, {
+    particles: 17
+    length: 34
+    lifetime: 60
+    line: true
+    strokeFrom: 1.5
+    lenFrom: 10
+    colorFrom: f3e979
+    cone: 7
+    colorTo: f3e979
+    interp: pow2Out
+    sizeInterp: pow2Out
+    }
+    {
+    particles: 1
+    length: 42
+    lifetime: 60
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: f3e979
+    cone: 7
+    colorTo: f3e979
+    interp: pow2Out
+    sizeInterp: pow2Out
+    region: sapphirium-star-effect
+    }
+    ]
+    smokeEffect: shootBigSmoke
+    status: overload
+    statusDuration: 120
+}
+reload: 300
+canOverdrive: false
+shoot: {
+    type: ShootMulti
+    source: {
+        type: ShootAlternate
+        shots: 3
+        shotDelay: 20
+        barrels: 3
+    }
+    dest: [
+        {
+            shots: 8
+            shotDelay: 10
+        }
+    ]
+}
+
+shootCone: 60
+rotateSpeed: 7
+consumes: {
+    power: 12
+    liquid: cryofluid/0.8
+}
+heatColor: FF8900
+recoil: 3
+shootSound: shockBlast

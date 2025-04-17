@@ -1,0 +1,91 @@
+requirements: [
+    amethyst/350
+    silicon/300
+    thorium/200
+    oxide/100
+]
+size: 4
+category: turret
+shootSound: shootAlt
+ammoTypes: {
+    amethyst: {
+        speed: 8
+        damage: 65
+        status: slow
+        statusDuration: 40
+        width: 14
+        height: 24
+        shootEffect: [shootBigColor, colorSparkBig]
+        smokeEffect: shootBigSmoke
+        ammoMultiplier: 1
+        hitColor: cca6ff
+        frontColor: ffffff
+        backColor: cca6ff
+        trailColor: cca6ff
+        trailWidth: 2.5
+        trailLength: 14
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        trailEffect: {
+            region: sapphirium-rhombus
+            particles: 1
+            length: 0
+            lifetime: 40
+            sizeFrom: 5
+            sizeTo: 0
+            colorFrom: cca6ff
+            colorTo: cca6ff
+        }
+    }
+}
+heatRequirement: 12
+maxHeatEfficiency: 2
+canOverdrive: false
+targetUnderBlocks: false
+shake: 2
+ammoPerShot: 4
+shootY: -2
+shoot: {
+    shots: 4
+    shotDelay: 3
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+    parts: [
+        {
+            type: RegionPart
+            suffix: -wing
+            progress: warmup
+            moveRot: 8
+            moveY: -2.5
+            moveX: 1.25
+            mirror: true
+            heatColor: cca6ff
+            heatProgress: warmup
+        }
+        {
+            type: RegionPart
+            suffix: -blade
+            progress: warmup
+            moveY: -2.5
+            moveX: 0.5
+            mirror: true
+            heatColor: cca6ff
+            heatProgress: warmup
+        }
+        {
+            type: RegionPart
+            suffix: -barrel
+            progress: recoil
+            moveY: -2
+            heatColor: cca6ff
+        }
+    ]
+}
+outlineColor: 2d2f39
+reload: 120
+range: 220
+shootCone: 3
+rotateSpeed: 1.5
+research: devotion

@@ -1,0 +1,35 @@
+health: 575
+consumes: {
+    powerBuffered: 180000
+}
+size: 2
+fullLightColor: bd5553ff
+emptyLightColor: 3b3b45
+baseExplosiveness: 8
+requirements: [
+    dense-alloy/95
+    creostone/280
+    silicon/95
+]
+category: power
+research: {
+    parent: creostone-power-node
+    objectives: [
+        battery-large,
+        {
+            type: SectorComplete
+            preset: tarFields
+        }
+    ]
+}
+destroyEffect: {
+    type: ExplosionEffect
+    waveRad: 20
+    waveLife: 10
+    waveColor: ffba8c
+    sparkLen: 5
+    sparkStroke: 3
+    sparkRad: 25
+    sparks: 6
+    smokes: 0
+}

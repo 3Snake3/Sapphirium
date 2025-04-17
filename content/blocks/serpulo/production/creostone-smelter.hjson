@@ -1,0 +1,27 @@
+size: 2
+category: crafting
+requirements: [
+    dense-alloy/50
+    silicon/45
+    thorium/45
+]
+drawer: {
+    type: DrawMulti
+    drawers: [DrawDefault, DrawFlame]
+}
+outputItem: creostone/1
+craftTime: 30
+consumes: {
+    power: 3.5
+    liquid: creotite/0.1
+    items: {
+        items: [
+            silicon/2
+        ]
+    }
+}
+craftEffect: redgeneratespark
+research: {
+    parent: dense-smelter
+    objectives: [creotite-mixer]
+}

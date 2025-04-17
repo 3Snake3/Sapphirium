@@ -1,0 +1,418 @@
+reload: 9
+xRand: 4
+recoil: 4
+consumes: {
+    power: 18
+}
+size: 4
+outlineColor: 1d1d21
+shake: 6
+shootY: 2
+health: 2600
+shootCone: 24
+range: 200
+shootSound: bolt
+inaccuracy: 3
+ammoPerShot: 5
+maxAmmo: 50
+ammoUseEffect: none
+ammoTypes: {
+    ruby: {
+        speed: 10
+        lifetime: 20
+        damage: 78
+        width: 10
+        height: 14
+        trailWidth: 2.8
+        trailLength: 6
+        weaveScale: 3
+        weaveMag: 2
+        backColor: ff6e6e
+        trailColor: ff6e6e
+        hitColor: ff6e6e
+        frontColor: ffffff
+        hitEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 3
+        waveRad: 6
+        waveLife: 22
+        waveColor: ff6e6e
+        waveStroke: 2
+        sparkLen: 5
+        sparkRad: 16
+        sparkColor: ff6e6e
+        lifetime: 33
+        }
+        despawnEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 3
+        waveRad: 6
+        waveLife: 22
+        waveColor: ff6e6e
+        waveStroke: 2
+        sparkLen: 5
+        sparkRad: 16
+        sparkColor: ff6e6e
+        lifetime: 33
+        }
+        shootEffect:
+        {
+        type: ExplosionEffect
+        smokes: 5
+        smokeRad: 16
+        smokeSize: 5
+        smokeColor: ff6e6e70
+        sparks: 3
+        waveRad: 6
+        waveLife: 22
+        waveColor: ff6e6e
+        waveStroke: 2
+        sparkLen: 5
+        sparkRad: 16
+        sparkColor: ff6e6e
+        lifetime: 33
+        }
+        smokeEffect: none
+        hittable: false
+        reflectable: false
+        absorbable: false
+        pierceArmor: true
+        status: active-bloodrage
+        lightning: 2
+        lightningLength: 6
+        lightningDamage: 24
+        lightningColor: ff6e6e
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragBullet: {
+        type: LaserBulletType
+        width: 30
+        length: 80
+        hitSize: 7
+        damage: 28
+        colors: [ff6e6e70, ff6e6e, ffffff]
+        pierceCap: 3
+        removeAfterPierce: true
+        hitColor: ff6e6e
+        }
+        spawnBullets: [
+        {
+        speed: 18
+        lifetime: 11.12
+        damage: 78
+        width: 10
+        height: 14
+        trailWidth: 2.8
+        trailLength: 6
+        homingPower: 0.08
+        homingRange: 40
+        backColor: ff6e6e
+        trailColor: ff6e6e
+        hitColor: ff6e6e
+        frontColor: ffffff
+        hitEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 3
+        waveRad: 6
+        waveLife: 22
+        waveColor: ff6e6e
+        waveStroke: 2
+        sparkLen: 5
+        sparkRad: 16
+        sparkColor: ff6e6e
+        lifetime: 33
+        }
+        despawnEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 3
+        waveRad: 6
+        waveLife: 22
+        waveColor: ff6e6e
+        waveStroke: 2
+        sparkLen: 5
+        sparkRad: 16
+        sparkColor: ff6e6e
+        lifetime: 33
+        }
+        shootEffect:
+        {
+        type: ExplosionEffect
+        smokes: 5
+        smokeRad: 16
+        smokeSize: 5
+        smokeColor: ff6e6e70
+        sparks: 3
+        waveRad: 6
+        waveLife: 22
+        waveColor: ff6e6e
+        waveStroke: 2
+        sparkLen: 5
+        sparkRad: 16
+        sparkColor: ff6e6e
+        lifetime: 33
+        }
+        smokeEffect: none
+        hittable: false
+        reflectable: false
+        absorbable: false
+        pierceArmor: true
+        status: active-bloodrage
+        lightning: 2
+        lightningLength: 6
+        lightningDamage: 24
+        lightningColor: ff6e6e
+        fragBullets: 1
+        fragRandomSpread: 90
+        fragBullet: {
+        sprite: circle-bullet
+        width: 8
+        height: 8
+        speed: 0
+        damage: 0
+        lifetime: 15
+        backColor: ff6e6e
+        frontColor: ffffff
+        collides: false
+        collidesTiles: false
+        hitEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 3
+        waveRad: 6
+        waveLife: 22
+        waveColor: ff6e6e
+        waveStroke: 2
+        sparkLen: 5
+        sparkRad: 16
+        sparkColor: ff6e6e
+        lifetime: 33
+        }
+        despawnEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 3
+        waveRad: 6
+        waveLife: 22
+        waveColor: ff6e6e
+        waveStroke: 2
+        sparkLen: 5
+        sparkRad: 16
+        sparkColor: ff6e6e
+        lifetime: 33
+        }
+        intervalBullets: 1
+        intervalRandomSpread: 360
+        bulletInterval: 7
+        intervalBullet: {
+        speed: 10
+        lifetime: 6
+        damage: 18
+        width: 10
+        height: 14
+        trailWidth: 2.8
+        trailLength: 6
+        homingPower: 0.8
+        backColor: ff6e6e
+        trailColor: ff6e6e
+        hitColor: ff6e6e
+        frontColor: ffffff
+        hitEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 3
+        waveRad: 6
+        waveLife: 22
+        waveColor: ff6e6e
+        waveStroke: 2
+        sparkLen: 5
+        sparkRad: 16
+        sparkColor: ff6e6e
+        lifetime: 33
+        }
+        despawnEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 3
+        waveRad: 6
+        waveLife: 22
+        waveColor: ff6e6e
+        waveStroke: 2
+        sparkLen: 5
+        sparkRad: 16
+        sparkColor: ff6e6e
+        lifetime: 33
+        }
+        pierceArmor: true
+        status: active-bloodrage
+        lightning: 2
+        lightningLength: 6
+        lightningDamage: 24
+        lightningColor: ff6e6e
+        }
+        }
+        }
+        ]
+        }
+        }
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: ShapePart
+radius: 0
+radiusTo: 6
+circle: true
+color: ff6e6e
+layer: 110
+}
+{
+type: ShapePart
+radius: 0
+radiusTo: 2.5
+y: 3
+x: 3
+circle: true
+color: ff6e6e
+layer: 110
+}
+{
+type: ShapePart
+radius: 0
+radiusTo: 2.5
+y: 5
+x: 5
+circle: true
+color: ff6e6e
+layer: 110
+}
+{
+type: ShapePart
+radius: 0
+radiusTo: 2.5
+y: 7
+x: 7
+circle: true
+color: ff6e6e
+layer: 110
+}
+{
+type: ShapePart
+radius: 0
+radiusTo: 2.5
+y: 3
+x: -3
+circle: true
+color: ff6e6e
+layer: 110
+}
+{
+type: ShapePart
+radius: 0
+radiusTo: 2.5
+y: 5
+x: -5
+circle: true
+color: ff6e6e
+layer: 110
+}
+{
+type: ShapePart
+radius: 0
+radiusTo: 2.5
+y: 7
+x: -7
+circle: true
+color: ff6e6e
+layer: 110
+}
+{
+type: HaloPart
+shapes: 1
+haloRadius: 5
+radius: 0
+radiusTo: 6
+tri: true
+triLength: 0
+triLength: 5
+color: ff6e6e
+layer: 110
+haloRotateSpeed: 3
+}
+{
+type: HaloPart
+shapes: 1
+haloRadius: 5
+radius: 0
+radiusTo: 6
+tri: true
+triLength: 0
+triLength: 5
+color: ff6e6e
+layer: 110
+haloRotateSpeed: -6
+}
+{
+type: RegionPart
+suffix: -main
+}
+{
+type: RegionPart
+suffix: -mid
+moveY: -4
+}
+{
+type: RegionPart
+suffix: -bar
+color: ff6e6e
+under: true
+layerOffset: -0.001
+y: -2.5
+}
+{
+type: RegionPart
+suffix: -barrel
+mirror: true
+moveX: 6
+moveY: -1.5
+moveRot: -10
+moves: [
+{
+progress: recoil
+x: -3
+y: 0.5
+}
+]
+}
+{
+type: RegionPart
+suffix: -side
+mirror: true
+moveRot: -10
+moveX: 6
+moveY: -1.5
+moves: [
+{
+progress: recoil
+y: -4
+}
+]
+}
+]
+}
+category: turret
+envDisabled: 16
+requirements: [
+    dense-alloy/1200
+    ruby/680
+    silicon/640
+    globium/440
+    surge-alloy/330
+]
+research: {
+    parent: scarlet-star
+    objectives: [foreshadow]
+}

@@ -1,0 +1,166 @@
+health: 2200
+envDisabled: 16
+size: 3
+reload: 200
+recoil: 6
+shootCone: 5
+shootSound: laser
+consumes: {
+    power: 10
+}
+targetHealing: true
+shootEffect: {
+    type: WaveEffect
+    sides: 6
+    sizeFrom: 0
+    sizeTo: 16
+    lifetime: 20
+    strokeTo: 0
+    colorFrom: 85ff94
+    colorTo: 85ff94
+}
+smokeEffect: {
+    type: ParticleEffect
+    particles: 6
+    length: 45
+    lifetime: 45
+    sizeFrom: 5
+    sizeTo: 0
+    region: sapphirium-rhombus
+    colorFrom: 85ff94
+    colorTo: 85ff94
+    cone: 360
+}
+range: 300
+minRange: 100
+targetAir: false
+ammoUseEffect: none
+ammoTypes: {
+    emerald: {
+        type: ArtilleryBulletType
+        sprite: circle-bullet
+        shrinkY: 0
+        width: 16
+        height: 16
+        speed: 6
+        lifetime: 60
+        drag: 0.005
+        damage: 100
+        splashDamage: 80
+        splashDamageRadius: 32
+        backColor: 98ffa9
+        frontColor: ffffff
+        trailColor: 98ffa9
+        trailWidth: 5
+        trailLength: 10
+        hitSound: laser
+        collides: true
+        collidesTiles: true
+        collidesAir: false
+        hitEffect: {
+            type: ExplosionEffect
+            waveRad: 32
+            waveColor: 98ffa9
+            waveLife: 20
+            waveStroke: 3
+            smokes: 0
+            sparks: 12
+            sparkRad: 32
+            sparkLen: 8
+            sparkStroke: 3
+            sparkColor: 98ffa9
+        }
+        despawnEffect: {
+            type: ExplosionEffect
+            waveRad: 32
+            waveColor: 98ffa9
+            waveLife: 20
+            waveStroke: 3
+            smokes: 0
+            sparks: 12
+            sparkRad: 32
+            sparkLen: 8
+            sparkStroke: 3
+            sparkColor: 98ffa9
+        }
+        fragBullets: 12
+        fragSpread:60
+        fragRandomSpread:20
+        fragLifeMin: 0.5
+        fragVelocityMax: 2
+        fragVelocityMin: 0.4
+        fragLifeMax: 5
+        fragBullet: {
+            type: BasicBulletType
+            sprite: circle-bullet
+            shrinkY: 0
+            width: 16
+            height: 16
+            speed: 4
+            drag:0.06
+            lifetime: 80
+            damage: 40
+            splashDamage: 30
+            splashDamageRadius: 16
+            backColor: 98ffa9
+            frontColor: ffffff
+            trailColor: 98ffa9
+            hitSound: laser
+            trailWidth: 2
+            trailLength: 5
+            collidesAir: false
+            collidesTeam: true
+            healPercent: 1.4
+            hitEffect: {
+                type: ExplosionEffect
+                waveRad: 32
+                waveColor: 98ffa9
+                waveLife: 20
+                waveStroke: 3
+                smokes: 0
+                sparks: 12
+                sparkRad: 32
+                sparkLen: 8
+                sparkStroke: 3
+                sparkColor: 98ffa9
+            }
+            despawnEffect: [
+                {
+                    type: ExplosionEffect
+                    waveRad: 32
+                    waveColor: 98ffa940
+                    waveLife: 50
+                    waveStroke: 3
+                    smokes: 0
+                    sparks: 12
+                    sparkRad: 32
+                    sparkLen: 8
+                    sparkStroke: 3
+                    sparkColor: 98ffa970
+                }
+                {
+                    type: WaveEffect
+                    sides: 20
+                    sizeFrom: 30
+                    sizeTo: 40
+                    lifetime: 50
+                    strokeFrom: 3
+                    strokeTo: 0
+                    colorFrom: 98ffa9
+                    colorTo: 98ffa900
+                }
+            ]
+        }
+    }
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: emerald-
+}
+category: turret
+research: revival
+requirements: [
+    dense-alloy/225
+    emerald/225
+    globium/110
+]

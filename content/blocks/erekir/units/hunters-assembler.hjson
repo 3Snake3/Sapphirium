@@ -1,0 +1,17 @@
+requirements: [
+thorium/600
+tungsten/200
+topaz/300
+silicon/450
+carved-alloy/200
+]
+regionSuffix: -dark
+category: units
+size: 5
+areaSize: 13
+researchCostMultiplier: 0.4
+consumes: {
+power: 5
+liquids: [cyanogen/0.1, creotine/0.1]
+}
+research: faction-refabricator

@@ -1,0 +1,63 @@
+
+attribute: oil
+boostScale: 0.075
+craftEffect: {
+    type: ParticleEffect
+    particles: 12
+length: 17
+lifetime: 22
+    sizeFrom: 5
+    sizeTo: 1
+    region: sapphirium-rhombus
+    colorFrom: bf92f9
+    colorTo: bf92f960
+    cone: 360
+   
+}
+updateEffect: {
+type: ParticleEffect
+    particles: 1
+    length: 0
+    lifetime: 30
+    sizeFrom: 4
+    sizeTo: 0
+    region: sapphirium-rhombus
+    colorFrom: bf92f9
+    colorTo: bf92f960
+    cone: 360
+}
+updateEffectChance: 0.1
+drawer: {
+    type: DrawMulti
+    drawers: [
+        DrawDefault, 
+        DrawFlame
+    ]
+}
+outputItem: tinorium/3
+craftTime: 80
+size: 3
+hasPower: true
+hasLiquids: true
+itemCapacity: 21
+liquidCapacity: 20
+ambientSound: smelter
+ambientSoundVolume: 0.06
+consumes: {
+    power: 3.5
+    liquid: oil/0.2
+    items: {
+        items: [
+            graphite/3
+            thorium/3
+        ]
+    }
+}
+category: crafting
+requirements: [
+    dense-alloy/100
+    thorium/80
+    silicon/100
+    graphite/80
+]
+research: silicon-crucible

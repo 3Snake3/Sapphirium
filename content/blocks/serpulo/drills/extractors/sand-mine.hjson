@@ -1,0 +1,62 @@
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawRegion
+            spinSprite: true
+            rotateSpeed: 5
+            suffix: "-rotator"
+        }
+        {
+            type: DrawRegion
+            suffix: "-top"
+        }
+    ]
+}
+size: 2
+outputItem: sand/1
+craftTime: 120
+consumes: {
+    power: 0.7
+    liquid: water/0.11
+}
+craftEffect: {
+particles: 6
+lifetime: 35
+length: 10
+sizeFrom: 4
+sizeTo: 0
+colorFrom: 8f8f8f
+colorTo: 8f8f8f
+cone: 360
+}
+updateEffect: {
+particles: 5
+lifetime: 30
+length: 8
+sizeFrom: 4
+sizeTo: 0
+colorFrom: 8f8f8f
+colorTo: 8f8f8f
+cone: 45
+}
+hasPower: true
+category: production
+research: {
+    parent: pneumatic-drill
+    objectives: [
+        {
+            type: SectorComplete
+            preset: craters
+        }
+    ]
+}
+requirements: [
+    dense-alloy/35
+    graphite/25
+]
+envDisabled: 16

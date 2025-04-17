@@ -1,0 +1,18 @@
+requirements: [
+    silicon/5000
+    amethyst/7000
+    tungsten/3800
+    oxide/2300
+]
+category: effect
+unitType: aspiration
+health: 24000
+itemCapacity: 3400
+size: 5
+thrusterLength: 10
+armor: 17
+incinerateNonBuildable: true
+buildCostMultiplier: 0.7
+unitCapModifier: 18
+researchCostMultiplier: 0.17
+research: tesla

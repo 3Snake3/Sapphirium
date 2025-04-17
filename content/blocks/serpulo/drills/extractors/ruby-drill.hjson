@@ -1,0 +1,78 @@
+drawer: [
+    {
+        type: DrawRegion
+        suffix: -bottom
+    }
+    {
+        type: DrawLiquidRegion
+        drawLiquid: water
+    }
+    {
+        type: DrawDefault
+    }
+    {
+        type: DrawGlowRegion
+        color: ff6e6e
+    }
+]
+health: 400
+size: 3
+outputItem: ruby/5
+craftTime: 200
+consumes: {
+    power: 8
+    liquid: water/0.4
+    items: {
+        items: [
+            blast-compound/4
+        ]
+    }
+}
+liquidCapacity: 24
+craftEffect: {
+    type: MultiEffect
+    effects: [
+        {
+            type: WaveEffect
+            sides: 0
+            sizeFrom: 0
+            sizeTo: 25
+            lifetime: 60
+            colorFrom: ff6e6e
+            colorTo: d94848
+            strokeFrom: 4
+            strokeTo: 0
+        }
+        {
+            type: ParticleEffect
+            region: sapphirium-rhombus
+            sizeFrom: 8
+            interp: circleOut
+            sizeTo: 0
+            lifetime: 80
+            particles: 6
+            length: 25
+            cone: 360
+            colorFrom: ff6e6e
+            colorTo: d94848
+        }
+    ]
+}
+hasPower: true
+hasLiquids: true
+category: production
+research: {
+    parent: emerald-drill
+    objectives: [
+        blast-mixer,
+        {
+            type: SectorComplete
+            preset: tarFields
+        }
+    ]
+}
+requirements: [
+    dense-alloy/120
+    thorium/120
+    graphite/80
+]

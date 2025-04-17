@@ -1,1 +1,2 @@
-affinities: [burning, small-flaming, flaming]
+affinities: [shocked, shock-stun]
+opposites: [burning, melting, super-melting, flaming, small-flaming]

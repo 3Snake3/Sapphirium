@@ -1,0 +1,12 @@
+health: 1200
+category: defense
+requirements: [
+    surge-stone/10
+]
+research: {
+    parent: armed-creostone-wall
+    objectives: [surge-wall-large]
+}
+emitLight: true
+lightRadius: 85
+envDisabled: 16

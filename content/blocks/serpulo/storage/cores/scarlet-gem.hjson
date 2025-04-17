@@ -1,0 +1,10 @@
+requirements: [
+    dense-alloy/8000
+    silicon/10000
+    titanium/8000
+    thorium/5800
+    ruby/3800
+]
+research: snow-monolith
+category: effect
+unitType: scarlet-moth

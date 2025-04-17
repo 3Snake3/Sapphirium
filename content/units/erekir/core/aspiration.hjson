@@ -1,0 +1,83 @@
+coreUnitDock: true
+controller: BuilderAI
+isEnemy: false
+envDisabled: 0
+targetPriority: -2
+lowAltitude: true
+mineWalls: true
+mineFloor: false
+mineHardnessScaling: true
+flying: true
+mineSpeed: 7
+mineTier: 4
+buildSpeed: 1.65
+drag: 0.08
+speed: 6
+rotateSpeed: 10
+accel: 0.08
+itemCapacity: 80
+health: 900
+armor: 3
+hitSize: 13
+fogRadius: 4
+buildBeamOffset: 9
+pickupUnits: true
+vulnerableWithPayloads: true
+targetable: false
+hittable: false
+engineOffset: 9.25
+engineSize: 3.25
+engineColor: c093fa
+immunities: [unleash, high-speed, overdrive, overclock]
+engines: [
+    {
+        x: 10.25
+        y: -4
+        rotation: 315
+        radius: 2.75
+    }
+    {
+        x: -10.25
+        y: -4
+        rotation: -135
+        radius: 2.75
+    }
+    {
+        x: 9.5
+        y: 3.75
+        rotation: 315
+        radius: 2.75
+    }
+    {
+        x: -9.5
+        y: 3.75
+        rotation: -135
+        radius: 2.75
+    }
+]
+weapons: [
+    {
+        type: RepairBeamWeapon
+        x: 3.75
+        y: 5
+        rotate: false
+        mirror: true
+        noAttack: true
+        shootY: 0
+        widthSinMag: 0.14
+        reload: 20
+        beamWidth: 0.7
+        shootCone: 40
+        repairSpeed: 4.2
+        fractionRepairSpeed: 0.04
+        targetUnits: false
+        targetBuildings: true
+        autoTarget: false
+        controllable: true
+        laserColor: c093fa
+        healColor: c093fa
+        bullet: {
+            maxRange: 85
+        }
+    }
+]

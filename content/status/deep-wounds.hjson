@@ -1,0 +1,17 @@
+name: deep-wounds
+damage: 2
+speedMultiplier: 0.15
+effect: {
+    type: ParticleEffect
+    particles: 3
+    line: true
+    cone: 360
+    lifetime: 14
+    length: 15
+    strokeFrom: 2
+    strokeTo: 2
+    lenFrom: 5
+    lenTo: 0
+    colorFrom: f68021
+    colorTo: f68021
+}

@@ -1,0 +1,153 @@
+health: 3400
+reload: 190
+recoil: 6
+shake: 3
+shootCone: 30
+shootSound: bang
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+ammoUseEffect: casing3Double
+ammoEjectBack: 2
+range: 380
+size: 4
+shootY: 10
+velocityRnd: 0.1
+shoot: {
+    type: ShootMulti
+    source: {
+        type: ShootSpread
+        shots: 2
+        shotDelay: 10
+    }
+    dest: [
+        {
+            type: ShootAlternate
+            spread: 13
+            shots: 2
+            shotDelay: 25
+        }
+    ]
+}
+ammoTypes: {
+    tinorium: {
+        width: 14
+        height: 14
+        speed: 7
+        lifetime: 18
+        damage: 50
+        splashDamage: 80
+        splashDamageRadius: 65
+        hitSound: explosion
+        sprite: circle-bullet
+        shrinkY: 0
+        hitEffect: sapExplosion
+        despawnEffect: sapExplosion
+        collides: false
+        collidesTiles: false
+        splashDamagePierce: true
+        status: sapped
+        statusDuration: 180
+        backColor: 6d56bf
+        frontColor: bf92f9
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragLifeMin: 1
+        fragBullet: {
+        width: 14
+        height: 14
+        speed: 7
+        lifetime: 18
+        damage: 50
+        splashDamage: 80
+        splashDamageRadius: 65
+        collides: false
+        collidesTiles: false
+        splashDamagePierce: true
+        hitSound: explosion
+        sprite: circle-bullet
+        shrinkY: 0
+        hitEffect: sapExplosion
+        despawnEffect: sapExplosion
+        status: sapped
+        statusDuration: 180
+        backColor: 6d56bf
+        frontColor: bf92f9
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragLifeMin: 1
+        fragBullet: {
+        width: 14
+        height: 14
+        speed: 7
+        lifetime: 18
+        damage: 50
+        splashDamage: 80
+        splashDamageRadius: 65
+        hitSound: explosion
+        sprite: circle-bullet
+        shrinkY: 0
+        hitEffect: sapExplosion
+        despawnEffect: sapExplosion
+        status: sapped
+        statusDuration: 180
+        backColor: 6d56bf
+        frontColor: bf92f9
+        fragBullets: 4
+        fragSpread: 90
+        fragRandomSpread: 45
+        fragVelocityMin: 0.4
+        fragVelocityMax: 1.2
+        fragLifeMin: 0.4
+        fragLifeMax: 2
+        fragBullet: {
+            width: 10
+            height: 10
+            damage: 15
+            splashDamage: 24
+            splashDamageRadius: 25
+            lifetime: 90
+            speed: 3
+            drag: 0.07
+            despawnEffect: {
+                type: ExplosionEffect
+                sparks: 24
+                smokes: 3
+                waveRad: 25
+                waveLife: 40
+                waveStroke: 2
+                sparkStroke: 2
+                sparkRad: 29
+                sparkLen: 15
+                smokeSize: 2
+                smokeRad: 30
+                waveColor: BD6BD5
+                sparkColor: BD6BD5
+                smokeColor: 402C6370
+            }
+            inaccuracy: 12
+            backColor: 6d56bf
+            frontColor: bf92f9
+            status: sapped
+            statusDuration: 120
+            sprite: circle-bullet
+            collides: false
+            collidesTiles: false
+            shrinkY: 0.6
+            shrinkX: 0.6
+        }
+    }
+}
+}
+}
+category: turret
+research: {
+    parent: decay
+}
+requirements: [
+    globium/1200
+    tinorium/600
+    plastanium/480
+    thorium/440
+    silicon/450
+    surge-alloy/300
+]

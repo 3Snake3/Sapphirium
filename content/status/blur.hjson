@@ -1,0 +1,17 @@
+name: blur
+healthMultiplier: 999999
+speedMultiplier: 1.7
+damageMultiplier: 2
+transitionDamage: 0
+effect: {
+    type: ParticleEffect
+    particles: 3
+    sizeFrom: 4
+    sizeTo: 0
+    lifetime: 40
+    cone: 360
+    length: 24
+    colorFrom: ffffff70
+    colorTo: ffffff70
+}
+effectChance: 0.07

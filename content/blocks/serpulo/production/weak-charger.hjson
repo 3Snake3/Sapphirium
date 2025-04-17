@@ -1,0 +1,55 @@
+category: crafting
+envDisabled: 16
+consumes: {
+power: 1
+items: {
+items: [
+lead/4
+]
+}
+liquid: surge-mass/0.05
+}
+requirements: [
+    dense-alloy/70
+    globium/70
+]
+craftEffect: {
+type: ExplosionEffect
+smokes: 0
+sparks: 15
+sparkLen: 5
+sparkStroke: 1.5
+sparkRad: 24
+sparkColor: f3e979
+waveColor: f3e979
+waveLife: 8
+waveRad: 16
+waveStroke: 2
+}
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawGlowRegion
+            suffix: -top
+            color: f2e879
+        }
+        {
+            type: DrawGlowRegion
+            color: f2e87970
+        }
+    ]
+}
+size: 2
+itemCapacity: 10
+outputItem: charged-lead/1
+craftTime: 60
+boostScale: 0.05
+maxBoost: 0.5
+research: {
+    parent: surge-smelter
+    objectives: [electromixer]
+}

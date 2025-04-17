@@ -1,0 +1,1 @@
+const sapphireRestorer = extend(MendProjector, "sapphire-restorer", {});

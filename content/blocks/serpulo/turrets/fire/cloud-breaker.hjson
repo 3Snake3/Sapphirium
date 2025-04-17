@@ -1,0 +1,649 @@
+size: 3
+category: turret
+research: {
+    parent: heat
+}
+requirements: [
+    dense-alloy/245
+    titanium/225
+    creostone/170
+    plastanium/100
+]
+health: 1200
+consumes: {
+power: 16
+}
+reload: 50
+inaccuracy: 9
+rotateSpeed: 6
+recoil: 4
+shake: 1.5
+range: 325
+velocityRnd:0.3
+shootSound: shootSnap
+ammoPerShot: 12
+shootY:-1
+targetGround: false
+targetAir: true
+shoot: {
+    type: ShootMulti
+    source: {
+        type: ShootAlternate
+        spread: 8
+        barrels: 2
+        shots: 2
+        shotDelay: 15
+    }
+    dest: [
+        {
+            type: ShootSpread
+            shots: 2
+            shotDelay: 20
+        }
+    ]
+}
+ammoTypes: {
+pyratite: {
+      speed: 4
+      damage: 59
+      splashDamage: 20
+      splashDamageRadius: 16
+      lifetime: 20
+      drag: 0.06
+      shrinkY:0.1
+      shrinkX:0.1
+      ammoMultiplier: 1
+      reloadMultiplier: 1.9
+      hitColor: FFBE5C
+      trailColor: FF9F0F
+      backColor: FF9F0F
+      frontColor: FFBE5C
+      trailChance: 0.6
+      trailEffect: {
+          rotWithParent:true
+          type: ParticleEffect
+          particles: 3
+          length: -30
+          lifetime: 30
+          cone: 26
+          sizeFrom: 1
+          sizeTo: 3
+          colorFrom: FFBE5C
+          colorTo: FF9F0F00
+          interp: pow10Out
+          sizeInterp: pow10Out
+          }
+      width: 8
+      height: 14
+      trailWidth: 2.4
+      trailLength: 12
+      hitSound: explosion
+      hitShake: 4
+      hitEffect: {
+          type: ExplosionEffect
+          waveRad: 30
+          waveLife: 13
+          waveColor: FFBE5C
+          waveStroke: 3
+          sparks: 8
+          sparkColor: FFBE5C
+          sparkLen: 5
+          sparkStroke: 2.5
+          smokes: 3
+          smokeSize: 7
+          smokeColor: FFBE5C70
+      }
+      despawnEffect: {
+      type: ExplosionEffect
+      waveRad: 20
+      waveLife: 13
+      waveColor: FFBE5C
+      waveStroke: 3
+      sparks: 3
+      sparkColor: FFBE5C
+      sparkLen: 5
+      sparkStroke: 2.5
+      smokes: 3
+      smokeSize: 4
+      smokeColor: FFBE5C70
+      }
+      shootEffect: [shootBigColor, {
+      type: ParticleEffect
+      particles: 4
+      cone: 5
+      length: 14
+      lifetime: 40
+      sizeFrom: 4
+      sizeTo: 0
+      colorFrom: 565666
+      colorTo: 56566670
+      interp: pow2Out
+      sizeInterp: pow2Out
+      }
+      {
+      type: ParticleEffect
+      particles: 4
+      cone: 5
+      length: 14
+      lifetime: 40
+      sizeFrom: 2
+      sizeTo: 0
+      colorFrom: FFBE5C
+      colorTo: FF9F0F70
+      interp: pow2Out
+      sizeInterp: pow2Out
+      }]
+      smokeEffect: {
+              type: ParticleEffect
+              particles: 3
+              cone: 360
+              length: 45
+              sizeFrom: 3
+              sizeTo: 0
+              lifetime: 60
+              colorFrom: 565666
+              colorTo: 56566670
+         }
+  collidesGround: false
+  status: small-flaming
+  statusDuration: 80
+  fragBullets: 3
+  fragLifeMin:0.2
+  fragLifeMax:1.9
+  fragRandomSpread:7
+  fragVelocityMin:0.6
+  fragVelocityMax:1.9
+  fragBullet: {
+      speed: 6
+      damage: 14
+      splashDamage: 20
+      splashDamageRadius: 5
+      lifetime: 50
+      drag: 0.02
+      homingPower:0.012
+      homingRange:100
+      homingDelay:5
+      hitColor: FFBE5C
+      trailColor: FF9F0F
+      backColor: FF9F0F
+      frontColor: FFBE5C
+      trailChance: 0.3
+      trailEffect: {
+          rotWithParent:true
+          type: ParticleEffect
+          particles: 3
+          length: -10
+          lifetime: 20
+          cone: 12
+          sizeFrom: 1
+          sizeTo: 2
+          colorFrom: FFBE5C
+          colorTo: FF9F0F00
+          interp: pow3Out
+          sizeInterp: pow3Out
+          }
+      width: 4
+      height: 7
+      trailWidth: 1.4
+      trailLength: 8
+      hitSound: none
+      hitShake: 2
+      hitEffect: {
+          type: ExplosionEffect
+          waveRad: 7
+          waveLife: 13
+          waveColor: ffba8c
+          waveStroke: 3
+          sparks: 3
+          sparkColor: FF9F0F
+          sparkLen: 5
+          sparkStroke: 2.5
+          smokes: 2
+          smokeSize: 4
+          smokeColor: FFBE5C70
+      }
+      despawnEffect: {
+      type: ExplosionEffect
+      waveRad: 5
+      waveLife: 13
+      waveColor: FFBE5C
+      waveStroke: 3
+      sparks: 4
+      sparkColor: FFBE5C
+      sparkLen: 5
+      sparkStroke: 2.5
+      smokes: 2
+      smokeSize: 4
+      smokeColor: FFBE5C20
+      }
+  }
+}
+blast-compound:
+{
+    speed: 9
+    damage: 120
+    splashDamage: 20
+    splashDamageRadius: 20
+    lifetime: 50
+    drag: 0.06
+    shrinkY:0.1
+    shrinkX:0.1
+    homingPower:0.2
+    homingRange:200
+    homingDelay:10
+    ammoMultiplier: 2
+    reloadMultiplier: 0.4
+    hitColor: FF80BD
+    trailColor: C70021
+    backColor: C70021
+    frontColor: FF80BD
+    trailChance: 0.6
+    trailEffect: {
+        rotWithParent:true
+        type: ParticleEffect
+        particles: 6
+        length: -30
+        lifetime: 30
+        cone: 26
+        sizeFrom: 1
+        sizeTo: 3
+        colorFrom: ffba8c
+        colorTo: FF80BD00
+        interp: pow10Out
+        sizeInterp: pow3Out
+        }
+    width: 8
+    height: 14
+    trailWidth: 2.4
+    trailLength: 12
+    hitSound: explosion
+    hitShake: 4
+    hitEffect: {
+        type: ExplosionEffect
+        waveRad: 30
+        waveLife: 13
+        waveColor: ffba8c
+        waveStroke: 3
+        sparks: 8
+        sparkColor: ffba8c
+        sparkLen: 5
+        sparkStroke: 2.5
+        smokes: 3
+        smokeSize: 7
+        smokeColor: ffba8c70
+    }
+    despawnEffect: [{
+    type: ExplosionEffect
+    waveRad: 20
+    waveLife: 13
+    waveColor: ffba8c
+    waveStroke: 3
+    sparks: 3
+    sparkColor: ffba8c
+    sparkLen: 5
+    sparkStroke: 2.5
+    smokes: 3
+    smokeSize: 4
+    smokeColor: ffba8c70
+    }
+    {
+        type: ParticleEffect
+        particles: 8
+        cone: 7
+        length: 90
+        lifetime: 40
+        sizeFrom: 1
+        sizeTo: 3
+        colorFrom: C70021
+        colorTo: C7002100
+        interp: pow10Out
+        sizeInterp: pow10Out
+        }
+        {
+        type: ParticleEffect
+        particles: 3
+        cone: 15
+        length: 70
+        lifetime: 60
+        sizeFrom: 1
+        sizeTo: 3
+        colorFrom: ffba8c
+        colorTo: C7002100
+        interp: pow10Out
+        sizeInterp: pow10Out
+        }
+    ]
+    shootEffect: [shootBigColor, {
+    type: ParticleEffect
+    particles: 4
+    cone: 5
+    length: 14
+    lifetime: 40
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: 565666
+    colorTo: 56566670
+    interp: pow2Out
+    sizeInterp: pow2Out
+    }
+    {
+    type: ParticleEffect
+    particles: 4
+    cone: 5
+    length: 14
+    lifetime: 40
+    sizeFrom: 2
+    sizeTo: 0
+    colorFrom: FF80BD
+    colorTo: FF80BD70
+    interp: pow2Out
+    sizeInterp: pow2Out
+    }]
+    smokeEffect: {
+            type: ParticleEffect
+            particles: 3
+            cone: 360
+            length: 45
+            sizeFrom: 3
+            sizeTo: 0
+            lifetime: 60
+            colorFrom: 565666
+            colorTo: 56566670
+       }
+collidesGround: false
+status: blasted
+statusDuration: 80
+fragBullets: 7
+fragLifeMin:0.2
+fragLifeMax:1.5
+fragRandomSpread:2
+fragVelocityMin:0.6
+fragVelocityMax:1.2
+fragBullet: {
+    speed: 18
+    damage: 40
+    splashDamage: 50
+    splashDamageRadius: 5
+    lifetime: 50
+    drag: 0.06
+    hitColor: FF80BD
+    trailColor: C70021
+    backColor: C70021
+    frontColor: FF80BD
+    trailChance: 0.3
+    trailEffect: {
+        rotWithParent:true
+        type: ParticleEffect
+        particles: 3
+        length: -10
+        lifetime: 20
+        cone: 12
+        sizeFrom: 1
+        sizeTo: 2
+        colorFrom: FF80BD
+        colorTo: C7002100
+        interp: pow3Out
+        sizeInterp: pow3Out
+        }
+    width: 4
+    height: 7
+    trailWidth: 1.4
+    trailLength: 8
+    hitSound: none
+    hitShake: 2
+    hitEffect: {
+        type: ExplosionEffect
+        waveRad: 7
+        waveLife: 13
+        waveColor: FF80BD
+        waveStroke: 3
+        sparks: 3
+        sparkColor: FF80BD
+        sparkLen: 5
+        sparkStroke: 2.5
+        smokes: 2
+        smokeSize: 4
+        smokeColor: C7002130
+    }
+    despawnEffect: {
+    type: ExplosionEffect
+    waveRad: 5
+    waveLife: 13
+    waveColor: FF80BD
+    waveStroke: 3
+    sparks: 8
+    sparkColor: FF80BD
+    sparkLen: 5
+    sparkStroke: 2.5
+    smokes: 2
+    smokeSize: 4
+    smokeColor: C7002170
+    }
+}
+}
+
+creostone: {
+    speed: 11
+    damage: 34
+    splashDamage: 98
+    splashDamageRadius: 20
+    lifetime: 32
+    drag: 0.06
+    shrinkY:0.1
+    shrinkX:0.1
+    homingPower:0.008
+    homingRange:200
+    homingDelay:10
+    ammoMultiplier: 2
+    reloadMultiplier: 0.7
+    hitColor: eb8778
+    trailColor: eb8778
+    backColor: eb8778
+    frontColor: ffba8c
+    trailChance: 0.6
+    trailEffect: {
+        rotWithParent:true
+        type: ParticleEffect
+        particles: 6
+        length: -30
+        lifetime: 30
+        cone: 26
+        sizeFrom: 1
+        sizeTo: 3
+        colorFrom: ffba8c
+        colorTo: eb877800
+        interp: pow10Out
+        sizeInterp: pow10Out
+        }
+    width: 8
+    height: 14
+    trailWidth: 2.4
+    trailLength: 12
+    hitSound: explosion
+    hitShake: 4
+    hitEffect: {
+        type: ExplosionEffect
+        waveRad: 30
+        waveLife: 13
+        waveColor: ffba8c
+        waveStroke: 3
+        sparks: 8
+        sparkColor: ffba8c
+        sparkLen: 5
+        sparkStroke: 2.5
+        smokes: 3
+        smokeSize: 7
+        smokeColor: ffba8c70
+    }
+    despawnEffect: {
+    type: ExplosionEffect
+    waveRad: 20
+    waveLife: 13
+    waveColor: ffba8c
+    waveStroke: 3
+    sparks: 3
+    sparkColor: ffba8c
+    sparkLen: 5
+    sparkStroke: 2.5
+    smokes: 3
+    smokeSize: 4
+    smokeColor: ffba8c70
+    }
+    shootEffect: [shootBigColor, {
+    type: ParticleEffect
+    particles: 4
+    cone: 5
+    length: 14
+    lifetime: 40
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: 565666
+    colorTo: 56566670
+    interp: pow2Out
+    sizeInterp: pow2Out
+    }
+    {
+    type: ParticleEffect
+    particles: 4
+    cone: 5
+    length: 14
+    lifetime: 40
+    sizeFrom: 2
+    sizeTo: 0
+    colorFrom: ffba8c
+    colorTo: eb877870
+    interp: pow2Out
+    sizeInterp: pow2Out
+    }]
+    smokeEffect: {
+            type: ParticleEffect
+            particles: 3
+            cone: 360
+            length: 45
+            sizeFrom: 3
+            sizeTo: 0
+            lifetime: 60
+            colorFrom: 565666
+            colorTo: 56566670
+       }
+collidesGround: false
+status: small-flaming
+statusDuration: 80
+fragBullets: 12
+fragLifeMin:0.2
+fragLifeMax:1.5
+fragRandomSpread:60
+fragVelocityMin:0.6
+fragVelocityMax:1.2
+fragBullet: {
+    speed: 3.0
+    damage: 14
+    splashDamage: 34
+    splashDamageRadius: 5
+    lifetime: 32
+    drag: -0.01
+    homingPower:0.02
+    homingRange:70
+    homingDelay:10
+    hitColor: eb8778
+    trailColor: eb8778
+    backColor: eb8778
+    frontColor: ffba8c
+    trailChance: 0.3
+    trailEffect: {
+        rotWithParent:true
+        type: ParticleEffect
+        particles: 3
+        length: -10
+
+        lifetime: 20
+        cone: 12
+        sizeFrom: 1
+        sizeTo: 2
+        colorFrom: ffba8c
+        colorTo: eb877800
+        interp: pow3Out
+        sizeInterp: pow3Out
+        }
+    width: 4
+    height: 7
+    trailWidth: 1.4
+    trailLength: 8
+    hitSound: none
+    hitShake: 2
+    hitEffect: {
+        type: ExplosionEffect
+        waveRad: 7
+        waveLife: 13
+        waveColor: ffba8c
+        waveStroke: 3
+        sparks: 3
+        sparkColor: ffba8c
+        sparkLen: 5
+        sparkStroke: 2.5
+        smokes: 2
+        smokeSize: 4
+        smokeColor: ffba8c70
+    }
+    despawnEffect: {
+    type: ExplosionEffect
+    waveRad: 5
+    waveLife: 13
+    waveColor: ffba8c
+    waveStroke: 3
+    sparks: 8
+    sparkColor: ffba8c
+    sparkLen: 5
+    sparkStroke: 2.5
+    smokes: 2
+    smokeSize: 4
+    smokeColor: ffba8c70
+    }
+}
+}
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -main
+}
+{
+type: RegionPart
+suffix: -bottom
+under: true
+layerOffset: -0.001
+color: ff9c59
+outline: false
+}
+{
+type: RegionPart
+suffix: -back
+under: true
+mirror: true
+moveRot: -15
+moves: [
+{
+progress: recoil
+y: -1.5
+}
+]
+}
+{
+type: RegionPart
+suffix: -barrel
+under: true
+mirror: true
+moveRot: 15
+moveY: -3
+moveX: 3
+moves: [
+{
+progress: recoil
+y: -2
+}
+]
+}
+]
+}

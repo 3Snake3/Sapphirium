@@ -1,0 +1,125 @@
+
+ammoTypes: {
+    sand: {
+        type: ArtilleryBulletType
+        width: 11
+        height: 11
+        splashDamageRadius: 10
+        splashDamage: 9
+        knockback: 0.3
+        collidesTiles: false
+        lifetime: 22.5
+        speed: 4
+        collidesAir: false
+        hitEffect: flakExplosion
+        despawnEffect: flakExplosion
+        fragBullets: 4
+        fragRandomSpread: 360
+        status: slow
+        statusDuration: 16
+        fragBullets: 2
+        fragRandomSpread: 0
+        fragSpread: 4
+        fragVelocityMin: 1
+        fragVelocityMax: 1
+        fragLifeMin: 1
+        fragLifeMax: 1
+        fragBullet: {
+            type: ArtilleryBulletType
+        width: 11
+        height: 11
+        splashDamageRadius: 10
+        splashDamage: 9
+        knockback: 0.3
+        collidesTiles: false
+        lifetime: 22.5
+        speed: 4
+        collidesAir: false
+        hitEffect: flakExplosion
+        despawnEffect: flakExplosion
+        fragBullets: 4
+        fragRandomSpread: 360
+        status: slow
+        statusDuration: 16
+        fragBullet: {
+            type: BasicBulletType
+            width: 7
+            height: 7
+            damage: 5
+            hitEffect: flakExplosion
+            despawnEffect: flakExplosion
+            speed: 4
+            lifetime: 20
+        }
+        }
+    }
+    coal: {
+        speed: 0
+        damage: 0
+        collides: false
+        collidesTiles: false
+        lifetime: 1
+        width: 0
+        height: 0
+        sprite: sapphirium-none-bullet
+        hitEffect: none
+        despawnEffect: none
+        fragBullets: 2
+        fragRandomSpread: 0
+        fragSpread: 6
+        fragVelocityMin: 1
+        fragVelocityMax: 1
+        fragLifeMin: 1
+        fragLifeMax: 1
+        fragBullet: {
+        type: ArtilleryBulletType
+        width: 11
+        height: 11
+        splashDamageRadius: 13
+        splashDamage: 15
+        knockback: 0.4
+        collidesTiles: false
+        lifetime: 60
+        speed: 3
+        collidesAir: false
+        status: sapphirium-flammability
+        statusDuration: 20
+        ammoMultiplier: 5
+        reloadMultiplier: 0.8
+        frontColor: 636363
+        backColor: 313131
+        trailColor: 313131
+        trailChance: 0.5
+        }
+    }
+}
+targetAir: false
+reload: 120
+recoil: 3
+range: 180
+inaccuracy: 6
+maxAmmo: 60
+ammoPerShot: 4
+rotateSpeed: 8
+shootCone: 25
+shootSound: bang
+smokeEffect: {
+particles: 6
+cone: 10
+length: 16
+lifetime: 30
+sizeFrom: 5
+sizeTo: 0
+colorFrom: a2a2a270
+colorTo: a2a2a270
+interp: pow2Out
+sizeInterp: pow2Out
+}
+requirements: [
+    dense-alloy/35
+    graphite/25
+]
+envDisabled: 16
+category: turret
+research: hail
+health: 220

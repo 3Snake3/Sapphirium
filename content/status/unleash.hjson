@@ -1,0 +1,6 @@
+healthMultiplier: 3
+reloadMultiplier: 2.5
+damageMultiplier: 1.75
+speedMultiplier: 1.75
+color: ffe18f
+name: unleash

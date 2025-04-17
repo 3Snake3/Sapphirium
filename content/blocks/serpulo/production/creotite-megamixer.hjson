@@ -1,0 +1,76 @@
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            suffix: "-bottom"
+        }
+        {
+            type: DrawLiquidTile
+            drawLiquid: ledonite-liquid
+            padding: 3
+        }
+        {
+            type: DrawLiquidTile
+            drawLiquid: creotite
+            padding: 3
+        }
+        {
+            type: DrawDefault
+        }
+        {
+        type: DrawGlowRegion
+        suffix: -heat
+        }
+    ]
+}
+requirements: [
+    dense-alloy/680
+    globium/540
+    thorium/400
+    silicon/440
+    creostone/380
+    surge-alloy/340
+]
+envDisabled: 16
+outputLiquid: creotite/1.8
+craftTime: 360
+size: 5
+hasPower: true
+hasItems: true
+hasLiquids: true
+outputsLiquid: true
+updateEffect: {
+particles: 8
+cone: 360
+length: 16
+lifetime: 45
+colorFrom: eb8778
+colorTo: eb8778
+sizeFrom: 4
+sizeTo: 0
+interp: circleOut
+sizeInterp: circleOut
+}
+consumes: {
+    power: 100
+    liquid: ledonite-liquid/1.3333333
+    items: {
+        items: [
+            blast-compound/12
+        ]
+    }
+}
+itemCapacity: 24
+liquidCapacity: 200
+rotate: false
+solid: true
+category: crafting
+research: {
+    parent: creotite-mixer
+    objectives: [
+        big-blast-mixer, 
+        ledonite-mixer, 
+        impulse-surge-smelter
+    ]
+}

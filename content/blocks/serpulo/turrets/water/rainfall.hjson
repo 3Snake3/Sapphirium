@@ -1,0 +1,108 @@
+health: 1250
+category: turret
+size: 3
+reload: 200
+recoil: 3
+shootEffect: shootBigColor
+smokeEffect:  shootBigSmoke
+shootSound: shootBig
+shoot: {
+    type: ShootMulti
+    source: {
+        type: ShootSpread
+        shots: 2
+        shotDelay:18
+    }
+    dest: [
+        {
+            type: ShootAlternate
+            shotDelay: 6
+            shots: 3
+            spread: 8
+            barrels: 3
+        }
+    ]
+}
+heatColor: 8ca4f5
+consumes: {
+    power: 6
+}
+inaccuracy: 8
+placeableLiquid: true
+floating: true
+range: 280
+rotateSpeed: 2
+shake: 2
+targetGround: false
+loopSound: none
+ammoTypes: {
+    water: {
+        type: MissileBulletType
+        width: 10
+        height: 13
+        speed: 7
+        lifetime: 40
+        homingPower: 0.009
+        homingRange: 65
+        keepVelocity: false
+        knockback: 2.5
+        pierceArmor: true
+        drag: -0.003
+        splashDamageRadius: 24
+        splashDamage: 33
+        ammoMultiplier: 0.1
+        damage: 18
+        sprite: sapphirium-rocket
+        shrinkX: 0
+        shrinkY: 0
+        trailColor: 6a75c4
+        backColor: 6a75c4
+        frontColor: 8ca4f5
+        hitEffect: {
+            type: ExplosionEffect
+            waveRad: 30
+            waveColor: 8ca4f5
+            waveLife: 8
+            waveStroke: 3
+            sparks: 0
+            smokes: 6
+            smokeSize: 4
+            smokeRad: 35
+            smokeColor: 8ca4f575
+        }
+        despawnEffect: {
+            type: ExplosionEffect
+            waveRad: 30
+            waveColor: 8ca4f5
+            waveLife: 8
+            waveStroke: 3
+            sparks: 0
+            smokes: 6
+            smokeSize: 4
+            smokeRad: 35
+            smokeColor: 8ca4f575
+        }
+        trailEffect: missileTrail
+        hitSound: splash
+        hitShake: 4
+        collidesGround: false
+        status: wet
+        statusDuration: 180
+        spawnBullets: [
+        {
+        type: LiquidBulletType
+        liquid: water
+        speed: 6
+        lifetime: 46.67
+        }
+        ]
+    }
+}
+liquidCapacity: 40
+research: splash
+requirements: [
+    dense-alloy/225
+    thorium/145
+    metaglass/125
+    silicon/125
+]

@@ -1,90 +1,149 @@
-speed: 0.08
+speed: 0.09
 playerControllable: false
 logicControllable: false
 hitSize: 58
-health: 340000
-armor: 46
+health: 460000
+armor: 0
 lightRadius: 260
-rotateSpeed: 1.4
+rotateSpeed: 0.6
 drownTimeMultiplier: 99
-legExtension: 4
-legCount: 12
-legMoveSpace: 2.5
-legGroupSize: 6
-legSpeed: 0.1
-legForwardScl: 3
-legBaseOffset: 5,
+legCount: 8
+legMoveSpace: 0.9
+legForwardScl: 160
+legPairOffset: 3
+legLength: 320
+legBaseOffset: 60
+stepShake: 3
+legExtension: -12
+legLengthScl: 0.9
+rippleScale: 3
+legSpeed: 0.007
 mechStepParticles: true
 lockLegBase: true
 legContinuousMove: true
-baseLegStraightness: 0.8
+baseLegStraightness: 0.9
 outlineColor: 262327
-healColor: cf735f
+healColor: FCBDEE
 parts: [
-{
-type: RegionPart
-suffix: -glow
-color: ff0000
-outline: false
-mirror: false
-blending: additive
-}
-{
-type: RegionPart
-suffix: -decal
-outline: true
-mirror: false
-}
-{
-type: RegionPart
-suffix: -decal-glow
-color: ff0000
-outline: false
-mirror: false
-blending: additive
-}
+    {
+        type: RegionPart
+        suffix: -glow
+        color: ffffff
+        outline: false
+        mirror: false
+        blending: additive
+    }
+    {
+        type: RegionPart
+        suffix: -decal
+        outline: true
+        mirror: false
+    }
+    {
+        type: RegionPart
+        suffix: -decal-glow
+        color: fffffff
+        outline: false
+        mirror: false
+        blending: additive
+    }
 ]
 deathExplosionEffect: {
-type: MultiEffect
-effects: [
-{
-type: ParticleEffect
-particles: 1
-length: 0
-sizeFrom: 70
-sizeTo: 0
-lifetime: 120
-colorFrom: cf735f
-colorTo: cf735f
-region: sapphirium-rail
-}
-{
-type: ParticleEffect
-particles: 1
-length: 0
-sizeFrom: 70
-sizeTo: 0
-lifetime: 120
-colorFrom: cf735f
-colorTo: cf735f
-region: sapphirium-rail-hit
-}
-{
-type: ExplosionEffect
-waveRad: 70
-waveColor: cf735f
-waveStroke: 5
-waveLife: 30
-sparks: 16
-sparkRad: 80
-sparkColor: cf735f
-sparkLen: 5
-sparkStroke: 3
-smokes: 10
-smokeRad: 65
-smokeColor: 565666
-}
-]
+    type: MultiEffect
+    effects: [
+        {
+            type: ParticleEffect
+            particles: 1
+            length: 0
+            sizeFrom: 45
+            sizeTo: 0
+            lifetime: 140
+            colorFrom: ffffff
+            colorTo: ffffff
+            region: sapphirium-rail
+        }
+        {
+            type: ParticleEffect
+            particles: 1
+            length: 0
+            sizeFrom: 45
+            sizeTo: 0
+            lifetime: 120
+            colorFrom: ffffff
+            colorTo: ffffff
+            region: sapphirium-rail-hit
+        }
+        {
+            type: ParticleEffect
+            particles: 3
+            length: 25
+            sizeFrom: 5
+            spin:1
+            startDelay:80
+            sizeTo: 0
+            lifetime: 210
+            colorFrom: ffffff
+            colorTo: F08DD500
+            region: sapphirium-star-effect
+        }
+        {
+            type: ParticleEffect
+            particles: 7
+            length: 18
+            baseLength: 5
+            sizeFrom: 4
+            spin:-1
+            startDelay:80
+            sizeTo: 2
+            lifetime: 210
+            colorFrom: F08DD500
+            colorTo: F08DD500
+            region: sapphirium-star-effect
+        }
+        {
+            type: ParticleEffect
+            particles: 9
+            cone: 360
+            baseLength: 3
+            length: 22
+            cone: 360
+            sizeFrom: 8
+            sizeTo: 0
+            startDelay:90
+            lifetime: 210
+            colorFrom: 6E7080
+            colorTo: 373537
+        }
+        {
+            type: ParticleEffect
+            particles: 18
+            cone: 360
+            baseLength: 3
+            length: 28
+            cone: 360
+            sizeFrom: 12
+            sizeTo: 0
+            startDelay:90
+            lifetime: 210
+            colorFrom: 4A4B53
+            colorTo: 373537
+        }
+        {
+            type: ExplosionEffect
+            waveRad: 70
+            waveColor: cf735f
+            waveStroke: 4
+            waveLife: 45
+            sparks: 16
+            sparkRad: 80
+            sparkColor: FCBDEE
+            sparkLen: 7
+            sparkStroke: 3
+            smokes: 10
+            smokeRad: 65
+            smokeColor: 565666
+        }
+    ]
 }
 legPairOffset: 6
 legLength: 100
@@ -101,229 +160,2585 @@ legSplashRange: 40
 hovering: true
 groundLayer: 76
 shadowElevation: 1.25
-range: 350
+range: 450
 weapons: [
-{
-name: earth-weapon
-x: 0
-y: 0
-shootY: 0
-reload: 720
-cooldownTime: 400
-parts: [
-{
-type: RegionPart
-suffix: -glow
-color: c093fa
-outline: false
-mirror: false
-blending: additive
-}
-]
-recoil: 5
-recoilTime: 290
-mirror: false
-shootSound: railgun
-shake: 5
-bullet: {
-type: PointBulletType
-speed: 350
-range: 700
-trailSpacing: 20
-collides: true
-lifetime: 1
-hitShake: 5
-damage: 66666
-fragBullets: 64
-fragLifeMin: 0.9
-fragRandomSpread: 360
-fragBullet: {
-type: BasicBulletType
-speed: 3
-damage: 55
-splashDamage: 20
-splashDamageRadius: 2
-hitEffect: blastExplosion
-knockback: 0.6
-lifetime: 20
-width: 12
-height: 12
-status: super-melting
-statusDuration: 1400
-backColor: ae773a
-frontColor: e0C89f
-sprite: circle-bullet
-}
-shootEffect: {
-type: MultiEffect
-effects: [
-{
-type: ParticleEffect
-particles: 1
-length: 0
-sizeFrom: 38
-sizeTo: 0
-lifetime: 30
-colorFrom: cf735f
-colorTo: cf735f
-region: sapphirium-pierce2
-}
-{
-type: ParticleEffect
-particles: 1
-length: 0
-sizeFrom: 38
-sizeTo: 0
-lifetime: 30
-colorFrom: cf735f
-colorTo: cf735f
-region: sapphirium-rail
-}
-{
-type: ParticleEffect
-particles: 1
-length: 0
-sizeFrom: 38
-sizeTo: 0
-lifetime: 30
-colorFrom: cf735f
-colorTo: cf735f
-region: sapphirium-rail-hit
-}
-]
-}
-trailEffect: {
-type: ParticleEffect
-particles: 1
-length: 0
-sizeFrom: 38
-sizeTo: 0
-lifetime: 30
-colorFrom: cf735f
-colorTo: cf735f
-region: sapphirium-rail
-}
-hitEffect: {
-type: MultiEffect
-effects: [
-{
-particles: 1
-length: 0
-sizeFrom: 38
-sizeTo: 0
-lifetime: 30
-colorFrom: cf735f
-colorTo: cf735f
-region: sapphirium-rail-hit
-}
-{
-particles: 1
-length: 0
-sizeFrom: 38
-sizeTo: 0
-lifetime: 30
-colorFrom: cf735f
-colorTo: cf735f
-region: sapphirium-rail
-}
-{
-type: WaveEffect
-sides: 0
-sizeFrom: 38
-sizeTo: 0
-lifetime: 30
-colorFrom: cf735f
-colorTo: cf735f
-}
-]
-}
-despawnEffect: {
-type: MultiEffect
-effects: [
-{
-particles: 1
-length: 0
-sizeFrom: 38
-sizeTo: 0
-lifetime: 30
-colorFrom: cf735f
-colorTo: cf735f
-region: sapphirium-rail
-}
-{
-particles: 1
-length: 0
-sizeFrom: 38
-sizeTo: 0
-lifetime: 30
-colorFrom: cf735f
-colorTo: cf735f
-region: sapphirium-rail-hit
-}
-{
-type: WaveEffect
-sides: 0
-sizeFrom: 38
-sizeTo: 0
-lifetime: 30
-colorFrom: cf735f
-colorTo: cf735f
-}
-]
-}
-smokeEffect: {
-type: ParticleEffect
-particles: 12
-length: 26
-lifetime: 80
-cone: 360
-sizeFrom: 6
-sizeTo: 0
-colorFrom: cf735f
-colorTo: cf735f
-}
-}
-}
-{
-x: 0
-y: 0
-shootY: 0
-reload: 420
-mirror: false
-shoot: {
-shots: 4
-shotDelay: 90
-}
-shootCone: 360
-bullet: {
-speed: 0
-hitShake: 8
-layer: 74
-damage: 0
-splashDamage: 300
-splashDamageRadius: 70
-lifetime: 1
-hitEffect: none
-status: stunne
-statusDuration: 120
-despawnEffect: {
-type: WaveEffect
-sides: 0
-sizeFrom: 60
-sizeTo: 70
-lifetime: 60
-strokeFrom: 5
-colorFrom: cf735f
-colorTo: cf735f
-}
-hitSound: plasmaboom
-}
-}
+    {
+        name: earth-weapon
+        x: 0
+        y: 0
+        shootY: 0
+        reload: 590
+        cooldownTime: 250
+        parts: [
+            {
+                type: RegionPart
+                suffix: -glow
+                color: c093fa
+                outline: false
+                mirror: false
+                blending: additive
+            }
+        ]
+        recoil: 5
+        recoilTime: 290
+        mirror: false
+        shootSound: railgun
+        shake: 5
+        bullet: {
+            type: PointBulletType
+            speed: 350
+            range: 1200
+            trailSpacing: 20
+            collides: true
+            lifetime: 1
+            hitShake: 5
+            damage: 66666
+            fragBullets: 1
+            fragLifeMin: 1
+            fragLifeMax: 1.5
+            fragRandomSpread: 0
+            fragBullet: {
+                type: BasicBulletType
+                speed: 0
+                damage: 300
+                splashDamage: 600
+                splashDamageRadius: 50
+                hitEffect: [
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        sizeFrom: 0
+                        sizeTo: 18
+                        lifetime: 40
+                        strokeFrom: 6
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                    {
+                        type: ParticleEffect
+                        particles: 1
+                        sizeFrom: 5
+                        sizeTo: 0
+                        length: 0
+                        lifetime: 75
+                        colorFrom: ffffff
+                        colorTo: F08DD500
+                        region: sapphirium-star-effect
+                    }
+                ]
+                knockback: 0.6
+                lifetime: 75
+                width: 6
+                height: 6
+                status: stunne
+                statusDuration: 1400
+                backColor: 985BB0
+                frontColor: F08DD5
+                sprite: sapphirium-none-bullet
+                fragBullets: 32
+                fragLifeMin: 0.6
+                fragRandomSpread: 360
+                fragBullet: {
+                    type: BasicBulletType
+                    speed: 2.5
+                    damage: 300
+                    splashDamage: 60
+                    splashDamageRadius: 16
+                    hitEffect: [
+                        {
+                            type: WaveEffect
+                            sides: 0
+                            sizeFrom: 0
+                            sizeTo: 18
+                            lifetime: 40
+                            strokeFrom: 6
+                            strokeTo: 0
+                            colorFrom: F08DD5
+                            colorTo: ffffff00
+                        }
+                        {
+                            type: ParticleEffect
+                            particles: 1
+                            sizeFrom: 5
+                            sizeTo: 0
+                            length: 0
+                            lifetime: 75
+                            colorFrom: ffffff
+                            colorTo: F08DD500
+                            region: sapphirium-star-effect
+                        }
+                    ]
+                    knockback: 0.6
+                    lifetime: 60
+                    width: 6
+                    height: 6
+                    shrinkY: 0
+                    status: super-melting
+                    statusDuration: 1400
+                    backColor: 985BB0
+                    frontColor: F08DD5
+                    sprite: circle-bullet
+                }
+            }
+            shootEffect: {
+                type: MultiEffect
+                effects: [
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        sizeFrom: 0
+                        sizeTo: 250
+                        strokeFrom: 7
+                        strokeTo: 1
+                        lifetime: 120
+                        colorFrom: ffffff
+                        colorTo: 402C63
+                    }
+                    {
+                        type: ParticleEffect
+                        particles: 12
+                        length: 48
+                        sizeFrom: 15
+                        sizeTo: 0
+                        lifetime: 45
+                        colorFrom: 985BB0
+                        colorTo: FCBDEE
+                        region: sapphirium-star-effect
+                    }
+                ]
+            }
+            trailEffect: none
+            hitEffect: {
+                type: MultiEffect
+                effects: [
+                    {
+                        particles: 1
+                        length: 0
+                        sizeFrom: 38
+                        sizeTo: 0
+                        lifetime: 45
+                        colorFrom: FCBDEE
+                        colorTo: FCBDEE
+                        region: sapphirium-rail-hit
+                    }
+                    {
+                        particles: 1
+                        length: 0
+                        sizeFrom: 38
+                        sizeTo: 0
+                        lifetime: 45
+                        colorFrom: FCBDEE
+                        colorTo: FCBDEE
+                        region: sapphirium-rail
+                    }
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        sizeFrom: 0
+                        sizeTo: 65
+                        lifetime: 45
+                        colorFrom: FCBDEE
+                        colorTo: FCBDEE
+                    }
+                ]
+            }
+            despawnEffect:none
+            hitEffect:[
+                {
+                    type: RadialEffect
+                    rotationOffset: 0
+                    lengthOffset: 32
+                    effect: {
+                        type: ParticleEffect
+                        particles: 8
+                        startDelay:10
+                        length: 40
+                        lifetime: 120
+                        sizeFrom: 7
+                        sizeTo: 0
+                        cone: 1
+                        interp: circleOut
+                        colorFrom: 9b88c2
+                        colorTo: 9b88c2
+                        layer:100.2
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 10
+                    lengthOffset: 28
+                    effect: {
+                        type: ParticleEffect
+                        particles: 8
+                        startDelay:20
+                        length: 36
+                        lifetime: 110
+                        sizeFrom: 7
+                        sizeTo: 0
+                        cone: 1
+                        interp: circleOut
+                        colorFrom: 9b88c2
+                        colorTo: 9b88c2
+                        layer:100.2
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 20
+                    lengthOffset: 24
+                    effect: {
+                        type: ParticleEffect
+                        particles: 7
+                        startDelay:30
+                        length: 32
+                        lifetime: 100
+                        sizeFrom: 7
+                        sizeTo: 0
+                        cone: 1
+                        interp: circleOut
+                        colorFrom: 9b88c2
+                        colorTo: 9b88c2
+                        layer:100.2
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 30
+                    lengthOffset: 16
+                    effect: {
+                        type: ParticleEffect
+                        particles: 7
+                        startDelay:40
+                        length: 28
+                        lifetime: 90
+                        sizeFrom: 7
+                        sizeTo: 0
+                        cone: 1
+                        interp: circleOut
+                        colorFrom: 9b88c2
+                        colorTo: 9b88c2
+                        layer:100.2
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 40
+                    lengthOffset: 12
+                    effect: {
+                        type: ParticleEffect
+                        particles: 7
+                        startDelay:50
+                        length: 24
+                        lifetime: 80
+                        sizeFrom: 7
+                        sizeTo: 0
+                        cone: 1
+                        interp: circleOut
+                        colorFrom: 9b88c2
+                        colorTo: 9b88c2
+                        layer:100.2
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 50
+                    lengthOffset: 8
+                    effect: {
+                        type: ParticleEffect
+                        particles: 7
+                        startDelay:60
+                        length: 20
+                        lifetime: 70
+                        sizeFrom: 6
+                        sizeTo: 0
+                        cone: 10
+                        interp: circleOut
+                        colorFrom: 9b88c2
+                        colorTo: ffffff
+                        layer:100.2
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 50
+                    lengthOffset: 8
+                    effect: {
+                        type: ParticleEffect
+                        particles: 7
+                        startDelay:60
+                        length: 16
+                        lifetime: 60
+                        sizeFrom: 6
+                        sizeTo: 0
+                        cone: 20
+                        interp: circleOut
+                        colorFrom: 9b88c2
+                        colorTo: CC80FF
+                        layer:100.2
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 60
+                    lengthOffset: 4
+                    effect: {
+                        type: ParticleEffect
+                        particles: 6
+                        startDelay:70
+                        length: 12
+                        lifetime: 50
+                        sizeFrom: 6
+                        sizeTo: 0
+                        cone: 30
+                        interp: circleOut
+                        colorFrom: CC80FF
+                        colorTo: ffffff
+                        layer:100.2
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 0
+                    lengthOffset: 32
+                    effect: {
+                        type: ParticleEffect
+                        particles: 4
+                        startDelay:10
+                        length: 46
+                        lifetime: 120
+                        sizeFrom: 2
+                        sizeTo: 0
+                        cone: 10
+                        interp: circleOut
+                        colorFrom: EBCCFF
+                        colorTo: EBCCFF
+                        layer:100.3
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 10
+                    lengthOffset: 28
+                    effect: {
+                        type: ParticleEffect
+                        particles: 8
+                        startDelay:20
+                        length: 40
+                        lifetime: 110
+                        sizeFrom: 2
+                        sizeTo: 0
+                        cone: 10
+                        interp: circleOut
+                        colorFrom: EBCCFF
+                        colorTo: EBCCFF
+                        layer:100.3
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 20
+                    lengthOffset: 24
+                    effect: {
+                        type: ParticleEffect
+                        particles: 4
+                        startDelay:30
+                        length: 36
+                        lifetime: 100
+                        sizeFrom: 4
+                        sizeTo: 0
+                        cone:20
+                        interp: circleOut
+                        colorFrom: EBCCFF
+                        colorTo: EBCCFF
+                        layer:100.3
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 30
+                    lengthOffset: 16
+                    effect: {
+                        type: ParticleEffect
+                        particles: 7
+                        startDelay:40
+                        length: 32
+                        lifetime: 90
+                        sizeFrom: 4
+                        sizeTo: 0
+                        cone: 20
+                        interp: circleOut
+                        colorFrom: EBCCFF
+                        colorTo: EBCCFF
+                        layer:100.3
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 40
+                    lengthOffset: 12
+                    effect: {
+                        type: ParticleEffect
+                        particles: 4
+                        startDelay:50
+                        length: 34
+                        lifetime: 80
+                        sizeFrom: 4
+                        sizeTo: 0
+                        cone: 20
+                        interp: circleOut
+                        colorFrom: EBCCFF
+                        colorTo: EBCCFF
+                        layer:100.3
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 50
+                    lengthOffset: 8
+                    effect: {
+                        type: ParticleEffect
+                        particles: 4
+                        startDelay:60
+                        length: 20
+                        lifetime: 70
+                        sizeFrom: 4
+                        sizeTo: 0
+                        cone: 30
+                        interp: circleOut
+                        colorFrom: EBCCFF
+                        colorTo: ffffff
+                        layer:100.3
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 50
+                    lengthOffset: 8
+                    effect: {
+                        type: ParticleEffect
+                        particles: 4
+                        startDelay:60
+                        length: 24
+                        lifetime: 60
+                        sizeFrom: 3
+                        sizeTo: 0
+                        cone: 40
+                        interp: circleOut
+                        colorFrom: EBCCFF
+                        colorTo: ffffff
+                        layer:100.3
+                    }
+                }
+                {
+                    type: RadialEffect
+                    rotationOffset: 60
+                    lengthOffset: 4
+                    effect: {
+                        type: ParticleEffect
+                        particles: 3
+                        startDelay:70
+                        length: 18
+                        lifetime: 50
+                        sizeFrom: 4
+                        sizeTo: 0
+                        cone: 45
+                        interp: circleOut
+                        colorFrom: BDA3FF
+                        colorTo: ffffff
+                        layer:100.3
+                    }
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 60
+                    lifetime: 80
+                    strokeFrom: 5
+                    colorFrom: CC80FF
+                    colorTo: 9b88c2
+                }
+                {
+                    type: WaveEffect
+                    startDelay:20
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 80
+                    lifetime: 60
+                    strokeFrom: 5
+                    colorFrom: CC80FF
+                    colorTo: 9b88c2
+                }
+                {
+                    type: WaveEffect
+                    startDelay:40
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 100
+                    lifetime: 40
+                    strokeFrom: 5
+                    colorFrom: CC80FF
+                    colorTo: 9b88c2
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    region: sapphirium-star-effect
+                    startDelay:70
+                    cone: 360
+                    length: 0
+                    cone: 360
+                    sizeFrom: 0
+                    sizeTo: 24
+                    lifetime: 25
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    region: sapphirium-star-effect
+                    startDelay:95
+                    cone: 360
+                    length: 0
+                    cone: 360
+                    sizeFrom:24
+                    sizeTo: 0
+                    lifetime: 45
+                    colorFrom: ffffff
+                    colorTo: CC80FF
+                }
+                {
+                    type: WaveEffect
+                    startDelay:70
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 40
+                    lifetime: 10
+                    strokeFrom: 5
+                    colorFrom: CC80FF
+                    colorTo: 9b88c2
+                }
+                {
+                    type: WaveEffect
+                    startDelay:75
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 40
+                    lifetime: 10
+                    strokeFrom: 5
+                    colorFrom: CC80FF
+                    colorTo: CC80FF
+                }
+                {
+                    type: WaveEffect
+                    startDelay:85
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 60
+                    lifetime: 20
+                    strokeFrom: 5
+                    colorFrom: CC80FF
+                    colorTo: CC80FF
+                }
+                {
+                    type: WaveEffect
+                    startDelay:90
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 60
+                    lifetime: 10
+                    strokeFrom: 5
+                    colorFrom: CC80FF
+                    colorTo: CC80FF
+                }
+                {
+                    type: WaveEffect
+                    startDelay:90
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 40
+                    lifetime: 10
+                    strokeFrom: 3
+                    colorFrom: CC80FF
+                    colorTo: CC80FF
+                }
+                {
+                    type: WaveEffect
+                    startDelay:95
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 100
+                    lifetime: 20
+                    strokeFrom: 5
+                    colorFrom: CC80FF
+                    colorTo: 9b88c2
+                }
+                {
+                    type: WaveEffect
+                    startDelay:100
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 130
+                    lifetime: 35
+                    strokeFrom: 5
+                    colorFrom: CC80FF
+                    colorTo: 9b88c2
+                }
+            ]
+        }
+    }
+    {
+        x: 0
+        y: 0
+        shootY: 0
+        reload: 300
+        mirror: false
+        shoot: {
+            shots: 3
+            shotDelay: 90
+        }
+        shootSound:fatum-comm
+        shootCone: 360
+        bullet: {
+            speed: 0
+            hitShake: 8
+            layer: 74
+            damage: 0
+            splashDamage: 300
+            splashDamageRadius: 90
+            buildingDamageMultiplier: 3
+            shootEffect: none
+            pierce: true
+            pierceBuilding: true
+            pierceCap: 4444
+            lifetime: 1
+            hitEffect: {
+                type: ParticleEffect
+                particles: 3
+                region: sapphirium-star-effect
+                cone: 360
+                baseLength: 43
+                randLength: false
+                length: -7
+                cone: 360
+                sizeFrom: 5
+                sizeTo: 0
+                lifetime: 120
+                colorFrom: ffffff
+                colorTo: ffffff
+            }
+            status: stunne
+            statusDuration: 60
+            despawnEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 80
+                    sizeTo: 98
+                    lifetime: 100
+                    strokeFrom: 7
+                    colorFrom: 985BB0
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 84
+                    randLength: false
+                    length: -8
+                    cone: 360
+                    sizeFrom: 5
+                    sizeTo: 0
+                    lifetime: 120
+                    colorFrom: EBCCFF
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 8
+                    cone: 360
+                    baseLength: 74
+                    randLength: false
+                    length:-16
+                    cone: 360
+                    sizeFrom: 7
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: CC80FF
+                    colorTo: 373537
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    cone: 360
+                    baseLength: 74
+                    randLength: false
+                    length:-18
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: CC80FF
+                    colorTo: 373537
+                }
+                {
+                    type: ParticleEffect
+                    particles: 9
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 84
+                    randLength: false
+                    length: 28
+                    cone: 360
+                    sizeFrom: 5
+                    sizeTo: 2
+                    lifetime: 120
+                    colorFrom: EBCCFF
+                    colorTo: 985BB0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 86
+                    randLength: false
+                    length: 32
+                    cone: 360
+                    sizeFrom: 5
+                    sizeTo: 2
+                    lifetime: 120
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                }
+                {
+                    type: ParticleEffect
+                    particles: 14
+                    cone: 360
+                    baseLength: 84
+                    randLength: false
+                    length: 38
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: CC80FF
+                    colorTo: 373537
+                }
+                {
+                    type: ParticleEffect
+                    particles: 14
+                    cone: 360
+                    baseLength: 92
+                    randLength: false
+                    length: 28
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: CC80FF
+                    colorTo: 373537
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 156
+                    lifetime: 23
+                    strokeFrom: 2
+                    startDelay:20
+                    followParent: true
+                    colorFrom: EBCCFF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 35
+                    sizeTo: 159
+                    lifetime: 15
+                    strokeFrom: 1
+                    startDelay:40
+                    followParent: true
+                    colorFrom: EBCCFF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 45
+                    sizeTo: 167
+                    lifetime: 21
+                    strokeFrom: 1
+                    startDelay:40
+                    followParent: true
+                    colorFrom: EBCCFF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 55
+                    sizeTo: 167
+                    lifetime: 21
+                    strokeFrom: 1
+                    startDelay:32
+                    followParent: true
+                    colorFrom: EBCCFF
+                    colorTo: ffffff
+                }
+            ]
+            hitSound: plasmaboom
+            maxRange: 320
+            range: 320
+            rangeOverride: 320
+        }
+    }
+    {
+        x: 0
+        y: 0
+        shootY: 0
+        reload: 300
+        mirror: false
+        shoot: {
+            shots: 4
+            shotDelay: 90
+        }
+        shootSound:fatum-comm
+        shootCone: 360
+        bullet: {
+            speed: 0
+            hitShake: 8
+            layer: 74
+            damage: 44444
+            pierce: true
+            pierceBuilding: true
+            pierceCap: 4444
+            splashDamage: 350
+            splashDamageRadius: 268
+            buildingDamageMultiplier: 0
+            maxRange: 320
+            range: 320
+            rangeOverride: 320
+            shootEffect: none
+            lifetime: 1
+            hitEffect: {
+                type: ParticleEffect
+                particles: 4
+                region: sapphirium-star-effect
+                cone: 360
+                baseLength: 43
+                randLength: false
+                length: -12
+                cone: 360
+                sizeFrom: 2
+                sizeTo: 0
+                lifetime: 120
+                colorFrom: ffffff
+                colorTo: ffffff
+            }
+            status: stunne
+            statusDuration: 35
+            despawnEffect: [
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 296
+                    length:7
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 6
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: EBCCFF
+                    colorTo: ffffff
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    cone: 360
+                    baseLength: 290
+                    randLength: false
+                    cone: 360
+                    length:6
+                    sizeFrom: 9
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom:EBCCFF
+                    colorTo: ffffff
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    cone: 360
+                    baseLength: 298
+                    randLength: false
+                    length:13
+                    cone: 360
+                    sizeFrom: 6
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: CC80FF
+                    colorTo: 373537
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 250
+                    randLength: false
+                    length: -3
+                    cone: 360
+                    sizeFrom: 7
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: EBCCFF
+                    colorTo: ffffff
+                }
+                {
+                    type: ParticleEffect
+                    particles: 24
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 282
+                    randLength: false
+                    length: -2
+                    cone: 360
+                    sizeFrom: 7
+                    sizeTo: 0
+                    lifetime: 120
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    cone: 360
+                    baseLength: 282
+                    randLength: false
+                    length:-30
+                    cone: 360
+                    sizeFrom: 7
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: CC80FF
+                    colorTo: 373537
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    cone: 360
+                    baseLength: 272
+                    randLength: false
+                    length:-15
+                    cone: 360
+                    sizeFrom: 7
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: CC80FF
+                    colorTo: 4A4B53
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    cone: 360
+                    baseLength: 275
+                    randLength: false
+                    length:-32
+                    cone: 360
+                    sizeFrom: 5
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: EBCCFF
+                    colorTo: 402C63
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 150
+                    sizeTo: 296
+                    lifetime: 25
+                    strokeFrom: 1
+                    startDelay:1
+                    followParent: true
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 156
+                    sizeTo: 296
+                    lifetime: 23
+                    strokeFrom: 1
+                    startDelay:20
+                    followParent: true
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 159
+                    sizeTo: 296
+                    lifetime: 15
+                    strokeFrom: 1
+                    startDelay:40
+                    followParent: true
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 167
+                    sizeTo: 296
+                    lifetime: 21
+                    strokeFrom: 1
+                    startDelay:40
+                    followParent: true
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 167
+                    sizeTo: 296
+                    lifetime: 21
+                    strokeFrom: 1
+                    startDelay:32
+                    followParent: true
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                }
+            ]
+            hitSound: plasmaboom
+        }
+    }
+    // On death
+    {
+        x: 0
+        y: 0
+        shootY: 0
+        shootOnDeath: true
+        reload: 60
+        recoil: 0
+        mirror: false
+        alternate: false
+        controllable: false
+        shootCone: 360
+        shootSound: plasmaboom
+        bullet: {
+            type: ExplosionBulletType
+            splashDamage: 200
+            damage:1000
+            splashDamageRadius: 400
+            lifetime: 10
+            speed:0
+            fragBullets: 1
+            fragLifeMin: 1
+            fragLifeMax: 1
+            fragBullet: {
+                type: BasicBulletType
+                speed: 0
+                lifetime: 690
+                splashDamage: 4000
+                splashDamageRadius: 400
+                sprite: sapphirium-none-bullet
+                fragBullets: 1
+                fragLifeMin: 1
+                fragLifeMax: 1
+                fragBullet: {
+                    type: BasicBulletType
+                    speed: 0
+                    lifetime: 5
+                    splashDamage: 4000
+                    splashDamageRadius: 400
+                    sprite:sapphirium-none-bullet
+                    fragBullets: 1
+                    fragLifeMin: 1
+                    fragLifeMax: 1
+                    fragBullet: {
+                        type: BasicBulletType
+                        speed: 0
+                        lifetime: 1
+                        splashDamage: 5000
+                        splashDamageRadius: 400
+                        sprite:sapphirium-none-bullet
+                        fragBullets: 1
+                        fragLifeMin: 1
+                        fragLifeMax: 1
+                        fragBullet: {
+                            type: BasicBulletType
+                            speed: 0
+                            lifetime: 1
+                            splashDamage: 5000
+                            splashDamageRadius: 400
+                            sprite:sapphirium-none-bullet
+                            fragBullets: 1
+                            fragLifeMin: 1
+                            fragLifeMax: 1
+                            fragBullet: {
+                                type: BasicBulletType
+                                speed: 0
+                                lifetime: 1
+                                splashDamage: 5000
+                                splashDamageRadius: 400
+                                sprite:sapphirium-none-bullet
+                                fragBullets: 1
+                                fragLifeMin: 1
+                                fragLifeMax: 1
+                                fragBullet: {
+                                    type: BasicBulletType
+                                    speed: 0
+                                    lifetime: 1
+                                    splashDamage: 5000
+                                    splashDamageRadius: 400
+                                    sprite:sapphirium-none-bullet
+                                    fragBullets: 1
+                                    fragLifeMin: 1
+                                    fragLifeMax: 1
+                                    fragBullet: {
+                                        type: BasicBulletType
+                                        speed: 0
+                                        lifetime: 1
+                                        splashDamage: 5000
+                                        splashDamageRadius: 400
+                                        sprite:sapphirium-none-bullet
+                                        fragBullets: 1
+                                        fragLifeMin: 1
+                                        fragLifeMax: 1
+                                        fragBullet: {
+                                            type: BasicBulletType
+                                            speed: 0
+                                            lifetime: 1
+                                            splashDamage: 5000
+                                            splashDamageRadius: 400
+                                            sprite:sapphirium-none-bullet
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }   // Wave start
+            shootEffect: [
+                {
+                    type: WaveEffect
+                    sides: 3
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 240
+                    strokeFrom: 3
+                    strokeTo: 0
+                    colorFrom: CC80FF
+                    colorTo: CC80FF
+                }
+                {
+                    type: WaveEffect
+                    sides: 3
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 260
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:60
+                    colorFrom: CC80FF
+                    colorTo: CC80FF
+                }
+                {
+                    type: WaveEffect
+                    sides: 5
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 140
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:60
+                    colorFrom: CC80FF
+                    colorTo: CC80FF
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 250
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:120
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 12
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 270
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:180
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 3
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 120
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:240
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 4
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 300
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:300
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 7
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 120
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:360
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 3
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 120
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:420
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 5
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 150
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:450
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 7
+                    lifetime: 55
+                    sizeFrom: 0
+                    sizeTo: 170
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:480
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 9
+                    lifetime: 50
+                    sizeFrom: 0
+                    sizeTo: 190
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:510
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 11
+                    lifetime: 45
+                    sizeFrom: 0
+                    sizeTo: 210
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:540
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }               // Wave end 1
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 40
+                    sizeFrom: 0
+                    sizeTo: 230
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:570
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 30
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:60
+                    colorFrom: CC80FF
+                    colorTo: CC80FF
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 40
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:60
+                    colorFrom: CC80FF
+                    colorTo: CC80FF
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 70
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:120
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 80
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:180
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 90
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:240
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 140
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:300
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 170
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:360
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 190
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:420
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 220
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:450
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 55
+                    sizeFrom: 0
+                    sizeTo: 250
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:480
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 50
+                    sizeFrom: 0
+                    sizeTo: 270
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:510
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 45
+                    sizeFrom: 0
+                    sizeTo: 290
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:540
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 40
+                    sizeFrom: 0
+                    sizeTo: 300
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:570
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }                       // Wave end 2
+                // Smoke clouds
+                {
+                    type: ParticleEffect
+                    particles: 32
+                    length: -39
+                    sizeFrom: 10
+                    sizeTo: 0
+                    baseLength: 232
+                    startDelay:180
+                    randLength: false
+                    lifetime:300
+                    region: sapphirium-star-effect
+                    colorFrom: EBCCFF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 18
+                    length: -32
+                    sizeFrom: 10
+                    sizeTo: 0
+                    startDelay:210
+                    baseLength: 242
+                    randLength: false
+                    lifetime:300
+                    colorFrom: EBCCFF00
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 9
+                    length: -92
+                    sizeFrom: 10
+                    sizeTo: 0
+                    startDelay:270
+                    baseLength: 242
+                    randLength: false
+                    lifetime:200
+                    colorFrom: EBCCFF00
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 9
+                    length: -65
+                    sizeFrom: 10
+                    sizeTo: 0
+                    startDelay:270
+                    baseLength: 242
+                    randLength: false
+                    lifetime:170
+                    colorFrom: EBCCFF00
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 32
+                    length: -27
+                    startDelay:200
+                    sizeFrom: 10
+                    sizeTo: 0
+                    baseLength: 212
+                    randLength: false
+                    lifetime:300
+                    region: sapphirium-star-effect
+                    colorFrom: EBCCFF00
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    length: -60
+                    sizeFrom: 10
+                    startDelay:220
+                    sizeTo: 0
+                    baseLength: 242
+                    randLength: false
+                    lifetime:300
+                    colorFrom: EBCCFF00
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 236
+                    length:-35
+                    startDelay:230
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 300
+                    colorFrom: EBCCFF00
+                    colorTo: CC80FF
+                }
+                //2nd ring
+                {
+                    type: ParticleEffect
+                    particles: 32
+                    length: -49
+                    sizeFrom: 10
+                    sizeTo: 0
+                    baseLength: 152
+                    startDelay:480
+                    randLength: false
+                    lifetime:300
+                    region: sapphirium-star-effect
+                    colorFrom: EBCCFF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    length: -63
+                    sizeFrom: 10
+                    sizeTo: 0
+                    baseLength: 152
+                    startDelay:490
+                    randLength: false
+                    lifetime:200
+                    region: sapphirium-star-effect
+                    colorFrom: EBCCFF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 32
+                    length: -93
+                    sizeFrom: 10
+                    sizeTo: 0
+                    baseLength: 192
+                    startDelay:480
+                    randLength: false
+                    lifetime:150
+                    region: sapphirium-star-effect
+                    colorFrom: EBCCFF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 18
+                    length: -32
+                    sizeFrom: 10
+                    sizeTo: 0
+                    startDelay:430
+                    baseLength: 172
+                    randLength: false
+                    lifetime:300
+                    colorFrom: EBCCFF00
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 24
+                    length: -27
+                    startDelay:400
+                    sizeFrom: 10
+                    sizeTo: 0
+                    baseLength: 132
+                    randLength: false
+                    lifetime:300
+                    region: sapphirium-star-effect
+                    colorFrom: EBCCFF00
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    length: -60
+                    sizeFrom: 10
+                    startDelay:440
+                    sizeTo: 0
+                    baseLength: 162
+                    randLength: false
+                    lifetime:300
+                    colorFrom: EBCCFF00
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 12
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 164
+                    length:-35
+                    startDelay:430
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 300
+                    colorFrom: EBCCFF00
+                    colorTo: CC80FF
+                }
+                //starspam
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 236
+                    length:-75
+                    startDelay:120
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime:90
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 236
+                    length:-65
+                    startDelay:130
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 90
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 186
+                    length:-55
+                    startDelay:170
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 90
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 440
+                    length:-95
+                    startDelay:170
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime:90
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 276
+                    length:-75
+                    startDelay:230
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 90
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 290
+                    length:-75
+                    startDelay:260
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 90
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 126
+                    length:-35
+                    startDelay:270
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 70
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 330
+                    length:-75
+                    startDelay:290
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 70
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 8
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 180
+                    length:-75
+                    startDelay:320
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 45
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 340
+                    length:-75
+                    startDelay:350
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 70
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 220
+                    length:-75
+                    startDelay:370
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 70
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 290
+                    length:-75
+                    startDelay:440
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 70
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 340
+                    length:-75
+                    startDelay:470
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 60
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 340
+                    length:-75
+                    startDelay:540
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 60
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength:420
+                    length:-75
+                    startDelay:470
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 60
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {                       // Main Star
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    sizeFrom: 1
+                    sizeTo: 30
+                    lifetime:600
+                    region: sapphirium-star-effect
+                    colorFrom: CC80FF
+                    colorTo: ffffff
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    startDelay:200
+                    sizeFrom: 1
+                    sizeTo: 25
+                    lifetime:410
+                    region: sapphirium-star-effect
+                    colorFrom: ffffff
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    startDelay:400
+                    sizeFrom: 1
+                    sizeTo: 15
+                    lifetime:220
+                    region: sapphirium-star-effect
+                    colorFrom: CC80FF
+                    colorTo: EBCCFF
+                }
+                //destroing
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    lifetime: 60
+                    sizeFrom: 20
+                    sizeTo: 5
+                    region: sapphirium-star-effect
+                    startDelay:600
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    region: sapphirium-star-effect
+                    lifetime: 20
+                    sizeFrom: 5
+                    sizeTo: 5
+                    startDelay:660
+                    colorFrom: ffffff
+                    colorTo: EBCCFF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    region: sapphirium-star-effect
+                    lifetime: 25
+                    sizeFrom: 0
+                    sizeTo: 100
+                    spin:10
+                    startDelay:680
+                    colorFrom: ffffff
+                    colorTo: ffffff00
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    region: sapphirium-star-effect
+                    startDelay:690
+                    lifetime: 30
+                    sizeFrom: 5
+                    sizeTo: 0
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                //shards
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 236
+                    length:115
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 200
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 12
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 176
+                    length:115
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 250
+                    colorFrom: CC80FF00
+                    colorTo: CC80FFC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 16
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 246
+                    length:75
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 250
+                    colorFrom: CC80FF00
+                    colorTo: CC80FFC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 206
+                    length:92
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 250
+                    colorFrom: CC80FF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 266
+                    length:105
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 250
+                    colorFrom: CC80FF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 126
+                    length:134
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 250
+                    colorFrom: CC80FF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 8
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 236
+                    length:75
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 12
+                    sizeTo: 0
+                    lifetime: 250
+                    colorFrom: CC80FF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 8
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 56
+                    length:75
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 12
+                    sizeTo: 0
+                    lifetime: 250
+                    colorFrom: CC80FF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 8
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 76
+                    length:125
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 250
+                    colorFrom: CC80FF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 8
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 102
+                    length:65
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 250
+                    colorFrom: CC80FF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 326
+                    length:85
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 12
+                    sizeTo: 0
+                    lifetime: 220
+                    colorFrom: CC80FF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 186
+                    length:45
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 12
+                    sizeTo: 0
+                    lifetime: 220
+                    colorFrom: CC80FF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 8
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 276
+                    length:65
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 220
+                    colorFrom: CC80FF00
+                    colorTo: CC80FF
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 236
+                    length:65
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 120
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 186
+                    length:55
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 150
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 440
+                    length:95
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime:170
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 276
+                    length:45
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 140
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 290
+                    length:75
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 160
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 126
+                    length:35
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 210
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 330
+                    length:75
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 140
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 8
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 180
+                    length:65
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 90
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 340
+                    length:120
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 70
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 220
+                    length:35
+                    startDelay:370
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 70
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 290
+                    length:55
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 70
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 7
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 340
+                    length:45
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 60
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength: 340
+                    length:65
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 60
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    region: sapphirium-star-effect
+                    cone: 360
+                    baseLength:420
+                    length:75
+                    startDelay:690
+                    randLength: false
+                    cone: 360
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 60
+                    colorFrom: ffffff00
+                    colorTo: ffffffC0
+                }
+                //waves
+                {
+                    type: WaveEffect
+                    sides: 3
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 60
+                    strokeFrom: 3
+                    strokeTo: 0
+                    startDelay:690
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                {
+                    type: WaveEffect
+                    sides: 6
+                    lifetime: 30
+                    sizeFrom: 0
+                    sizeTo: 300
+                    strokeFrom: 4
+                    strokeTo: 0
+                    startDelay:690
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                {
+                    type: WaveEffect
+                    sides: 5
+                    lifetime: 30
+                    sizeFrom: 0
+                    sizeTo: 400
+                    strokeFrom: 4
+                    strokeTo: 0
+                    startDelay:690
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                {
+                    type: WaveEffect
+                    sides: 4
+                    lifetime: 30
+                    sizeFrom: 0
+                    sizeTo: 210
+                    strokeFrom: 4
+                    strokeTo: 0
+                    startDelay:690
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 30
+                    sizeFrom: 0
+                    sizeTo: 300
+                    strokeFrom: 4
+                    strokeTo: 0
+                    startDelay:690
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 30
+                    sizeFrom: 0
+                    sizeTo: 200
+                    strokeFrom: 4
+                    strokeTo: 0
+                    startDelay:690
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 30
+                    sizeFrom: 0
+                    sizeTo: 49
+                    strokeFrom: 4
+                    strokeTo: 0
+                    startDelay:690
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                {
+                    type: WaveEffect
+                    sides: 5
+                    lifetime: 15
+                    sizeFrom: 0
+                    sizeTo: 49
+                    strokeFrom: 4
+                    strokeTo: 0
+                    startDelay:690
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                {
+                    type: WaveEffect
+                    sides: 5
+                    lifetime: 15
+                    sizeFrom: 0
+                    sizeTo: 90
+                    strokeFrom: 4
+                    strokeTo: 0
+                    startDelay:690
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+                {
+                    type: WaveEffect
+                    sides: 8
+                    lifetime: 15
+                    sizeFrom: 0
+                    sizeTo: 130
+                    strokeFrom: 4
+                    strokeTo: 0
+                    startDelay:690
+                    colorFrom: EBCCFF
+                    colorTo: EBCCFF
+                }
+            ]
+        }
+    }
 ]
 abilities: [
-{
-type: RegenAbility
-amount: 26
-}
+    {
+        type: RegenAbility
+        amount: 115
+    }
 ]
-immunities: [freezing, unmoving, disarmed, slow, wet, muddy, melting, sapped, electrified, spore-slowed, tarred, corroded, acid-corrosion, golden-pollination, overfreezing, super-freezing, overload, shock-stun, sleep-mode, stunne, super-melting]
+immunities: [unleash, freezing, unmoving, disarmed, slow, wet, muddy, melting, sapped, electrified, spore-slowed, tarred, corroded, acid-corrosion, golden-pollination, overfreezing, super-freezing, overload, shock-stun, stunne, super-melting]

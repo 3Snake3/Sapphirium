@@ -1,6 +1,5 @@
 name: flammability
 show: true
-permanent: true
 affinities: [burning]
 opposites: [wet, freezing, super-freezing, sapphirium-overfreezing]
 damage: 0

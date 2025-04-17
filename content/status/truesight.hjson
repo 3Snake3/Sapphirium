@@ -1,0 +1,20 @@
+name: truesight
+healthMultiplier: 5
+speedMultiplier: 0.001
+damageMultiplier: 0.02
+damage: 74.066666
+effect: {
+    type: ParticleEffect
+    particles: 4
+    length: 35
+    cone: 360
+    lifetime: 40
+    lenFrom: 1
+    lenTo: 6
+    strokeFrom: 1
+    strokeTo: 0.4
+    line: true
+    colorFrom: ff6e6e
+    colorTo: ff6e6e00
+}
+effectChance: 0.08

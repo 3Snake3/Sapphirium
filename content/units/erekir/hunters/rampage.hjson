@@ -1,0 +1,158 @@
+health: 990
+armor: 0
+speed: 0.67
+drag: 0.4
+hitSize: 16
+rotateSpeed: 2.7
+legCount: 4
+legMoveSpace: 1.4
+legPairOffset: 2
+legLength: 13
+legForwardScl: 0.8
+legBaseOffset: 2
+hovering: true
+shadowElevation: 0.3
+groundLayer: 75
+weapons: [
+    {
+        name: rampage-sapping-weapon
+        x: 5
+        y: -1.75
+        reload: 23
+        recoil: 0
+        rotate: true
+        shootSound: sap
+        bullet: {
+            type: SapBulletType
+            sapStrength: 1.5
+            length: 55
+            damage: 38
+            color: ffe18f
+            width: 0.55
+            shootEffect: shootSmall
+            knockback: -1
+            lifetime: 30
+            despawnEffect:none
+            hitEffect: [
+                {
+                    type: WaveEffect
+                    sizeTo: 0
+                    sizeFrom: 6
+                    strokeFrom: 1
+                    lifetime: 45
+                    colorFrom: ffe18f
+                    colorTo: ffe18f
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    cone: 360
+                    length: 0
+                    sizeFrom: 3
+                    sizeTo: 0
+                    lifetime: 60
+                    colorFrom: ffe18f
+                    colorTo: ffe18f
+                    region: sapphirium-rhombus
+                }
+                {
+                    startDelay:12
+                    type: ParticleEffect
+                    particles: 3
+                    cone: 360
+                    length: 8
+                    sizeFrom: 2
+                    sizeTo: 0
+                    lifetime: 15
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-rhombus
+                }
+                {
+                    startDelay:19
+                    type: ParticleEffect
+                    particles: 3
+                    cone: 360
+                    length: 8
+                    sizeFrom: 2
+                    sizeTo: 0
+                    lifetime: 15
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-rhombus
+                }
+            ]
+        }
+    }
+    {
+        name: rampage-sapping-mount
+        top: false
+        shootSound: sap
+        reload: 17
+        x: 9.25
+        y: 0
+        shootX: 1.25
+        bullet: {
+            type: SapBulletType
+            sapStrength: 1.6
+            length: 55
+            damage: 32
+            color: ffe18f
+            width: 0.55
+            shootEffect: shootSmall
+            knockback: -1
+            lifetime: 30
+            despawnEffect:none
+            hitEffect: [
+                {
+                    type: WaveEffect
+                    sizeTo: 0
+                    sizeFrom: 7
+                    strokeFrom: 1
+                    lifetime: 45
+                    colorFrom: ffe18f
+                    colorTo: ffe18f
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    cone: 360
+                    length: 0
+                    sizeFrom: 3
+                    sizeTo: 0
+                    lifetime: 60
+                    colorFrom: ffe18f
+                    colorTo: ffe18f
+                    region: sapphirium-rhombus
+                }
+                {
+                    startDelay:12
+                    type: ParticleEffect
+                    particles: 3
+                    cone: 360
+                    length: 8
+                    sizeFrom: 2
+                    sizeTo: 0
+                    lifetime: 15
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-rhombus
+                }
+                {
+                    startDelay:19
+                    type: ParticleEffect
+                    particles: 3
+                    cone: 360
+                    length: 8
+                    sizeFrom: 2
+                    sizeTo: 0
+                    lifetime: 15
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-rhombus
+                }
+            ]
+        }
+    }
+]
+research: hunters-refabricator

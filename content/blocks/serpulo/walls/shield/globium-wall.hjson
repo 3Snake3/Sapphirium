@@ -1,0 +1,17 @@
+health: 800
+radius: 6
+shieldHealth: 40
+cooldownNormal: 1
+phaseRadiusBoost: 0
+phaseShieldBoost: 0
+category: defense
+absorbLasers: true
+requirements: [
+    globium/12
+    titanium/6
+    silicon/3
+]
+research: {
+    parent: plastanium-wall-large
+    objectives: [snow-monolith]
+}

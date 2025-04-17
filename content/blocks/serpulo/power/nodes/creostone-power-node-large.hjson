@@ -1,0 +1,19 @@
+
+category: power
+
+size: 2
+health: 360
+maxNodes: 22
+laserRange: 20
+placeableLiquid: true
+laserColor1: ffb380
+laserColor2: eb8778
+
+requirements: [
+    titanium/5
+    graphite/5
+    metaglass/5
+    creostone/5
+]
+
+research: creostone-power-node

@@ -1,0 +1,18 @@
+requirements: [
+    dense-alloy/80
+    titanium/120
+    silicon/80
+    plastanium/40
+]
+category: effect
+group: projectors
+health: 400
+unitsSpawned: 1
+droneType: energy-field
+size: 2
+consumes: {
+    power: 7
+}
+research: {
+    parent: overdrive-projector
+}

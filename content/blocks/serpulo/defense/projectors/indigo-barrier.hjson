@@ -1,0 +1,18 @@
+health: 400
+requirements: [
+    globium/200
+    thorium/95
+    silicon/245
+]
+category: effect
+size: 3
+phaseRadiusBoost: 70
+radius: 250
+shieldHealth: 1800
+cooldownNormal: 18
+cooldownLiquid: 10
+cooldownBrokenBase: 2
+research: {
+    parent: force-projector
+    objectives: [globium-smelter]
+}

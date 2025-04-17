@@ -1,0 +1,40 @@
+
+category: power
+
+hasItems: true
+hasLiquids: false
+itemDuration: 120
+powerProduction: 0.7
+ambientSound: steam
+ambientSoundVolume: 0.04
+
+requirements: [
+    copper/15
+    lead/20
+]
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        DrawDefault, 
+        DrawWarmupRegion
+        ]
+}
+
+consumes: {
+    items: {
+        items: [
+            copper/2
+        ]
+    }
+}
+
+research: {
+    parent: mechanical-drill
+    objectives: [
+        {
+            type: SectorComplete
+            preset: groundZero
+        }
+    ]
+}

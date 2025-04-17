@@ -1,9 +1,0 @@
-research: {
-parent: force-projector
-objectives: [
-{
-type: SectorComplete
-preset: impact0078
-}
-]
-}

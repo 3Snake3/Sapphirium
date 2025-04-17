@@ -1,0 +1,11 @@
+requirements: [
+    dense-alloy/2
+    metaglass/2
+    creostone/3
+]
+health: 90
+category: liquid
+solid: false
+research: creostone-router
+placeableLiquid: true
+

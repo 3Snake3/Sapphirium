@@ -1,8 +1,7 @@
-
 size: 2
 health: 220
 targetable: false
 requirements: [
-ruby/10
+    ruby/10
 ]
 buildVisibility: editorOnly

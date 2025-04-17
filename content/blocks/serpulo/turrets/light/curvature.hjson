@@ -1,0 +1,228 @@
+reload: 60
+recoil: 4
+shootCone: 45
+inaccuracy: 0
+shake: 3
+recoilTime: 30
+range: 200
+shootSound: shootBig
+health: 440
+category: turret
+size: 2
+requirements: [
+    dense-alloy/140
+    titanium/100
+    silicon/60
+]
+research: {
+    parent: salvo
+    objectives: [
+        {
+            type: SectorComplete
+            preset: greyland
+        }
+    ]
+}
+ammoTypes: {
+    lead: {
+        type: ShrapnelBulletType
+        length: 120
+        damage: 42
+        width: 4
+        serrations: 2
+        maxRange: 200
+        lifetime: 20
+        smokeEffect: none
+        ammoMultiplier: 2
+        lightColor: ad9bd4
+        status: weakened
+        statusDuration: 65
+        shootEffect: {
+            type: ParticleEffect
+            particles: 6
+            length: 38
+            cone:20
+            sizeFrom: 1
+            sizeTo: 3
+            lifetime: 32
+            colorFrom: ffffff
+            colorTo: ffffff00
+        }
+    }
+    diamond: {
+        type: ShrapnelBulletType
+        length: 148
+        damage: 62
+        width: 12
+        serrations: 5
+        maxRange: 200
+        reloadMultiplier: 0.5
+        lifetime: 20
+        smokeEffect: none
+        ammoMultiplier: 5
+        lightColor: ffffff
+        shootEffect: {
+            type: ParticleEffect
+            particles: 6
+            length: 26
+            sizeFrom: 1
+            cone:32
+            sizeTo: 4
+            lifetime: 32
+            colorFrom: ffffff
+            colorTo: ffffff00
+        }
+        spawnBullets: [
+        {
+        speed: 0
+        shrinkY: 0
+        damage: 0
+        lifetime: 30
+        width: 0
+        height: 0
+        intervalRandomSpread: 5
+        hitEffect: none
+        despawnEffect: none
+        bulletInterval: 5
+        collides: false
+        collidesTiles: false
+        hittable: false
+        reflectable: false
+        
+        intervalBullet: {
+        sprite: sapphirium-diamond-shard
+        shrinkY: 0
+        speed: 12
+        damage: 33
+        lifetime: 16.7
+        width: 10
+        height: 14
+        pierce: true
+        pierceBuilding: true
+        trailWidth: 2.33
+        trailLength: 14
+        backColor: a1b1d1
+        trailColor: a1b1d1
+        hitColor: a1b1d1
+        frontColor: ffffff
+        
+        hitEffect: {
+        type: ParticleEffect
+        particles: 22
+        length: 20
+        lifetime: 60
+        line: true
+        lenFrom: 12
+        lenTo: 0
+        cone: 15
+        colorFrom: a1b1d1
+        colorTo: a1b1d1
+        interp: swingOut
+        strokeTo: 0
+        }
+        
+        despawnEffect: hitBulletColor
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragVelocityMin: 1
+        fragOnHit: false
+     
+        despawnSound: pew
+        
+        fragBullet: {
+        sprite: sapphirium-diamond-shard
+        shrinkY: 0
+        speed: 0
+        damage: 0
+        lifetime: 180
+        width: 10
+        height: 14
+        backColor: a1b1d1
+        trailColor: a1b1d1
+        hitColor: a1b1d1
+        frontColor: ffffff
+        pierce: true
+        pierceBuilding: true
+        
+        hitEffect: {
+        type: ParticleEffect
+        particles: 12
+        length: 20
+        lifetime: 40
+        line: true
+        lenFrom: 12
+        lenTo: 0
+        cone: 360
+        colorFrom: a1b1d1
+        colorTo: a1b1d1
+        interp: swingOut
+        strokeTo: 0
+        }
+        
+        despawnEffect: {
+        type: ParticleEffect
+        particles: 12
+        length: 20
+        lifetime: 40
+        line: true
+        lenFrom: 12
+        lenTo: 0
+        cone: 360
+        colorFrom: a1b1d1
+        colorTo: a1b1d1
+        interp: swingOut
+        strokeTo: 0
+        }
+        
+        fragBullets: 1
+        fragAngle: 180
+        fragRandomSpread: 0
+        despawnSound: missile
+        fragVelocityMin: 1
+        
+        fragBullet: {
+        sprite: sapphirium-diamond-shard
+        shrinkY: 0
+        speed: 12
+        damage: 33
+        lifetime: 16.7
+        width: 10
+        height: 14
+        pierce: true
+        pierceBuilding: true
+        trailWidth: 2.33
+        trailLength: 14
+        backColor: a1b1d1
+        trailColor: a1b1d1
+        hitColor: a1b1d1
+        frontColor: ffffff
+        status: unmoving
+        statusDuration: 10
+        pierce: true
+        pierceBuilding: true
+        hitSound: respawn
+        despawnSound: pew
+        
+        hitEffect: {
+        type: ParticleEffect
+        particles: 22
+        length: 20
+        lifetime: 60
+        line: true
+        lenFrom: 12
+        lenTo: 0
+        cone: 15
+        colorFrom: a1b1d1
+        colorTo: a1b1d1
+        interp: swingOut
+        strokeTo: 0
+        }
+        
+        despawnEffect: hitBulletColor
+        }
+        }
+        }
+        }
+        ]
+        }
+        }

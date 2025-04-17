@@ -1,0 +1,27 @@
+requirements: [
+silicon/200
+amethyst/165
+tungsten/80
+]
+category: units
+size: 3
+configurable: false
+plans: [
+{
+unit: phenomenon
+time: 3000
+requirements: [
+silicon/50
+amethyst/50
+]
+}
+]
+regionSuffix: -dark
+fogRadius: 3
+consumes: {
+power: 2
+}
+research: {
+parent: tank-fabricator
+objectives: [mech-fabricator]
+}

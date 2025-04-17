@@ -1,0 +1,61 @@
+
+
+category: crafting
+envDisabled: 16
+boostScale: 0.2
+consumes: {
+power: 6
+items: {
+items: [
+charged-lead/1
+charged-stick/1
+charged-ingot/1
+]
+}
+}
+requirements: [
+    globium/330
+    thorium/330
+    silicon/120
+    surge-alloy/80
+]
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            suffix: "-bottom"
+        }
+        {
+            type: DrawArcSmelt
+            flameColor: fff587
+            midColor: ffe680
+            flameRad: 1.5
+            circleSpace: 2
+            circleStroke: 1.5
+            alpha: 0.76
+            particles: 30
+        }
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawGlowRegion
+            suffix: -glow-blur
+            color: f2e879
+        }
+        {
+            type: DrawGlowRegion
+            suffix: -top-glow
+            color: f2e879
+        }
+    ]
+}
+size: 4
+itemCapacity: 10
+outputItem: charged-cylinder/1
+craftTime: 120
+outputLiquid: surge-mass/0.05
+research: {
+    parent: impulse-surge-smelter
+}

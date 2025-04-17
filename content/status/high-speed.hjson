@@ -1,0 +1,15 @@
+name: high-speed
+speedMultiplier: 1.6
+reloadMultiplier: 1.6
+effect: {
+    particles: 1
+    length: 0
+    baseLength: 15
+    sizeFrom: 5
+    sizeTo: 0
+    region: sapphirium-rhombus
+    lifetime: 40
+    colorFrom: c093fa
+    colorTo: c093fa
+}
+color: c093fa

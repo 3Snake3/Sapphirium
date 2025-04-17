@@ -1,0 +1,38 @@
+health: 80
+isEnemy: false
+drawCell: false
+drawShields: false
+drawBody: false
+drawMinimap: false
+playerControllable: false
+logicControllable: false
+targetable: false
+groundLayer: 50
+physics: false
+hittable: false
+engineSize: 0
+immunities: [unleash]
+speed: 0
+abilities: [
+    {
+        type: EnergyFieldAbility
+        damage: 40
+        reload: 120
+        range: 120
+        x: 0
+        y: 0
+        maxTargets: 3
+        effectRadius: 2
+        rotateSpeed: 0.8
+        color: f2e879
+        sectors: 4
+        hitBuildings: false
+        status: shock-stun
+        statusDuration: 15
+    }
+]
+lightColor: f2e879
+fallEffect: none
+fallEngineEffect: none
+outlines: false
+hidden: true

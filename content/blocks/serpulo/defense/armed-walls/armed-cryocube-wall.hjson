@@ -1,0 +1,114 @@
+
+health: 1440
+recoil: 1.5
+reload: 60
+shoot: {
+    type: ShootPattern
+    shots: 3
+    shotDelay: 8
+}
+range: 130
+shootCone: 15
+inaccuracy: 8
+ammoUseEffect: none
+consumes: {
+    power: 1
+}
+size: 2
+shootSound: release
+shootEffect: {
+particles: 10
+cone: 20
+lifetime: 30
+length: 16
+sizeFrom: 5
+sizeTo: 0
+colorFrom: bfecff70
+colorTo: bfecff70
+interp: pow2Out
+sizeInterp: pow2Out
+}
+group: walls
+
+shootType: {
+    width: 7
+    height: 7
+    trailWidth: 1.5
+    trailLength: 8
+    speed: 5
+    lifetime: 26
+    sprite: circle-bullet
+    damage: 24
+    splashDamage: 28
+    splashDamageRadius: 16
+    status: freezing
+    statusDuration: 300
+    backColor: 86ceeb
+    frontColor: bfecff
+    trailColor: bfecff
+    shrinkY: 0
+    hitEffect: [
+    {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 16
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: bfecff
+    colorTo: bfecff
+    lifetime: 20
+    }
+    {
+        type: ParticleEffect
+        particles: 6
+        sizeFrom: 5
+        sizeTo: 0
+        colorFrom: bfecff
+        colorTo: 6485b080
+        lifetime: 60
+        cone: 360
+        length: 14
+    }
+    ]
+    despawnEffect: [
+    {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 16
+    strokeFrom: 2
+    strokeTo: 0
+    colorFrom: bfecff
+    colorTo: bfecff
+    lifetime: 20
+    }
+   {
+        type: ParticleEffect
+        particles: 6
+        sizeFrom: 5
+        sizeTo: 0
+        colorFrom: bfecff
+        colorTo: 6485b080
+        lifetime: 60
+        cone: 360
+        length: 14
+    }
+    ]
+    fragBullets: 4
+    fragBullet: {
+    type: LiquidBulletType
+    liquid: cryofluid
+    puddleSize: 8
+    damage: 0
+    lifetime: 1
+    speed: 0
+    }
+}
+requirements: [
+    cryo-cube/35
+    ledonite-cube/20
+    metaglass/15
+]
+category: defense
+research: {
+    parent: cryocube-wall
+}

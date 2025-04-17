@@ -2,15 +2,15 @@ name: gap
 damage: 1
 healthMultiplier: 0.7
 effect: {
-type: ExplosionEffect
-waveRad: 24
-waveLife: 8
-waveColor: ffffff
-smokes: 0
-sparks: 6
-sparkRad: 24
-sparkLen: 4
-sparkStroke: 3
+    type: ExplosionEffect
+    waveRad: 24
+    waveLife: 8
+    waveColor: ffffff
+    smokes: 0
+    sparks: 6
+    sparkRad: 24
+    sparkLen: 4
+    sparkStroke: 3
 }
 color: e4ffd6
 opposites: [shielded]

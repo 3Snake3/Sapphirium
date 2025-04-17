@@ -1,0 +1,144 @@
+
+size: 3
+range: 200
+reload: 70
+shoot: {
+    type: ShootHelix
+    shots: 2
+}
+recoil: 3
+rotateSpeed: 8
+shootCone: 15
+shootSound: lasershoot
+health: 980
+consumes: {
+    power: 6.5
+}
+shootType: {
+    sprite: sapphirium-spear-bullet
+    speed: 5
+    width: 10
+    height: 18
+    damage: 35
+    lifetime: 40
+    status: freezing
+    statusDuration: 45
+    frontColor: ffffff
+    backColor: a9d8ff
+    hitEffect: [shockwave,
+    {
+particles: 8
+length: 24
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+colorFrom: c1befa
+colorTo: c1befa
+interp: pow2Out
+sizeInterp: pow2Out
+region: sapphirium-snow-effect
+cone: 360
+}]
+    despawnEffect: [shockwave,
+    {
+particles: 8
+length: 24
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+colorFrom: c1befa
+colorTo: c1befa
+interp: pow2Out
+sizeInterp: pow2Out
+region: sapphirium-snow-effect
+cone: 360
+}]
+    shootEffect: [shockwave,
+    {
+particles: 8
+length: 24
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+colorFrom: c1befa
+colorTo: c1befa
+interp: pow2Out
+sizeInterp: pow2Out
+region: sapphirium-snow-effect
+cone: 360
+}]
+    trailColor: a9d8ff
+    trailWidth: 3
+    trailLength: 5
+    pierce: true
+    pierceCap: 1
+    spawnBullets: [
+        {
+            sprite: sapphirium-spear-bullet
+            speed: 5
+            width: 10
+            height: 18
+            damage: 5
+            lifetime: 40
+            status: freezing
+            statusDuration: 45
+            frontColor: ffffff
+            backColor: a9d8ff
+            hitEffect: [shockwave,
+    {
+particles: 8
+length: 24
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+colorFrom: c1befa
+colorTo: c1befa
+interp: pow2Out
+sizeInterp: pow2Out
+region: sapphirium-snow-effect
+cone: 360
+}]
+    despawnEffect: [shockwave,
+    {
+particles: 8
+length: 24
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+colorFrom: c1befa
+colorTo: c1befa
+interp: pow2Out
+sizeInterp: pow2Out
+region: sapphirium-snow-effect
+cone: 360
+}]
+    shootEffect: [shockwave,
+    {
+particles: 8
+length: 24
+lifetime: 45
+sizeFrom: 5
+sizeTo: 0
+colorFrom: c1befa
+colorTo: c1befa
+interp: pow2Out
+sizeInterp: pow2Out
+region: sapphirium-snow-effect
+cone: 360
+}]
+            pierce: true
+            pierceCap: 1
+            trailColor: a9d8ff
+            trailWidth: 3
+            trailLength: 5
+        }
+    ]
+}
+category: turret
+heatColor: a9d8ff
+research: bow
+requirements: [
+    dense-alloy/145
+    titanium/145
+    silicon/95
+]

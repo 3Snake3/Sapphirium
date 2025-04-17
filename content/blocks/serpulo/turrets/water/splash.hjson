@@ -1,0 +1,153 @@
+size: 3
+health: 1560
+reload: 18
+inaccuracy: 8
+recoil: 2
+shootSound: splash
+envDisabled: 16
+placeableLiquid: true
+heatColor: 8ca4f5
+floating: true
+shootCone: 30
+shake: 3
+range: 130
+shoot: {
+    type: ShootMulti
+    source: {
+    type: ShootAlternate
+    spread: 6.5
+    }
+    dest: [
+    {
+    type: ShootSpread
+    spread: 5
+    shots: 2
+    }
+    ]
+}
+liquidCapacity: 40
+ammoTypes: {
+    water: {
+        type: ShrapnelBulletType
+        length: 130
+        width: 15
+        serrations: 4
+        damage: 30
+        fragBullets: 1
+        knockback: 1.5
+        displayAmmoMultiplier: false
+        fragRandomSpread: 0
+        hitSound: splash
+        fromColor: 8ca4f5
+        toColor: 8ca4f575
+        status: wet
+        statusDuration: 200
+        fragBullet: {
+            type: ShrapnelBulletType
+            length: 80
+            width: 10
+            serrations: 4
+            damage: 15
+            fromColor: 8ca4f5
+            toColor: 8ca4f575
+            status: wet
+            statusDuration: 100
+        }
+        spawnBullets: [
+        {
+        type: LiquidBulletType
+        liquid: water
+        speed: 6
+        lifetime: 46.67
+        }
+        ]
+    }
+    cryofluid: {
+        type: ShrapnelBulletType
+        length: 160
+        rangeRange: 30
+        width: 15
+        serrations: 4
+        damage: 45
+        fragBullets: 1
+        knockback: 2
+        displayAmmoMultiplier: false
+        fragRandomSpread: 0
+        hitSound: splash
+        fromColor: bfecff
+        toColor: 86ceeb
+        status: freezing
+        statusDuration: 120
+        reloadMultiplier: 0.75
+        buildingDamageMultiplier: 0.5
+        fragBullet: {
+            type: ShrapnelBulletType
+            length: 80
+            width: 10
+            serrations: 2
+            damage: 25
+            fromColor: bfecff
+            toColor: 86ceeb
+            status: freezing
+            statusDuration: 75
+            buildingDamageMultiplier: 0.5
+        }
+        spawnBullets: [
+        {
+        type: LiquidBulletType
+        liquid: cryofluid
+        speed: 6
+        lifetime: 46.67
+        }
+        ]
+    }
+    ledonite-liquid: {
+        type: ShrapnelBulletType
+        length: 200
+        rangeChange: 70
+        width: 18
+        serrations: 6
+        damage: 60
+        fragBullets: 1
+        knockback: 4
+        displayAmmoMultiplier: false
+        reloadMultiplier: 0.6
+        buildingDamageMultiplier: 0.5
+        fragRandomSpread: 0
+        hitSound: splash
+        fromColor: b8fffe
+        toColor: 6fdedc
+        status: overfreezing
+        statusDuration: 60
+        fragBullet: {
+            type: ShrapnelBulletType
+            length: 80
+            width: 10
+            serrations: 4
+            damage: 40
+            fromColor: b8fffe
+        toColor: 6fdedc
+        buildingDamageMultiplier: 0.5
+        status: overfreezing
+        statusDuration: 30
+        }
+        spawnBullets: [
+        {
+        type: LiquidBulletType
+        liquid: ledonite-liquid
+        speed: 6
+        lifetime: 46.67
+        }
+        ]
+    }
+}
+category: turret
+requirements: [
+    dense-alloy/140
+    titanium/120
+    thorium/100
+    metaglass/100
+]
+research: {
+    parent: tsunami
+}

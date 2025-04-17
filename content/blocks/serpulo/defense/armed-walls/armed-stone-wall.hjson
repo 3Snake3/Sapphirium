@@ -1,0 +1,39 @@
+
+health: 1980
+reload: 7
+recoil: 3
+shake: 1
+shootSound: shootBig
+shootCone: 30
+range: 70
+group: walls
+consumes: {
+    power: 0.4
+}
+shootType: {
+    type: BasicBulletType
+    width: 10
+    height: 25
+    speed: 6
+    damage: 12
+    lifetime: 11.6
+    pierce: true
+    pierceCap: 2
+    hitShake: 1
+}
+size: 2
+category: defense
+requirements: [
+    stone/22
+    silicon/12
+]
+envDisabled: 16
+research: {
+    parent: stone-e-wall
+    objectives: [
+        {
+            type: SectorComplete
+            preset: extractionOutpost
+        }
+    ]
+}

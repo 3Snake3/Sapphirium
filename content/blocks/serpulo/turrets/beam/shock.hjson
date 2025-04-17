@@ -1,0 +1,328 @@
+size: 2
+category: turret
+requirements: [
+    dense-alloy/120
+    titanium/80
+    silicon/50
+]
+research: wire
+ammoTypes: {
+    titanium: {
+        width: 10
+        height: 15
+        trailLength: 8
+        trailWidth: 2.5
+        damage: 18
+        buildingDamageMultiplier: 1.5
+        ammoMultiplier: 2
+        reloadMultiplier: 0.65
+        speed: 4
+        lifetime: 40.5
+        backColor: 80a8ff
+        trailColor: 80a8ff
+        frontColor: ffffff
+        lightning: 2
+        lightningLength: 5
+        lightningDamage: 8
+        lightningColor: 80a8ff
+        hitEffect: [hitBulletColor, {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: 80a8ff
+        colorTo: 80a8ff
+        strokeTo: 0
+        lifetime: 45
+        interp: circleOut
+        }
+        {
+        particles: 3
+        cone: 360
+        baseLength: 12
+        length: 18
+        sizeFrom: 7
+        sizeTo: 0
+        colorFrom: 80a8ff
+        colorTo: 80a8ff
+        lifetime: 45
+        region: sapphirium-rhombus
+        }
+        ]
+        
+        despawnEffect: [hitBulletColor, {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: 80a8ff
+        colorTo: 80a8ff
+        strokeTo: 0
+        lifetime: 45
+        interp: circleOut
+        }
+        {
+        particles: 3
+        cone: 360
+        baseLength: 12
+        length: 18
+        sizeFrom: 7
+        sizeTo: 0
+        colorFrom: 80a8ff
+        colorTo: 80a8ff
+        lifetime: 45
+        region: sapphirium-rhombus
+        }
+        ]
+        status: overload
+        statusDuration: 20
+    }
+    silicon: {
+        width: 7
+        height: 10
+        trailLength: 6
+        trailWidth: 1.8
+        damage: 13
+        ammoMultiplier: 2
+        trailColor: a2a2a2
+        reloadMultiplier: 1.25
+        homingPower: 0.03
+        homingRange: 45
+        speed: 7
+        lifetime: 26.15
+        backColor: a2a2a2
+        frontColor: ffffff
+        lightning: 1
+        lightningLength: 7
+        lightningDamage: 6
+        lightningColor: a2a2a2
+        hitEffect: [hitBulletColor, {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: a2a2a2
+        colorTo: a2a2a2
+        strokeTo: 0
+        lifetime: 45
+        interp: circleOut
+        }
+        {
+        particles: 3
+        cone: 360
+        baseLength: 12
+        length: 18
+        sizeFrom: 7
+        sizeTo: 0
+        colorFrom: a2a2a2
+        colorTo: a2a2a2
+        lifetime: 45
+        
+        }
+        ]
+        
+        despawnEffect: [hitBulletColor, {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: a2a2a2
+        colorTo: a2a2a2
+        strokeTo: 0
+        lifetime: 45
+        interp: circleOut
+        }
+        {
+        particles: 3
+        cone: 360
+        baseLength: 12
+        length: 18
+        sizeFrom: 7
+        sizeTo: 0
+        colorFrom: a2a2a2
+        colorTo: a2a2a2
+        lifetime: 45
+        
+        }
+        ]
+        status: disorientation
+        statusDuration: 30
+        rangeChange: 30
+    }
+    plastanium: {
+        width: 8
+        height: 13
+        trailLength: 13
+        trailWidth: 2
+        damage: 13
+        trailColor: d8d97f
+        pierceArmor: true
+        reloadMultiplier: 0.85
+        ammoMultiplier: 3
+        speed: 5
+        lifetime: 32.4
+        backColor: d8d97f
+        frontColor: fffac6
+        lightning: 2
+        lightningLength: 7
+        lightningDamage: 6
+        lightningColor: fffac6
+        hitEffect: [hitBulletColor, {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: fffac6
+        colorTo: fffac6
+        strokeTo: 0
+        lifetime: 45
+        interp: circleOut
+        }
+        {
+        particles: 3
+        cone: 360
+        baseLength: 12
+        length: 18
+        sizeFrom: 7
+        sizeTo: 0
+        colorFrom: fffac6
+        colorTo: fffac6
+        lifetime: 45
+        region: sapphirium-rhombus
+        }
+        ]
+        
+        despawnEffect: [hitBulletColor, {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: fffac6
+        colorTo: fffac6
+        strokeTo: 0
+        lifetime: 45
+        interp: circleOut
+        }
+        {
+        particles: 3
+        cone: 360
+        baseLength: 12
+        length: 18
+        sizeFrom: 7
+        sizeTo: 0
+        colorFrom: fffac6
+        colorTo: fffac6
+        lifetime: 45
+        region: sapphirium-rhombus
+        }
+        ]
+        status: overload
+        statusDuration: 30
+        fragBullets: 6
+        fragRandomSpread: 360
+        fragBullet: {
+            width: 8
+            height: 10
+            damage: 5
+            pierceArmor: true
+            speed: 3
+            trailWidth: 1.4
+            trailLength: 6
+            lifetime: 15
+            backColor: d8d97f
+            frontColor: fffac6
+            lightning: 2
+            lightningLength: 5
+            lightningDamage: 4
+            lightningColor: fffac6
+            hitEffect: none
+            despawnEffect: none
+        }
+    }
+    surge-alloy: {
+        width: 10
+        height: 14
+        trailLength: 8
+        trailWidth: 2.5
+        damage: 46
+        ammoMultiplier: 4
+        trailColor: f3e979
+        reloadMultiplier: 0.65
+        speed: 4
+        lifetime: 51.75
+        backColor: f3e979
+        frontColor: ffffff
+        lightning: 3
+        lightningLength: 6
+        lightningDamage: 12
+        lightningColor: f3e979
+        hitEffect: [hitBulletColor, {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: f3e979
+        colorTo: f3e979
+        strokeTo: 0
+        lifetime: 45
+        interp: circleOut
+        }
+        {
+        particles: 3
+        cone: 360
+        baseLength: 12
+        length: 18
+        sizeFrom: 7
+        sizeTo: 0
+        colorFrom: f3e979
+        colorTo: f3e979
+        lifetime: 45
+        region: sapphirium-star-effect
+        }
+        ]
+        
+        despawnEffect: [hitBulletColor, {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 12
+        colorFrom: f3e979
+        colorTo: f3e979
+        strokeTo: 0
+        lifetime: 45
+        interp: circleOut
+        }
+        {
+        particles: 3
+        cone: 360
+        baseLength: 12
+        length: 18
+        sizeFrom: 7
+        sizeTo: 0
+        colorFrom: f3e979
+        colorTo: f3e979
+        lifetime: 45
+        region: sapphirium-star-effect
+        }
+        ]
+        
+        status: overload
+        statusDuration: 45
+        rangeChange: 45
+    }
+}
+range: 160
+reload: 120
+ammoEjectBack: 4
+recoil: 3
+shoot: {
+type: ShootMulti
+source: {
+    type: ShootAlternate
+    spread: 5
+    shots: 2
+    shotDelay: 15
+}
+dest: [
+{
+shots: 2
+shotDelay: 5
+}
+]
+}
+shootCone: 24
+ammoUseEffect: casing2
+shootSound: bolt
+health: 600

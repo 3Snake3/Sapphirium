@@ -1,0 +1,12 @@
+speed: 0
+rotateSpeed: 0
+hittable: false
+targetable: false
+hidden: true
+physics: false
+internal: true
+drawMinimap: false
+drawBody: false
+drawShields: false
+drawCell: false
+type: flying

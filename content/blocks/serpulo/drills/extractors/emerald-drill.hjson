@@ -1,0 +1,83 @@
+size: 2
+craftTime: 95
+outputItem: emerald/2
+liquidCapacity: 24
+consumes: {
+    power: 5.6
+    liquid: cryofluid/0.18
+    items: {
+        items: [
+            cryo-cube/1
+        ]
+    }
+}
+attribute: water
+boostScale: 0.15
+craftEffect: {
+    type: MultiEffect
+    effects: [
+        {
+            type: WaveEffect
+            sides: 4
+            lifetime: 20
+            sizeFrom: 16
+            sizeTo: 16
+            strokeTo: 0
+            colorFrom: 9cff91
+            colorTo: 9cff91
+        }
+        {
+            type: ParticleEffect
+            particles: 8
+            length: 30
+            lifetime: 60
+            sizeFrom: 5
+            sizeTo: 0
+            region: sapphirium-rhombus
+            colorFrom: 85ff94
+            colorTo: 85ff94
+            cone: 360
+            interp: circleOut
+            sizeInterp: circleOut
+        }
+    ]
+}
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawDefault
+        }
+        {
+        type: DrawFrames
+        frames: 5
+        }
+        {
+            type: DrawGlowRegion
+            suffix: "-top"
+            color: 9cff91
+        }
+        {
+            type: DrawGlowRegion
+            suffix: "-top-blur"
+            color: 9cff91
+        }
+    ]
+}
+category: production
+requirements: [
+    dense-alloy/95
+    titanium/45
+    graphite/45
+]
+research: {
+    parent: titanium-extractor
+    objectives: [
+        freezer,
+        cryofluid-mixer,
+        {
+            type: SectorComplete
+            preset: greyland
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+
+craftEffect: smeltsmoke
+category: crafting
+consumes: {
+power: 0.3
+liquid: water/0.1
+}
+requirements: [
+    dense-alloy/30
+    metaglass/30
+]
+drawer: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: water
+}
+{
+type: DrawDefault
+}
+]
+
+size: 2
+liquidCapacity: 10
+itemCapacity: 10
+outputItem: ice-cube/1
+craftTime: 30
+research: {
+    parent: dense-smelter
+    objectives: [mechanical-pump]
+}

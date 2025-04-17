@@ -1,0 +1,221 @@
+requirements: [ 
+    tungsten/530
+    creostone/370
+    thorium/360 
+    carbide/180
+    oxide/200
+] 
+category: crafting 
+size: 6 
+craftEffect:[ 
+    { 
+        type: ParticleEffect 
+        particles: 1 
+        cone: 360 
+        baseLength: 0 
+        randLength: false 
+        length: 0 
+        cone: 360 
+        sizeFrom: 14 
+        sizeTo: 0 
+        colorFrom: FEC4A0 
+        colorTo: FEC4A0 
+        layer:100.3 
+        lifetime: 90 
+    } 
+    { 
+        type: RadialEffect 
+        rotationOffset: -45 
+        lengthOffset: 8 
+        effect: { 
+            type: ParticleEffect 
+            particles: 8 
+            startDelay:25 
+            length: 25 
+            lifetime: 60 
+            sizeFrom: 9 
+            sizeTo: 0 
+            cone: 1 
+            interp: circleOut 
+            colorFrom: FEC4A0 
+            colorTo:FDAE7C 
+            layer:100.3 
+        } 
+    } 
+    { 
+        type: RadialEffect 
+        rotationOffset: 0 
+        lengthOffset: 8 
+        effect: { 
+            type: ParticleEffect 
+            particles: 8 
+            startDelay:5 
+            length: 25 
+            lifetime: 80 
+            sizeFrom: 9 
+            sizeTo: 0 
+            cone: 1 
+            interp: circleOut 
+            colorFrom: FEC4A0 
+            colorTo: FDAE7C 
+            layer:100.3 
+        } 
+    } 
+    { 
+        type: RadialEffect 
+        rotationOffset: -45 
+        lengthOffset: 8 
+        effect: [ 
+            { 
+                type: ParticleEffect 
+                particles: 8 
+                startDelay:45 
+                length: 45 
+                lifetime: 135 
+                sizeFrom: 9 
+                sizeTo: 0 
+                cone: 25 
+                interp: circleOut 
+                colorFrom: FC8E4C 
+                colorTo: FC8E4C 
+                layer:100.2 
+                lightColor:FC8E4C 
+                lightScl: 3 
+                lightOpacity:0.7 
+            } 
+            { 
+                type: ParticleEffect 
+                particles: 18 
+                startDelay:35 
+                length: 55 
+                lifetime: 65 
+                sizeFrom: 8 
+                sizeTo: 0 
+                cone: 29 
+                interp: circleOut 
+                colorFrom: E4563C 
+                colorTo: E4563C 
+                layer:100.1 
+            } 
+            { 
+                type: ParticleEffect 
+                particles: 24 
+                startDelay: 25 
+                length: 45 
+                lifetime: 75 
+                sizeFrom: 8 
+                sizeTo: 0 
+                cone: 31 
+                interp: circleOut 
+                colorFrom: 9C162C 
+                colorTo: 9C162C 
+                layer:100 
+            } 
+        ] 
+    } 
+    { 
+        type: RadialEffect 
+        rotationOffset: 0 
+        lengthOffset: 8 
+        effect: [ 
+            { 
+                type: ParticleEffect 
+                particles: 11 
+                startDelay: 25 
+                length: 55 
+                lifetime: 145 
+                sizeFrom: 10 
+                sizeTo: 0 
+                cone: 4 
+                interp: circleOut 
+                colorFrom: FC8E4C 
+                colorTo: FC8E4C 
+                layer:100.2 
+                lightColor:FC8E4C 
+                lightScl: 4 
+                lightOpacity:0.7 
+            } 
+            { 
+                type: ParticleEffect 
+                particles: 21 
+                startDelay:17 
+                length: 65 
+                lifetime: 105 
+                sizeFrom: 9 
+                sizeTo: 0 
+                cone: 7 
+                interp: circleOut 
+                colorFrom: E4563C 
+                colorTo: E4563C 
+                layer:100.1 
+            } 
+            { 
+                type: ParticleEffect 
+                particles: 27 
+                length: 105 
+                lifetime: 95 
+                sizeFrom: 7 
+                sizeTo: 0 
+                cone: 5 
+                interp: circleOut 
+                colorFrom: 9C162C 
+                colorTo: 9C162C 
+                layer:100 
+            } 
+        ] 
+    } 
+] 
+outputItem: carved-alloy/4 
+craftTime: 720 
+itemCapacity: 96 
+liquidCapacity: 1680 
+outputLiquid: neoplasm/2.8 
+ambientSound: smelter 
+ambientSoundVolume: 1.5 
+hasPower: true 
+hasItems: true 
+hasLiquids: true 
+squareSprite: false 
+heatRequirement: 35 
+consumes: { 
+    power: 22 
+    liquid: argon/0.5 
+    items: { 
+        items: [ 
+            tungsten/12 
+            surge-alloy/5 
+        ] 
+    } 
+} 
+drawer: [ 
+    { 
+        type: DrawRegion 
+        suffix: -bottom 
+    } 
+    { 
+        type: DrawLiquidTile 
+        drawLiquid: neoplasm 
+        padding: 3 
+    } 
+    { 
+        type: DrawRegion 
+        suffix: -middle 
+    } 
+    { 
+        type: DrawCrucibleFlame 
+    } 
+    { 
+        type: DrawDefault 
+    }
+    { 
+        type: DrawHeatInput 
+    } 
+    { 
+        type: DrawGlowRegion
+        color: c33e2b
+    } 
+]
+research: {
+parent: creostone-crucible
+objectives: [surge-crucible, neoplasia-reactor]
+}

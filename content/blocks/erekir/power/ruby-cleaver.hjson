@@ -1,0 +1,57 @@
+size: 3
+powerProduction: 34
+consumes: {
+    items: {
+        items: [
+            ruby/6
+        ]
+    }
+    liquid: argon/0.3
+}
+drawer: [
+{
+    type: DrawRegion
+    suffix: -bottom
+}
+{
+    type: DrawPistons
+    sinMag: 3
+    sinScl: 5
+    sideOffset: 1.57079635
+    angleOffset: 135
+    sinMag: 6
+    sinScl: 2
+}
+{
+    type: DrawRegion
+    suffix: -mid
+}
+{
+    type: DrawLiquidTile
+    drawLiquid: argon
+    padding: 8.5
+}
+{
+    type: DrawDefault
+}
+{
+    type: DrawGlowRegion
+    alpha: 1
+    glowScale: 5
+    color: ff6e6e99
+}
+]
+itemCapacity: 20
+liquidCapacity: 40
+itemDuration: 60
+generateEffect: none
+ambientSound: smelter
+ambientSoundVolume: 0.06
+requirements: [
+ruby/80
+tungsten/60
+silicon/65
+thorium/35
+]
+category: power
+research: creotine-combustion-chamber

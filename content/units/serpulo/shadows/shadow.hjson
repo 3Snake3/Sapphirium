@@ -1,0 +1,287 @@
+speed: 0.4
+hitSize: 13
+health: 1000
+armor: 6
+rotateSpeed: 2.5
+mechFrontSway: 0.55
+range: 80
+outlineColor: 25262e
+deathExplosionEffect: [
+    {
+        type: ExplosionEffect
+        waveLife: 35
+        waveRad: 36
+        waveColor: 000000FF
+        waveStroke: 2.5
+        sparks: 10
+        sparkLen: 3.5
+        sparkColor: 000000FF
+        sparkStroke: 2
+        sparkRad: 40
+        smokes: 0
+        lifetime: 180
+    }
+    {
+        type: ParticleEffect
+        particles: 4
+        length: 40
+        cone: 360
+        lifetime: 180
+        interp: pow2Out
+        colorFrom: 000000FF
+        colorTo: 000000FF
+        sizeFrom: 8
+        sizeTo: 0
+        layer: 109
+    }
+    {
+        type: ParticleEffect
+        particles: 3
+        length: 40
+        lifetime: 180
+        cone: 360
+        interp: pow2Out
+        colorFrom: 000000FF
+        colorTo: 000000FF
+        sizeFrom: 8
+        sizeTo: 0
+    }
+    {
+        type: ParticleEffect
+        particles: 4
+        length: 40
+        lifetime: 180
+        interp: pow2Out
+        colorFrom: 565666
+        colorTo: 565666
+        sizeFrom: 8
+        sizeTo: 0
+    }
+    {
+        type: ParticleEffect
+        particles: 3
+        length: 40
+        lifetime: 180
+        interp: pow2Out
+        colorFrom: 565666
+        colorTo: 565666
+        sizeFrom: 8
+        sizeTo: 0
+        layer: 109
+    }
+]
+immunities: [slow, freezing, wet, 
+muddy, melting, sapped, 
+spore-slowed, electrified, 
+tarred, unleash]
+weapons: [
+    {
+        x: 0
+        y: 0
+        shootY: 0
+        reload: 140
+        shootSound: bolt
+        shake: 4
+        shootCone: 2
+        mirror: false
+        top: false
+        bullet: {
+            type: PointBulletType
+            knockback: -8
+            shootEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 12
+                    sizeTo: 6
+                    lifetime: 30
+                    colorFrom: a488eb
+                    colorTo: a488eb00
+                    strokeFrom: 3
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    region: sapphirium-point-shoot
+                    sizeFrom: 12
+                    sizeTo: 6
+                    lifetime: 30
+                    colorFrom: a488eb
+                    colorTo: a488eb00
+                    length: 0
+                }
+            ]
+            hitEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 16
+                    sizeTo: 4
+                    lifetime: 30
+                    colorFrom: a488eb
+                    colorTo: a488eb00
+                    strokeFrom: 3
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    sizeFrom: 16
+                    sizeTo: 4
+                    lifetime: 30
+                    colorFrom: a488eb
+                    colorTo: a488eb00
+                    length: 0
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    region: sapphirium-rail-hit
+                    sizeFrom: 12
+                    sizeTo: 0
+                    lifetime: 30
+                    colorFrom: a488eb
+                    colorTo: a488eb
+                    length: 0
+                }
+            ]
+            smokeEffect: {
+                type: ParticleEffect
+                particles: 8
+                sizeFrom: 4
+                sizeTo: 0
+                lifetime: 60
+                length: 16
+                colorFrom: a488eb50
+                colorTo: a488eb50
+                cone: 360
+            }
+            trailEffect: [{
+                type: ParticleEffect
+                particles: 1
+                region: sapphirium-point-shoot
+                sizeFrom: 10
+                sizeTo:6
+                lifetime: 25
+                colorFrom: a488eb
+                colorTo: a488eb90
+                length: 0
+            }
+            {
+            startDelay:25
+            type: ParticleEffect
+            particles: 1
+            region: sapphirium-point-shoot
+            sizeFrom: 6
+            sizeTo: 6
+            lifetime: 14
+            colorFrom: a488eb90
+            colorTo: a488eb00
+            length: 0
+            }
+            ]
+            despawnEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 14
+                    sizeTo: 6
+                    lifetime: 30
+                    colorFrom: a488eb
+                    colorTo: a488eb00
+                    strokeFrom: 3
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    region: sapphirium-rail-hit
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 30
+                    colorFrom: a488eb
+                    colorTo: a488eb00
+                    length: 0
+                }
+            ]
+            trailSpacing: 10
+            damage: 90
+            buildingDamageMultiplier: 1.2
+            rangeOverride: 144
+            speed: 144
+            lifetime: 1
+            hitShake: 4
+            collides: true
+        }
+    }
+    {
+        name: shadow-weapon
+        x: 8.75
+        y: 0
+        reload: 30
+        top: false
+        shootY:0.25
+        ejectEffect: {
+            type: ParticleEffect
+            line: true
+            particles: 2
+            lenFrom: 2
+            lenTo: 0
+            lifetime: 30
+            length: 12
+            strokeFrom: 1
+            strokeTo: 0
+            colorFrom: a488eb
+            colorTo: a488eb
+            casingFlip: true
+        }
+        shootSound: shootAltLong
+        inaccuracy: 0.2
+        shake: 1
+        shoot: {
+            type: ShootSpread
+            shots: 5
+            spread: 4
+        }
+        bullet: {
+            type: BasicBulletType
+            speed: 8
+            damage: 18
+            lifetime: 8
+            width: 18
+            height: 14
+            backColor: 5c5e9e
+            frontColor: a488eb
+            hitEffect: hitBulletColor
+            shootEffect: shootSmallColor
+            smokeEffect: {
+                type: ParticleEffect
+                particles: 1
+                cone: 120
+                length: 24
+                lifetime: 40
+                sizeFrom: 2
+                sizeTo: 0
+                colorFrom: a488eb
+                colorTo: a488eb00
+                region: sapphirium-rhombus
+            }
+            hitColor: 5c5e9e
+            trailColor: 5c5e9e
+            hitEffect: hitSquaresColor
+            despawnEffect: hitSquaresColor
+            despawnEffect: hitBulletColor
+            trailWidth: 2
+            trailLength: 4
+            hitSize: 6
+            knockback: 5
+        }
+    }
+]
+research: { 
+    parent: emptiness
+    objectives: [logic-encoder]
+    requirements: [ 
+        silicon/9000
+        titanium/8500
+        stone/8000
+    ] 
+}

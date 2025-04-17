@@ -1,0 +1,43 @@
+
+category: production
+
+size: 2
+health: 200
+liquidCapacity: 30
+outputLiquid: oil/0.02888888845
+attribute: oil
+maxBoost: 1.5
+boostScale: 0.5
+drawer: [
+    {
+    type: DrawRegion
+    suffix: -bottom
+    }
+    {
+    type: DrawLiquidTile
+    drawLiquid: oil
+    }
+    {
+    type: DrawDefault
+    }
+    {
+    type: DrawFrames
+    frames: 5
+    }
+]
+hasItems: false
+hasLiquids: true
+hasPower: true
+craftTime: 60
+requirements: [
+    dense-alloy/80
+    thorium/40
+    metaglass/80
+    silicon/80
+]
+
+consumes: {
+    power: 2.5
+}
+
+research: water-extractor

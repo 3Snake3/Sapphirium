@@ -1,0 +1,236 @@
+
+size: 4
+rotateSpeed: 3
+shootCone: 1
+reload: 230
+recoil: 4
+cooldownTime: 260
+recoilTime: 230
+minWarmup: 0.9
+shootSound: shockBlast
+range: 400
+shootY: 3.25
+smokeEffect: none
+ammoUseEffect: none
+ammoPerShot: 4
+maxAmmo: 60
+ammoTypes: {
+    carved-alloy: {
+        type: BasicBulletType
+        width: 18
+        height: 18
+        speed: 30
+        lifetime: 15
+        damage: 560
+        backColor: ffffff
+        frontColor: ffffff
+        hitColor: ffffff
+        trailColor: ffffff
+        trailWidth: 6
+        trailLength: 40
+        trailChance: 100
+        hitEffect: {
+            type: WaveEffect
+            sides: 0
+            lifetime: 10
+            sizeFrom: 0
+            sizeTo: 50
+            strokeFrom: 7
+            strokeTo: 0
+        }
+        despawnEffect: {
+            type: WaveEffect
+            sides: 0
+            lifetime: 20
+            sizeFrom: 0
+            sizeTo: 30
+            strokeFrom: 7
+            strokeTo: 0
+        }
+        shootEffect: {
+            type: WaveEffect
+            sides: 0
+            lifetime: 10
+            sizeFrom: 0
+            sizeTo: 50
+            strokeFrom: 7
+            strokeTo: 0
+        }
+        shrinkX: 0
+        shrinkY: 0
+        trailEffect: [
+            disperseTrail, 
+            {
+                type: ParticleEffect
+                particles: 1
+                length: 0
+                region: sapphirium-double-trail
+                lifetime: 16
+                sizeFrom: 25
+                baseRotation: 90
+                rotWithParent: true
+                sizeTo: 5
+                colorFrom: ffffff
+                colorTo: ffffff00
+            }
+        ]
+        trailRotation: true
+        smokeEffect: shootSmokeDisperse
+        fragBullets: 2
+        fragRandomSpread: 90
+        fragVelocityMin: 0.9
+        fragVelocityMax: 1.3
+        fragLifeMin: 1
+        fragLifeMax: 1.2
+        pierceArmor: true
+        fragBullet: {
+            type: BasicBulletType
+            width: 8
+            height: 12
+            speed: 1
+            drag:-0.3
+            lifetime: 12
+            damage: 145
+            pierce: true
+            pierceBuilding: true
+            pierceCap:2
+            backColor: ffffff
+            frontColor: ffffff
+            hitColor: ffffff
+            trailColor: ffffff
+            trailWidth: 1.5
+            trailLength: 50
+            hitEffect: hitBulletColor
+            despawnEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 120
+                    sizeFrom: 6
+                    sizeTo: 2
+                    strokeTo: 0
+                    colorFrom: ffffff
+                    colorTo: ffffff00
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 70
+                    sizeFrom: 0
+                    sizeTo: 6
+                    strokeTo: 0
+                    colorFrom: ffffff00
+                    colorTo: ffffff
+                }
+            ]
+            hittable: false
+            reflectable: false
+            absorbable: false
+            fragBullets: 2
+            fragRandomSpread: 130
+            fragVelocityMin: 0.9
+            fragVelocityMax: 1.4
+            fragLifeMin: 1
+            fragLifeMax: 1.2
+            fragBullet: {
+                type: BasicBulletType
+                width: 4
+                height: 8
+                speed: 1
+                drag:-0.3
+                lifetime: 12
+                damage: 75
+                backColor: ffffff
+                frontColor: ffffff
+                hitColor: ffffff
+                trailColor: ffffff
+                trailWidth: 1.5
+                trailLength: 50
+                hitEffect: hitBulletColor
+                despawnEffect: [
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        lifetime: 120
+                        sizeFrom: 6
+                        sizeTo: 2
+                        strokeTo: 0
+                        colorFrom: ffffff
+                        colorTo: ffffff00
+                    }
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        startDelay:30
+                        lifetime: 60
+                        sizeFrom: 0
+                        sizeTo: 6
+                        strokeTo: 0
+                        colorFrom: ffffff00
+                        colorTo: ffffff
+                    }
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        startDelay:60
+                        lifetime: 60
+                        sizeFrom: 0
+                        sizeTo: 5
+                        strokeTo: 0
+                        colorFrom: ffffff00
+                        colorTo: ffffff
+                    }
+                ]
+                pierce: true
+                pierceBuilding: true
+                pierceCap:5
+                hittable: false
+                reflectable: false
+                absorbable: false
+            }
+        }
+    }
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: "reinforced-"
+    parts: [
+        {
+            type: RegionPart
+            suffix: -back
+            mirror: true
+            moveRot: -9
+            under: true
+            heatColor: 87ceeb70
+            heatProgress: warmup
+            turretHeatLayer: 49.8
+        }
+        {
+            type: RegionPart
+            suffix: -blade
+            mirror: true
+            moveX: 2
+            moveY: -2
+            under: true
+            heatColor: 87ceeb
+            progress: recoil
+        }
+        {
+            type: RegionPart
+            suffix: -main
+            mirror: false
+        }
+    ]
+}
+scaledHealth: 360
+shake: 4
+consumes: {
+    power: 8
+}
+category: turret
+requirements: [
+    tungsten/400
+    silicon/340
+    carved-alloy/100
+]
+research: erazor

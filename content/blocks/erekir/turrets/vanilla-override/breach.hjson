@@ -1,0 +1,123 @@
+ammoTypes: {
+beryllium: {
+speed: 7.5
+damage: 63.75
+width: 12
+hitSize: 7
+height: 20
+shootEffect: [shootBigColor, colorSparkBig]
+smokeEffect: shootBigSmoke
+ammoMultiplier: 1
+pierceCap: 2
+pierce: true
+pierceBuilding: true
+hitColor: b1dd7e
+backColor: b1dd7e
+trailColor: b1dd7e
+frontColor: ffffff
+trailWidth: 2.1
+trailLength: 10
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+buildingDamageMultiplier: 0.3
+}
+tungsten: {
+speed: 8
+damage: 71.25
+width: 13
+hitSize: 7
+height: 19
+reloadMultiplier: 1
+shootEffect: [shootBigColor, colorSparkBig]
+smokeEffect: shootBigSmoke
+ammoMultiplier: 1
+pierceCap: 3
+pierce: true
+pierceBuilding: true
+hitColor: 768a9a
+backColor: 768a9a
+trailColor: 768a9a
+frontColor: ffffff
+trailWidth: 2.2
+trailLength: 11
+rangeChange: 40
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+buildingDamageMultiplier: 0.3
+}
+topaz: {
+speed: 9
+damage: 125
+width: 14
+hitSize: 7
+height: 18
+shootEffect: [shootBigColor, colorSparkBig]
+smokeEffect: shootBigSmoke
+ammoMultiplier: 3
+pierce: true
+pierceBuilding: true
+hitColor: ffe18f
+backColor: ffe18f
+trailColor: ffe18f
+frontColor: ffffff
+trailWidth: 2.3
+trailLength: 9
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+rangeChange: 48
+reloadMultiplier: 0.5
+buildingDamageMultiplier: 0.3
+}
+carbide: {
+speed: 12
+damage: 325
+width: 15
+hitSize: 7
+height: 21
+reloadMultiplier: 0.2
+shootEffect: [shootBigColor, colorSparkBig]
+smokeEffect: shootBigSmoke
+ammoMultiplier: 2
+pierceCap: 3
+pierce: true
+pierceBuilding: true
+hitColor: ab8ec5
+backColor: ab8ec5
+trailColor: ab8ec5
+trailEffect: disperseTrail
+trailInterval: 2
+frontColor: ffffff
+trailWidth: 2.2
+trailLength: 11
+rangeChange: 56
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+buildingDamageMultiplier: 0.3
+fragBullets: 3
+fragRandomSpread: 0
+fragSpread: 25
+fragVelocityMin: 1
+fragBullet: {
+speed: 8.1
+damage: 227
+width: 11
+hitSize: 7
+height: 14
+shootEffect: [shootBigColor, colorSparkBig]
+smokeEffect: shootBigSmoke
+ammoMultiplier: 1
+pierceCap: 2
+pierce: true
+pierceBuilding: true
+hitColor: ab8ec5
+backColor: ab8ec5
+trailColor: ab8ec5
+frontColor: ffffff
+trailWidth: 1.8
+trailLength: 11
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+buildingDamageMultiplier: 0.2
+}
+}
+}

@@ -1,0 +1,57 @@
+
+health: 2300
+size: 2
+reload: 37
+recoil: 2
+shoot: {
+    type: ShootAlternate
+    shots: 2
+    barrels: 2
+    spread: 5
+    shotDelay: 3
+}
+shootSound: missile
+inaccuracy: 5
+range: 120
+category: defense
+group: walls
+
+shootType: {
+    type: MissileBulletType
+    width: 9
+    height: 12
+    speed: 5
+    lifetime: 20
+    damage: 10
+    splashDamage: 15
+    splashDamageRadius: 15
+    drag: -0.003
+    keepVelocity: false
+    homingRange: 35
+    weaveScale: 3
+    weaveMag: 3
+    hitEffect: blastExplosion
+    despawnEffect: blastExplosion
+    hitColor: a3a3a3
+    backColor: 808080
+    frontColor: a3a3a3
+    trailColor: a3a3a3
+    status: disorientation
+    statusDuration: 60
+}
+consumes: {
+    power: 2.5
+}
+requirements: [
+    silicon/65
+    titanium/45
+]
+research: {
+    parent: armed-graphite-wall
+    objectives: [
+        {
+            type: SectorComplete
+            preset: saltFlats
+        }
+    ]
+}

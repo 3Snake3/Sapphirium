@@ -1,0 +1,352 @@
+requirements: [
+    globium/2400
+    thorium/2100
+    plastanium/1450
+    silicon/1480
+    charged-cylinder/800
+    surge-alloy/600
+]
+buildCostMultiplier: 0.75
+range: 550
+
+recoil: 4
+reload: 1200
+cooldownTime: 600
+shoot: {
+    firstShotDelay: 50
+    shotDelay: 1190
+}
+consumes: {
+    power: 42
+}
+shake: 4
+shootCone: 60
+shootDuration: 600
+firingMoveFract: 0.8
+shootType: {
+    type: ContinuousLaserBulletType
+    chargeEffect: greenLaserCharge
+    damage: 111
+    length: 560
+    status: stunne
+    statusDuration: 120
+    hitEffect: hitMeltHeal
+    drawSize: 480
+    shake: 2
+    despawnEffect: smokeCloud
+    smokeEffect: none
+    incendChance: 0.3
+    incendSpread: 6
+    incendAmount: 1
+    healPercent: 5
+    collidesTeam: true
+    colors: [98ffa9, 98ffa9, 98ffa9, ffffff]
+}
+shootY: -3.25
+liquidCapacity: 120
+rotateSpeed: 1.5
+shootEffect: [shootBigSmoke2,
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 40
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 80
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 120
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 160
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 200
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 240
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 280
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 320
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 360
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 400
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 440
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 480
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 520
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 560
+}
+{
+particles: 18
+cone: 360
+length: 38
+interp: circleOut
+sizeInterp: circleOut
+lifetime: 120
+colorFrom: 98ffa9
+colorTo: 98ffa970
+sizeFrom: 8
+sizeTo: 0
+startDelay: 600
+}
+]
+smokeEffect: none
+moveWhileCharging: false
+accurateDelay: false
+shootSound: beam
+loopSound: laserbig
+chargeSound: lasercharge
+size: 8
+health: 5400
+category: turret
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -side
+heatColor: 98ffa970
+heatProgress: recoil
+mirror: true
+progress: recoil
+moveY: -12
+moveX: 6
+moveRot: -10
+}
+{
+type: RegionPart
+suffix: -side2
+heatColor: 98ffa970
+heatProgress: recoil
+mirror: true
+progress: recoil
+moveY: -8
+moveX: 6
+moveRot: -10
+}
+{
+type: RegionPart
+suffix: -blade
+heatColor: 98ffa970
+heatProgress: recoil
+mirror: true
+progress: recoil
+moveY: -5
+moveX: 6
+moveRot: -10
+}
+{
+type: RegionPart
+suffix: -barrel
+heatColor: 98ffa970
+mirror: true
+progress: recoil
+moveX: 6
+moveY: -3
+moveRot: -10
+}
+{
+type: RegionPart
+suffix: -bar
+layerOffset: -0.3
+turretHeatLayer: 49.8
+heatColor: 98ffa970
+heatProgress: recoil
+mirror: true
+progress: recoil
+color: 98ffa9
+moveX: 6
+moveY: -4
+moveRot: -10
+}
+{
+type: RegionPart
+suffix: -bar-bot
+layerOffset: -0.3
+turretHeatLayer: 49.8
+heatColor: 98ffa970
+heatProgress: recoil
+progress: recoil
+outline: false
+color: 98ffa9
+}
+{
+type: RegionPart
+suffix: -bottom
+layerOffset: -0.3
+outline: false
+}
+{
+type: RegionPart
+suffix: -main
+heatColor: 98ffa970
+}
+]
+}
+research: {
+    parent: corroding
+}

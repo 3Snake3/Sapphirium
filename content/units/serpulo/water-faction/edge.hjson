@@ -1,0 +1,149 @@
+immunities: [slow, stunne, shock-stun, disarmed, 
+spore-slowed, sapped, tarred, 
+muddy, super-freezing, overfreezing, 
+golden-pollination, weakened, flaming, 
+overload, electrified, small-flaming, 
+freezing, unleash]
+health: 1100
+armor: 6
+naval: true
+speed: 0.7
+drag: 0.17
+hitSize: 20
+accel: 0.4
+faceTarget: false
+rotateSpeed: 2
+trailLength: 22
+waveTrailX: 7
+waveTrailY: -9
+trailScl: 1.5
+deathExplosionEffect: {
+    type: ExplosionEffect
+    waveLife: 8
+    waveRad: 36
+    waveColor: ffffff
+    waveStroke: 2.5
+    sparks: 10
+    sparkLen: 3.5
+    sparkColor: 83a4ff
+    sparkStroke: 2.5
+    sparkRad: 40
+    smokes: 12
+    smokeColor: 83a4ff85
+    smokeSize: 8
+    smokeRad: 40
+    lifetime: 200
+}
+weapons: [
+    {
+        name: edge-unit-launcher
+        x: 0
+        y: -5
+        reload: 60
+        recoil: 4
+        shootSound: bang
+        rotate: true
+        mirror: false
+        rotateSpeed: 2
+        bullet: {
+            shootEffect: {
+                type: ExplosionEffect
+                smokes: 0
+                sparks: 7
+                sparkColor: 83a4ff
+                sparkRad: 16
+                waveRad: 14
+                waveColor: 83a4ff
+                waveLife: 14
+            }
+            smokeEffect: {
+                particles: 8
+                length: 16
+                lifetime: 60
+                colorFrom: 565666
+                colorTo: 565666
+                sizeFrom: 8
+                sizeTo: 0
+            }
+            speed: 0
+            keepVelocity: false
+            inaccuracy: 2
+            spawnUnit: edge-missile
+        }
+    }
+    {
+        name: edge-launcher
+        x: 10.5
+        y: 9.5
+        reload: 15
+        recoil: 2
+        rotate: true
+        mirror: true
+        alternate: true
+        shootSound: missile
+        bullet: {
+            type: MissileBulletType
+            damage: 55
+            splashDamage: 20
+            splashDamageRadius: 40
+            speed: 0.98
+            keepVelocity: true
+            width: 8
+            height: 8
+            shrinkY: 0
+            drag: -0.03
+            lifetime: 70
+            sprite: missile
+            homingRange: 60
+            homingPower: 0.1
+            trailColor: 4769cc
+            backColor: 4769cc
+            frontColor: 83a4ff
+            hitEffect: {
+                type: ExplosionEffect
+                waveRad: 8
+                waveLife: 13
+                waveColor: 83a4ff
+                sparks: 5
+                sparkColor: 83a4ff
+                sparkRad: 12
+                sparkStroke: 3
+                sparkLen: 7
+                smokes: 6
+                smokeSize: 7
+                smokeRad: 12
+                smokeColor: 83a4ff
+            }
+            despawnEffect: {
+                type: ExplosionEffect
+                waveRad: 8
+                waveLife: 13
+                waveColor: 83a4ff
+                sparks: 5
+                sparkColor: 83a4ff
+                sparkRad: 12
+                sparkStroke: 3
+                sparkLen: 7
+                smokes: 6
+                smokeSize: 7
+                smokeRad: 12
+                smokeColor: 83a4ff
+            }
+        }
+    }
+]
+research: {
+    parent: parity
+    objectives: [
+        logic-encoder, 
+        {
+            type: SectorComplete
+            preset: coastline
+        }
+    ]
+    requirements: [
+        silicon/8000
+        titanium/8000
+        metaglass/6000
+    ]
+}

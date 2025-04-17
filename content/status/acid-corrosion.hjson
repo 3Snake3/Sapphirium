@@ -3,17 +3,20 @@ damage: 0.75
 healthMultiplier: 0.9
 speedMultiplier: 0.65
 effect: {
-type: MultiEffect
-effects: [melting, {
-type: ParticleEffect
-sizeFrom: 4
-sizeTo: 0
-lifetime: 25
-particles: 3
-cone: 360
-length: 2
-colorFrom: 84f591
-colorTo: 61ad7e50
-}]
+    type: MultiEffect
+    effects: [
+        melting, 
+        {
+            type: ParticleEffect
+            sizeFrom: 4
+            sizeTo: 0
+            lifetime: 25
+            particles: 3
+            cone: 360
+            length: 2
+            colorFrom: 84f591
+            colorTo: 61ad7e50
+        }
+    ]
 }
 color: 84f591

@@ -1,0 +1,66 @@
+health: 7200
+size: 3
+radius: 16
+shieldHealth: 220
+destroyBullet: {
+    speed: 0
+    lifetime: 180
+    intervalBullets: 1
+    width: 12
+    height: 12
+    sprite: circle-bullet
+    bulletInterval: 60
+    intervalBullet: {
+    type: ExplosionBulletType
+    splashDamageRadius: 32
+    status: melting
+    statusDuration: 60
+    despawnEffect: {
+    type: WaveEffect
+    sizeFrom: 24
+    sizeTo: 32
+    lifetime: 60
+    interp: slope
+    colorFrom: ffb38080
+    colorTo: ffb38080
+    }
+    }
+    splashDamageRadius: 32
+    splashDamage: 0
+    status: super-melting
+    statusDuration: 180
+    despawnEffect: {
+        type: ExplosionEffect
+        waveLife: 15
+        waveRad: 32
+        waveStroke: 2
+        waveColor: ffb380
+        sparks: 12
+        sparkLen: 5
+        sparkRad: 36
+        sparkStroke: 2
+        sparkColor: ffb380
+        smokes: 12
+        smokeRad: 36
+        smokeSize: 4
+        smokeColor: ffb380
+        lifetime: 15
+    }
+    despawnSound: explosion
+} 
+destroyBulletSameTeam: true
+cooldownNormal: 1
+phaseRadiusBoost: 0
+phaseShieldBoost: 800
+placeableLiquid: true
+category: defense
+researchCostMultiplier: 2.5
+buildCostMultiplier: 2.5
+requirements: [
+    creostone/165
+    silicon/80
+]
+envDisabled: 16
+research: {
+    parent: armed-creostone-wall
+}

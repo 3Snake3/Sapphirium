@@ -1,10 +1,1 @@
-effect: {
-type: ParticleEffect
-particles: 1
-length: 0
-sizeFrom: 4
-sizeTo: 0
-lifetime: 100
-colorTo: 00000000
-region: sapphirium-stun
-}
+effect: none

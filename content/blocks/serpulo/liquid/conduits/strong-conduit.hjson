@@ -1,0 +1,12 @@
+health: 540
+liquidCapacity: 12
+liquidPressure: 1.025
+requirements: [
+    dense-alloy/2
+    metaglass/2
+    stone/2
+]
+category: liquid
+research: pulse-conduit
+leaks: false
+placeableLiquid: true

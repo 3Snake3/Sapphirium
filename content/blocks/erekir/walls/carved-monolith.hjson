@@ -1,0 +1,12 @@
+requirements: [
+    carved-alloy/24
+    tungsten/12
+    creostone/6
+]
+armor: 52
+buildCostMultiplier: 6
+health: 1700
+size: 2
+absorbLasers: true
+category: defense
+research: carved-wall-large

@@ -1,0 +1,89 @@
+ammoTypes: {
+    copper: {
+        type: BasicBulletType
+        speed: 2.5
+        damage: 11
+        width: 7
+        height: 9
+        lifetime: 60
+        ammoMultiplier: 2
+    }
+    graphite: {
+        type: BasicBulletType
+        speed: 3.5
+        damage: 20
+        width: 9
+        height: 12
+        lifetime: 60
+        ammoMultiplier: 4
+        reloadMultiplier: 0.6
+    }
+    silicon: {
+        type: BasicBulletType
+        speed: 3
+        damage: 15
+        sprite: bullet
+        width: 7
+        height: 9
+        lifetime: 60
+        ammoMultiplier: 5
+        homingPower: 1
+        reloadMultiplier: 1.5
+    }
+    pyratite: {
+        type: BasicBulletType
+        speed: 3.2
+        damage: 18
+        frontColor: f8ad42
+        backColor: f68021
+        status: burning
+        hitEffect: {
+            type: MultiEffect
+            effects: [hitBulletSmall, fireHit]
+        }
+        splashDamage: 12
+        splashDamageRadius: 22
+        makeFire: true
+        width: 10
+        height: 12
+        lifetime: 60
+        ammoMultiplier: 5
+        homingPower: 1
+        reloadMultiplier: 1.5
+    }
+    thorium: {
+        type: BasicBulletType
+        speed: 4
+        damage: 29
+        sprite: bullet
+        width: 10
+        height: 13
+        shootEffect: shootBig
+        smokeEffect: shootBigSmoke
+        lifetime: 60
+        ammoMultiplier: 4
+    }
+    creostone: {
+        type: BasicBulletType
+        speed: 3
+        damage: 28
+        sprite: shell
+        width: 11
+        height: 14
+        shootEffect: shootBig
+        smokeEffect: shootBigSmoke
+        hitEffect: {
+            type: MultiEffect
+            effects: [hitBulletSmall, blastExplosion]
+        }
+        lifetime: 60
+        ammoMultiplier: 4
+        reloadMultiplier: 0.6
+        status: super-melting
+        statusDuration: 20
+        splashDamage: 12
+        splashDamageRadius: 15
+        pierce: true
+        pierceCap: 1
+    }
+}

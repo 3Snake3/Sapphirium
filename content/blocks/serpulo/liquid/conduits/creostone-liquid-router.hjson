@@ -1,0 +1,11 @@
+health: 100
+liquidCapacity: 40
+category: liquid
+requirements: [
+    creostone/3
+    metaglass/2
+    dense-alloy/2
+]
+research: creostone-conduit
+placeableLiquid: true
+solid: true

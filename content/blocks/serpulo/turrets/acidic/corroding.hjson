@@ -1,0 +1,370 @@
+health: 2350
+reload: 180
+recoil: 4
+rotateSpeed: 4
+inaccuracy: 6
+range: 350
+shootSound: railgun
+smokeEffect: {
+particles: 14
+lifetime: 135
+cone: 360
+length: 50
+sizeFrom: 7
+sizeTo: 0
+colorFrom: 84f591
+colorTo: 84f59170
+}
+shake: 3
+consumes: {
+    power: 10
+}
+shoot: {
+type: ShootMulti
+source: {
+shots: 4
+shotDelay: 30
+}
+dest: [
+{
+shots: 4
+shotDelay: 4
+}
+]
+}
+size: 4
+ammoTypes: {
+plastanium: {
+speed: 20
+lifetime: 17.5
+damage: 85
+width: 10
+height: 14
+backColor: 84f591
+frontColor: ffffff
+trailColor: 84f591
+hitColor: 84f591
+shootEffect: shootBigColor
+hitEffect: [hitBulletColor, {
+particles: 14
+lifetime: 120
+cone: 360
+length: 20
+sizeFrom: 7
+sizeTo: 0
+colorFrom: 84f591
+colorTo: 84f59170
+}
+{
+type: WaveEffect
+lifetime: 120
+strokeFrom: 6
+strokeTo: 0.3
+sizeFrom: 0
+sizeTo: 25
+interp: circleOut
+colorFrom: 84f591
+colorTo: 84f591
+}
+]
+despawnEffect: [hitBulletColor, {
+particles: 14
+lifetime: 120
+cone: 360
+length: 20
+sizeFrom: 7
+sizeTo: 0
+colorFrom: 84f591
+colorTo: 84f59170
+}
+{
+type: WaveEffect
+lifetime: 120
+strokeFrom: 6
+strokeTo: 0.3
+sizeFrom: 0
+sizeTo: 25
+interp: circleOut
+colorFrom: 84f591
+colorTo: 84f591
+}
+]
+homingPower: 0.48
+homingRange: 25
+hitShake: 2
+homingDelay: 4
+status: acid-corrosion
+statusDuration: 120
+trailWidth: 3
+trailLength: 25
+pierceArmor: true
+absorbable: false
+fragBullets: 6
+fragRandomSpread: 45
+fragLifeMin: 1.5
+fragLifeMax: 2
+fragVelocityMin: 0.3
+fragVelocityMax: 1.3
+fragBullet: {
+speed: 4
+damage: 24
+lifetime: 24
+backColor: 84f591
+hitColor: 84f591
+hitEffect: none
+despawnEffect: none
+keepVelocity: false
+reflectable: false
+status: acid-corrosion
+statusDuration: 35
+width: 7
+height: 8
+hitEffect: {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 7
+        lifetime: 40
+        strokeFrom: 1.5
+        strokeTo: 0
+        interp: circleOut
+        colorFrom: 70ff88
+        colorTo: 70ff88
+        }
+        despawnEffect: {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 7
+        lifetime: 40
+        strokeFrom: 1.5
+        strokeTo: 0
+        interp: circleOut
+        colorFrom: 70ff88
+        colorTo: 70ff88
+        }
+        fragBullets: 3
+    fragBullet: {
+    type: LiquidBulletType
+    liquid: acid
+    damage: 0
+    speed: 0
+    lifetime: 1
+    }
+}
+}
+surge-alloy: {
+speed: 20
+lifetime: 17.5
+damage: 135
+width: 10
+height: 14
+hitShake: 3
+backColor: 84f591
+frontColor: ffffff
+trailColor: 84f591
+hitColor: 84f591
+shootEffect: shootBigColor
+hitEffect: [hitBulletColor, {
+particles: 14
+lifetime: 120
+cone: 360
+length: 20
+sizeFrom: 7
+sizeTo: 0
+colorFrom: 84f591
+colorTo: 84f59170
+}
+{
+type: WaveEffect
+lifetime: 120
+strokeFrom: 6
+strokeTo: 0.3
+sizeFrom: 0
+sizeTo: 25
+interp: circleOut
+colorFrom: 84f591
+colorTo: 84f591
+}
+]
+despawnEffect: [hitBulletColor, {
+particles: 14
+lifetime: 120
+cone: 360
+length: 20
+sizeFrom: 7
+sizeTo: 0
+colorFrom: 84f591
+colorTo: 84f59170
+}
+{
+type: WaveEffect
+lifetime: 120
+strokeFrom: 6
+strokeTo: 0.3
+sizeFrom: 0
+sizeTo: 25
+interp: circleOut
+colorFrom: 84f591
+colorTo: 84f591
+}
+]
+homingPower: 0.48
+homingRange: 25
+homingDelay: 4
+status: acid-corrosion
+statusDuration: 180
+trailWidth: 3
+trailLength: 25
+pierceArmor: true
+absorbable: false
+lightning: 6
+lightningColor: 84f591
+lightningLength: 6
+lightningLengthRand: 7
+lightningDamage: 18
+knockback: 2
+ammoMultiplier: 3
+fragBullets: 5
+    fragBullet: {
+    type: LiquidBulletType
+    liquid: acid
+    damage: 0
+    speed: 0
+    lifetime: 1
+    }
+}
+phase-fabric: {
+speed: 18
+lifetime: 25
+damage: 185
+ammoMultiplier: 4
+hitShake: 3
+width: 10
+height: 14
+backColor: 84f591
+frontColor: ffffff
+trailColor: 84f591
+hitColor: 84f591
+shootEffect: shootBigColor
+hitEffect: [hitBulletColor, {
+particles: 14
+lifetime: 120
+cone: 360
+length: 20
+sizeFrom: 7
+sizeTo: 0
+colorFrom: 84f591
+colorTo: 84f59170
+}
+{
+type: WaveEffect
+lifetime: 120
+strokeFrom: 6
+strokeTo: 0.3
+sizeFrom: 0
+sizeTo: 25
+interp: circleOut
+colorFrom: 84f591
+colorTo: 84f591
+}
+]
+despawnEffect: [hitBulletColor, {
+particles: 14
+lifetime: 120
+cone: 360
+length: 20
+sizeFrom: 7
+sizeTo: 0
+colorFrom: 84f591
+colorTo: 84f59170
+}
+{
+type: WaveEffect
+lifetime: 120
+strokeFrom: 6
+strokeTo: 0.3
+sizeFrom: 0
+sizeTo: 25
+interp: circleOut
+colorFrom: 84f591
+colorTo: 84f591
+}
+]
+homingPower: 0.23
+homingRange: 16
+homingDelay: 6
+status: acid-corrosion
+statusDuration: 120
+trailWidth: 3
+trailLength: 25
+pierceArmor: true
+absorbable: false
+reflectable: false
+hittable: false
+rangeChange: 25
+reloadMultiplier: 0.65
+weaveScale: 5
+weaveMag: 4
+knockback: 3
+intervalBullet: {
+speed: 4
+damage: 24
+lifetime: 24
+backColor: 84f591
+hitColor: 84f591
+hitEffect: none
+despawnEffect: none
+keepVelocity: false
+reflectable: false
+hitEffect: {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 7
+        lifetime: 40
+        strokeFrom: 1.5
+        strokeTo: 0
+        interp: circleOut
+        colorFrom: 70ff88
+        colorTo: 70ff88
+        }
+        despawnEffect: {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 7
+        lifetime: 40
+        strokeFrom: 1.5
+        strokeTo: 0
+        interp: circleOut
+        colorFrom: 70ff88
+        colorTo: 70ff88
+        }
+status: acid-corrosion
+statusDuration: 35
+width: 7
+height: 8
+fragBullets: 3
+    fragBullet: {
+    type: LiquidBulletType
+    liquid: acid
+    damage: 0
+    speed: 0
+    lifetime: 1
+    }
+}
+intervalAngle: 180
+bulletInterval: 7
+intervalRandomSpread: 15
+pierce: true
+pierceBuilding: true
+pierceDamageFactor: 0.3
+}
+}
+category: turret
+research: endoxin
+requirements: [
+    dense-alloy/1000
+    graphite/445
+    thorium/400
+    plastanium/325
+    silicon/345
+    charged-ingot/200
+]

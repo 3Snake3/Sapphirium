@@ -1,0 +1,23 @@
+
+requirements: [
+    dense-alloy/50
+    titanium/70
+]
+category: turret
+outlineColor: 1d1d21
+reload: 30
+shootCone: 60
+rotateSpeed: 8
+consumes: {
+    power: 4.5
+}
+targetGround: false
+range: 120
+heatColor: ff0000
+recoil: 1
+health: 260
+shootSound: laserbolt
+research: {
+    parent: lancer
+}
+envDisabled: 16

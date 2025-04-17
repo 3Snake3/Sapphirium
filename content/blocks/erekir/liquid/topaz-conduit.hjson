@@ -1,0 +1,11 @@
+requirements: [
+    topaz/3
+    beryllium/1
+]
+category: liquid
+botColor: 38393f
+liquidCapacity: 35
+liquidPressure: 1.08
+health: 300
+underBullets: true
+research: reinforced-conduit

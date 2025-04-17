@@ -1,0 +1,297 @@
+speed: 1.2
+hitSize: 12
+health: 440
+armor: 12
+rotateSpeed: 3
+drawCell: false
+outlines: false
+range: 160
+allowedInPayloads: false
+playerControllable: false
+logicControllable: false
+healColor: ffd37f
+immunities: [unleash]
+parts: [
+{
+type: RegionPart
+suffix: -outline-part
+under: true
+outline: false
+progress: warmup
+layerOffset: -0.001
+}
+]
+weapons: [
+{
+name: blaster-left-arm
+x: -4.5
+y: 1.25
+recoil: 2
+reload: 120
+top: false
+layerOffset: -0.01
+shootSound: shockBlast
+shake: 2
+rotate: false
+mirror: false
+parts: [
+{
+type: RegionPart
+suffix: -outline-part
+under: true
+outline: false
+progress: warmup
+layerOffset: -0.0001
+}
+]
+bullet: {
+speed: 4
+lifetime: 40
+damage: 54
+splashDamage: 60
+splashDamageRadius: 24
+splashDamagePierce: true
+trailEffect: missileTrail
+shootEffect: [shootBigColor, {
+type: WaveEffect
+sizeTo: 20
+strokeFrom: 4
+lifetime: 14
+colorTo: ffd37f
+}
+{
+type: ParticleEffect
+cone: 7
+particles: 12
+length: 24
+lifetime: 60
+line: true
+lenFrom: 8
+strokeFrom: 4
+interp: pow2Out
+sizeInterp: pow2Out
+colorFrom: ffd37f
+colorTo: ffd37f
+}
+]
+smokeEffect: {
+type: ParticleEffect
+particles: 8
+cone: 360
+length: 18
+lifetime: 40
+sizeFrom: 7
+sizeTo: 0
+interp: pow2Out
+sizeInterp: pow2Out
+colorFrom: 565666
+colorTo: 56566660
+}
+hitEffect: {
+type: ExplosionEffect
+waveRad: 28
+waveLife: 14
+waveStroke: 4
+waveColor: ffd37f
+sparks: 8
+sparkLen: 6
+sparkRad: 30
+sparkColor: ffd37f
+sparkStroke: 3
+smokes: 8
+smokeSize: 6
+smokeRad: 30
+smokeColor: ffd37f
+lifetime: 40
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 28
+waveLife: 14
+waveStroke: 4
+waveColor: ffd37f
+sparks: 8
+sparkLen: 6
+sparkRad: 30
+sparkColor: ffd37f
+sparkStroke: 3
+smokes: 8
+smokeSize: 6
+smokeRad: 30
+smokeColor: ffd37f
+lifetime: 40
+}
+trailChance: 0.4
+width: 8
+height: 8
+sprite: circle-bullet
+trailWidth: 3
+trailLength: 13
+trailColor: ffd37f
+backColor: ffd37f
+hitColor: ffd37f
+frontColor: ffffff
+shrinkY: 0
+intervalRandomSpread: 20
+intervalSpread: 200
+intervalBullets: 2
+intervalAngle: 180
+bulletInterval: 3
+intervalBullet: {
+speed: 7
+lifetime: 25
+damage: 18
+width: 7
+height: 7
+sprite: circle-bullet
+trailWidth: 2
+trailLength: 20
+homingPower: 0.2
+trailColor: ffd37f
+backColor: ffd37f
+hitColor: ffd37f
+frontColor: ffffff
+shrinkY: 0
+drag: 0.01
+}
+fragBullet: {
+speed: 7
+lifetime: 25
+damage: 18
+width: 7
+height: 7
+sprite: circle-bullet
+trailWidth: 2
+trailLength: 20
+homingPower: 0.2
+trailColor: ffd37f
+backColor: ffd37f
+hitColor: ffd37f
+frontColor: ffffff
+shrinkY: 0
+drag: 0.01
+}
+fragRandomSpread: 360
+lightning: 3
+lightningLength: 5
+lightningColor: ffd37f
+lightningDamage: 18
+}
+}
+{
+name: blaster-right-arm
+x: 4
+y: 1.25
+top: false
+layerOffset: -0.01
+reload: 14
+recoil: 3
+rotate: false
+mirror: false
+parts: [
+{
+type: RegionPart
+suffix: -outline-part
+under: true
+outline: false
+progress: warmup
+layerOffset: -0.0001
+}
+]
+bullet: {
+speed: 7
+lifetime: 30
+damage: 18
+width: 7
+height: 7
+sprite: circle-bullet
+trailWidth: 2
+trailLength: 20
+homingPower: 0.2
+trailColor: ffd37f
+backColor: ffd37f
+hitColor: ffd37f
+frontColor: ffffff
+shrinkY: 0
+drag: 0.01
+}
+}
+{
+x: 0
+y: 0
+reload: 598
+shoot: {
+firstShotDelay: 597
+}
+rotate: false
+mirror: false
+recoil: 0
+shootSound: none
+display: false
+bullet: {
+type: ExplosionBulletType
+splashDamage: 120
+splashDamageRadius: 24
+splashDamagePierce: true
+shootEffect: {
+type: ExplosionEffect
+waveRad: 28
+waveLife: 14
+waveStroke: 4
+waveColor: ffd37f
+sparks: 8
+sparkLen: 6
+sparkRad: 30
+sparkColor: ffd37f
+sparkStroke: 3
+smokes: 8
+smokeSize: 6
+smokeRad: 30
+smokeColor: ffd37f
+lifetime: 40
+}
+}
+}
+{
+x: 0
+y: 0
+reload: 30
+recoil: 0
+display: false
+shootOnDeath: true
+rotate: false
+mirror: false
+shoot: {
+type: ShootSpread
+spread: 360
+shots: 10
+}
+bullet: {
+speed: 7
+lifetime: 25
+damage: 18
+width: 7
+height: 7
+sprite: circle-bullet
+trailWidth: 2
+trailLength: 20
+homingPower: 0.2
+trailColor: ffd37f
+backColor: ffd37f
+hitColor: ffd37f
+frontColor: ffffff
+shrinkY: 0
+drag: 0.01
+}
+}
+]
+abilities: [
+{
+type: ShieldArcAbility
+max: 600
+regen: 0.75
+cooldown: 180
+radius: 8
+width: 8
+}
+]

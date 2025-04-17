@@ -1,0 +1,16 @@
+name: paganism
+damage: 0
+transitionDamage: 1800
+color: ffd88f
+effect: none
+applyEffect: {
+    type: ParticleEffect
+    particles: 1
+    length: 0
+    sizeFrom: 10
+    sizeTo: 0
+    lifetime: 180
+    colorFrom: f2e879
+    colorTo: f2e879
+}
+applyExtend: true

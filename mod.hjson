@@ -3,23 +3,19 @@ displayName: "Sapphirium"
 description:
   '''
   Ah the Sapphirium, sounds good right? 
-  Let us introduce the list of content it includes: A hell amount of fraction turrets, brand new fraction units and in the end new interesting materials. 
-  In next updates we want to introduce some pretty big expansion to erekir, stay tune.
+  Let us introduce the list of content it includes: A hell amount of fraction turrets, brand new fraction units and in the end new interesting materials and mechanics. 
   
   Contentmaker & Helpers List: 
-  Kostolom - Balance maker, map maker, source of ideas. Discord profile kostolom#9777 
-  Laim - Spriter, map maker, a small helper with a code. Discord profile LaIm-Ik.json#5237
-  Liplum - Java coder. Discord profile Liplum#2623 
-  Ferret Fantasy - Spriter. Discord profile sundered#8134 
-  Dr.Shramberg - A small script helper. Discord profile ADG021222#7589 
+  Kostolom - Balancer, Mapper, Json coder, Effect designer, Multi-tool functionally. Discord profile kostolom#9777 
+  Laim - Spriter, map maker. Discord profile LaIm-Ik.json#5237
+  Liplum - Multicrafter's library author. Discord profile Liplum#2623 
+  Fr4ncuzS4n - JS helper. Discord profile ADG021222#7589 
   Fox1va - A small helper. Discord profile Fox1va_#3532 
   Vervalamis - Spriter. Discord profile Saigo no-nozomi#1206 
   
   Thanks everyone for support.
   '''
 author: "Snake"
-minGameVersion: "136"
-version: "16.0"
-main: "adc.AdcMod"
+minGameVersion: "147"
+version: "17.0"
 repo: 3Snake3/Sapphirium
-java: true

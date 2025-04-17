@@ -1,0 +1,19 @@
+requirements: [
+    sapphire/2000
+    silicon/2500
+    beryllium/1250
+    graphite/1250
+]
+category: effect
+unitType: firmament
+health: 6000
+itemCapacity: 2500
+size: 4
+thrusterLength: 8.5
+armor: 8
+incinerateNonBuildable: true
+unitCapModifier: 18
+researchCostMultiplier: 0.07
+research: {
+    parent: core-bastion
+}

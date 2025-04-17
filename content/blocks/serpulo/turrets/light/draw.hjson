@@ -1,0 +1,271 @@
+requirements: [
+    dense-alloy/1000
+    globium/860
+    thorium/660
+    diamond/500
+    silicon/320
+    surge-alloy/540
+]
+size: 5
+category: turret
+research: skull
+health: 6400
+targetUnderBlocks: false
+reload: 600
+recoil: 4
+recoilTime: 70
+cooldownTime: 140
+range: 146
+rotateSpeed: 0.3
+shootCone: 1
+shake: 8
+shootSound: bladehit
+coolantMultiplier: 0.45
+consumes: {
+    power: 28
+    coolant: {}
+}
+ammoPerShot: 36
+maxAmmo: 72
+ammoTypes: {
+    diamond: {
+        type: ShrapnelBulletType
+        length: 124
+        damage: 3400
+        pierceArmor: true
+        width: 48
+        serrations: 4
+        lifetime: 60
+        shootEffect: [
+            shootBigColor,
+            {
+                type: ParticleEffect
+                particles: 1
+                length: 0
+                sizeFrom: 48
+                sizeTo: 34
+                colorFrom: ffffff
+                colorTo: ffffff
+                lifetime: 31
+                region: sapphirium-draw-hit
+            }
+            {
+                startDelay:31
+                type: ParticleEffect
+                particles: 1
+                length: 0
+                sizeFrom: 34
+                sizeTo: 34
+                colorFrom: ffffff
+                colorTo: ffffff
+                lifetime: 11
+                region: sapphirium-draw-hit
+            }
+            {
+                startDelay:42
+                type: ParticleEffect
+                particles: 1
+                length: 0
+                sizeFrom: 34
+                sizeTo: 26
+                colorFrom: ffffff
+                colorTo: ffffff70
+                lifetime: 10
+                region: sapphirium-draw-hit
+            }
+            {
+                startDelay:52
+                type: ParticleEffect
+                particles: 1
+                length: 0
+                sizeFrom: 26
+                sizeTo: 0
+                colorFrom: ffffff70
+                colorTo: ffffff00
+                lifetime: 10
+                region: sapphirium-draw-hit
+            }
+            {
+                type: ParticleEffect
+                particles: 28
+                length: -40
+                cone:40
+                sizeFrom: 0
+                sizeTo: 6
+                colorFrom: ffffff
+                colorTo: a1b1d100
+                lifetime: 63
+                interp: swingOut
+                region: sapphirium-rhombus
+            }
+            {
+                startDelay:10
+                type: ParticleEffect
+                particles: 40
+                length: -50
+                cone:28
+                sizeFrom: 0
+                sizeTo: 6
+                colorFrom: ffffff
+                colorTo: a1b1d100
+                lifetime: 63
+                interp: swingOut
+                region: sapphirium-rhombus
+            }
+            {
+                startDelay:20
+                type: ParticleEffect
+                particles: 48
+                length: -58
+                cone:22
+                sizeFrom: 0
+                sizeTo: 6
+                colorFrom: ffffff
+                colorTo: a1b1d100
+                lifetime: 63
+                interp: swingOut
+                region: sapphirium-rhombus
+            }
+            {
+                startDelay:30
+                type: ParticleEffect
+                particles: 48
+                length: -64
+                cone:20
+                sizeFrom: 0
+                sizeTo: 6
+                colorFrom: ffffff
+                colorTo: a1b1d100
+                lifetime: 63
+                interp: swingOut
+                region: sapphirium-rhombus
+            }
+            {
+                startDelay:40
+                type: ParticleEffect
+                particles: 48
+                length: -76
+                cone:20
+                sizeFrom: 0
+                sizeTo: 10
+                colorFrom: ffffff
+                colorTo: a1b1d100
+                lifetime: 63
+                interp: swingOut
+                region: sapphirium-rhombus
+            }
+            {
+                startDelay:50
+                type: ParticleEffect
+                particles: 48
+                length: -90
+                cone:19
+                sizeFrom: 0
+                sizeTo: 10
+                colorFrom: ffffff
+                colorTo: a1b1d100
+                lifetime: 63
+                interp: swingOut
+                region: sapphirium-rhombus
+            }
+            {
+                startDelay:60
+                type: ParticleEffect
+                particles: 48
+                length: -120
+                cone:30
+                sizeFrom: 0
+                sizeTo: 10
+                colorFrom: ffffff
+                colorTo: a1b1d100
+                lifetime: 40
+                interp: swingOut
+                region: sapphirium-rhombus
+            }
+            {
+                startDelay:60
+                type: ParticleEffect
+                particles:30
+                length: 150
+                cone:3
+                sizeFrom: 2
+                sizeTo: 1
+                colorFrom: ffffff
+                colorTo: a1b1d100
+                lifetime: 40
+                region: sapphirium-rhombus
+            }
+            {
+                startDelay:60
+                type: ParticleEffect
+                particles:56
+                length: 40
+                cone:10
+                sizeFrom: 3
+                sizeTo: 2
+                colorFrom: ffffff
+                colorTo: a1b1d100
+                lifetime: 40
+                region: sapphirium-rhombus
+            }
+            {
+                startDelay:60
+                type: ParticleEffect
+                particles:30
+                length: 30
+                cone:70
+                sizeFrom: 3
+                sizeTo: 2
+                colorFrom: ffffff
+                colorTo: a1b1d100
+                lifetime: 40
+                region: sapphirium-rhombus
+            }
+        ]
+        toColor: e1e9f0
+        status: cut
+        statusDuration: 1500
+        hitShake: 4
+        ammoMultiplier: 1
+        buildingDamageMultiplier: 0.2
+}
+}
+ammoUseEffect: casing3Double
+unitSort: strongest
+drawer: {
+    type: DrawTurret
+    parts: [
+        {
+            type: RegionPart
+            suffix: -bar
+            mirror: false
+            under: true
+        }
+        {
+            type: RegionPart
+            suffix: -blade
+            progress: recoil
+            mirror: true
+            under: true
+            moveX: -4.80
+            moveY: 5.75
+        }
+        {
+            type: RegionPart
+            suffix: -mid-piston
+            progress: recoil
+            mirror: false
+            under: true
+            moveY: -4
+        }
+        {
+            type: RegionPart
+            suffix: -piston
+            progress: recoil
+            moveY: -4
+            moveX: -4
+            mirror: true
+            under: true
+        }
+    ]
+}

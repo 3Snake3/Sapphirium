@@ -1,0 +1,51 @@
+
+craftTime: 80
+outputItem: creostone/3
+updateEffect: redgeneratespark
+craftEffect: none
+hasPower: true
+hasItems: true
+hasLiquids: true
+hasConsumers: true
+itemCapacity: 30
+liquidCapacity: 24
+drawer: {
+type: DrawMulti
+drawers: [
+{
+    type: DrawRegion
+    suffix: "-bottom"
+}
+{
+    type: DrawArcSmelt
+    flameColor: ff9686
+    midColor: ffbe8c
+    flameRad: 1.5
+    circleSpace: 2
+    circleStroke: 1.5
+    alpha: 0.76
+}
+{
+    type: DrawDefault
+}
+]
+}
+consumes: {
+    items: {
+        items: [
+            silicon/4
+        ]
+    }
+    liquid: creotine/0.2
+    power: 7.5
+}
+category: crafting
+requirements: [
+    thorium/120
+    silicon/120
+    tungsten/240
+    oxide/80
+]
+size: 3
+fogRadius: 3
+research: neoplasm-converter

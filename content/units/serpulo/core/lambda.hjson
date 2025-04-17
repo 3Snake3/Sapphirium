@@ -1,0 +1,79 @@
+flying: true
+isEnemy: false
+lowAltitude: true
+mineSpeed: 9.5
+mineTier: 3
+defaultController: BuilderAI
+buildSpeed: 1.3
+drag: 0.05
+speed: 4.15
+rotateSpeed: 21
+accel: 0.11
+itemCapacity: 90
+health: 320
+engineOffset: 8
+engineSize: 4
+hitSize: 15
+immunities: [unleash]
+weapons: [
+    {
+        name: small-mount-weapon
+        reload: 10
+        x: 3.5
+        y: 3.25
+        shoot: {
+            type: ShootSpread
+            shots: 3
+            shotDelay: 4
+            spread: 3
+        }
+        inaccuracy: 1
+        ejectEffect: casing1
+        bullet: {
+            type: BasicBulletType
+            speed: 4
+            damage: 10
+            buildingDamageMultiplier: 0.01
+            width: 7
+            height: 12
+            lifetime: 70
+            shootEffect: shootSmall
+            smokeEffect: shootSmallSmoke
+            homingPower: 0.06
+        }
+    }
+    {
+        name: missile-weapon-mount
+        x: 5.5
+        y: -3.25
+        reload: 60
+        rotate: true
+        inaccuracy: 3
+        velocityRnd: 0.2
+        shootSound: missile
+        shootStatusDuration: 25
+        bullet: {
+            type: MissileBulletType
+            width: 7
+            height: 7
+            shrinkY: 0
+            drag: -0.003
+            homingRange: 35
+            trailChance: 0.2
+            trailColor: f9c27a
+            frontColor: fff8e8
+            backColor: f9c27a
+            keepVelocity: false
+            speed: 3
+            damage: 12
+            splashDamageRadius: 20
+            splashDamage: 22
+            buildingDamageMultiplier: 0.85
+            lifetime: 93.4
+            hitEffect: blastExplosion
+            despawnEffect: blastExplosion
+            weaveScale: 6
+            weaveMag: 1
+        }
+    }
+]

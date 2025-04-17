@@ -1,0 +1,41 @@
+ammoTypes: {
+    titanium: {
+        type: ShrapnelBulletType
+        length: 100
+        damage: 66
+        ammoMultiplier: 4
+        width: 17
+        reloadMultiplier: 1.3
+    }
+    thorium: {
+        type: ShrapnelBulletType
+        length: 100
+        damage: 105
+        ammoMultiplier: 5
+        toColor: f9a3c7
+        shootEffect: thoriumShoot
+        smokeEffect: thoriumShoot
+    }
+    surge-stone: {
+        type: ShrapnelBulletType
+        length: 90
+        damage: 160
+        ammoMultiplier: 6
+        width: 18
+        reloadMultiplier: 0.8
+        toColor: f3e979
+        shootEffect: lightningShoot
+        smokeEffect: lightningShoot
+        status: shocked
+        statusDuration: 220
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragBullet: {
+            type: LightningBulletType
+            damage: 20
+            lightningLength: 10
+            lightningColor: f3e979
+            lifetime: 10
+        }
+    }
+}

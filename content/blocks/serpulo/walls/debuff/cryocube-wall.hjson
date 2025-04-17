@@ -1,0 +1,42 @@
+
+category: defense
+research: {
+    parent: armed-ice-cube-wall
+    objectives: [freezer]
+}
+playerControllable: false
+
+health: 300
+armor: 3
+reload: 300
+recoil: 0
+rotateSpeed: 0
+range: 40
+consumes: {
+    power: 3
+}
+group: walls
+
+shootEffect: none
+shootSound: none
+smokeEffect: none
+
+shootType: {
+    sprite: sapphirium-none-bullet
+    speed: 0
+    damage: 0
+    hitEffect: none
+    despawnEffect: none
+    collides: false
+    collidesTiles: false
+    collidesAir: false
+    collidesGround: false
+    displayAmmoMultiplier: false
+}
+
+envDisabled: 16
+requirements: [
+    cryo-cube/10
+    ledonite-cube/10
+    lead/5
+]

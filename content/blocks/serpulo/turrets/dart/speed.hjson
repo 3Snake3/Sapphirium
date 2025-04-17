@@ -1,0 +1,113 @@
+health: 960
+size: 2
+reload: 9
+recoil: 4
+shootSound: shootBig
+smokeEffect: shootBigSmoke
+range: 200
+shoot: {
+    type: ShootAlternate
+    barrels: 3
+    spread: 2.75
+}
+inaccuracy: 4
+shootCone: 5
+ammoUseEffect: casing2Double
+ammoPerShot: 3
+ammoTypes: {
+    copper: {
+        width: 9
+        height: 13
+        speed: 8
+        lifetime: 25
+        damage: 9
+        shootEffect: shootSmallColor
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        trailWidth: 1.9
+        trailLength: 12
+        trailColor: f9c27a
+        drag: -0.008
+        keepVelocity: false
+    }
+    lead: {
+        width: 9.5
+        height: 14
+        speed: 7
+        lifetime: 25
+        damage: 12
+        reloadMultiplier: 1.15
+        shootEffect: shootSmallColor
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        trailWidth: 2
+        trailLength: 12
+        trailColor: ad9bd4
+        backColor: ad9bd4
+        frontColor: ffffff
+        drag: -0.008
+        keepVelocity: false
+    }
+    dense-alloy: {
+        width: 10
+        height: 15
+        speed: 7
+        lifetime: 25
+        damage: 20
+        buildingDamageMultiplier: 1.15
+        shootEffect: shootSmallColor
+        frontColor: ffffff
+        backColor: b0b9bf
+        trailWidth: 2.1
+        trailLength: 13
+        trailColor: b0b9bf
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        drag: -0.008
+        keepVelocity: false
+    }
+    titanium: {
+        width: 10
+        height: 14
+        speed: 7
+        lifetime: 25
+        damage: 24
+        buildingDamageMultiplier: 1.2
+        shootEffect: shootSmallColor
+        trailWidth: 2.1
+        trailLength: 13
+        trailColor: 80a8ff
+        backColor: 80a8ff
+        frontColor: ffffff
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        drag: -0.008
+        keepVelocity: false
+    }
+    thorium: {
+        width: 11
+        height: 16
+        speed: 6.8
+        lifetime: 28
+        damage: 35
+        buildingDamageMultiplier: 1.5
+        shootEffect: shootSmallColor
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        trailWidth: 2.3
+        trailLength: 14
+        trailColor: f9a3c7
+        backColor: f9a3c7
+        frontColor: ffffff
+        drag: -0.008
+        keepVelocity: false
+    }
+}
+category: turret
+requirements: [
+    dense-alloy/120
+    titanium/80
+    metaglass/40
+]
+envDisabled: 16
+research: thrower

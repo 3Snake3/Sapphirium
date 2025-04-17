@@ -1,0 +1,35 @@
+
+size: 3
+category: turret
+health: 1600
+research: {
+    parent: speed
+    objectives: [
+        {
+            type: SectorComplete
+            preset: greyland
+        }
+    ]
+}
+requirements: [
+    dense-alloy/325
+    titanium/225
+    silicon/120
+    plastanium/15
+]
+shootSound: missile
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+reload: 40
+shootCone: 10
+recoil: 4
+ammoUseEffect: casing3
+ammoEjectBack: 2
+shoot: {
+    type: ShootAlternate
+    shots: 3
+    shotDelay: 5
+    barrels: 3
+    spread: 5.75
+}
+range: 300

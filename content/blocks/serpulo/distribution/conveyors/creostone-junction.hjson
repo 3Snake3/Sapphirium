@@ -1,0 +1,13 @@
+health: 580
+requirements: [
+    dense-alloy/2
+    creostone/2
+]
+envDisabled: 16
+category: distribution
+speed: 28
+capacity: 8
+research: {
+    parent: junction
+}
+placeableLiquid: true

@@ -1,0 +1,228 @@
+requirements: [
+    dense-alloy/245
+    plastanium/240
+    silicon/140
+    globium/120
+]
+category: turret
+size: 3
+reload: 180
+recoil: 3
+shake: 3
+shootY: 4.75
+shoot: {
+    type: ShootMulti
+    source: {
+    type: ShootAlternate
+    shots: 4
+    shotDelay: 20
+    spread: 14
+    }
+    dest: [
+    {
+    shots: 3
+    shotDelay: 10
+    }
+    ]
+}
+consumes: {
+    power: 10
+}
+inaccuracy: 3
+range: 325
+health: 1250
+shootSound: missile
+unitSort: strongest
+shootEffect: shootSmallColor
+ammoTypes: {
+    metaglass: {
+    damage: 20
+    splashDamage: 30
+    splashDamageRadius: 16
+    ammoMultiplier: 4
+    width: 10
+    height: 12
+    trailWidth: 3
+    trailLength: 20
+    speed: 7
+    lifetime: 46.43
+    backColor: 8dff9a
+    trailColor: 8dff9a
+    hitColor: 8dff9a
+    frontColor: ffffff
+    hitEffect: [hitBulletColor, {
+    type: ExplosionEffect
+    waveRad: 16
+    waveColor: 8dff9a
+    sparks: 0
+    smokes: 8
+    smokeColor: 8dff9a
+    smokeRad: 20
+    }
+    ]
+    despawnEffect: [hitBulletColor, {
+    type: ExplosionEffect
+    waveRad: 16
+    waveColor: 8dff9a
+    sparks: 0
+    smokes: 8
+    smokeColor: 8dff9a
+    smokeRad: 20
+    }
+    ]
+    status: acid-corrosion
+    statusDuration: 120
+    fragBullets: 6
+    fragBullet: {
+    speed: 4
+    lifetime: 25
+    damage: 12
+    width: 7
+    height: 7
+    backColor: 8dff9a
+    hitColor: 8dff9a
+    frontColor: ffffff
+    hitEffect: hitBulletColor
+    despawnEffect: hitBulletColor
+    fragBullets: 5
+    fragBullet: {
+    type: LiquidBulletType
+    liquid: acid
+    damage: 0
+    speed: 0
+    lifetime: 1
+    puddleSize: 8
+    }
+    }
+    }
+    plastanium: {
+    spawnBullets: [
+    {
+    type: MissileBulletType
+    speed: 6
+    damage: 12
+    splashDamage: 32
+    splashDamageRadius: 24
+    homingRange: 24
+    width: 8
+    height: 8
+    lifetime: 56.17
+    backColor: 8dff9a
+    trailColor: 8dff9a
+    hitColor: 8dff9a
+    frontColor: ffffff
+    hitEffect: {
+    type: ExplosionEffect
+    waveRad: 16
+    waveColor: 8dff9a
+    sparks: 0
+    smokes: 8
+    smokeColor: 8dff9a
+    smokeRad: 20
+    }
+    despawnEffect: {
+    type: ExplosionEffect
+    waveRad: 16
+    waveColor: 8dff9a
+    sparks: 0
+    smokes: 8
+    smokeColor: 8dff9a
+    smokeRad: 20
+    }
+    }
+    ]
+    damage: 38
+    splashDamage: 45
+    splashDamageRadius: 24
+    ammoMultiplier: 3
+    buildingDamageMultiplier: 0.65
+    width: 10
+    height: 12
+    trailWidth: 3
+    trailLength: 20
+    speed: 8
+    lifetime: 40.625
+    knockback: 3
+    backColor: 8dff9a
+    trailColor: 8dff9a
+    hitColor: 8dff9a
+    frontColor: ffffff
+    hitEffect: [hitBulletColor, {
+    type: ExplosionEffect
+    waveRad: 16
+    waveColor: 8dff9a
+    sparks: 0
+    smokes: 8
+    smokeColor: 8dff9a
+    smokeRad: 20
+    }
+    ]
+    despawnEffect: [hitBulletColor, {
+    type: ExplosionEffect
+    waveRad: 16
+    waveColor: 8dff9a
+    sparks: 0
+    smokes: 8
+    smokeColor: 8dff9a
+    smokeRad: 20
+    }
+    ]
+    status: acid-corrosion
+    statusDuration: 180
+    pierceCap: 4
+    pierceBuilding: true
+    pierce: true
+    fragBullets: 5
+        fragRandomSpread: 15
+        fragBullet: {
+        speed: 5
+        lifetime: 20
+        width: 7
+        height: 8
+        damage: 4
+        hitColor: 70ff88
+        frontColor: ffffff
+        backColor: 70ff88
+        hitEffect: {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 7
+        lifetime: 40
+        strokeFrom: 1.5
+        strokeTo: 0
+        interp: circleOut
+        colorFrom: 70ff88
+        colorTo: 70ff88
+        }
+        despawnEffect: {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 7
+        lifetime: 40
+        strokeFrom: 1.5
+        strokeTo: 0
+        interp: circleOut
+        colorFrom: 70ff88
+        colorTo: 70ff88
+        }
+        fragBullets: 5
+    fragBullet: {
+    type: LiquidBulletType
+    liquid: acid
+    damage: 0
+    speed: 0
+    lifetime: 1
+    puddleSize: 8
+    }
+    }
+    }
+    }
+research: {
+    parent: toxin
+    objectives: [
+        {
+            type: SectorComplete
+            preset: greyland
+        }
+    ]
+}

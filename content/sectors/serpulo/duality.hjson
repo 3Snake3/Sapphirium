@@ -1,0 +1,15 @@
+captureWave: 65
+difficulty: 7
+sector: 67
+planet: serpulo
+research: {
+    parent: calamity
+    objectives: [
+        logic-encoder, 
+        globium-smelter,
+        {
+            type: SectorComplete
+            preset: calamity
+        }
+    ]
+}

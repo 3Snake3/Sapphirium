@@ -1,0 +1,125 @@
+
+category: power
+
+size: 3
+health: 880
+itemCapacity: 20
+liquidCapacity: 30
+itemDuration: 360
+powerProduction: 35
+fuelItem: creostone
+
+lightColor: e7221f
+heating: 0.06
+smokeThreshold: 0.5
+flashThreshold: 0.48
+explosionRadius: 30
+explodeEffect: {
+    type: MultiEffect
+    effects: [
+        {
+            type: WaveEffect
+            sides: 0
+            sizeFrom: 0
+            sizeTo: 200
+            strokeFrom: 4
+            strokeTo: 0
+            colorFrom: ffb380
+            colorTo: ffb380
+            lifetime: 23
+        }
+        {
+            type: WaveEffect
+            sides: 0
+            sizeFrom: 0
+            sizeTo: 230
+            strokeFrom: 4
+            strokeTo: 0
+            colorFrom: ffb380
+            colorTo: ffb380
+            lifetime: 23
+        }
+        {
+            type: ParticleEffect
+            particles: 40
+            sizeFrom: 25
+            sizeTo: 0
+            lifetime: 800
+            cone: 360
+            length: 200
+            colorFrom: eb877885
+            colorTo: bd555385
+        }
+        {
+            type: ParticleEffect
+            particles: 15
+            sizeFrom: 20
+            sizeTo: 0
+            lifetime: 45
+            cone: 360
+            length: 325
+            colorFrom: ffb380
+            colorTo: ffb380
+            line: true
+            strokeFrom: 4
+            strokeTo: 0
+        }
+    ]
+}
+destroyEffect: {
+type: MultiEffect
+effects: [dynamicExplosion, {
+type: ParticleEffect
+particles: 1
+length: 0
+sizeFrom: 12
+sizeTo: 12
+lifetime: 800
+colorTo: ffffff00
+region: sapphirium-exploded-creostone-reactor
+}
+{
+type: ParticleEffect
+particles: 1
+length: 300
+sizeFrom: 12
+sizeTo: 12
+lifetime: 125
+colorTo: ffffff00
+region: sapphirium-creostone-reactor-cap
+spin: 4
+}]
+}
+
+explosionDamage: 3000
+coolantPower: 0.7
+
+ambientSound: hum
+ambientSoundVolume: 0.22
+
+requirements: [
+  dense-alloy/400
+  metaglass/150
+  creostone/250
+  thorium/250
+  silicon/300
+]
+
+consumes: {
+  liquid: {
+  liquid: ledonite-liquid
+  amount: 0.09
+  update: false
+  }
+  items: {
+    items: [
+      creostone/3
+    ]
+  }
+}
+
+research: {
+parent: thorium-reactor
+objectives: [ledonite-mixer]
+}
+

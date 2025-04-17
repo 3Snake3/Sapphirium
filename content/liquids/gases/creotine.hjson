@@ -1,0 +1,6 @@
+flammability: 0.95
+explosiveness: 1.15
+gas: true
+color: ffc6a0
+gasColor: ffc6a0
+research: argon

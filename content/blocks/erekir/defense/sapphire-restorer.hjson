@@ -1,0 +1,29 @@
+requirements: [
+    sapphire/100
+    silicon/100
+    thorium/80
+    oxide/60
+]
+size: 3
+absorbLasers: true
+range: 72
+healPercent: 24
+reload: 350
+phaseBoost: 28
+baseColor: d1efff
+phaseColor: f4ba6e
+consumes: {
+    power: 8
+    items: {
+        items: [
+        {
+            item: phase-fabric
+            amount: 1
+        }
+        ]
+        booster: true
+        optional: true
+    }
+}
+category: effect
+research: regen-projector

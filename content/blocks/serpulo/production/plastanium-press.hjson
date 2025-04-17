@@ -1,0 +1,66 @@
+
+outputItem: plastanium/20
+size: 3
+craftTime: 160
+updateEffect: plasticburn
+craftEffect: {
+particles: 12
+length: 17
+lifetime: 22
+sizeFrom: 5
+sizeTo: 1
+colorFrom: f1e479
+colorTo: bfbfbfff
+cone: 360
+region: sapphirium-rhombus
+
+}
+itemCapacity: 30
+liquidCapacity: 50
+ambientSound: techloop
+ambientSoundVolume: 0.19
+drawer: {
+    type: DrawMulti
+    drawers: [
+        DrawDefault,
+        {
+            type: DrawGlowRegion
+            color: ecf2aa
+            suffix: "-top"
+        }
+    ]
+}
+consumes: {
+    power: 16
+    items: {
+        items: [
+            globium/10
+            blast-compound/4
+        ]
+    }
+    liquid:{
+        liquid:oil
+        amount: 0.7
+    }
+}
+requirements: [
+    dense-alloy/140
+    titanium/200
+    globium/120
+    silicon/120
+    plastanium/80
+]
+category: crafting
+research: {
+    parent: plastanium-compressor
+    objectives: [
+        blast-mixer,
+        globium-smelter,
+        {
+        type: SectorComplete
+        preset: fallenlegion
+        }
+    ]
+}
+attribute: oil
+boostScale: 0.075

@@ -1,0 +1,229 @@
+
+size: 4
+category: turret
+requirements: [
+    globium/1000
+    thorium/645
+    diamond/400
+    silicon/350
+    surge-alloy/330
+]
+health: 3200
+range: 612
+ammoPerShot: 12
+envDisabled: 16
+maxAmmo: 48
+reload: 300
+recoil: 5
+rotateSpeed: 2
+recoilTime: 440
+cooldownTime: 440
+shake: 5
+shootCone: 2
+shootSound: railgun
+unitSort: strongest
+consumes: {
+    power: 30
+}
+ammoTypes: {
+    diamond: {
+        type: PointBulletType
+        damage: 1650
+        speed: 700
+        ammoMultiplier: 1
+        shootEffect: {
+            type: MultiEffect
+            effects: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 20
+                    sizeTo: 20
+                    strokeFrom: 3.5
+                    strokeTo: 0
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    lifetime: 22
+                    lightColor: ffffff
+                    lightScl: 4
+                    lightOpacity: 2
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    lifetime: 24
+                    sizeFrom: 30
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-rail-hit
+                    lightColor: ffffff
+                    lightScl: 4
+                    lightOpacity: 2
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    lifetime: 24
+                    sizeFrom: 30
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-rail-shoot
+                    lightColor: ffffff
+                    lightScl: 4
+                    lightOpacity: 2
+                }
+            ]
+        }
+        hitEffect: {
+            type: MultiEffect
+            effects: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 20
+                    sizeTo: 20
+                    strokeFrom: 3.5
+                    strokeTo: 0
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    lifetime: 22
+                    lightColor: ffffff
+                    lightScl: 4
+                    lightOpacity: 2
+                }
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 125
+                    strokeFrom: 3.5
+                    strokeTo: 0
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    lifetime: 20
+                    lightColor: ffffff
+                    lightScl: 4
+                    lightOpacity: 2
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    lifetime: 24
+                    sizeFrom: 20
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-pierce2
+                    lightColor: ffffff
+                    lightScl: 4
+                    lightOpacity: 2
+                }
+            ]
+        }
+        despawnEffect: {
+            type: MultiEffect
+            effects: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 20
+                    sizeTo: 20
+                    strokeFrom: 3.5
+                    strokeTo: 0
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    lifetime: 22
+                    lightColor: ffffff
+                    lightScl: 4
+                    lightOpacity: 2
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    length: 0
+                    lifetime: 24
+                    sizeFrom: 20
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-rail-hit
+                    lightColor: ffffff
+                    lightScl: 4
+                    lightOpacity: 2
+                }
+            ]
+        }
+        smokeEffect: smokeCloud
+        trailEffect: {
+            type: MultiEffect
+            effects: [
+                {
+                    type: ParticleEffect
+                    length: 0
+                    particles: 1
+                    lifetime: 24
+                    sizeFrom: 20
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-rail
+                    lightColor: ffffff
+                    lightScl: 4
+                    lightOpacity: 2
+                }
+                {
+                    type: ParticleEffect
+                    length: 0
+                    particles: 1
+                    lifetime: 24
+                    sizeFrom: 20
+                    colorFrom: ffffff
+                    colorTo: ffffff
+                    region: sapphirium-rail-hit
+                    lightColor: ffffff
+                    lightScl: 4
+                    lightOpacity: 2
+                }
+            ]
+        }
+        fragBullets: 1
+        fragRandomSpread: 360
+        fragBullet: {
+            width: 0.001
+            height: 0.001
+            speed: 0
+            lifetime: 1
+            splashDamage: 180
+            splashDamageRadius: 40
+            buildingDamageMultiplier: 0.2
+            shootEffect: {
+                type: ExplosionEffect
+                waveRad: 40
+                waveStroke: 5
+                waveColor: ffffff
+                waveLife: 25
+                sparks: 10
+                sparkRad: 40
+                sparkColor: ffffff
+                sparkStroke: 3
+                sparkLen: 6
+                smokes: 8
+                smokeColor: ffffff
+                smokeRad: 40
+                smokeSize: 6
+            }
+        }
+        trailSpacing: 20
+        buildingDamageMultiplier: 0.2
+        hitShake: 6
+    }
+}
+research: {
+    parent: needle
+    objectives: [
+        {
+            type: OnSector
+            preset: planetaryTerminal
+        }
+    ]
+}

@@ -1,33 +1,33 @@
 name: golden-pollination
 effect: {
-type: MultiEffect
-effects: [
-{
-type: ParticleEffect
-particles: 3
-line: true
-baseLength: 20
-length: -20
-strokeFrom: 2
-strokeTo: 0
-sizeFrom: 3
-sizeTo: 0
-lifetime: 30
-colorFrom: ffd700
-colorTo: e29600
-cone: 360
-}
-{
-type: ParticleEffect
-particles: 3
-length: 0
-sizeFrom: 3
-sizeTo: 0
-cone: 360
-lifetime: 30
-colorFrom: ffd700
-colorTo: e29600
-}
-]
+    type: MultiEffect
+    effects: [
+        {
+            type: ParticleEffect
+            particles: 3
+            line: true
+            baseLength: 20
+            length: -20
+            strokeFrom: 2
+            strokeTo: 0
+            sizeFrom: 3
+            sizeTo: 0
+            lifetime: 30
+            colorFrom: ffd700
+            colorTo: e29600
+            cone: 360
+        }
+        {
+            type: ParticleEffect
+            particles: 3
+            length: 0
+            sizeFrom: 3
+            sizeTo: 0
+            cone: 360
+            lifetime: 30
+            colorFrom: ffd700
+            colorTo: e29600
+        }
+    ]
 }
 color: ffd700

@@ -1,0 +1,13 @@
+
+category: production
+
+drillTime: 1100
+tier: 1
+
+requirements: [
+    copper/9
+]
+
+canOverdrive: false
+research: core-shard
+alwaysUnlocked: true

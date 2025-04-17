@@ -1,0 +1,208 @@
+health: 1350
+size: 3
+category: turret
+placeableLiquid: true
+floating: true
+reload: 30
+consumes: {
+    power: 14
+}
+shoot: {
+    type: ShootAlternate
+    shots: 3
+    barrels: 3
+    shotDelay: 7
+    spread: 4.5
+}
+recoil: 2
+shootSound: mineDeploy
+loopSound: none
+targetAir: false
+range: 360
+ammoTypes: {
+    water: {
+        sprite: mine-bullet
+        width: 8
+        height: 8
+        speed: 0.8
+        lifetime: 120
+        maxRange: 275
+        drag: -0.02
+        trailWidth: 2
+        trailLength: 8
+        displayAmmoMultiplier: false
+        trailColor: 6a75c4
+        backColor: 6a75c4
+        frontColor: 80a8ff
+        mixColorTo: 80a8ff
+        hitSound: plasmaboom
+        collidesAir: false
+        shootEffect: none
+        smokeEffect: none
+        hitSize: 23
+        hitEffect: {
+            type: MultiEffect
+            effects: [
+                blastExplosion, 
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    sizeFrom: 4
+                    sizeTo: 0
+                    length: 15
+                    lifetime: 25
+                    colorFrom: 80a8ff75
+                    colorTo: 80a8ff75
+                }
+            ]
+        }
+        inaccuracy: 3
+        keepVelocity: false
+        shrinkX: 0
+        shrinkY: 0
+        weaveMag: 5
+        weaveScale: 4
+        homingPower: 0.009
+        damage: 33
+        splashDamage: 35
+        splashDamageRadius: 16
+        status: wet
+        statusDuration: 180
+        fragRandomSpread: 360
+        fragBullet: {
+        type: LiquidBulletType
+        liquid: water
+        lifetime: 1
+        speed: 0
+        }
+    }
+    cryofluid: {
+        sprite: mine-bullet
+        width: 8
+        height: 8
+        speed: 0.8
+        lifetime: 120
+        maxRange: 275
+        drag: -0.02
+        trailWidth: 2
+        trailLength: 8
+        displayAmmoMultiplier: false
+        trailColor: 86ceeb
+        backColor: 86ceeb
+        frontColor: bfecff
+        mixColorTo: bfecff
+        hitSound: plasmaboom
+        collidesAir: false
+        shootEffect: none
+        smokeEffect: none
+        hitSize: 23
+        hitEffect: {
+            type: MultiEffect
+            effects: [
+                blastExplosion, 
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    sizeFrom: 4
+                    sizeTo: 0
+                    length: 15
+                    lifetime: 25
+                    colorFrom: bfecff75
+                    colorTo: bfecff75
+                }
+            ]
+        }
+        inaccuracy: 3
+        keepVelocity: false
+        shrinkX: 0
+        shrinkY: 0
+        weaveMag: 5
+        weaveScale: 4
+        homingPower: 0.02
+        damage: 36
+        splashDamage: 38
+        splashDamageRadius: 20
+        status: freezing
+        statusDuration: 145
+        fragRandomSpread: 360
+        fragBullet: {
+        type: LiquidBulletType
+        liquid: cryofluid
+        lifetime: 1
+        speed: 0
+        }
+    }
+    ledonite-liquid: {
+        sprite: mine-bullet
+        width: 8
+        height: 8
+        speed: 0.8
+        lifetime: 120
+        maxRange: 275
+        drag: -0.02
+        trailWidth: 2
+        trailLength: 8
+        displayAmmoMultiplier: false
+        trailColor: 6fdedc
+        backColor: 6fdedc
+        frontColor: b8fffe
+        mixColorTo: b8fffe
+        hitSound: plasmaboom
+        collidesAir: false
+        shootEffect: none
+        smokeEffect: none
+        hitSize: 23
+        hitEffect: {
+            type: MultiEffect
+            effects: [
+                blastExplosion, 
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    sizeFrom: 4
+                    sizeTo: 0
+                    length: 15
+                    lifetime: 25
+                    colorFrom: b8fffe75
+                    colorTo: b8fffe75
+                }
+            ]
+        }
+        inaccuracy: 3
+        keepVelocity: false
+        shrinkX: 0
+        shrinkY: 0
+        weaveMag: 5
+        weaveScale: 2
+        homingPower: 0.005
+        damage: 38
+        splashDamage: 42
+        splashDamageRadius: 28
+        reloadMultiplier: 0.75
+        status: super-freezing
+        statusDuration: 20
+        fragRandomSpread: 360
+        fragBullet: {
+        type: LiquidBulletType
+        liquid: ledonite-liquid
+        lifetime: 1
+        speed: 0
+        }
+    }
+}
+research: {
+    parent: rainfall
+    objectives: [
+        {
+            type: SectorComplete
+            preset: navalFortress
+        }
+    ]
+}
+requirements: [
+    dense-alloy/140
+    titanium/120
+    metaglass/80
+    plastanium/80
+    graphite/60
+]

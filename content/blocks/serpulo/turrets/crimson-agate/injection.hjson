@@ -1,0 +1,258 @@
+reload: 35
+health: 2200
+recoil: 4
+shootCone: 24
+inaccuracy: 12
+shoot: {
+    type: ShootAlternate
+    spread: 12
+}
+size: 3
+range: 225
+outlineColor: 1d1d21
+shootSound: rockBreak
+consumes: {
+    power: 6
+}
+heatColor: ff6e6e
+shootEffect: {
+    type: ParticleEffect
+    particles: 8
+    sizeFrom: 4
+    cone: 15
+    sizeTo: 0
+    lifetime: 15
+    length: 5
+    colorFrom: ff6e6e
+    colorTo: ff6e6e
+    interp: circleOut
+}
+smokeEffect: none
+ammoUseEffect: casing3
+shake: 2
+ammoTypes: {
+    ruby: {
+        width: 17
+        height: 20
+        speed: 6
+        lifetime: 37.5
+        damage: 35
+        sprite: sapphirium-crystal
+        backColor: 8a3340
+        frontColor: ff6e6e
+        pierce: true
+        pierceCap: 3
+        status: passive-bloodrage
+        statusDuration: 320
+        hitEffect: {
+            type: MultiEffect
+            lifetime: 20
+            effects: [
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    sizeFrom: 4
+                    cone: 360
+                    sizeTo: 0
+                    lifetime: 20
+                    length: 10
+                    colorFrom: ff6e6e
+                    colorTo: ff6e6e
+                }
+                {
+                    type: WaveEffect
+                    sides: 4
+                    sizeFrom: 4
+                    sizeTo: 0
+                    lifetime: 10
+                    colorFrom: ff6e6e
+                    colorTo: ff6e6e
+                    strokeFrom: 1.5
+                    strokeTo: 0
+                }
+            ]
+        }
+        despawnEffect: {
+            type: MultiEffect
+            lifetime: 20
+            effects: [
+                {
+                    type: ParticleEffect
+                    particles: 5
+                    sizeFrom: 4
+                    cone: 360
+                    sizeTo: 0
+                    lifetime: 20
+                    length: 10
+                    colorFrom: ff6e6e
+                    colorTo: ff6e6e
+                }
+                {
+                    type: WaveEffect
+                    sides: 4
+                    sizeFrom: 4
+                    sizeTo: 0
+                    lifetime: 10
+                    colorFrom: ff6e6e
+                    colorTo: ff6e6e
+                    strokeFrom: 1.5
+                    strokeTo: 0
+                }
+            ]
+        }
+        spawnBullets: [
+            {
+                width: 17
+                height: 20
+                speed: 5
+                lifetime: 45
+                damage: 15
+                sprite: sapphirium-crystal
+                backColor: 8a3340
+                frontColor: ff6e6e
+                pierce: true
+                pierceCap: 2
+                status: passive-bloodrage
+                statusDuration: 320
+                hitEffect: {
+                    type: MultiEffect
+                    lifetime: 20
+                    effects: [
+                        {
+                            type: ParticleEffect
+                            particles: 5
+                            sizeFrom: 4
+                            cone: 360
+                            sizeTo: 0
+                            lifetime: 20
+                            length: 10
+                            colorFrom: ff6e6e
+                            colorTo: ff6e6e
+                        }
+                        {
+                            type: WaveEffect
+                            sides: 4
+                            sizeFrom: 4
+                            sizeTo: 0
+                            lifetime: 10
+                            colorFrom: ff6e6e
+                            colorTo: ff6e6e
+                            strokeFrom: 1.5
+                            strokeTo: 0
+                        }
+                    ]
+                }
+                despawnEffect: {
+                    type: MultiEffect
+                    lifetime: 20
+                    effects: [
+                        {
+                            type: ParticleEffect
+                            particles: 5
+                            sizeFrom: 4
+                            cone: 360
+                            sizeTo: 0
+                            lifetime: 20
+                            length: 10
+                            colorFrom: ff6e6e
+                            colorTo: ff6e6e
+                        }
+                        {
+                            type: WaveEffect
+                            sides: 4
+                            sizeFrom: 4
+                            sizeTo: 0
+                            lifetime: 10
+                            colorFrom: ff6e6e
+                            colorTo: ff6e6e
+                            strokeFrom: 1.5
+                            strokeTo: 0
+                        }
+                    ]
+                }
+            }
+            {
+                width: 17
+                height: 20
+                speed: 4
+                lifetime: 56.25
+                damage: 10
+                sprite: sapphirium-crystal
+                backColor: 8a3340
+                frontColor: ff6e6e
+                status: passive-bloodrage
+                statusDuration: 320
+                hitEffect: {
+                    type: MultiEffect
+                    lifetime: 20
+                    effects: [
+                        {
+                            type: ParticleEffect
+                            particles: 5
+                            sizeFrom: 4
+                            cone: 360
+                            sizeTo: 0
+                            lifetime: 20
+                            length: 10
+                            colorFrom: ff6e6e
+                            colorTo: ff6e6e
+                        }
+                        {
+                            type: WaveEffect
+                            sides: 4
+                            sizeFrom: 4
+                            sizeTo: 0
+                            lifetime: 10
+                            colorFrom: ff6e6e
+                            colorTo: ff6e6e
+                            strokeFrom: 1.5
+                            strokeTo: 0
+                        }
+                    ]
+                }
+                despawnEffect: {
+                    type: MultiEffect
+                    lifetime: 20
+                    effects: [
+                        {
+                            type: ParticleEffect
+                            particles: 5
+                            sizeFrom: 4
+                            cone: 360
+                            sizeTo: 0
+                            lifetime: 20
+                            length: 10
+                            colorFrom: ff6e6e
+                            colorTo: ff6e6e
+                        }
+                        {
+                            type: WaveEffect
+                            sides: 4
+                            sizeFrom: 4
+                            sizeTo: 0
+                            lifetime: 10
+                            colorFrom: ff6e6e
+                            colorTo: ff6e6e
+                            strokeFrom: 1.5
+                            strokeTo: 0
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
+category: turret
+research: {
+    parent: scarlet-star
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: "crimson-agate-"
+}
+requirements: [
+    dense-alloy/325
+    ruby/325
+    titanium/240
+    silicon/280
+]

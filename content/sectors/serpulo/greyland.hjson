@@ -1,0 +1,19 @@
+captureWave: 35
+difficulty: 3
+sector: 111
+planet: serpulo
+research: {
+    parent: biomassFacility
+    objectives: [
+        freezer, 
+        cryofluid-mixer, 
+        dense-smelter, 
+        frostbite, 
+        icicle, 
+        lancer,
+        {
+            type: SectorComplete
+            preset: biomassFacility
+        }
+    ]
+}

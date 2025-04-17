@@ -1,0 +1,8 @@
+health: 380
+absorbLasers: true
+requirements: [
+    lead/2
+    ice-cube/4
+]
+category: defense
+research: copper-wall

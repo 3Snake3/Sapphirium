@@ -1,0 +1,29 @@
+unitType: difference
+requirements: [
+    thorium/500
+    tungsten/300
+    silicon/300
+    surge-alloy/120
+    topaz/150
+]
+itemCapacity: 160
+squareSprite: false
+buildTime: 1500
+polyRadius: 0
+consumes: {
+    power: 20
+    items: {
+        items: [
+            topaz/120
+            silicon/100
+            tungsten/80
+        ]
+    }
+    liquids: [
+        argon/0.06
+        cyanogen/0.03
+    ]
+}
+category: units
+size: 5
+research: prime-refabricator

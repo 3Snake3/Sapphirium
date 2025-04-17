@@ -1,0 +1,42 @@
+trailColor: 83a4ff
+engineColor: 83a4ff
+engineSize: 1.5
+engineOffset: 2
+speed: 4
+maxRange: 6
+lifetime: 90
+health: 55
+lowAltitude: true
+outlineColor: 565666
+immunities: [unleash]
+weapons: [
+    {
+        shootOnDeath: true
+        mirror: false
+        reload: 1
+        shootCone: 360
+        bullet: {
+            type: ExplosionBulletType
+            splashDamage: 66
+            splashDamageRadius: 24
+            shootEffect: [
+                blastExplosion,
+                {
+                    type: ExplosionEffect
+                    waveRad: 8
+                    waveLife: 13
+                    waveColor: 83a4ff
+                    sparks: 5
+                    sparkColor: 83a4ff
+                    sparkRad: 12
+                    sparkStroke: 3
+                    sparkLen: 7
+                    smokes: 6
+                    smokeSize: 7
+                    smokeRad: 12
+                    smokeColor: 83a4ff
+                }
+            ]
+        }
+    }
+]

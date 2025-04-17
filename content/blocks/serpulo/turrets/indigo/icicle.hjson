@@ -1,0 +1,54 @@
+health: 400
+reload: 12
+recoil: 2
+range: 85
+consumes: {
+    power: 2.7
+}
+shootSound: bolt
+shake: 1
+shootEffect: none
+smokeEffect: none
+targetAir: false
+heatColor: a9d8ff
+category: turret
+requirements: [
+    dense-alloy/35
+    silicon/25
+    lead/5
+]
+research: {
+    parent: frostbite
+}
+shoot: {
+type: ShootAlternate
+spread: 1.75
+}
+shootType: {
+    type: LaserBulletType
+    length: 80
+    damage: 12
+    colors: [a9d8ff, a9d8ff, ffffff]
+    hitEffect: [hitLancer, {
+    particles: 5
+    cone: 360
+    length: 10
+    lifetime: 45
+    sizeFrom: 5
+    sizeTo: 0
+    colorFrom: ffffff
+    colorTo: a9d8ff
+    region: sapphirium-snow-effect
+    }
+    ]
+    hitSize: 2
+    drawSize: 200
+    width: 4.5
+    lifetime: 10
+    sideWidth: 0
+    status: freezing
+    statusDuration: 45
+    pierceDamageFactor: 0.8
+    removeAfterPierce: true
+    collidesAir: false
+}

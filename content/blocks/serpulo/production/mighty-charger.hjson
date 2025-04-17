@@ -1,0 +1,65 @@
+category: crafting
+envDisabled: 16
+consumes: {
+power: 2
+items: {
+items: [
+titanium/1
+]
+}
+liquid: surge-mass/0.08
+}
+requirements: [
+    globium/180
+    titanium/120
+    surge-alloy/80
+]
+craftEffect: {
+type: ExplosionEffect
+smokes: 0
+sparks: 15
+sparkLen: 5
+sparkStroke: 1.5
+sparkRad: 24
+sparkColor: f3e979
+waveColor: f3e979
+waveLife: 8
+waveRad: 16
+waveStroke: 2
+}
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            suffix: "-bottom"
+        }
+        {
+            type: DrawRegion
+            suffix: "-rotator"
+            spinSprite: true
+            rotateSpeed: 45
+        }
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawGlowRegion
+            suffix: -top
+            color: f2e879
+        }
+        {
+            type: DrawGlowRegion
+            color: f2e87970
+        }
+    ]
+}
+size: 3
+itemCapacity: 10
+outputItem: charged-ingot/1
+craftTime: 55
+boostScale: 0.05
+maxBoost: 0.5
+research: {
+    parent: medium-charger
+}

@@ -1,0 +1,55 @@
+category: crafting
+envDisabled: 16
+consumes: {
+power: 1.7
+items: {
+items: [
+graphite/2
+]
+}
+liquid: surge-mass/0.07
+}
+requirements: [
+    dense-alloy/120
+    globium/60
+    graphite/60
+]
+craftEffect: {
+type: ExplosionEffect
+smokes: 0
+sparks: 10
+sparkLen: 4
+sparkStroke: 1.5
+sparkRad: 16
+sparkColor: f3e979
+waveColor: f3e979
+waveLife: 8
+waveRad: 8
+waveStroke: 2
+}
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawGlowRegion
+            suffix: -top
+            color: f2e879
+        }
+        {
+            type: DrawGlowRegion
+            color: f2e87970
+        }
+    ]
+}
+size: 2
+itemCapacity: 10
+outputItem: charged-stick/1
+craftTime: 30
+boostScale: 0.05
+maxBoost: 0.5
+research: {
+    parent: weak-charger
+}

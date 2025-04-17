@@ -1,0 +1,140 @@
+immunities: [slow, freezing, wet, muddy, 
+melting, sapped, spore-slowed, 
+electrified, tarred, unleash]
+speed: 0.6
+hitSize: 8
+health: 120
+armor: 2
+outlineColor: 25262e
+deathExplosionEffect: [
+    {
+        type: ExplosionEffect
+        waveLife: 30
+        waveRad: 16
+        waveColor: 25262e
+        waveStroke: 1.5
+        sparks: 6
+        sparkLen: 3
+        sparkColor: 25262e
+        sparkStroke: 2
+        lifetime: 120
+        sparkRad: 20
+        smokes: 0
+    }
+    {
+        type: ParticleEffect
+        particles: 2
+        length: 18
+        cone: 360
+        lifetime: 120
+        interp: pow2Out
+        colorFrom: 25262e
+        colorTo: 25262e
+        sizeFrom: 6
+        sizeTo: 0
+        layer: 109
+    }
+    {
+        type: ParticleEffect
+        particles: 1
+        length: 18
+        lifetime: 120
+        cone: 360
+        interp: pow2Out
+        colorFrom: 25262e
+        colorTo: 25262e
+        sizeFrom: 6
+        sizeTo: 0
+    }
+    {
+        type: ParticleEffect
+        particles: 2
+        length: 18
+        lifetime: 120
+        interp: pow2Out
+        colorFrom: 565666
+        colorTo: 565666
+        sizeFrom: 6
+        sizeTo: 0
+    }
+    {
+        type: ParticleEffect
+        particles: 1
+        length: 18
+        lifetime: 120
+        interp: pow2Out
+        colorFrom: 565666
+        colorTo: 565666
+        sizeFrom: 6
+        sizeTo: 0
+        layer: 109
+    }
+]
+weapons: [
+    {
+        name: hole-weapon
+        x: 3.5
+        y: 0
+        reload: 60
+        top: false
+        ejectEffect: casing1
+        shootCone: 15
+        inaccuracy: 20
+        shoot: {
+            type: ShootMulti
+            source:{
+                type: ShootSpread
+                shots: 2
+                spread: 1
+                }
+            dest: [
+                {
+                type: ShootPattern
+                shots: 2
+                shotDelay: 6
+                }
+                ]
+            }
+        bullet: {
+            type: BasicBulletType
+            speed: 3.2
+            damage: 8
+            lifetime: 55
+            backColor: 5c5e9e
+            frontColor: a488eb
+            hitEffect: hitBulletColor
+            despawnEffect: hitBulletColor
+            shootEffect:
+            {
+                type: ParticleEffect
+                particles: 2
+                cone: 360
+                line: true
+                strokeFrom: 1
+                strokeTo: 1
+                lenFrom: 3
+                lenTo: 4
+                length: 10
+                colorFrom: 5c5e9e
+                colorTo: 5c5e9e00
+                lifetime: 20
+            }
+        homingRange: 60
+        homingPower: 0.02
+        homingDelay: 20
+        hitColor: a488eb
+        trailColor: 5c5e9e
+        trailWidth:1
+        trailLength: 3
+        knockback: -0.6
+        }
+    }
+]
+research: { 
+    parent: base-fabricator
+    requirements: [
+        silicon/2000
+        titanium/2000
+        lead/1500
+    ]
+}

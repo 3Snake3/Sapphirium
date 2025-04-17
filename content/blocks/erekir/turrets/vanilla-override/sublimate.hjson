@@ -1,0 +1,37 @@
+ammoTypes: {
+ozone: {
+type: ContinuousFlameBulletType
+damage: 45
+length: 130
+knockback: 1
+pierceCap: 2
+buildingDamageMultiplier: 0.3
+colors: [eb7abe55, e189f570, 907ef780, ffffff]
+}
+cyanogen: {
+type: ContinuousFlameBulletType
+damage: 97.5
+rangeChange: 70
+length: 200
+knockback: 2
+pierceCap: 3
+buildingDamageMultiplier: 0.3
+colors: [465ab855, 66a6d270, 89e8b680, ffffff]
+flareColor: 89e8b6
+lightColor: 89e8b6
+hitColor: 89e8b6
+}
+creotine: {
+type: ContinuousFlameBulletType
+damage: 168
+rangeChange: -58
+length: 72
+knockback: 3
+pierceCap: 4
+buildingDamageMultiplier: 0.3
+colors: [bd555355, eb877870, ffb38080, ffffff]
+hitColor: ffb380
+flareColor: ffb380
+lightColor: ffb380
+}
+}

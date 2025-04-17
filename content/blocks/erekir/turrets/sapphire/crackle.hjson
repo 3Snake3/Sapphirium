@@ -1,0 +1,195 @@
+requirements: [
+    sapphire/330
+    silicon/270
+    tungsten/200
+    oxide/100
+]
+category: turret
+ammoTypes: {
+    sapphire: {
+        type: BasicBulletType
+        width: 12
+        height: 18
+        speed: 7
+        lifetime: 28.58
+        damage: 55
+        hitColor: 80a8ff
+        backColor: 80a8ff
+        frontColor: ffffff
+        shootEffect: shootBigColor
+        knockback: 2
+        smokeEffect: shootBigSmoke
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        trailWidth: 2
+        trailLength: 25
+        trailColor: 80a8ff
+        weaveScale: 1
+        weaveMag: 8
+        homingPower: 0.2
+        homingRange: 85
+        homingDelay: 1
+    }
+    carved-alloy: {
+        type: BasicBulletType
+        width: 4
+        height: 24
+        rangeChange: 150
+        speed: 14
+        lifetime: 30.58
+        damage:80
+        hitColor: 80a8ff
+        backColor: 80a8ff
+        frontColor: ffffff
+        shootEffect: shootBigColor
+        knockback: 0
+        smokeEffect: shootBigSmoke
+        hitEffect: [
+            {
+                type: WaveEffect
+                sides: 3
+                lifetime: 20
+                sizeFrom: 0
+                sizeTo: 10
+                strokeTo: 2
+                colorFrom: d1e4ff
+                colorTo: d1e4ff
+            }
+            {
+                type: WaveEffect
+                sides: 4
+                startDelay:10
+                lifetime: 20
+                sizeFrom: 0
+                sizeTo: 10
+                strokeTo: 0
+                colorFrom: d1e4ff
+                colorTo: d1e4ff
+            }
+            {
+                type: WaveEffect
+                sides: 5
+                startDelay:20
+                lifetime: 20
+                sizeFrom: 0
+                sizeTo: 10
+                strokeTo: 0
+                colorFrom: d1e4ff
+                colorTo: d1e4ff
+            }
+        ]
+        despawnEffect: hitBulletColor
+        trailWidth: 1
+        trailLength: 600
+        ammoMultiplier: 4
+        reloadMultiplier: 0.2
+        trailColor: 80a8ff
+        fragBullets: 2
+        fragRandomSpread: 120
+        fragVelocityMin: 0.8
+        fragVelocityMax: 4
+        fragLifeMin: 1
+        fragLifeMax: 3
+        fragBullet: {
+            type: BasicBulletType
+            width: 6
+            height: 6
+            speed: 1
+            drag:-0.09
+            lifetime: 8
+            hitShake: 2
+            damage: 55
+            pierce: true
+            pierceBuilding: true
+            pierceArmor: true
+            pierceCap: 20
+            splashDamage: 15
+            splashDamageRadius: 25
+            collidesAir: true
+            trailEffect: none
+            homingPower: 0.9
+            homingRange: 140
+            knockback: 0.9
+            backColor: 97a5f7
+            trailColor: 97a5f7
+            frontColor: d1e4ff
+            trailWidth: 1
+            trailLength: 200
+            hitEffect: {
+                type: MultiEffect
+                effects: [
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        lifetime: 20
+                        sizeFrom: 0
+                        sizeTo: 6
+                        strokeTo: 0
+                        colorFrom: d1e4ff
+                        colorTo: d1e4ff
+                    }
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        startDelay:10
+                        lifetime: 20
+                        sizeFrom: 0
+                        sizeTo: 8
+                        strokeTo: 0
+                        colorFrom: d1e4ff
+                        colorTo: d1e4ff
+                    }
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        startDelay:20
+                        lifetime: 20
+                        sizeFrom: 0
+                        sizeTo: 10
+                        strokeTo: 0
+                        colorFrom: d1e4ff
+                        colorTo: d1e4ff
+                    }
+                ]
+            }
+        }
+    }
+}
+shootSound: cannon
+shoot: {
+    type: ShootAlternate
+    spread: 8
+    shots: 2
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: "reinforced-"
+    parts: [
+        {
+            type: RegionPart
+            suffix: "-barrel"
+            mirror: true
+            progress: recoil
+            moveY: -4.33
+            under: true
+        }
+    ]
+}
+size: 4
+ammoUseEffect: none
+ammoPerShot: 4
+maxAmmo: 12
+shootY: 15.25
+rotateSpeed: 6
+consumes: {
+    liquid: {
+        liquid: hydrogen
+        amount: 0.05
+    }
+}
+range: 200
+reload: 20
+recoil: 3
+shake: 3
+scaledHealth: 240
+research: titan

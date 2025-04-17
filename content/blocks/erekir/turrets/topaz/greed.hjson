@@ -1,0 +1,115 @@
+requirements: [
+    topaz/400
+    thorium/300
+    tungsten/200
+]
+category: turret
+shootY: -1
+reload: 80
+rotateSpeed: 3.5
+shootCone: 3
+shootSound: none
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+    parts: [
+        {
+            type: RegionPart
+            suffix: -blade
+            mirror: true
+            under: true
+            heatProgress: warmup
+            moveX: 2
+        }
+        {
+            type: RegionPart
+            suffix: -end
+            mirror: false
+            under: false
+            moveY: -2
+        }
+        {
+            type: RegionPart
+            suffix: -barrel
+            mirror: true
+            under: false
+            heatProgress: warmup
+            moveY: -2
+            moveX: 2
+        }
+        {
+            type: ShapePart
+            sides: 0
+            radius: 4
+            hollow: true
+            stroke: 0
+            strokeTo: 2
+            color: ffe18f
+            circle: true
+            x: 0
+            y: -12
+            layer: 110
+        }
+        {
+            type: HaloPart
+            tri: true
+            radius: 8
+            color: ffe18f
+            layer: 110
+            haloRotateSpeed: 2.5
+            triLength: 0
+            triLengthTo: 8
+            haloRadius: 8
+            shapes: 4
+            haloRotation: 90
+            x: 0
+            y: -12
+        }
+        {
+            type: HaloPart
+            tri: true
+            radius: 8
+            color: ffe18f
+            layer: 110
+            haloRotateSpeed: 2.5
+            triLength: 0
+            triLengthTo: 3
+            haloRadius: 8
+            shapes: 4
+            haloRotation: 90
+            shapeRotation: 180
+            x: 0
+            y: -12
+        }
+        {
+            type: ShapePart
+            sides: 0
+            radius: 10
+            hollow: true
+            stroke: 0
+            strokeTo: 2
+            color: ffe18f
+            circle: true
+            x: 0
+            y: -12
+            layer: 110
+        }
+    ]
+}
+targetUnderBlocks: false
+shoot: {
+    firstShotDelay: 79
+}
+range: 210
+outlineColor: 2d2f39
+recoil: 0
+loopSound: bioLoop
+scaledHealth: 260
+size: 4
+warmupMaintainTime: 20
+minWarmup: 0.86
+shootWarmupSpeed: 0.03
+consumes: {
+    liquid: argon/0.15
+}
+research: thrust

@@ -1,0 +1,4 @@
+research:{
+parent: topaz
+}
+hiddenOnPlanets: [serpulo]

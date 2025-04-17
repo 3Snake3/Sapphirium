@@ -1,0 +1,15 @@
+type: Wall
+category: power
+targetable: false
+buildVisibility: sandboxOnly
+
+size: 3
+health: 250
+
+requirements: [
+    copper/88
+    lead/70
+    silicon/43
+    graphite/25
+    creostone/28
+]

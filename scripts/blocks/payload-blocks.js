@@ -1,9 +1,0 @@
-const baseFabricator = extend(UnitFactory, "base-fabricator", {});
-const adoptiveReconstructor = extend(Reconstructor, "adoptive-reconstructor", {});
-adoptiveReconstructor.envDisabled = Env.scorching;
-const logicEncoder = extend(Reconstructor, "logic-encoder", {});
-logicEncoder.envDisabled = Env.scorching;
-const electronicModifier = extend(Reconstructor, "electronic-modifier", {});
-electronicModifier.envDisabled = Env.scorching;
-const innardDecrypter = extend(Reconstructor, "innard-decrypter", {});
-innardDecrypter.envDisabled = Env.scorching;

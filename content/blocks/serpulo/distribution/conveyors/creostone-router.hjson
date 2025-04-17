@@ -1,0 +1,14 @@
+health: 60
+requirements: [
+    dense-alloy/2
+    creostone/2
+    titanium/2
+    metaglass/2
+]
+envDisabled: 16
+category: distribution
+research: {
+    parent: router
+}
+speed: 3
+placeableLiquid: true

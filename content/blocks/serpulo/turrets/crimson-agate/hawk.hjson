@@ -1,0 +1,65 @@
+
+requirements: [
+    dense-alloy/80
+    plastanium/90
+    titanium/130
+    silicon/90
+]
+envDisabled: 16
+range: 270
+health: 1440
+outlineColor: 1d1d21
+recoil: 3
+reload: 270
+cooldownTime: 0.03
+consumes: {
+    power: 7.5
+}
+shake: 3
+smokeEffect: none
+heatColor: ff0000
+size: 2
+targetGround: false
+targetAir: true
+shootSound: mediumCannon
+shootType: {
+speed: 18
+lifetime: 15
+width: 12
+height: 14
+damage: 175
+status: active-bloodrage
+shrinkY: 0
+statusDuration: 80
+backColor: ff6e6e
+trailColor: ff6e6e
+hitColor: ff6e6e
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: shootBigColor
+smokeEffect: shootBigSmoke
+knockback: 5
+trailWidth: 2.30
+trailLength: 16
+fragBullets: 4
+fragRandomSpread: 0
+fragSpread: 45
+fragOnHit: true
+hitSound: laser
+fragBullet: {
+type: LaserBulletType
+colors: [d94848, ff6e6e, ffffff]
+hitColor: ff6e6e
+hitSize: 3
+length: 45
+sideWidth: 0
+damage: 45
+hitEffect: hitBulletColor
+status: passive-bloodrage
+statusDuration: 80
+}
+}
+category: turret
+research: {
+    parent: sparrow
+}

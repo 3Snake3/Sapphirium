@@ -1,0 +1,13 @@
+size: 5
+powerProduction: 6.7
+category: power
+placeableLiquid: true
+requirements: [
+    creostone/335
+    silicon/230
+    dense-alloy/200
+]
+envDisabled: 16
+research: {
+    parent: solar-panel-large
+}

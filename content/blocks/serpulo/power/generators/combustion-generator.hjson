@@ -1,0 +1,4 @@
+research: {
+    parent: copper-transformer
+    objectives: [coal]
+}

@@ -1,0 +1,156 @@
+flying: true
+shadowElevation: 0.1
+pickupUnits: true
+vulnerableWithPayloads: true
+immunities: [unleash]
+canHeal: true
+drag: 0.07
+speed: 6
+isEnemy: false
+fogRadius: 0
+lowAltitude: false
+mineWalls: false
+mineFloor: true
+mineHardnessScaling: true
+mineSpeed: 6.5
+mineTier: 3
+buildSpeed: 1.35
+accel: 0.09
+rotateSpeed: 7
+itemCapacity: 70
+health: 800
+armor: 3
+hitSize: 13
+healColor: d1efff
+weapons: [
+    {
+        name: firmament-weapon
+        top: false
+        x: 0
+        y: 0
+        reload: 60
+        shootSound: missile
+        rotate: false
+        shootY: 5
+        recoil: 0
+        shootCone: 25
+        layerOffset: -0.1
+        parts: [
+            {
+                type: RegionPart
+                suffix: -blade
+                moveRot: -18
+                mirror: true
+                under: true
+            }
+        ]
+        bullet: {
+            type: BasicBulletType
+            width: 8
+            height: 8
+            speed: 4
+            lifetime: 45
+            damage: 0
+            splashDamage: 22
+            splashDamageRadius: 24
+            hitSound: explosion
+            buildingDamageMultiplier: 0.01
+            homingPower: 0.2
+            homingRange: 24
+            weaveScale: 6
+            weaveMag: 2
+            sprite: large-orb
+            trailWidth: 4
+            trailLength: 6
+            healPercent: 3
+            trailChance: 0.2
+            backColor: d1efff
+            frontColor: ffffff
+            hitColor: d1efff
+            trailColor: d1efff
+            hitEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeTo: 24
+                    colorTo: d1efff
+                    strokeFrom: 3
+                    lifetime: 20
+                }
+                {
+                    type: ParticleEffect
+                    particles: 10
+                    cone: 360
+                    length: 28
+                    lifetime: 24
+                    region: sapphirium-rhombus
+                    colorTo: d1efff
+                    sizeFrom: 8
+                    sizeTo: 0
+                }
+            ]
+            despawnEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeTo: 24
+                    colorTo: d1efff
+                    strokeFrom: 3
+                    lifetime: 20
+                }
+                {
+                    type: ParticleEffect
+                    particles: 10
+                    cone: 360
+                    length: 28
+                    lifetime: 24
+                    region: sapphirium-rhombus
+                    colorTo: d1efff
+                    sizeFrom: 8
+                    sizeTo: 0
+                }
+            ]
+            shootEffect: shootSmallColor
+            smokeEffect: shootSmallSmoke
+            bulletInterval: 20
+            intervalBullets: 2
+            intervalAngle: 90
+            healColor: d1efff
+            collidesTeam: true
+            intervalBullet: {
+                type: BasicBulletType
+                sprite: circle-bullet
+                width: 10
+                height: 10
+                speed: 2
+                lifetime: 18
+                shrinkX: 0.5
+                collidesTeam: true
+                healPercent: 0.5
+                backColor: d1efff
+                frontColor: ffffff
+                hitColor: d1efff
+                homingPower: 0.2
+                damage: 0
+                hitEffect: {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 30
+                    colorFrom: d1efff
+                    colorTo: d1efff
+                }
+                despawnEffect: {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 60
+                    sizeFrom: 0
+                    sizeTo: 20
+                    colorFrom: d1efff
+                    colorTo: d1efff
+                }
+            }
+        }
+    }
+]

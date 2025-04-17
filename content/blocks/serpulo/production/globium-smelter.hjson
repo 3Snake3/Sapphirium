@@ -1,0 +1,42 @@
+
+craftTime: 100
+outputItem: globium/2
+craftEffect: {
+particles: 12
+length: 17
+lifetime: 22
+sizeFrom: 5
+sizeTo: 1
+colorFrom: 80a8ff
+colorTo: 80a8ff70
+cone: 360
+region: sapphirium-rhombus
+
+}
+hasPower: true
+itemCapacity: 15
+boostScale: 0.15
+drawer: {
+    type: DrawMulti
+    drawers: [DrawDefault, DrawFlame]
+}
+consumes: {
+    power: 4
+    items: {
+        items: [
+            lead/3
+            titanium/4
+            thorium/2
+        ]
+    }
+}
+size: 3
+category: crafting
+requirements: [
+    dense-alloy/70
+    thorium/80
+    silicon/60
+]
+research: {
+    parent: plastanium-compressor
+}

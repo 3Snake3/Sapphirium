@@ -1,0 +1,260 @@
+requirements: [
+    dense-alloy/1800
+    thorium/1000
+    globium/840
+    silicon/800
+    charged-cylinder/400
+    surge-stone/440
+]
+size: 7
+category: turret
+research: brazier
+rotateSpeed: 1
+reload: 180
+recoil: 5
+shootSound: perfectionShoot
+shootY: 8.5
+coolantMultiplier: 1.4
+drawer: {
+    type: DrawTurret
+    parts: [
+        {
+            type: RegionPart
+            suffix: -blade
+            progress: warmup
+            moveRot: -10
+            mirror: true
+            layerOffset: -0.01
+            moves: [
+                {
+                    progress: recoil
+                    x: 0
+                    y: -3
+                    rot: -10
+                }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -main
+            heatColor: f2e879
+            heatProgress: warmup
+        }
+        {
+            type: ShapePart
+            circle: true
+            hollow: true
+            radius: 0
+            radiusTo: 15
+            stroke: 0
+            strokeTo: 3
+            rotateSpeed: 1
+            color: f2e879
+            layer: 110
+        }
+        {
+            type: ShapePart
+            circle: true
+            hollow: true
+            radius: 0
+            radiusTo: 8
+            stroke: 0
+            strokeTo: 2
+            rotateSpeed: 1
+            color: f2e879
+            layer: 110
+        }
+        {
+            type: HaloPart
+            tri: true
+            hollow: true
+            shapes: 2
+            haloRotation: 90
+            triLength: 0
+            triLengthTo: 25
+            radius: 0
+            radiusTo: 8
+            haloRadius: 0
+            haloRadiusTo: 15
+            color: f2e879
+            layer: 110
+        }
+        {
+            type: HaloPart
+            tri: true
+            hollow: true
+            shapes: 2
+            haloRotation: 90
+            shapeRotation: 180
+            triLength: 0
+            triLengthTo: 25
+            radius: 0
+            radiusTo: 8
+            haloRadius: 0
+            haloRadiusTo: 15
+            color: f2e879
+            layer: 110
+        }
+    ]
+}
+consumes: {
+    power: 30
+    coolant: {}
+}
+maxAmmo: 50
+ammoUseEffect: none
+ammoTypes: {
+    surge-stone: {
+        type: BasicBulletType
+        width: 25
+        height: 25
+        speed: 7
+        lifetime: 51.5
+        shrinkY: 0
+        shrinkX: 0
+        sprite: sapphirium-perfection-shell
+        backColor: f2e879
+        frontColor: ffffff
+        damage: 240
+        pierce: true
+        pierceBuilding: true
+        pierceCap: 6
+        pierceArmor: true
+        status: golden-pollination
+        trailLength: 25
+        trailWidth: 5
+        trailColor: f2e879
+        intervalBullet: {
+            type: BasicBulletType
+            width: 13
+            height: 18
+            speed: 2
+            lifetime: 30
+            backColor: f2e879
+            frontColor: ffffff
+            damage: 33
+            collidesTiles: false
+            pierce: true
+            pierceArmor: true
+            trailLength: 35
+            trailWidth: 3
+            trailColor: f2e879
+            hitEffect: hitBulletColor
+            despawnEffect: hitBulletColor
+        }
+        intervalBullets: 2
+        intervalRandomSpread: 0
+        intervalSpread: 50
+        intervalAngle: 180
+        bulletInterval: 5
+        shootEffect: [
+            shootBigColor, 
+            {
+                type: ParticleEffect
+                line: true
+                particles: 16
+                length: 40
+                lifetime: 30
+                cone: 90
+                lenFrom: 18
+                lenTo: 0
+                strokeFrom: 3
+                strokeTo: 0
+                colorFrom: f2e879
+                colorTo: f2e879
+            }
+        ]
+        smokeEffect: none
+        hitEffect: {
+            type: ParticleEffect
+            line: true
+            particles: 8
+            length: 25
+            lifetime: 30
+            cone: 360
+            lenFrom: 12
+            lenTo: 0
+            strokeFrom: 1.6
+            strokeTo: 0
+            colorFrom: f2e879
+            colorTo: f2e879
+        }
+        despawnEffect: {
+            type: ParticleEffect
+            line: true
+            particles: 8
+            length: 25
+            lifetime: 30
+            cone: 360
+            lenFrom: 12
+            lenTo: 0
+            strokeFrom: 1.6
+            strokeTo: 0
+            colorFrom: f2e879
+            colorTo: f2e879
+        }
+        fragBullets: 4
+        fragRandomSpread: 0
+        fragSpread: 25
+        fragAngle: 180
+        fragVelocityMin: 1
+        fragBullet: {
+            type: BasicBulletType
+            width: 8
+            height: 13
+            speed: 2
+            lifetime: 16
+            backColor: f2e879
+            frontColor: ffffff
+            damage: 33
+            pierce: true
+            pierceBuilding: true
+            pierceArmor: true
+            trailLength: 15
+            trailWidth: 2
+            trailColor: f2e879
+            hitEffect: hitBulletColor
+            despawnEffect: hitBulletColor
+        }
+        spawnBullets: [
+            {
+                type: LightningBulletType
+                damage: 33
+                lightningLength: 12
+                lightningColor: f2e879
+                lifetime: 30
+            }
+            {
+                type: LightningBulletType
+                damage: 33
+                lightningLength: 12
+                lightningColor: f2e879
+                lifetime: 30
+            }
+            {
+                type: LightningBulletType
+                damage: 33
+                lightningLength: 12
+                lightningColor: f2e879
+                lifetime: 30
+            }
+            {
+                type: LightningBulletType
+                damage: 33
+                lightningLength: 12
+                lightningColor: f2e879
+                lifetime: 30
+            }
+            {
+                type: LightningBulletType
+                damage: 33
+                lightningLength: 12
+                lightningColor: f2e879
+                lifetime: 30
+            }
+        ]
+    }
+}
+range: 360
+health: 4290
+envDisabled: 16

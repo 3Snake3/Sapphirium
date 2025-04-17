@@ -1,0 +1,422 @@
+health: 1350
+reload: 60
+recoil: 3
+shake: 3
+shootSound: bang
+size: 3
+rotateSpeed: 3
+inaccuracy: 3
+shootCone: 10
+range: 200
+unitSort: strongest
+ammoTypes: {
+    diamond: {
+        width: 14
+        height: 18
+        speed: 10
+        lifetime: 12
+        hitShake: 2
+        damage: 74
+        knockback: 2
+        inaccuracy: 0
+        shrinkY: 0
+        backColor: a1b1d1
+        frontColor: ffffff
+        trailColor: a1b1d1
+        trailWidth: 4
+        trailLength: 20
+        hitSound: explosion
+        hitEffect: [
+            {
+                type: WaveEffect
+                sides: 4
+                sizeFrom: 0
+                sizeTo: 16
+                lifetime: 25
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: ffffff
+                colorTo: ffffff
+            }
+            {
+                particles: 6
+                cone: 360
+                length: 34
+                baseLength: 0
+                sizeFrom: 6
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ffffff75
+                colorTo: ffffff75
+            }
+        ]
+        shootEffect: [
+            {
+                type: WaveEffect
+                sides: 4
+                sizeFrom: 0
+                sizeTo: 16
+                lifetime: 25
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: ffffff
+                colorTo: ffffff
+            }
+            {
+                particles: 6
+                cone: 360
+                length: 34
+                baseLength: 0
+                sizeFrom: 6
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ffffff75
+                colorTo: ffffff75
+            }
+        ]
+        spawnBullets: [
+        {
+        speed: 0
+        shrinkY: -0.3
+        shrinkX: -0.3
+        damage: 0
+        lifetime: 30
+        width: 8
+        height: 8
+        sprite: circle-bullet
+        intervalRandomSpread: 45
+        hitEffect: none
+        despawnEffect: none
+        bulletInterval: 5
+        collides: false
+        collidesTiles: false
+        hittable: false
+        reflectable: false
+        intervalBullet: {
+        sprite: sapphirium-diamond-shard
+        shrinkY: 0
+        speed: 10
+        damage: 33
+        lifetime: 20
+        width: 10
+        height: 14
+        pierce: true
+        pierceBuilding: true
+        trailWidth: 2.33
+        trailLength: 14
+        backColor: a1b1d1
+        trailColor: a1b1d1
+        hitColor: a1b1d1
+        frontColor: ffffff
+        
+        hitEffect: {
+        type: ParticleEffect
+        particles: 22
+        length: 20
+        lifetime: 60
+        line: true
+        lenFrom: 12
+        lenTo: 0
+        cone: 15
+        colorFrom: a1b1d1
+        colorTo: a1b1d1
+        interp: swingOut
+        strokeTo: 0
+        }
+        
+        despawnEffect: hitBulletColor
+        hitSound: respawn
+        homingPower: 4
+        status: unmoving
+        statusDuration: 25
+        }
+        }
+        ]
+        fragBullets: 5
+        fragRandomSpread: 0
+        fragSpread: 9
+        fragBullet: {
+        sprite: sapphirium-diamond-shard
+        shrinkY: 0
+        speed: 10
+        damage: 33
+        lifetime: 18
+        width: 10
+        height: 14
+        pierce: true
+        pierceBuilding: true
+        trailWidth: 2.33
+        trailLength: 14
+        backColor: a1b1d1
+        trailColor: a1b1d1
+        hitColor: a1b1d1
+        frontColor: ffffff
+        
+        hitEffect: {
+        type: ParticleEffect
+        particles: 22
+        length: 20
+        lifetime: 60
+        line: true
+        lenFrom: 12
+        lenTo: 0
+        cone: 15
+        colorFrom: a1b1d1
+        colorTo: a1b1d1
+        interp: swingOut
+        strokeTo: 0
+        }
+        
+        despawnEffect: hitBulletColor
+        hitSound: respawn
+        homingPower: 4
+        status: unmoving
+        statusDuration: 45
+        }
+    }
+    lead: {
+        width: 14
+        height: 18
+        speed: 12
+        lifetime: 16.67
+        hitShake: 2
+        damage: 37
+        reloadMultiplier: 0.75
+        ammoMultiplier: 3
+        status: weakened
+        statusDuration: 45
+        knockback: 1.5
+        inaccuracy: 0
+        shrinkY: 0
+        backColor: 6e687d
+        frontColor: ad9bd4
+        trailColor: 6e687d
+        trailWidth: 4
+        trailLength: 20
+        hitSound: explosion
+        hitEffect: [
+            {
+                type: WaveEffect
+                sides: 4
+                sizeFrom: 0
+                sizeTo: 16
+                lifetime: 25
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: ad9bd4
+                colorTo: ad9bd4
+            }
+            {
+                particles: 6
+                cone: 360
+                length: 34
+                baseLength: 0
+                sizeFrom: 6
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ad9bd475
+                colorTo: ad9bd475
+            }
+        ]
+        shootEffect: [
+            {
+                type: WaveEffect
+                sides: 4
+                sizeFrom: 0
+                sizeTo: 16
+                lifetime: 25
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: ad9bd4
+                colorTo: ad9bd4
+            }
+            {
+                particles: 6
+                cone: 360
+                length: 34
+                baseLength: 0
+                sizeFrom: 6
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ad9bd475
+                colorTo: ad9bd475
+            }
+        ]
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragBullet: {
+        sprite: circle-bullet
+        damage: 0
+        width: 8
+        height: 8
+        speed: 0
+        collides: false
+        collidesTiles: false
+        lifetime: 80
+        shrinkY: 0
+        backColor: 6e687d
+        frontColor: ad9bd4
+        despawnEffect: [
+            {
+                type: WaveEffect
+                sides: 4
+                sizeFrom: 0
+                sizeTo: 16
+                lifetime: 25
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: ad9bd4
+                colorTo: ad9bd4
+            }
+            {
+                particles: 6
+                cone: 360
+                length: 34
+                baseLength: 0
+                sizeFrom: 6
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ad9bd475
+                colorTo: ad9bd475
+            }
+        ]
+        bulletInterval: 20
+        intervalRandomSpread: 360
+        intervalBullets: 1
+        intervalBullet: {
+        width: 14
+        height: 18
+        speed: 12
+        lifetime: 9.5
+        hitShake: 2
+        damage: 37
+        reloadMultiplier: 0.75
+        ammoMultiplier: 3
+        status: weakened
+        statusDuration: 45
+        knockback: 1.5
+        inaccuracy: 0
+        shrinkY: 0
+        backColor: 6e687d
+        frontColor: ad9bd4
+        trailColor: 6e687d
+        trailWidth: 4
+        trailLength: 20
+        hitSound: explosion
+        hitEffect: [
+            {
+                type: WaveEffect
+                sides: 4
+                sizeFrom: 0
+                sizeTo: 16
+                lifetime: 25
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: ad9bd4
+                colorTo: ad9bd4
+            }
+            {
+                particles: 6
+                cone: 360
+                length: 34
+                baseLength: 0
+                sizeFrom: 6
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ad9bd475
+                colorTo: ad9bd475
+            }
+        ]
+        shootEffect: [
+            {
+                type: WaveEffect
+                sides: 4
+                sizeFrom: 0
+                sizeTo: 16
+                lifetime: 25
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: ad9bd4
+                colorTo: ad9bd4
+            }
+            {
+                particles: 6
+                cone: 360
+                length: 34
+                baseLength: 0
+                sizeFrom: 6
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ad9bd475
+                colorTo: ad9bd475
+            }
+        ]
+        }
+        }
+    }
+}
+drawer: {
+type: DrawTurret
+parts: [
+{
+type: RegionPart
+suffix: -barrel
+progress: recoil
+moveY: -4
+}
+{
+type: RegionPart
+suffix: -main
+}
+{
+type: RegionPart
+suffix: -bottom
+under: true
+outline: false
+}
+{
+type: RegionPart
+suffix: -barrel-bottom
+under: true
+}
+{
+type: RegionPart
+suffix: -slide
+mirror: true
+progress: recoil
+moveX: 3
+moveY: -3
+}
+{
+type: RegionPart
+suffix: -side-back
+mirror: true
+progress: recoil
+moveX: 3
+moveY: -3
+}
+{
+type: RegionPart
+suffix: -back
+mirror: true
+moveRot: 20
+moves: [
+{
+progress: recoil
+x: 3
+y: -3
+}
+]
+}
+]
+}
+category: turret
+requirements: [
+dense-alloy/280
+diamond/240
+silicon/145
+titanium/180
+]
+research: {
+parent: curvature
+}

@@ -1,0 +1,7 @@
+cost: 2
+color: f08dd5
+research: {
+parent: sapphire
+children: [ruby]
+}
+hiddenOnPlanets: [serpulo]

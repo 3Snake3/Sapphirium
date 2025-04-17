@@ -1,0 +1,53 @@
+size: 3
+powerProduction: 9
+consumes: {
+    items: {
+        items: [
+            creostone/1
+        ]
+    }
+    liquid: creotine/0.3
+}
+drawer: [
+{
+    type: DrawRegion
+    suffix: -bottom
+}
+{
+    type: DrawPistons
+    sinMag: 3
+    sinScl: 5
+    sideOffset: 1.57079635
+    angleOffset: 135
+}
+{
+    type: DrawRegion
+    suffix: -mid
+}
+{
+    type: DrawLiquidTile
+    drawLiquid: creotine
+    padding: 7.5
+}
+{
+    type: DrawDefault
+}
+{
+    type: DrawGlowRegion
+    alpha: 1
+    glowScale: 5
+    color: ffb38099
+}
+]
+generateEffect: redgeneratespark
+liquidCapacity: 20
+ambientSound: smelter
+ambientSoundVolume: 0.06
+requirements: [
+tungsten/60
+creostone/60
+oxide/40
+silicon/40
+]
+category: power
+research: mineralizer

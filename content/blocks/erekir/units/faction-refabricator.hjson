@@ -1,0 +1,31 @@
+requirements: [
+thorium/380
+silicon/450
+topaz/300
+sapphire/200
+]
+category: units
+size: 5
+regionSuffix: -dark
+consumes: {
+power: 7
+liquid: nitrogen/0.2
+items: {
+items: [
+silicon/180
+ruby/100
+topaz/80
+]
+}
+}
+constructTime: 4800
+researchCostMultiplier: 0.75
+upgrades: [
+[loyalty, cult]
+[rampage, hunt]
+[apparition, gripper]
+]
+research: {
+parent: hunters-refabricator
+objectives: [faith-refabricator, ghost-refabricator]
+}

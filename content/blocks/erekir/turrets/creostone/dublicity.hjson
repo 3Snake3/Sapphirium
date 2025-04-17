@@ -1,0 +1,409 @@
+requirements: [
+    oxide/320
+    surge-alloy/540
+    phase-fabric/420
+    carbide/600
+    creostone/800
+]
+category: turret
+ammoTypes: {
+    creostone: {
+        type: BasicBulletType
+        width: 16
+        height: 16
+        sprite: large-orb
+        speed: 8
+        drag:0.007
+        lifetime: 71.25
+        damage: 145
+        buildingDamageMultiplier: 2
+        splashDamage: 140
+        splashDamageRadius: 32
+        pierceArmor: true
+        trailEffect: missileTrail
+        trailInterval: 4
+        trailParam: 5
+        shrinkX: 0
+        shrinkY: 0
+        backColor: ffb380
+        trailColor: ffb380
+        hitColor: ffb380
+        frontColor: ffffff
+        trailLength: 15
+        trailWidth: 2.5
+        shootEffect: [
+            shootTitan, 
+            {
+                type: WaveEffect
+                colorTo: ffb380
+                sizeTo: 46
+                lifetime: 26
+                strokeFrom: 4
+            }
+        ]
+        smokeEffect: shootSmokeTitan
+        despawnEffect: {
+            type: ExplosionEffect
+            waveColor: ffb380
+            smokeColor: 7f7f7fff
+            sparkColor: ffb380
+            waveRad: 46
+            waveStroke: 4
+            waveLife: 10
+            sparkStroke: 3
+            sparkLen: 5
+            smokeSize: 6
+            smokeRad: 52
+            sparkRad: 52
+        }
+        hitEffect: {
+            type: ExplosionEffect
+            waveColor: ffb380
+            smokeColor: 7f7f7fff
+            sparkColor: ffb380
+            waveRad: 46
+            waveStroke: 4
+            waveLife: 10
+            sparkStroke: 3
+            sparkLen: 5
+            smokeSize: 6
+            smokeRad: 52
+            sparkRad: 52
+        }
+        intervalBullets: 2
+        bulletInterval: 15
+        intervalRandomSpread: 120
+        intervalBullet: {
+            type: BasicBulletType
+            speed: 2
+            width: 6
+            height: 6
+            shrinkX: 0
+            shrinkY: 0
+            lifetime: 50
+            damage:70
+            pierceArmor: true
+            buildingDamageMultiplier: 1.5
+            sprite: large-orb
+            backColor: ffb380
+            trailColor: ffb380
+            trailLength: 7
+            trailWidth: 1.2
+            hitColor: ffb380
+            frontColor: ffffff
+            hitEffect: hitBulletColor
+            despawnEffect: {
+                type: WaveEffect
+                sides: 0
+                sizeFrom: 0
+                sizeTo: 15
+                lifetime: 40
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: ffb380
+                colorTo: ffb38000
+            }
+        }
+        spawnBullets: [
+            {
+                type: BasicBulletType
+                width: 16
+                height: 16
+                sprite: large-orb
+                speed: 10.5
+                drag:0.02
+                lifetime: 255
+                damage: 350
+                splashDamage: 190
+                splashDamageRadius: 40
+                trailEffect: missileTrail
+                trailInterval: 4
+                trailParam: 7
+                buildingDamageMultiplier: 2
+                shrinkX: 0
+                shrinkY: 0
+                backColor: ffb380
+                trailColor: ffb380
+                hitColor: ffb380
+                frontColor: ffffff
+                trailLength: 15
+                trailWidth: 2.5
+                intervalBullets: 2
+                bulletInterval: 16
+                intervalRandomSpread: 360
+                intervalBullet: {
+                    type: BasicBulletType
+                    speed: 2.3
+                    width: 4
+                    height: 4
+                    shrinkX: 0
+                    shrinkY: 0
+                    homingPower: 0.5
+                    homingRange: 22
+                    pierceArmor: true
+                    lifetime: 50
+                    damage:45
+                    splashDamage: 22
+                    splashDamageRadius: 10
+                    buildingDamageMultiplier: 1.3
+                    sprite: large-orb
+                    backColor: ffb380
+                    trailColor: ffb380
+                    trailLength: 4
+                    weaveMag: 4
+                    weaveScale: 3
+                    trailWidth: 1.2
+                    hitColor: ffb380
+                    frontColor: ffffff
+                    hitEffect: hitBulletColor
+                    despawnEffect: {
+                        type: WaveEffect
+                        sides: 0
+                        sizeFrom: 0
+                        sizeTo: 15
+                        lifetime: 40
+                        strokeFrom: 6
+                        strokeTo: 0
+                        colorFrom: ffb380
+                        colorTo: ffb38000
+                    }
+                }
+                shootEffect: [
+                    shootTitan,
+                    {
+                        type: WaveEffect
+                        colorTo: ffb380
+                        sizeTo: 46
+                        lifetime: 26
+                        strokeFrom: 4
+                    }
+                ]
+                smokeEffect: shootSmokeTitan
+                despawnEffect: {
+                    type: ExplosionEffect
+                    waveColor: ffb380
+                    smokeColor: 7f7f7fff
+                    sparkColor: ffb380
+                    waveRad: 46
+                    waveStroke: 4
+                    waveLife: 10
+                    sparkStroke: 3
+                    sparkLen: 5
+                    smokeSize: 6
+                    smokeRad: 52
+                    sparkRad: 52
+                }
+                hitEffect: {
+                    type: ExplosionEffect
+                    waveColor: ffb380
+                    smokeColor: 7f7f7fff
+                    sparkColor: ffb380
+                    waveRad: 46
+                    waveStroke: 4
+                    waveLife: 10
+                    sparkStroke: 3
+                    sparkLen: 5
+                    smokeSize: 6
+                    smokeRad: 52
+                    sparkRad: 52
+                }
+            }
+        ]
+    }
+}
+shoot: {
+    type: ShootHelix
+    mag: 4
+    scl: 4
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: "reinforced-"
+    parts: [
+        {
+            type: RegionPart
+            suffix: -side
+            mirror: true
+            moveX: 2.5
+            progress: warmup
+            heatProgress: warmup
+            heatColor: ff0000
+        }
+        {
+            type: RegionPart
+            suffix: -upper-side
+            mirror: true
+            moveX: 3.5
+            moveY: -2
+            progress: warmup
+        }
+        {
+            type: RegionPart
+            suffix: -bottom
+            mirror: true
+            moveX: 2.5
+            progress: warmup
+        }
+        {
+            type: RegionPart
+            suffix: -mid
+            mirror: false
+            under: true
+            progress: warmup
+        }
+        {
+            type: RegionPart
+            suffix: -bar
+            mirror: false
+            under: true
+            progress: warmup
+        }
+        {
+            type: RegionPart
+            suffix: -barrel
+            mirror: true
+            moveX: 2
+            progress: warmup
+            moves: [
+                {
+                    progress: recoil
+                    y: -4
+                }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -spine-top
+            mirror: true
+            under: true
+            color: ffb380
+            heatProgress: warmup
+            progress: warmup
+            heatColor: ff0000
+            layerOffset: -0.3
+            turretHeatLayer: 49.8
+            moveX: -1.5
+            moves: [
+                {
+                    progress: recoil
+                    y: -4
+                }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -spine-mid
+            mirror: true
+            under: true
+            color: ffb380
+            heatProgress: warmup
+            heatColor: ff0000
+            layerOffset: -0.3
+            turretHeatLayer: 49.8
+            progress: {
+                type: warmup
+                delay: {
+                    amount: 3
+                }
+            }
+            moveX: -1.5
+            moves: [
+                {
+                    progress: recoil
+                    y: -4
+                }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -spine-bottom
+            mirror: true
+            under: true
+            color: ffb380
+            heatProgress: warmup
+            moveX: -1.5
+            heatColor: ff0000
+            layerOffset: -0.3
+            turretHeatLayer: 49.8
+            moves: [
+                {
+                    progress: recoil
+                    y: -4
+                }
+            ]
+            progress: {
+                type: warmup
+                delay: {
+                    amount: 6
+                }
+            }
+        }
+        {
+            type: ShapePart
+            y: -20
+            radius: 0
+            radiusTo: 4
+            circle: true
+            color: ffb380
+            layer: 110
+        }
+        {
+            type: ShapePart
+            y: -20
+            radius: 8
+            stroke: 0
+            strokeTo: 2.5
+            circle: true
+            hollow: true
+            color: ffb380
+            layer: 110
+        }
+        {
+            type: HaloPart
+            y: -20
+            tri: true
+            shapes: 4
+            radius: 0
+            radiusTo: 8
+            haloRadius: 8
+            haloRotation: 45
+            triLength: 0
+            triLengthTo: 4
+            color: ffb380
+            haloRotateSpeed: 3
+            layer: 110
+        }
+        {
+            type: HaloPart
+            shapes: 6
+            y: -20
+            radius: 0
+            radiusTo: 3
+            haloRadius: 16
+            haloRotateSpeed: -4
+            color: ffb380
+            layer: 110
+            sides: 12
+            rotateSpeed: 12
+        }
+    ]
+}
+shootY: -7.75
+reload: 300
+outlineColor: 2d2f39
+shootSound: largeCannon
+heatRequirement: 60
+maxHeatEfficiency: 2
+shootWarmupSpeed: 0.03
+minWarmup: 0.96
+warmupMaintainTime: 30
+range: 570
+shootCone: 3
+scaledHealth: 400
+rotateSpeed: 4
+recoil: 6
+recoilTime: 150
+cooldownTime: 150
+shake: 6
+size: 5
+research: sorrow

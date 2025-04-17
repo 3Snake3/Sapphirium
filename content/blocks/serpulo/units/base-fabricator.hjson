@@ -1,0 +1,67 @@
+requirements: [
+    dense-alloy/180
+    titanium/180
+    silicon/120
+    metaglass/120
+]
+plans: [
+    {
+        unit: degree
+        time: 1500
+        requirements: [
+            silicon/15
+            lead/15
+            ice-cube/10
+        ]
+    }
+    {
+        unit: hole
+        time: 2300
+        requirements: [
+            silicon/30
+            titanium/30
+            lead/15
+        ]
+    }
+    {
+        unit: beam
+        time: 1500
+        requirements: [
+            silicon/12
+            lead/12
+        ]
+    }
+    {
+        unit: sound
+        time: 1800
+        requirements: [
+            silicon/10
+            emerald/10
+        ]
+    }
+    {
+        unit: course
+        time: 2700
+        requirements: [
+            silicon/25
+            dense-alloy/20
+            metaglass/15
+        ]
+    }
+]
+consumes: {
+    power: 1.6
+}
+size: 3
+floating: true
+category: units
+research: {
+    parent: core-shard
+    objectives: [
+        freezer,
+        {
+            type: SectorComplete
+            preset: greyland
+        }
+    ]
+}

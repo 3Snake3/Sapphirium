@@ -1,24 +1,24 @@
 name: overload
-affinities: [burning]
-opposites: [freezing]
+affinities: [burning, flaming, small-flaming]
+opposites: [freezing, overfreezing, super-freezing]
 transitionDamage: 45
-damage: 1
-damageMultiplier: 0.8
-speedMultiplier: 0.8
+damage: 0.64
+damageMultiplier: 0.85
+speedMultiplier: 0.75
 effect: {
-type: ExplosionEffect
+    type: ExplosionEffect
 
-waveColor: f2e879
-sparkColor: f2e879
+    waveColor: f2e879
+    sparkColor: f2e879
 
-waveLife: 8
-waveRad: 25
-sparkRad: 28
+    waveLife: 8
+    waveRad: 25
+    sparkRad: 28
 
-waveStroke: 5
-sparkStroke: 4
+    waveStroke: 5
+    sparkStroke: 4
 
-smokes: 0
-sparks: 6
+    smokes: 0
+    sparks: 6
 
 }

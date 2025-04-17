@@ -1,0 +1,19 @@
+consumesPower: true
+outputsPower: true
+health: 660
+range: 34
+fogRadius: 3
+category: power
+consumes: {
+    power: {
+        buffered: true
+        capacity: 180000
+    }
+}
+requirements: [
+    creostone/40
+    oxide/20
+    silicon/20
+]
+size: 3
+research: creostone-beam-node

@@ -1,0 +1,7 @@
+health: 400
+category: defense
+requirements: [
+    stone/8
+]
+research: armed-graphite-wall
+envDisabled: 16

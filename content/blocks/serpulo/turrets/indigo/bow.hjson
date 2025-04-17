@@ -1,0 +1,147 @@
+size: 3
+category: turret
+requirements: [
+    dense-alloy/200
+    titanium/145
+    metaglass/125
+]
+reload: 180
+health: 1000
+targetGround: false
+heatColor: a9d8ff60
+shootEffect: {
+    type: MultiEffect
+    effects: [
+        {
+            type: ParticleEffect
+            particles: 1
+            length: 40
+            sizeFrom: 20
+            sizeTo: 0
+            lifetime: 30
+            colorFrom: a9d8ff60
+            colorTo: a9d8ff60
+            region: sapphirium-arrow-effect
+            offsetX: 6
+            lightOpacity: 1.5
+        }
+        {
+            type: ParticleEffect
+            particles: 1
+            length: 40
+            sizeFrom: 20
+            sizeTo: 0
+            lifetime: 30
+            colorFrom: a9d8ff
+            colorTo: a9d8ff
+            region: sapphirium-arrow-effect
+            offsetX: -6
+            lightOpacity: 1.5
+        }
+    ]
+}
+recoil: 2
+inaccuracy: 6
+shootCone: 30
+rotateSpeed: 2
+shootSound: missile
+unitSort: weakest
+range: 300
+shoot: {
+    type: ShootMulti
+    source: {
+        type: ShootPattern
+        shots: 3
+    }
+    dest: [
+        {
+            type: ShootSpread
+            shots: 2
+            spread: 15
+            shotDelay: 15
+        }
+    ]
+}
+
+consumes: {
+    power: 5
+}
+ammoTypes: {
+    cryo-cube: {
+        width: 20
+        height: 35
+        speed: 6
+        damage: 40
+        lifetime: 60
+        sprite: sapphirium-arrow
+        collidesGround: false
+        backColor: a9d8ff
+        frontColor: ffffff
+        mixColorTo: a9d8ff
+        pierce: true
+        hittable: false
+        pierce: true
+        pierceBuilding: true
+        pierceCap: 2
+        homingRange: 90
+        homingPower: 0.05
+        homingDelay: 30
+        keepVelocity: false
+        status: freezing
+        statusDuration: 125
+        trailChance: 1
+        trailEffect: {
+            type: MultiEffect
+            effects: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 5
+                    sizeTo: 0
+                    strokeFrom: 1
+                    strokeTo: 0
+                    lifetime: 20
+                    colorFrom: a9d8ff
+                    colorTo: a9d8ff00
+                }
+                {
+                    type: ParticleEffect
+                    particles: 2
+                    length: 22
+                    lifetime: 15
+                    sizeFrom: 2
+                    sizeTo: 0
+                    colorFrom: a9d8ff
+                    colorTo: a9d8ff20
+                    region: sapphirium-snow-effect
+                }
+            ]
+            }
+        hitEffect: {
+            type: ParticleEffect
+            particles: 6
+            cone: 360
+            line: true
+            length: 15
+            sizeFrom: 3
+            sizeTo: 0
+            strokeFrom: 2
+            strokeTo: 0
+            lifetime: 20
+            colorFrom: ffffff
+            colorTo: a9d8ff
+            lightOpacity: 2
+            region: sapphirium-snow-effect
+        }
+        despawnHit: true
+    }
+}
+research: {
+    parent: hoarfrost
+    objectives: [
+        {
+            type: SectorComplete
+            preset: greyland
+        }
+    ]
+}

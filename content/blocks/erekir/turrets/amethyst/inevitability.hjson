@@ -1,0 +1,354 @@
+requirements: [
+    amethyst/2000
+    silicon/800
+    phase-fabric/600
+    carbide/300
+    carved-alloy/250
+]
+category: turret
+size: 5
+shootWarmupSpeed: 0.04
+warmupMaintainTime: 30
+minWarmup: 0.99
+consumes: {
+    liquid: argon/0.75
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+    parts: [
+        {
+            type: RegionPart
+            suffix: -blade
+            mirror: true
+            under: true
+            moveX: 1.75
+            moveY: -1.75
+            heatColor: cca6ff
+            moves: [
+                {
+                    progress: recoil
+                    y: -2.5
+                }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -middle
+            mirror: true
+            under: false
+            moveX: -1.5
+            moveY: 1.25
+            heatProgress: warmup
+            heatColor: cca6ff
+            moves: [
+                {
+                    progress: recoil
+                    y: -1
+                }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -side
+            mirror: true
+            under: true
+            moveRot: -25
+            heatProgress: warmup
+            heatColor: cca6ff
+        }
+        {
+            type: RegionPart
+            suffix: -back
+            mirror: true
+            under: true
+            moveRot: -15
+            heatProgress: warmup
+            heatColor: cca6ff
+        }
+        {
+            type: ShapePart
+            radius: 7
+            hollow: true
+            circle: true
+            color: cca6ff
+            stroke: 0
+            strokeTo: 2.5
+            layer: 110
+            y: -20
+        }
+        {
+            type: ShapePart
+            radius: 12
+            hollow: true
+            circle: true
+            color: cca6ff
+            stroke: 0
+            strokeTo: 2.5
+            layer: 110
+            y: -20
+        }
+        {
+            type: HaloPart
+            shapes: 5
+            sides: 12
+            rotateSpeed: 360
+            haloRotateSpeed: 3
+            radius: 0
+            radiusTo: 3
+            haloRadius: 12
+            color: cca6ff
+            layer: 110
+            y: -20
+        }
+        {
+            type: HaloPart
+            shapes: 4
+            tri: true
+            radius: 0
+            radiusTo: 6
+            haloRotateSpeed: -5
+            haloRadius: 15
+            layer: 110
+            color: cca6ff
+            triLength: 0
+            triLengthTo: 8
+            shapeRotation: 180
+            y: -20
+        }
+        {
+            type: HaloPart
+            shapes: 4
+            tri: true
+            radius: 0
+            radiusTo: 6
+            haloRotateSpeed: -5
+            haloRadius: 15
+            layer: 110
+            color: cca6ff
+            triLength: 0
+            triLengthTo: 4
+            y: -20
+        }
+        {
+            type: HaloPart
+            shapes: 2
+            tri: true
+            radius: 0
+            radiusTo: 6
+            haloRadius: 22
+            layer: 110
+            color: cca6ff
+            triLength: 0
+            triLengthTo: 18
+            haloRotation: 65
+            y: -20
+            mirror: true
+        }
+        {
+            type: HaloPart
+            shapes: 2
+            tri: true
+            radius: 0
+            radiusTo: 6
+            haloRadius: 22
+            layer: 110
+            color: cca6ff
+            triLength: 0
+            triLengthTo: 6
+            shapeRotation: 180
+            haloRotation: 115
+            y: -20
+            mirror: true
+        }
+    ]
+}
+shootSound: pulseBlast
+shake: 2
+ammoPerShot: 6
+reload: 360
+outlineColor: 2d2f39
+recoil: 4
+recoilTime: 299
+cooldownTime: 299
+shootCone: 1
+scaledHealth: 380
+range: 230
+rotateSpeed: 1.5
+loopSound: respawning
+loopSoundVolume: 0.8
+ammoTypes: {
+    amethyst: {
+        type: BasicBulletType
+        width: 20
+        height: 80
+        speed: 7
+        lifetime: 28.58
+        damage: 220
+        pierce: true
+        pierceCap: 2
+        pierceBuilding: true
+        status: unmoving
+        statusDuration: 102
+        sprite: sapphirium-diamond-shard
+        backColor: cca6ff
+        frontColor: ffffff
+        trailColor: cca6ff
+        hitColor: cca6ff
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        shootEffect: shootBigColor
+        smokeEffect: shootBigSmoke
+        trailLength: 40
+        intervalBullets: 1
+        bulletInterval: 7
+        intervalRandomSpread: 360
+        intervalBullet: {
+            type: BasicBulletType
+            speed: 0
+            width: 20
+            height: 20
+            lifetime: 120
+            damage: 170
+            pierce: true
+            pierceBuilding: true
+            shrinkY: 0
+            sprite: sapphirium-seam
+            backColor: cca6ff
+            frontColor: ffffff
+            hitColor: cca6ff
+            hitEffect: hitBulletColor
+            despawnEffect: {
+                type: WaveEffect
+                sides: 0
+                sizeFrom: 0
+                sizeTo: 32
+                lifetime: 40
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: F08DD5
+                colorTo: ffffff00
+            }
+        }
+        trailWidth: 6
+        fragBullets: 2
+        fragAngle: 35
+        fragRandomSpread: 25
+        fragSpread: 70
+        fragVelocityMin: 1
+        fragBullet: {
+            type: BasicBulletType
+            width: 20
+            height: 80
+            speed: 7
+            lifetime: 28.58
+            damage: 110
+            buildingDamageMultiplier: 0.4
+            pierce: true
+            pierceBuilding: true
+            status: slow
+            statusDuration: 180
+            intervalBullets: 1
+            bulletInterval: 6
+            intervalRandomSpread: 360
+            intervalBullet: {
+                type: BasicBulletType
+                speed: 0
+                width: 15
+                height: 15
+                lifetime: 120
+                damage: 90
+                buildingDamageMultiplier: 0.3
+                pierce: true
+                pierceBuilding: true
+                shrinkY: 0
+                sprite: sapphirium-seam
+                backColor: cca6ff
+                frontColor: ffffff
+                hitColor: cca6ff
+                hitEffect: hitBulletColor
+                despawnEffect: {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 0
+                    sizeTo: 24
+                    lifetime: 40
+                    strokeFrom: 6
+                    strokeTo: 0
+                    colorFrom: F08DD5
+                    colorTo: ffffff00
+                }
+            }
+            sprite: sapphirium-diamond-shard
+            backColor: cca6ff
+            frontColor: ffffff
+            trailColor: cca6ff
+            hitColor: cca6ff
+            hitEffect: hitBulletColor
+            despawnEffect: hitBulletColor
+            shootEffect: shootBigColor
+            smokeEffect: shootBigSmoke
+            trailLength: 40
+            trailWidth: 6
+            fragBullets: 1
+            fragRandomSpread: 45
+            fragVelocityMin: 1
+            fragBullet: {
+                type: BasicBulletType
+                width: 20
+                height: 80
+                speed: 7
+                lifetime: 28.58
+                damage: 110
+                buildingDamageMultiplier: 0.4
+                pierce: true
+                pierceBuilding: true
+                status: slow
+                statusDuration: 180
+                sprite: sapphirium-diamond-shard
+                intervalBullets: 1
+                bulletInterval: 5
+                intervalRandomSpread: 360
+                intervalBullet: {
+                    type: BasicBulletType
+                    speed: 0
+                    width: 10
+                    height: 10
+                    lifetime: 120
+                    damage:70
+                    buildingDamageMultiplier: 0.5
+                    pierce: true
+                    pierceBuilding: true
+                    shrinkY: 0
+                    sprite: sapphirium-seam
+                    backColor: cca6ff
+                    frontColor: ffffff
+                    hitColor: cca6ff
+                    hitEffect: hitBulletColor
+                    despawnEffect: {
+                        type: WaveEffect
+                        sides: 0
+                        sizeFrom: 0
+                        sizeTo: 15
+                        lifetime: 40
+                        strokeFrom: 6
+                        strokeTo: 0
+                        colorFrom: F08DD5
+                        colorTo: ffffff00
+                    }
+                }
+                backColor: cca6ff
+                frontColor: ffffff
+                trailColor: cca6ff
+                hitColor: cca6ff
+                hitEffect: hitBulletColor
+                despawnEffect: hitBulletColor
+                shootEffect: shootBigColor
+                smokeEffect: shootBigSmoke
+                trailLength: 40
+                trailWidth: 6
+            }
+        }
+    }
+}
+research: addiction

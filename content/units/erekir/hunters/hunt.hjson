@@ -1,0 +1,150 @@
+health: 2200
+armor: 3
+speed: 0.43
+mechFrontSway: 0.55
+rotateSpeed: 2.1
+hitSize: 13
+weapons: [
+    {
+        name: hunt-railgun-left
+        x: -12
+        y: 1.25
+        reload: 300
+        recoil: 3
+        shootY: -3.25
+        shootSound: railgun
+        ejectEffect: none
+        mirror: false
+        top: false
+        bullet: {
+            type: PointBulletType
+            shootEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 9
+                    sizeTo: 0
+                    lifetime: 30
+                    colorFrom: ffe18f
+                    colorTo: ffe18f
+                    strokeFrom: 4
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    region: sapphirium-point-shoot
+                    sizeFrom: 9
+                    sizeTo: 0
+                    lifetime: 30
+                    colorFrom: ffe18f
+                    colorTo: ffe18f
+                    length: 0
+                }
+            ]
+            hitEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    sizeFrom: 9
+                    sizeTo: 0
+                    lifetime: 30
+                    colorFrom: ffe18f
+                    colorTo: ffe18f
+                    strokeFrom: 4
+                }
+                {
+                    type: ParticleEffect
+                    particles: 1
+                    sizeFrom: 9
+                    sizeTo: 0
+                    lifetime: 30
+                    colorFrom: ffe18f
+                    colorTo: ffe18f
+                    length: 0
+                }
+            ]
+            smokeEffect: {
+                type: ParticleEffect
+                particles: 5
+                sizeFrom: 3
+                sizeTo: 0
+                lifetime: 60
+                length: 18
+                colorFrom: ffe18f70
+                colorTo: ffe18f70
+                cone: 60
+            }
+            trailEffect: {
+                type: ParticleEffect
+                particles: 1
+                region: sapphirium-point-shoot
+                sizeFrom: 12
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ffe18f
+                colorTo: ffe18f
+                length: 0
+            }
+            despawnEffect: {
+                type: ParticleEffect
+                particles: 1
+                sizeFrom: 6
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ffe18f
+                colorTo: ffe18f
+                length: 0
+            }
+            trailSpacing: 15
+            damage: 20
+            rangeOverride: 166
+            speed: 166
+            lifetime: 1
+            hitShake: 4
+            collides: true
+            status: stunne
+            statusDuration: 20
+        }
+    }
+    {
+        name: hunt-shotgun-right
+        x: 11
+        y: -1.25
+        mirror: false
+        top: false
+        shootSound: shootAltLong
+        ejectEffect: casing2
+        reload: 40
+        recoil: 4
+        shoot: {
+            type: ShootSpread
+            shots: 6
+            spread: 4
+        }
+        bullet: {
+            type: BasicBulletType
+            width: 9
+            height: 9
+            speed: 6.5
+            lifetime: 22
+            homingPower: 0.1
+            homingRange: 62
+            damage: 28
+            pierceArmor: true
+            trailWidth: 2
+            trailLength: 4
+            shootEffect: shootBigColor
+            smokeEffect: shootSmokeSquareSparse
+            backColor: ffe18f
+            trailColor: ffe18f
+            hitColor: ffe18f
+            frontColor: ffffff
+            hitEffect: hitSquaresColor
+            despawnEffect: hitSquaresColor
+            knockback: 4
+            status: deep-wounds
+            statusDuration: 120
+        }
+    }
+]
+research: faction-refabricator

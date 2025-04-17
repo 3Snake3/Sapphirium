@@ -1,0 +1,44 @@
+craftEffect: {
+particles: 5
+cone: 360
+sizeFrom: 3
+sizeTo: 0
+lifetime: 80
+length: 16
+colorFrom: a2a2a270
+colorTo: a2a2a270
+interp: pow2Out
+sizeInterp: pow2Out
+}
+category: crafting
+consumes: {
+power: 0.7
+liquids: [water/0.1, slag/0.1]
+}
+requirements: [
+    dense-alloy/45
+    graphite/30
+]
+drawer: [
+{
+type: DrawDefault
+}
+{
+type: DrawLiquidRegion
+drawLiquid: slag
+}
+{
+type: DrawGlowRegion
+color: f0511d60
+}
+]
+hasLiquids: true
+size: 2
+liquidCapacity: 10
+itemCapacity: 10
+outputItem: stone/2
+craftTime: 120
+research: {
+    parent: freezer
+    objectives: [melter]
+}

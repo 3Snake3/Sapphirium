@@ -1,0 +1,51 @@
+
+size: 2
+cooldown: 60
+shots: 1
+tileDamage: 50
+damage: 50
+length: 15
+lightningColor: ffba8c
+bullet: {
+    type: ExplosionBulletType
+    splashDamageRadius: 24
+    splashDamage: 180
+    splashDamagePierce: true
+    status: stunne
+    statusDuration: 180
+    despawnEffect: {
+        type: ExplosionEffect
+        waveLife: 15
+        waveRad: 24
+        waveStroke: 2
+        waveColor: ffb380
+        sparks: 12
+        sparkLen: 5
+        sparkRad: 36
+        sparkStroke: 2
+        sparkColor: ffb380
+        smokes: 12
+        smokeRad: 36
+        smokeSize: 5
+        smokeColor: ffb380
+        lifetime: 15
+    }
+    despawnSound: bang
+    fragBullets: 1
+    fragRandomSpread: 0
+    fragBullet: {
+    type: ExplosionBulletType
+    splashDamageRadius: 24
+    splashDamage: 0
+    status: small-flaming
+    statusDuration: 180
+    despawnEffect: none
+    }
+}
+category: effect
+research: shock-mine
+requirements: [
+    creostone/160
+    titanium/100
+    silicon/80
+]

@@ -1,0 +1,15 @@
+
+category: liquid
+
+health: 320
+liquidCapacity: 25
+liquidPressure: 2
+placeableLiquid: true
+
+requirements: [
+    globium/2
+    metaglass/2
+    plastanium/2
+]
+
+research: creostone-conduit

@@ -1,0 +1,19 @@
+requirements: [
+    sapphire/32
+    tungsten/24
+]
+armor: 16
+buildCostMultiplier: 5
+size: 2
+health: 3180
+absorbLasers: true
+insulated: true
+category: defense
+hasPower: false
+hasItems: false
+hasLiquids: false
+research: sapphire-wall
+baseColor: 98dbff
+group: walls
+range: 8
+healPercent: 2

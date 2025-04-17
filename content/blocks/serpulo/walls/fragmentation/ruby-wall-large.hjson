@@ -1,0 +1,7 @@
+requirements: [
+    ruby/24
+]
+category: defense
+research: ruby-wall
+size: 2
+envDisabled: 16

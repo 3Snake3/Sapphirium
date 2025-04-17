@@ -1,0 +1,24 @@
+requirements: [
+topaz/220
+tungsten/130
+silicon/100
+]
+category: units
+size: 3
+regionSuffix: -dark
+consumes: {
+power: 3
+liquid: argon/0.1
+items: {
+items: [
+topaz/50
+silicon/40
+]
+}
+}
+constructTime: 1800
+researchCostMultiplier: 0.75
+upgrades: [
+[hound, rampage]
+]
+research: hunters-fabricator

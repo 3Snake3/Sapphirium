@@ -1,0 +1,10 @@
+requirements: [
+silicon/6500
+beryllium/8000
+tungsten/6500
+creostone/4500
+carved-alloy/3000
+]
+unitType: flow
+research: core-purple-night
+category: effect

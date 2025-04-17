@@ -1,0 +1,18 @@
+
+category: distribution
+
+health: 100
+range: 7
+placeableLiquid: true
+speed: 80
+bufferCapacity: 20
+itemCapacity: 14
+
+requirements: [
+    copper/9
+    lead/9
+    creostone/5
+    metaglass/4
+]
+
+research: bridge-conveyor

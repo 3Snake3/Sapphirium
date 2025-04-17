@@ -1,0 +1,10 @@
+health: 1280
+size: 2
+requirements: [
+    dense-alloy/24
+]
+research: dense-wall
+category: defense
+envDisabled: 16
+chanceDeflect: 4
+flashHit: false

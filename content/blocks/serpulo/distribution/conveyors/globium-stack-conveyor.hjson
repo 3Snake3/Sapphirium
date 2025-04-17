@@ -1,0 +1,37 @@
+requirements: [
+    globium/3
+    silicon/2
+    plastanium/1
+    ledonite-cube/1
+]
+category: distribution
+health: 145
+itemCapacity: 16
+loadEffect: {
+    type: ParticleEffect
+    particles: 4
+    sizeFrom: 3
+    sizeTo: 0
+    lifetime: 20
+    length: 1
+    cone: 80
+    colorFrom: 8ca4f5
+    colorTo: 6a75c4
+    region: sapphirium-rhombus
+}
+unloadEffect: {
+    type: ParticleEffect
+    particles: 4
+    sizeFrom: 3
+    sizeTo: 0
+    lifetime: 20
+    length: 1
+    cone: 80
+    colorFrom: 8ca4f5
+    colorTo: 6a75c4
+    region: sapphirium-rhombus
+}
+research: {
+    parent: globium-conveyor
+    objectives: [plastanium-conveyor]
+}

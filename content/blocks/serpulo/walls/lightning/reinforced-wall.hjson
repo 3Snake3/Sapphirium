@@ -1,0 +1,39 @@
+health: 4500
+absorbLasers: true
+lightningChance: 0.05
+size: 2
+requirements: [
+    plastanium/20
+    surge-alloy/20
+    metaglass/12
+]
+category: defense
+research: surge-wall-large
+envDisabled: 16
+destroyBullet: {
+type: ExplosionBulletType
+    splashDamageRadius: 16
+    splashDamage: 64
+    splashDamagePierce: true
+    status: overload
+    statusDuration: 180
+    despawnEffect: {
+        type: ExplosionEffect
+        waveLife: 15
+        waveRad: 16
+        waveStroke: 2
+        waveColor: ffb380
+        sparks: 12
+        sparkLen: 5
+        sparkRad: 24
+        sparkStroke: 2
+        sparkColor: ffb380
+        smokes: 12
+        smokeRad: 24
+        smokeSize: 4
+        smokeColor: ffb380
+        lifetime: 15
+    }
+    despawnSound: shockBlast
+}
+destroyBulletSameTeam: true

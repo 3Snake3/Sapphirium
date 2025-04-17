@@ -1,0 +1,11 @@
+category: units
+group: units
+health: 400
+size: 3
+requirements: [
+    thorium/125
+    silicon/100
+    plastanium/100
+    emerald/80
+]
+research: repair-turret

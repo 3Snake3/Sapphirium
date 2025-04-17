@@ -1,0 +1,85 @@
+requirements: [
+beryllium/300
+thorium/160
+amethyst/180
+silicon/120
+]
+category: power
+size: 3
+health: 1235
+powerProduction: 85
+itemDuration: 100
+ambientSound: pulse
+ambientSoundVolume: 0.07
+consumes: {
+power: 15
+items: {
+items: [
+amethyst/5
+]
+}
+liquid: ozone/0.15
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawPlasma
+}
+{
+type: DrawDefault
+}
+{
+type: DrawGlowRegion
+color: ffbdd4
+}
+]
+}
+itemCapacity: 20
+liquidCapacity: 20
+explodeEffect: [
+{
+type: WaveEffect
+sides: 0
+strokeFrom: 6
+strokeTo: 0
+sizeFrom: 0
+sizeTo: 48
+lifetime: 120
+interp: circleOut
+colorFrom: ffbdd4
+colorTo: ffbdd4
+}
+{
+type: ParticleEffect
+particles: 20
+lifetime: 120
+cone: 360
+length: 120
+lenFrom: 10
+lenTo: 0
+strokeFrom: 4
+strokeTo: 0
+line: true
+colorFrom: ffbdd4
+colorTo: ffbdd4
+}
+{
+type: ParticleEffect
+particles: 18
+lifetime: 480
+cone: 360
+length: 120
+sizeFrom: 15
+sizeTo: 0
+interp: circleOut
+sizeInterp: circleOut
+colorFrom: ffbdd4
+colorTo: ffbdd4
+}
+]
+research: pyrolysis-generatorch: pyrolysis-generator

@@ -1,0 +1,196 @@
+health: 1750
+reload: 18
+recoil: 4
+range: 170
+size: 3
+shoot: {
+shots: 6
+shotDelay: 6
+}
+shootEffect: {
+    type: MultiEffect
+    effects: [
+        shootBig, 
+        {
+            type: WaveEffect
+            sides: 0
+            sizeFrom: 0
+            sizeTo: 16
+            lifetime: 15
+            strokeTo: 0
+            colorFrom: f58758
+            colorTo: f58758
+        }
+    ]
+}
+smokeEffect: {
+    type: MultiEffect
+    effects: [
+        {
+            type: ParticleEffect
+            particles: 5
+            cone: 360
+            length: 45
+            sizeFrom: 5
+            sizeTo: 0
+            lifetime: 40
+            colorFrom: 565666
+            colorTo: 56566670
+        }
+        {
+            type: ParticleEffect
+            particles: 8
+            cone: 8
+            length: 80
+            sizeFrom: 3
+            sizeTo: 0
+            lifetime: 30
+            colorFrom: f58758
+            colorTo: ed7358
+        }
+    ]
+}
+shootSound: shootBig
+ammoUseEffect: casing3Double
+shootCone: 45
+inaccuracy: 15
+ammoTypes: {
+    coal: {
+        width: 12
+        height: 12
+        damage: 24
+        splashDamage: 38
+        splashDamageRadius: 16
+        speed: 5
+        lifetime: 34
+        ammoMultiplier: 5
+        backColor: ed7358
+        trailColor: ed7358
+        trailChance: 0.5
+        frontColor: ff9c59
+        absorbable: false
+        hitSound: explosion
+        hitEffect: {
+        type: MultiEffect 
+        effects: [blastExplosion, fireHit]
+        }
+        despawnEffect: {
+        type: MultiEffect 
+        effects: [blastExplosion, fireHit]
+        }
+        status: burning
+        statusDuration: 80
+    }
+    pyratite: {
+        width: 13
+        height: 13
+        incendSpread: 24
+        incendAmount: 1
+        damage: 28
+        splashDamage: 38
+        splashDamageRadius: 24
+        ammoMultiplier: 4
+        trailChance: 0.5
+        speed: 5
+        lifetime: 34
+        backColor: ed7358
+        frontColor: ff9c59
+        absorbable: false
+        hitEffect: {
+            type: MultiEffect 
+            effects: [blastExplosion, fireHit]
+        }
+        despawnEffect: {
+            type: MultiEffect 
+            effects: [blastExplosion, fireHit]
+        }
+        status: burning
+        statusDuration: 120
+    }
+    blast-compound: {
+        width: 13
+        height: 13
+        damage: 26
+        splashDamage: 38
+        splashDamageRadius: 32
+        buildingDamageMultiplier: 1.35
+        reloadMultiplier: 0.75
+        trailChance: 0.5
+        speed: 5
+        lifetime: 34
+        ammoMultiplier: 3
+        backColor: ed7358
+        frontColor: ff9c59
+        absorbable: false
+        hitEffect: {
+            type: MultiEffect 
+            effects: [blastExplosion, fireHit]
+        }
+        despawnEffect: {
+            type: MultiEffect 
+            effects: [blastExplosion, fireHit]
+        }
+        status: blasted
+    }
+    creostone: {
+        width: 13
+        height: 13
+        damage: 30
+        splashDamage: 28
+        splashDamageRadius: 28
+        rangeChange: 16
+        buildingDamageMultiplier: 1.35
+        homingPower: 0.18
+        homingRange: 16
+        speed: 5
+        lifetime: 37.2
+        ammoMultiplier: 4
+        reloadMultiplier: 0.75
+        backColor: ed7358
+        frontColor: ff9c59
+        absorbable: false
+        hitEffect: {
+            type: MultiEffect 
+            effects: [blastExplosion, fireHit]
+        }
+        despawnEffect: {
+            type: MultiEffect 
+            effects: [blastExplosion, fireHit]
+        }
+        status: small-flaming
+        statusDuration: 180
+        fragRandomSpread: 360
+        fragBullets: 1
+        fragBullet: {
+        speed: 4
+        lifetime: 25
+        damage: 15
+        width: 8
+        height: 8
+        backColor: ed7358
+        frontColor: ff9c59
+        absorbable: false
+        hitEffect: {
+            type: MultiEffect 
+            effects: [blastExplosion, fireHit]
+        }
+        despawnEffect: {
+            type: MultiEffect 
+            effects: [blastExplosion, fireHit]
+        }
+        status: burning
+        statusDuration: 120
+        }
+    }
+}
+category: turret
+research: {
+    parent: salvo
+    objectives: [creotite-converter]
+}
+requirements: [
+    dense-alloy/215
+    creostone/215
+    titanium/80
+]
+envDisabled: 16

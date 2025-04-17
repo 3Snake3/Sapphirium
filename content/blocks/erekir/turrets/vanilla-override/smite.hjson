@@ -1,0 +1,132 @@
+ammoTypes: {
+surge-alloy: {
+speed: 7
+damage: 187.5
+sprite: large-orb
+width: 17
+height: 21
+hitSize: 8
+shootEffect: [shootTitan, colorSparkBig, {
+type: WaveEffect
+colorFrom: ffd37f
+colorTo: ffd37f
+lifetime: 12
+sizeTo: 20
+strokeFrom: 3
+strokeTo: 0.3
+}]
+smokeEffect: shootSmokeSmite
+ammoMultiplier: 1
+pierceCap: 4
+pierce: true
+pierceBuilding: true
+hitColor: ffd37f
+backColor: ffd37f
+trailColor: ffd37f
+frontColor: ffffff
+trailWidth: 2.8
+trailLength: 9
+hitEffect: hitBulletColor
+buildingDamageMultiplier: 0.3
+despawnEffect: [hitBulletColor, {
+type: WaveEffect
+sizeTo: 30
+colorFrom: ffd37f
+colorTo: ffd37f
+lifetime: 12
+}]
+trailRotation: true
+trailEffect: disperseTrail
+trailInterval: 3
+intervalBullet: {
+type: LightningBulletType
+damage: 30
+collidesAir: false
+ammoMultiplier: 1
+lightningColor: ffd37f
+lightningLength: 5
+lightningLengthRand: 10
+buildingDamageMultiplier: 0.25
+lightningType: {
+speed: 0.0001
+damage: 0
+lifetime: 10
+hitEffect: hitLancer
+despawnEffect: none
+status: shocked
+statusDuration: 10
+hittable: false
+lightColor: ffffff
+buildingDamageMultiplier: 0.25
+}
+}
+bulletInterval: 3
+}
+carved-alloy: {
+speed: 9
+damage: 375
+sprite: large-orb
+width: 18
+height: 22
+hitSize: 8
+shootEffect: [shootTitan, colorSparkBig, {
+type: WaveEffect
+colorFrom: 87ceebff
+colorTo: 87ceebff
+lifetime: 12
+sizeTo: 20
+strokeFrom: 3
+strokeTo: 0.3
+}]
+smokeEffect: shootSmokeSmite
+rangeChange: 16
+ammoMultiplier: 4
+reloadMultiplier: 0.5
+pierceCap: 4
+pierce: true
+pierceBuilding: true
+hitColor: 87ceebff
+backColor: 87ceebff
+trailColor: 87ceebff
+frontColor: ffffff
+trailWidth: 2.9
+trailLength: 10
+hitEffect: hitBulletColor
+buildingDamageMultiplier: 0.3
+despawnEffect: [hitBulletColor, {
+type: WaveEffect
+sizeTo: 30
+colorFrom: 87ceebff
+colorTo: 87ceebff
+lifetime: 12
+}]
+trailRotation: true
+trailEffect: disperseTrail
+trailInterval: 3
+intervalBullet: {
+type: LightningBulletType
+damage: 60
+collidesAir: false
+ammoMultiplier: 1
+lightningColor: 87ceebff
+lightningLength: 8
+lightningLengthRand: 14
+buildingDamageMultiplier: 0.25
+status: shock-stun
+statusDuration: 5
+lightningType: {
+speed: 0.0001
+damage: 0
+lifetime: 10
+hitEffect: hitLancer
+despawnEffect: none
+status: shocked
+statusDuration: 10
+hittable: false
+lightColor: ffffff
+buildingDamageMultiplier: 0.25
+}
+}
+bulletInterval: 3
+}
+}

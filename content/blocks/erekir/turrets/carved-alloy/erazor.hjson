@@ -1,0 +1,311 @@
+size: 4
+rotateSpeed: 2
+shootCone: 1
+reload: 180
+recoil: 4
+cooldownTime: 270
+recoilTime: 270
+minWarmup: 0.9
+moveWhileCharging: false
+reloadSound: laserreload
+shootSound: shockBlast
+range: 425
+shootY: -2.25
+smokeEffect: none
+ammoUseEffect: none
+shootY: 0
+shoot: {
+type: ShootMulti
+source: {
+type: ShootAlternate
+shots: 2
+spread: 4
+}
+dest: [
+{
+type: ShootHelix
+shots: 2
+mag: 6
+scl: 4
+}
+]
+}
+ammoTypes: {
+carved-alloy: {
+type: MissileBulletType
+homingPower: 0.5
+homingDelay: 30
+homingRange: 32
+speed: 5
+lifetime: 85
+damage: 25
+drag: -0.008
+sprite: large-orb
+width: 15
+height: 15
+trailInterval: 3
+trailEffect: missileTrail
+trailParam: 4
+trailWidth: 2.2
+trailLength: 15
+shrinkX: 0
+shrinkY: 0
+pierce: true
+pierceBuilding: true
+backColor: 87ceeb
+trailColor: 87ceeb
+hitColor: 87ceeb
+weaveMag: 4
+weaveScale: 6
+hitEffect: {
+type: ExplosionEffect
+waveColor: 87ceeb
+waveStroke: 4
+smokeColor: 87ceeb70
+sparkColor: 87ceeb
+waveRad: 24
+}
+despawnEffect: {
+type: ExplosionEffect
+waveColor: 87ceeb
+waveStroke: 4
+smokeColor: 87ceeb70
+sparkColor: 87ceeb
+waveRad: 24
+}
+bulletInterval: 10
+intervalBullet: {
+speed: 0
+damage: 16
+splashDamage: 16
+splashDamageRadius: 16
+width: 10
+height: 10
+lifetime: 20
+shrinkX: -0.1
+shrinkY: -0.1
+backColor: 87ceeb
+hitColor: 87ceeb
+splashDamagePierce: true
+hitEffect: none
+despawnEffect: none
+}
+shootEffect: [shootTitan, {
+type: WaveEffect
+sizeFrom: 0
+sizeTo: 24
+colorFrom: 87ceeb
+colorTo: 87ceeb
+lifetime: 30
+}
+]
+smokeEffect: shootSmokeTitan
+despawnSound: shockBlast
+spawnBullets: [
+{
+speed: 0
+damage: 0
+lifetime: 1
+hitEffect: none
+despawnEffect: none
+hittable: false
+absorbable: false
+reflectable: false
+fragRandomSpread: 0
+fragBullets: 1
+despawnSound: laser
+fragBullet: {
+type: LaserBulletType
+width: 45
+sideWidth: 5
+sideLength: 5
+length: 425
+damage: 50
+lifetime: 125
+colors: [87ceeb30, 87ceeb50, 87ceeb70]
+}
+}
+]
+}
+}
+
+drawer: {
+type: DrawTurret
+basePrefix: reinforced-
+parts: [
+{
+type: ShapePart
+mirror: true
+circle: true
+radius: 0
+radiusTo: 2
+color: 87ceeb
+layer: 110
+x: 8.5
+y: -13
+}
+{
+type: HaloPart
+tri: true
+mirror: true
+color: 87ceeb
+layer: 110
+x: 8.5
+y: -15
+radius: 0
+radiusTo: 2
+stroke: 0
+strokeTo: 4
+triLength: 0
+triLengthTo: 16
+shapes: 1
+shapeRotation: 225
+haloRadius: 2
+}
+{
+type: HaloPart
+tri: true
+mirror: true
+color: 87ceeb
+layer: 110
+x: 8.5
+y: -15
+radius: 0
+radiusTo: 2
+stroke: 0
+strokeTo: 4
+triLength: 0
+triLengthTo: 16
+shapes: 1
+shapeRotation: -90
+haloRadius: 2
+}
+{
+type: RegionPart
+suffix: -barrel-bar
+color: 87ceeb
+heatColor: 87ceeb
+heatProgress: warmup
+layerOffset: -0.3
+turretHeatLayer: 49.8
+under: true
+outline: false
+moveY: 9
+moves: [
+{
+progress: recoil
+y: -6
+}
+]
+}
+{
+type: RegionPart
+suffix: -barrel-bar
+color: 87ceeb
+heatColor: 87ceeb
+heatProgress: warmup
+layerOffset: -0.3
+turretHeatLayer: 49.8
+under: true
+outline: false
+moveY: 13.5
+moves: [
+{
+progress: recoil
+y: -6
+}
+]
+}
+{
+type: RegionPart
+suffix: -barrel-bar
+color: 87ceeb
+heatColor: 87ceeb
+heatProgress: warmup
+layerOffset: -0.3
+turretHeatLayer: 49.8
+under: true
+outline: false
+moveY: 18.25
+moves: [
+{
+progress: recoil
+y: -6
+}
+]
+}
+{
+type: RegionPart
+suffix: -slide
+mirror: true
+y: 8
+x: -8
+moveX: 8
+moveY: -8
+color: 87ceeb
+heatProgress: warmup
+heatColor: 87ceeb
+layerOffset: -0.3
+turretHeatLayer: 49.8
+moves: [
+{
+progress: recoil
+y: -4
+x: 4
+}
+]
+}
+{
+type: RegionPart
+suffix: -main
+mirror: false
+}
+{
+type: RegionPart
+suffix: -side
+mirror: true
+moveX: 2.25
+moveY: -2.25
+progress: warmup
+moves: [
+{
+progress: recoil
+x: 0
+y: -4
+}
+]
+}
+{
+type: RegionPart
+suffix: -barrel
+mirror: true
+moveX: 4
+moveY: -4
+progress: warmup
+moves: [
+{
+progress: recoil
+x: 0
+y: -5
+}
+]
+}
+{
+type: RegionPart
+suffix: -back
+mirror: false
+}
+]
+}
+scaledHealth: 360
+shake: 4
+consumes: {
+    power: 8
+}
+category: turret
+requirements: [
+    tungsten/400
+    silicon/340
+    carved-alloy/100
+]
+research: multimortar

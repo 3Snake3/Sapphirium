@@ -1,0 +1,226 @@
+health: 1980
+reload: 180
+size: 3
+recoil: 4
+targetHealing: true
+range: 390
+shootSound: flame
+shootCone: 30
+rotateSpeed: 3
+inaccuracy: 10
+ammoPerShot: 6
+shootY: 0.5
+shoot: {
+shots: 5
+shotDelay: 16
+}
+consumes: {
+    power: 15
+}
+ammoTypes: {
+    emerald: {
+        speed: 3.7
+        sprite: sapphirium-none-bullet
+        damage: 33
+        healPercent: 1.7
+        collidesTeam: true
+        hitSize: 7
+        lifetime: 105.407
+        pierce: true
+        status: burning
+        statusDuration: 420
+        hitEffect: hitFlamePlasma
+        ammoMultiplier: 1
+        ejectEffect: none
+        despawnEffect: none
+        keepVelocity: false
+        hittable: false
+        reflectable: false
+        spawnBullets: [
+        {
+        sprite: circle-bullet
+        width: 6
+        height: 6
+        speed: 3.8
+        damage: 11
+        lifetime: 110
+        splashDamageRadius: 24
+        splashDamage: 22
+        healPercent: 0.4
+        collidesTeam: true
+        hitEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 8
+        waveRad: 24
+        waveLife: 22
+        waveColor: 98ffa9
+        waveStroke: 2
+        sparkLen: 7
+        sparkRad: 40
+        sparkColor: 98ffa9
+        lifetime: 33
+        }
+        despawnEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 8
+        waveRad: 24
+        waveLife: 22
+        waveColor: 98ffa9
+        waveStroke: 2
+        sparkLen: 7
+        sparkRad: 40
+        sparkColor: 98ffa9
+        lifetime: 33
+        }
+        backColor: 98ffa9
+        frontColor: ffffff
+        intervalBullets: 1
+        intervalRandomSpread: 360
+        bulletInterval: 24
+        intervalBullet: {
+        type: LightningBulletType
+        damage: 8
+        lightningColor: 98ffa9
+        lightningLength: 4.5
+        lightningLengthRand: 0
+        healPercent: 0.5
+        collidesTeam: true
+        hitColor: 98ffa9
+        }
+        fragBullets: 3
+        fragRandomSpread: 360
+        fragBullet: {
+        type: LightningBulletType
+        damage: 8
+        lightningColor: 98ffa9
+        lightningLength: 4.5
+        healPercent: 0.5
+        collidesTeam: true
+        hitColor: 98ffa9
+        }
+        }
+        ]
+        
+        shootEffect: [
+       {
+        particles: 14
+        length: 420
+        lifetime: 115.407
+        clip: 80
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: 98ffa9
+        colorTo: 98ffa9
+        cone: 10
+        interp: pow2Out
+        sizeInterp: pow2Out
+        lightColor: 98ffa9
+        }
+        {
+        particles: 12
+        region: sapphirium-rhombus
+        length: 420
+        lifetime: 115.407
+        clip: 80
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: 98ffa9
+        colorTo: 98ffa9
+        cone: 10
+        interp: pow2Out
+        sizeInterp: pow2Out
+        }
+        {
+        particles: 8
+        length: 420
+        lifetime: 115.407
+        clip: 80
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: ffffff
+        colorTo: 808080
+        cone: 10
+        interp: pow2Out
+        sizeInterp: pow2Out
+        }
+        ]
+        intervalBullets: 1
+        intervalRandomSpread: 10
+        bulletInterval: 24
+        intervalBullet: {
+        type: EmpBulletType
+        sprite: circle-bullet
+        width: 5
+        height: 5
+        speed: 3
+        lifetime: 47
+        damage: 12
+        splashDamage: 16
+        splashDamageRadius: 10
+        status: disorientation
+        statusDuration: 45
+        radius: 10
+        timeIncrease: 3
+        powerDamageScl: 3
+        healPercent: 0.7
+        collidesTeam: true
+        shrinkY: -0.3
+        shrinkX: -0.3
+        unitDamageScl: 1.5
+        hitEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 8
+        waveRad: 10
+        waveLife: 22
+        waveColor: 98ffa9
+        waveStroke: 2
+        sparkLen: 7
+        sparkRad: 26
+        sparkColor: 98ffa9
+        lifetime: 33
+        }
+        despawnEffect: {
+        type: ExplosionEffect
+        smokes: 0
+        sparks: 8
+        waveRad: 10
+        waveLife: 22
+        waveColor: 98ffa9
+        waveStroke: 2
+        sparkLen: 7
+        sparkRad: 26
+        sparkColor: 98ffa9
+        lifetime: 33
+        }
+        backColor: 98ffa9
+        frontColor: ffffff
+        fragBullets: 1
+        fragBullet: {
+        type: LightningBulletType
+        damage: 8
+        lightningColor: 98ffa9
+        lightningLength: 4.5
+        healPercent: 0.7
+        collidesTeam: true
+        hitColor: 98ffa9
+        }
+        }
+        }
+        }
+drawer: {
+    type: DrawTurret
+    basePrefix: emerald-
+}
+requirements: [
+    dense-alloy/425
+    emerald/300
+    titanium/240
+    silicon/280
+]
+category: turret
+research: {
+    parent: life
+}

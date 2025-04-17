@@ -1,0 +1,113 @@
+health: 740
+armor: 5
+speed: 0.72
+drag: 0.11
+hitSize: 9
+rotateSpeed: 2.7
+legStraightness: 0.3
+stepShake: 0
+legCount: 6
+legLength: 8
+lockLegBase: true
+legContinuousMove: true
+legExtension: -2
+legBaseOffset: 3
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.96
+legForwardScl: 1.1
+legGroupSize: 3
+rippleScale: 0.2
+
+legMoveSpace: 1
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.1
+groundLayer: 74
+targetAir: false
+
+weapons: [
+    {
+        name: phenomenon-weapon
+        x: 3
+        y: 5.5
+        mirror: true
+        alternate: true
+        rotate: false
+        shootSound: bolt
+        shootY: 2.25
+        reload: 20
+        recoil: 2
+        layerOffset: -0.002
+
+        bullet: {
+            type: BasicBulletType
+            speed: 12
+            lifetime: 12.5
+            damage: 12
+            splashDamage: 16
+            splashDamageRadius: 19
+            sprite: sapphirium-none-bullet
+            hitColor: c093fa
+            collidesAir: false
+            shootEffect: shootSmallColor
+            status: paganism
+            statusDuration: 2.4
+            hitEffect: [
+                {
+                    type: WaveEffect
+                    sizeTo: 19
+                    strokeFrom: 2
+                    lifetime: 16
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                }
+                {
+                    type: ParticleEffect
+                    particles:6
+                    cone: 360
+                    length: 19
+                    sizeFrom: 4
+                    sizeTo: 0
+                    lifetime: 40
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                    region: sapphirium-rhombus
+                }
+            ]
+            despawnEffect: [
+                {
+                    type: WaveEffect
+                    sizeTo: 9
+                    strokeFrom: 1
+                    lifetime: 22
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                }
+                {
+                    type: WaveEffect
+                    sizeTo: 19
+                    strokeFrom: 1
+                    lifetime: 12
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                }
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    cone: 360
+                    length: 21
+                    sizeFrom: 4
+                    sizeTo: 0
+                    lifetime: 40
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                    region: sapphirium-rhombus
+                }
+            ]
+        }
+    }
+]
+immunities: [paganism, unleash]
+research: faith-fabricator

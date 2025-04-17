@@ -1,0 +1,36 @@
+
+requirements: [
+    dense-alloy/400
+    ruby/330
+    silicon/330
+    globium/280
+    charged-cylinder/320
+]
+
+category: effect
+size: 3
+health: 825
+range: 112
+baseColor: d94848
+
+consumes: {
+    power: 18
+    items: {
+        items: [
+            ruby/3
+            surge-alloy/2
+        ]
+    }
+}
+
+speedBoost: 3.00
+useTime: 120
+hasBoost: false
+research: {
+    parent: overdrive-dome
+    objectives: [
+        scarlet-gem, 
+        ruby-drill 
+    ]
+}
+

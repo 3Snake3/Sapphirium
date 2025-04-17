@@ -1,0 +1,10 @@
+health: 28000
+speed: 0.18
+hitSize: 28
+rotateSpeed: 0.9
+armor: 6
+mechFrontSway: 1
+mechStepParticles: true
+stepShake: 0.15
+immunities: [unleash, shock-stun]
+research: hunters-assembler

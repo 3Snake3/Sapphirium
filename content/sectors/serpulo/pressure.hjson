@@ -1,0 +1,17 @@
+captureWave: 46
+difficulty: 8
+sector: 186
+planet: serpulo
+research: {
+    parent: duality
+    objectives: [
+        needle, 
+        flight, 
+        fallen, 
+        creostone-reactor,
+        {
+            type: SectorComplete
+            preset: duality
+        }
+    ]
+}

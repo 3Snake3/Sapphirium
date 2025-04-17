@@ -1,0 +1,259 @@
+
+health: 11000
+armor: 13
+hitSize: 36
+speed: 2
+lowAltitude: true
+outlineColor: 282b3b
+rotateSpeed: 2.5
+immunities: [melting]
+accel: 0.06
+drag: 0.017
+flying: true
+engineOffset: 13
+engineSize: 5
+payloadCapacity: 9
+buildSpeed: 3.2
+buildBeamOffset: 7.5
+
+weapons: [
+    {
+        name: war-cannon
+        x: 0
+        y: 7.5
+        mirror: false
+        top: false
+        reload: 100
+        recoil: 0
+        shootSound: blaster
+        bullet: {
+            width: 20
+            height: 20
+            sprite: circle-bullet
+            speed: 4
+            lifetime: 20
+            damage: 65
+            splashDamage: 80
+            splashDamageRadius: 50
+            shrinkX: 0
+            shrinkY: 0
+            backColor: c093fa
+            frontColor: ffffff
+            knockback: 4
+            status: spore-slowed
+            statusDuration: 80
+            hitColor: c093fa
+            hitEffect: {
+                type: ExplosionEffect
+                waveRad: 50
+                waveStroke: 3
+                waveColor: c093fa
+                waveLife: 25
+                sparks: 10
+                sparkRad: 40
+                sparkColor: c093fa
+                sparkStroke: 3
+                sparkLen: 6
+                smokes: 8
+                smokeColor: c093fa
+                smokeRad: 40
+                smokeSize: 6
+            }
+            despawnEffect: {
+                type: ExplosionEffect
+                waveRad: 50
+                waveStroke: 3
+                waveColor: c093fa
+                waveLife: 25
+                sparks: 10
+                sparkRad: 40
+                sparkColor: c093fa
+                sparkStroke: 3
+                sparkLen: 6
+                smokes: 8
+                smokeColor: c093fa
+                smokeRad: 40
+                smokeSize: 6
+            }
+            trailEffect: {
+                type: MultiEffect
+                effects: [
+                    {
+                        type: ParticleEffect
+                        particles: 1
+                        length: 0
+                        sizeFrom: 6
+                        sizeTo: 0
+                        lifetime: 30
+                        colorFrom: c093fa
+                        colorTo: c093fa
+                    }
+                    {
+                        type: ParticleEffect
+                        particles: 2
+                        length: 0
+                        sizeFrom: 6
+                        sizeTo: 0
+                        line: true
+                        offsetX: 3
+                        offsetY: 2
+                        lifetime: 30
+                        colorFrom: c093fa
+                        colorTo: c093fa
+                    }
+                    {
+                        type: ParticleEffect
+                        particles: 2
+                        length: 0
+                        sizeFrom: 6
+                        sizeTo: 0
+                        line: true
+                        offsetX: -3
+                        offsetY: 2
+                        lifetime: 30
+                        colorFrom: c093fa
+                        colorTo: c093fa
+                    }
+                ]
+            }
+            fragBullets: 4
+            fragRandomSpread: 360
+            fragBullet: {
+                width: 14
+                height: 14
+                sprite: circle-bullet
+                speed: 6
+                lifetime: 15
+                damage: 20
+                splashDamage: 35
+                splashDamageRadius: 30
+                shrinkX: 0
+                shrinkY: 0
+                backColor: c093fa
+                frontColor: ffffff
+                knockback: 2
+                status: spore-slowed
+                statusDuration: 80
+                hitColor: c093fa
+                hitEffect: {
+                    type: ExplosionEffect
+                    waveRad: 30
+                    waveStroke: 3
+                    waveColor: c093fa
+                    waveLife: 25
+                    sparks: 10
+                    sparkRad: 30
+                    sparkColor: c093fa
+                    sparkStroke: 3
+                    sparkLen: 6
+                    smokes: 8
+                    smokeColor: c093fa
+                    smokeRad: 30
+                    smokeSize: 6
+                }
+                despawnEffect: {
+                    type: ExplosionEffect
+                    waveRad: 30
+                    waveStroke: 3
+                    waveColor: c093fa
+                    waveLife: 25
+                    sparks: 10
+                    sparkRad: 30
+                    sparkColor: c093fa
+                    sparkStroke: 3
+                    sparkLen: 6
+                    smokes: 8
+                    smokeColor: c093fa
+                    smokeRad: 30
+                    smokeSize: 6
+                }
+                trailEffect: {
+                    type: MultiEffect
+                    effects: [
+                        {
+                            type: ParticleEffect
+                            particles: 1
+                            length: 0
+                            sizeFrom: 6
+                            sizeTo: 0
+                            lifetime: 30
+                            colorFrom: c093fa
+                            colorTo: c093fa
+                        }
+                        {
+                            type: ParticleEffect
+                            particles: 2
+                            length: 0
+                            sizeFrom: 6
+                            sizeTo: 0
+                            line: true
+                            offsetX: 1
+                            offsetY: 1
+                            lifetime: 30
+                            colorFrom: c093fa
+                            colorTo: c093fa
+                        }
+                        {
+                            type: ParticleEffect
+                            particles: 2
+                            length: 0
+                            sizeFrom: 6
+                            sizeTo: 0
+                            line: true
+                            offsetX: -1
+                            offsetY: 1
+                            lifetime: 30
+                            colorFrom: c093fa
+                            colorTo: c093fa
+                        }
+                    ]
+                }
+            }
+            shootEffect: {
+                type: ExplosionEffect
+                waveRad: 15
+                waveStroke: 3
+                waveColor: c093fa
+                waveLife: 15
+                sparks: 4
+                sparkRad: 15
+                sparkColor: c093fa
+                sparkStroke: 3
+                sparkLen: 3
+                smokes: 5
+                smokeColor: c093fa
+                smokeRad: 15
+                smokeSize: 5
+            }
+        }
+    }
+]
+parts: [
+    {
+        type: RegionPart
+        suffix: -decal
+        mirror: false
+        outline: false
+        x: 0
+        y: 0
+        rotation: 0
+        color: c093fa
+    }
+    {
+        type: RegionPart
+        suffix: -decal-glow
+        blending: additive
+        color: c093fa
+        mirror: false
+        outline: false
+    }
+]
+abilities: [
+    {
+        type: SpawnDeathAbility
+        unit: virus
+        amount: 4
+        spread: 12
+        display: false
+    }
+]

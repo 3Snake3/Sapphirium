@@ -1,0 +1,112 @@
+reload: 40
+health: 260
+canOverdrive: false
+recoil: 2
+rotateSpeed: 8
+targetAir: false
+shootEffect: sparkShoot
+smokeEffect: none
+shootSound: bolt
+range: 96
+consumes: {
+    power: 2
+}
+shootType: {
+    width: 9
+    height: 13
+    speed: 6
+    lifetime: 16
+    damage: 27
+    hitEffect: {
+        type: ExplosionEffect
+        waveRad: 4
+        waveLife: 8
+        waveColor: f3e979
+        smokes: 0
+        sparks: 6
+        sparkRad: 6
+        sparkColor: f3e979
+    }
+    despawnEffect: {
+        type: ExplosionEffect
+        waveRad: 4
+        waveLife: 8
+        waveColor: f3e979
+        smokes: 0
+        sparks: 6
+        sparkRad: 6
+        sparkColor: f3e979
+    }
+    intervalBullet: {
+        type: LightningBulletType
+        damage: 5
+        lightningLength: 4
+        lightningColor: f3e979
+        collidesAir: false
+    }
+    lightning: 2
+    lightningLength: 4
+    lightningColor: f3e979
+    lightningDamage: 5
+    trailWidth: 1
+    trailLength: 12
+    trailColor: f3e979
+    backColor: f3e979
+    frontColor: ffffff
+    bulletInterval: 8
+    intervalBullets: 2
+    collidesAir: false
+    status: overload
+    statusDuration: 30
+    fragBullets: 1
+    fragRandomSpread: 0
+    fragBullet: {
+    sprite: sapphirium-star-effect
+    width: 8
+    height: 8
+    speed: 0
+    shrinkY: 0
+    spin: 4
+    damage: 7
+    lifetime: 60
+    splashDamage: 8.4
+    splashDamageRadius: 16
+    frontColor: f3e979
+    hitEffect: {
+    type: WaveEffect
+    sizeFrom: 6
+    sizeTo: 16
+    colorFrom: f3e979
+    colorTo: f3e979
+    lifetime: 45
+    strokeFrom: 2
+    strokeTo: 0
+    interp: circleOut
+    }
+    despawnEffect: {
+    type: WaveEffect
+    sizeFrom: 6
+    sizeTo: 16
+    colorFrom: f3e979
+    colorTo: f3e979
+    lifetime: 45
+    strokeFrom: 2
+    strokeTo: 0
+    interp: circleOut
+    }
+    }
+} 
+requirements: [
+    dense-alloy/30
+    lead/25
+]
+category: turret
+research: {
+    parent: arc
+    objectives: [
+        {
+            type: SectorComplete
+            preset: greyland
+        }
+    ]
+}

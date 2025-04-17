@@ -1,0 +1,16 @@
+
+category: liquid
+
+health: 100
+hasPower: false
+range: 7
+placeableLiquid: true
+liquidCapacity: 14
+
+requirements: [
+    graphite/4
+    metaglass/2
+    creostone/6
+]
+
+research: bridge-conduit

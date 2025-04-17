@@ -1,0 +1,98 @@
+health: 3800
+size: 4
+reload: 600
+recoil: 3
+rotateSpeed: 0.9
+shake: 3
+cooldownTime: 550
+shootSound: laser
+maxAmmo: 96
+ammoPerShot: 24
+ammoUseEffect: none
+range: 310
+inaccuracy: 8
+velocityRnd: 0.3
+consumes: {
+    power: 26
+}
+ammoTypes: {
+    emerald: {
+        type: EmpBulletType
+        width: 12
+        height: 12
+        damage: 60
+        speed: 5.8
+        drag:0.005
+        lifetime: 60
+        ammoMultiplier: 1
+        lightOpacity: 0.7
+        unitDamageScl: 3
+        healPercent: 1.6
+        timeIncrease: 2
+        timeDuration: 300
+        powerDamageScl: 1.5
+        hitColor: 98ffa9
+        lightColor: 98ffa9
+        backColor: 98ffa9
+        trailColor: 98ffa9
+        frontColor: ffffff
+        lightRadius: 70
+
+        shootEffect: hitEmpSpark
+        smokeEffect: shootBigSmoke2
+        sprite: circle-bullet
+        trailLength: 20
+        trailWidth: 6
+        splashDamage: 30
+        splashDamageRadius: 40
+        hitShake: 4
+        trailRotation: true
+        status: electrified
+        hitSound: plasmaboom
+        hitEffect: [
+            hitEmpSpark, 
+            {
+                type: WaveEffect
+                sides: 0
+                lifetime: 40
+                sizeFrom: 40
+                sizeTo: 100
+                strokeTo: 0
+                colorFrom: 98ffa9
+                colorTo: 98ffa9
+            }
+        ]
+        trailEffect: {
+            type: ParticleEffect
+            particles: 1
+            length: 0
+            baseLength: -5
+            region: sapphirium-rail-hit
+            lifetime: 16
+            sizeFrom: 30
+            sizeTo: 4
+            colorFrom: 98ffa9
+            colorTo: 98ffa9
+        }
+    }
+}
+shoot: {
+    shots: 9
+    shotDelay: 3
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: emerald-
+}
+envDisabled: 16
+category: turret
+requirements: [
+    dense-alloy/1300
+    emerald/640
+    globium/400
+    silicon/425
+    thorium/225
+    surge-alloy/300
+]
+research: release
+

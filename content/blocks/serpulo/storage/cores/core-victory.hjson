@@ -1,0 +1,20 @@
+
+health: 12500
+itemCapacity: 20000
+unitCapModifier: 35
+unitType: fight
+size: 6
+researchCostMultiplier: 0.18
+category: effect
+requirements: [
+    plastanium/10000
+    thorium/10000
+    silicon/10000
+    creostone/8000
+    surge-stone/7000
+    charged-lead/7000
+]
+research: {
+    parent: core-ocean
+    objectives: [core-nucleus]
+}

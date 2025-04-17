@@ -1,0 +1,76 @@
+
+size: 4
+category: turret
+research: {
+    parent: gold-horn
+    objectives: [
+        meltdown
+    ]
+}
+shootY: 1.25
+recoil: 0.4
+rotateSpeed: 0.8
+range: 170
+shootCone: 25
+shootSound: none
+loopSound: torch
+loopSoundVolume: 1
+ammoTypes: {
+    surge-mass: {
+        type: ContinuousFlameBulletType
+        damage: 56.6666667
+        length: 180
+        drawFlare: false
+        colors: [f2e879, f2e879, ffffff, ffffff]
+        status: golden-pollination
+        pierceArmor: false
+        smokeEffect: {
+            type: ParticleEffect
+            interp: circleOut
+            particles: 30
+            sizeFrom: 4
+            sizeTo: 0
+            lifetime: 50
+            length: 180
+            cone: 10
+            colorFrom: d99e6a
+            colorTo: a86d3970
+        }
+        shootEffect: {
+            type: ParticleEffect
+            particles: 60
+            sizeFrom: 6.6
+            sizeTo: 0
+            lifetime: 50
+            length: 180
+            interp: circleOut
+            cone: 10
+            colorFrom: f2e879
+            colorTo: d99e6a
+        }
+        hitEffect: {
+            type: ParticleEffect
+            particles: 18
+            lifetime: 20
+            length: 20
+            sizeFrom: 3
+            interp: circleOut
+            sizeTo: 0.25
+            cone: 360
+            colorFrom: d99e6a
+            colorTo: d99e6a
+        }
+    }
+}
+liquidConsumed: 0.1
+health: 2340
+consumes: {
+    power: 12
+}
+requirements: [
+    dense-alloy/1000
+    globium/440
+    silicon/440
+    thorium/225
+    surge-stone/245
+]

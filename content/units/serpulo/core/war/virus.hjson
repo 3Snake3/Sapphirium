@@ -1,0 +1,103 @@
+speed: 3.3
+drag: 0.06
+accel: 0.06
+health: 300
+rotateSpeed: 6
+outlineColor: 282b3b
+flying: true
+immunities: [melting, unleash]
+engineSize: 0
+drawCell: false
+playerControllable: false
+targetAir: false
+weapons: [
+    {
+        name: virus-launcher
+        x: 0
+        y: 0
+        reload: 60
+        recoil: 0
+        rotate: true
+        rotateSpeed: 7
+        alternate: false
+        mirror: false
+        shootSound: missile
+        bullet: {
+            type: MissileBulletType
+            width: 12
+            height: 12
+            speed: 6
+            lifetime: 40
+            shrinkY: 0.7
+            damage: 0
+            collidesAir: false
+            status: sapped
+            statusDuration: 45
+            splashDamage: 35
+            splashDamageRadius: 30
+            sprite: sapphirium-virus-missile
+            trailColor: c093fa
+            trailLength: 25
+            trailWidth: 2
+            backColor: c093fa
+            frontColor: ffffff
+            knockback: 2
+            hitColor: c093fa
+            hitEffect: {
+                type: ExplosionEffect
+                waveRad: 35
+                waveLife: 25
+                waveColor: c093faff
+                waveStroke: 4
+                sparks: 0
+                smokes: 6
+                smokeRad: 30
+                smokeSize: 5
+                smokeColor: c093faff
+            }
+            despawnEffect: {
+                type: ExplosionEffect
+                waveRad: 35
+                waveLife: 25
+                waveColor: c093faff
+                waveStroke: 4
+                sparks: 0
+                smokes: 6
+                smokeRad: 30
+                smokeSize: 5
+                smokeColor: c093faff
+            }
+            shootEffect: {
+                type: MultiEffect
+                effects: [
+                    {
+                        type: WaveEffect
+                        sides: 4
+                        sizeFrom: 0
+                        sizeTo: 10
+                        lifetime: 25
+                        strokeFrom: 4
+                        colorFrom: c093faff
+                        colorTo: c093faff
+                    }
+                    {
+                        type: ParticleEffect
+                        particles: 8
+                        length: 15
+                        cone: 360
+                        sizeFrom: 6
+                        sizeTo: 0
+                        lifetime: 40
+                        colorFrom: c093faff
+                        colorTo: c093faff
+                    }
+                ]
+            }
+            smokeEffect: none
+            homingPower: 0.1
+            homingRange: 60
+            weaveScale: 4
+            weaveMag: 6
+        }
+    }
+]

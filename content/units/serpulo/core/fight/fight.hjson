@@ -1,0 +1,321 @@
+
+health: 1450
+armor: 8
+hitSize: 25
+speed: 6
+drag: 0.016
+accel: 0.02
+range: 210
+rotateSpeed: 6
+lowAltitude: true
+flying: true
+immunities: [burning, freezing, unleash]
+parts: [
+    {
+        type: RegionPart
+        suffix: -decal
+        under: true
+        mirror: false
+        outline: false
+    }
+    {
+        type: RegionPart
+        suffix: -decal-glow
+        color: ffd280
+        under: true
+        mirror: false
+        outline: false
+    }
+]
+engineOffset: 9.75
+engineSize: 4
+
+buildSpeed: 3
+buildBeamOffset: 1.1
+outlineColor: 282b3b
+
+weapons: [
+    {
+        name: fight-bullet-mount
+        top: false
+        x: 0
+        y: 1.1
+        mirror: false
+        reload: 180
+        recoil: 4
+        shoot: {
+            shots: 6
+            shotDelay: 20
+        }
+        parts: [
+            {
+                type: RegionPart
+                suffix: -wing
+                mirror: true
+                under: true
+                moveX: 2
+                moveY: 0
+            }
+            {
+                type: RegionPart
+                suffix: -blade
+                mirror: true
+                under: true
+                moveX: 2
+                moveY: -2
+                moves: [
+                    {
+                        progress: recoil
+                        x: 0
+                        y: -4
+                    }
+                ]
+            }
+        ]
+        bullet: {
+            width: 10
+            height: 15
+            speed: 8
+            lifetime: 26.25
+            damage: 45
+            pierce: true
+            pierceCap: 3
+            backColor: ffd280
+            frontColor: ffffff
+            trailColor: ffd280
+            pierceBuilding: true
+            pierceArmor: true
+            buildingDamageMultiplier: 0.6
+            fragBullets: 2
+            fragRandomSpread: 0
+            trailLength: 16
+            trailWidth: 2.5
+            fragSpread: 180
+            fragBullet: {
+                width: 10
+                height: 15
+                speed: 8
+                lifetime: 16
+                trailLength: 16
+                trailWidth: 0.98
+                damage: 16
+                pierce: true
+                pierceCap: 1
+                pierceBuilding: true
+                pierceArmor: true
+            }
+        }
+    }
+    {
+        name: front-bomb-mount
+        x: 7.5
+        y: 10
+        reload: 60
+        recoil: 0
+        inaccuracy: 8
+        shootY: 4
+        shootSound: mineDeploy
+        bullet: {
+            type: MissileBulletType
+            width: 12
+            height: 12
+            backColor: ffd280
+            buildingDamageMultiplier: 0.5
+            frontColor: ffffff
+            trailColor: ffd280
+            sprite: circle-bullet
+            speed: 5
+            lifetime: 26.25
+            damage: 25
+            splashDamage: 15
+            splashDamageRadius: 20
+            lightning: 2
+            lightningLength: 6
+            lightningDamage: 4
+            lightningColor: ffd280
+            drag: -0.003
+            keepVelocity: false
+            trailLength: 16
+            trailWidth: 3.2
+            homingPower: 0.1
+            homingRange: 45
+            hitEffect: {
+                type: ExplosionEffect
+                waveColor: ffd280
+                waveStroke: 4.5
+                waveRad: 20
+                waveLife: 20
+                sparks: 0
+                smokes: 6
+                smokeRad: 30
+                smokeSize: 4
+                smokeColor: ffd280
+            }
+            despawnEffect: {
+                type: ExplosionEffect
+                waveColor: ffd280
+                waveStroke: 4.5
+                waveRad: 20
+                waveLife: 20
+                sparks: 0
+                smokes: 6
+                smokeRad: 30
+                smokeSize: 4
+                smokeColor: ffd280
+            }
+            shootEffect: {
+                type: ParticleEffect
+                region: sapphirium-rhombus
+                colorFrom: ffd280
+                colorTo: ffd280
+                sizeFrom: 4
+                sizeTo: 0
+                lifetime: 30
+            }
+        }
+    }
+    {
+        name: middle-bomb-mount
+        x: 10
+        y: 7.5
+        reload: 80
+        recoil: 0
+        inaccuracy: 8
+        shootY: 4
+        shootSound: mineDeploy
+        bullet: {
+            type: MissileBulletType
+            width: 12
+            height: 12
+            buildingDamageMultiplier: 0.5
+            backColor: ffd280
+            frontColor: ffffff
+            trailColor: ffd280
+            sprite: circle-bullet
+            speed: 5
+            lifetime: 26.25
+            damage: 25
+            splashDamage: 15
+            splashDamageRadius: 20
+            lightning: 2
+            lightningLength: 6
+            lightningDamage: 4
+            lightningColor: ffd280
+            drag: -0.003
+            keepVelocity: false
+            trailLength: 16
+            trailWidth: 3.2
+            homingPower: 0.1
+            homingRange: 45
+            hitEffect: {
+                type: ExplosionEffect
+                waveColor: ffd280
+                waveStroke: 4.5
+                waveRad: 20
+                waveLife: 20
+                sparks: 0
+                smokes: 6
+                smokeRad: 30
+                smokeSize: 4
+                smokeColor: ffd280
+            }
+            despawnEffect: {
+                type: ExplosionEffect
+                waveColor: ffd280
+                waveStroke: 4.5
+                waveRad: 20
+                waveLife: 20
+                sparks: 0
+                smokes: 6
+                smokeRad: 30
+                smokeSize: 4
+                smokeColor: ffd280
+            }
+            shootEffect: {
+                type: ParticleEffect
+                region: sapphirium-rhombus
+                colorFrom: ffd280
+                colorTo: ffd280
+                sizeFrom: 4
+                sizeTo: 0
+                lifetime: 30
+            }
+        }
+    }
+    {
+        name: back-bomb-mount
+        x: 12.5
+        y: 5
+        reload: 100
+        recoil: 0
+        inaccuracy: 8
+        shootY: 4
+        shootSound: mineDeploy
+        bullet: {
+            buildingDamageMultiplier: 0.5
+            type: MissileBulletType
+            width: 12
+            height: 12
+            backColor: ffd280
+            frontColor: ffffff
+            trailColor: ffd280
+            sprite: circle-bullet
+            lightning: 2
+            lightningLength: 6
+            lightningDamage: 4
+            lightningColor: ffd280
+            speed: 5
+            lifetime: 26.25
+            damage: 25
+            splashDamage: 15
+            splashDamageRadius: 20
+            drag: -0.003
+            keepVelocity: false
+            trailLength: 16
+            trailWidth: 3.2
+            homingPower: 0.1
+            homingRange: 45
+            hitEffect: {
+                type: ExplosionEffect
+                waveColor: ffd280
+                waveStroke: 4.5
+                waveRad: 20
+                waveLife: 20
+                sparks: 0
+                smokes: 6
+                smokeRad: 30
+                smokeSize: 4
+                smokeColor: ffd280
+            }
+            despawnEffect: {
+                type: ExplosionEffect
+                waveColor: ffd280
+                waveStroke: 4.5
+                waveRad: 20
+                waveLife: 20
+                sparks: 0
+                smokes: 6
+                smokeRad: 30
+                smokeSize: 4
+                smokeColor: ffd280
+            }
+            shootEffect: {
+                type: ParticleEffect
+                region: sapphirium-rhombus
+                colorFrom: ffd280
+                colorTo: ffd280
+                sizeFrom: 4
+                sizeTo: 0
+                lifetime: 30
+            }
+        }
+    }
+]
+abilities: [
+    {
+        type: SpawnDeathAbility
+        unit: second-chance
+        spread: 0
+        display: false
+    }
+]

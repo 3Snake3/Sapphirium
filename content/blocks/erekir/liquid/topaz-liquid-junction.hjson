@@ -1,0 +1,12 @@
+requirements: [
+graphite/4
+beryllium/4
+topaz/8
+]
+category: liquid
+buildCostMultiplier: 3
+health: 400
+researchCostMultiplier: 1
+solid: false
+underBullets: true
+research: topaz-conduit

@@ -1,0 +1,26 @@
+requirements: [
+    dense-alloy/800
+    silicon/650
+    titanium/600
+]
+category: units
+size: 5
+consumes: {
+    power: 8
+    items: [
+    silicon/180
+    titanium/100
+    dense-alloy/80
+    ]
+}
+constructTime: 2700
+upgrades: [
+    [zero, snowblock]
+    [emptiness, shadow]
+    [glare, luminary]
+    [tune, vibration]
+    [parity, edge]
+]
+research: {
+    parent: adoptive-reconstructor
+}

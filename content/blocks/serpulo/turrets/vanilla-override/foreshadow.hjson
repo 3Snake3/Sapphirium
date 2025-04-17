@@ -1,0 +1,40 @@
+ammoTypes: {
+surge-alloy: {
+type: RailBulletType
+shootEffect: instShoot
+hitEffect: instHit
+pierceEffect: railHit
+smokeEffect: smokeCloud
+pointEffect: instTrail
+despawnEffect: instBomb
+pointEffectSpace: 20
+damage: 1350
+buildingDamageMultiplier: 0.2
+maxDamageFraction: 0.6
+pierceDamageFactor: 1
+length: 500
+hitShake: 6
+ammoMultiplier: 1
+}
+globium: {
+type: PointBulletType
+shootEffect: instShoot
+hitEffect: instHit
+smokeEffect: smokeCloud
+trailEffect: instTrail
+despawnEffect: instBomb
+trailSpacing: 20
+damage: 850
+buildingDamageMultiplier: 0.2
+speed: 600
+hitShake: 6
+ammoMultiplier: 2
+lightning: 3
+lightningDamage: 15
+lightningLength: 13
+rangeChange: 100
+reloadMultiplier: 0.8
+status: shock-stun
+statusDuration: 30
+}
+}

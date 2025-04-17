@@ -1,0 +1,17 @@
+category: liquid
+research: impulse-pump
+size: 4
+pumpAmount: 0.42
+liquidCapacity: 100
+hasPower: true
+placeableLiquid: true
+requirements: [
+    dense-alloy/300
+    metaglass/280
+    thorium/220
+    silicon/215
+    tinorium/180
+]
+consumes: {
+    power: 17
+}

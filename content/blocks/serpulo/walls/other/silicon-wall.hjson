@@ -1,0 +1,7 @@
+health: 350
+category: defense
+requirements: [
+    silicon/6
+]
+buildVisibility: editorOnly
+envDisabled: 166

@@ -16,8 +16,8 @@ useWindVector: false
 xspeed: 1
 yspeed: 0.01
 attrs: {
-light: -0.3
-water: -0.1
-heat: 0.1
+    light: -0.3
+    water: -0.1
+    heat: 0.1
 }
 opacityMultiplier: 0.43

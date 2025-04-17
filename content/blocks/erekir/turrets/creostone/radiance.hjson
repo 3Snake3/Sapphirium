@@ -1,0 +1,429 @@
+requirements: [
+graphite/800
+silicon/800
+creostone/300
+beryllium/2000
+carbide/400
+]
+category: turret
+shootY: 2.5
+reload: 180
+outlineColor: 2d2f39
+shootSound: largeCannon
+heatRequirement: 60
+maxHeatEfficiency: 2
+shootWarmupSpeed: 0.03
+minWarmup: 0.96
+warmupMaintainTime: 30
+range: 96
+shootCone: 3
+scaledHealth: 440
+rotateSpeed: 2
+recoil: 4
+recoilTime: 150
+cooldownTime: 150
+shake: 6
+size: 5
+research: dublicity
+consumes: {
+power: 20
+}
+shootType: {
+sprite: circle-bullet
+width: 12
+height: 12
+shrinkY: 0
+speed: 0
+lifetime: 30
+damage: 0
+splashDamage: 320
+splashDamageRadius: 40
+splashDamagePierce: true
+hitEffect: none
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 40
+waveColor: ffb380
+waveLife: 40
+waveStroke: 3
+sparks: 18
+sparkLen: 6
+sparkRad: 40
+sparkStroke: 2.5
+sparkColor: ffb380
+smokes: 18
+smokeSize: 10
+smokeColor: ffb38070
+smokeRad: 40
+lifetime: 80
+}
+collides: false
+collidesTiles: false
+status: super-melting
+statusDuration: 120
+fragRandomSpread: 0
+fragBullets: 1
+fragBullet: {
+sprite: circle-bullet
+width: 12
+height: 12
+shrinkY: 0
+speed: 0
+lifetime: 30
+damage: 0
+splashDamage: 220
+splashDamageRadius: 56
+splashDamagePierce: true
+hitEffect: none
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 56
+waveColor: ffb380
+waveLife: 40
+waveStroke: 3
+sparks: 18
+sparkLen: 6
+sparkRad: 56
+sparkStroke: 2.5
+sparkColor: ffb380
+smokes: 18
+smokeSize: 10
+smokeColor: ffb38070
+smokeRad: 56
+lifetime: 90
+}
+collides: false
+collidesTiles: false
+status: super-melting
+statusDuration: 80
+fragRandomSpread: 0
+fragBullets: 1
+fragBullet: {
+sprite: circle-bullet
+width: 12
+height: 12
+shrinkY: 0
+speed: 0
+lifetime: 30
+damage: 0
+splashDamage: 160
+splashDamageRadius: 72
+status: super-melting
+statusDuration: 60
+splashDamagePierce: true
+collides: false
+collidesTiles: false
+fragRandomSpread: 0
+hitEffect: none
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 72
+waveColor: ffb380
+waveLife: 40
+waveStroke: 3
+sparks: 18
+sparkLen: 7
+sparkRad: 72
+sparkStroke: 2.5
+sparkColor: ffb380
+smokes: 18
+smokeSize: 10
+smokeColor: ffb38070
+smokeRad: 72
+lifetime: 100
+}
+fragBullets: 1
+fragBullet: {
+sprite: circle-bullet
+width: 12
+height: 12
+shrinkY: 0
+speed: 0
+lifetime: 30
+damage: 0
+splashDamage: 90
+splashDamageRadius: 96
+hitEffect: none
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 96
+waveColor: ffb380
+waveLife: 40
+waveStroke: 3
+sparks: 20
+sparkLen: 7
+sparkRad: 96
+sparkStroke: 2.5
+sparkColor: ffb380
+smokes: 20
+smokeSize: 10
+smokeColor: ffb38070
+smokeRad: 96
+lifetime: 120
+}
+splashDamagePierce: true
+collides: false
+collidesTiles: false
+status: super-melting
+statusDuration: 45
+}
+}
+}
+}
+drawer: {
+type: DrawTurret
+basePrefix: "reinforced-"
+parts: [
+{
+type: RegionPart
+suffix: -main
+heatLight: true
+moves: [
+{
+progress: recoil
+y: -3
+}
+]
+}
+{
+type: RegionPart
+suffix: -barrel
+mirror: true
+heatLight: true
+heatProgress: warmup
+moveX: -2.5
+moveY: -3
+moves: [
+{
+progress: recoil
+y: -3
+rot: 6
+}
+]
+}
+{
+type: RegionPart
+suffix: -side
+mirror: true
+heatLight: true
+heatProgress: warmup
+moveX: -2
+moves: [
+{
+progress: recoil
+y: -3
+rot: 7
+}
+]
+}
+{
+type: RegionPart
+suffix: -back
+mirror: true
+heatLight: true
+heatProgress: warmup
+moveY: -3
+moveX: -2
+moves: [
+{
+progress: recoil
+y: -3
+rot: 10
+}
+]
+}
+{
+type: ShapePart
+y: -18
+hollow: true
+radius: 10
+color: ffb380
+layer: 110
+stroke: 0
+strokeTo: 4
+circle: true
+sides: 0
+}
+{
+type: HaloPart
+y: -18
+shapes: 4
+haloRadius: 10
+tri: true
+shapeRotation: 180
+triLength: 0
+triLengthTo: 7
+radius: 5.5
+color: ffb380
+layer: 110
+haloRotateSpeed: 4
+}
+{
+type: HaloPart
+y: -18
+shapes: 1
+mirror: true
+color: ffb380
+layer: 110
+tri: true
+triLength: 0
+triLengthTo: 18
+haloRadius: 14
+radius: 0
+radiusTo: 4
+haloRotation: 135
+}
+{
+type: HaloPart
+y: -18
+shapes: 1
+mirror: true
+color: ffb380
+layer: 110
+tri: true
+triLength: 0
+triLengthTo: 6
+haloRadius: 14
+radius: 0
+radiusTo: 4
+haloRotation: 135
+shapeRotation: 180
+}
+{
+type: HaloPart
+y: -18
+shapes: 1
+mirror: true
+color: ffb380
+layer: 110
+tri: true
+triLength: 0
+triLengthTo: 18
+haloRadius: 14
+radius: 0
+radiusTo: 4
+haloRotation: 180
+}
+{
+type: HaloPart
+y: -18
+shapes: 1
+mirror: true
+color: ffb380
+layer: 110
+tri: true
+triLength: 0
+triLengthTo: 6
+haloRadius: 14
+radius: 0
+radiusTo: 4
+haloRotation: 180
+shapeRotation: 180
+}
+{
+type: ShapePart
+y: -18
+x: -18
+hollow: true
+mirror: true
+stroke: 0
+strokeTo: 2.5
+radius: 8
+color: ffb380
+layer: 110
+circle: true
+sides: 0
+}
+{
+type: HaloPart
+y: -18
+x: -18
+mirror: true
+tri: true
+radius: 6
+shapes: 1
+haloRadius: 8
+haloRotation: 90
+shapeRotation: 180
+triLength: 0
+triLengthTo: 6.5
+color: ffb380
+layer: 110
+haloRotateSpeed: 5
+}
+{
+type: HaloPart
+tri: true
+mirror: true
+shapes: 1
+haloRadius: 11
+haloRotation: 75
+triLength: 0
+triLengthTo: 7
+color: ffb380
+layer: 110
+radius: 4
+y: -18
+x: -18
+}
+{
+type: HaloPart
+tri: true
+mirror: true
+shapes: 1
+haloRadius: 11
+haloRotation: 75
+shapeRotation: 180
+triLength: 0
+triLengthTo: 7
+color: ffb380
+layer: 110
+radius: 4
+y: -18
+x: -18
+}
+{
+type: HaloPart
+tri: true
+mirror: true
+shapes: 1
+haloRadius: 11
+haloRotation: 95
+triLength: 0
+triLengthTo: 7
+color: ffb380
+layer: 110
+radius: 4
+y: -18
+x: -18
+}
+{
+type: HaloPart
+tri: true
+mirror: true
+shapes: 1
+haloRadius: 11
+haloRotation: 95
+shapeRotation: 180
+triLength: 0
+triLengthTo: 7
+color: ffb380
+layer: 110
+radius: 4
+y: -18
+x: -18
+}
+{
+type: RegionPart
+suffix: -bar
+mirror: true
+under: true
+outline: false
+progress: warmup
+heatProgress: warmup
+layerOffset: -0.3
+turretHeatLayer: 49.8
+color: ffb380
+}
+]
+}

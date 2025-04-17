@@ -1,0 +1,27 @@
+requirements: [
+silicon/200
+beryllium/80
+ruby/125
+]
+category: units
+size: 3
+configurable: false
+plans: [
+{
+unit: presence
+time: 2400
+requirements: [
+silicon/50
+ruby/50
+]
+}
+]
+regionSuffix: -dark
+fogRadius: 3
+consumes: {
+power: 2
+}
+research: {
+parent: mech-fabricator
+objectives: [ship-fabricator]
+}

@@ -1,0 +1,21 @@
+requirements: [
+    emerald/7
+]
+research: titanium-wall-large
+envDisabled: 16
+destroyBullet: {
+type: ExplosionBulletType
+splashDamageRadius: 32
+healPercent: 15
+collidesTeam: true
+despawnEffect: {
+type: WaveEffect
+sizeFrom: 8
+sizeTo: 32
+lifetime: 15
+interp: circleOut
+colorFrom: ffffff
+colorTo: 96f58c
+}
+}
+destroyBulletSameTeam: true

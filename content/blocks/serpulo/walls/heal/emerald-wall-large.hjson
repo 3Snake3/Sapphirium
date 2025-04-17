@@ -1,0 +1,21 @@
+requirements: [
+    emerald/29
+]
+research: emerald-wall
+size: 2
+envDisabled: 16
+destroyBullet: {
+type: ExplosionBulletType
+splashDamageRadius: 32
+healPercent: 15
+despawnEffect: {
+type: WaveEffect
+sizeFrom: 8
+sizeTo: 32
+lifetime: 15
+interp: circleOut
+colorFrom: ffffff
+colorTo: 96f58c
+}
+}
+destroyBulletSameTeam: true

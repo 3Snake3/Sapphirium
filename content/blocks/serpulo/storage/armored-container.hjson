@@ -1,0 +1,12 @@
+requirements: [
+    globium/120
+    titanium/120
+    stone/80
+]
+category: effect
+health: 900
+itemCapacity: 250
+size: 2
+research: {
+    parent: container
+}

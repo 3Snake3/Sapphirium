@@ -1,0 +1,44 @@
+knockback: 0
+rotateSpeed: 100
+hasPower: true
+range: 7000
+size: 2
+reload: 1
+bulletSpeed: 120
+minDistribute: 1
+translation: 5
+bulletLifetime: 100
+shake: 0
+shootSound: none
+itemCapacity: 20
+smokeEffect: none
+receiveEffect: {
+    type: WaveEffect
+    sides: 4
+    sizeFrom: 8
+    sizeTo: 0
+    strokeFrom: 3
+    strokeTo: 0
+    colorFrom: f3e979
+    colorTo: f3e979
+    lifetime: 25
+}
+category: distribution
+requirements: [
+    dense-alloy/1200
+    charged-cylinder/450
+    diamond/550
+]
+consumes: {
+    power: 133.333333
+}
+research: {
+    parent: mass-driver
+    objectives: [
+        charge-reactor, 
+        {
+            type: SectorComplete
+            preset: impact0078
+        }
+    ]
+}

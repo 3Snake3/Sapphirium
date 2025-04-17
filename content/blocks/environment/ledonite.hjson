@@ -4,5 +4,5 @@ variants: 0
 emitLight: true
 lightRadius: 40
 attributes: {
-water: 1.5
+    water: 1.5
 }

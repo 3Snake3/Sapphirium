@@ -1,0 +1,69 @@
+reload: 45
+recoil: 2
+range: 160
+inaccuracy: 8
+health: 260
+shootSound: missile
+ammoTypes: {
+    ice-cube: {
+        type: MissileBulletType
+        sprite: sapphirium-snow-effect
+        width: 8
+        height: 8
+        damage: 5
+        speed: 5
+        lifetime: 30
+        drag: -0.003
+        splashDamage: 10
+        splashDamageRadius: 15
+        status: wet
+        statusDuration: 35
+        homingPower: 0.1
+        homingRange: 45
+        weaveScale: 3
+        weaveMag: 3
+        hitEffect: flakExplosion
+        despawnEffect: flakExplosion
+        backColor: ffffff
+        trailColor: ffffff
+        frontColor: ffffff
+        trailChance: 0.5
+        fragBullets: 3
+        fragRandomSpread: 90
+        fragBullet: {
+        sprite: sapphirium-snow-effect
+            width: 5
+            height: 5
+            damage: 5
+            speed: 5
+            lifetime: 20
+            pierce: true
+            pierceCap: 1
+            backColor: ffffff
+            frontColor: ffffff
+            weaveScale: 3
+            weaveMag: 3
+            homingPower: 0.1
+            homingRange: 30
+            hitEffect: flakExplosion
+            despawnEffect: flakExplosion
+            status: wet
+            statusDuration: 35
+        }
+    }
+}
+category: turret
+heatColor: a9d8ff
+requirements: [
+    dense-alloy/25
+    lead/25
+]
+research: {
+    parent: duo
+    objectives: [
+        {
+            type: SectorComplete
+            preset: frozenForest
+        }
+    ]
+}

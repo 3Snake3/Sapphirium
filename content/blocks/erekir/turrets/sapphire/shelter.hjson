@@ -1,0 +1,229 @@
+requirements: [
+    carbide/600
+    sapphire/2000
+    silicon/1000
+    oxide/600
+    carved-alloy/200
+]
+buildCostMultiplier: 0.8
+category: turret
+shootSound: none
+loopSound: torch
+consumes: {
+    power: 12
+}
+rotateSpeed: 2.5
+shootY: 7
+shoot: {
+    type: ShootAlternate
+    shots: 2
+    spread: 12
+}
+range: 136
+shootCone: 60
+scaledHealth: 580
+armor: 10
+outlineColor: 2d2f39
+liquidConsumed: 0.4
+loopSoundVolume: 1.2
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+    parts: [
+        {
+            type: RegionPart
+            suffix: -main
+            progress: warmup
+            under: true
+            heatProgress: warmup
+            heatColor: 1f66ff
+        }
+        {
+            type: RegionPart
+            suffix: -shield1
+            progress: warmup
+            moveY: 6.5
+            moveX: 2.75
+            moveRot: -35
+            mirror: true
+            heatProgress: warmup
+            heatColor: 1f66ff
+        }
+        {
+            type: RegionPart
+            suffix: -shield2
+            progress: warmup
+            moveRot: -30
+            moveX: 3.75
+            moveY: 5.5
+            mirror: true
+            heatProgress: warmup
+            heatColor: 1f66ff
+        }
+        {
+            type: RegionPart
+            suffix: -shield3
+            progress: warmup
+            moveRot: -25
+            moveY: 4.5
+            moveX: 5.5
+            mirror: true
+            heatProgress: warmup
+            heatColor: 1f66ff
+        }
+        {
+            type: RegionPart
+            suffix: -wing
+            progress: warmup
+            moveRot: 15
+            moveX: -5
+            moveY: -5.5
+            mirror: true
+            heatProgress: warmup
+            heatColor: 1f66ff
+        }
+        {
+            type: RegionPart
+            suffix: -mid
+            progress: warmup
+            heatProgress: warmup
+            heatColor: 1f66ff
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            mirror: true
+            layer: 110
+            color: 8BA9E8FF
+            hollow: true
+            sides: 6
+            stroke: 0.85
+            strokeTo: 0
+            radius: 8
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            mirror: true
+            layer: 110
+            color: 8BA9E8FF
+            hollow: true
+            sides: 6
+            stroke: 0.85
+            strokeTo: 0
+            radius: 8
+            y: -16
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            mirror: true
+            layer: 110
+            color: 8BA9E8FF
+            hollow: true
+            sides: 6
+            stroke: 0.85
+            strokeTo: 0
+            radius: 8
+            y: 16
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            mirror: true
+            layer: 110
+            color: 8BA9E8FF
+            hollow: true
+            sides: 6
+            stroke: 0.85
+            strokeTo: 0
+            radius: 8
+            y: 8
+            x: 14
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            mirror: true
+            layer: 110
+            color: 8BA9E8FF
+            hollow: true
+            sides: 6
+            stroke: 0.85
+            strokeTo: 0
+            radius: 8
+            y: -8
+            x: 14
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            mirror: true
+            layer: 110
+            color: 8BA9E8FF
+            hollow: true
+            sides: 6
+            stroke: 0.85
+            strokeTo: 0
+            radius: 3.5
+            x: 23.5
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            mirror: true
+            layer: 110
+            color: 8BA9E8FF
+            hollow: true
+            sides: 6
+            stroke: 0.85
+            strokeTo: 0
+            radius: 3.5
+            y: -20
+            x: 11.5
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            mirror: true
+            layer: 110
+            color: 8BA9E8FF
+            hollow: true
+            sides: 6
+            stroke: 0.85
+            strokeTo: 0
+            radius: 3.5
+            y: 20
+            x: 11.5
+        }
+    ]
+}
+targetInterval: 10
+unitSort: strongest
+ammoTypes: {
+    argon: {
+        type: ContinuousFlameBulletType
+        damage: 68.333333
+        length: 146
+        knockback: 1
+        pierceCap: 3
+        buildingDamageMultiplier: 0.5
+        colors: [665c9e55, 9b81de70, c093fa80, ffffff]
+        drawFlare: false
+        hitColor: c093fa
+    }
+    creotine: {
+        type: ContinuousFlameBulletType
+        damage: 91
+        length: 90
+        rangeChange: -36
+        drawFlare: false
+        knockback: 1
+        pierceCap: 6
+        buildingDamageMultiplier: 0.9
+        colors: [bd555355, eb877870, ffb38080, ffffff]
+        hitColor: ffb380
+    }
+}
+size: 5
+research: crackle

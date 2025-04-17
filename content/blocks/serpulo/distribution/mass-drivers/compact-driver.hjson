@@ -1,0 +1,20 @@
+size: 2
+category: distribution
+range: 310
+itemCapacity: 45
+reload: 250
+knockback: 3.3
+shake: 2
+
+requirements: [
+    lead/85
+    graphite/60
+    silicon/60
+    titanium/45
+]
+
+consumes: {
+    power: 1
+}
+
+research: phase-conveyor

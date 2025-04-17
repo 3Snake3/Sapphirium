@@ -1,0 +1,20 @@
+captureWave: 44
+difficulty: 10
+sector: 264
+planet: serpulo
+research: {
+    parent: afterdark
+    objectives: [
+        core-victory, 
+        draw, 
+        perfection,
+        {
+            type: SectorComplete
+            preset: afterdark
+        }
+        {
+            type: SectorComplete
+            preset: pressure
+        }
+    ]
+}

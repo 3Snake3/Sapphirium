@@ -1,0 +1,106 @@
+ammoTypes: {
+    scrap: {
+        type: FlakBulletType
+        speed: 4
+        damage: 3
+        lifetime: 60
+        ammoMultiplier: 5
+        shootEffect: shootSmall
+        reloadMultiplier: 0.5
+        width: 6
+        height: 8
+        hitEffect: flakExplosion
+        splashDamage: 37
+        splashDamageRadius: 24
+    }
+    lead: {
+        type: FlakBulletType
+        speed: 4.2
+        damage: 3
+        lifetime: 60
+        ammoMultiplier: 4
+        shootEffect: shootSmall
+        width: 6
+        height: 8
+        hitEffect: flakExplosion
+        splashDamage: 42
+        splashDamageRadius: 15
+    }
+    metaglass: {
+        type: FlakBulletType
+        speed: 4
+        damage: 3
+        lifetime: 60
+        ammoMultiplier: 5
+        shootEffect: shootSmall
+        reloadMultiplier: 0.8
+        width: 6
+        height: 8
+        hitEffect: flakExplosion
+        splashDamage: 45
+        splashDamageRadius: 20
+        fragBullet: {
+            type: BasicBulletType
+            sprite: bullet
+            speed: 3
+            damage: 5
+            width: 5
+            height: 12
+            shrinkY: 1
+            lifetime: 20
+            backColor: 454545
+            frontColor: ffffff
+            despawnEffect: none
+        }
+        fragBullets: 6
+    }
+    ice-cube: {
+        type: FlakBulletType
+        status: freezing
+        speed: 5
+        damage: 3
+        lifetime: 60
+        ammoMultiplier: 6
+        shootEffect: shootSmall
+        reloadMultiplier: 0.8
+        width: 6
+        height: 8
+        hitEffect: flakExplosion
+        splashDamage: 50
+        splashDamageRadius: 20
+        fragBullet: {
+            type: BasicBulletType
+            sprite: bullet
+            speed: 3
+            damage: 5
+            status: wet
+            statusDuration: 10
+            width: 5
+            height: 12
+            shrinkY: 1
+            lifetime: 20
+            backColor: 454545
+            frontColor: ffffff
+            despawnEffect: none
+        }
+        fragBullets: 6
+    }
+    charged-lead: {
+        type: FlakBulletType
+        speed: 4
+        damage: 4
+        lifetime: 60
+        ammoMultiplier: 6
+        shootEffect: shootSmall
+        reloadMultiplier: 0.6
+        width: 7
+        height: 9
+        hitEffect: flakExplosion
+        splashDamage: 65
+        splashDamageRadius: 25
+        backColor: f3e979
+        frontColor: ffffff
+        lightning: 2
+        lightningLength: 6
+    }
+}

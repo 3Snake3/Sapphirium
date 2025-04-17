@@ -1,0 +1,57 @@
+requirements: [
+beryllium/20
+topaz/40
+]
+category: power
+group: liquids
+minEfficiency: 8.999
+displayEfficiency: false
+generateEffect: {
+    type: RadialEffect
+    rotationOffset: -45
+    lengthOffset: 4
+    effect: {
+        type: ParticleEffect
+        particles: 16
+        length: 40
+        lifetime: 80
+        sizeFrom: 8
+        sizeTo: 0
+        cone: 10
+        interp: circleOut
+        colorFrom: b087e5
+        colorTo: b087e575
+    }
+}
+effectChance: 0.01
+size: 3
+ambientSound: smelter
+ambientSoundVolume: 0.06
+drawer: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+        type: DrawLiquidTile
+        drawLiquid: argon
+        padding: 0
+    }
+{
+type: DrawDefault
+}
+{
+        type: DrawGlowRegion
+        suffix: -glow
+        color: c093fa
+        glowIntensity: 0.9
+    }
+]
+hasLiquids: true
+liquidCapacity: 20
+fogRadius: 3
+research: plasma-bore
+outputLiquid: argon/0.01
+liquidCapacity: 20
+fogRadius: 3
+research: plasma-bore

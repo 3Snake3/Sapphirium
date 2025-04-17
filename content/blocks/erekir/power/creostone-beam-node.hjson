@@ -1,0 +1,17 @@
+consumesPower: true
+outputsPower: true
+health: 220
+range: 17
+fogRadius: 1
+category: power
+requirements: [
+    beryllium/5
+    creostone/5
+]
+consumes: {
+    power: {
+        buffered: true
+        capacity: 8000
+    }
+}
+research: beam-node

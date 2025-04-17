@@ -1,0 +1,66 @@
+requirements: [
+    topaz/280
+    silicon/180
+    tungsten/120
+]
+category: turret
+
+targetUnderBlocks: false
+shake: 0
+ammoPerShot: 1
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+    parts: [
+        {
+            type: RegionPart
+            suffix: -main
+        }
+        {
+            type: RegionPart
+            suffix: -barrel
+            progress: warmup
+            moveY: -3
+            heatColor: ffe18f
+            heatProgress: warmup
+        }
+        {
+            type: ShapePart
+            circle: true
+            x: 0
+            y: 0
+            moveY: 3.5
+            color: ffe18f
+            layer: 110
+            radius: 0
+            radiusTo: 1
+        }
+        {
+            type: ShapePart
+            circle: true
+            hollow: true
+            x: 0
+            y: 0
+            moveY: 3.5
+            color: ffe18f
+            layer: 110
+            radius: 0
+            radiusTo: 4
+            stroke: 0
+            strokeTo: 1.5
+        }
+    ]
+}
+shootY: -2
+outlineColor: 2d2f39
+recoil: 0
+shootSound: none
+reload: 80
+range: 160
+shootCone: 3
+scaledHealth: 160
+rotateSpeed: 5
+research: {
+parent: breach
+objectives: [topaz-mine]
+}

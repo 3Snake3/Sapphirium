@@ -1,0 +1,615 @@
+immunities: [slow, freezing, wet, 
+muddy, melting, sapped, 
+spore-slowed, electrified, 
+tarred, stunne, unmoving, 
+super-freezing, shock-stun, unleash]
+health: 22600
+speed: 0.25
+rotateSpeed: 2.3
+hitSize: 32
+armor: 29
+mechStepParticles: true
+stepShake: 1.2
+drownTimeMultiplier: 12
+mechFrontSway: 2.3
+mechSideSway: 1.2
+outlineColor: 25262e
+healColor: 240935FF
+range: 128
+deathExplosionEffect: [
+    {
+        type: ExplosionEffect
+        waveLife: 30
+        waveRad: 80
+        waveColor: 25262e
+        waveStroke: 4
+        sparks: 18
+        sparkLen: 4
+        sparkColor: 25262e
+        sparkStroke: 3.5
+        sparkRad: 84
+        smokes: 0
+        lifetime: 300
+    }
+    {
+        type: ParticleEffect
+        particles: 1
+        sizeFrom: 75
+        sizeTo: 0
+        lifetime: 300
+        interp: pow5In
+        sizeInterp: pow5Out
+        length: 0
+        colorFrom: 25262e
+        colorTo: 25262e
+        layer: 29.5
+    }
+    {
+        type: ParticleEffect
+        region: sapphirium-black-hole-spin1
+        particles: 1
+        sizeFrom: 75
+        sizeTo: 0
+        lifetime: 300
+        interp: pow5In
+        sizeInterp: pow5Out
+        length: 0
+        spin: 180
+        colorFrom: a488eb
+        colorTo: a488eb
+        layer: 29.5
+    }
+    {
+        type: ParticleEffect
+        region: sapphirium-black-hole-spin2
+        particles: 1
+        sizeFrom: 75
+        sizeTo: 0
+        lifetime: 300
+        interp: pow5In
+        sizeInterp: pow5Out
+        length: 0
+        spin: 180
+        colorFrom: a488eb
+        colorTo: a488eb
+        layer: 29.5
+    }
+    {
+        type: ParticleEffect
+        region: sapphirium-black-hole-spin3
+        particles: 1
+        sizeFrom: 75
+        sizeTo: 40
+        lifetime: 300
+        interp: pow5In
+        sizeInterp: pow5Out
+        length: 0
+        spin: 180
+        colorFrom: a488eb
+        colorTo: a488eb
+        layer: 29.5
+    }
+    {
+        startDelay:300
+        type: ParticleEffect
+        region: sapphirium-black-hole-spin3
+        particles: 1
+        sizeFrom: 40
+        sizeTo: 50
+        lifetime: 100
+        interp: pow5In
+        sizeInterp: pow5Out
+        length: 0
+        spin: -60
+        colorFrom: a488eb
+        colorTo: a488eb
+        layer: 29.5
+    }
+    {
+        startDelay:400
+        type: ParticleEffect
+        region: sapphirium-black-hole-spin3
+        particles: 1
+        sizeFrom: 50
+        sizeTo: 20
+        lifetime: 100
+        interp: pow5In
+        sizeInterp: pow5Out
+        length: 0
+        spin: 30
+        colorFrom: a488eb
+        colorTo: a488eb00
+        layer: 29.5
+    }
+    {
+        type: ParticleEffect
+        particles: 8
+        sizeFrom: 20
+        sizeTo: 0
+        cone: 360
+        lifetime: 300
+        baseLength: 80
+        length: -80
+        colorFrom: 565666
+        colorTo: 565666
+    }
+    {
+        type: ParticleEffect
+        particles: 8
+        sizeFrom: 20
+        sizeTo: 0
+        lifetime: 300
+        cone: 360
+        baseLength: 75
+        length: -75
+        colorFrom: 565666
+        colorTo: 565666
+    }
+]
+parts: [
+    {
+        type: RegionPart
+        suffix: -decal-glow
+        color: c093fa
+        mirror: false
+        outline: false
+        blending: additive
+    }
+]
+weapons: [
+    {
+        x: 0
+        y: 0
+        shootY: 0
+        shootOnDeath: true
+        reload: 60
+        recoil: 0
+        mirror: false
+        alternate: false
+        controllable: false
+        shootCone: 360
+        shootSound: plasmaboom
+        bullet: {
+            type: ExplosionBulletType
+            splashDamage: 1400
+            splashDamageRadius: 65
+            fragBullets: 16
+            fragLifeMin: 1
+            fragLifeMax: 5
+            fragRandomSpread: 360
+            fragBullet: {
+                type: BasicBulletType
+                speed: 0
+                lifetime: 80
+                damage: 0
+                splashDamage: 200
+                splashDamageRadius: 65
+                width: 0
+                height: 0
+                pierce: true
+                pierceCap: 10
+                pierceBuilding: true
+                hitEffect: none
+                hitSound:none
+                despawnSound:none
+                smokeEffect:none
+                collidesTiles: false
+                collidesAir: true
+                collidesGround: true
+                reflectable: false
+                hittable: false
+                absorbable: false
+                despawnEffect: [
+                    {
+                        type: WaveEffect
+                        sides: 0
+                        lifetime: 80
+                        sizeFrom: 20
+                        sizeTo: 65
+                        strokeFrom: 3
+                        strokeTo: 0
+                        colorFrom: c093fa
+                        colorTo: c093fa00
+                    }
+                    {
+                        type: ParticleEffect
+                        particles: 10
+                        length: 28
+                        lifetime: 120
+                        sizeFrom: 12
+                        sizeTo: 0
+                        interp: pow5Out
+                        sizeInterp: pow5In
+                        colorFrom: c093fa75
+                        colorTo: c093fa75
+                    }
+                ]
+            }
+            shootEffect: [
+                {
+                    type: WaveEffect
+                    sides: 0
+                    lifetime: 90
+                    sizeFrom: 0
+                    sizeTo: 24
+                    strokeFrom: 3
+                    strokeTo: 0
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                }
+                {
+                    type: ParticleEffect
+                    particles: 10
+                    length: 28
+                    lifetime: 120
+                    sizeFrom: 12
+                    sizeTo: 0
+                    interp: pow5Out
+                    sizeInterp: pow5In
+                    colorFrom: c093fa75
+                    colorTo: c093fa75
+                }
+            ]
+        }
+    }
+    {
+        name: nihil-claws
+        x: 25.25
+        y: 0.5
+        reload: 11
+        recoil: -16
+        top: false
+        alternate: true
+        mirror: true
+        shootCone:200
+        cooldownTime:900
+        shootWarmupSpeed:0.01
+        linearWarmup:true
+        minWarmup:0.6
+        heatColor: c093fa
+        shootSound: claws-wave
+        shootY: -2
+        shootX: 0
+        bullet: {
+            type: ShrapnelBulletType
+            length: 38
+            width:20
+            serrations: 12
+            damage: 315
+            hitColor: 240935FF
+            status: slow
+            hitSound: malignShoot
+            shootEffect: none
+            smokeEffect: none
+            fromColor:00000000
+            toColor:00000000
+            recoil: -3.5
+            range:128
+            maxRange:100
+            hitShake: 6
+            hitEffect:[
+                {
+                    type: ParticleEffect
+                    lifetime: 50
+                    particles: 19
+                    line: true
+                    cone:5
+                    interp:circleOut
+                    length:160
+
+                    strokeFrom: 5
+                    strokeTo: 0
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                    }
+                    {
+                    type: ParticleEffect
+                    lifetime: 80
+                    particles: 35
+                    line: true
+                    cone:40
+                    interp:circleOut
+                    length:70
+
+                    strokeFrom: 2
+                    strokeTo: 0
+                    colorFrom: c093fa
+                    colorTo: c093fa
+                    }
+                    {
+                    type: ParticleEffect
+                    lifetime: 120
+                    particles: 5
+                    cone:360
+                    interp:circleOut
+                    length:60
+
+                    sizeFrom: 1
+                    sizeTo: 5
+                    colorFrom: c093fa
+                    colorTo: c093fa00
+                    }
+                    {
+                    startDelay:10
+                    type: ParticleEffect
+                    lifetime: 120
+                    particles: 5
+                    cone:360
+                    interp:circleOut
+                    length:60
+
+                    sizeFrom: 1
+                    sizeTo: 3
+                    colorFrom: c093fa
+                    colorTo: c093fa00
+                    }
+                    {
+                    startDelay:15
+                    type: ParticleEffect
+                    lifetime: 120
+                    particles: 5
+                    cone:360
+                    interp:circleOut
+                    length:60
+
+                    sizeFrom: 1
+                    sizeTo: 4
+                    colorFrom: c093fa
+                    colorTo: c093fa00
+                    }
+                ]
+        }
+    }
+   {
+        x: 0
+        y: 0
+        reload: 40
+        top: false
+        alternate: false
+        mirror: false
+        shootSound: none
+        shootY: -1
+        shootX: 0
+        bullet: {
+            type: ShrapnelBulletType
+            length: 8
+            width: 0
+            serrations: 0
+            damage: 700
+            hitColor: 240935FF
+            status: slow
+            hitSound: malignShoot
+            shootEffect: none
+            smokeEffect: none
+            hitShake: 6
+            maxRange: 128
+            range: 128
+            rangeOverride: 128
+            hitEffect:[
+            {
+                type: ParticleEffect
+                lifetime: 50
+                particles: 30
+                line: true
+                cone:150
+                interp:circleOut
+                length:170
+
+                strokeFrom: 2
+                strokeTo: 0
+                colorFrom: c093fa
+                colorTo: c093fa
+                }
+                {
+                type: ParticleEffect
+                lifetime: 80
+                particles: 35
+                line: true
+                cone:120
+                interp:circleOut
+                length:70
+
+                strokeFrom: 3
+                strokeTo: 0
+                colorFrom: c093fa
+                colorTo: c093fa
+                }
+                {
+                type: ParticleEffect
+                lifetime: 120
+                particles: 5
+                cone:360
+                interp:circleOut
+                length:60
+
+                sizeFrom: 1
+                sizeTo: 5
+                colorFrom: c093fa
+                colorTo: c093fa00
+                }
+                {
+                startDelay:10
+                type: ParticleEffect
+                lifetime: 120
+                particles: 5
+                cone:360
+                interp:circleOut
+                length:60
+
+                sizeFrom: 1
+                sizeTo: 3
+                colorFrom: c093fa
+                colorTo: c093fa00
+                }
+                {
+                startDelay:15
+                type: ParticleEffect
+                lifetime: 120
+                particles: 5
+                cone:360
+                interp:circleOut
+                length:60
+
+                sizeFrom: 1
+                sizeTo: 4
+                colorFrom: c093fa
+                colorTo: c093fa00
+                }
+            ]
+        }
+    }
+{
+    controllable: false
+    autoTarget: true
+    alternate: false
+    shootCone: 90
+    rotate: true
+    x: 0
+    y: 0
+
+    reload: 150
+    inaccuracy:30
+    shootSound: missile
+shoot: {
+       	type: ShootMulti
+       	source: {
+           type: ShootSpread
+           spread: 4
+           shots: 3
+           }
+       	dest: [
+       	{
+               	type: ShootMulti
+               	source: {
+                   type: ShootPattern
+                   shots: 4
+                   shotDelay: 20
+                   }
+               	dest: [
+               	{
+               	type: ShootPattern
+               		shots: 2
+               		shotDelay: 30
+               	}
+               	]
+        }
+       	]
+       	}
+
+bullet: {
+    type: BasicBulletType
+    sprite: large-orb
+    despawnShake: 4.5
+    hitShake: 4.5
+    shrinkX: 0.0
+    shrinkY: 0.0
+    height: 7.5
+    width: 7.5
+
+    buildingDamageMultiplier: 0.2
+    statusDuration: 180
+    homingPower: 0.02
+    homingRange: 30
+    homingDelay: 15
+    status: sapped
+    lifetime: 50
+    weaveScale:3
+    weaveMag:2
+    damage: 10
+    speed: 5
+    range:250
+    knockback: -10
+    smokeEffect: none
+    shootEffect: none
+    hitEffect:[
+        {
+                type: ParticleEffect
+                particles: 22
+                length: 20
+                lifetime: 20
+                sizeFrom: 2
+                sizeTo: 1
+                cone: 360
+                interp: circleOut
+                sizeInterp:circleOut
+                colorFrom: a488eb
+                colorTo: a488eb00
+                layer:100.3
+            }
+        {
+                type: ParticleEffect
+                particles: 7
+                length: 40
+                lifetime: 40
+                sizeFrom: 1
+                sizeTo: 2
+                cone: 10
+                interp: circleOut
+                sizeInterp:circleOut
+                colorFrom: a488eb
+                colorTo: a488eb00
+                layer:100.3
+            }
+        ]
+    despawnEffect:[
+    {
+        type: ParticleEffect
+        particles: 22
+        length: 20
+        lifetime: 20
+        sizeFrom: 2
+        sizeTo: 1
+        cone: 360
+        interp: circleOut
+        sizeInterp:circleOut
+        colorFrom: a488eb
+        colorTo: a488eb00
+        layer:100.3
+      }
+    {
+        type: ParticleEffect
+        particles: 7
+        length: 40
+        lifetime: 40
+        sizeFrom: 1
+        sizeTo: 2
+        cone: 10
+        interp: circleOut
+        sizeInterp:circleOut
+        colorFrom: a488eb
+        colorTo: a488eb00
+        layer:100.3
+      }
+    ]
+    hitSound: missile
+
+    lightColor: a488eb
+    lightOpacity: 0.7
+    lightRadius: 24.5
+
+    trailColor: a488eb
+    trailLength: 5
+    trailWidth: 1
+
+    frontColor: a488eb
+    backColor: a488eb40
+    hitColor: a488eb40
+}
+}
+]
+abilities: [
+    {
+        type: RegenAbility
+        amount: 5
+    }
+]
+research: { 
+    parent: void 
+    objectives: [innard-decrypter]
+    requirements: [ 
+        silicon/30000
+        tinorium/28000
+        charged-ingot/21000
+        diamond/18000
+    ] 
+}

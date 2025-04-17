@@ -1,0 +1,17 @@
+captureWave: 60
+difficulty: 7
+sector: 127
+planet: serpulo
+research: {
+    parent: tarFields
+    objectives: [
+        {
+            type: SectorComplete
+            preset: greyland
+        }
+        {
+            type: SectorComplete
+            preset: tarFields
+        }
+    ]
+}
