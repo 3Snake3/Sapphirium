@@ -10,6 +10,11 @@ height: 11
 collidesTiles: false
 splashDamageRadius: 18.4
 splashDamage: 33
+backColor: 7d89d8
+        hitColor: 7d89d8
+        trailColor: 7d89d8
+        frontColor: dae1ee
+        despawnEffect: hitBulletColor
 }
 silicon: {
 type: ArtilleryBulletType
@@ -25,6 +30,13 @@ splashDamage: 33
 ammoMultiplier: 3
 homingPower: 0.08
 homingRange: 50
+trailLength: 7
+        trailWidth: 3
+        despawnEffect: hitBulletColor
+        backColor: 707594
+        hitColor: 707594
+        trailColor: 707594
+        frontColor: 999ba0
 }
 pyratite: {
 type: ArtilleryBulletType
@@ -42,9 +54,11 @@ status: burning
 statusDuration: 720
 trailEffect: incendTrail
 frontColor: f8ad42
-backColor: f68021
-makeFire: true
-ammoMultiplier: 4
+        backColor: f68021
+        hitColor: f68021
+        makeFire: true
+        ammoMultiplier: 4
+        despawnEffect: hitBulletColor
 }
 stone: {
 type: ArtilleryBulletType
@@ -59,6 +73,10 @@ splashDamageRadius: 14.7
 splashDamage: 50
 reloadMultiplier: 0.9
 ammoMultiplier: 3
+frontColor: 8c8c8c
+backColor: 52525c
+hitColor: 52525c
+trailColor: 52525c
 fragBullets: 3
 fragRandomSpread: 27
 fragBullet: {
@@ -70,6 +88,9 @@ width: 6
 height: 7.5
 status: slow
 statusDuration: 300
+frontColor: 8c8c8c
+backColor: 52525c
+hitColor: 52525c
 }
 }
 }

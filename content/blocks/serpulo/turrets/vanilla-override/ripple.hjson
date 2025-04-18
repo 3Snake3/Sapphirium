@@ -10,6 +10,11 @@ ammoTypes: {
         collidesTiles: false
         splashDamageRadius: 18.75
         splashDamage: 33
+        backColor: 7d89d8
+        hitColor: 7d89d8
+        trailColor: 7d89d8
+        frontColor: dae1ee
+        despawnEffect: hitBulletColor
     }
     silicon: {
         type: ArtilleryBulletType
@@ -26,6 +31,13 @@ ammoTypes: {
         collidesTiles: false
         splashDamageRadius: 18.75
         splashDamage: 33
+        trailLength: 9
+        trailWidth: 3.1
+        despawnEffect: hitBulletColor
+        backColor: 707594
+        hitColor: 707594
+        trailColor: 707594
+        frontColor: 999ba0
     }
     pyratite: {
         type: ArtilleryBulletType
@@ -43,9 +55,11 @@ ammoTypes: {
         statusDuration: 720
         frontColor: f8ad42
         backColor: f68021
+        hitColor: f68021
         makeFire: true
         trailEffect: incendTrail
         ammoMultiplier: 4
+        despawnEffect: hitBulletColor
     }
     blast-compound: {
         type: ArtilleryBulletType
@@ -61,9 +75,12 @@ ammoTypes: {
         splashDamageRadius: 33.75
         splashDamage: 55
         status: blasted
-        frontColor: ffd2ae
-        backColor: e58956
+        frontColor: eeab89
+        backColor: e9665b
+        hitColor: e9665b
+        trailColor: e9665b
         ammoMultiplier: 4
+        despawnEffect: hitBulletColor
     }
     plastanium: {
         type: ArtilleryBulletType
@@ -89,19 +106,37 @@ ammoTypes: {
         lifetime: 15
         frontColor: fffac6
         backColor: d8d97f
+        hitColor: d8d97f
         despawnEffect: none
         collidesAir: false
         }
         fragBullets: 10
-        frontColor: ffd2ae
-        backColor: e58956
+        frontColor: fffac6
+        backColor: d8d97f
+        hitColor: d8d97f
+        trailColor: d8d97f
     }
     creostone: {
         type: ArtilleryBulletType
         speed: 2
         damage: 24
         sprite: shell
-        hitEffect: blastExplosion
+        hitEffect: {
+        type: ExplosionEffect
+        lifetime: 25
+        waveRad: 37
+        waveLife: 15
+        waveColor: ffb380
+        sparks: 8
+        sparkRad: 42
+        sparkStroke: 2
+        sparkLen: 5
+        sparkColor: ffb380
+        smokes: 8
+        smokeRad: 42
+        smokeSize: 5
+        smokeColor: ffb380
+        }
         knockback: 0.8
         width: 15
         height: 15
@@ -114,14 +149,34 @@ ammoTypes: {
         homingPower: 0.1
         homingRange: 58
         status: super-melting
-        statusDuration: 20
+        statusDuration: 80
+        trailLength: 9
+        trailWidth: 3.1
+        frontColor: ffb380
+        backColor: eb8778
+        hitColor: eb8778
+        trailColor: eb8778
     }
     surge-stone: {
         type: ArtilleryBulletType
         speed: 1.5
         damage: 65
         sprite: shell
-        hitEffect: blastExplosion
+        hitEffect: {
+        type: ExplosionEffect
+        lifetime: 25
+        waveRad: 55
+        waveLife: 15
+        waveColor: f3e979
+        sparks: 8
+        sparkRad: 60
+        sparkStroke: 2
+        sparkLen: 5
+        smokes: 8
+        smokeRad: 60
+        smokeSize: 5
+        smokeColor: f3e97970
+        }
         knockback: 0.9
         width: 15
         height: 15
@@ -130,7 +185,11 @@ ammoTypes: {
         ammoMultiplier: 6
         splashDamageRadius: 55
         splashDamage: 25
-        reloadMultiplier: 1.3
+        reloadMultiplier: 1.4
+        backColor: f3e979
+        trailColor: f3e979
+        frontColor: ffffff
+        hitColor: f3e979
         lightning: 2
         lightningLength: 7
     }

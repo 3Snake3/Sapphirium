@@ -12,6 +12,9 @@ ammoTypes: {
         hitEffect: flakExplosion
         splashDamage: 37
         splashDamageRadius: 24
+        frontColor: f5e0cc
+        backColor: d8887e
+        hitColor: d8887e
     }
     lead: {
         type: FlakBulletType
@@ -25,6 +28,9 @@ ammoTypes: {
         hitEffect: flakExplosion
         splashDamage: 42
         splashDamageRadius: 15
+        frontColor: ad9bd4
+        backColor: 6e687d
+        hitColor: 6e687d
     }
     metaglass: {
         type: FlakBulletType
@@ -37,6 +43,9 @@ ammoTypes: {
         width: 6
         height: 8
         hitEffect: flakExplosion
+        backColor: b9c9df
+        hitColor: b9c9df
+        frontColor: ffffff
         splashDamage: 45
         splashDamageRadius: 20
         fragBullet: {
@@ -48,9 +57,11 @@ ammoTypes: {
             height: 12
             shrinkY: 1
             lifetime: 20
-            backColor: 454545
-            frontColor: ffffff
+            backColor: b9c9df
+        hitColor: b9c9df
+        frontColor: ffffff
             despawnEffect: none
+            collidesGround: false
         }
         fragBullets: 6
     }
@@ -68,39 +79,27 @@ ammoTypes: {
         hitEffect: flakExplosion
         splashDamage: 50
         splashDamageRadius: 20
+        backColor: c1befa
+        hitColor: c1befa
+        frontColor: ffffff
         fragBullet: {
             type: BasicBulletType
             sprite: bullet
             speed: 3
             damage: 5
-            status: wet
-            statusDuration: 10
+            status: freezing
             width: 5
             height: 12
             shrinkY: 1
             lifetime: 20
-            backColor: 454545
+            backColor: c1befa
+            hitColor: c1befa
             frontColor: ffffff
             despawnEffect: none
+            collidesGround: false
         }
         fragBullets: 6
     }
-    charged-lead: {
-        type: FlakBulletType
-        speed: 4
-        damage: 4
-        lifetime: 60
-        ammoMultiplier: 6
-        shootEffect: shootSmall
-        reloadMultiplier: 0.6
-        width: 7
-        height: 9
-        hitEffect: flakExplosion
-        splashDamage: 65
-        splashDamageRadius: 25
-        backColor: f3e979
-        frontColor: ffffff
-        lightning: 2
-        lightningLength: 6
+}ningLength: 6
     }
 }

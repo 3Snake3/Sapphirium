@@ -7,6 +7,29 @@ ammoTypes: {
         height: 9
         lifetime: 60
         ammoMultiplier: 2
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        frontColor: eac1a8
+        backColor: d39169
+        hitColor: d39169
+        trailColor: d39169
+    }
+    dense-alloy: {
+        type: BasicBulletType
+        speed: 4
+        damage: 14
+        width: 7
+        height: 11
+        lifetime: 60
+        ammoMultiplier: 2
+        reloadMultiplier: 1.35
+        pierceArmor: true
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        frontColor: b0b9bf
+        backColor: 6e7080
+        hitColor: 6e7080
+        trailColor: 6e7080
     }
     graphite: {
         type: BasicBulletType
@@ -16,19 +39,29 @@ ammoTypes: {
         height: 12
         lifetime: 60
         ammoMultiplier: 4
-        reloadMultiplier: 0.6
+        rangeChange: 32
+        frontColor: dae1ee
+        backColor: 7d89d8
+        hitColor: 7d89d8
+        trailColor: 7d89d8
     }
     silicon: {
         type: BasicBulletType
         speed: 3
         damage: 15
         sprite: bullet
-        width: 7
-        height: 9
+        width: 8
+        height: 10
         lifetime: 60
         ammoMultiplier: 5
-        homingPower: 1
+        homingPower: 0.2
+        trailLength: 5
+        trailWidth: 1.5
         reloadMultiplier: 1.5
+        frontColor: dae1ee
+        backColor: 7d89d8
+        hitColor: 7d89d8
+        trailColor: 7d89d8
     }
     pyratite: {
         type: BasicBulletType
@@ -36,6 +69,7 @@ ammoTypes: {
         damage: 18
         frontColor: f8ad42
         backColor: f68021
+        hitColor: f68021
         status: burning
         hitEffect: {
             type: MultiEffect
@@ -48,8 +82,6 @@ ammoTypes: {
         height: 12
         lifetime: 60
         ammoMultiplier: 5
-        homingPower: 1
-        reloadMultiplier: 1.5
     }
     thorium: {
         type: BasicBulletType
@@ -62,28 +94,33 @@ ammoTypes: {
         smokeEffect: shootBigSmoke
         lifetime: 60
         ammoMultiplier: 4
+        frontColor: ffffff
+        backColor: f595be
+        hitColor: f595be
+        trailColor: f595be
     }
     creostone: {
         type: BasicBulletType
         speed: 3
         damage: 28
-        sprite: shell
-        width: 11
-        height: 14
-        shootEffect: shootBig
-        smokeEffect: shootBigSmoke
-        hitEffect: {
-            type: MultiEffect
-            effects: [hitBulletSmall, blastExplosion]
-        }
+        splashDamageRadius: 22
+        splashDamage: 22
+        sprite: bullet
+        width: 9
+        height: 11
         lifetime: 60
-        ammoMultiplier: 4
-        reloadMultiplier: 0.6
-        status: super-melting
-        statusDuration: 20
-        splashDamage: 12
-        splashDamageRadius: 15
-        pierce: true
-        pierceCap: 1
+        ammoMultiplier: 6
+        homingPower: 0.3
+        trailLength: 7
+        trailWidth: 1.8
+        reloadMultiplier: 0.7
+        rangeChange: 40
+        frontColor: ffb380
+        backColor: eb8778
+        hitColor: eb8778
+        trailColor: eb8778
+        status: small-flaming
+        hitEffect: [hitBulletColor, blastExplosion]
+        despawnEffect: [hitBulletColor, blastExplosion]
     }
 }

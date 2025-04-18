@@ -18,15 +18,16 @@ ammoTypes: {
     }
     surge-stone: {
         type: ShrapnelBulletType
-        length: 90
+        length: 75
         damage: 160
         ammoMultiplier: 6
         width: 18
-        reloadMultiplier: 0.8
+        reloadMultiplier: 1.2
+        rangeChange: -20
         toColor: f3e979
         shootEffect: lightningShoot
         smokeEffect: lightningShoot
-        status: shocked
+        status: overload
         statusDuration: 220
         fragBullets: 1
         fragRandomSpread: 0

@@ -13,6 +13,10 @@ hitEffect: blastExplosion
 despawnEffect: blastExplosion
 status: blasted
 statusDuration: 60
+frontColor: eeab89
+        backColor: e9665b
+        hitColor: e9665b
+        trailColor: e9665b
 }
 pyratite: {
 type: MissileBulletType
@@ -46,6 +50,10 @@ despawnEffect: blastExplosion
 lightningDamage: 10
 lightning: 2
 lightningLength: 10
+backColor: f3e979
+        trailColor: f3e979
+        frontColor: ffffff
+        hitColor: f3e979
 }
 tinorium: {
 type: MissileBulletType

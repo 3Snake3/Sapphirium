@@ -12,6 +12,11 @@ ammoTypes: {
         hitSize: 4.8
         reloadMultiplier: 1.7
         ammoMultiplier: 4
+        backColor: 7d89d8
+        hitColor: 7d89d8
+        trailColor: 7d89d8
+        frontColor: dae1ee
+        despawnEffect: hitBulletColor
     }
     pyratite: {
         type: BasicBulletType
@@ -21,6 +26,7 @@ ammoTypes: {
         height: 21
         frontColor: f8ad42
         backColor: f68021
+        hitColor: f595be
         hitEffect: {
             type: MultiEffect
             effects: [hitBulletSmall, fireHit]
@@ -47,37 +53,56 @@ ammoTypes: {
         pierceBuilding: true
         pierceCap: 2
         hitSize: 5
+        frontColor: ffffff
+        backColor: f595be
+        hitColor: f595be
+        despawnEffect: hitBulletColor
     }
     creostone: {
         type: BasicBulletType
-        speed: 8
-        damage: 80
-        splashDamage: 15
-        splashDamageRadius: 25
-        hitEffect: {
-            type: MultiEffect
-            effects: [hitBulletSmall, blastExplosion]
-        }
-        width: 17
-        height: 22
-        knockback: 0.8
+        speed: 7
+        damage: 84
+        lifetime: 45
+        width: 16
+        height: 21
+        trailLength: 10
+        trailWidth: 3
         reloadMultiplier: 0.7
+        rangeChange: 24
+        frontColor: ffb380
+        backColor: eb8778
+        hitColor: eb8778
+        trailColor: eb8778
+        status: small-flaming
+        hitEffect: [hitBulletColor, blastExplosion]
+        despawnEffect: [hitBulletColor, blastExplosion]
+        knockback: 0.8
+        ammoMultiplier: 5
+        homingPower: 0.3
+        splashDamage: 32
+        splashDamageRadius: 25
         shootEffect: shootBig
         pierceBuilding: true
-        pierceCap: 2
-        status: super-melting
+        pierceCap: 3
+        hitSize: 5
     }
     surge-stone: {
         type: BasicBulletType
         speed: 8
-        damage: 90
+        damage: 120
+        reloadMultiplier: 1.2
+        rangeChange: -48
+        lifetime: 26.5
         width: 17
         height: 22
-        knockback: 0.8
+        knockback: 1
         shootEffect: shootBig
-        pierceBuilding: true
-        pierceCap: 2
-        lightning: 2
+        lightning: 3
         lightningLength: 7
+        backColor: f3e979
+        trailColor: f3e979
+        frontColor: ffffff
+        hitColor: f3e979
+        despawnEffect: hitBulletColor
     }
 }
