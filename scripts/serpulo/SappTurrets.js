@@ -1192,7 +1192,6 @@ const globiumLaser = extend(LaserBulletType, {
 	lightningSpacing: 30,
 	lightningLength: 4,
 	lightningLengthRand: 7,
-	collidesAir: false,
 	width: 24,
 	lightningDamage: 25,
 	lightningAngleRand: 40,
@@ -1214,7 +1213,6 @@ const globiumBall = extend(BasicBulletType, 5, 0, "circle-bullet", {
 	splashDamagePierce: true,
 	despawnSound: Sounds.laserblast,
 	hitSound: Sounds.none,
-	collidesAir: false,
 	width: 12,
 	height: 12,
 	trailWidth: 4,
@@ -1259,7 +1257,6 @@ const surgeLaser = extend(LaserBulletType, {
 	lightningSpacing: 30,
 	lightningLength: 4,
 	lightningLengthRand: 10,
-	collidesAir: false,
 	width: 30,
 	lightningDamage: 40,
 	lightningAngleRand: 40,
@@ -1281,7 +1278,6 @@ const surgeBall = extend(BasicBulletType, 5, 0, "circle-bullet", {
 	splashDamagePierce: true,
 	despawnSound: Sounds.laserblast,
 	hitSound: Sounds.none,
-	collidesAir: false,
 	width: 12,
 	height: 12,
 	trailWidth: 4,
@@ -1324,7 +1320,6 @@ const pierceBlow = extend(BasicBulletType, 5, 0, "circle-bullet", {
 	splashDamagePierce: true,
 	despawnSound: Sounds.laserblast,
 	hitSound: Sounds.laserblast,
-	collidesAir: false,
 	width: 12,
 	height: 12,
 	trailWidth: 4,
@@ -1397,7 +1392,7 @@ var unlock = extend(StatusEffect, "unlock", {
 });
 
 const pierce = extend(ItemTurret, "pierce", {
-    targetAir: false,
+    
     setStats(){
 	this.super$setStats();
 	this.stats.add(abilitiesFunction, StatValues.abilities(pierceOverdriveValue));
@@ -1441,7 +1436,7 @@ pierce.buildType = () => extend(ItemTurret.ItemTurretBuild, pierce, {
 				}
 			});
 			Units.nearby(this.team, this.x, this.y, 150, unit => {
-				if(unit.checkTarget(false, true)){
+				
 				if(Mathf.chance(0.99)){
 				unit.apply(StatusEffects.overclock, 300);
 				surgeEmpSpark.at(unit.x, unit.y, this.angleTo(unit), Pal.surge);
@@ -1453,7 +1448,7 @@ pierce.buildType = () => extend(ItemTurret.ItemTurretBuild, pierce, {
 				accentEmpSpark.at(unit.x, unit.y, this.angleTo(unit), Pal.surge);
                 Fx.chainEmp.at(this.x, this.y, 0, Pal.accent, unit);
                 }
-                }
+                
 			});
 			}
             if(this.creload == 380){

@@ -16,15 +16,17 @@ length: 500
 hitShake: 6
 ammoMultiplier: 1
 }
+
 globium: {
 type: PointBulletType
+
 spawnBullets: [
 {
 type: ShrapnelBulletType
 serrations: 0
 width: 13
 length: 85
-damage: 34
+damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: 90
@@ -35,7 +37,7 @@ type: ShrapnelBulletType
 serrations: 0
 width: 13
 length: 85
-damage: 34
+damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: -90
@@ -46,7 +48,7 @@ type: ShrapnelBulletType
 serrations: 0
 width: 13
 length: 50
-damage: 34
+damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: 20
@@ -57,7 +59,7 @@ type: ShrapnelBulletType
 serrations: 0
 width: 13
 length: 50
-damage: 34
+damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: -20
@@ -68,7 +70,7 @@ type: ShrapnelBulletType
 serrations: 0
 width: 13
 length: 50
-damage: 34
+damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: 45
@@ -79,7 +81,7 @@ type: ShrapnelBulletType
 serrations: 0
 width: 13
 length: 50
-damage: 34
+damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: -45
@@ -90,7 +92,7 @@ type: ShrapnelBulletType
 serrations: 0
 width: 13
 length: 50
-damage: 34
+damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: 135
@@ -101,7 +103,7 @@ type: ShrapnelBulletType
 serrations: 0
 width: 13
 length: 50
-damage: 34
+damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: -135
@@ -112,7 +114,7 @@ type: ShrapnelBulletType
 serrations: 0
 width: 13
 length: 25
-damage: 34
+damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: 180
@@ -151,24 +153,6 @@ sizeTo: 0
 
 hitEffect: [
 {
-type: RadialEffect
-rotationSpacing: 50
-amount: 5
-effect: {
-colorFrom: a9d8ff
-colorTo: a9d8ff
-sizeFrom: 30
-sizeTo: 0
-interp: pow5Out
-sizeInterp: pow5In
-lifetime: 20
-clip: 200
-particles: 1
-length: 10
-region: sapphirium-triangle
-}
-}
-{
 type: WaveEffect
 lifetime: 20
 strokeFrom: 2.2
@@ -185,7 +169,7 @@ sizeTo: 0
 particles: 1
 length: 0
 region: sapphirium-rhombus
-sizeFrom: 24
+sizeFrom: 16
 sizeTo: 0
 interp: pow5Out
 sizeInterp: pow5In
@@ -196,16 +180,206 @@ colorTo: a9d8ff
 }
 ]
 
-fragBullets: 3
+fragBullets: 1
 fragRandomSpread: 50
 fragBullet: {
+speed: 0
+damage: 0
+width: 10
+height: 10
+backColor: a9d8ff
+frontColor: a9d8ff
+collidesTiles: false
+hittable: false
+reflectable: false
+absorbable: false
+hitEffect: none
+despawnEffect: none
+lifetime: 240
+sticky: true
+spawnBullets: [
+{
 type: ShrapnelBulletType
 serrations: 0
-width: 23
-length: 80
+width: 13
+length: 30
 damage: 34
 fromColor: a9d8ff
 toColor: a9d8ff
+angleOffset: 90
+lifetime: 24
+sticky: true
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 30
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: -90
+lifetime: 24
+sticky: true
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 30
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: 135
+lifetime: 24
+sticky: true
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 30
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: -135
+lifetime: 24
+sticky: true
+}
+]
+
+intervalBullets: 1
+bulletInterval: 60
+intervalDelay: 60
+intervalBullet: {
+speed: 0
+damage: 0
+width: 0
+height: 0
+collidesTiles: false
+hittable: false
+reflectable: false
+absorbable: false
+hitEffect: none
+despawnEffect: none
+lifetime: 60
+sticky: true
+spawnBullets: [
+{
+speed: 0
+damage: 0
+width: 0
+height: 0
+collidesTiles: false
+hittable: false
+reflectable: false
+absorbable: false
+hitEffect: none
+despawnEffect: [
+{
+type: WaveEffect
+lifetime: 20
+strokeFrom: 2.2
+strokeTo: 0
+colorFrom: a9d8ff
+colorTo: a9d8ff
+interp: pow3In
+lightInterp: pow3Out
+lightOpacity: 0.9
+sizeFrom: 30
+sizeTo: 0
+}
+{
+type: WaveEffect
+lifetime: 20
+strokeFrom: 2.2
+strokeTo: 0
+colorFrom: a9d8ff
+colorTo: a9d8ff
+interp: pow3In
+lightInterp: pow3Out
+lightOpacity: 0.9
+sizeFrom: 15
+sizeTo: 0
+}
+]
+lifetime: 1
+sticky: true
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 40
+damage: 15
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: 90
+lifetime: 24
+sticky: true
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 40
+damage: 15
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: -90
+lifetime: 24
+sticky: true
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 30
+damage: 15
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: 45
+lifetime: 24
+sticky: true
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 30
+damage: 15
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: -45
+lifetime: 24
+sticky: true
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 30
+damage: 15
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: 135
+lifetime: 24
+sticky: true
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 30
+damage: 15
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: -135
+lifetime: 24
+sticky: true
+}
+]
+}
 }
 smokeEffect: smokeCloud
 trailEffect: {
@@ -238,7 +412,7 @@ sizeTo: 0
 particles: 1
 length: 0
 region: sapphirium-rhombus
-sizeFrom: 28
+sizeFrom: 16
 sizeTo: 0
 interp: pow5Out
 sizeInterp: pow5In
