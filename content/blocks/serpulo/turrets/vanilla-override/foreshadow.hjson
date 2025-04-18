@@ -18,86 +18,184 @@ ammoMultiplier: 1
 }
 globium: {
 type: PointBulletType
+spawnBullets: [
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 85
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: 90
+lifetime: 24
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 85
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: -90
+lifetime: 24
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 50
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: 20
+lifetime: 24
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 50
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: -20
+lifetime: 24
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 50
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: 45
+lifetime: 24
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 50
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: -45
+lifetime: 24
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 50
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: 135
+lifetime: 24
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 50
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: -135
+lifetime: 24
+}
+{
+type: ShrapnelBulletType
+serrations: 0
+width: 13
+length: 25
+damage: 34
+fromColor: a9d8ff
+toColor: a9d8ff
+angleOffset: 180
+lifetime: 24
+}
+]
+
 shootEffect: [
 {
-lifetime: 24
-particles: 1
-region: sapphirium-rail-shoot
-sizeFrom: 45
-sizeTo: 0
-colorFrom: 80a8ff
-colorTo: 80a8ff
-interp: pow2Out
-sizeInterp: pow2Out
-length: 0
-}
-{
-lifetime: 24
-particles: 1
-region: sapphirium-thicker-rail
-sizeFrom: 45
-sizeTo: 0
-offsetX: 5
-colorFrom: 80a8ff
-colorTo: 80a8ff
-interp: pow2Out
-sizeInterp: pow2Out
-length: 0
-}
-{
-lifetime: 24
-particles: 1
-region: sapphirium-thicker-rail
-sizeFrom: 45
-sizeTo: 0
-offsetX: -5
-colorFrom: 80a8ff
-colorTo: 80a8ff
-interp: pow3Out
-sizeInterp: pow3Out
-length: 0
-}
-{
 type: WaveEffect
-interp: pow3Out
-lightInterp: pow3In
-sizeFrom: 40
-sizeTo: 0
 lifetime: 24
 strokeFrom: 3.2
 strokeTo: 0
-colorFrom: 80a8ff
-colorTo: 80a8ff
+colorFrom: a9d8ff
+colorTo: a9d8ff
+interp: pow3In
+lightInterp: pow3Out
+lightOpacity: 0.9
+sizeFrom: 50
+sizeTo: 0
+}
+{
+type: WaveEffect
+lifetime: 24
+strokeFrom: 3.2
+strokeTo: 0
+colorFrom: a9d8ff
+colorTo: a9d8ff
+interp: pow3In
+lightInterp: pow3Out
+lightOpacity: 0.9
+sizeFrom: 30
+sizeTo: 0
 }
 ]
 
 hitEffect: [
 {
-type: WaveEffect
-interp: pow3Out
-lightInterp: pow3In
-sizeFrom: 40
+type: RadialEffect
+rotationSpacing: 50
+amount: 5
+effect: {
+colorFrom: a9d8ff
+colorTo: a9d8ff
+sizeFrom: 30
 sizeTo: 0
-lifetime: 24
-strokeFrom: 2.2
-strokeTo: 0
-colorFrom: 80a8ff
-colorTo: 80a8ff
+interp: pow5Out
+sizeInterp: pow5In
+lifetime: 20
+clip: 200
+particles: 1
+length: 10
+region: sapphirium-triangle
+}
 }
 {
-lifetime: 24
-particles: 1
-region: sapphirium-thicker-rail
-sizeFrom: 45
+type: WaveEffect
+lifetime: 20
+strokeFrom: 2.2
+strokeTo: 0
+colorFrom: a9d8ff
+colorTo: a9d8ff
+interp: pow3In
+lightInterp: pow3Out
+lightOpacity: 0.9
+sizeFrom: 30
 sizeTo: 0
-colorFrom: 80a8ff
-colorTo: 80a8ff
-interp: pow3Out
-sizeInterp: pow3Out
-clip: 200
+}
+{
+particles: 1
 length: 0
+region: sapphirium-rhombus
+sizeFrom: 24
+sizeTo: 0
+interp: pow5Out
+sizeInterp: pow5In
+lifetime: 20
+clip: 200
+colorFrom: a9d8ff
+colorTo: a9d8ff
 }
 ]
+
 fragBullets: 3
 fragRandomSpread: 50
 fragBullet: {
@@ -106,8 +204,8 @@ serrations: 0
 width: 23
 length: 80
 damage: 34
-fromColor: 80a8ff
-toColor: 80a8ff
+fromColor: a9d8ff
+toColor: a9d8ff
 }
 smokeEffect: smokeCloud
 trailEffect: {
@@ -116,8 +214,8 @@ particles: 1
 region: sapphirium-thicker-rail2
 sizeFrom: 35
 sizeTo: 0
-colorFrom: 80a8ff
-colorTo: 80a8ff
+colorFrom: a9d8ff
+colorTo: a9d8ff
 interp: pow2Out
 sizeInterp: pow2Out
 length: 0
@@ -125,29 +223,29 @@ length: 0
 despawnEffect: [
 {
 type: WaveEffect
-interp: pow4In
-lightInterp: pow4Out
-sizeFrom: 80
-sizeTo: 0
-lifetime: 15
-clip: 100
+lifetime: 30
 strokeFrom: 4
 strokeTo: 0
-colorFrom: 80a8ff
-colorTo: 80a8ff
+colorFrom: a9d8ff
+colorTo: a9d8ff
+interp: pow3In
+lightInterp: pow3Out
+lightOpacity: 0.9
+sizeFrom: 40
+sizeTo: 0
 }
 {
-lifetime: 24
 particles: 1
-sizeFrom: 30
-clip: 100
-sizeTo: 0
-colorFrom: 80a8ff
-colorTo: 80a8ff
-interp: pow3Out
-sizeInterp: pow3Out
-region: sapphirium-rail
 length: 0
+region: sapphirium-rhombus
+sizeFrom: 28
+sizeTo: 0
+interp: pow5Out
+sizeInterp: pow5In
+lifetime: 30
+clip: 300
+colorFrom: a9d8ff
+colorTo: a9d8ff
 }
 ]
 trailSpacing: 20
@@ -159,6 +257,7 @@ ammoMultiplier: 2
 lightning: 3
 lightningDamage: 15
 lightningLength: 13
+lightningColor: a9d8ff
 rangeChange: 100
 reloadMultiplier: 0.6
 status: shock-stun

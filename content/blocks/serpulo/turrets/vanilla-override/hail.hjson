@@ -15,6 +15,7 @@ backColor: 7d89d8
         trailColor: 7d89d8
         frontColor: dae1ee
         despawnEffect: hitBulletColor
+        shootEffect: shootSmallColor
 }
 silicon: {
 type: ArtilleryBulletType
@@ -26,6 +27,7 @@ width: 11
 height: 11
 collidesTiles: false
 splashDamageRadius: 18.4
+shootEffect: shootSmallColor
 splashDamage: 33
 ammoMultiplier: 3
 homingPower: 0.08
@@ -47,6 +49,7 @@ lifetime: 80
 width: 11
 height: 11
 collidesTiles: false
+shootEffect: shootSmallColor
 splashDamageRadius: 18.4
 splashDamage: 45
 hitEffect: blastExplosion
@@ -70,6 +73,7 @@ width: 11
 height: 11
 collidesTiles: false
 splashDamageRadius: 14.7
+shootEffect: shootSmallColor
 splashDamage: 50
 reloadMultiplier: 0.9
 ammoMultiplier: 3

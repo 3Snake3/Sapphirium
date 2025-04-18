@@ -11,6 +11,7 @@ splashDamage: 45
 ammoMultiplier: 5
 hitEffect: blastExplosion
 despawnEffect: blastExplosion
+shootEffect: shootSmallColor
 status: blasted
 statusDuration: 60
 frontColor: eeab89
@@ -29,6 +30,7 @@ splashDamageRadius: 20
 splashDamage: 45
 ammoMultiplier: 5
 hitEffect: blastExplosion
+shootEffect: shootSmallColor
 status: burning
 makeFire: true
 homingPower: 0.08
@@ -47,6 +49,7 @@ splashDamage: 35
 ammoMultiplier: 4
 hitEffect: blastExplosion
 despawnEffect: blastExplosion
+shootEffect: shootSmallColor
 lightningDamage: 10
 lightning: 2
 lightningLength: 10
@@ -66,6 +69,7 @@ splashDamageRadius: 40
 splashDamage: 25
 ammoMultiplier: 4
 reloadMultiplier: 0.85
+shootEffect: shootSmallColor
 hitEffect: {
 type: ExplosionEffect
 waveRad: 40

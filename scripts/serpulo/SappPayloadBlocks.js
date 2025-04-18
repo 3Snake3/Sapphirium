@@ -35,7 +35,7 @@ const regeneration = extend(StatusEffect, "regeneration", {
 	color: Pal.heal,
 	update(unit, time){
 		this.super$update(unit, time);
-		unit.heal((unit.maxHealth * 3 / 100) * Time.delta);
+		unit.heal((unit.maxHealth * 0.05 / 100) * Time.delta);
 		},
 	setStats(){
 		this.super$setStats();
@@ -63,6 +63,7 @@ var healRhombus = extend(ParticleEffect, {
     colorTo: Pal.heal,
     lifetime: 180,
     length: 0,
+    region: "sapphirium-rhombus"
 });
 	
 var status = new Stat("status", StatCat.function);

@@ -6,7 +6,7 @@ ammoTypes: {
         width: 16
         height: 23
         knockback: 0.3
-        shootEffect: shootBig
+        shootEffect: shootBigColor
         pierceBuilding: true
         pierceCap: 2
         hitSize: 4.8
@@ -27,6 +27,7 @@ ammoTypes: {
         frontColor: f8ad42
         backColor: f68021
         hitColor: f595be
+      
         hitEffect: {
             type: MultiEffect
             effects: [hitBulletSmall, fireHit]
@@ -37,7 +38,7 @@ ammoTypes: {
         ammoMultiplier: 3
         splashDamage: 20
         splashDamageRadius: 25
-        shootEffect: shootBig
+        shootEffect: shootBigColor
         pierceBuilding: true
         pierceCap: 2
         hitSize: 5
@@ -49,7 +50,7 @@ ammoTypes: {
         width: 16
         height: 23
         knockback: 0.7
-        shootEffect: shootBig
+        shootEffect: shootBigColor
         pierceBuilding: true
         pierceCap: 2
         hitSize: 5
@@ -81,7 +82,7 @@ ammoTypes: {
         homingPower: 0.3
         splashDamage: 32
         splashDamageRadius: 25
-        shootEffect: shootBig
+        shootEffect: shootBigColor
         pierceBuilding: true
         pierceCap: 3
         hitSize: 5
@@ -96,7 +97,7 @@ ammoTypes: {
         width: 17
         height: 22
         knockback: 1
-        shootEffect: shootBig
+        shootEffect: shootBigColor
         lightning: 3
         lightningLength: 7
         backColor: f3e979

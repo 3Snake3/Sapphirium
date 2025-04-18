@@ -9,10 +9,11 @@ insulated: true
 absorbLasers: true
 category: defense
 research: tungsten-wall
+consumesPower: false
 baseColor: 98dbff
 group: walls
 hasPower: false
 hasItems: false
 hasLiquids: false
-range: 1
-healPercent: 0.03
+range: 3
+healPercent: 0.08

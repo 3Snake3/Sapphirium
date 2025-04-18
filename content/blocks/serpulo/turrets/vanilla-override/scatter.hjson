@@ -5,7 +5,7 @@ ammoTypes: {
         damage: 3
         lifetime: 60
         ammoMultiplier: 5
-        shootEffect: shootSmall
+        shootEffect: shootSmallColor
         reloadMultiplier: 0.5
         width: 6
         height: 8
@@ -22,7 +22,7 @@ ammoTypes: {
         damage: 3
         lifetime: 60
         ammoMultiplier: 4
-        shootEffect: shootSmall
+        shootEffect: shootSmallColor
         width: 6
         height: 8
         hitEffect: flakExplosion
@@ -38,7 +38,7 @@ ammoTypes: {
         damage: 3
         lifetime: 60
         ammoMultiplier: 5
-        shootEffect: shootSmall
+        shootEffect: shootSmallColor
         reloadMultiplier: 0.8
         width: 6
         height: 8
@@ -72,7 +72,7 @@ ammoTypes: {
         damage: 3
         lifetime: 60
         ammoMultiplier: 6
-        shootEffect: shootSmall
+        shootEffect: shootSmallColor
         reloadMultiplier: 0.8
         width: 6
         height: 8
@@ -100,6 +100,5 @@ ammoTypes: {
         }
         fragBullets: 6
     }
-}ningLength: 6
-    }
+}
 }

@@ -15,6 +15,7 @@ ammoTypes: {
         trailColor: 7d89d8
         frontColor: dae1ee
         despawnEffect: hitBulletColor
+        shootEffect: shootBigColor
     }
     silicon: {
         type: ArtilleryBulletType
@@ -78,6 +79,7 @@ ammoTypes: {
         frontColor: eeab89
         backColor: e9665b
         hitColor: e9665b
+        shootEffect: shootBigColor
         trailColor: e9665b
         ammoMultiplier: 4
         despawnEffect: hitBulletColor
@@ -94,6 +96,7 @@ ammoTypes: {
         lifetime: 80
         collidesTiles: false
         splashDamageRadius: 26.25
+        shootEffect: shootBigColor
         splashDamage: 45
         fragBullet: {
         type: BasicBulletType
@@ -121,6 +124,7 @@ ammoTypes: {
         speed: 2
         damage: 24
         sprite: shell
+        shootEffect: shootBigColor
         hitEffect: {
         type: ExplosionEffect
         lifetime: 25
@@ -162,6 +166,7 @@ ammoTypes: {
         speed: 1.5
         damage: 65
         sprite: shell
+        shootEffect: shootBigColor
         hitEffect: {
         type: ExplosionEffect
         lifetime: 25

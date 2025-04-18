@@ -9,6 +9,7 @@ ammoTypes: {
         ammoMultiplier: 2
         hitEffect: hitBulletColor
         despawnEffect: hitBulletColor
+        shootEffect: shootSmallColor
         frontColor: eac1a8
         backColor: d39169
         hitColor: d39169
@@ -16,6 +17,7 @@ ammoTypes: {
     }
     dense-alloy: {
         type: BasicBulletType
+        shootEffect: shootSmallColor
         speed: 4
         damage: 14
         width: 7
@@ -68,6 +70,7 @@ ammoTypes: {
         speed: 3.2
         damage: 18
         frontColor: f8ad42
+        shootEffect: shootSmallColor
         backColor: f68021
         hitColor: f68021
         status: burning
@@ -85,6 +88,7 @@ ammoTypes: {
     }
     thorium: {
         type: BasicBulletType
+        shootEffect: shootSmallColor
         speed: 4
         damage: 29
         sprite: bullet
@@ -102,6 +106,7 @@ ammoTypes: {
     creostone: {
         type: BasicBulletType
         speed: 3
+        shootEffect: shootSmallColor
         damage: 28
         splashDamageRadius: 22
         splashDamage: 22

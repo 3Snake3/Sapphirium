@@ -4,13 +4,16 @@ ammoTypes: {
         speed: 4
         damage: 9
         ammoMultiplier: 3
-        shootEffect: shootSmall
+        shootEffect: shootSmallColor
         reloadMultiplier: 0.8
         width: 6
         height: 8
         hitEffect: flakExplosion
         splashDamage: 48
         splashDamageRadius: 25
+        backColor: b9c9df
+        hitColor: b9c9df
+        frontColor: ffffff
 
         fragBullet: {
             type: BasicBulletType
@@ -21,21 +24,27 @@ ammoTypes: {
             sprite: bullet
             shrinkY: 1
             lifetime: 20
-            backColor: 454545
-            frontColor: ffffff
+            backColor: b9c9df
+        hitColor: b9c9df
+        frontColor: ffffff
             despawnEffect: none
         }
         fragBullets: 4
         explodeRange: 20
         collidesGround: true
+        despawnEffect: hitBulletColor
     }
     dense-alloy: {
         type: FlakBulletType
         speed: 4
         damage: 7
         ammoMultiplier: 2
-        shootEffect: shootSmall
+        shootEffect: shootSmallColor
+        backColor: 6e7080
+        hitColor: 6e7080
+        frontColor: b0b9bf
         reloadMultiplier: 1.15
+        pierceArmor: true
         width: 6
         height: 8
         hitEffect: flakExplosion
@@ -43,13 +52,17 @@ ammoTypes: {
         splashDamageRadius: 32
         explodeRange: 30
         collidesGround: true
+        despawnEffect: hitBulletColor
     }
     ice-cube: {
         type: FlakBulletType
         speed: 4
         damage: 9
         ammoMultiplier: 2
-        shootEffect: shootSmall
+        shootEffect: shootSmallColor
+        backColor: c1befa
+        hitColor: c1befa
+        frontColor: ffffff
         reloadMultiplier: 1.25
         width: 7
         height: 9
@@ -66,7 +79,7 @@ ammoTypes: {
             height: 14
             shrinkY: 1
             lifetime: 20
-            backColor: 00BCFF
+            backColor: c1befa
             frontColor: ffffff
             despawnEffect: none
             status: wet
@@ -75,6 +88,7 @@ ammoTypes: {
         fragBullets: 4
         explodeRange: 20
         collidesGround: true
+        despawnEffect: hitBulletColor
     }
     blast-compound: {
         type: FlakBulletType
@@ -87,6 +101,10 @@ ammoTypes: {
         collidesGround: true
         status: blasted
         statusDuration: 60
+        backColor: e9665b
+        hitColor: e9665b
+        frontColor: eeab89
+        despawnEffect: hitBulletColor
     }
     plastanium: {
         type: FlakBulletType
@@ -110,9 +128,11 @@ ammoTypes: {
         fragBullets: 6
         hitEffect: plasticExplosion
         backColor: d8d97f
+        hitColor: d8d97f
         frontColor: fffac6
         shootEffect: shootBig
         collidesGround: true
+        despawnEffect: hitBulletColor
     }
     surge-alloy: {
         type: FlakBulletType
@@ -125,5 +145,9 @@ ammoTypes: {
         shootEffect: shootBig
         ammoMultiplier: 5
         collidesGround: true
+        backColor: f3e979
+        hitColor: f3e979
+        frontColor: ffffff
+        despawnEffect: hitBulletColor
     }
 }
