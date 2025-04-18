@@ -181,7 +181,9 @@ const rampageDeath = new MultiEffect(
                    ]
                })
           );
-const rampage = extend(ErekirUnitType, "rampage", {});
+const rampage = extend(ErekirUnitType, "rampage", {
+deathExplosionEffect: rampageDeath
+});
 rampage.constructor = () => extend(LegsUnit, {});
 
 const hunt = extend(ErekirUnitType, "hunt", {});
@@ -543,7 +545,7 @@ const mawRightWeapon = extend(Weapon, "sapphirium-maw-weapon-right", {
 	recoil: -30,
 	bullet: punch2,
 	addStats(u, t){
-		this.super$addStats();
+		this.super$addStats(u, t);
 		StatValues.ammo(ObjectMap.of(u, empP)).display(t);
 		}
 });
@@ -803,7 +805,8 @@ const mawRegenAbility = extend(RegenAbility, {
    },
    addStats(t){
    	this.super$addStats(t);
-   t.add(Core.bundle.get("ability.regen.description")).wrap().width(350);
+       t.row();
+       t.add(Core.bundle.get("ability.regen.description")).wrap().width(350);
    }
 });
 
@@ -2836,6 +2839,7 @@ var differenceRepairField = extend(RepairFieldAbility, 500, 600, 60, {
 	activeEffect: repairActiveEffect,
 	addStats(t){
 		this.super$addStats(t);
+		t.row();
 		t.add(Core.bundle.get("ability." + "repairfield" + ".description")).wrap().width(350);
   },
 	localized() {
@@ -2846,6 +2850,7 @@ var differenceRepairField = extend(RepairFieldAbility, 500, 600, 60, {
 var shieldRegen = extend(ShieldRegenFieldAbility, 100, 1000, 600, 60, {
 	addStats(t){
 		this.super$addStats(t);
+		t.row();
 		t.add(Core.bundle.get("ability." + "shieldregenfield" + ".description")).wrap().width(350);
   },
 	localized() {
