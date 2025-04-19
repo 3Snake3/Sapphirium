@@ -127,5 +127,27 @@ ammoTypes: {
         status: small-flaming
         hitEffect: [hitBulletColor, blastExplosion]
         despawnEffect: [hitBulletColor, blastExplosion]
+        spawnBullets: [
+        {
+        type: BasicBulletType
+        speed: 2
+        shootEffect: shootSmallColor
+        damage: 14
+        sprite: bullet
+        width: 9
+        height: 11
+        lifetime: 20
+        homingPower: 0.3
+        trailLength: 7
+        trailWidth: 1.8
+        frontColor: ffb380
+        backColor: eb8778
+        hitColor: eb8778
+        trailColor: eb8778
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        spawnBulletRandomSpread: 45
+        }
+        ]
     }
 }

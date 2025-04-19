@@ -160,10 +160,84 @@ ammoTypes: {
         backColor: eb8778
         hitColor: eb8778
         trailColor: eb8778
+        fragBullets: 1
+        fragLifeMin: 1.3
+        fragBullet: {
+        type: ArtilleryBulletType
+        speed: 2
+        damage: 24
+        sprite: shell
+        shootEffect: shootBigColor
+        hitEffect: {
+        type: ExplosionEffect
+        lifetime: 25
+        waveRad: 37
+        waveLife: 15
+        waveColor: ffb380
+        sparks: 8
+        sparkRad: 42
+        sparkStroke: 2
+        sparkLen: 5
+        sparkColor: ffb380
+        smokes: 8
+        smokeRad: 42
+        smokeSize: 5
+        smokeColor: ffb380
+        }
+        knockback: 0.8
+        width: 15
+        height: 15
+        lifetime: 9
+        collidesTiles: false
+        ammoMultiplier: 6
+        splashDamageRadius: 37
+        splashDamage: 40
+        frontColor: ffb380
+        backColor: eb8778
+        hitColor: eb8778
+        trailColor: eb8778
+        fragBullets: 1
+        fragLifeMin: 1.3
+        fragBullet: {
+        type: ArtilleryBulletType
+        speed: 2
+        damage: 24
+        sprite: shell
+        shootEffect: shootBigColor
+        hitEffect: {
+        type: ExplosionEffect
+        lifetime: 25
+        waveRad: 37
+        waveLife: 15
+        waveColor: ffb380
+        sparks: 8
+        sparkRad: 42
+        sparkStroke: 2
+        sparkLen: 5
+        sparkColor: ffb380
+        smokes: 8
+        smokeRad: 42
+        smokeSize: 5
+        smokeColor: ffb380
+        }
+        knockback: 0.8
+        width: 15
+        height: 15
+        lifetime: 9
+        collidesTiles: false
+        ammoMultiplier: 6
+        splashDamageRadius: 37
+        splashDamage: 40
+        frontColor: ffb380
+        backColor: eb8778
+        hitColor: eb8778
+        trailColor: eb8778
+        }
+        }
     }
     surge-stone: {
         type: ArtilleryBulletType
-        speed: 1.5
+        speed: 3
         damage: 65
         sprite: shell
         shootEffect: shootBigColor
@@ -171,13 +245,14 @@ ammoTypes: {
         type: ExplosionEffect
         lifetime: 25
         waveRad: 55
-        waveLife: 15
+        waveLife: 8
         waveColor: f3e979
-        sparks: 8
+        sparks: 14
+        sparkColor: f3e979
         sparkRad: 60
         sparkStroke: 2
         sparkLen: 5
-        smokes: 8
+        smokes: 14
         smokeRad: 60
         smokeSize: 5
         smokeColor: f3e97970
@@ -185,17 +260,129 @@ ammoTypes: {
         knockback: 0.9
         width: 15
         height: 15
-        lifetime: 85
+        lifetime: 97
         collidesTiles: false
         ammoMultiplier: 6
         splashDamageRadius: 55
         splashDamage: 25
-        reloadMultiplier: 1.4
+        reloadMultiplier: 0.4
+        rangeChange: -16
         backColor: f3e979
         trailColor: f3e979
         frontColor: ffffff
         hitColor: f3e979
         lightning: 2
         lightningLength: 7
+        status: overload
+        statusDuration: 80
+        intervalBullets: 1
+        bulletInterval: 7
+        intervalBullet: {
+        type: LightningBulletType
+        damage: 16
+        lightningLength: 6
+        lightningColor: f3e979
+        }
+    }
+    tinorium: {
+        type: ArtilleryBulletType
+        speed: 3
+        damage: 40
+        width: 11
+        height: 11
+        knockback: 0.8
+        lifetime: 80
+        collidesTiles: false
+        splashDamageRadius: 24
+        splashDamage: 44
+        backColor: 6d56bf
+        hitColor: bf92f9
+        trailColor: bf92f9
+        frontColor: bf92f9
+        hitEffect: {
+type: ExplosionEffect
+waveRad: 40
+waveLife: 6
+waveStroke: 3
+waveColor: bf92f9
+smokes: 7
+smokeSize: 4
+smokeRad: 30
+smokeColor: 80808099
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 40
+waveLife: 6
+waveStroke: 3
+waveColor: bf92f9
+smokes: 7
+smokeSize: 4
+smokeRad: 30
+smokeColor: 80808099
+}
+status: sapped
+statusDuration: 180
+        shootEffect: shootBigColor
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragLifeMin: 1.4
+        fragBullet: {
+        speed: 5
+        lifetime: 1
+        damage: 0
+        collides: false
+        collidesTiles: false
+        hittable: false
+        absorbable: false
+        reflectable: false
+        sprite: sapphirium-none-bullet
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragBullet: {
+        sprite: circle-bullet
+        width: 8
+        height: 8
+        angleOffset: 180
+        shrinkY: 0
+        shrinkX: 0
+        trailLength: 10
+        trailWidth: 2.2
+        trailColor: bf92f9
+        backColor: 6d56bf
+        frontColor: bf92f9
+        hitColor: bf92f9
+        damage: 30
+        speed: 3
+        lifetime: 80
+        homingPower: 0.3
+        homingDelay: 20
+        hitEffect: {
+type: ExplosionEffect
+waveRad: 40
+waveLife: 6
+waveStroke: 3
+waveColor: bf92f9
+smokes: 7
+smokeSize: 4
+smokeRad: 30
+smokeColor: 80808099
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 40
+waveLife: 6
+waveStroke: 3
+waveColor: bf92f9
+smokes: 7
+smokeSize: 4
+smokeRad: 30
+smokeColor: 80808099
+}
+hitSound: explosion
+status: sapped
+statusDuration: 100
+        }
+        }
     }
 }

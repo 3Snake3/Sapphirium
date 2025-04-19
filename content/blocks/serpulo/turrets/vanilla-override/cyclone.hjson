@@ -69,23 +69,33 @@ ammoTypes: {
         hitEffect: flakExplosion
         splashDamage: 30
         splashDamageRadius: 25
-        status: wet
+        status: freezing
         statusDuration: 15
-        fragBullet: {
-            type: BasicBulletType
-            speed: 4
-            damage: 10
-            width: 7
-            height: 14
-            shrinkY: 1
-            lifetime: 20
-            backColor: c1befa
-            frontColor: ffffff
-            despawnEffect: none
-            status: wet
-            statusDuration: 5
+        intervalBullets: 1
+        intervalDelay: 9
+        bulletInterval: 9
+        intervalBullet: {
+        speed: 0
+        damage: 0
+        sprite: sapphirium-none-bullet
+        splashDamage: 12
+        splashDamageRadius: 36
+        status: freezing
+        statusDuration: 300
+        despawnEffect: {
+        type: ExplosionEffect
+        lifetime: 40
+        waveLife: 8
+        waveRad: 36
+        waveColor: c1befa
+        waveStroke: 1.5
+        sparks: 0
+        smokes: 5
+        smokeSize: 3.5
+        smokeRad: 36
+        smokeColor: c1befa
         }
-        fragBullets: 4
+        }
         explodeRange: 20
         collidesGround: true
         despawnEffect: hitBulletColor

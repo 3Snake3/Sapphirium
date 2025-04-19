@@ -67,8 +67,9 @@ height: 8
 shrinkY: 0
 splashDamageRadius: 40
 splashDamage: 25
-ammoMultiplier: 4
-reloadMultiplier: 0.85
+buildingDamageMultiplier: 1.4
+suppressionRange: 40
+splashDamagePierce: true
 shootEffect: shootSmallColor
 hitEffect: {
 type: ExplosionEffect

@@ -1,6 +1,6 @@
 captureWave: 44
 difficulty: 10
-sector: 264
+sector: 266
 planet: serpulo
 research: {
     parent: afterdark

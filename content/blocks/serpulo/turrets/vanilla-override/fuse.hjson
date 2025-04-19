@@ -19,24 +19,40 @@ ammoTypes: {
     surge-stone: {
         type: ShrapnelBulletType
         length: 75
-        damage: 160
+        damage: 100
         ammoMultiplier: 6
         width: 18
-        reloadMultiplier: 1.2
+        reloadMultiplier: 0.6
         rangeChange: -20
         toColor: f3e979
+        hitColor: f3e979
         shootEffect: lightningShoot
         smokeEffect: lightningShoot
         status: overload
         statusDuration: 220
-        fragBullets: 1
-        fragRandomSpread: 0
-        fragBullet: {
-            type: LightningBulletType
-            damage: 20
-            lightningLength: 10
-            lightningColor: f3e979
-            lifetime: 10
+        spawnBullets: [
+        {
+        type: ShrapnelBulletType
+        length: 95
+        damage: 100
+        angleOffset: 10
+        width: 14
+        toColor: f3e979
+        status: overload
+        hitColor: f3e979
+        statusDuration: 220
         }
+        {
+        type: ShrapnelBulletType
+        length: 95
+        damage: 100
+        angleOffset: -10
+        width: 14
+        toColor: f3e979
+        hitColor: f3e979
+        status: overload
+        statusDuration: 220
+        }
+        ]
     }
 }
