@@ -185,8 +185,9 @@ fragRandomSpread: 50
 fragBullet: {
 speed: 0
 damage: 0
-width: 10
-height: 10
+width: 18
+height: 18
+sprite: sapphirium-rhombus
 backColor: a9d8ff
 frontColor: a9d8ff
 collidesTiles: false
@@ -315,7 +316,7 @@ damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: 90
-lifetime: 24
+lifetime: 15
 sticky: true
 }
 {
@@ -327,7 +328,7 @@ damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: -90
-lifetime: 24
+lifetime: 15
 sticky: true
 }
 {
@@ -339,7 +340,7 @@ damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: 45
-lifetime: 24
+lifetime: 15
 sticky: true
 }
 {
@@ -351,7 +352,7 @@ damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: -45
-lifetime: 24
+lifetime: 15
 sticky: true
 }
 {
@@ -363,7 +364,7 @@ damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: 135
-lifetime: 24
+lifetime: 15
 sticky: true
 }
 {
@@ -375,7 +376,7 @@ damage: 15
 fromColor: a9d8ff
 toColor: a9d8ff
 angleOffset: -135
-lifetime: 24
+lifetime: 15
 sticky: true
 }
 ]
