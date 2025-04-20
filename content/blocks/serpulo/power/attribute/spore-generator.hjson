@@ -30,3 +30,4 @@ floating: true
 ambientSound: hum
 ambientSoundVolume: 0.06
 attribute: spores
+shownPlanets: [serpulo]

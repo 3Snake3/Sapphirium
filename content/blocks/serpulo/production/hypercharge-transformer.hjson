@@ -13,6 +13,7 @@ smokes: 0
 lifetime: 25
 }
 category: crafting
+shownPlanets: [serpulo]
 consumes: {
 power: 3
 liquid: surge-mass/0.3

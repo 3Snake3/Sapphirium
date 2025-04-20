@@ -15,5 +15,5 @@ envDisabled: 16
 consumes: {
     power: 1
 }
-
+shownPlanets: [serpulo]
 research: illuminator

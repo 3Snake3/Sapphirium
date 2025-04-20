@@ -109,6 +109,7 @@ requirements: [
     metaglass/15
 ]
 category: defense
+shownPlanets: [serpulo]
 research: {
     parent: cryocube-wall
 }

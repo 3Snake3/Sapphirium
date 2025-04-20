@@ -309,3 +309,4 @@ requirements: [
     carved-alloy/100
 ]
 research: multimortar
+shownPlanets: [erekir]

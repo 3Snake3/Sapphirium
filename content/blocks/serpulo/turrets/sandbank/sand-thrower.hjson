@@ -16,6 +16,7 @@ ammoTypes: {
         statusDuration: 50
         spin: 5
         hitShake: 2
+        collidesAir: false
         fragBullet: {
             type: BasicBulletType
             width: 8
@@ -25,6 +26,7 @@ ammoTypes: {
             damage: 3
             hitEffect: flakExplosion
             despawnEffect: flakExplosion
+            collidesAir: false
         }
     }
     stone: {
@@ -32,18 +34,151 @@ ammoTypes: {
         spin: 3
         width: 12
         height: 12
-        speed: 5.5
-        lifetime: 38
+        speed: 2
+        lifetime: 45
         damage: 34
+        knockback: 3
+        rangeChange: 90
         splashDamageRadius: 24
-        splashDamage: 35
-        hitEffect: blastExplosion
-        despawnEffect: blastExplosion
+        reloadMultiplier: -7.5
+        splashDamage: 66
+        hitEffect: {
+        type: ExplosionEffect
+        waveLife: 22
+        waveStroke: 3
+        waveRad: 24
+        waveColor: ffffff
+        sparks: 4
+        sparkRad: 24
+        sparkLen: 4
+        sparkStroke: 1.2
+        smokes: 8
+        smokeSize: 5
+        smokeRad: 24
+        }
+        despawnEffect: {
+        type: ExplosionEffect
+        waveLife: 22
+        waveStroke: 3
+        waveRad: 24
+        waveColor: ffffff
+        sparks: 4
+        sparkRad: 24
+        sparkLen: 4
+        sparkStroke: 1.2
+        smokes: 8
+        smokeSize: 5
+        smokeRad: 24
+        }
         hitShake: 3
         ammoMultiplier: 4
         buildingDamageMultiplier: 1.25
-        reloadMultiplier: 0.6
+        reloadMultiplier: 1.6
         hitSound: explosion
+        trailChance: 0.3
+        trailColor: a2a2a2
+        collidesAir: false
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragLifeMin: 1
+        fragVelocityMin: 1
+        fragBullet: {
+        sprite: sapphirium-silicon-shard
+        spin: 3
+        width: 12
+        height: 12
+        speed: 2
+        lifetime: 45
+        damage: 34
+        knockback: 2
+        splashDamageRadius: 24
+        splashDamage: 66
+        hitEffect: {
+        type: ExplosionEffect
+        waveLife: 22
+        waveStroke: 3
+        waveRad: 24
+        waveColor: ffffff
+        sparks: 4
+        sparkRad: 24
+        sparkLen: 4
+        sparkStroke: 1.2
+        smokes: 8
+        smokeSize: 5
+        smokeRad: 24
+        }
+        despawnEffect: {
+        type: ExplosionEffect
+        waveLife: 22
+        waveStroke: 3
+        waveRad: 24
+        waveColor: ffffff
+        sparks: 4
+        sparkRad: 24
+        sparkLen: 4
+        sparkStroke: 1.2
+        smokes: 8
+        smokeSize: 5
+        smokeRad: 24
+        }
+        hitShake: 3
+        buildingDamageMultiplier: 1.25
+        hitSound: explosion
+        trailChance: 0.3
+        trailColor: a2a2a2
+        collidesAir: false
+        fragBullets: 4
+        fragRandomSpread: 0
+        fragSpread: 20
+        fragLifeMin: 1
+        fragVelocityMin: 1
+        fragBullet: {
+        sprite: sapphirium-silicon-shard
+        spin: 3
+        width: 7
+        height: 7
+        speed: 2
+        lifetime: 45
+        damage: 12
+        knockback: 2
+        splashDamageRadius: 16
+        splashDamage: 22
+        hitEffect: {
+        type: ExplosionEffect
+        waveLife: 22
+        waveStroke: 2
+        waveRad: 16
+        waveColor: ffffff
+        sparks: 3
+        sparkRad: 16
+        sparkLen: 4
+        sparkStroke: 1.2
+        smokes: 6
+        smokeSize: 4
+        smokeRad: 16
+        }
+        despawnEffect: {
+        type: ExplosionEffect
+        waveLife: 22
+        waveStroke: 2
+        waveRad: 16
+        waveColor: ffffff
+        sparks: 3
+        sparkRad: 16
+        sparkLen: 4
+        sparkStroke: 1.2
+        smokes: 6
+        smokeSize: 4
+        smokeRad: 16
+        }
+        hitShake: 1
+        buildingDamageMultiplier: 1.25
+        hitSound: explosion
+        trailChance: 0.3
+        trailColor: a2a2a2
+        collidesAir: false
+        }
+        }
     }
 }
 reload: 12
@@ -52,7 +187,8 @@ shake: 2
 rotateSpeed: 8
 inaccuracy: 6
 range: 180
-shootSound: throw
+shootSound: artillery
+targetAir: false
 smokeEffect: {
 particles: 8
 cone: 10

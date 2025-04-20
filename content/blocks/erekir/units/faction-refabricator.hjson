@@ -29,3 +29,4 @@ research: {
 parent: hunters-refabricator
 objectives: [faith-refabricator, ghost-refabricator]
 }
+shownPlanets: [erekir]

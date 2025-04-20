@@ -28,3 +28,4 @@ consumes: {
     }
 }
 research: graphite-press
+shownPlanets: [serpulo]

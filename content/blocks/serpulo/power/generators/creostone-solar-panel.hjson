@@ -7,7 +7,7 @@ requirements: [
     silicon/230
     dense-alloy/200
 ]
-envDisabled: 16
+shownPlanets: [serpulo]
 research: {
     parent: solar-panel-large
 }

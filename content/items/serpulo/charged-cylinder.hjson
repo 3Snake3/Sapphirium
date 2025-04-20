@@ -4,4 +4,4 @@ charge: 2
 frames: 14
 transitionFrames: 14
 research: charged-ingot
-hiddenOnPlanets: [erekir]
+shownPlanets: [serpulo]r]

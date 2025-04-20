@@ -87,3 +87,4 @@ lifetime: 25
 }
 }
 destroyBulletSameTeam: true
+shownPlanets: [erekir]

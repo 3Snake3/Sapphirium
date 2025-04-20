@@ -113,3 +113,4 @@ consumes: {
     liquid: argon/0.15
 }
 research: thrust
+shownPlanets: [erekir]

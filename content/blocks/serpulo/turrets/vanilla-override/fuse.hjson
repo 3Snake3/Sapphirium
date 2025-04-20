@@ -26,32 +26,71 @@ ammoTypes: {
         rangeChange: -20
         toColor: f3e979
         hitColor: f3e979
-        shootEffect: lightningShoot
-        smokeEffect: lightningShoot
+        shootEffect: {
+        particles: 8
+        line: true
+        cone: 45
+        strokeFrom: 1.5
+        strokeTo: 0
+        lenFrom: 10
+        lenTo: 0
+        lifetime: 10
+        interp: pow3Out
+        colorFrom: f3e979
+        colorTo: f3e979
+        }
+        smokeEffect: {
+        particles: 8
+        line: true
+        strokeFrom: 1.5
+        cone: 45
+        strokeTo: 0
+        lenFrom: 10
+        lenTo: 0
+        lifetime: 10
+        interp: pow3Out
+        colorFrom: f3e979
+        colorTo: f3e979
+        }
+        hitEffect: {
+        particles: 5
+        line: true
+        strokeFrom: 1.5
+        strokeTo: 0
+        lenFrom: 6
+        lenTo: 0
+        lifetime: 25
+        interp: pow3Out
+        colorFrom: f3e979
+        colorTo: f3e979
+        cone: 15
+        }
         status: overload
         statusDuration: 220
+        spawnBulletRandomSpread: 10
         spawnBullets: [
         {
         type: ShrapnelBulletType
         length: 95
-        damage: 100
-        angleOffset: 10
+        damage: 50
         width: 14
         toColor: f3e979
         status: overload
         hitColor: f3e979
         statusDuration: 220
+        hitEffect: {
+        particles: 5
+        line: true
+        strokeFrom: 1.5
+        strokeTo: 0
+        lenFrom: 6
+        lenTo: 0
+        lifetime: 25
+        interp: pow3Out
+        colorFrom: f3e979
+        colorTo: f3e979
+        cone: 15
         }
-        {
-        type: ShrapnelBulletType
-        length: 95
-        damage: 100
-        angleOffset: -10
-        width: 14
-        toColor: f3e979
-        hitColor: f3e979
-        status: overload
-        statusDuration: 220
         }
         ]
     }

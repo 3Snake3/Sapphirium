@@ -66,7 +66,7 @@ ammoTypes: {
         fragBullets: 6
     }
     ice-cube: {
-        type: FlakBulletType
+        collidesGround: false
         status: freezing
         speed: 5
         damage: 3
@@ -83,12 +83,14 @@ ammoTypes: {
         hitColor: c1befa
         frontColor: ffffff
         intervalBullets: 1
-        bulletInterval: 9
-        intervalDelay: 9
+        bulletInterval: 21
+        intervalDelay: 20
         intervalBullet: {
         speed: 0
         damage: 0
+        lifetime: 1
         sprite: sapphirium-none-bullet
+        collidesGround: false
         splashDamage: 12
         splashDamageRadius: 32
         status: freezing
@@ -97,13 +99,13 @@ ammoTypes: {
         type: ExplosionEffect
         lifetime: 40
         waveLife: 8
-        waveRad: 32
+        waveRad: 20
         waveColor: c1befa
         waveStroke: 1.5
         sparks: 0
         smokes: 5
         smokeSize: 3.5
-        smokeRad: 32
+        smokeRad: 20
         smokeColor: c1befa
         }
         }

@@ -148,3 +148,4 @@ research: {
 parent: carbide-crucible
 objectives: [neoplasia-reactor]
 }
+shownPlanets: [erekir]

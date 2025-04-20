@@ -17,6 +17,7 @@ drawer: {
         }
     ]
 }
+shownPlanets: [serpulo]
 size: 2
 outputItem: sand/1
 craftTime: 120
@@ -59,4 +60,3 @@ requirements: [
     dense-alloy/35
     graphite/25
 ]
-envDisabled: 16

@@ -10,3 +10,4 @@ solid: true
 research: armored-liquid-container
 health: 1400
 category: liquid
+shownPlanets: [serpulo]

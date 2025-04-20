@@ -49,3 +49,4 @@ requirements: [
 size: 3
 fogRadius: 3
 research: neoplasm-converter
+shownPlanets: [erekir]

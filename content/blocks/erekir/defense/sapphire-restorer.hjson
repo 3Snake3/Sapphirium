@@ -27,3 +27,4 @@ consumes: {
 }
 category: effect
 research: regen-projector
+shownPlanets: [erekir]

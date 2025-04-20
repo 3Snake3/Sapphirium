@@ -2,3 +2,4 @@ cost: 1.2
 color: ff6e6e
 research: emerald
 hardness: 4
+shownPlanets: [serpulo, erekir]

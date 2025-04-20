@@ -16,3 +16,4 @@ buildCostMultiplier: 0.7
 unitCapModifier: 18
 researchCostMultiplier: 0.17
 research: tesla
+shownPlanets: [erekir]

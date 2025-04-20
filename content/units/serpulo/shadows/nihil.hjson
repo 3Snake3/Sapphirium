@@ -594,6 +594,8 @@ bullet: {
     frontColor: a488eb
     backColor: a488eb40
     hitColor: a488eb40
+    suppressionRange: 40
+    suppressionDuration: 300
 }
 }
 ]
@@ -601,6 +603,14 @@ abilities: [
     {
         type: RegenAbility
         amount: 5
+    }
+    {
+    type: SuppressionFieldAbility
+    color: 25262e
+    particleColor: 25262e
+    effectColor: 25262e
+    orbRadius: -1
+    range: 50
     }
 ]
 research: { 

@@ -68,7 +68,7 @@ type: ArtilleryBulletType
 speed: 2.7
 damage: 37
 knockback: 1
-lifetime: 45
+lifetime: 22.5
 width: 11
 height: 11
 collidesTiles: false
@@ -88,7 +88,7 @@ type: ArtilleryBulletType
 speed: 2.7
 damage: 37
 knockback: 1
-lifetime: 30
+lifetime: 15
 width: 11
 height: 11
 collidesTiles: false
@@ -108,7 +108,7 @@ type: ArtilleryBulletType
 speed: 2.7
 damage: 37
 knockback: 1
-lifetime: 6
+lifetime: 10
 width: 11
 height: 11
 collidesTiles: false

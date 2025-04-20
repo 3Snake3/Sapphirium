@@ -10,3 +10,4 @@ solid: true
 research: liquid-container
 health: 900
 category: liquid
+shownPlanets: [serpulo]

@@ -71,6 +71,7 @@ research: {
         }
     ]
 }
+shownPlanets: [serpulo]
 requirements: [
     dense-alloy/120
     thorium/120

@@ -33,3 +33,4 @@ destroyEffect: {
     sparks: 6
     smokes: 0
 }
+shownPlanets: [serpulo]

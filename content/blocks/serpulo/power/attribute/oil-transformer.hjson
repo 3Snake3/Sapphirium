@@ -31,3 +31,4 @@ size: 3
 ambientSound: hum
 ambientSoundVolume: 0.06
 attribute: oil
+shownPlanets: [serpulo]

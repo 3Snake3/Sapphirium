@@ -407,3 +407,4 @@ cooldownTime: 150
 shake: 6
 size: 5
 research: sorrow
+shownPlanets: [erekir]

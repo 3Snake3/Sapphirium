@@ -25,7 +25,7 @@ requirements: [
     titanium/120
     silicon/100
 ]
-envDisabled: 16
+shownPlanets: [serpulo]
 outputLiquid: ledonite-liquid/0.4
 craftTime: 120
 size: 3

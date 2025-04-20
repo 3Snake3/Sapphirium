@@ -48,10 +48,9 @@ type: DrawDefault
     }
 ]
 hasLiquids: true
-liquidCapacity: 20
-fogRadius: 3
-research: plasma-bore
+shownPlanets: [erekir]
 outputLiquid: argon/0.01
 liquidCapacity: 20
 fogRadius: 3
+research: plasma-boregRadius: 3
 research: plasma-bore

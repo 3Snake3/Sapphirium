@@ -27,3 +27,4 @@ consumes: {
 category: units
 size: 5
 research: prime-refabricator
+shownPlanets: [erekir]

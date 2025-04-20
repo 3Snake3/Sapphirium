@@ -52,6 +52,7 @@ liquidCapacity: 120
 rotate: false
 solid: true
 category: crafting
+shownPlanets: [serpulo]
 research: {
     parent: cryofluid-mixer
     objectives: [

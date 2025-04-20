@@ -10,5 +10,5 @@ requirements: [
     globium/2
     plastanium/1
 ]
-
+shownPlanets: [serpulo]
 research: creostone-conveyor

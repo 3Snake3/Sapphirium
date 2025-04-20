@@ -17,3 +17,4 @@ researchCostMultiplier: 0.07
 research: {
     parent: core-bastion
 }
+shownPlanets: [erekir]

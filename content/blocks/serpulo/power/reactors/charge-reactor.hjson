@@ -82,6 +82,7 @@ itemDuration: 140
 ambientSound: pulse
 ambientSoundVolume: 0.08
 liquidCapacity: 92
+shownPlanets: [serpulo]
 consumes: {
     power: 33.3333333
     items: {

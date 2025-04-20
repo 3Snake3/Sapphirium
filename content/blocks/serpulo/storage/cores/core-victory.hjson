@@ -18,3 +18,4 @@ research: {
     parent: core-ocean
     objectives: [core-nucleus]
 }
+shownPlanets: [serpulo]

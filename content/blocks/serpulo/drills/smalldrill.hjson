@@ -11,3 +11,4 @@ requirements: [
 canOverdrive: false
 research: core-shard
 alwaysUnlocked: true
+shownPlanets: [serpulo]

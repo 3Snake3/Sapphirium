@@ -193,3 +193,4 @@ recoil: 3
 shake: 3
 scaledHealth: 240
 research: titan
+shownPlanets: [erekir]

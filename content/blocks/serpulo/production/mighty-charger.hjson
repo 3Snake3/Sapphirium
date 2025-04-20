@@ -1,5 +1,5 @@
 category: crafting
-envDisabled: 16
+shownPlanets: [serpulo]
 consumes: {
 power: 2
 items: {

@@ -51,7 +51,7 @@ requirements: [
     globium/175
     silicon/185
 ]
-envDisabled: 16
+shownPlanets: [serpulo]
 research: {
     parent: phase-weaver
     objectives: [ledonite-mixer, tinorium-crystallizer]

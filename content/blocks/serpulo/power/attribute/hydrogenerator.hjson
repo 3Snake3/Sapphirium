@@ -31,3 +31,4 @@ size: 2
 ambientSound: hum
 ambientSoundVolume: 0.06
 attribute: water
+shownPlanets: [serpulo]

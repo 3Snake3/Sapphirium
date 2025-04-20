@@ -43,6 +43,7 @@ itemCapacity: 21
 liquidCapacity: 20
 ambientSound: smelter
 ambientSoundVolume: 0.06
+shownPlanets: [serpulo]
 consumes: {
     power: 3.5
     liquid: oil/0.2

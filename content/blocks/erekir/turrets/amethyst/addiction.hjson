@@ -89,3 +89,4 @@ range: 220
 shootCone: 3
 rotateSpeed: 1.5
 research: devotion
+shownPlanets: [erekir]

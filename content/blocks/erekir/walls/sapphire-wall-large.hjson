@@ -18,3 +18,4 @@ baseColor: 98dbff
 group: walls
 range: 3
 healPercent: 0.08
+shownPlanets: [erekir]

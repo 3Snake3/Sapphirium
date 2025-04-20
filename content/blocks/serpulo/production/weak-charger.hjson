@@ -45,6 +45,7 @@ drawer: {
 }
 size: 2
 itemCapacity: 10
+shownPlanets: [serpulo]
 outputItem: charged-lead/1
 craftTime: 60
 boostScale: 0.05

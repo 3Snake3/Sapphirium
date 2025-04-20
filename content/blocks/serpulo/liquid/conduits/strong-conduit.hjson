@@ -9,4 +9,5 @@ requirements: [
 category: liquid
 research: pulse-conduit
 leaks: false
+shownPlanets: [serpulo]
 placeableLiquid: true

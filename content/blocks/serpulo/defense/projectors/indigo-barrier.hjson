@@ -16,3 +16,4 @@ research: {
     parent: force-projector
     objectives: [globium-smelter]
 }
+shownPlanets: [serpulo]

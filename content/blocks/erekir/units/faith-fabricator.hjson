@@ -25,3 +25,4 @@ research: {
 parent: tank-fabricator
 objectives: [mech-fabricator]
 }
+shownPlanets: [erekir]

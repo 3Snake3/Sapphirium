@@ -273,3 +273,4 @@ shootCone: 5
 scaledHealth: 190
 rotateSpeed: 2.8
 research: crackle
+shownPlanets: [erekir]

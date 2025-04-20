@@ -20,3 +20,4 @@ requirements: [
     silicon/15
     charged-stick/30
 ]
+shownPlanets: [serpulo]

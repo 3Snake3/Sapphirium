@@ -25,3 +25,4 @@ research: {
     parent: dense-smelter
     objectives: [creotite-mixer]
 }
+shownPlanets: [serpulo]

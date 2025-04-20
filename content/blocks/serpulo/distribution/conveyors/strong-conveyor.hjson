@@ -5,7 +5,7 @@ requirements: [
     dense-alloy/2
     stone/3
 ]
-envDisabled: 16
+shownPlanets: [serpulo]
 category: distribution
 buildVisibility: sandboxOnly
 placeableLiquid: true

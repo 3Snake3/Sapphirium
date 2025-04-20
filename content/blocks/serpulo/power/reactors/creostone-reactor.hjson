@@ -8,7 +8,7 @@ liquidCapacity: 30
 itemDuration: 360
 powerProduction: 35
 fuelItem: creostone
-
+shownPlanets: [serpulo]
 lightColor: e7221f
 heating: 0.06
 smokeThreshold: 0.5

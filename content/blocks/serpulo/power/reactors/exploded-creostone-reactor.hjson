@@ -1,8 +1,8 @@
 type: Wall
 category: power
 targetable: false
-buildVisibility: sandboxOnly
-
+buildVisibility: editorOnly
+shownPlanets: [serpulo]
 size: 3
 health: 250
 

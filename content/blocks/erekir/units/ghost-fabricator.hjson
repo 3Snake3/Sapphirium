@@ -25,3 +25,4 @@ research: {
 parent: mech-fabricator
 objectives: [ship-fabricator]
 }
+shownPlanets: [erekir]

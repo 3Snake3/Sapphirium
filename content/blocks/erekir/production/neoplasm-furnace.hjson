@@ -219,3 +219,4 @@ research: {
 parent: creostone-crucible
 objectives: [surge-crucible, neoplasia-reactor]
 }
+shownPlanets: [erekir]

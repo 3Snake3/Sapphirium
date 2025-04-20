@@ -14,6 +14,7 @@ requirements: [
     phase-fabric/12000
     charged-ingot/7000
 ]
+shownPlanets: [serpulo]
 research: {
     parent: core-victory
     objectives: [core-cage]

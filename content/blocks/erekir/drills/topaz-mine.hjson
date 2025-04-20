@@ -12,6 +12,7 @@ outputItems: [
 ]
 size: 3
 hasLiquids: true
+shownPlanets: [erekir]
 hasItems: true
 hasPower: true
 craftEffect: {

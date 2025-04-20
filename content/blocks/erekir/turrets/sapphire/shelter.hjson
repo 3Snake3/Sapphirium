@@ -227,3 +227,4 @@ ammoTypes: {
 }
 size: 5
 research: crackle
+shownPlanets: [erekir]

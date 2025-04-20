@@ -10,3 +10,4 @@ size: 2
 absorbLasers: true
 category: defense
 research: carved-wall-large
+shownPlanets: [erekir]

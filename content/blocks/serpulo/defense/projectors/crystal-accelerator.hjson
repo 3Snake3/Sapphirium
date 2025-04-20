@@ -12,7 +12,7 @@ size: 3
 health: 825
 range: 112
 baseColor: d94848
-
+shownPlanets: [serpulo]
 consumes: {
     power: 18
     items: {

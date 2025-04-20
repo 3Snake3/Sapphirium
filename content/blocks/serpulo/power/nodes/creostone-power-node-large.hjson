@@ -15,5 +15,5 @@ requirements: [
     metaglass/5
     creostone/5
 ]
-
+shownPlanets: [serpulo]
 research: creostone-power-node

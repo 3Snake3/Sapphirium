@@ -62,5 +62,6 @@ research: {
         }
     ]
 }
+shownPlanets: [serpulo]
 attribute: oil
 boostScale: 0.075

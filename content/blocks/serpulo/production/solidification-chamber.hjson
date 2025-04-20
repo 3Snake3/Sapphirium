@@ -37,6 +37,7 @@ size: 2
 liquidCapacity: 10
 itemCapacity: 10
 outputItem: stone/2
+shownPlanets: [serpulo]
 craftTime: 120
 research: {
     parent: freezer

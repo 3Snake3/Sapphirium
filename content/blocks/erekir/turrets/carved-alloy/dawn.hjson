@@ -683,3 +683,4 @@ shootWarmupSpeed: 0.03
 targetUnderBlocks: false
 reload: 450
 research: elimination
+shownPlanets: [erekir]

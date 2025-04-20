@@ -81,7 +81,7 @@ requirements: [
     surge-stone/40
     silicon/30
 ]
-envDisabled: 16
+shownPlanets: [serpulo]
 research: {
     parent: surge-stone-wall    
 }

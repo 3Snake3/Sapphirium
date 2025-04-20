@@ -51,6 +51,7 @@ drawer: {
     ]
 }
 category: crafting
+shownPlanets: [serpulo]
 requirements: [
     dense-alloy/140
     globium/160

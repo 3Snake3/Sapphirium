@@ -13,3 +13,4 @@ requirements: [
     plastanium/6000
 ]
 researchCostMultiplier: 0.15
+shownPlanets: [serpulo]

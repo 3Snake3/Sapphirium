@@ -11,3 +11,4 @@ requirements: [
 ]
 category: power
 buildVisibility: sandboxOnly
+shownPlanets: [serpulo]

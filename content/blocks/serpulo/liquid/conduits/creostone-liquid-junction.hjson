@@ -9,3 +9,4 @@ solid: false
 research: creostone-router
 placeableLiquid: true
 
+shownPlanets: [serpulo]

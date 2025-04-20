@@ -15,7 +15,7 @@ inaccuracy: 5
 range: 120
 category: defense
 group: walls
-
+shownPlanets: [serpulo]
 shootType: {
     type: MissileBulletType
     width: 9

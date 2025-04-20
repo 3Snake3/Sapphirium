@@ -2404,6 +2404,8 @@ weapons: [
             sideWidth: 0
             sideLength: 0
             colors: [5c5e9e, a488eb, ffffff]
+            suppressionRange: 32
+            suppressionDuration: 240
         }
     }
 ]

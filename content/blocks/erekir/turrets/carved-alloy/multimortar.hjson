@@ -382,3 +382,4 @@ requirements: [
     oxide/60
 ]
 research: afflict
+shownPlanets: [erekir]

@@ -122,6 +122,8 @@ weapons: [
         homingRange: 60
         homingPower: 0.02
         homingDelay: 20
+        suppressionRange: 16
+        suppressionDuration: 180
         hitColor: a488eb
         trailColor: 5c5e9e
         trailWidth:1

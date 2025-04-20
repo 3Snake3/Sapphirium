@@ -11,3 +11,4 @@ requirements: [
     titanium/8000
 ]
 researchCostMultiplier: 0.03
+shownPlanets: [serpulo]

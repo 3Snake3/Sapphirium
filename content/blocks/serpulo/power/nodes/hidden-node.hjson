@@ -8,4 +8,5 @@ requirements: [
 ]
 research: {
     parent: power-node
-}   
+}
+shownPlanets: [serpulo]

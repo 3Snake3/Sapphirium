@@ -11,3 +11,4 @@ fadeIn: false
 moveArrows: false
 health: 94
 research: topaz-conduit
+shownPlanets: [erekir]

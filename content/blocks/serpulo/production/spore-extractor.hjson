@@ -43,6 +43,7 @@ requirements: [
     metaglass/25
 ]
 category: production
+shownPlanets: [serpulo]
 research: {
     parent: cultivator
     objectives: [

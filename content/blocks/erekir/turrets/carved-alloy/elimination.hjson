@@ -233,4 +233,5 @@ requirements: [
     silicon/340
     carved-alloy/100
 ]
+shownPlanets: [erekir]
 research: erazor

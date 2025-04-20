@@ -12,5 +12,5 @@ requirements: [
     metaglass/2
     creostone/6
 ]
-
+shownPlanets: [serpulo]
 research: bridge-conduit

@@ -12,5 +12,5 @@ requirements: [
     creostone/1
     metaglass/1
 ]
-
+shownPlanets: [serpulo]
 research: titanium-conveyor

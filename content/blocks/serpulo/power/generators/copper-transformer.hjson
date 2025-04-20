@@ -28,7 +28,7 @@ consumes: {
         ]
     }
 }
-
+shownPlanets: [serpulo]
 research: {
     parent: mechanical-drill
     objectives: [

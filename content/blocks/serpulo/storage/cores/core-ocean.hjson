@@ -21,3 +21,4 @@ requirements: [
     graphite/3800
 ]
 category: effect
+shownPlanets: [serpulo]

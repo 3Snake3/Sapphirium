@@ -33,6 +33,7 @@ consumes: {
         ]
     }
 }
+shownPlanets: [serpulo]
 research: {
     parent: blast-mixer
     objectives: [silicon-crucible, creotite-converter, creostone-reactor]

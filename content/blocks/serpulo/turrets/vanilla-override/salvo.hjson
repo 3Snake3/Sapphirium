@@ -106,6 +106,7 @@ ammoTypes: {
     creostone: {
         type: BasicBulletType
         speed: 3
+        drag: 0.01
         shootEffect: shootSmallColor
         damage: 28
         splashDamageRadius: 22
@@ -113,7 +114,26 @@ ammoTypes: {
         sprite: bullet
         width: 9
         height: 11
-        lifetime: 60
+        lifetime: 80
+        
+        intervalBullets: 1
+        intervalRandomSpread: 0
+        bulletInterval: 31
+        intervalDelay: 30
+        intervalBullet: {
+        drag: 0.55
+        lifetime: 15
+        sprite: shell
+        width: 6
+        height: 6
+        frontColor: ffb380
+        backColor: eb8778
+        hitColor: eb8778
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        damage: 8.8
+        }
+        
         ammoMultiplier: 6
         homingPower: 0.3
         trailLength: 7
@@ -127,6 +147,7 @@ ammoTypes: {
         status: small-flaming
         hitEffect: [hitBulletColor, blastExplosion]
         despawnEffect: [hitBulletColor, blastExplosion]
+        spawnBulletRandomSpread: 45
         spawnBullets: [
         {
         type: BasicBulletType
@@ -146,7 +167,7 @@ ammoTypes: {
         trailColor: eb8778
         hitEffect: hitBulletColor
         despawnEffect: hitBulletColor
-        spawnBulletRandomSpread: 45
+       
         }
         ]
     }

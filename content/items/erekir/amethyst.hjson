@@ -4,4 +4,4 @@ research: {
 parent: sapphire
 children: [ruby]
 }
-hiddenOnPlanets: [serpulo]
+shownPlanets: [erekir]ulo]

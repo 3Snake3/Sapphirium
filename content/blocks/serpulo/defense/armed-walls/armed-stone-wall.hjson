@@ -27,7 +27,7 @@ requirements: [
     stone/22
     silicon/12
 ]
-envDisabled: 16
+shownPlanets: [serpulo]
 research: {
     parent: stone-e-wall
     objectives: [

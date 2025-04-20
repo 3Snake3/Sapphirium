@@ -35,6 +35,7 @@ size: 3
 craftTime: 120
 liquidCapacity: 84
 category: crafting
+shownPlanets: [serpulo]
 requirements: [
     dense-alloy/130
     thorium/140

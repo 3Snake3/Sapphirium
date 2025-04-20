@@ -38,6 +38,7 @@ liquidCapacity: 10
 itemCapacity: 10
 outputItem: cryo-cube/1
 craftTime: 40
+shownPlanets: [serpulo]
 research: {
 parent: freezer
 objectives: [cryofluid-mixer, {

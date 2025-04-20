@@ -16,3 +16,4 @@ consumes: {
 research: {
     parent: overdrive-projector
 }
+shownPlanets: [serpulo]

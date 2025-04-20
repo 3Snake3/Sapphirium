@@ -49,3 +49,4 @@ requirements: [
     titanium/100
     silicon/80
 ]
+shownPlanets: [serpulo]

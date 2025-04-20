@@ -64,3 +64,4 @@ research: {
 parent: breach
 objectives: [topaz-mine]
 }
+shownPlanets: [erekir]

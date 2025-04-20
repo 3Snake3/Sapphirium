@@ -6,3 +6,4 @@ healthScaling: 1.2
 radioactivity: 0.6
 color: ffaf7a
 research: silicon
+shownPlanets: [serpulo, erekir]

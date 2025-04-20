@@ -5,7 +5,7 @@ requirements: [
     titanium/2
     metaglass/2
 ]
-envDisabled: 16
+shownPlanets: [serpulo]
 category: distribution
 research: {
     parent: router

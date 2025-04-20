@@ -42,5 +42,6 @@ shootType: {
     hitEffect: hitLancer
     despawnEffect: none
 }
+shownPlanets: [serpulo]
 
       

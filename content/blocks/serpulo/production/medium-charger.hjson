@@ -50,6 +50,7 @@ outputItem: charged-stick/1
 craftTime: 30
 boostScale: 0.05
 maxBoost: 0.5
+shownPlanets: [serpulo]
 research: {
     parent: weak-charger
 }

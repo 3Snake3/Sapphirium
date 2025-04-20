@@ -70,3 +70,4 @@ consumes: {
 outputLiquid: argon/0.4
 liquidCapacity: 48
 research: rift-borehole
+shownPlanets: [erekir]

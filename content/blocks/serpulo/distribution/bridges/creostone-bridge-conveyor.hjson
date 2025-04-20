@@ -7,7 +7,7 @@ placeableLiquid: true
 speed: 80
 bufferCapacity: 20
 itemCapacity: 14
-
+shownPlanets: [serpulo]
 requirements: [
     copper/9
     lead/9

@@ -9,3 +9,4 @@ liquidPressure: 1.08
 health: 300
 underBullets: true
 research: reinforced-conduit
+shownPlanets: [erekir]

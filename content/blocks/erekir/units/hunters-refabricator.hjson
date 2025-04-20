@@ -22,3 +22,4 @@ upgrades: [
 [hound, rampage]
 ]
 research: hunters-fabricator
+shownPlanets: [erekir]

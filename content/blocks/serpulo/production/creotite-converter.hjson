@@ -76,3 +76,4 @@ research: {
 }
 attribute: heat
 boostScale: 0.15
+shownPlanets: [serpulo]

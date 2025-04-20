@@ -17,3 +17,4 @@ requirements: [
 ]
 size: 3
 research: creostone-beam-node
+shownPlanets: [erekir]

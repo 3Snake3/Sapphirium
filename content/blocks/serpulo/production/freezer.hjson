@@ -22,7 +22,7 @@ drawLiquid: water
 type: DrawDefault
 }
 ]
-
+shownPlanets: [serpulo]
 size: 2
 liquidCapacity: 10
 itemCapacity: 10

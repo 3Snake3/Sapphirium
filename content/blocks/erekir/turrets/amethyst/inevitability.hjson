@@ -352,3 +352,4 @@ ammoTypes: {
     }
 }
 research: addiction
+shownPlanets: [erekir]

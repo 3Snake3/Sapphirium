@@ -3,7 +3,7 @@ requirements: [
     dense-alloy/3
     stone/4
 ]
-envDisabled: 16
+shownPlanets: [serpulo]
 category: distribution
 speed: 26
 capacity: 8

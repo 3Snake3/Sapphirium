@@ -1,4 +1,4 @@
 cost: 5
 healthScaling: 1.5
-hiddenOnPlanets: [serpulo]
-research: surge-alloy
+shownPlanets: [erekir]
+research: surge-alloylloy

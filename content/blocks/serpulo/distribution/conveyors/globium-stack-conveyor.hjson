@@ -35,3 +35,4 @@ research: {
     parent: globium-conveyor
     objectives: [plastanium-conveyor]
 }
+shownPlanets: [serpulo]

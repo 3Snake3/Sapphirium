@@ -17,3 +17,4 @@ hasItems: false
 hasLiquids: false
 range: 3
 healPercent: 0.08
+shownPlanets: [erekir]

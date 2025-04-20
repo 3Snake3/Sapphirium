@@ -57,3 +57,4 @@ drawer: [
         suffix: "-top"
     }
 ]
+shownPlanets: [serpulo]

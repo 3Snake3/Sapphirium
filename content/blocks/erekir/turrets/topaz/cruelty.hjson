@@ -128,3 +128,4 @@ research: {
 parent: greed
 planet: erekir
 }
+shownPlanets: [erekir]

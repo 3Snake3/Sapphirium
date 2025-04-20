@@ -53,3 +53,4 @@ shootType: {
     pierce: true
     pierceCap: 1
 }
+shownPlanets: [serpulo]

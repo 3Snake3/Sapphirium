@@ -15,7 +15,7 @@ requirements: [
     creostone/2
     metaglass/2
 ]
-
+shownPlanets: [serpulo]
 research: {
     parent: power-node-large
 }

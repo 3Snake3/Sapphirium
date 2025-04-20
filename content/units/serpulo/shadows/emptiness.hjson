@@ -150,6 +150,8 @@ weapons: [
             serrations:2
             serrationWidth:1
             buildingDamageMultiplier: 4
+            suppressionRange: 16
+            suppressionDuration: 180
             damage: 42
             width: 8
             lifetime: 20

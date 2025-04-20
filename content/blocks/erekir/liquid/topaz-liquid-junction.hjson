@@ -10,3 +10,4 @@ researchCostMultiplier: 1
 solid: false
 underBullets: true
 research: topaz-conduit
+shownPlanets: [erekir]

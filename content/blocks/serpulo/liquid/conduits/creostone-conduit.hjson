@@ -11,5 +11,5 @@ requirements: [
     metaglass/4
     creostone/2
 ]
-
+shownPlanets: [serpulo]
 research: pulse-conduit

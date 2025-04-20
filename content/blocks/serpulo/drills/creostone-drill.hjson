@@ -26,3 +26,4 @@ requirements: [
 category: production
 research: laser-drill
 buildCostMultiplier: 1.15
+shownPlanets: [serpulo]

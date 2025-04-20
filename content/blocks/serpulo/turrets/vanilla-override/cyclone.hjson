@@ -55,7 +55,6 @@ ammoTypes: {
         despawnEffect: hitBulletColor
     }
     ice-cube: {
-        type: FlakBulletType
         speed: 4
         damage: 9
         ammoMultiplier: 2
@@ -72,14 +71,16 @@ ammoTypes: {
         status: freezing
         statusDuration: 15
         intervalBullets: 1
-        intervalDelay: 9
-        bulletInterval: 9
+        bulletInterval: 21
+        intervalDelay: 20
         intervalBullet: {
         speed: 0
         damage: 0
         sprite: sapphirium-none-bullet
+        
         splashDamage: 12
         splashDamageRadius: 36
+        lifetime: 1
         status: freezing
         statusDuration: 300
         despawnEffect: {
@@ -96,7 +97,6 @@ ammoTypes: {
         smokeColor: c1befa
         }
         }
-        explodeRange: 20
         collidesGround: true
         despawnEffect: hitBulletColor
     }

@@ -130,16 +130,16 @@ ammoTypes: {
         lifetime: 25
         waveRad: 37
         waveLife: 15
-        waveColor: ffb380
+        waveColor: eb8778
         sparks: 8
         sparkRad: 42
         sparkStroke: 2
         sparkLen: 5
-        sparkColor: ffb380
+        sparkColor: eb8778
         smokes: 8
         smokeRad: 42
         smokeSize: 5
-        smokeColor: ffb380
+        smokeColor: eb8778
         }
         knockback: 0.8
         width: 15
@@ -173,16 +173,16 @@ ammoTypes: {
         lifetime: 25
         waveRad: 37
         waveLife: 15
-        waveColor: ffb380
+        waveColor: eb8778
         sparks: 8
         sparkRad: 42
         sparkStroke: 2
         sparkLen: 5
-        sparkColor: ffb380
+        sparkColor: eb8778
         smokes: 8
         smokeRad: 42
         smokeSize: 5
-        smokeColor: ffb380
+        smokeColor: eb8778
         }
         knockback: 0.8
         width: 15
@@ -209,16 +209,16 @@ ammoTypes: {
         lifetime: 25
         waveRad: 37
         waveLife: 15
-        waveColor: ffb380
+        waveColor: eb8778
         sparks: 8
         sparkRad: 42
         sparkStroke: 2
         sparkLen: 5
-        sparkColor: ffb380
+        sparkColor: eb8778
         smokes: 8
         smokeRad: 42
         smokeSize: 5
-        smokeColor: ffb380
+        smokeColor: eb8778
         }
         knockback: 0.8
         width: 15

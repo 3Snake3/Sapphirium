@@ -62,7 +62,7 @@ requirements: [
     creostone/45
     silicon/30
 ]
-envDisabled: 16
+shownPlanets: [serpulo]
 category: defense
 research: {
     parent: creostone-wall

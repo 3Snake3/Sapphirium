@@ -31,6 +31,7 @@ consumes: {
     }
 }
 size: 3
+shownPlanets: [serpulo]
 category: crafting
 requirements: [
     dense-alloy/70

@@ -15,7 +15,7 @@ rotateSpeed: 1
 drillEffect: mineHuge
 heatColor: FEFF00
 drawRim: true
-
+shownPlanets: [serpulo]
 requirements: [
     globium/880
     diamond/680

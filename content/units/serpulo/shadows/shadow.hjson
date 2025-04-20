@@ -267,8 +267,10 @@ weapons: [
             hitColor: 5c5e9e
             trailColor: 5c5e9e
             hitEffect: hitSquaresColor
-            despawnEffect: hitSquaresColor
-            despawnEffect: hitBulletColor
+            despawnEffect: [hitSquaresColor, hitBulletColor]
+            
+            suppressionRange: 20
+            suppressionDuration: 180
             trailWidth: 2
             trailLength: 4
             hitSize: 6

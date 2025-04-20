@@ -44,7 +44,7 @@ requirements: [
     titanium/45
     surge-alloy/25
 ]
-envDisabled: 16
+shownPlanets: [serpulo]
 research: {
     parent: cryofluid-mixer
     objectives: [surge-smelter]
