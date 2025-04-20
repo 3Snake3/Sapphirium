@@ -1,4 +1,4 @@
 cost: 0.28
 color: 6fdedc
 research: cryo-cube
-hiddenOnPlanets: [erekir]
+shownPlanets: [serpulo]

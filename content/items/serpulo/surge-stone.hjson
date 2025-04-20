@@ -3,4 +3,4 @@ charge: 0.5
 color: fff480
 research: surge-alloy
 healthScaling: 1.3
-hiddenOnPlanets: [erekir]
+shownPlanets: [serpulo]
