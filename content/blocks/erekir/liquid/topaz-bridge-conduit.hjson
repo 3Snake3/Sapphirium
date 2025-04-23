@@ -10,5 +10,13 @@ squareSprite: false
 fadeIn: false
 moveArrows: false
 health: 94
-research: topaz-conduit
+research: {
+parent: topaz-conduit
+objectives: [
+{
+type: SectorComplete
+preset: mess
+}
+]
+}
 shownPlanets: [erekir]

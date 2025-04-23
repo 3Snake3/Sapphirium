@@ -62,6 +62,10 @@ scaledHealth: 160
 rotateSpeed: 5
 research: {
 parent: breach
-objectives: [topaz-mine]
+objectives: [topaz-mine, {
+type: OnSector
+preset: mess
+}
+]
 }
 shownPlanets: [erekir]

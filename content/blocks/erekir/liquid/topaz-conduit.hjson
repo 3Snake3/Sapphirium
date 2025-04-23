@@ -8,5 +8,13 @@ liquidCapacity: 35
 liquidPressure: 1.08
 health: 300
 underBullets: true
-research: reinforced-conduit
+research: {
+parent: reinforced-conduit
+objectives: [
+{
+type: SectorComplete
+preset: mess
+}
+]
+}
 shownPlanets: [erekir]

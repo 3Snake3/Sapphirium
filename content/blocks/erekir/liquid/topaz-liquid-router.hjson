@@ -11,6 +11,14 @@ liquidPadding: 0.75
 researchCostMultiplier: 3
 solid: false
 underBullets: true
-research: topaz-conduit
+research: {
+parent: topaz-conduit
+objectives: [
+{
+type: SectorComplete
+preset: mess
+}
+]
+}
 squareSprite: false
 shownPlanets: [erekir]

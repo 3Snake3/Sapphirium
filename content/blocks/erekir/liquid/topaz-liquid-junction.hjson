@@ -9,5 +9,13 @@ health: 400
 researchCostMultiplier: 1
 solid: false
 underBullets: true
-research: topaz-conduit
+research: {
+parent: topaz-conduit
+objectives: [
+{
+type: SectorComplete
+preset: mess
+}
+]
+}
 shownPlanets: [erekir]

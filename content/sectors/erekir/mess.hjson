@@ -1,0 +1,12 @@
+difficulty: 3
+sector: 74
+planet: erekir
+research: {
+parent: intersect
+objectives: [
+{
+type: SectorComplete
+preset: intersect
+}
+]
+}

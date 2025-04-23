@@ -21,5 +21,13 @@ fogRadius: 3
 consumes: {
 power: 2
 }
-research: tank-fabricator
+research: {
+parent: tank-fabricator
+objectives: [
+{
+type: SectorComplete
+preset: mess
+}
+]
+}
 shownPlanets: [erekir]

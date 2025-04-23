@@ -333,14 +333,21 @@ const topazBlocks = extend(TallBlock, "topaz-block", {
     shadowOffset: -2.5
 });
 
-const sapphiricRock = extend(TallBlock, "sapphiric-rock", {
-    variants: 0,
+const amberCrystals = extend(TallBlock, "amber-crystals", {
+    variants: 2,
     clipSize: 128,
     shadowAlpha: 0.5,
     shadowOffset: -2.5
 });
 
-const sapphiricRockLarge = extend(TallBlock, "sapphiric-rock-large", {
+const sapphiricRock = extend(TallBlock, "sapphiric-rock", {
+    variants: 3,
+    clipSize: 128,
+    shadowAlpha: 0.5,
+    shadowOffset: -2.5
+});
+
+const amethystGrowths = extend(TallBlock, "amethyst-growths", {
     variants: 0,
     clipSize: 128,
     shadowAlpha: 0.5,
@@ -348,7 +355,7 @@ const sapphiricRockLarge = extend(TallBlock, "sapphiric-rock-large", {
 });
 
 const rubyGrowths = extend(TallBlock, "ruby-growths", {
-    variants: 0,
+    variants: 2,
     clipSize: 128,
     shadowAlpha: 0.5,
     shadowOffset: -2.5
