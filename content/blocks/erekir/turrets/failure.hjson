@@ -1,0 +1,282 @@
+type: ItemTurret
+size: 4
+health: 2000
+armor: 14
+range: 240
+rotateSpeed: 3.5
+shootCone: 15
+category: turret
+shootY: 11
+heatRequirement: 40
+maxHeatEfficiency: 2
+shoot: {
+    type: ShootBarrel
+    shots: 4
+    shotDelay: 4
+    barrels: [-8.75, 5.5, -25, -3.5, 6.5, -25, 3.5, 6.5, 25, 8.75, 5.5, 25]
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+    parts: [
+    {
+            type: RegionPart
+            suffix: -barrel-1
+            progress: warmup
+            moveRot: 25
+            recoilIndex: 0
+            under: true
+            moves: [
+            {
+            y: -5
+            progress: recoil
+            }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -barrel-2
+            progress: warmup
+            moveRot: 25
+            recoilIndex: 1
+            under: true
+            moves: [
+            {
+            y: -5
+            progress: recoil
+            }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -barrel-3
+            progress: warmup
+            moveRot: -25
+            recoilIndex: 2
+            under: true
+            moves: [
+            {
+            y: -5
+            progress: recoil
+            }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -barrel-4
+            progress: warmup
+            moveRot: -25
+            recoilIndex: 3
+            under: true
+            moves: [
+            {
+            progress: recoil
+            y: -5
+            }
+            ]
+        }
+        {
+        type: RegionPart
+        suffix: -mid
+        mirror: true
+        moveY: -3
+        under: true
+        }
+    {
+        type: RegionPart
+        suffix: -main
+        }
+        {
+        type: ShapePart
+        circle: true
+        hollow: true
+        radius: 40
+        radiusTo: 40
+        stroke: 0
+        strokeTo: 4
+        color: f25555
+        layer: 110
+        }
+        {
+        type: HaloPart
+        shapes: 6
+        tri: true
+        radius: 0
+        radiusTo: 6
+        triLength: 0
+        triLengthTo: 5
+        color: f25555
+        layer: 110
+        haloRadius: 40
+        haloRadiusTo: 40
+        haloRotateSpeed: 7
+        }
+    ]
+}
+
+recoil: 3
+targetAir: true
+minWarmup: 0.94
+shootWarmupSpeed: 0.05
+warmupMaintainTime: 30
+shake: 2
+reload: 75
+outlineColor: 2d2f39
+shootSound: bolt
+
+ammoTypes: {
+ruby: {
+width: 10
+height: 14
+speed: 5
+lifetime: 48
+homingPower: 0.3
+hittable: false
+absorbable: false
+pierceArmor: true
+damage: 54
+backColor: f25555
+hitColor: f25555
+trailColor: f25555
+frontColor: fc8e6d
+hitEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+strokeFrom: 2
+colorFrom: f25555
+colorTo: f25555
+}
+despawnEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+strokeFrom: 2
+colorFrom: f25555
+colorTo: f25555
+}
+trailLength: 8
+trailWidth: 2
+trailChance: 0.3
+sticky: true
+stickyExtraLifetime: 30
+
+spawnBullets: [
+{
+width: 10
+height: 14
+speed: 5
+lifetime: 60
+homingPower: 0.3
+hittable: false
+absorbable: false
+pierceArmor: true
+damage: 54
+backColor: f25555
+hitColor: f25555
+trailColor: f25555
+frontColor: fc8e6d
+hitEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+strokeFrom: 2
+colorFrom: f25555
+colorTo: f25555
+}
+despawnEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+strokeFrom: 2
+colorFrom: f25555
+colorTo: f25555
+}
+trailLength: 8
+trailWidth: 2
+trailChance: 0.3
+circleShooter: true
+circleShooterRadius: 40
+}
+{
+width: 10
+height: 14
+speed: 5
+lifetime: 60
+homingPower: 0.3
+hittable: false
+absorbable: false
+pierceArmor: true
+damage: 54
+backColor: f25555
+hitColor: f25555
+trailColor: f25555
+frontColor: fc8e6d
+
+intervalBullets: 1
+bulletInterval: 61
+intervalRandomSpread: 45
+intervalBullet: {
+speed: 4
+lifetime: 40
+damage: 0
+sprite: sapphirium-none-bullet
+hitEffect: none
+collidesTiles: false
+collides: false
+hittable: false
+absorbable: false
+despawnUnit: extinctionSmoke
+despawnUnitChance: 0.3
+}
+
+hitEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+strokeFrom: 2
+colorFrom: f25555
+colorTo: f25555
+}
+despawnEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+strokeFrom: 2
+colorFrom: f25555
+colorTo: f25555
+}
+trailLength: 8
+trailWidth: 2
+trailChance: 0.3
+circleShooter: true
+circleShooterRadius: 45
+}
+]
+
+fragBullets: 1
+fragRandomSpread: 0
+fragBullet: {
+sprite: mine-bullet
+instantDisappear: true
+damage: 0
+lifetime: 1
+speed: 0
+splashDamage: 58
+splashDamageRadius: 8
+backColor: f25555
+hitColor: f25555
+trailColor: f25555
+frontColor: fc8e6d
+despawnEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+strokeFrom: 2
+colorFrom: f25555
+colorTo: f25555
+}
+}
+
+}
+}

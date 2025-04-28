@@ -57,7 +57,15 @@ const amethystFloor = extend(Floor, "amethyst-floor", {
 	variants: 3,
 });
 
+const carbonAmethystStone = extend(Floor, "carbon-amethyst-stone", {
+	variants: 3,
+});
+
 const purpleStone = extend(Floor, "purple-stone", {
+	variants: 3,
+});
+
+const purpleStoneCraters = extend(Floor, "purple-stone-crater", {
 	variants: 3,
 });
 
@@ -267,10 +275,17 @@ const amethystWall = extend(StaticWall, "amethyst-wall", {
 });
 amethystFloor.asFloor().wall = amethystWall;
 
+const graphiticAmethystWall = extend(StaticWall, "graphitic-amethyst-wall", {
+	variants: 2,
+});
+graphiticAmethystWall.attributes.set(graphiteAttr, 2);
+carbonAmethystStone.asFloor().wall = graphiticAmethystWall;
+
 const purpleStoneWall = extend(StaticWall, "purple-stone-wall", {
 	variants: 3,
 });
 purpleStone.asFloor().wall = purpleStoneWall;
+purpleStoneCraters.asFloor().wall = purpleStoneWall;
 purpleStoneWall.attributes.set(Attribute.sand, 1.5);
 
 const rubyStone = extend(StaticWall, "ruby-stone", {
@@ -403,4 +418,5 @@ const wallOreRuby = extend(OreBlock, "ore-wall-ruby", {
 module.exports = {
 	topazAttr: topazAttr,
 	argonAttr: argonAttr,
+	graphiteAttr: graphiteAttr
 }

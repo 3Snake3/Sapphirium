@@ -1,0 +1,110 @@
+type: missile
+template: MissileUnitType
+defaultController: FlyingAI
+controller: FlyingAI
+targetable: false
+hittable: false
+internal: true
+hidden: true
+physics: false
+playerControllable: false
+allowedInPayloads: false
+useUnitCap: false
+engineSize: -1
+strafePenalty: 0
+createWreck: false
+createScorch: false
+deathSound: none
+deathExplosionEffect: {
+type: ExplosionEffect
+lifetime: 60
+smokes: 24
+smokeSize: 10
+smokeColor: a14553
+smokeRad: 40
+sparks: 0
+waveRad: 0
+waveRadBase: 0
+waveLife: 0
+}
+fallEngineEffect: none 
+fallEffect: none
+speed: 0
+health: 99999
+drawBody: false
+drawSoftShadow: false
+drawMinimap: false
+lifetime: 360
+rotateSpeed: 0
+weapons: [
+{
+x: 0
+y: 0
+continuous: true
+rotate: false
+mirror: false
+alternate: false
+reload: 361
+alwaysShooting: true
+shootSound: teleportation
+bullet: {
+type: ContinuousBulletType
+lifetime: 360
+length: 0
+damage: 0
+collidesTiles: false
+hitEffect: none
+intervalBullets: 1
+bulletInterval: 1
+intervalBullet: {
+speed: 0
+damage: 0
+lifetime: 1
+sprite: sapphirium-none-bullet
+collidesTiles: false
+collides: false
+hittable: false
+absorbable: false
+despawnEffect: {
+type: ExplosionEffect
+lifetime: 60
+smokes: 24
+smokeSize: 10
+smokeColor: a14553
+smokeRad: 40
+sparks: 0
+waveRad: 0
+waveRadBase: 0
+waveLife: 0
+}
+}
+shootEffect: {
+type: ExplosionEffect
+lifetime: 60
+smokes: 24
+smokeSize: 10
+smokeColor: a14553
+smokeRad: 40
+sparks: 0
+waveRad: 0
+waveRadBase: 0
+waveLife: 0
+}
+}
+}
+{
+x: 0
+y: 0
+reload: 350
+shoot: {
+firstShotDelay: 349
+}
+mirror: false
+rotate: false
+shootSound: none
+alwaysShooting: true
+bullet: {
+spawnUnit: extinction
+}
+}
+]

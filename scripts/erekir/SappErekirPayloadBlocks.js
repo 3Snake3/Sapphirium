@@ -80,3 +80,6 @@ setStats(){
 });
 
 const pacificationFactory = extend(UnitFactory, "pacification-factory", {});
+
+const erekirWalls = require("erekir/SappErekirWalls");
+Blocks.constructor.filter = Seq.with(Blocks.tungstenWallLarge, Blocks.berylliumWallLarge, Blocks.carbideWallLarge, Blocks.reinforcedSurgeWallLarge, Blocks.reinforcedLiquidContainer, Blocks.reinforcedContainer, Blocks.beamNode, erekirWalls.sapphireWallLarge, erekirWalls.carvedWallLarge);

@@ -1,4 +1,14 @@
 const environment = require("SappEnvironment");
+const graphiticCliffCrusher = extend(WallCrafter, "graphitic-cliff-crusher", {
+	attribute: environment.graphiteAttr,
+	output: Items.graphite,
+	drillTime: 130,
+	size: 2,
+	fogRadius: 2,
+	ambientSound: Sounds.drill,
+	ambientSoundVolume: 0.04,
+});
+graphiticCliffCrusher.consumePower(13 / 60);
 const argonBorehole = extend(AttributeCrafter, "argon-borehole", {
 	attribute: environment.argonAttr,
 });

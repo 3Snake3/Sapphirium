@@ -1,0 +1,9 @@
+requirements: [
+topaz/20
+beryllium/35
+]
+researchCost: [
+topaz/130
+beryllium/200
+]
+category: production

@@ -1,0 +1,69 @@
+type: flying
+template: ErekirUnitType
+flying: true
+health: 800
+speed: 3
+drag: 0.01
+accel: 0.01
+targetable: false
+createWreck: false
+deathExplosionEffect: {
+type: ExplosionEffect
+waveRad: 32
+waveLife: 10
+waveColor: f25555
+sparks: 10
+sparkRad: 32
+sparkLen: 4
+sparkColor: f25555
+smokes: 10
+smokeRad: 32
+smokeSize: 4
+smokeColor: f2555570
+lifetime: 60
+}
+createScorch: false
+fallEffect: none
+fallEngineEffect: none
+range: 8
+engineOffset: 6
+engineSize: 1.25
+engineColor: f25555
+engineColorInner: fc8e6d
+rotateSpeed: 1
+targetAir: false
+immunities: [unleash]
+hitSize: 9
+
+weapons: [
+{
+x: 0
+y: 0
+reload: 14
+shootCone: 180
+shootSound: explosion
+shootY: 0
+mirror: false
+targetUnderBlocks: false
+
+bullet: {
+sprite: sapphirium-none-bullet
+collidesTiles: false
+collides: false
+hitSound: explosion
+
+hitEffect: none
+
+speed: 0
+splashDamageRadius: 32
+instantDisappear: true
+splashDamage: 100
+splashDamagePierce: true
+killShooter: true
+collidesAir: false
+
+status: stunne
+statusDuration: 15
+}
+}
+]
