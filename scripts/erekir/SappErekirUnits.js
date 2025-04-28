@@ -2862,6 +2862,15 @@ const difference = extend(ErekirUnitType, "difference", {});
 difference.constructor = () => extend(BuildingTetherPayloadUnit, {});
 difference.abilities.addAll(differenceRepairField, shieldRegen, overdriveAbility);
 
+const rapics = extend(ErekirUnitType, "rapics", {});
+rapics.constructor = () => extend(LegsUnit, {});
+
+const pacification = extend(ErekirUnitType, "pacification", {});
+pacification.constructor = () => extend(TankUnit, {});
+
+const pacificationMove = extend(ErekirUnitType, "pacification-moveable", {});
+pacificationMove.constructor = () => extend(TankUnit, {});
+
 module.exports = {
 	hound: hound,
 	rampage: rampage,
@@ -2875,5 +2884,6 @@ module.exports = {
 	maw: maw,
 	ooze: ooze,
 	gaze: gaze,
-	difference: difference
+	difference: difference,
+	rapics: rapics
 }

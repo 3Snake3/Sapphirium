@@ -1,0 +1,34 @@
+type: HeatProducer
+category: crafting
+drawer: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawLiquidTile
+drawLiquid: slag
+}
+{
+type: DrawLiquidTile
+drawLiquid: creotine
+}
+{
+type: DrawDefault
+}
+{
+type: DrawHeatOutput
+}
+]
+size: 3
+itemCapacity: 0
+liquidCapacity: 84
+rotateDraw: false
+regionRotated1: 1
+ambientSound: hum
+consumes: {
+power: 4
+liquid: creotine/0.8
+}
+heatOutput: 100
+buildVisibility: editorOnly

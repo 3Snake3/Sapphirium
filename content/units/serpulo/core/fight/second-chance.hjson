@@ -135,15 +135,10 @@ weapons: [
 ]
 abilities: [
 {
-type: UnitSpawnAbility
+type: SpawnDeathAbility
 unit: blaster
-spawnTime: 600
-spawnX: 25
-}
-{
-type: UnitSpawnAbility
-unit: blaster
-spawnTime: 600
-spawnX: -25
+amount: 6
+randAmount: 2
+spread: 30
 }
 ]

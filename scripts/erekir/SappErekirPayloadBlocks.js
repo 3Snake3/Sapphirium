@@ -59,3 +59,24 @@ differenceFactory.buildType = () => extend(UnitCargoLoader.UnitTransportSourceBu
 		return this.items.get(item) < this.getMaximumAccepted(item);
 		}
 });
+
+const rapicsSpawner = extend(UnitCargoLoader, "rapics-spawn-point", {
+	squareSprite: false,
+setStats(){
+	this.super$setStats();
+	this.stats.add(Stat.output, customValue(table => {
+        	table.row();
+            table.table(Styles.grayPanel, b => {
+                b.image(sappErekirUnits.rapics.uiIcon).size(40).pad(10).left().scaling(Scaling.fit);
+                b.table(cons(info => {
+                    info.add(sappErekirUnits.rapics.localizedName).left();
+                    info.row();
+                    info.add(Strings.autoFixed(1500 / 60, 1) + " " + Core.bundle.get("unit.seconds")).color(Color.lightGray);
+                })).left();
+                b.button("?", Styles.flatBordert, () => Vars.ui.content.show(sappErekirUnits.rapics)).size(40).pad(10).right().grow().visible(() => sappErekirUnits.rapics.unlockedNow());
+            }).growX().pad(5).row();
+        }));
+        }
+});
+
+const pacificationFactory = extend(UnitFactory, "pacification-factory", {});

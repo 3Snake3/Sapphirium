@@ -81,7 +81,6 @@ trailLength: 3
 hitEffect: hitSquaresColor
 despawnEffect: hitSquaresColor
 buildingDamageMultiplier: 0.2
-rangeChange: -16
 status: melting
 statusDuration: 80
 }

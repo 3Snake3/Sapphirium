@@ -1,0 +1,532 @@
+health: 12000
+size: 5
+armor: 24
+rotateSpeed: 0.6
+shake: 10
+reload: 1200
+recoil: 4
+range: 800
+shootCone: 30
+loopSound: oblivion-loop
+loopSoundVolume: 0.8
+shootSound: oblivion-shoot
+chargeSound: oblivion-charge
+playerControllable: false
+
+shoot: {
+firstShotDelay: 239
+}
+
+shootY: 0
+
+drawer: {
+type: DrawTurret
+basePrefix: reinforced-
+parts: [
+{
+type: ShapePart
+radius: 56
+radiusTo: 56
+stroke: 0
+strokeTo: 4
+layer: 110
+circle: true
+hollow: true
+color: f55555
+}
+{
+type: HaloPart
+haloRadius: 56
+haloRadiusTo: 56
+shapes: 8
+layer: 110
+color: f55555
+haloRotateSpeed: 3
+tri: true
+triLength: 0
+triLengthTo: 16
+radius: 8
+radiusTo: 8
+}
+{
+type: ShapePart
+radius: 72
+radiusTo: 72
+stroke: 0
+strokeTo: 2
+progress: charge
+layer: 110
+circle: true
+hollow: true
+color: f55555
+}
+{
+type: HaloPart
+haloRadius: 72
+haloRadiusTo: 72
+progress: charge
+shapes: 6
+layer: 110
+color: f55555
+haloRotateSpeed: -8
+tri: true
+triLength: 0
+triLengthTo: 8
+radius: 8
+radiusTo: 8
+}
+{
+type: ShapePart
+radius: 0
+radiusTo: 8
+layer: 110
+circle: true
+color: f55555
+progress: {
+type: charge
+absin: {
+scl: 3
+mag: 5
+}
+}
+}
+{
+type: ShapePart
+radius: 0
+radiusTo: 4
+layer: 110
+circle: true
+color: fc8e6d
+progress: {
+type: charge
+absin: {
+scl: 3
+mag: 5
+}
+}
+}
+{
+type: ShapePart
+radius: 8
+radiusTo: 8
+progress: charge
+stroke: 0
+strokeTo: 2
+y: 18
+layer: 110
+circle: true
+hollow: true
+color: f55555
+}
+{
+type: ShapePart
+radius: 4
+radiusTo: 4
+progress: charge
+stroke: 0
+strokeTo: 2
+y: 18
+layer: 110
+circle: true
+color: f55555
+hollow: true
+}
+{
+type: ShapePart
+circle: true
+hollow: true
+progress: charge
+layer: 110
+color: f55555
+radius: 400
+radiusTo: 400
+stroke: 0
+strokeTo: 5
+}
+{
+type: HaloPart
+tri: true
+shapes: 8
+layer: 110
+progress: charge
+color: f55555
+radius: 5
+radiusTo: 5
+triLength: 0
+triLengthTo: 5
+haloRadius: 400
+haloRadiusTo: 400
+haloRotateSpeed: 8
+}
+{
+type: HaloPart
+tri: true
+shapes: 5
+layer: 110
+progress: charge
+color: f55555
+radius: 5
+radiusTo: 5
+triLength: 0
+triLengthTo: 5
+haloRadius: 400
+haloRadiusTo: 400
+haloRotateSpeed: -4
+shapeRotation: 180
+}
+{
+type: RegionPart
+suffix: -center
+outline: false
+heatProgress: charge
+layerOffset: -0.3
+turretHeatLayer: 49.8
+under: true
+heatColor: f55555
+color: f55555
+}
+{
+type: RegionPart
+suffix: -side
+under: true
+mirror: true
+moveRot: -25
+heatProgress: charge
+heatColor: f55555
+moveX: 3
+moveY: -1
+moves: [
+{
+progress: charge
+x: 5
+y: -3
+rot: -8
+}
+]
+}
+{
+type: RegionPart
+suffix: -barrel
+under: true
+mirror: true
+moveRot: -20
+heatProgress: charge
+heatColor: f55555
+moveX: 3
+moveY: -1
+moves: [
+{
+progress: charge
+x: 3
+y: -1
+rot: -8
+}
+]
+}
+{
+type: RegionPart
+suffix: -main
+}
+]
+}
+
+heatRequirement: 100
+maxHeatEfficiency: 1
+
+consumes: {
+power: 132
+}
+
+ammoPerShot: 24
+ammoTypes: {
+ruby: {
+sprite: large-orb
+width: 24
+height: 24
+speed: 1
+lifetime: 800
+hitSize: 24
+reflectable: false
+hittable: false
+damage: 1400
+splashDamage: 2500
+splashDamageRadius: 80
+splashDamagePierce: true
+hitColor: f25555
+backColor: f25555
+trailColor: f25555
+frontColor: ff7272
+trailChance: 1
+trailRotation: true
+trailInterp: pow3Out
+trailEffect: {
+particles: 6
+lifetime: 120
+sizeFrom: 8
+sizeTo: 0
+colorFrom: f25555
+colorTo: f25555
+length: -24
+cone: 10
+}
+trailSpread: 10
+suppressionRange: 80
+suppressColor: f25555
+trailLength: 16
+trailWidth: 4
+hitEffect: {
+type: ExplosionEffect
+lifetime: 180
+waveLife: 60
+waveColor: f25555
+waveRad: 80
+waveStroke: 4
+sparks: 24
+sparkColor: f25555
+sparkRad: 80
+sparkLen: 16
+sparkStroke: 3
+smokes: 24
+smokeSize: 16
+smokeColor: f25555
+smokeRad: 80
+}
+despawnEffect: {
+type: ExplosionEffect
+lifetime: 180
+waveLife: 60
+waveColor: f25555
+waveRad: 80
+waveStroke: 4
+sparks: 24
+sparkColor: f25555
+sparkRad: 80
+sparkLen: 16
+sparkStroke: 3
+smokes: 24
+smokeSize: 16
+smokeColor: f2555570
+smokeRad: 80
+}
+shootEffect: [
+{
+particles: 24
+cone: 15
+length: 40
+lifetime: 80
+line: true
+lenFrom: 16
+lenTo: 0
+strokeFrom: 2
+strokeTo: 0
+colorFrom: f25555
+colorTo: f25555
+}
+{
+particles: 24
+cone: 360
+length: 48
+lifetime: 120
+line: true
+lenFrom: 16
+lenTo: 0
+strokeFrom: 2
+strokeTo: 0
+colorFrom: f25555
+colorTo: f25555
+}
+]
+smokeEffect: {
+particles: 24
+cone: 360
+length: 48
+lifetime: 120
+sizeFrom: 16
+sizeTo: 0
+interp: circleOut
+sizeInterp: circleOut
+colorFrom: f25555
+colorTo: f25555
+}
+despawnUnit: teleportationSmoke
+despawnUnitCount: 1
+intervalBullets: 6
+bulletInterval: 20
+intervalSpread: 36
+intervalBullet: {
+width: 10
+height: 12
+speed: 2
+lifetime: 42
+damage: 100
+pierce: true
+pierceBuilding: true
+hitEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+colorFrom: f55555
+colorTo: f555555
+interp: circleOut
+}
+despawnEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+colorFrom: f55555
+colorTo: f555555
+interp: circleOut
+}
+hitColor: f25555
+trailColor: f25555
+backColor: f25555
+frontColor: ff7272
+trailLength: 10
+rotateSpeed: 3
+trailWidth: 2
+}
+
+spawnBullets: [
+{
+type: LaserBulletType
+width: 45
+length: 325
+lifetime: 65
+damage: 325
+colors: [f2555540, f25555, ff7272]
+hitColor: f25555
+lightColor: f25555
+}
+{
+type: LaserBulletType
+width: 45
+length: 90
+angleOffset: 90
+lifetime: 65
+damage: 325
+colors: [f2555540, f25555, ff7272]
+hitColor: f25555
+lightColor: f25555
+}
+{
+type: LaserBulletType
+width: 45
+length: 90
+angleOffset: -90
+lifetime: 65
+damage: 325
+colors: [f2555540, f25555, ff7272]
+hitColor: f25555
+lightColor: f25555
+}
+{
+width: 10
+height: 12
+speed: 4
+lifetime: 2000
+damage: 100
+pierce: true
+pierceBuilding: true
+hitEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+colorFrom: f55555
+colorTo: f555555
+interp: circleOut
+}
+despawnEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+colorFrom: f55555
+colorTo: f555555
+interp: circleOut
+}
+hitColor: f25555
+trailColor: f25555
+backColor: f25555
+frontColor: ff7272
+trailLength: 10
+rotateSpeed: 3
+trailWidth: 2
+circleShooter: true
+circleShooterRadius: 54
+lifesteal: 200
+}
+{
+width: 10
+height: 12
+speed: 4
+lifetime: 2000
+damage: 100
+pierce: true
+pierceBuilding: true
+hitEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+colorFrom: f55555
+colorTo: f555555
+interp: circleOut
+}
+despawnEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+colorFrom: f55555
+colorTo: f555555
+interp: circleOut
+}
+hitColor: f25555
+trailColor: f25555
+backColor: f25555
+frontColor: ff7272
+trailLength: 10
+rotateSpeed: 3
+trailWidth: 2
+circleShooter: true
+circleShooterRadius: 52
+lifesteal: 200
+}
+{
+width: 10
+height: 12
+speed: 4
+lifetime: 2000
+damage: 100
+pierce: true
+pierceBuilding: true
+hitEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+colorFrom: f55555
+colorTo: f555555
+interp: circleOut
+}
+despawnEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+colorFrom: f55555
+colorTo: f555555
+interp: circleOut
+}
+hitColor: f25555
+trailColor: f25555
+backColor: f25555
+frontColor: ff7272
+trailLength: 10
+rotateSpeed: 3
+trailWidth: 2
+circleShooter: true
+circleShooterRadius: 50
+lifesteal: 200
+}
+]
+}
+}
+
+
+

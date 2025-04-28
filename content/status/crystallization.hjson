@@ -1,0 +1,17 @@
+name: crystallization
+damage: 0.5
+speedMultiplier: 0.02
+reloadMultiplier: 0
+effect: {
+particles: 1
+sizeFrom: 3.5
+sizeTo: 0
+lifetime: 120
+length: 0
+colorFrom: 80a8ff
+colorTo: 80a8ff
+interp: slope
+sizeInterp: slope
+region: sapphirium-rhombus
+}
+color: 80a8ff

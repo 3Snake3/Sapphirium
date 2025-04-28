@@ -9,10 +9,11 @@ Ah the Sapphirium, sounds good right?
 ## Contentmaker/Helpers List
 Kostolom - Balancer, Mapper, Json coder, Effect designer, Multi-tool functionally. Discord profile `kostolom#9777`
 <br>Laim - Spriter, map maker. Discord profile `LaIm-Ik.json#5237`
-<br>Liplum - Multicrafter's library author. Discord profile `Liplum#2623`
+<br>Sundered - Spriting helper. Discord profile `sundered8134`
 <br>Ƒρ4nCυz - JS helper. Discord profile `s4n_fr4ncuz`
 <br>Fox1va - A small helper. Discord profile `Fox1va_#3532`
 <br>Vervalamis - Spriting helper. Discord profile `Saigo no-nozomi#1206`
+<br>NastyMafia - Mapping helper. Discord profile `nastymafia`
 <br>
 <br>Thanks everyone for support.
 

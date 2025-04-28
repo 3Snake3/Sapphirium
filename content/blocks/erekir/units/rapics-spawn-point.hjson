@@ -1,0 +1,14 @@
+requirements: [
+silicon/500
+amethyst/500
+]
+unitType: rapics
+itemCapacity: 0
+squareSprite: false
+unitBuildTime: 36000
+polyRadius: 0
+consumes: {
+    power: 1
+}
+category: units
+size: 2

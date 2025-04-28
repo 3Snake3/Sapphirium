@@ -329,6 +329,48 @@ cruelty.buildType = () => extend(ItemTurret.ItemTurretBuild, cruelty, {
 });
 
 //Sapphire branch
+const blueRegen = extend(WaveEffect, {
+	sides: 0,
+	sizeFrom: 0,
+	sizeTo: 120,
+	lifetime: 120,
+	strokeFrom: 6,
+	strokeTo: 0,
+	sizeInterp: Interp.circleOut,
+	interp: Interp.circleOut,
+	colorFrom: Color.valueOf("80a8ff"),
+	colorTo: Color.valueOf("80a8ff")
+});
+const silence = extend(PowerTurret, "silence", {
+setStats() {
+		this.super$setStats();
+		this.stats.add(Stat.repairSpeed, (100 / 8 * 120 / 60), StatUnit.seconds);
+		}
+});
+silence.buildType = () => extend(PowerTurret.PowerTurretBuild, silence, {
+	creload: 0,
+	updateTile(){
+		this.super$updateTile();
+		if(this.creload >= 120){
+		Vars.indexer.eachBlock(this, 120, block => ( block.damaged() && !block.isHealSuppressed() ), block => {
+			block.heal(block.maxHealth * 8);
+                    block.recentlyHealed();
+                    Fx.healBlockFull.at(block.x, block.y, block.block.size, Pal.regen, block.block);
+                    blueRegen.at(this.x, this.y, this.rotation);
+                });
+				
+				Units.nearby(this.team, this.x, this.y, 120, unit => {
+                    if (unit.damaged()) {
+                        unit.heal(unit.maxHealth * 8);
+                        blueRegen.at(this.x, this.y, this.rotation);
+					}
+                });
+                this.creload = 0;
+                }
+                else this.creload++;
+                }
+                });
+
 /* how many times is the charge updated per second of firing */
 const scaleUpdateRate = 10;
 const scaleUpdateRate2 = 1;
@@ -797,6 +839,27 @@ dawn.buildType = () => extend(ItemTurret.ItemTurretBuild, dawn, {
 			return true;
 		}
 	});
+	
+const oblivion = extend(ItemTurret, "oblivion", {});
+oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
+	creload: 0,
+	updateTile(){
+		this.super$updateTile();
+		if(this.creload == 60){
+			if(this.power.status >= 100 && this.efficiency > 0 && this.hasAmmo()){
+			Units.nearby(this.team, this.x, this.y, 800, unit => {
+				if(unit.type.targetable && unit.type.hittable){
+					unit.apply(statuses.blur, 61);
+					}
+					});
+					}
+					this.creload++;
+					} 
+                    if(this.creload >= 60){
+						this.creload = 0;
+						}
+						}
+						});
 
 //Vanilla ammo
 var colorLerp = Color.valueOf("ea8878").lerp(Pal.redLight, 0.5);
@@ -832,13 +895,13 @@ const titanThoriumAmmo = extend(ArtilleryBulletType, 2.5, 350, "shell", {
 titanThoriumAmmo.trailInterp = v => Math.max(Mathf.slope(v), 0.8);
 
 const titanOxideAmmo = extend(ArtilleryBulletType, 2.5, 300, "shell", {
-	hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),
+	hitEffect: new MultiEffect(Fx.titanExplosionLarge, Fx.titanSmokeLarge, Fx.smokeAoeCloud),
 	despawnEffect: Fx.none,
 	knockback: 2,
 	lifetime: 190,
 	height: 19,
 	width: 17,
-	reloadMultiplier: 0.8,
+	reloadMultiplier: 0.65,
 	splashDamage: 300,
 	splashDamageRadius: 110,
 	rangeChange: 8,
@@ -846,7 +909,7 @@ const titanOxideAmmo = extend(ArtilleryBulletType, 2.5, 300, "shell", {
 	backColor: Color.valueOf("a0b380"),
 	hitColor: Color.valueOf("a0b380"),
     trailColor: Color.valueOf("a0b380"),
-    frontColor: Color.white,
+    frontColor: Color.valueOf("e4ffd6"),
     ammoMultiplier: 1,
     hitSound: Sounds.titanExplosion,
     status: StatusEffects.blasted,
@@ -861,24 +924,42 @@ const titanOxideAmmo = extend(ArtilleryBulletType, 2.5, 300, "shell", {
     smokeEffect: Fx.shootSmokeTitan,
     shrinkX: 0.2,
     shrinkY: 0.1,
-    buildingDamageMultiplier: 0.2,
+    buildingDamageMultiplier: 0.25,
+    
+    fragBullets: 1,
+                fragBullet: extend(EmptyBulletType, {
+                    lifetime: 60 * 2.5,
+                    bulletInterval: 20,
+                    intervalBullet: extend(EmptyBulletType, {
+                        splashDamage: 30,
+                        collidesGround: true,
+                        collidesAir: false,
+                        collides: false,
+                        hitEffect: Fx.none,
+                        pierce: true,
+                        instantDisappear: true,
+                        splashDamageRadius: 90,
+                        buildingDamageMultiplier: 0.2,
+                    })
+                    })
 });
 titanOxideAmmo.trailInterp = v => Math.max(Mathf.slope(v), 0.8);
 
-const titanCarbideAmmo = extend(ArtilleryBulletType, 2.5, 500, "shell", {
+const titanCarbideAmmo = extend(ArtilleryBulletType, 2.5, 700, "shell", {
 	hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),
 	despawnEffect: Fx.none,
 	knockback: 3,
 	lifetime: 140,
 	height: 19,
 	width: 17,
-	splashDamage: 650,
+	splashDamage: 750,
 	splashDamageRadius: 55,
+	reloadMultiplier: 0.8,
 	rangeChange: 10 * Vars.tilesize,
 	scaledSplashDamage: true,
-	backColor: Color.valueOf("a0b380"),
-	hitColor: Color.valueOf("a0b380"),
-    trailColor: Color.valueOf("a0b380"),
+	backColor: Color.valueOf("ab8ec5"),
+	hitColor: Color.valueOf("ab8ec5"),
+    trailColor: Color.valueOf("ab8ec5"),
     frontColor: Color.white,
     ammoMultiplier: 1,
     hitSound: Sounds.titanExplosion,
@@ -888,13 +969,39 @@ const titanCarbideAmmo = extend(ArtilleryBulletType, 2.5, 500, "shell", {
     trailSinScl: 2.5,
     trailSinMag: 0.5,
     trailInterval: 3,
-    trailEffect: Fx.none,
+    trailEffect: Fx.disperseTrail,
     despawnShake: 7,
     shootEffect: Fx.shootTitan,
     smokeEffect: Fx.shootSmokeTitan,
     shrinkX: 0.2,
     shrinkY: 0.1,
     buildingDamageMultiplier: 0.2,
+    trailRotation: true,
+    fragLifeMin: 1.5,
+    fragBullets: 12,
+    fragBullet: extend(ArtilleryBulletType, 0.5, 50, "shell", {
+    	hitEffect: new MultiEffect(Fx.titanExplosionFrag, Fx.titanLightSmall, extend(WaveEffect, {
+                            lifetime: 8,
+                            strokeFrom: 1,
+                            sizeTo: 8,
+                        })),
+
+                        despawnEffect: Fx.hitBulletColor,
+                        width: 8,
+                        height: 12,
+                        lifetime: 50,
+                        knockback: 0.5,
+                        splashDamageRadius: 22,
+                        splashDamage: 50,
+                        scaledSplashDamage: true,
+                        pierceArmor: true,
+                        backColor: Color.valueOf("ab8ec5"),
+	hitColor: Color.valueOf("ab8ec5"),
+    trailColor: Color.valueOf("ab8ec5"),
+    frontColor: Color.white,
+                        buildingDamageMultiplier: 0.25,
+                        shrinkY: 0.3,
+                    })
 });
 titanCarbideAmmo.trailInterp = v => Math.max(Mathf.slope(v), 0.8);
 

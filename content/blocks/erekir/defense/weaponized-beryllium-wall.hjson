@@ -1,0 +1,39 @@
+type: PowerTurret
+category: defense
+health: 2080
+armor: 2
+size: 2
+rotateSpeed: 2
+unitSort: strongest
+shootSound: claws-wave
+inaccuracy: 0
+recoil: -6
+shootCone: 5
+range: 64
+reload: 120
+shoot: {
+type: ShootAlternate
+shots: 2
+}
+shootType: {
+type: SharpnelBulletType
+length: 72
+width: 10
+damage: 60
+serrations: 0
+knockback: -6
+lifesteal: 60
+fromColor: b1dd7e
+toColor: b1dd7e
+hitEffect: {
+particles: 8
+lifetime: 30
+line: true
+cone: 20
+lenFrom: 3
+lenTo: 0
+colorFrom: b1dd7e
+colorTo: b1dd7e
+}
+}
+buildVisibility: editorOnly

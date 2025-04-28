@@ -4,6 +4,7 @@ const items = require("SappItems");
 //Attributes
 const topazAttr = Attribute.add("topazAttr");
 const argonAttr = Attribute.add("argonAttr");
+const graphiteAttr = Attribute.add("graphiteAttr");
 
 //Liquid tiles
 const ledoniteLiquid = extend(Floor, "ledonite", {
@@ -249,14 +250,17 @@ topazVeins.asFloor().wall = topazWall;
 
 const amberWall = extend(StaticWall, "amber-wall", {});
 amber.asFloor().wall = amberWall;
+amberWall.attributes.set(Attribute.sand, 1.8);
 
 const sapphiricStaticWall = extend(StaticWall, "sapphiric-static-wall", {});
 sapphiricStone.asFloor().wall = sapphiricStaticWall;
 smoothSapphire.asFloor().wall = sapphiricStaticWall;
+sapphiricStaticWall.attributes.set(Attribute.sand, 1.2);
 
 const blueStoneWall = extend(StaticWall, "blue-stone-wall", {});
 blueStone.asFloor().wall = blueStoneWall;
 denseBlueStone.asFloor().wall = blueStoneWall;
+blueStoneWall.attributes.set(Attribute.sand, 1.5);
 
 const amethystWall = extend(StaticWall, "amethyst-wall", {
 	variants: 3,
@@ -267,16 +271,19 @@ const purpleStoneWall = extend(StaticWall, "purple-stone-wall", {
 	variants: 3,
 });
 purpleStone.asFloor().wall = purpleStoneWall;
+purpleStoneWall.attributes.set(Attribute.sand, 1.5);
 
 const rubyStone = extend(StaticWall, "ruby-stone", {
     variants: 2
 });
 rubyFloor.asFloor().wall = rubyStone;
+rubyStone.attributes.set(Attribute.sand, 1);
 
 const spinelWall = extend(StaticWall, "spinel-wall", {
     variants: 2
 });
 spinel.asFloor().wall = spinelWall;
+spinelWall.attributes.set(Attribute.sand, 1);
 
 //Decoration
 const topazBoulder = extend(Prop, "topaz-boulder", {

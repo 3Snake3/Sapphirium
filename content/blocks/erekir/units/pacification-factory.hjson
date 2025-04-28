@@ -1,0 +1,19 @@
+category: units
+size: 3
+configurable: false
+plans: [
+{
+unit: pacification-moveable
+time: 18000
+requirements: [
+sapphire/15
+silicon/20
+]
+}
+]
+regionSuffix: -dark
+fogRadius: 3
+consumes: {
+power: 2
+}
+buildVisibility: editorOnly

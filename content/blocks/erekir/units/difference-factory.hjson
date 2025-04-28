@@ -8,7 +8,7 @@ requirements: [
 ]
 itemCapacity: 160
 squareSprite: false
-buildTime: 1500
+unitBuildTime: 1500
 polyRadius: 0
 consumes: {
     power: 20

@@ -1,0 +1,106 @@
+hitSize: 9
+health: 640
+armor: 6
+rotateSpeed: 4
+itemCapacity: 0
+playerControllable: false
+hidden: true
+forceMultiTarget: true
+speed: 0
+targetAir: false
+
+weapons: [
+{
+name: pacification-weapon
+x: 3
+y: 0
+controllable: false
+autoTarget: true
+reload: 30
+ignoreRotation: true
+recoil: 2
+rotateSpeed: 3
+mirror: false
+shootSound: bolt
+
+bullet: {
+type: ShrapnelBulletType
+length: 40
+width: 14
+toColor: d1efff
+damage: 44
+status: crystallization
+hitColor: d1efff
+statusDuration: 200
+shootEffect: shootBigColor
+}
+
+}
+{
+name: pacification-mount
+x: -3
+y: 0
+reload: 85
+recoil: 3
+ignoreRotation: true
+controllable: false
+autoTarget: true
+shootSound: blaster
+rotateSpeed: 2
+
+shoot: {
+type: ShootSpread
+spread: 15
+shots: 3
+}
+
+bullet: {
+type: ArtilleryBulletType
+width: 8
+height: 8
+speed: 2.4
+lifetime: 83
+damage: 54
+splashDamage: 85
+splashDamageRadius: 32
+collidesTiles: true
+backColor: d1efff
+hitColor: d1efff
+trailColor: d1efff
+frontColor: ffffff
+trailLength: 9
+trailWidth: 2
+
+hitEffect: {
+type: ExplosionEffect
+waveRad: 32
+waveLife: 12
+waveColor: d1efff
+sparks: 6
+sparkLen: 4
+sparkRad: 32
+sparkColor: d1efff
+smokes: 6
+smokeSize: 4
+smokeColor: d1efff70
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 32
+waveLife: 12
+waveColor: d1efff
+sparks: 6
+sparkLen: 4
+sparkRad: 32
+sparkColor: d1efff
+smokes: 6
+smokeSize: 4
+smokeColor: d1efff70
+}
+
+status: crystallization
+statusDuration: 80
+}
+}
+]
+

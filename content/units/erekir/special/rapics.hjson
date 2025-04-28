@@ -1,0 +1,250 @@
+health: 4000
+armor: 8
+speed: 0.64
+legCount: 6
+hitSize: 14
+drag: 0.1
+rotateSpeed: 2
+stepShake: 0
+legLength: 8
+legStraightness: 0.3
+lockLegBase: true
+legContinuousMove: true
+legExtension: -2
+allowLegStep: true
+legPhysicsLayer: false
+legBaseOffset: 3
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.95
+legForwardScl: 1.1
+legGroupSize: 3
+rippleScale: 0.2
+legMoveSpace: 1
+hovering: true
+shadowElevation: 0.2
+groundLayer: 74
+range: 120
+hidden: true
+immunities: [unleash]
+playerControllable: false
+weapons: [
+{
+name: rapics-weapon
+x: 4
+y: -0.25
+reload: 60
+shootSound: bolt
+top: false
+layerOffset: -0.001
+rotate: false
+shootY: 3.75
+shoot: {
+shots: 2
+shotDelay: 5
+}
+shootStatus: unmoving
+shootStatusDuration: 30
+controllable: false
+autoTarget: true
+bullet: {
+width: 8
+height: 12
+trailLength: 6
+trailWidth: 1.5
+speed: 8
+pierce: true
+pierceBuilding: true
+damage: 18
+buildingDamageMultiplier: 2
+lifetime: 25
+backColor: 6d56bf
+trailColor: 6d56bf
+hitColor: 6d56bf
+frontColor: bf92f9
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: shootBigColor
+status: sapped
+statusDuration: 300
+spawnBulletRandomSpread: 45
+spawnBullets: [
+{
+type: LightningBulletType
+damage: 30
+lightningLength: 8.5
+lightningColor: 6d56bf
+lightningLengthRand: 1.5
+hitColor: 6d56bf
+}
+{
+type: LightningBulletType
+damage: 30
+lightningLength: 8.5
+lightningColor: 6d56bf
+lightningLengthRand: 1.5
+hitColor: 6d56bf
+}
+]
+fragOnHit: false
+fragBullets: 1
+fragRandomSpread: 0
+fragBullet: {
+sprite: sapphirium-rhombus
+width: 8
+height: 8
+backColor: 6d56bf
+hitColor: 6d56bf
+frontColor: bf92f9
+speed: 0
+damage: 0
+hitEffect: none
+despawnEffect: hitBulletColor
+collides: false
+collidesTiles: false
+hittable: false
+absorbable: false
+reflectable: false
+lifetime: 30
+shrinkY: 0
+shrinkX: 0
+intervalBullets: 1
+bulletInterval: 10
+intervalBullet: {
+width: 8
+height: 12
+trailLength: 6
+trailWidth: 1.5
+speed: 5
+pierce: true
+pierceBuilding: true
+damage: 18
+buildingDamageMultiplier: 2
+lifetime: 30
+backColor: 6d56bf
+trailColor: 6d56bf
+hitColor: 6d56bf
+frontColor: bf92f9
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+status: sapped
+statusDuration: 300
+homingPower: 0.3
+splashDamage: 36
+splashDamageRadius: 16
+}
+}
+}
+}
+{
+x: 0
+y: 0
+controllable: false
+autoTarget: true
+alwaysShooting: true
+reload: 60
+rotate: false
+mirror: false
+shootSound: mineDeploy
+bullet: {
+width: 8
+height: 12
+trailLength: 6
+trailWidth: 1.5
+speed: 4
+pierce: true
+pierceBuilding: true
+damage: 18
+buildingDamageMultiplier: 2
+lifetime: 300
+backColor: 6d56bf
+trailColor: 6d56bf
+hitColor: 6d56bf
+frontColor: bf92f9
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: shootBigColor
+status: sapped
+statusDuration: 300
+circleShooter: true
+circleShooterRadius: 20
+lifesteal: 80
+spawnBullets: [
+{
+width: 8
+height: 12
+trailLength: 6
+trailWidth: 1.5
+speed: 4
+pierce: true
+pierceBuilding: true
+damage: 18
+buildingDamageMultiplier: 2
+lifetime: 300
+backColor: 6d56bf
+trailColor: 6d56bf
+hitColor: 6d56bf
+frontColor: bf92f9
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: shootBigColor
+status: sapped
+statusDuration: 300
+circleShooter: true
+circleShooterRadius: 24
+lifesteal: 80
+}
+{
+width: 8
+height: 12
+trailLength: 6
+trailWidth: 1.5
+speed: 4
+pierce: true
+pierceBuilding: true
+damage: 18
+buildingDamageMultiplier: 2
+lifetime: 300
+backColor: 6d56bf
+trailColor: 6d56bf
+hitColor: 6d56bf
+frontColor: bf92f9
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: shootBigColor
+status: sapped
+statusDuration: 300
+circleShooter: true
+circleShooterRadius: 28
+lifesteal: 80
+}
+{
+width: 8
+height: 12
+trailLength: 6
+trailWidth: 1.5
+speed: 4
+pierce: true
+pierceBuilding: true
+damage: 18
+buildingDamageMultiplier: 2
+lifetime: 300
+backColor: 6d56bf
+trailColor: 6d56bf
+hitColor: 6d56bf
+frontColor: bf92f9
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+shootEffect: shootBigColor
+status: sapped
+statusDuration: 300
+circleShooter: true
+circleShooterRadius: 32
+lifesteal: 80
+}
+]
+}
+}
+]
+
+ 

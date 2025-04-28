@@ -1,0 +1,337 @@
+type: flying
+template: ErekirUnitType
+flying: true
+health: 8000
+armor: 20
+speed: 3
+drag: 0.03
+accel: 0.03
+rotateSpeed: 5
+targetFlags: [generator, reactor, battery]
+hidden: true
+hitSize: 30
+lowAltitude: false
+drawCell: false
+healColor: f55555
+immunities: [blur, wraith, unleash]
+playerControllable: false
+
+range: 90
+
+fallEffect: none
+fallEngineEffect: none
+
+engineColor: f55555
+engineColorInner: fc8e6d
+createWreck: false
+
+
+deathShake: 0
+trailLength: 24
+parts: [
+{
+type: ShapePart
+x: 7.5
+y: 10.5
+mirror: true
+radius: 4
+rotateSpeed: 4
+layer: 110
+color: f55555
+}
+{
+type: ShapePart
+radius: 4
+circle: true
+layer: 110
+color: f55555
+}
+{
+type: ShapePart
+radius: 8
+circle: true
+hollow: true
+stroke: 4
+layer: 110
+color: f55555
+}
+]
+
+abilities: [
+{
+type: SpawnDeathAbility
+unit: teleportationSmokeDeath
+spread: 0.1
+}
+]
+
+engines: [
+{
+x: 13.75
+y: 2
+rotation: 315
+radius: 2.5
+}
+{
+x: -13.75
+y: 2
+rotation: -135
+radius: 2.5
+}
+{
+x: 10.75
+y: -10.25
+rotation: 315
+radius: 2.5
+}
+{
+x: -10.75
+y: -10.25
+rotation: -135
+radius: 2.5
+}
+]
+abilities: [
+{
+type: RegenAbility
+amount: 2.25
+}
+]
+deathExplosionEffect: {
+type: ExplosionEffect
+lifetime: 60
+smokes: 24
+smokeSize: 10
+smokeColor: a14553
+smokeRad: 40
+sparks: 0
+waveRad: 0
+waveRadBase: 0
+waveLife: 0
+}
+deathSound: teleportation
+weapons: [
+{
+ignoreRotation: true
+shootCone: 360
+reload: 120
+recoil: 0
+shootSound: none
+mirror: false
+x: 0
+y: 0
+bullet: {
+speed: 4
+drag: 0.01
+lifetime: 40
+damage: 125
+sprite: mine-bullet
+backColor: f55555
+trailColor: f55555
+hitColor: f55555
+frontColor: fc8e6d
+hitEffect: {
+type: ExplosionEffect
+waveColor: f55555
+sparkColor: f55555
+smokeColor: f55555
+waveRad: 16
+waveLife: 8
+sparks: 8
+sparkRad: 16
+sparkLen: 4
+smokes: 12
+smokeColor: f55555
+lifetime: 30
+}
+despawnEffect: {
+type: ExplosionEffect
+waveColor: f55555
+sparkColor: f55555
+smokeColor: f55555
+waveRad: 16
+waveLife: 8
+sparks: 8
+sparkRad: 16
+sparkLen: 4
+smokes: 12
+smokeColor: f55555
+lifetime: 30
+}
+trailWidth: 3
+trailLength: 24
+width: 16
+height: 16
+collidesAir: false
+collidesTiles: false
+shrinkY: 0
+shrinkX: 0
+fragBullets: 1
+fragRandomSpread: 0
+fragBullet: {
+speed: 0
+lifetime: 240
+damage: 125
+splashDamage: 200
+splashDamageRadius: 32
+splashDamagePierce: true
+sprite: mine-bullet
+backColor: f55555
+trailColor: f55555
+hitColor: f55555
+frontColor: fc8e6d
+hitEffect: {
+type: ExplosionEffect
+waveColor: f55555
+sparkColor: f55555
+smokeColor: f55555
+waveRad: 32
+waveLife: 10
+sparks: 12
+sparkRad: 32
+sparkLen: 4.3
+smokes: 16
+smokeColor: f55555
+lifetime: 180
+}
+despawnEffect: {
+type: ExplosionEffect
+waveColor: f55555
+sparkColor: f55555
+smokeColor: f55555
+waveRad: 32
+waveLife: 10
+sparks: 12
+sparkRad: 32
+sparkLen: 4.3
+smokes: 16
+smokeColor: f55555
+lifetime: 180
+}
+lightning: 3
+lightningLength: 6
+lightningColor: f55555
+width: 16
+height: 16
+collides: false
+collidesAir: false
+shrinkY: 0
+shrinkX: 0
+despawnSound: shockBlast
+}
+}
+}
+{
+x: 7.5
+y: 10.5
+reload: 8
+shootCone: 25
+ignoreRotation: true
+shootSound: bolt
+alternate: true
+bullet: {
+width: 10
+height: 12
+speed: 3
+lifetime: 60
+damage: 66
+pierce: true
+pierceBuilding: true
+hitEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+colorFrom: f55555
+colorTo: f555555
+interp: circleOut
+}
+despawnEffect: {
+type: WaveEffect
+lifetime: 60
+sizeTo: 16
+colorFrom: f55555
+colorTo: f555555
+interp: circleOut
+}
+hitColor: f25555
+trailColor: f25555
+backColor: f25555
+frontColor: ff7272
+trailLength: 10
+trailWidth: 2
+}
+}
+
+{
+x: 0
+y: 0
+reload: 300
+recoil: 0
+
+shootOnDeath: true
+rotate: false
+mirror: false
+shootCone: 360
+shootSound: false
+display: false
+
+bullet: {
+speed: 0
+damage: 0
+lifetime: 360
+killShooter: true
+width: 8
+height: 8
+hittable: false
+absorbable: false
+hitEffect: none
+collidesTiles: false
+collides: false
+
+spawnBulletRandomSpread: 360
+spawnBullets: [
+{
+speed: 4
+lifetime: 60
+damage: 0
+hittable: false
+absorbable: false
+hitEffect: none
+collidesTiles: false
+collides: false
+despawnUnit: teleportationSmoke
+despawnUnitCount: 1
+}
+]
+
+intervalBullets: 1
+bulletInterval: 1
+intervalRandomSpread: 0
+intervalBullet: {
+speed: 0
+damage: 0
+lifetime: 1
+width: 8
+height: 8
+hittable: false
+absorbable: false
+hitEffect: none
+collidesTiles: false
+collides: false
+despawnEffect: {
+type: ExplosionEffect
+lifetime: 60
+smokes: 24
+smokeSize: 10
+smokeColor: a14553
+smokeRad: 40
+sparks: 0
+waveRad: 0
+waveRadBase: 0
+waveLife: 0
+}
+}
+
+}
+}
+]
