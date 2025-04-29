@@ -8,5 +8,4 @@ consumes: {
 }
 category: units
 size: 2
-buildVisibility: editorOnlyry: units
-size: 2
+buildVisibility: editorOnly
