@@ -279,7 +279,6 @@ bullet: {
 speed: 0
 damage: 0
 lifetime: 360
-killShooter: true
 width: 8
 height: 8
 hittable: false
@@ -299,11 +298,49 @@ absorbable: false
 hitEffect: none
 collidesTiles: false
 collides: false
+createChance: 0.01
+fragBullets: 1
+fragRandomSpread: 0
+fragBullet: {
+speed: 0
+lifetime: 60
+damage: 0
+hittable: false
+absorbable: false
+hitEffect: none
+collidesTiles: false
+collides: false
 despawnUnit: teleportationSmoke
 despawnUnitCount: 1
 }
+}
 ]
+}
+}
+{
+x: 0
+y: 0
+reload: 300
+recoil: 0
 
+shootOnDeath: true
+rotate: false
+mirror: false
+shootCone: 360
+shootSound: false
+display: false
+
+bullet: {
+speed: 0
+damage: 0
+lifetime: 360
+width: 8
+height: 8
+hittable: false
+absorbable: false
+hitEffect: none
+collidesTiles: false
+collides: false
 intervalBullets: 1
 bulletInterval: 1
 intervalRandomSpread: 0
@@ -331,7 +368,6 @@ waveRadBase: 0
 waveLife: 0
 }
 }
-
 }
 }
 ]

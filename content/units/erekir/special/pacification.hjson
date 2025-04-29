@@ -5,7 +5,6 @@ rotateSpeed: 4
 itemCapacity: 0
 playerControllable: false
 hidden: true
-forceMultiTarget: true
 speed: 0
 targetAir: false
 
@@ -17,7 +16,6 @@ y: 0
 controllable: false
 autoTarget: true
 reload: 30
-ignoreRotation: true
 recoil: 2
 rotateSpeed: 3
 mirror: false
@@ -99,6 +97,12 @@ smokeColor: d1efff70
 }
 
 status: crystallization
+statusDuration: 80
+}
+}
+]
+
+ystallization
 statusDuration: 80
 }
 }

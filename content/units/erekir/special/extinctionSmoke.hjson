@@ -17,11 +17,11 @@ createScorch: false
 deathSound: none
 deathExplosionEffect: {
 type: ExplosionEffect
-lifetime: 60
+lifetime: 30
 smokes: 24
 smokeSize: 10
 smokeColor: a14553
-smokeRad: 40
+smokeRad: 20
 sparks: 0
 waveRad: 0
 waveRadBase: 0
@@ -67,11 +67,11 @@ hittable: false
 absorbable: false
 despawnEffect: {
 type: ExplosionEffect
-lifetime: 60
+lifetime: 30
 smokes: 24
 smokeSize: 10
 smokeColor: a14553
-smokeRad: 40
+smokeRad: 20
 sparks: 0
 waveRad: 0
 waveRadBase: 0
@@ -80,11 +80,11 @@ waveLife: 0
 }
 shootEffect: {
 type: ExplosionEffect
-lifetime: 60
+lifetime: 30
 smokes: 24
 smokeSize: 10
 smokeColor: a14553
-smokeRad: 40
+smokeRad: 20
 sparks: 0
 waveRad: 0
 waveRadBase: 0

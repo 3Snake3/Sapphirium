@@ -2,7 +2,7 @@ type: flying
 template: ErekirUnitType
 flying: true
 health: 800
-speed: 3
+speed: 4
 drag: 0.01
 accel: 0.01
 targetable: false
@@ -25,6 +25,7 @@ lifetime: 60
 createScorch: false
 fallEffect: none
 fallEngineEffect: none
+hidden: true
 range: 8
 engineOffset: 6
 engineSize: 1.25
@@ -34,6 +35,7 @@ rotateSpeed: 1
 targetAir: false
 immunities: [unleash]
 hitSize: 9
+playerControllable: false
 
 weapons: [
 {
