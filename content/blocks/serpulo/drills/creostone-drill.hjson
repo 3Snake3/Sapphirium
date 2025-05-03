@@ -2,7 +2,7 @@ health: 600
 liquidBoostIntensity: 3
 size: 2
 rotateSpeed: 5
-tier: 6
+tier: 5
 drillTime: 200
 updateEffect: redgeneratespark
 hasPower: true

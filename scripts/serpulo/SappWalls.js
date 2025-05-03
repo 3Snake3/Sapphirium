@@ -529,21 +529,28 @@ const surgeBullet = extend(ExplosionBulletType, {
        }
        });
 
+const powerProduction = 0.8;
+const productionEfficiency = 1.0;
+
 const surgeStoneWall = extend(Wall, "surge-stone-wall", {
 	destroyBullet: surgeBullet,
 	destroyBulletSameTeam: true,
+	baseExplosiveness: 4,
+	hasPower: true,
+    outputsPower: true,
+    consumesPower: false,
     setStats() {
         this.super$setStats();
         if(lChance > 0) {
             this.stats.add(Stat.lightningChance, lChance * 100, StatUnit.percent);
             this.stats.add(Stat.lightningDamage, lDamage, StatUnit.none);
         }
-        this.stats.add(Stat.basePowerGeneration, 0.5 * 60, StatUnit.powerSecond);
+        this.stats.add(Stat.basePowerGeneration, powerProduction * 60, StatUnit.powerSecond);
     },
     setBars() {
         this.super$setBars();
         this.addBar("poweroutput", entity => new Bar(
-            () => Core.bundle.format("bar.poweroutput", 0.8 * 60), 
+            () => Core.bundle.format("bar.poweroutput", powerProduction * 60), 
             () => Pal.powerBar, 
             () => 1
         ));
@@ -565,7 +572,7 @@ surgeStoneWall.buildType = () => extend(Wall.WallBuild, surgeStoneWall, {
         return true;
     },
     getPowerProduction(){
-    	return 0.5 * 1.0;
+    	return powerProduction * productionEfficiency;
      }
 });
 const armedSurgeStoneWall = extend(PowerTurret, "armed-surge-stone-wall", {

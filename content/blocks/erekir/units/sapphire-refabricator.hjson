@@ -1,0 +1,20 @@
+
+category: units
+size: 3
+regionSuffix: -dark
+consumes: {
+power: 3
+liquid: hydrogen/0.1
+items: {
+items: [
+sapphire/80
+silicon/60
+]
+}
+}
+constructTime: 2000
+upgrades: [
+[pacification-moveable, curbing]
+]
+shownPlanets: [erekir]
+buildVisibility: editorOnly

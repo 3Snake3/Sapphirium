@@ -1,0 +1,129 @@
+
+flying: true
+lowAltitude: true
+hidden: true
+speed: 0.65
+rotateSpeed: 1
+drag: 0.06
+accel: 0.07
+health: 8000
+armor: 18
+playerControllable: false
+range: 24
+deathExplosionEffect: none
+outlines: false
+hitSize: 54
+
+abilities: [
+{
+type: UnitSpawnAbility
+spawnX: 20
+spawnY: 0
+unit: pacification-moveable
+}
+{
+type: UnitSpawnAbility
+spawnX: -20
+spawnY: 0
+unit: pacification-moveable
+}
+{
+type: UnitSpawnAbility
+spawnX: 10
+spawnY: 20
+unit: pacification-moveable
+}
+{
+type: UnitSpawnAbility
+spawnX: -10
+spawnY: 20
+unit: pacification-moveable
+}
+{
+type: StatusFieldAbility
+effect: {
+name: crystal-shield
+healthMultiplier: 4
+speedMultiplier: 0.7
+effect: {
+particles: 1
+region: sapphirium-rhombus
+sizeFrom: 4
+sizeTo: 0
+lifetime: 30
+length: 0
+colorFrom: d1efff
+colorTo: d1efff
+}
+}
+activeEffect: {
+type: WaveEffect
+sides: 6
+sizeTo: 64
+lifetime: 60
+colorFrom: d1efff
+colorTo: d1efff
+interp: circleOut
+}
+applyEffect: {
+type: WaveEffect
+sides: 6
+sizeTo: 16
+lifetime: 60
+colorFrom: d1efff
+colorTo: d1efff
+interp: circleOut
+}
+duration: 180
+reload: 300
+range: 64
+color: d1efff
+}
+{
+type: SpawnDeathAbility
+unit: subordination-phase2
+}
+]
+
+parts: [
+{
+type: RegionPart
+suffix: -glow
+outline: false
+blending: additive
+color: d1efff70
+}
+]
+
+weapons: [
+{
+x: 0
+y: 0
+shootCone: 360
+reload: 20
+shootSound: plasmaboom
+shootOnDeath: true
+bullet: {
+type: ExplosionBulletType
+splashDamage: 3000
+splashDamageRadius: 80
+shootEffect: {
+type: ExplosionEffect
+lifetime: 80
+sparks: 18
+smokes: 18
+waveRad: 80
+waveLife: 12
+waveStroke: 3
+waveColor: d1efff
+sparkColor: d1efff
+smokeColor: d1efff70
+sparkLen: 6
+sparkStroke: 4
+sparkRad: 80
+smokeSize: 8
+smokeRad: 80
+}
+}
+}
+]

@@ -99,6 +99,8 @@ carvedMonolith.buildType = () => extend(Wall.WallBuild, carvedMonolith, {
 });
 
 module.exports = {
+	sapphireWall: sapphireWall,
 	sapphireWallLarge: sapphireWallLarge,
+	carvedWall: carvedWall,
 	carvedWallLarge: carvedWallLarge
 	}

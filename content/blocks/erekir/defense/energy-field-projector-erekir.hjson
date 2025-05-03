@@ -1,0 +1,14 @@
+unitType: energy-field-erekir
+itemCapacity: 0
+squareSprite: false
+unitBuildTime: 1
+polyRadius: -1
+consumes: {
+    power: 5
+}
+targetable: false
+health: 4000
+category: effect
+size: 3
+category: effect
+buildVisibility: editorOnly

@@ -1,0 +1,53 @@
+flying: true
+lowAltitude: false
+hidden: true
+speed: 2
+rotateSpeed: 2
+drag: 0.06
+accel: 0.07
+health: 1200
+armor: 18
+playerControllable: false
+range: 80
+hitSize: 20
+
+weapons: [
+{
+x: 4
+y: 2
+reload: 60
+mirror: true
+alternate: true
+shootSound: laser
+bullet: {
+type: LaserBulletType
+width: 10
+length: 160
+damage: 180
+pierceCap: 2
+removeAfterPierce: true
+colors: [d1efff70, d1efff, ffffff]
+sideWidth: 6
+sideLength: 16
+}
+}
+{
+x: 8
+y: 0
+reload: 60
+mirror: true
+alternate: true
+shootSound: laser
+bullet: {
+type: LaserBulletType
+width: 10
+length: 160
+damage: 180
+pierceCap: 2
+removeAfterPierce: true
+colors: [d1efff70, d1efff, ffffff]
+sideWidth: 6
+sideLength: 16
+}
+}
+]

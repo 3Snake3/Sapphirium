@@ -1,0 +1,122 @@
+shadowElevation: 0.1
+hovering: true
+canDrown: false
+hidden: true
+speed: 0.65
+rotateSpeed: 1
+drag: 0.06
+accel: 0.07
+health: 14000
+armor: 18
+playerControllable: false
+range: 144
+hitSize: 54
+
+weapons: [
+{
+name: subordination-phase2-cannon
+x: 12.5
+y: 0
+rotate: true
+rotationLimit: 45
+rotateSpeed: 1
+mirror: true
+alternate: true
+shootSound: laser
+shake: 3
+recoil: 4
+reload: 180
+
+bullet: {
+sprite: circle-bullet
+shrinkY: 0
+speed: 3
+lifetime: 48
+width: 10
+height: 10
+damage: 70
+splashDamage: 120
+splashDamageRadius: 40
+hitSound: plasmaboom
+backColor: d1efff
+hitColor: d1efff
+trailColor: d1efff
+frontColor: ffffff
+trailWidth: 2
+trailLength: 32
+trailChance: 0.3
+trailEffect: {
+particles: 1
+length: 0
+lifetime: 30
+sizeFrom: 7
+sizeTo: 0
+colorFrom: ffffff
+colorTo: d1efff
+region: sapphirium-rail
+}
+hitEffect: {
+type: ExplosionEffect
+waveRad: 40
+waveLife: 20
+waveColor: d1efff
+sparks: 10
+sparkLen: 4
+sparkColor: d1efff
+sparkRad: 40
+smokes: 10
+smokeRad: 40
+smokeSize: 4
+smokeColor: d1efff70
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 40
+waveLife: 20
+waveColor: d1efff
+sparks: 10
+sparkLen: 4
+sparkColor: d1efff
+sparkRad: 40
+smokes: 10
+smokeRad: 40
+smokeSize: 4
+smokeColor: d1efff70
+}
+collidesTeam: true
+healPercent: 15
+fragBullets: 16
+fragLifeMin: 1
+fragVelocityMin: 1
+fragRandomSpread: 0
+fragSpread: 22.5
+fragBullet: {
+width: 8
+height: 12
+speed: 4
+damage: 45
+lifetime: 30
+backColor: d1efff
+hitColor: d1efff
+trailColor: d1efff
+frontColor: ffffff
+trailWidth: 1.4
+trailLength: 8
+hitEffect: {
+type: WaveEffect
+sizeTo: 16
+colorTo: d1efff
+lifetime: 80
+}
+despawnEffect: {
+type: WaveEffect
+sizeTo: 16
+colorTo: d1efff
+lifetime: 80
+}
+pierce: true
+pierceBuilding: true
+}
+}
+}
+]

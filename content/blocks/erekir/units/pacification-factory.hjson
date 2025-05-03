@@ -4,7 +4,7 @@ configurable: false
 plans: [
 {
 unit: pacification-moveable
-time: 18000
+time: 1800
 requirements: [
 sapphire/15
 silicon/20

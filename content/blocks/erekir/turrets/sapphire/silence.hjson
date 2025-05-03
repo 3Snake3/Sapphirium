@@ -10,6 +10,13 @@ range: 120
 shake: 0
 scaledHealth: 200
 targetAir: false
+shoot: {
+type: ShootSine
+shots: 2
+scl: 8
+mag: 10
+}
+category: turret
 buildVisibility: editorOnly
 shootType: {
 sprite: mine-bullet

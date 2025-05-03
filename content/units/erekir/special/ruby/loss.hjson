@@ -298,7 +298,7 @@ absorbable: false
 hitEffect: none
 collidesTiles: false
 collides: false
-createChance: 0.01
+createChance: 0.05
 fragBullets: 1
 fragRandomSpread: 0
 fragBullet: {

@@ -1,4 +1,5 @@
-unitType: rapics
+unitType: rapix
+health: 2000
 itemCapacity: 0
 squareSprite: false
 unitBuildTime: 36000

@@ -1,0 +1,10 @@
+regionSuffix: -dark
+category: units
+size: 5
+areaSize: 13
+consumes: {
+power: 5
+liquids: [hydrogen/0.2, creotine/0.1]
+}
+shownPlanets: [erekir]
+buildVisibility: editorOnly

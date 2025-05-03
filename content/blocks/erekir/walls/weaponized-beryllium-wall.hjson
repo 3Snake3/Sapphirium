@@ -16,7 +16,7 @@ type: ShootAlternate
 shots: 2
 }
 shootType: {
-type: SharpnelBulletType
+type: ShrapnelBulletType
 length: 72
 width: 10
 damage: 60

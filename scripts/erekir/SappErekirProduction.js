@@ -72,7 +72,49 @@ const ExplodeBullet = extend(BasicBulletType, {
     backColor: Color.valueOf("ffe18f"),
     hitColor: Color.valueOf("ffe18f"),
     frontColor: Color.white,
+})
+
+const ExplodeBullett = extend(BasicBulletType, {
+    width: 1,
+    height: 1,
+    lifetime: 1,
+    speed:0,
+    pierceCap: 2,
+    pierce: true,
+    damage: 99999,
+    sprite: "sapphirium-none-bullet",
+    splashDamage: 1000,
+    buildingDamageMultiplier: 2,
+    splashDamageRadius: 128,
+    hitEffect: new MultiEffect(ExpWave,SecExpWave),
+    despawnEffect: new MultiEffect(ExpWave,SecExpWave,darkexpRomb,midexpRomb,lightexpRomb),
+    shootEffect: Fx.none,
+    smokeEffect: Fx.none,
+    backColor: Color.valueOf("ffe18f"),
+    hitColor: Color.valueOf("ffe18f"),
+    frontColor: Color.white,
+})
+
+const biochargeFoundry = extend(HeatProducer, "biocharge-foundry", {
+    squareSprite: false,
 });
+biochargeFoundry.buildType = () => extend(HeatProducer.HeatProducerBuild, biochargeFoundry, {
+	updateTile() {
+		this.super$updateTile();
+		if(this.liquids.get(Liquids.neoplasm) >= 160) {
+            ExplodeBullett.create(this, Team.get(0), this.x, this.y, Mathf.range(0.0, 360.0));
+            Sounds.largeExplosion.at(this);
+        }
+    },
+    onDestroyed() {
+        this.super$onDestroyed();
+        if(this.efficiency > 0) {
+            ExplodeBullett.create(this, Team.get(0), this.x, this.y, Mathf.range(0.0, 360.0));
+            Sounds.largeExplosion.at(this);
+        }
+    },
+});
+
 const neoplasmFurnace = extend(HeatCrafter, "neoplasm-furnace", {
     squareSprite: false,
 });

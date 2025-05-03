@@ -13,6 +13,9 @@ shootSound: oblivion-shoot
 chargeSound: oblivion-charge
 playerControllable: false
 
+buildVisibility: editorOnly
+category: turret
+
 shoot: {
 firstShotDelay: 239
 }

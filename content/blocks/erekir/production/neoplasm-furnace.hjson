@@ -216,7 +216,6 @@ drawer: [
     } 
 ]
 research: {
-parent: creostone-crucible
-objectives: [surge-crucible, neoplasia-reactor]
+parent: biocharge-foundry
 }
 shownPlanets: [erekir]

@@ -25,28 +25,23 @@ legContinuousMove: true
 baseLegStraightness: 0.9
 outlineColor: 262327
 healColor: FCBDEE
+
+
 parts: [
     {
-        type: RegionPart
-        suffix: -glow
-        color: ffffff
-        outline: false
-        mirror: false
-        blending: additive
+    type: RegionPart
+    suffix: -part0
+    mirror: true
     }
     {
-        type: RegionPart
-        suffix: -decal
-        outline: true
-        mirror: false
+    type: RegionPart
+    suffix: -part1
+    mirror: true
     }
     {
-        type: RegionPart
-        suffix: -decal-glow
-        color: fffffff
-        outline: false
-        mirror: false
-        blending: additive
+    type: RegionPart
+    suffix: -part2
+    mirror: true
     }
 ]
 deathExplosionEffect: {

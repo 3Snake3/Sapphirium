@@ -1,0 +1,77 @@
+flying: true
+lowAltitude: false
+hidden: true
+speed: 2
+rotateSpeed: 2
+drag: 0.06
+accel: 0.07
+health: 1200
+armor: 18
+playerControllable: false
+range: 80
+hitSize: 26
+
+weapons: [
+{
+x: 0
+y: 0
+reload: 60
+mirror: false
+shootSound: bolt
+shootCone: 15
+bullet: {
+sprite: circle-bullet
+width: 10
+height: 10
+speed: 5
+lifetime: 16
+damage: 88
+backColor: d1efff
+hitColor: d1efff
+trailColor: d1efff
+frontColor: ffffff
+trailWidth: 2
+trailLength: 16
+hitEffect: {
+type: ExplosionEffect
+waveRad: 16
+waveLife: 20
+waveColor: d1efff
+sparks: 10
+sparkLen: 4
+sparkColor: d1efff
+sparkRad: 16
+smokes: 10
+smokeRad: 16
+smokeSize: 4
+smokeColor: d1efff70
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 16
+waveLife: 20
+waveColor: d1efff
+sparks: 10
+sparkLen: 4
+sparkColor: d1efff
+sparkRad: 16
+smokes: 10
+smokeRad: 16
+smokeSize: 4
+smokeColor: d1efff70
+}
+shrinkY: 0
+collidesTeam: true
+healPercent: 3
+fragBullets: 4
+fragSpread: 45
+fragBullet: {
+type: ShrapnelBulletType
+width: 4
+length: 45
+toColor: d1efff
+damage: 44
+}
+}
+}
+]

@@ -1,0 +1,8 @@
+consumes: {
+power: 4
+}
+regionSuffix: -dark
+size: 5
+tier: 2
+category: units
+buildVisibility: editorOnly

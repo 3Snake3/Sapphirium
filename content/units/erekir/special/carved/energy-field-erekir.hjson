@@ -1,0 +1,49 @@
+type: tether
+template: ErekirUnitType
+flying: true
+wobble: false
+internal: true
+drawBody: false
+drawCell: false
+drawMinimap: false
+drawShields: false
+createScorch: false
+createWreck: false
+fallEngineEffect: none
+fallEffect: none
+hittable: false
+targetable: false
+playerControllable: false
+rotateSpeed: 0
+deathExplosionEffect: none
+deathSound: 0
+deathShake: 0
+hidden: true
+
+abilities: [
+{
+type: EnergyFieldAbility
+damage: 180
+reload: 180
+range: 800
+status: shock-stun
+statusDuration: 25
+hitBuildings: false
+maxTargets: 180
+healPercent: 0
+sectors: 8
+color: d1efff
+}
+{
+type: ShieldRegenFieldAbility
+max: 800
+amount: 80
+reload: 180
+range: 800
+}
+{
+type: UnitSpawnAbility
+unit: thunderer
+spawnTime: 18000
+}
+]

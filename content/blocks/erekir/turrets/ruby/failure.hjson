@@ -1,4 +1,4 @@
-type: ItemTurret
+
 size: 4
 health: 2000
 armor: 14
@@ -244,7 +244,7 @@ collides: false
 hittable: false
 absorbable: false
 despawnUnit: extinctionSmoke
-despawnUnitChance: 0.01
+despawnUnitChance: 0.05
 }
 
 hitEffect: {

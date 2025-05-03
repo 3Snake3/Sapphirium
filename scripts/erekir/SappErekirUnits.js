@@ -2862,14 +2862,97 @@ const difference = extend(ErekirUnitType, "difference", {});
 difference.constructor = () => extend(BuildingTetherPayloadUnit, {});
 difference.abilities.addAll(differenceRepairField, shieldRegen, overdriveAbility);
 
-const rapics = extend(ErekirUnitType, "rapics", {});
-rapics.constructor = () => extend(LegsUnit, {});
+const rapix = extend(ErekirUnitType, "rapix", {});
+rapix.constructor = () => extend(LegsUnit, {});
 
 const pacification = extend(ErekirUnitType, "pacification", {});
 pacification.constructor = () => extend(TankUnit, {});
 
 const pacificationMove = extend(ErekirUnitType, "pacification-moveable", {});
 pacificationMove.constructor = () => extend(TankUnit, {});
+
+const curbing = extend(ErekirUnitType, "curbing", {});
+curbing.constructor = () => extend(ElevationMoveUnit, {});
+
+const obedience = extend(ErekirUnitType, "obedience", {});
+obedience.constructor = () => extend(ElevationMoveUnit, {});
+
+const subordinationPhase1 = extend(ErekirUnitType, "subordination-phase1", {});
+subordinationPhase1.constructor = () => extend(UnitEntity, {});
+
+var healWave0 = extend(WaveEffect, {
+	sizsTo: 80,
+	sizeFrom: 2,
+	lifetime: 60,
+	colorFrom: Pal.regen,
+	colorTo: Pal.regen,
+	interp: Interp.circleOut,
+});
+var healWave1 = extend(WaveEffect, {
+	sizeFrom: 2,
+	lifetime: 60,
+	colorFrom: Pal.regen,
+	colorTo: Pal.regen,
+	interp: Interp.circleOut,
+});
+var healWave2 = extend(WaveEffect, {
+	sizeFrom: 40,
+	sizeTo: 0,
+	lifetime: 60,
+	colorFrom: Pal.regen,
+	colorTo: Pal.regen,
+	interp: Interp.circleIn,
+});
+const RegenFieldAbility = extend(Ability, {
+	update(unit){
+	timer += Time.delta;
+	Units.nearby(unit.team, unit.x, unit.y, 80, other => {
+		if(other.damaged()){
+			other.heal((other.maxHealth * 0.1 / 100) * Time.delta);
+			if(timer >= 120){
+				healWave1.sizeTo = 8 + other.type.hitSize;
+				healWave0.at(unit, 80);
+				healWave1.at(other, true);
+				timer = 0;
+			}
+		}
+	});
+	Units.nearbyEnemies(unit.team, unit.x, unit.y, 40, enemy => {
+		if(unit.health < unit.maxHealth / 2){
+			enemy.damageContinuousPierce(enemy.maxHealth * 0.03 / 100);
+			unit.heal((unit.maxHealth * 0.03 / 100) * Time.delta);
+			if(timer >= 120){
+				healWave1.sizeTo = 8 + enemy.type.hitSize;
+				healWave2.at(unit.x, unit.y, unit.rotation);
+				healWave1.at(enemy, true);
+				timer = 0;
+			}
+		}
+	});
+},
+     addStats(t){
+      t.add(Core.bundle.get("ability.regenfield.description"));
+      t.row();
+      t.add(Core.bundle.format("ability.stat.regen",  Strings.autoFixed(0.1 * 60, 2) + "%"));
+      t.row();
+      t.add(Core.bundle.format("bullet.range", Strings.autoFixed(80 / Vars.tilesize, 2)));
+      t.row();
+      t.add(Core.bundle.format("ability.stat.lifesteal", Strings.autoFixed(0.03 * 60, 2) + "%"));
+      }
+});
+
+const subPhase2part0 = extend(ErekirUnitType, "subordination-phase2-part0", {});
+subPhase2part0.constructor = () => extend(UnitEntity, {});
+
+const subPhase2part1= extend(ErekirUnitType, "subordination-phase2-part1", {});
+subPhase2part1.constructor = () => extend(UnitEntity, {});
+
+const subPhase2part2= extend(ErekirUnitType, "subordination-phase2-part2", {});
+subPhase2part2.constructor = () => extend(UnitEntity, {});
+			
+const subordinationPhase2 = extend(ErekirUnitType, "subordination-phase2", {});
+subordinationPhase2.constructor = () => extend(ElevationMoveUnit, {});
+subordinationPhase2.abilities.addAll(RegenFieldAbility, extend(SpawnDeathAbility, subPhase2part0, 1, 8, {}), extend(SpawnDeathAbility, subPhase2part1, 1, 8, {}), extend(SpawnDeathAbility, subPhase2part2, 1, 8, {}));
 
 module.exports = {
 	hound: hound,
@@ -2885,5 +2968,10 @@ module.exports = {
 	ooze: ooze,
 	gaze: gaze,
 	difference: difference,
-	rapics: rapics
+	rapix: rapix,
+	pacificationMove: pacificationMove,
+	curbing: curbing,
+	obedience: obedience,
+	subordinationPhase1: subordinationPhase1,
+	subordinationPhase2: subordinationPhase2
 }

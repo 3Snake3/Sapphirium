@@ -840,6 +840,8 @@ dawn.buildType = () => extend(ItemTurret.ItemTurretBuild, dawn, {
 		}
 	});
 	
+const failure = extend(ItemTurret, "failure", {});
+	
 const oblivion = extend(ItemTurret, "oblivion", {});
 oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
 	creload: 0,
