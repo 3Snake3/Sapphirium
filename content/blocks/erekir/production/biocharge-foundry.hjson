@@ -163,7 +163,7 @@ craftEffect:[
         ] 
     } 
 ] 
-outputItems: [surge-alloy/4, carved-alloy/1]
+outputItems: [surge-alloy/2, carved-alloy/1]
 craftTime: 540
 itemCapacity: 60
 liquidCapacity: 160
