@@ -32,8 +32,7 @@ buildingDamageMultiplier: 7
 collidesAir: false
 }
 }
-]
-
+{
 recoil: 3
 ignoreRotation: true
 controllable: false
