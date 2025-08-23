@@ -1,0 +1,101 @@
+speed: 0
+rotateSpeed: 0
+health: 2400
+armor: 14
+range: 180
+hitSize: 34
+hovering: true
+
+weapons: [
+{
+name: obedience-p2-weapon
+x: 7.5
+y: 0
+rotate: true
+reload: 15
+rotateSpeed: 1
+mirror: true
+alternate: true
+shootSound: bolt
+ignoreRotation: true
+recoil: 3
+bullet: {
+sprite: circle-bullet
+width: 8
+height: 8
+speed: 7
+lifetime: 25.72
+damage: 77
+hitShake: 2
+backColor: d1efff
+hitColor: d1efff
+trailColor: d1efff
+frontColor: ffffff
+hitEffect: {
+type: ExplosionEffect
+waveRad: 32
+waveColor: d1efff
+waveLife: 8
+sparks: 8
+sparkLen: 4
+sparkRad: 32
+sparkColor: d1efff
+smokes: 8
+smokeSize: 4
+smokeColor: d1efff70
+smokeRad: 32
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 32
+waveColor: d1efff
+waveLife: 8
+sparks: 8
+sparkLen: 4
+sparkRad: 32
+sparkColor: d1efff
+smokes: 8
+smokeSize: 4
+smokeColor: d1efff70
+smokeRad: 32
+}
+pierce: true
+pierceBuilding: true
+pierceCap: 1
+}
+}
+]
+
+abilities: [
+{
+type: UnitSpawnAbility
+unit: obedience-phase1
+spawnTime: 2700
+}
+{
+type: RegenAbility
+amount: 2
+}
+{
+type: RepairFieldAbility
+amount: 240
+reload: 120
+range: 40
+healEffect: {
+type: WaveEffect
+sizeTo: 12
+colorTo: d1efff
+strokeFrom: 2
+lifetime: 11
+interp: circleOut
+}
+activeEffect: {
+type: WaveEffect
+sizeTo: 40
+colorTo: d1efff
+lifetime: 22
+strokeFrom: 2
+interp: circleOut
+}
+}
+]

@@ -7,38 +7,33 @@ playerControllable: false
 hidden: true
 speed: 0
 targetAir: false
+range: 50
+hovering: true
 
 weapons: [
 {
-name: pacification-weapon
-x: 3
-y: 0
-controllable: false
-autoTarget: true
-reload: 30
-recoil: 2
-rotateSpeed: 3
-mirror: false
-shootSound: bolt
-
+name: pacification-flamethrower
+x: 0
+y: 2
+rotate: true
+rotateSpeed: 1.4
+shootCone: 25
+shootSound: torch
+alwaysContinuous: true
 bullet: {
-type: ShrapnelBulletType
-length: 40
-width: 14
-toColor: d1efff
-damage: 44
-status: crystallization
+type: ContinuousFlameBulletType
+width: 1.25
+drawFlare: false
+length: 100
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
-statusDuration: 200
-shootEffect: shootBigColor
+damage: 8
+buildingDamageMultiplier: 7
+collidesAir: false
 }
+}
+]
 
-}
-{
-name: pacification-mount
-x: -3
-y: 0
-reload: 85
 recoil: 3
 ignoreRotation: true
 controllable: false

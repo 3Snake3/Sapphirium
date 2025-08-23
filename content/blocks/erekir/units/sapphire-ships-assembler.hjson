@@ -7,4 +7,5 @@ power: 5
 liquids: [hydrogen/0.2, creotine/0.1]
 }
 shownPlanets: [erekir]
-buildVisibility: editorOnly
+buildVisibility: sandboxOnly
+requirements: []

@@ -9,4 +9,5 @@ consumes: {
 }
 category: units
 size: 2
-buildVisibility: editorOnly
+buildVisibility: sandboxOnly
+requirements: []

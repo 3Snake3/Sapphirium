@@ -23,56 +23,56 @@ drawer: {
     {
             type: RegionPart
             suffix: -barrel-1
-            progress: recoil
-            moveY: -2
+            progress: warmup
+            moveRot: 25
             recoilIndex: 0
             under: true
             moves: [
             {
-            moveRot: 25
-            progress: warmup
+            progress: recoil
+            moveY: -2
             }
             ]
         }
         {
             type: RegionPart
             suffix: -barrel-2
-            progress: recoil
-            moveY: -2
+            progress: warmup
+            moveRot: 25
             recoilIndex: 1
             under: true
             moves: [
             {
-            moveRot: 25
-            progress: warmup
+            progress: recoil
+            moveY: -2
             }
             ]
         }
         {
             type: RegionPart
             suffix: -barrel-3
-            progress: recoil
-            moveY: -2
-            recoilIndex: 2
+            progress: warmup
+            moveRot: -25
+            recoilIndex: 0
             under: true
             moves: [
             {
-            moveRot: -25
-            progress: warmup
+            progress: recoil
+            moveY: -2
             }
             ]
         }
         {
             type: RegionPart
             suffix: -barrel-4
-            progress: recoil
-            moveY: -2
-            recoilIndex: 3
+            progress: warmup
+            moveRot: -25
+            recoilIndex: 0
             under: true
             moves: [
             {
-            moveRot: -25
-            progress: warmup
+            progress: recoil
+            moveY: -2
             }
             ]
         }

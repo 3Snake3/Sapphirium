@@ -43,7 +43,7 @@ range: 800
 }
 {
 type: UnitSpawnAbility
-unit: thunderer
+unit: thunderbolt
 spawnTime: 18000
 }
 ]

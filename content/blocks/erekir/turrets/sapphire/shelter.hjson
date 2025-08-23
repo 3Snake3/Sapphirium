@@ -26,6 +26,7 @@ armor: 10
 outlineColor: 2d2f39
 liquidConsumed: 0.4
 loopSoundVolume: 1.2
+targetUnderBlocks: false
 drawer: {
     type: DrawTurret
     basePrefix: reinforced-

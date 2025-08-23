@@ -11,6 +11,20 @@ playerControllable: false
 range: 80
 hitSize: 20
 
+parts: [
+{
+type: HoverPart
+radius: 16
+phase: 90
+stroke: 4
+sides: 360
+layerOffset: -0.001
+color: d1efff
+x: 0
+y: 0
+}
+]
+
 weapons: [
 {
 x: 4

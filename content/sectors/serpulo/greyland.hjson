@@ -1,6 +1,6 @@
 captureWave: 35
 difficulty: 3
-sector: 111
+sector: 109
 planet: serpulo
 research: {
     parent: biomassFacility

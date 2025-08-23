@@ -27,8 +27,8 @@ UnitAssembler.AssemblerUnitPlan(sappErekirUnits.maw, 14400, PayloadStack.list(sa
 
 const sapphireShipsAssembler = extend(UnitAssembler, "sapphire-ships-assembler", {});
 sapphireShipsAssembler.plans.add(
-UnitAssembler.AssemblerUnitPlan(sappErekirUnits.obedience, 3600, PayloadStack.list(sappErekirUnits.pacificationMove, 3, sappErekirWalls.sapphireWall, 4)),
-UnitAssembler.AssemblerUnitPlan(sappErekirUnits.subordinationPhase2, 14400, PayloadStack.list(sappErekirUnits.curbing, 4, sappErekirWalls.sapphireWallLarge, 6))
+UnitAssembler.AssemblerUnitPlan(sappErekirUnits.obediencePhase1, 3600, PayloadStack.list(sappErekirUnits.pacificationMove, 3, sappErekirWalls.sapphireWall, 4)),
+UnitAssembler.AssemblerUnitPlan(sappErekirUnits.subordinationPhase1, 14400, PayloadStack.list(sappErekirUnits.curbingPhase1, 4, sappErekirWalls.sapphireWallLarge, 6))
 );
 
 const faithAssembler = extend(UnitAssembler, "faith-assembler", {});
@@ -42,8 +42,6 @@ ghostAssembler.plans.add(
 UnitAssembler.AssemblerUnitPlan(sappErekirUnits.ooze, 3600, PayloadStack.list(sappErekirUnits.presence, 5, sappErekirWalls.sapphireWallLarge, 8)),
 UnitAssembler.AssemblerUnitPlan(sappErekirUnits.gaze, 14400, PayloadStack.list(sappErekirUnits.apparition, 6, sappErekirWalls.carvedWallLarge, 8))
 );
-
-const basicSapphireModule = extend(UnitAssemblerModule, "basic-sapphire-module", {});
 
 const advancedSapphireModule = extend(UnitAssemblerModule, "advanced-sapphire-module", {});
 

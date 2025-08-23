@@ -1,6 +1,6 @@
 captureWave: 60
 difficulty: 7
-sector: 127
+sector: 128
 planet: serpulo
 research: {
     parent: tarFields

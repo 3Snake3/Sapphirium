@@ -1,14 +1,12 @@
 
 flying: true
 lowAltitude: true
-hidden: true
 speed: 0.65
 rotateSpeed: 1
 drag: 0.06
 accel: 0.07
-health: 8000
+health: 14000
 armor: 18
-playerControllable: false
 range: 24
 deathExplosionEffect: none
 outlines: false
@@ -31,13 +29,13 @@ unit: pacification-moveable
 type: UnitSpawnAbility
 spawnX: 10
 spawnY: 20
-unit: pacification-moveable
+unit: curbing-phase1
 }
 {
 type: UnitSpawnAbility
 spawnX: -10
 spawnY: 20
-unit: pacification-moveable
+unit: curbing-phase1
 }
 {
 type: StatusFieldAbility
@@ -124,6 +122,44 @@ sparkRad: 80
 smokeSize: 8
 smokeRad: 80
 }
+}
+}
+{
+x: 0
+y: -12.5
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: none
+mirror: false
+bullet: {
+type: ContinuousFlameBulletType
+width: 2.75
+drawFlare: false
+length: 8
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 0
+collides: false
+collidesTiles: false
+}
+}
+{
+x: 7.5
+y: -14
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: none
+mirror: true
+bullet: {
+type: ContinuousFlameBulletType
+width: 2.75
+drawFlare: false
+length: 8
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 0
+collides: false
+collidesTiles: false
 }
 }
 ]

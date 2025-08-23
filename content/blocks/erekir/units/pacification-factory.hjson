@@ -16,4 +16,5 @@ fogRadius: 3
 consumes: {
 power: 2
 }
-buildVisibility: editorOnly
+buildVisibility: sandboxOnly
+requirements: []

@@ -1,3 +1,5 @@
+const weaponizedBeryllWalll = extend(PowerTurret, "weaponized-beryllium-wall", {});
+
 const squareEffect = new Effect(100, e => {
     Draw.color(Color.valueOf("ab8ea4"));
     Fill.square(e.x, e.y, e.fslope() * 1.5 + 0.14, 45);
@@ -76,6 +78,7 @@ carvedMonolith.buildType = () => extend(Wall.WallBuild, carvedMonolith, {
 	creload: 0,
 	collision(bullet){
         this.super$collision(bullet);
+        if(bullet.type != blast){
         if(this.creload == 2 && this.damaged()) {
             this.heal(this.maxHealth * 5 / 100);
             this.recentlyHealed();
@@ -95,6 +98,7 @@ carvedMonolith.buildType = () => extend(Wall.WallBuild, carvedMonolith, {
         } 
         else this.creload++;
         return true;
+    }
     }
 });
 

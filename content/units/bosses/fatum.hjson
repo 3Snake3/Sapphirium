@@ -10,10 +10,7 @@ drownTimeMultiplier: 99
 legCount: 8
 legMaxLength: 1.2
 legPairOffset: 4
-legLength: 112
-legBaseOffset: 60
 stepShake: 3
-legExtension: -20
 legSpeed: 0.2
 legForwardScl: 2.3
 legLengthScl: 0.96
@@ -23,8 +20,12 @@ mechStepParticles: true
 lockLegBase: true
 legContinuousMove: true
 baseLegStraightness: 0.9
-outlineColor: 262327
-healColor: FCBDEE
+legBaseOffset: 20
+legLength: 196
+legExtension: -10
+outlineRadius: 6
+outlineColor: 18191c
+allowLegStep: true
 
 
 parts: [
@@ -141,16 +142,6 @@ deathExplosionEffect: {
         }
     ]
 }
-legPairOffset: 6
-legLength: 100
-legGroupSize: 1
-legBaseOffset: -17
-stepShake: 4
-legExtension: -30
-legForwardScl: 3
-legLengthScl: 1.2
-rippleScale: 7
-legSpeed: 1.5
 legSplashDamage: 2800
 legSplashRange: 40
 hovering: true

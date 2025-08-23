@@ -1,4 +1,4 @@
-
+requirements: []
 category: units
 size: 3
 regionSuffix: -dark
@@ -14,7 +14,7 @@ silicon/60
 }
 constructTime: 2000
 upgrades: [
-[pacification-moveable, curbing]
+[pacification-moveable, curbing-phase1]
 ]
 shownPlanets: [erekir]
-buildVisibility: editorOnly
+buildVisibility: sandboxOnly

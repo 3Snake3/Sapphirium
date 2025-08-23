@@ -1,4 +1,4 @@
-type: PowerTurret
+
 category: defense
 health: 2080
 armor: 2
@@ -36,4 +36,5 @@ colorFrom: b1dd7e
 colorTo: b1dd7e
 }
 }
-buildVisibility: editorOnly
+buildVisibility: sandboxOnly
+ty: editorOnly

@@ -5,4 +5,5 @@ regionSuffix: -dark
 size: 5
 tier: 2
 category: units
-buildVisibility: editorOnly
+buildVisibility: sandboxOnly
+requirements: []

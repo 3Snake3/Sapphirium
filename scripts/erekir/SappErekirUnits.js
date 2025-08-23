@@ -2866,16 +2866,22 @@ const rapix = extend(ErekirUnitType, "rapix", {});
 rapix.constructor = () => extend(LegsUnit, {});
 
 const pacification = extend(ErekirUnitType, "pacification", {});
-pacification.constructor = () => extend(TankUnit, {});
+pacification.constructor = () => extend(UnitEntity, {});
 
 const pacificationMove = extend(ErekirUnitType, "pacification-moveable", {});
 pacificationMove.constructor = () => extend(TankUnit, {});
 
-const curbing = extend(ErekirUnitType, "curbing", {});
-curbing.constructor = () => extend(ElevationMoveUnit, {});
+const curbingPhase1 = extend(ErekirUnitType, "curbing-phase1", {});
+curbingPhase1.constructor = () => extend(ElevationMoveUnit, {});
 
-const obedience = extend(ErekirUnitType, "obedience", {});
-obedience.constructor = () => extend(ElevationMoveUnit, {});
+const curbingPhase2 = extend(ErekirUnitType, "curbing-phase2", {});
+curbingPhase2.constructor = () => extend(ElevationMoveUnit, {});
+
+const obediencePhase1 = extend(ErekirUnitType, "obedience-phase1", {});
+obediencePhase1.constructor = () => extend(UnitEntity, {});
+
+const obediencePhase2 = extend(ErekirUnitType, "obedience-phase2", {});
+obediencePhase2.constructor = () => extend(UnitEntity, {});
 
 const subordinationPhase1 = extend(ErekirUnitType, "subordination-phase1", {});
 subordinationPhase1.constructor = () => extend(UnitEntity, {});
@@ -2951,8 +2957,11 @@ const subPhase2part2= extend(ErekirUnitType, "subordination-phase2-part2", {});
 subPhase2part2.constructor = () => extend(UnitEntity, {});
 			
 const subordinationPhase2 = extend(ErekirUnitType, "subordination-phase2", {});
-subordinationPhase2.constructor = () => extend(ElevationMoveUnit, {});
+subordinationPhase2.constructor = () => extend(LegsUnit, {});
 subordinationPhase2.abilities.addAll(RegenFieldAbility, extend(SpawnDeathAbility, subPhase2part0, 1, 8, {}), extend(SpawnDeathAbility, subPhase2part1, 1, 8, {}), extend(SpawnDeathAbility, subPhase2part2, 1, 8, {}));
+
+const thunderbolt = extend(ErekirUnitType, "thunderbolt", {});
+thunderbolt.constructor = () => extend(UnitEntity, {});
 
 module.exports = {
 	hound: hound,
@@ -2970,8 +2979,9 @@ module.exports = {
 	difference: difference,
 	rapix: rapix,
 	pacificationMove: pacificationMove,
-	curbing: curbing,
-	obedience: obedience,
+	curbingPhase1: curbingPhase1,
+	obediencePhase1: obediencePhase1,
 	subordinationPhase1: subordinationPhase1,
-	subordinationPhase2: subordinationPhase2
+	subordinationPhase2: subordinationPhase2,
+	thunderbolt: thunderbolt
 }

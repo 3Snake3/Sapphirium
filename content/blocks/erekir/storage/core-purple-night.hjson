@@ -12,6 +12,7 @@ size: 5
 thrusterLength: 10
 armor: 17
 incinerateNonBuildable: true
+requiresCoreZone: true
 buildCostMultiplier: 0.7
 unitCapModifier: 18
 researchCostMultiplier: 0.17

@@ -1,0 +1,183 @@
+
+hitSize: 18
+health: 2800
+armor: 20
+rotateSpeed: 1
+itemCapacity: 0
+speed: 0.68
+targetAir: false
+targetFlags: [core]
+hovering: true
+canDrown: false
+shadowElevation: 0.1
+drag: 0.08
+accel: 0.09
+
+abilities: [
+{
+type: RegenAbility
+amount: 1.2
+}
+{
+type: SpawnDeathAbility
+unit: curbing-phase2
+spread: 0
+}
+]
+
+parts: [
+{
+type: HoverPart
+radius: 8
+phase: 90
+stroke: 3
+layerOffset: -0.001
+color: d1efff
+x: 3
+y: 0
+mirror: true
+}
+]
+
+trailLength: 7
+
+weapons: [
+{
+x: 5.5
+y: 7.25
+mirror: true
+alternate: false
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: torch
+
+bullet: {
+type: ContinuousFlameBulletType
+width: 1.75
+drawFlare: false
+length: 12
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 10
+buildingDamageMultiplier: 7
+}
+}
+{
+x: 0
+y: 4.5
+mirror: false
+alternate: false
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: torch
+
+bullet: {
+type: ContinuousFlameBulletType
+width: 1.75
+drawFlare: false
+length: 16
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 10
+buildingDamageMultiplier: 7
+}
+}
+{
+x: 5.5
+y: 0
+mirror: true
+alternate: false
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: torch
+baseRotation: -90
+
+bullet: {
+type: ContinuousFlameBulletType
+width: 1.75
+drawFlare: false
+length: 15
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 10
+buildingDamageMultiplier: 7
+}
+}
+{
+x: 0
+y: 4.5
+mirror: false
+alternate: false
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: torch
+
+bullet: {
+type: ContinuousFlameBulletType
+width: 1.75
+drawFlare: false
+length: 16
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 10
+buildingDamageMultiplier: 7
+}
+}
+{
+x: 5.5
+y: -5.5
+mirror: true
+alternate: false
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: torch
+baseRotation: -135
+
+bullet: {
+type: ContinuousFlameBulletType
+width: 1.75
+drawFlare: false
+length: 12
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 10
+buildingDamageMultiplier: 7
+}
+}
+{
+x: 0
+y: 0
+reload: 180
+mirror: false
+shootSound: none
+shootCone: 360
+bullet: {
+type: ExplosionBulletType
+killShooter: false
+splashDamage: 300
+splashDamageRadius: 24
+shootEffect: [
+{
+type: WaveEffect
+sizeTo: 24
+sizeFrom: 18
+colorTo: d1efff
+lifetime: 30
+}
+{
+particles: 14
+sizeFrom: 3
+sizeTo: 0
+length: 24
+lifetime: 60
+interp: pow2Out
+sizeInterp: pow2Out
+colorFrom: d1efff
+colorTo: d1efff
+}
+]
+}
+}
+]
+
+

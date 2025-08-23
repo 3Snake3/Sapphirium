@@ -68,4 +68,83 @@ status: stunne
 statusDuration: 15
 }
 }
+{
+x: 0
+y: 0
+shootY: 0
+reload: 60
+shootOnDeath: true
+mirror: false
+shootSound: none
+inaccuracy: 360
+bullet: {
+sprite: sapphirium-none-bullet
+speed: 40
+lifetime: 1
+damage: 0
+collides: false
+collidesTiles: false
+hitEffect: none
+despawnEffect: none
+shootEffect: none
+hittable: false
+absorbable: false
+despawnUnit: extinctionSmoke
+despawnUnitCount: 1
+despawnUnitChance: 0.08
+}
+}
+{
+x: 0
+y: 0
+reload: 300
+recoil: 0
+
+shootOnDeath: true
+rotate: false
+mirror: false
+shootCone: 360
+shootSound: false
+display: false
+
+bullet: {
+speed: 0
+damage: 0
+lifetime: 360
+width: 8
+height: 8
+hittable: false
+absorbable: false
+hitEffect: none
+collidesTiles: false
+collides: false
+intervalBullets: 1
+bulletInterval: 1
+intervalRandomSpread: 0
+intervalBullet: {
+speed: 0
+damage: 0
+lifetime: 1
+width: 8
+height: 8
+hittable: false
+absorbable: false
+hitEffect: none
+collidesTiles: false
+collides: false
+despawnEffect: {
+type: ExplosionEffect
+lifetime: 60
+smokes: 24
+smokeSize: 10
+smokeColor: a14553
+smokeRad: 40
+sparks: 0
+waveRad: 0
+waveRadBase: 0
+waveLife: 0
+}
+}
+}
+}
 ]

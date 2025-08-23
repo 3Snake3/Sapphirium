@@ -1,0 +1,159 @@
+
+hovering: true
+speed: 0.54
+rotateSpeed: 0.8
+drag: 0.05
+accel: 0.08
+health: 4000
+armor: 24
+range: 10
+hitSize: 34
+targetAir: false
+
+parts: [
+{
+type: HoverPart
+radius: 28
+phase: 90
+stroke: 4
+sides: 6
+layerOffset: -0.001
+color: d1efff
+x: 0
+y: 0
+}
+]
+
+weapons: [
+{
+x: 0
+y: 12.5
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: torch
+mirror: false
+shootY: 0
+
+bullet: {
+type: ContinuousFlameBulletType
+width: 2.5
+drawFlare: false
+length: 16
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 10
+buildingDamageMultiplier: 7
+collidesAir: false
+}
+}
+{
+x: 12.25
+y: 12.5
+mirror: true
+alternate: false
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: torch
+shootY: 0
+
+bullet: {
+type: ContinuousFlameBulletType
+width: 2.5
+drawFlare: false
+length: 16
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 10
+buildingDamageMultiplier: 7
+collidesAir: false
+}
+}
+{
+x: 14
+y: -12.5
+mirror: true
+alternate: false
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: torch
+baseRotation: 180
+shootY: 0
+
+bullet: {
+type: ContinuousFlameBulletType
+width: 2.5
+drawFlare: false
+length: 16
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 10
+buildingDamageMultiplier: 7
+collidesAir: false
+}
+}
+{
+name: obedience-p1-weapon
+x: 7.5
+y: 0
+rotate: true
+rotationLimit: 64
+reload: 60
+rotateSpeed: 1
+mirror: true
+alternate: true
+shootSound: bolt
+recoil: 3
+shake: 1.2
+inaccuracy: 15
+shoot: {
+type: ShootSine
+shots: 3
+shotDelay: 3
+}
+
+bullet: {
+type: LaserBulletType
+width: 10
+length: 80
+damage: 80
+colors: [d1efff70, d1efff, ffffff]
+sideWidth: 0
+lifetime: 10
+collidesAir: false
+}
+}
+]
+
+abilities: [
+{
+type: RegenAbility
+amount: 2
+}
+{
+type: SpawnDeathAbility
+unit: obedience-phase2
+spread: 0
+}
+{
+type: RepairFieldAbility
+amount: 240
+reload: 120
+range: 40
+healEffect: {
+type: WaveEffect
+sizeTo: 12
+colorTo: d1efff
+strokeFrom: 2
+lifetime: 11
+interp: circleOut
+}
+activeEffect: {
+type: WaveEffect
+sizeTo: 40
+colorTo: d1efff
+lifetime: 22
+strokeFrom: 2
+interp: circleOut
+}
+}
+]

@@ -1,0 +1,103 @@
+hitSize: 18
+health: 1600
+armor: 16
+rotateSpeed: 0
+itemCapacity: 0
+speed: 0
+targetAir: false
+
+abilities: [
+{
+type: UnitSpawnAbility
+unit: curbing-phase1
+spawnTime: 1800
+}
+]
+
+weapons: [
+{
+name: cubing-artillery
+x: 0
+rotate: true
+rotateSpeed: 2
+shootCone: 90
+inaccuracy: 5
+reload: 80
+shoot: {
+shots: 4
+shotDelay: 15
+}
+mirror: false
+shootSound: bang
+bullet: {
+type: ArtilleryBulletType
+width: 8
+height: 8
+speed: 3
+lifetime: 80
+damage: 67
+splashDamage: 80
+splashDamageRadius: 32
+hitShake: 2
+backColor: d1efff
+hitColor: d1efff
+trailColor: d1efff
+frontColor: ffffff
+hitEffect: {
+type: ExplosionEffect
+waveRad: 32
+waveColor: d1efff
+waveLife: 8
+sparks: 8
+sparkLen: 4
+sparkRad: 32
+sparkColor: d1efff
+smokes: 8
+smokeSize: 4
+smokeColor: d1efff70
+smokeRad: 32
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 32
+waveColor: d1efff
+waveLife: 8
+sparks: 8
+sparkLen: 4
+sparkRad: 32
+sparkColor: d1efff
+smokes: 8
+smokeSize: 4
+smokeColor: d1efff70
+smokeRad: 32
+}
+}
+}
+{
+x: 0
+mirror: false
+reload: 1802
+shoot: {
+firstShotDelay: 1801
+}
+bullet: {
+type: ExplosionBulletType
+splashDamage: 100
+splashDamageRadius: 32
+shootEffect: {
+type: ExplosionEffect
+waveRad: 32
+waveColor: d1efff
+waveLife: 8
+sparks: 8
+sparkLen: 4
+sparkRad: 32
+sparkColor: d1efff
+smokes: 8
+smokeSize: 4
+smokeColor: d1efff70
+smokeRad: 32
+}
+}
+}
+]

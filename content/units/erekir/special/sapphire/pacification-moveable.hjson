@@ -7,97 +7,199 @@ playerControllable: false
 hidden: true
 speed: 1
 targetAir: false
-
-weapons: [
+shadowElevation: 0.1
+hovering: true
+canDrown: false
+forceMultiTarget: true
+abilities: [
 {
-name: pacification-weapon
+type: RegenAbility
+amount: 1.2
+}
+]
+
+parts: [
+{
+type: HoverPart
+radius: 8
+phase: 90
+stroke: 3
+layerOffset: -0.001
+color: d1efff
 x: 3
 y: 0
+mirror: true
+}
+]
+
+range: 45
+trailLength: 7
+weapons: [
+{
+name: pacification-m-flamethrower
+x: 3
+y: 2
+rotate: true
+rotateSpeed: 1.4
+shootCone: 25
+shootSound: torch
 controllable: false
 autoTarget: true
-reload: 30
-recoil: 2
-rotateSpeed: 3
-mirror: false
-shootSound: bolt
-
+targetInterval: 20
+targetSwitchInterval: 25
+shootStatus: slow
+ignoreRotation: true
+alwaysContinuous: true
 bullet: {
-type: ShrapnelBulletType
-length: 40
-width: 14
-toColor: d1efff
-damage: 44
-status: crystallization
+type: ContinuousFlameBulletType
+width: 1.25
+drawFlare: false
+length: 65
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
-statusDuration: 200
-shootEffect: shootBigColor
+damage: 8
+buildingDamageMultiplier: 7
+collidesAir: false
 }
-
 }
 {
 name: pacification-mount
 x: -3
 y: 0
-reload: 85
+reload: 60
 recoil: 3
-ignoreRotation: true
-controllable: false
-autoTarget: true
-shootSound: blaster
+shootSound: bolt
 rotateSpeed: 2
 
 shoot: {
 type: ShootSpread
-spread: 15
-shots: 3
+spread: 5
+shots: 2
 }
 
 bullet: {
-type: ArtilleryBulletType
-width: 8
-height: 8
+sprite: circle-bullet
+width: 5
+height: 5
+shrinkY: 0
 speed: 2.4
 lifetime: 83
 damage: 54
-splashDamage: 85
-splashDamageRadius: 32
-collidesTiles: true
 backColor: d1efff
 hitColor: d1efff
 trailColor: d1efff
 frontColor: ffffff
-trailLength: 9
-trailWidth: 2
+trailLength: 6
+trailWidth: 1
+collidesAir: false
 
 hitEffect: {
 type: ExplosionEffect
-waveRad: 32
-waveLife: 12
+waveRad: 8
+waveLife: 8
 waveColor: d1efff
-sparks: 6
-sparkLen: 4
-sparkRad: 32
+sparks: 5
+sparkLen: 3
+sparkRad: 10
 sparkColor: d1efff
-smokes: 6
-smokeSize: 4
+smokes: 5
+smokeSize: 3
 smokeColor: d1efff70
+smokeRad: 10
 }
 despawnEffect: {
 type: ExplosionEffect
-waveRad: 32
-waveLife: 12
+waveRad: 8
+waveLife: 8
 waveColor: d1efff
-sparks: 6
-sparkLen: 4
-sparkRad: 32
+sparks: 5
+sparkLen: 3
+sparkRad: 10
 sparkColor: d1efff
-smokes: 6
-smokeSize: 4
+smokes: 5
+smokeSize: 3
 smokeColor: d1efff70
+smokeRad: 10
+}
+
+fragBullets: 2
+fragRandomSpread: 0
+fragSpread: 8
+fragBullet: {
+type: ShrapnelBulletType 
+width: 1.25
+length: 24
+damage: 24
+toColor: d1efff
+serrations: 0
+pierceCap: 2
 }
 
 status: crystallization
 statusDuration: 80
+}
+}
+{
+x: 0
+y: 0
+shootOnDeath: true
+reload: 15
+shootCone: 360
+shootSound: plasmaboom
+controllable: false
+bullet: {
+type: ExplosionBulletType
+collidesTeam: true
+healPercent: 3
+splashDamage: 0
+spawnBullets: [
+{
+type: ShrapnelBulletType 
+width: 1.25
+length: 24
+damage: 24
+toColor: d1efff
+serrations: 0
+pierceCap: 2
+}
+{
+type: ShrapnelBulletType 
+width: 1.25
+length: 24
+damage: 24
+angleOffset: 90
+toColor: d1efff
+serrations: 0
+pierceCap: 2
+}
+{
+type: ShrapnelBulletType 
+width: 1.25
+length: 24
+damage: 24
+angleOffset: 180
+toColor: d1efff
+serrations: 0
+pierceCap: 2
+}
+{
+type: ShrapnelBulletType 
+width: 1.25
+length: 24
+damage: 24
+angleOffset: -90
+toColor: d1efff
+serrations: 0
+pierceCap: 2
+}
+]
+shootEffect: {
+type: WaveEffect
+sizeTo: 32
+lifetime: 10
+colorTo: d1efff
+}
+splashDamageRadius: 32
 }
 }
 ]

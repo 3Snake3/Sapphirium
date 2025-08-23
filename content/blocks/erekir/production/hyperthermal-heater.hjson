@@ -31,4 +31,5 @@ power: 4
 liquid: creotine/0.8
 }
 heatOutput: 100
-buildVisibility: editorOnly
+buildVisibility: sandboxOnly
+requirements: []
