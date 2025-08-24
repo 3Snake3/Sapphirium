@@ -4,7 +4,6 @@ armor: 6
 rotateSpeed: 4
 itemCapacity: 0
 playerControllable: false
-hidden: true
 speed: 0
 targetAir: false
 range: 50
@@ -28,7 +27,7 @@ length: 100
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 8
-buildingDamageMultiplier: 7
+buildingDamageMultiplier: 1.7
 collidesAir: false
 }
 }

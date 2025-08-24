@@ -81,9 +81,8 @@ shoot: {
 firstShotDelay: 1801
 }
 bullet: {
-type: ExplosionBulletType
-splashDamage: 100
-splashDamageRadius: 32
+type: EmptyBulletType
+damage: 0
 shootEffect: {
 type: ExplosionEffect
 waveRad: 32

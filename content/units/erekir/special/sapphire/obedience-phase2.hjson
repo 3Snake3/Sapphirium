@@ -64,6 +64,27 @@ pierceBuilding: true
 pierceCap: 1
 }
 }
+{
+reload: 2701
+shoot: {
+firstShotDelay: 2701
+}
+rotate: false
+controllable: false
+mirror: false
+display: false
+x: 0
+bullet: {
+killShooter: true
+sprite: sapphirium-none-bullet
+damage: 0
+speed: 0
+lifetime: 1
+hitEffect: none
+despawnEffect: none
+shootEffect: none
+}
+}
 ]
 
 abilities: [

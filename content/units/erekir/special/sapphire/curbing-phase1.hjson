@@ -2,9 +2,9 @@
 hitSize: 18
 health: 2800
 armor: 20
-rotateSpeed: 1
+rotateSpeed: 4
 itemCapacity: 0
-speed: 0.68
+speed: 0.84
 targetAir: false
 targetFlags: [core]
 hovering: true
@@ -44,12 +44,12 @@ trailLength: 7
 weapons: [
 {
 x: 5.5
-y: 7.25
+y: 6.25
 mirror: true
 alternate: false
 alwaysShooting: true
 alwaysContinuous: true
-shootSound: torch
+shootSound: none
 
 bullet: {
 type: ContinuousFlameBulletType
@@ -59,17 +59,17 @@ length: 12
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
-buildingDamageMultiplier: 7
+buildingDamageMultiplier: 1.7
 }
 }
 {
 x: 0
-y: 4.5
+y: 3.5
 mirror: false
 alternate: false
 alwaysShooting: true
 alwaysContinuous: true
-shootSound: torch
+shootSound: none
 
 bullet: {
 type: ContinuousFlameBulletType
@@ -79,7 +79,7 @@ length: 16
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
-buildingDamageMultiplier: 7
+buildingDamageMultiplier: 1.7
 }
 }
 {
@@ -89,7 +89,7 @@ mirror: true
 alternate: false
 alwaysShooting: true
 alwaysContinuous: true
-shootSound: torch
+shootSound: none
 baseRotation: -90
 
 bullet: {
@@ -100,7 +100,7 @@ length: 15
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
-buildingDamageMultiplier: 7
+buildingDamageMultiplier: 1.7
 }
 }
 {
@@ -110,7 +110,7 @@ mirror: false
 alternate: false
 alwaysShooting: true
 alwaysContinuous: true
-shootSound: torch
+shootSound: none
 
 bullet: {
 type: ContinuousFlameBulletType
@@ -120,7 +120,7 @@ length: 16
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
-buildingDamageMultiplier: 7
+buildingDamageMultiplier: 1.7
 }
 }
 {
@@ -130,7 +130,7 @@ mirror: true
 alternate: false
 alwaysShooting: true
 alwaysContinuous: true
-shootSound: torch
+shootSound: none
 baseRotation: -135
 
 bullet: {
@@ -141,7 +141,7 @@ length: 12
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
-buildingDamageMultiplier: 7
+buildingDamageMultiplier: 1.7
 }
 }
 {
@@ -156,6 +156,7 @@ type: ExplosionBulletType
 killShooter: false
 splashDamage: 300
 splashDamageRadius: 24
+splashDamagePierce: true
 shootEffect: [
 {
 type: WaveEffect

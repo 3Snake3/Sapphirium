@@ -15,10 +15,7 @@ legSpeed: 0.2
 legForwardScl: 2.3
 legLengthScl: 0.96
 rippleScale: 3
-legGroupSize: 4
 mechStepParticles: true
-lockLegBase: true
-legContinuousMove: true
 baseLegStraightness: 0.9
 legBaseOffset: 20
 legLength: 196

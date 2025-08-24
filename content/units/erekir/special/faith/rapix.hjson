@@ -30,7 +30,7 @@ immunities: [unleash]
 playerControllable: false
 weapons: [
 {
-name: rapics-weapon
+name: rapix-weapon
 x: 4
 y: -0.25
 reload: 60

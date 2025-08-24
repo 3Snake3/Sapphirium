@@ -30,7 +30,7 @@ x: 0
 y: 12.5
 alwaysShooting: true
 alwaysContinuous: true
-shootSound: torch
+shootSound: none
 mirror: false
 shootY: 0
 
@@ -42,7 +42,7 @@ length: 16
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
-buildingDamageMultiplier: 7
+buildingDamageMultiplier: 1.7
 collidesAir: false
 }
 }
@@ -53,7 +53,7 @@ mirror: true
 alternate: false
 alwaysShooting: true
 alwaysContinuous: true
-shootSound: torch
+shootSound: none
 shootY: 0
 
 bullet: {
@@ -64,7 +64,7 @@ length: 16
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
-buildingDamageMultiplier: 7
+buildingDamageMultiplier: 1.7
 collidesAir: false
 }
 }
@@ -75,7 +75,7 @@ mirror: true
 alternate: false
 alwaysShooting: true
 alwaysContinuous: true
-shootSound: torch
+shootSound: none
 baseRotation: 180
 shootY: 0
 
@@ -87,7 +87,7 @@ length: 16
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
-buildingDamageMultiplier: 7
+buildingDamageMultiplier: 1.7
 collidesAir: false
 }
 }

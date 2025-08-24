@@ -131,6 +131,7 @@ alwaysShooting: true
 alwaysContinuous: true
 shootSound: none
 mirror: false
+baseRotation: 180
 bullet: {
 type: ContinuousFlameBulletType
 width: 2.75
@@ -150,6 +151,7 @@ alwaysShooting: true
 alwaysContinuous: true
 shootSound: none
 mirror: true
+baseRotation: -135
 bullet: {
 type: ContinuousFlameBulletType
 width: 2.75

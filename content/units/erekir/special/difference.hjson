@@ -21,6 +21,7 @@ mineTier: 5
 mineSpeed: 4.5
 mineItems: [beryllium, tungsten, sapphire, amethyst]
 immunities: [unleash]
+defaultCommand: rebuild
 engines: [
     {
         x: 5.5
