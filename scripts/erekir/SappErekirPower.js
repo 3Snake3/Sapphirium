@@ -62,7 +62,7 @@ mineralizer.buildType = () => extend(ImpactReactor.ImpactReactorBuild, mineraliz
 				Damage.status(Team.get(99), this.x, this.y, 120, StatusEffects.burning, 120, true, true);
 				Damage.status(Team.get(99), this.x, this.y, 120, StatusEffects.sapped, 120, true, true);
 			    Damage.damage(Team.get(99), this.x, this.y, 120, 5700, true, true);
-			    mineralizer.explosionEffect.at(this.x, this.y);
+			    mineralizer.explodeEffect.at(this.x, this.y);
 			    Sounds.explosionBig.at(this);
 			    Effect.shake(4, 30, this.x, this.y);
 			}
