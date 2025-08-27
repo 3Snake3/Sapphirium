@@ -5,6 +5,8 @@ armor: 14
 range: 180
 hitSize: 34
 hovering: true
+healColor: d1efff
+immunities: [crystallization, unleash]
 
 weapons: [
 {
@@ -74,6 +76,7 @@ controllable: false
 mirror: false
 display: false
 x: 0
+alwaysShooting: true
 bullet: {
 killShooter: true
 sprite: sapphirium-none-bullet

@@ -11,7 +11,9 @@ hovering: true
 canDrown: false
 shadowElevation: 0.1
 drag: 0.08
+healColor: d1efff
 accel: 0.09
+immunities: [crystallization, unleash]
 
 abilities: [
 {

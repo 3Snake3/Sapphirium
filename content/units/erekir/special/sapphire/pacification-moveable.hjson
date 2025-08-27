@@ -5,6 +5,8 @@ rotateSpeed: 4
 itemCapacity: 0
 playerControllable: false
 hidden: true
+healColor: d1efff
+immunities: [crystallization, unleash]
 speed: 1
 targetAir: false
 shadowElevation: 0.1

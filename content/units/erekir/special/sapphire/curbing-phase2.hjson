@@ -5,7 +5,8 @@ rotateSpeed: 0
 itemCapacity: 0
 speed: 0
 targetAir: false
-
+healColor: d1efff
+immunities: [crystallization, unleash]
 abilities: [
 {
 type: UnitSpawnAbility
@@ -22,7 +23,7 @@ rotate: true
 rotateSpeed: 2
 shootCone: 90
 inaccuracy: 5
-reload: 80
+reload: 100
 shoot: {
 shots: 4
 shotDelay: 15
@@ -35,8 +36,8 @@ width: 8
 height: 8
 speed: 3
 lifetime: 80
-damage: 67
-splashDamage: 80
+damage: 44
+splashDamage: 64
 splashDamageRadius: 32
 hitShake: 2
 backColor: d1efff
@@ -80,9 +81,13 @@ reload: 1802
 shoot: {
 firstShotDelay: 1801
 }
+alwaysShooting: true
+controllable: false
+display: false
 bullet: {
 type: EmptyBulletType
 damage: 0
+killShooter: true
 shootEffect: {
 type: ExplosionEffect
 waveRad: 32

@@ -9,6 +9,8 @@ armor: 24
 range: 10
 hitSize: 34
 targetAir: false
+immunities: [crystallization, unleash]
+healColor: d1efff
 
 parts: [
 {

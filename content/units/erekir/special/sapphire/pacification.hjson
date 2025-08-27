@@ -8,14 +8,15 @@ speed: 0
 targetAir: false
 range: 50
 hovering: true
+immunities: [crystallization, unleash]
+healColor: d1efff
 
 weapons: [
 {
 name: pacification-flamethrower
 x: 0
-y: 2
-rotate: true
-rotateSpeed: 1.4
+y: 1
+rotate: false
 shootCone: 25
 shootSound: torch
 alwaysContinuous: true
@@ -38,6 +39,10 @@ controllable: false
 autoTarget: true
 shootSound: blaster
 rotateSpeed: 2
+reload: 80
+x: 2.75
+y: 0
+alternate: true
 
 shoot: {
 type: ShootSpread
