@@ -125,7 +125,7 @@ weapons: [
         bullet: {
             type: FlakBulletType
             speed: 4
-            damage: 0
+            damage: 8
             width: 6
             height: 8
             trailColor: 83a4ff
@@ -173,7 +173,7 @@ weapons: [
         bullet: {
             type: MissileBulletType
             speed: 6
-            damage: 0
+            damage: 44
             splashDamage: 44
             splashDamageRadius: 30
             width: 12
