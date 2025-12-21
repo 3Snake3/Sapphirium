@@ -67,7 +67,7 @@ var cone = 360;
 //the inaccuracy of bullets
 var healBulletInaccuracy = 6;
 //shoot sound
-var healBulletSound = Sounds.lasershoot;
+var healBulletSound = Sounds.pew;
 
 
 var emerald = items.emerald;
