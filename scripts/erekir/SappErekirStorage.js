@@ -143,7 +143,7 @@ corePurpleNight.buildType = () => extend(CoreBlock.CoreBuild, corePurpleNight, {
         	    ObserStar_obj.vel.scl(Mathf.random(0.6,1.8));
         	    purpleWave.at(this.x, this.y);
         	    waveSparks.at(this.x, this.y);
-        	    Sounds.release.at(this);
+        	    Sounds.explosionCleroi.at(this);
             }
         }
         else if(this.creload >= 17) {
@@ -177,7 +177,7 @@ const energonShell = extend(BasicBulletType, 10, 80, {
 		llightningLengthRand: 5,
 		llightningColor: Color.sky,
 	}),
-	hitSound: Sounds.spark,
+	hitSound: Sounds.shockBullet,
 });
 
 const energonShootWave = extend(WaveEffect, {
@@ -341,7 +341,7 @@ energon.buildType = () => extend(CoreBlock.CoreBuild, energon, {
 			this.heal(this.maxHealth * 5 / 100);
             this.recentlyHealed();
             Fx.healBlockFull.at(this.x, this.y, this.block.size, Color.sky, this.block);
-			Sounds.shotgun.at(this);
+			Sounds.explosionPlasmaSmall.at(this);
 		}
 		return true;
 	},

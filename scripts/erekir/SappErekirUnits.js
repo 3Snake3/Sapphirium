@@ -205,7 +205,7 @@ const houndSpawnerBullet = extend(BasicBulletType, {
     reflectable: false,
     hitEffect: Fx.none,
     despawnEffect: Fx.spawn,
-    despawnSound: Sounds.respawn,
+    despawnSound: Sounds.unitCreate,
     despawnUnit: hound,
     despawnUnitCount: 2,
     despawnUnitRadius: 8,
@@ -325,7 +325,7 @@ const raptorShotgun = extend(Weapon, "sapphirium-raptor-shotgun", {
     y: 0.75,
     top: false,
     mirror: false,
-    shootSound: Sounds.shootAltLong,
+    shootSound: Sounds.shootBreachCarbide,
     ejectEffect: Fx.casing3,
     recoil: 6,
     reload: 120,
@@ -411,7 +411,7 @@ const raptorArtillery = extend(Weapon, "sapphirium-raptor-artillery", {
     y: 0.75,
     top: false,
     mirror: false,
-    shootSound: Sounds.artillery,
+    shootSound: Sounds.shootArtillerySapBig,
     ejectEffect: Fx.casing3,
     recoil: 5,
     reload: 1200,
@@ -459,7 +459,7 @@ const punch = extend(ShrapnelBulletType, {
 	knockback: -10,
 	status: StatusEffects.slow,
 	statusDuration: 60,
-	hitSound: Sounds.malignShoot,
+	hitSound: Sounds.shootMalign,
 	hitEffect: punchSparks,
 	shootEffect: Fx.none,
 	smokeEffect: Fx.none,
@@ -502,7 +502,7 @@ const punch2 = extend(ShrapnelBulletType, {
 	damage: 140,
 	status: StatusEffects.unmoving,
 	statusDuration: 84,
-	hitSound: Sounds.malignShoot,
+	hitSound: Sounds.shootMalign,
 	hitEffect: punchSparks,
 	shootEffect: Fx.none,
 	smokeEffect: Fx.none,
@@ -574,7 +574,7 @@ const bite = extend(ShrapnelBulletType, {
 	damage: 140,
 	status: StatusEffects.unmoving,
 	statusDuration: 84,
-	hitSound: Sounds.malignShoot,
+	hitSound: Sounds.shootMalign,
 	hitEffect: punchSparks,
 	shootEffect: Fx.none,
 	smokeEffect: Fx.none,
@@ -714,7 +714,7 @@ const mawSpit = extend(Weapon, "sapphirium-maw-spit", {
 	mirror: false,
 	alternate: false,
 	top: false,
-	shootSound: Sounds.release,
+	shootSound: Sounds.shootNavanax,
 	bullet: spitBall,
          addStats(u, t){
          	this.super$addStats(u, t);
@@ -773,7 +773,7 @@ const mawBulletWeapon = extend(Weapon, "sapphirium-maw-bullet-weapon", {
 	rotateSpeed: 2.5,
 	rotationLimit: 180,
 	ejectEffect: Fx.casing1,
-	shootSound: Sounds.bolt,
+	shootSound: Sounds.shootLocus,
 	bullet: extend(BasicBulletType, {
 		speed: 4,
 		lifetime: 30,
@@ -852,7 +852,7 @@ const presenceMainWeapon = extend(Weapon, "presence-main-weapon", {
     recoil: 0,
     ejectEffect: Fx.none,
     mirror: false,
-    shootSound: Sounds.missile,
+    shootSound: Sounds.shootMissile,
     bullet: extend(MissileBulletType, 4, 22, "large-orb", {
     	width: 7,
         height: 7,
@@ -972,7 +972,7 @@ const presenceWraithWeapon = extend(Weapon, "presence-wraith-weapon", {
     reload: 15,
     recoil: 0,
     ejectEffect: Fx.none,
-    shootSound: Sounds.missile,
+    shootSound: Sounds.shootMissile,
     shootStatus: statuses.wraith,
     shootStatusDuration: 999999,
     display: false,
@@ -1079,7 +1079,7 @@ const apparitionWeapon = extend(Weapon, "apparition-weapon", {
     recoil: 0,
     mirror: false,
     ejectEffect: Fx.none,
-    shootSound: Sounds.missile,
+    shootSound: Sounds.shootMissile,
     shoot: extend(ShootPattern, {
     	shots: 3,
     }),
@@ -1245,7 +1245,7 @@ const gripperWeapon = extend(Weapon, "sapphirium-gripper-weapon", {
             });
       }
       }),
-    shootSound: Sounds.bolt,
+    shootSound: Sounds.shootLocus,
     addStats(u, t){
     	this.super$addStats(u, t);
     t.add("[accent]" + 25 + "[lightgray]" + "%" + " [lightgray]" + slowdown.localized() + " ~ " + "[accent]" + 4 + "[lightgray] " + StatUnit.blocks.localized());
@@ -1276,7 +1276,7 @@ const gripperCenterWeapon = extend(Weapon, "gripper-center-weapon", {
         flareColor: Color.valueOf("ff6e6e"),
         hitColor: Color.valueOf("ff6e6e")
         }),
-    shootSound: Sounds.torch
+    shootSound: Sounds.shootSublimate
 });
 
 const gripperWraithBullet = extend(BasicBulletType, {
@@ -1543,7 +1543,7 @@ const oozeWeapon = extend(Weapon, "sapphirium-ooze-weapon", {
     ejectEffect: Fx.none,
     bullet: oozeOrb,
     layerOffset: -0.01,
-    shootSound: Sounds.cannon,
+    shootSound: Sounds.shootBeamPlasma,
     inaccuracy: 5,
     
     addStats(u, t){
@@ -1569,7 +1569,7 @@ const oozeWeaponSec = extend(Weapon, "sapphirium-gripper-weapon", {
     rotateSpeed: 4,
     ejectEffect: Fx.none,
     bullet: oozeOrb2,
-    shootSound: Sounds.bolt
+    shootSound: Sounds.shootLocus
 });
 
 const oozeShell = extend(BasicBulletType, {
@@ -1646,7 +1646,7 @@ const oozeCenterWeapon = extend(Weapon, "ooze-center-weapon", {
     rotateSpeed: 0.6,
     ejectEffect: Fx.none,
     bullet: oozeShell,
-    shootSound: Sounds.bolt
+    shootSound: Sounds.shootLocus
 });
 
 const oozeWraithBullet = extend(BasicBulletType, {
@@ -1857,7 +1857,7 @@ const gazeFrontWeapon = extend(Weapon, "sapphirium-ooze-weapon", {
     ejectEffect: Fx.none,
     bullet: frontWeapBull,
     layerOffset: -0.01,
-    shootSound: Sounds.torch,
+    shootSound: Sounds.shootBeamPlasma,
 });
 
 const gazeOrb = extend(BasicBulletType, {
@@ -1934,7 +1934,7 @@ const gazeBackWeapon = extend(Weapon, "sapphirium-ooze-weapon", {
     rotateSpeed: 2,
     ejectEffect: Fx.none,
     bullet: gazeOrb,
-    shootSound: Sounds.cannon,
+    shootSound: Sounds.shootBeamPlasma,
     
     addStats(u, t){
     	this.super$addStats(u, t);
@@ -1981,7 +1981,7 @@ const gazeCenterWeapon = extend(Weapon, "sapphirium-gaze-weapon", {
         statusDuration: 360,
         hitColor: Color.valueOf("ff6e6e")
         }),
-    shootSound: Sounds.laser,
+    shootSound: Sounds.shootLancer,
 });
 
 const gazeWraithBullet = extend(BasicBulletType, {
@@ -2306,7 +2306,7 @@ const murderBomb = extend(Weapon, "murder-bomb", {
 	mirror: false,
 	reload: 600,
 	shootCone: 360,
-	shootSound: Sounds.plasmaboom,
+	shootSound: Sounds.blockExplodeElectric,
 	shake: 4,
 	ignoreRotation: true,
 	bullet: extend(ExplosionBulletType, {
@@ -2385,7 +2385,7 @@ const murderArt = extend(Weapon, "murder-art", {
 	rotateSpeed: 360,
 	ignoreRotation: true,
 	recoil: 0,
-	shootSound: Sounds.bang,
+	shootSound: Sounds.shootArtillerySmall,
 	bullet: extend(ArtilleryBulletType, 3, 78, "circle-bullet", {
 		lifetime: 80,
 		shrinkX: -0.3,
@@ -2433,7 +2433,7 @@ const murderArt = extend(Weapon, "murder-art", {
 			splashDamage: 94,
 			splashDamageRadius: 24,
 			splashDamagePierce: true,
-			hitSound: Sounds.plasmaboom,
+			hitSound: Sounds.blockExplodeElectric,
 			})
 		});
 	
@@ -2540,7 +2540,7 @@ const murderSpawn = extend(SpawnDeathAbility, {
 const flowWeapon = extend(Weapon, "flow-releaser", {
 	x: 0,
 	y: -21 / 4,
-	shootSound: Sounds.missile,
+	shootSound: Sounds.shootMissile,
 	velocityRnd: 0.15,
 	reload: 12,
 	shoot: new ShootSummon(0, -21 / 4, 11 / 4, 180),
@@ -2583,7 +2583,7 @@ const flowWeapon = extend(Weapon, "flow-releaser", {
 		toColor: Color.sky,
 		buildingDamageMultiplier: 0.01,
 	}),
-	hitSound: Sounds.spark,
+	hitSound: Sounds.shockBullet,
 	removed(b){
 		this.super$removed(b);
 		

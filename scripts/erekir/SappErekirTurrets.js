@@ -59,7 +59,7 @@ var selfdam = extend(LightningBulletType, {
 //1
 const thrust = extend(ItemTurret, "thrust", {
     size: 3,
-    shootSound: Sounds.pew,
+    shootSound: Sounds.shootAlpha,
     squareSprite: false,
     setStats(){
     	this.super$setStats();
@@ -85,7 +85,7 @@ thrust.buildType = () => extend(ItemTurret.ItemTurretBuild, thrust, {
 
         this.creload++;
         if (this.creload == cooldownShoot) {
-            Sounds.pulseBlast.at(this);
+            Sounds.blockExplodeElectric.at(this);
             multiPart.at(this.x, this.y);
             var thrustBullet2Obj = thrustBullet2.create(this, this.team, this.x, this.y, this.rotation);
             thrustBullet2Obj.damage = thrustBullet2Obj.damage + this.abscrl * 0.02 + this.creload * 0.5;
@@ -189,7 +189,7 @@ greed.buildType = () => extend(ItemTurret.ItemTurretBuild, greed, {
             this.creload++;
             if (this.abscrl < 2000) {
                 if (this.creload == 65) {
-                    Sounds.pulseBlast.at(this);
+                    Sounds.blockExplodeElectric.at(this);
                     multiPart.at(this.x, this.y);
                     var greedBladeObj = greedBlade.create(this, this.team, this.x, this.y, this.rotation);
                     greedBladeObj.damage += this.abscrl * 0.018;
@@ -203,7 +203,7 @@ greed.buildType = () => extend(ItemTurret.ItemTurretBuild, greed, {
             }
             else if (this.abscrl < 4000) {
                 if (this.creload == (80 - cldred) || this.creload == (90 - cldred)) {
-                    Sounds.pulseBlast.at(this);
+                    Sounds.blockExplodeElectric.at(this);
                     multiPart.at(this.x, this.y);
                     var greedBladeObj = greedBlade.create(this, this.team, this.x, this.y, this.rotation);
                     greedBladeObj.damage += 15 + this.abscrl * 0.02;
@@ -218,17 +218,17 @@ greed.buildType = () => extend(ItemTurret.ItemTurretBuild, greed, {
             else {
                 switch(this.creload) {
                     case 45 - cldred:
-                        Sounds.pulseBlast.at(this);
+                        Sounds.blockExplodeElectric.at(this);
                         multiPart.at(this.x, this.y);
                         greedBladeObj.damage += 15 + this.abscrl * 0.025;
                         break;
                     case 50 - cldred:
-                        Sounds.pulseBlast.at(this);
+                        Sounds.blockExplodeElectric.at(this);
                         multiPart.at(this.x, this.y);
                         greedBladeObj.damage += 15 + this.abscrl * 0.025;
                         break;
                     case 55 - cldred:
-                        Sounds.pulseBlast.at(this);
+                        Sounds.blockExplodeElectric.at(this);
                         multiPart.at(this.x, this.y);
                         greedBladeObj.damage += 15 + this.abscrl * 0.025;
                         break;
@@ -294,22 +294,22 @@ cruelty.buildType = () => extend(ItemTurret.ItemTurretBuild, cruelty, {
             if (this.creload == (130 - cldred)) {
                 var crueltyBulletObj = crueltyBullet.create(this, this.team, rx, ry, this.rotation);
                 crueltyBulletObj.damage = 54 + (this.creload + this.abscrl) * 0.038;
-                Sounds.shootBig.at(this);
+                Sounds.shockBullet.at(this);
             }
             if (this.creload == (140 - cldred)) {
                 var crueltyBulletObj2 = crueltyBullet.create(this, this.team, rx, ry, this.rotation);
                 crueltyBulletObj2.damage = 54 + (this.creload + this.abscrl) * 0.038;
-                Sounds.shootBig.at(this);
+                Sounds.shockBullet.at(this);
             }
             if (this.creload == (150 - cldred)) {
                 var crueltyBulletObj3 = crueltyBullet.create(this, this.team, rx, ry, this.rotation);
                 crueltyBulletObj3.damage = 54 + (this.creload + this.abscrl) * 0.038;
-                Sounds.shootBig.at(this);
+                Sounds.shockBullet.at(this);
             }
             if (this.creload == (160 - cldred)) {
                 var crueltyBulletObj4 = crueltyBullet.create(this, this.team, rx, ry, this.rotation);
                 crueltyBulletObj4.damage = 54 + (this.creload + this.abscrl) * 0.038;
-                Sounds.shootBig.at(this);
+                Sounds.shockBullet.at(this);
             }
             
             if (this.creload % (118 - cldred) == 0) { 
@@ -604,7 +604,7 @@ addiction.buildType = () => extend(ItemTurret.ItemTurretBuild, addiction, {
             this.creload++;
             if(this.creload == 110) {
                 addictionUnmovingLaser.create(this, this.team, this.x, this.y, this.rotation);
-                Sounds.laser.at(this);
+                Sounds.shootLancer.at(this);
             }
             if(this.creload >= 120) {
                 this.creload = 0;
@@ -698,19 +698,19 @@ sorrow.buildType = () => extend(PowerTurret.PowerTurretBuild, sorrow, {
         	this.creload++;
             if(this.creload % 72 == 0 && this.creload != 102 && this.creload != 150 && this.creload != 180) {
                 sorrowBurningLaser.create(this, this.team, this.x, this.y, this.rotation);
-                Sounds.laser.at(this);
+                Sounds.shootLancer.at(this);
             }
             if(this.creload == 102) {
                 sorrowFlammableLaser.create(this, this.team, this.x, this.y, this.rotation);
-                Sounds.laser.at(this);
+                Sounds.shootLancer.at(this);
             }
             if(this.creload == 150) {
                 sorrowMeltingLaser.create(this, this.team, this.x, this.y, this.rotation);
-                Sounds.laser.at(this);
+                Sounds.shootLancer.at(this);
             }
             if(this.creload == 180) {
                 sorrowUnmovingLaser.create(this, this.team, this.x, this.y, this.rotation);
-                Sounds.laser.at(this);
+                Sounds.shootLancer.at(this);
             }
             else if (this.creload >= 180) this.creload = 0;
         }
@@ -796,7 +796,7 @@ elimination.buildType = () => extend(ItemTurret.ItemTurretBuild, elimination, {
 		this.super$collision(bullet);
 		if(Mathf.chance(carvedLightningChance)){
 			carvedLightning.create(this, this.team, this.x, this.y, bullet.rotation() + 180);
-			Sounds.spark.at(this.tile, Mathf.random(0.9, 1.1));
+			Sounds.shootArc.at(this.tile, Mathf.random(0.9, 1.1));
 			}
 			return true;
 		}
@@ -815,7 +815,7 @@ erazor.buildType = () => extend(ItemTurret.ItemTurretBuild, erazor, {
 		this.super$collision(bullet);
 		if(Mathf.chance(carvedLightningChance)){
 			carvedLightning.create(this, this.team, this.x, this.y, bullet.rotation() + 180);
-			Sounds.spark.at(this.tile, Mathf.random(0.9, 1.1));
+			Sounds.shootArc.at(this.tile, Mathf.random(0.9, 1.1));
 			}
 			return true;
 		}
@@ -834,7 +834,7 @@ dawn.buildType = () => extend(ItemTurret.ItemTurretBuild, dawn, {
 		this.super$collision(bullet);
 		if(Mathf.chance(0.07)){
 			carvedLightning.create(this, this.team, this.x, this.y, bullet.rotation() + 180);
-			Sounds.spark.at(this.tile, Mathf.random(0.9, 1.1));
+			Sounds.shootArc.at(this.tile, Mathf.random(0.9, 1.1));
 			}
 			return true;
 		}
@@ -880,7 +880,7 @@ const titanThoriumAmmo = extend(ArtilleryBulletType, 2.5, 350, "shell", {
     trailColor: colorLerp,
     frontColor: Color.white,
     ammoMultiplier: 1,
-    hitSound: Sounds.titanExplosion,
+    hitSound: Sounds.explosionTitan,
     status: StatusEffects.blasted,
     trailLength: 32,
     trailWidth: 3.35,
@@ -913,7 +913,7 @@ const titanOxideAmmo = extend(ArtilleryBulletType, 2.5, 300, "shell", {
     trailColor: Color.valueOf("a0b380"),
     frontColor: Color.valueOf("e4ffd6"),
     ammoMultiplier: 1,
-    hitSound: Sounds.titanExplosion,
+    hitSound: Sounds.explosionTitan,
     status: StatusEffects.blasted,
     trailLength: 32,
     trailWidth: 3.35,
@@ -964,7 +964,7 @@ const titanCarbideAmmo = extend(ArtilleryBulletType, 2.5, 700, "shell", {
     trailColor: Color.valueOf("ab8ec5"),
     frontColor: Color.white,
     ammoMultiplier: 1,
-    hitSound: Sounds.titanExplosion,
+    hitSound: Sounds.explosionTitan,
     status: StatusEffects.blasted,
     trailLength: 32,
     trailWidth: 3.35,
@@ -1024,7 +1024,7 @@ const titanCreostoneAmmo = extend(ArtilleryBulletType, 2.5, 650, "shell", {
     trailColor: Color.valueOf("ffb380"),
     frontColor: Color.white,
     ammoMultiplier: 1,
-    hitSound: Sounds.titanExplosion,
+    hitSound: Sounds.explosionTitan,
     status: StatusEffects.blasted,
     trailLength: 32,
     trailWidth: 3.35,
@@ -1084,7 +1084,7 @@ const titanCreostoneAmmo = extend(ArtilleryBulletType, 2.5, 650, "shell", {
 	hitColor: Color.valueOf("ffb380"),
     trailColor: Color.valueOf("ffb380"),
     frontColor: Color.white,
-    hitSound: Sounds.titanExplosion,
+    hitSound: Sounds.explosionTitan,
     status: StatusEffects.blasted,
     trailLength: 16,
     trailWidth: 3.33,

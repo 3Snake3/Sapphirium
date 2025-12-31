@@ -155,7 +155,7 @@ emeraldWall.buildType = () => extend(Wall.WallBuild, emeraldWall, {
         if(Mathf.chance(0.05)) {
             for(var i = 0; i < 4; i++) {
                 healBullet.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
-                Sounds.lasershoot.at(this);
+                Sounds.shootLaser.at(this);
             }
         }
         return true;
@@ -179,7 +179,7 @@ emeraldWallLarge.buildType = () => extend(Wall.WallBuild, emeraldWallLarge, {
         if(Mathf.chance(0.05)) {
             for(var i = 0; i < 4; i++) {
                 healBullet.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
-                Sounds.lasershoot.at(this);
+                Sounds.shootLaser.at(this);
             }
         }
         return true;
@@ -316,7 +316,7 @@ var dischargeChance = 0.1;
 var dischargeDamage = 60;
 var dischargeLength = 14;
 var dischargeColor = Pal.lancerLaser;
-var dischargeSound = Sounds.spark;
+var dischargeSound = Sounds.shootArc;
 const globiumWall = extend(ForceProjector, "globium-wall", {
 	consumeCoolant: false,
     drawPlace(x, y, rotation, valid) {
@@ -440,7 +440,7 @@ var lightningChance = 0.08;
 var lightningDamage = 12;
 var lightningLength = 16;
 var lightningColor = Pal.surge;
-var lightningSound = Sounds.spark;
+var lightningSound = Sounds.shootArc;
 const chargedLW = extend(SolarGenerator, "charged-lead-wall", {
     setStats() {
         this.super$setStats();
@@ -468,7 +468,7 @@ chargedLW.buildType = () => extend(SolarGenerator.SolarGeneratorBuild, chargedLW
 var lLength = 13;
 var lColor = Pal.surge;
 var lDamage = 22;
-var lSound = Sounds.spark;
+var lSound = Sounds.shootArc;
 var lChance = 0.05;
 const lType = extend(BasicBulletType, {
 	width: 8,
@@ -627,7 +627,7 @@ reinforcedWall.buildType = () => extend(Wall.WallBuild, reinforcedWall, {
 		this.super$collision(bullet);
 		if(Mathf.chance(0.01)){
 			laser.create(this, this.team, this.x, this.y, bullet.rotation() + 180);
-			Sounds.laser.at(this);
+			Sounds.shootEclipse.at(this);
 		}
 		return true;
 	}

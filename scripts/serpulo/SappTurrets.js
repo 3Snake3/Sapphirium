@@ -53,7 +53,7 @@ const copperMissile = extend(MissileUnitType, "launch-copper-missile", {
 		trailLength: 18,
 		missileAccelTime: 10,
 		lowAltitude: true,
-		loopSound: Sounds.missileTrail,
+		loopSound: Sounds.loopMissileTrail,
 		loopSoundVolume: 0.6,
 		targetUnderBlocks: false,
 		health: 130,
@@ -105,7 +105,7 @@ const graphiteMissile = extend(MissileUnitType, "launch-graphite-missile", {
 		trailLength: 18,
 		missileAccelTime: 10,
 		lowAltitude: true,
-		loopSound: Sounds.missileTrail,
+		loopSound: Sounds.loopMissileTrail,
 		loopSoundVolume: 0.6,
 		targetUnderBlocks: false,
 		health: 130,
@@ -167,7 +167,7 @@ const metaglassMissile = extend(MissileUnitType, "launch-metaglass-missile", {
 		trailLength: 18,
 		missileAccelTime: 10,
 		lowAltitude: true,
-		loopSound: Sounds.missileTrail,
+		loopSound: Sounds.loopMissileTrail,
 		loopSoundVolume: 0.6,
 		targetUnderBlocks: false,
 		health: 130,
@@ -219,7 +219,7 @@ const siliconMissile = extend(MissileUnitType, "launch-silicon-missile", {
 		trailLength: 18,
 		missileAccelTime: 10,
 		lowAltitude: true,
-		loopSound: Sounds.missileTrail,
+		loopSound: Sounds.loopMissileTrail,
 		loopSoundVolume: 0.6,
 		targetUnderBlocks: false,
 		health: 160,
@@ -272,7 +272,7 @@ const pyratiteMissile = extend(MissileUnitType, "launch-pyratite-missile", {
 		trailLength: 18,
 		missileAccelTime: 10,
 		lowAltitude: true,
-		loopSound: Sounds.missileTrail,
+		loopSound: Sounds.loopMissileTrail,
 		loopSoundVolume: 0.6,
 		targetUnderBlocks: false,
 		health: 180,
@@ -325,7 +325,7 @@ const blastMissile = extend(MissileUnitType, "launch-blast-missile", {
 		trailLength: 18,
 		missileAccelTime: 10,
 		lowAltitude: true,
-		loopSound: Sounds.missileTrail,
+		loopSound: Sounds.loopMissileTrail,
 		loopSoundVolume: 0.6,
 		targetUnderBlocks: false,
 		drawCell: false,
@@ -377,7 +377,7 @@ const thoriumMissile = extend(MissileUnitType, "launch-thorium-missile", {
 		trailLength: 18,
 		missileAccelTime: 10,
 		lowAltitude: true,
-		loopSound: Sounds.missileTrail,
+		loopSound: Sounds.loopMissileTrail,
 		loopSoundVolume: 0.6,
 		targetUnderBlocks: false,
 		drawCell: false,
@@ -432,7 +432,7 @@ const creostoneMissile = extend(MissileUnitType, "launch-creostone-missile", {
 		lowAltitude: true,
 		drawCell: false,
 		outlineColor: Color.valueOf("565666"),
-		loopSound: Sounds.missileTrail,
+		loopSound: Sounds.loopMissileTrail,
 		loopSoundVolume: 0.6,
 		targetUnderBlocks: false,
 		health: 280,
@@ -589,7 +589,7 @@ impaler.buildType = () => extend(ItemTurret.ItemTurretBuild, impaler, {
             if(this.creload >= 240) {
                 this.creload = 0;
                 overfreezingCharge.create(this, this.team, this.x, this.y, this.rotation);
-                Sounds.shootBig.at(this);
+                Sounds.shootEclipse.at(this);
             }
             else this.creload++;
         }
@@ -668,14 +668,14 @@ everfrost.buildType = () => extend(LiquidTurret.LiquidTurretBuild, everfrost, {
             if(this.creload % 310 == 0 && this.creload != 1100) {
                 everfrostSplash.create(this, this.team, this.x, this.y, this.rotation);
                 everfrostSplashEffect.at(this.x, this.y, this.rotation);
-                Sounds.titanExplosion.at(this);
+                Sounds.explosionTitan.at(this);
                 this.creload += 1;
             }
             else if(this.creload == 1100) {
             	if(!Vars.net.client()){
                 shielder.spawn(this.team, this.x, this.y);
                 Fx.spawn.at(this.x, this.y);
-                Sounds.respawn.at(this);
+                Sounds.unitCreate.at(this);
                 }
                 this.creload += 1;
             }
@@ -723,6 +723,7 @@ var shieldRegenStatus = extend(StatusEffect, "shield-regen-status", {
             	if(e.shield > 0){
             	e.shield = Math.min(e.shield - 100, 0);
                 e.shieldAlpha = 1;
+                Sounds.shieldWave.at(unit.x, unit.y)
                 Fx.shieldApply.at(e.x, e.y, 0, e.team.color, parentizeEffects ? e : null);
                 }
                 });
@@ -749,7 +750,7 @@ const lifeEmp = extend(EmpBulletType, {
 	frontColor: Color.white,
 	trailWidth: 3,
 	trailLength: 16,
-	hitSound: Sounds.plasmaboom,
+	hitSound: Sounds.explosionNavanax,
 	homingPower: 0.48,
 	homingRange: 28,
 	collidesTeam: true,
@@ -1108,7 +1109,7 @@ const shootSurge = new Effect(8, e => {
 
 const jerkLaserMount = extend(Weapon, "jerk-laser-mount", {
 	reload: 200,
-	shootSound: Sounds.beam,
+	shootSound: Sounds.beamPlasmaSmall,
 	mirror: false,
 	rotate: false,
 	continuous: true,
@@ -1163,7 +1164,7 @@ const jerkSpawn = extend(BulletType, 0, 0, {
 		despawnUnit: jerk,
 		despawnUnitCount: 1,
 		despawnUnitRadius: 0,
-		despawnSound: Sounds.respawn,
+		despawnSound: Sounds.unitCreate,
 	});
 
 const pierceOverdriveAbility = extend(Ability, {
@@ -1211,7 +1212,7 @@ const globiumBall = extend(BasicBulletType, 5, 0, "circle-bullet", {
 	shrinkY: 0,
 	scaledSplashDamage: true,
 	splashDamagePierce: true,
-	despawnSound: Sounds.laserblast,
+	despawnSound: Sounds.shootCorvus,
 	hitSound: Sounds.none,
 	width: 12,
 	height: 12,
@@ -1276,7 +1277,7 @@ const surgeBall = extend(BasicBulletType, 5, 0, "circle-bullet", {
 	shrinkY: 0,
 	scaledSplashDamage: true,
 	splashDamagePierce: true,
-	despawnSound: Sounds.laserblast,
+	despawnSound: Sounds.shootCorvus,
 	hitSound: Sounds.none,
 	width: 12,
 	height: 12,
@@ -1318,8 +1319,8 @@ const pierceBlow = extend(BasicBulletType, 5, 0, "circle-bullet", {
 	shrinkY: 0,
 	scaledSplashDamage: true,
 	splashDamagePierce: true,
-	despawnSound: Sounds.laserblast,
-	hitSound: Sounds.laserblast,
+	despawnSound: Sounds.shootCorvus,
+	hitSound: Sounds.shootCorvus,
 	width: 12,
 	height: 12,
 	trailWidth: 4,
@@ -1444,7 +1445,7 @@ pierce.buildType = () => extend(ItemTurret.ItemTurretBuild, pierce, {
                 }
                 else if(Mathf.chance(0.01)){
 				unit.apply(unlock, 180);
-				Sounds.unlock.at(unit);
+				Sounds.uiUnlock.at(unit);
 				accentEmpSpark.at(unit.x, unit.y, this.angleTo(unit), Pal.surge);
                 Fx.chainEmp.at(this.x, this.y, 0, Pal.accent, unit);
                 }
@@ -1454,7 +1455,7 @@ pierce.buildType = () => extend(ItemTurret.ItemTurretBuild, pierce, {
             if(this.creload == 380){
         	surgeBall.create(this, this.team, this.x, this.y, this.rotation);
             surgeEmpSpark.at(this.x, this.y, this.rotation);
-            Sounds.laser.at(this);
+            Sounds.shootLancer.at(this);
             }
             if(this.creload == 500){
             surgeBall.create(this, this.team, this.x, this.y, this.rotation);
@@ -1465,12 +1466,12 @@ pierce.buildType = () => extend(ItemTurret.ItemTurretBuild, pierce, {
             if(this.creload == 560){
         	surgeBall.create(this, this.team, this.x, this.y, this.rotation);
             surgeEmpSpark.at(this.x, this.y, this.rotation);
-            Sounds.laser.at(this);
+            Sounds.shootLancer.at(this);
             }
             if(this.creload == 590){
         	pierceBlow.create(this, this.team, this.x, this.y, this.rotation);
             surgeEmpSpark.at(this.x, this.y, this.rotation);
-            Sounds.laser.at(this);
+            Sounds.shootLancer.at(this);
             this.applyBoost(1.5, 180);
             }
             else if(this.creload >= 590){
@@ -1574,7 +1575,7 @@ injection.buildType = () => extend(ItemTurret.ItemTurretBuild, injection, {
                 this.creload = 0
                 sharpLaser.create(this, this.team, this.x, this.y, this.rotation)
                 Fx.none.at(this.x, this.y)
-                Sounds.laser.at(this)
+                Sounds.shootLancer.at(this)
                 Effect.shake(4, 4, this)
             }
             else this.creload++;
@@ -1627,7 +1628,7 @@ const bloodySpawn = extend(BulletType, 0, 0, {
 	fragBullets: 1,
 	fragRandomSpread: 30,
 	fragBullet: bloodyLaser,
-	despawnSound: Sounds.laser,
+	despawnSound: Sounds.shootLancer,
 	}),
 	});
 
@@ -1648,7 +1649,7 @@ bloodlust.buildType = () => extend(ItemTurret.ItemTurretBuild, bloodlust, {
 		if (bloodlustShoot) {
 			if (this.creload % 20 == 0 && this.creload != 80) {
 	            bloodsap.create(this, this.team, this.x, this.y, this.rotation);
-	            Sounds.sap.at(this);
+	            Sounds.shootSap.at(this);
 	        }
 	        if(this.creload == 80){
 		    bloodySpawn.create(this, this.team, this.x, this.y, this.rotation);
@@ -1874,7 +1875,7 @@ enlight.buildType = () => extend(ItemTurret.ItemTurretBuild, enlight, {
                 this.creload = 0;
                 goldenFireBullet.create(this, this.team, fx, fy, this.rotation);
                 goldenFire.at(fx, fy, this.rotation);
-                Sounds.flame.at(this);
+                Sounds.shootFlamePlasma.at(this);
             }
         }
     },
@@ -1896,8 +1897,8 @@ const infiniteLSA = extend(ContinuousTurret, "infinite-laser-array", {
     shake: 0,
     range: 90,
     shootEffect: Fx.none,
-    shootSound: Sounds.laserbig,
-    loopSound: Sounds.beam,
+    shootSound: Sounds.shootMeltdown,
+    loopSound: Sounds.beamPlasmaSmall,
     loopSoundVolume: 0.8,
     shootType: contLaser,
 });
@@ -2005,7 +2006,7 @@ brazier.buildType = () => extend(ContinuousLiquidTurret.ContinuousLiquidTurretBu
                 this.creload = 0;
                 rightBullet.create(this, this.team, brX2, this.y, this.rotation);
                 leftBullet.create(this, this.team, brX, this.y, this.rotation);
-                Sounds.spark.at(this);
+                Sounds.shockBullet.at(this);
             }
         }
     },
@@ -2218,7 +2219,7 @@ const glaiveDespawnBullet = extend(BulletType, {
 	collidesTiles: false,
 	collidesGround: false,
 	collidesAir: false,
-	despawnSound: Sounds.respawn,
+	despawnSound: Sounds.unitCreate,
 });
 
 const cloudBreaker = extend(ItemTurret, "cloud-breaker", {
@@ -2350,7 +2351,7 @@ fallen.buildType = () => extend(ContinuousLiquidTurret.ContinuousLiquidTurretBui
                 for (let i = 0; i < 2; i++) {
                     blastBullet.create(this, this.team, this.x, this.y, this.rotation)
                 }
-                Sounds.shootSnap.at(this)
+                Sounds.shootCyclone.at(this)
             }
         }
     },
@@ -2439,7 +2440,7 @@ adynamia.buildType = () => extend(ItemTurret.ItemTurretBuild, adynamia, {
             this.creload++;
             if(this.creload % 80 == 0 && this.creload != 1081) {
                 middleLaser.create(this, this.team, this.x, this.y, this.rotation);
-                Sounds.laser.at(this);
+                Sounds.shootEclipse.at(this);
             }
             else if(this.creload == 1081) {
             	if(!Vars.net.client()){
@@ -2531,7 +2532,7 @@ const abyssSwarmer = extend(Weapon, "abyss-swarmer", {
 	rotate: false,
 	mirror: false,
 	inaccuracy: 3,
-	shootSound: Sounds.missile,
+	shootSound: Sounds.shootMissile,
 	shoot: extend(ShootPattern, {
 		shots: 4,
    }),
@@ -2614,7 +2615,7 @@ const abyssPiercer = extend(Weapon, "sapphirium-abyss-spawn-left-side", {
 	reload: 180,
 	recoil: 4,
 	recoilTime: 170,
-	shootSound: Sounds.bolt,
+	shootSound: Sounds.shootLocus,
 	shootCone: 5,
 	rotate: false,
 	bullet: abyssPiercerBullet,
@@ -2873,7 +2874,7 @@ const abyss = extend(PowerTurret, "abyss", {
         collidesTiles: false,
         absorbable: false,
         hittable: false,
-        despawnSound: Sounds.respawn,
+        despawnSound: Sounds.unitCreate,
         fragRandomSpread: 0,
         fragSpread: 90,
         fragBullets: 1,
@@ -2999,7 +3000,7 @@ abyss.buildType = () => extend(PowerTurret.PowerTurretBuild, abyss, {
             var abyssRot = this.rotation + i * 360/1 - Time.time * 1;
             abyssRadialEffect.at(ee.x, ee.y, abyssRot);
             }
-            Sounds.lasercharge2.at(ee);
+            Sounds.chargeCorvus.at(ee);
             }
             else if(ee.checkTarget(false, true) && ee.team != Team.derelict){
             ee.damage(172.2);
@@ -3010,7 +3011,7 @@ abyss.buildType = () => extend(PowerTurret.PowerTurretBuild, abyss, {
             var abyssRot2 = this.rotation + i * 360/1 - Time.time * 1;
             abyssRadialEffect.at(ee.x, ee.y, abyssRot2);
             }
-            Sounds.lasercharge2.at(ee);
+            Sounds.chargeCorvus.at(ee);
             }
             });
             }
@@ -3060,7 +3061,7 @@ shine.buildType = () => extend(ItemTurret.ItemTurretBuild, shine, {
             if(!Vars.net.client()){
             diamondDrone.spawn(this.team, this.x, this.y);
             Fx.spawn.at(this.x, this.y);
-            Sounds.respawn.at(this);
+            Sounds.unitCreate.at(this);
             }
         }
         else if (this.creload < 600) this.creload++;
@@ -3134,7 +3135,7 @@ executioner.buildType = () => extend(LaserTurret.LaserTurretBuild, executioner, 
                 this.creload = 0;
                 greenLaser.create(this, this.team, wx, wy, this.rotation);
                 greenWave.at(wx, wy);
-                Sounds.laserblast.at(this);
+                Sounds.shootCorvus.at(this);
             }
         }
         else this.creload = 0;

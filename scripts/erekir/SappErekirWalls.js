@@ -23,6 +23,7 @@ carvedWall.buildType = () => extend(Wall.WallBuild, carvedWall, {
             this.recentlyHealed();
             Fx.healBlockFull.at(this.x, this.y, this.block.size, Color.valueOf("ab8ea4"), this.block);
             squareEffect.at(this.x, this.y, this.block.size, Color.valueOf("ab8ea4"), this.block);
+            Sounds.blockHeal.at(this);
             this.creload = 0;
         } 
         else this.creload++;
@@ -43,6 +44,7 @@ carvedWallLarge.buildType = () => extend(Wall.WallBuild, carvedWallLarge, {
         if(this.creload == 1 && this.damaged()) {
             this.heal(this.maxHealth * 4.5 / 100);
             this.recentlyHealed();
+            Sounds.blockHeal.at(this);
             Fx.healBlockFull.at(this.x, this.y, this.block.size, Color.valueOf("ab8ea4"), this.block);
             squareEffect.at(this.x, this.y, this.block.size, Color.valueOf("ab8ea4"), this.block);
             this.creload = 0;
@@ -82,12 +84,13 @@ carvedMonolith.buildType = () => extend(Wall.WallBuild, carvedMonolith, {
         if(this.creload == 2 && this.damaged()) {
             this.heal(this.maxHealth * 5 / 100);
             this.recentlyHealed();
+            Sounds.blockHeal.at(this);
             Fx.healBlockFull.at(this.x, this.y, this.block.size, Color.valueOf("ab8ea4"), this.block);
             squareEffect.at(this.x, this.y, this.block.size, Color.valueOf("ab8ea4"), this.block);
             this.creload++;
         }
         if(this.creload == 4) {
-            Sounds.shotgun.at(this);
+            Sounds.shockwaveTower.at(this);
             for(var i = 0; i < 6; i++) {
                 blast.create(this, this.x, this.y, (330 / 6) * i + Mathf.random(30));
             }

@@ -103,14 +103,14 @@ biochargeFoundry.buildType = () => extend(HeatProducer.HeatProducerBuild, biocha
 		this.super$updateTile();
 		if(this.liquids.get(Liquids.neoplasm) >= 160) {
             ExplodeBullett.create(this, Team.get(0), this.x, this.y, Mathf.range(0.0, 360.0));
-            Sounds.largeExplosion.at(this);
+            Sounds.blockExplodeFlammable.at(this);
         }
     },
     onDestroyed() {
         this.super$onDestroyed();
         if(this.efficiency > 0) {
             ExplodeBullett.create(this, Team.get(0), this.x, this.y, Mathf.range(0.0, 360.0));
-            Sounds.largeExplosion.at(this);
+            Sounds.blockExplodeFlammable.at(this);
         }
     },
 });
@@ -123,14 +123,14 @@ neoplasmFurnace.buildType = () => extend(HeatCrafter.HeatCrafterBuild, neoplasmF
 		this.super$updateTile();
 		if(this.liquids.get(Liquids.neoplasm) >= 1680) {
             ExplodeBullet.create(this, Team.get(0), this.x, this.y, Mathf.range(0.0, 360.0));
-            Sounds.largeExplosion.at(this);
+            Sounds.blockExplodeFlammable.at(this);
         }
     },
     onDestroyed() {
         this.super$onDestroyed();
         if(this.efficiency > 0) {
             ExplodeBullet.create(this, Team.get(0), this.x, this.y, Mathf.range(0.0, 360.0));
-            Sounds.largeExplosion.at(this);
+            Sounds.explosionReactorNeoplasm.at(this);
         }
     },
 });

@@ -63,7 +63,7 @@ mineralizer.buildType = () => extend(ImpactReactor.ImpactReactorBuild, mineraliz
 				Damage.status(Team.get(99), this.x, this.y, 120, StatusEffects.sapped, 120, true, true);
 			    Damage.damage(Team.get(99), this.x, this.y, 120, 5700, true, true);
 			    mineralizer.explodeEffect.at(this.x, this.y);
-			    Sounds.explosionbig.at(this);
+			    Sounds.explosionReactor2.at(this);
 			    Effect.shake(4, 30, this.x, this.y);
 			}
 			}
@@ -99,7 +99,7 @@ const LightCloud1 = new Effect(1800, 100, e => {
             var randx = Mathf.range(15);
             var randy = Mathf.range(15);
             Lines.circle(e.x + randx * Vars.tilesize, e.y + randy * Vars.tilesize, e.fin() * 4);
-            Sounds.spark.at(e.x + randx * Vars.tilesize,e.y + randy * Vars.tilesize);
+            Sounds.shootArc.at(e.x + randx * Vars.tilesize,e.y + randy * Vars.tilesize);
             Lightning.create(Team.get(99), Color.valueOf("#2E0C37"), 160, e.x + randx * Vars.tilesize, e.y + randy * Vars.tilesize, Mathf.random(0.0, 360.0), 8 + Mathf.random(-4,6));
         }
     };
@@ -111,7 +111,7 @@ const LightCloud2 = new Effect(2200, 100, e => {
             var randx = Mathf.range(25);
             var randy = Mathf.range(25);
             Lines.circle(e.x + randx * Vars.tilesize, e.y + randy * Vars.tilesize, e.fin() * 3);
-            Sounds.spark.at(e.x + randx * Vars.tilesize,e.y + randy * Vars.tilesize);
+            Sounds.shootArc.at(e.x + randx * Vars.tilesize,e.y + randy * Vars.tilesize);
             Lightning.create(Team.get(99), Color.valueOf("#2E0C37"), 180, e.x + randx * Vars.tilesize, e.y + randy * Vars.tilesize, Mathf.random(0.0, 360.0), 8 + Mathf.random(-3,7));
         }
     };
@@ -123,7 +123,7 @@ if(e.time < 300){
         var randx = Mathf.range(6);
         var randy = Mathf.range(6);
         Lines.circle(e.x + randx * Vars.tilesize, e.y + randy * Vars.tilesize, e.fin() * 4);
-        Sounds.spark.at(e.x + randx * Vars.tilesize,e.y + randy * Vars.tilesize);
+        Sounds.shootArc.at(e.x + randx * Vars.tilesize,e.y + randy * Vars.tilesize);
         Lightning.create(Team.get(99), Color.valueOf("#2E0C37"), 250, e.x + randx * Vars.tilesize, e.y + randy * Vars.tilesize, Mathf.random(0.0, 360.0), 8 + Mathf.random(-4,6));
     }
 };
@@ -135,7 +135,7 @@ const LightCloud4 = new Effect(2700, 100, e => {
             var randx = Mathf.range(35);
             var randy = Mathf.range(35);
             Lines.circle(e.x + randx * Vars.tilesize, e.y + randy * Vars.tilesize, e.fin() * 4);
-            Sounds.spark.at(e.x + randx * Vars.tilesize,e.y + randy * Vars.tilesize);
+            Sounds.shootArc.at(e.x + randx * Vars.tilesize,e.y + randy * Vars.tilesize);
             Lightning.create(Team.get(99), Color.valueOf("#2E0C37"), 100, e.x + randx * Vars.tilesize, e.y + randy * Vars.tilesize, Mathf.random(0.0, 360.0), 8 + Mathf.random(-4,6));
         }
     };
@@ -317,7 +317,7 @@ matterCollapser.buildType = () => extend(ConsumeGenerator.ConsumeGeneratorBuild,
             var lrange = Mathf.random(1,4.5) * this.workst;
 
             if (this.timer.get(time)) {
-                Sounds.spark.at(this);
+                Sounds.shootArc.at(this);
                 Lightning.create(Team.get(99), Color.valueOf("#A480FF"), damage, this.x + Mathf.range(2.7) * Vars.tilesize, this.y + Mathf.range(2.7) * Vars.tilesize, Mathf.random(0.0, 360.0), 5 + 4 * lmax);
                 Lightning.create(Team.get(99), Color.valueOf("#A480FF"), damage, this.x + Mathf.range(2.5) * Vars.tilesize, this.y + Mathf.range(2.5) * Vars.tilesize, Mathf.random(0.0, 360.0), 4 + 6 * lmax);
                 var xrandtim = Mathf.round(Mathf.random(2,6) * this.workst)
@@ -341,7 +341,7 @@ matterCollapser.buildType = () => extend(ConsumeGenerator.ConsumeGeneratorBuild,
                 Lightning.create(Team.get(99), Color.valueOf("#A480FF"), Edamage*2 , this.x + Mathf.range(2.5) * Vars.tilesize, this.y + Mathf.range(2.5) * Vars.tilesize, Mathf.random(0.0, 360.0), 35.0 + Mathf.range(15.0) * Elmax);
             };
             Damage.damage(this.x, this.y, 17 * Vars.tilesize, 2500+Edamage*3);
-            Sounds.explosionbig.at(this);
+            Sounds.explosionReactorNeoplasm.at(this);
             LightCloud1.at(this);
             LightCloud2.at(this);
             LightCloud3.at(this);
@@ -351,7 +351,7 @@ matterCollapser.buildType = () => extend(ConsumeGenerator.ConsumeGeneratorBuild,
             midexpSmoke.at(this);
             midsecexpSmoke.at(this);
             lightexpSmoke.at(this);
-            Sounds.largeExplosion.at(this);
+            
             for (var x = 0; x < 40; x++) {
                 var v = new Vec2();
                 v.trns(Mathf.random(360.0), Mathf.random(100.0));
