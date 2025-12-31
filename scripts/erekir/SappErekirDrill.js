@@ -5,7 +5,7 @@ const graphiticCliffCrusher = extend(WallCrafter, "graphitic-cliff-crusher", {
 	drillTime: 130,
 	size: 2,
 	fogRadius: 2,
-	ambientSound: Sounds.drill,
+	ambientSound: Sounds.loopDrill,
 	ambientSoundVolume: 0.04,
 });
 graphiticCliffCrusher.consumePower(13 / 60);
