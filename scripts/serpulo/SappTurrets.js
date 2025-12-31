@@ -1027,7 +1027,7 @@ const jerkShocker = extend(Weapon, "jerk-shocker", {
 	y: 0,
 	mirror: false,
 	rotate: false,
-	shootSound: Sounds.bolt,
+	shootSound: Sounds.shootLocus,
 	shoot: extend(ShootHelix, {
 		shots: 2,
 	}),
