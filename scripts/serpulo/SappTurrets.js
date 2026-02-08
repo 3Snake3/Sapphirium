@@ -1460,7 +1460,7 @@ pierce.buildType = () => extend(ItemTurret.ItemTurretBuild, pierce, {
             if(this.creload == 500){
             surgeBall.create(this, this.team, this.x, this.y, this.rotation);
             surgeEmpSpark.at(this.x, this.y, this.rotation);
-            Sounds.laser.at(this);
+            Sounds.shootLancer.at(this);
             this.applyBoost(1.2, 120);
             }
             if(this.creload == 560){
@@ -1780,12 +1780,12 @@ aorta.buildType = () => extend(ItemTurret.ItemTurretBuild, aorta, {
         if(aortaShoot) {
             this.creload++;
             if(this.creload == 350) {
-                Sounds.release.at(this);
+                Sounds.explosionAfflict.at(this);
                 var rsh = Mathf.random(0, 9);
                 for(var i = 0; i < 7 + rsh; i++) {
                     let angleOffset = i * 1.77777778 - (9 - 1) * 1.77777778 / 2;
                     var weavingBullet_obj = weavingBullet.create(this, this.team, this.x, this.y, this.rotation + angleOffset);
-                    weavingBullet_obj.vel.scl(Mathf.random(0.7,1.5));
+                      weavingBullet_obj.vel.scl(Mathf.random(0.7,1.5));
                 }
                 for(var i = 0; i < 6 + rsh; i++) {
                     let a = this.rotation + Mathf.range(27 / 2);
