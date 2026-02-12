@@ -68,10 +68,11 @@ status: stunne
 statusDuration: 15
 }
 }
-{
+/*{
 x: 0
 y: 0
 shootY: 0
+reload: 300
 shootOnDeath: true
 mirror: false
 shootSound: none
@@ -92,7 +93,7 @@ despawnUnit: extinctionSmoke
 despawnUnitCount: 1
 despawnUnitChance: 0.08
 }
-}
+}*/
 {
 x: 0
 y: 0
