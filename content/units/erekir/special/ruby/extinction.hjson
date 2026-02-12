@@ -109,7 +109,6 @@ display: false
 
 bullet: {
 speed: 0
-damage: 1
 lifetime: 360
 width: 8
 height: 8
