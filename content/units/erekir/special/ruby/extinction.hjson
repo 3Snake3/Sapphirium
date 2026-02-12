@@ -36,7 +36,13 @@ targetAir: false
 immunities: [unleash]
 hitSize: 9
 playerControllable: false
-
+abilities: [
+{
+type: SpawnDeathAbility
+unit: extinctionSmoke
+spread: 0
+}
+]
 weapons: [
 {
 x: 0

@@ -63,6 +63,11 @@ type: SpawnDeathAbility
 unit: teleportationSmokeDeath
 spread: 0.1
 }
+{
+type: RegenAbility
+amount: 2.25
+}
+
 ]
 
 engines: [
@@ -89,12 +94,6 @@ x: -10.75
 y: -10.25
 rotation: -135
 radius: 2.5
-}
-]
-abilities: [
-{
-type: RegenAbility
-amount: 2.25
 }
 ]
 deathExplosionEffect: {
@@ -262,7 +261,7 @@ trailWidth: 2
 }
 }
 
-{
+/*{
 x: 0
 y: 0
 reload: 300
@@ -310,13 +309,12 @@ absorbable: false
 hitEffect: none
 collidesTiles: false
 collides: false
-despawnUnit: teleportationSmoke
-despawnUnitCount: 1
+fragBullets: 1
 }
 }
 ]
 }
-}
+}*/
 {
 x: 0
 y: 0
