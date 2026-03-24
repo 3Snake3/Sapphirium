@@ -41,7 +41,7 @@ drawer: [
 ]
 generateEffect: redgeneratespark
 liquidCapacity: 20
-ambientSound: smelter
+ambientSound: loopDifferential
 ambientSoundVolume: 0.06
 requirements: [
 tungsten/60

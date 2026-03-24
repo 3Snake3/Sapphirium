@@ -3,7 +3,7 @@ research: {
     objectives: [
         {
             type: SectorComplete
-            preset: craters
+            preset: crateredBattleground
         }
     ]
 }
