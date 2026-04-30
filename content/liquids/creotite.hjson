@@ -1,7 +1,7 @@
-temperature: 0.95
+temperature: 0.5
 viscosity: 0.7
-flammability: 1
-explosiveness: 0.8
+flammability: 0.8
+explosiveness: 0.4
 heatCapacity: 0.8
 color: ff9382
 lightColor: ffcac208
