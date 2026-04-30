@@ -338,7 +338,7 @@ const globiumWall = extend(ForceProjector, "globium-wall", {
         }
     }
 });
-globiumWall.consumePower(2);
+globiumWall.consumePower(0.1);
 globiumWall.buildType = () => extend(ForceProjector.ForceBuild, globiumWall, {
     drawShield(){
         if(!this.broken){
@@ -397,7 +397,7 @@ const globiumWallLarge = extend(ForceProjector, "globium-wall-large", {
         }
     }
 });
-globiumWallLarge.consumePower(4);
+globiumWallLarge.consumePower(0.3);
 globiumWallLarge.buildType = () => extend(ForceProjector.ForceBuild, globiumWallLarge, {
     drawShield() {
         if(!this.broken) {
@@ -529,7 +529,7 @@ const surgeBullet = extend(ExplosionBulletType, {
        }
        });
 
-const powerProduction = 0.8;
+const powerProduction = 0.13;
 const productionEfficiency = 1.0;
 
 const surgeStoneWall = extend(Wall, "surge-stone-wall", {

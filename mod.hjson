@@ -16,6 +16,6 @@ description:
   Thanks everyone for support.
   '''
 author: "Snake"
-minGameVersion: "154"
-version: "17.5"
+minGameVersion: "157.4"
+version: "17.6"
 repo: 3Snake3/Sapphirium
