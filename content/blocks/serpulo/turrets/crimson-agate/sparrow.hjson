@@ -16,7 +16,7 @@ range: 120
 heatColor: ff0000
 recoil: 1
 health: 260
-shootSound: laserbolt
+shootSound: shootEnergyField
 research: {
     parent: lancer
 }

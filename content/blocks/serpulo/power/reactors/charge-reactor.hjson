@@ -44,7 +44,7 @@ destroyBullet: {
     fragBullets: 8
     fragRandomSpread: 360
     fragSpread: 45
-    despawnSound: spark
+    despawnSound: shootPulsar
     fragBullet: {
         type: LightningBulletType
         damage: 125
@@ -79,7 +79,7 @@ destroyBullet: {
     }
 }
 itemDuration: 140
-ambientSound: pulse
+ambientSound: loopElectricHum
 ambientSoundVolume: 0.08
 liquidCapacity: 92
 shownPlanets: [serpulo]

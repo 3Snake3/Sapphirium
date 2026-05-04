@@ -94,7 +94,7 @@ spin: 4
 explosionDamage: 3000
 coolantPower: 0.7
 
-ambientSound: hum
+ambientSound: loopThoriumReactor
 ambientSoundVolume: 0.22
 
 requirements: [

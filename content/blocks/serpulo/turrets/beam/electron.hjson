@@ -20,7 +20,7 @@ requirements: [
     plastanium/100
 ]
 category: turret
-shootSound: minebeam
+shootSound: beamHeal
 shootLength: 3.5
 laserColor: f3e979
 laserWidth: 1.25

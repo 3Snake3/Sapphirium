@@ -15,7 +15,7 @@ consumes: {
     power: 1
 }
 size: 2
-shootSound: release
+shootSound: shootAtrax
 shootEffect: {
 particles: 10
 cone: 20

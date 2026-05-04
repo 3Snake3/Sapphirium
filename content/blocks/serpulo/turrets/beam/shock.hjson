@@ -324,5 +324,5 @@ shotDelay: 5
 }
 shootCone: 24
 ammoUseEffect: casing2
-shootSound: bolt
+shootSound: shootLocus
 health: 600

@@ -41,7 +41,7 @@ hasPower: true
 hasLiquids: true
 itemCapacity: 21
 liquidCapacity: 20
-ambientSound: smelter
+ambientSound: loopMalign
 ambientSoundVolume: 0.06
 shownPlanets: [serpulo]
 consumes: {

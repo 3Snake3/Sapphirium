@@ -10,7 +10,7 @@ shoot: {
     spread: 5
     shotDelay: 3
 }
-shootSound: missile
+shootSound: shootMissile
 inaccuracy: 5
 range: 120
 category: defense

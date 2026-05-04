@@ -4,7 +4,7 @@ recoil: 4
 rotateSpeed: 4
 inaccuracy: 6
 range: 350
-shootSound: railgun
+shootSound: shootArtillerySap
 smokeEffect: {
 particles: 14
 lifetime: 135

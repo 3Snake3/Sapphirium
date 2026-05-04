@@ -26,7 +26,7 @@ consumes: {
 }
 shake: 2
 cooldownTime: 0.02
-shootSound: laser
+shootSound: shootAvert
 group: walls
 targetAir: false
 shootType: {

@@ -3,7 +3,7 @@ health: 1980
 reload: 7
 recoil: 3
 shake: 1
-shootSound: shootBig
+shootSound: shootDisperse
 shootCone: 30
 range: 70
 group: walls

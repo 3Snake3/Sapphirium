@@ -37,7 +37,7 @@ rotateSpeed: 4
 inaccuracy: 5
 range: 250
 health: 680
-shootSound: artillery
+shootSound: shootArtillerySap
 shootType: {
     width: 12
     height: 20
@@ -47,7 +47,7 @@ shootType: {
     splashDamage: 15
     splashDamageRadius: 15
     sprite: sapphirium-acid-bullet
-    hitSound: plasmaboom
+    hitSound: explosionAfflict
     hitShake: 3
     trailWidth: 4
     trailLength: 9
@@ -127,7 +127,7 @@ shootType: {
         lightOpacity: 1.5
         lightColor: 70ff88
         splashDamageRadius: 15
-        hitSound: plasmaboom
+        hitSound: explosionAfflict
         collidesTiles: false
         hitShake: 2
         trailWidth: 2

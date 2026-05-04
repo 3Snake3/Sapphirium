@@ -30,7 +30,7 @@ bullet: {
         smokeColor: ffb380
         lifetime: 15
     }
-    despawnSound: bang
+    despawnSound: explosionCrawler
     fragBullets: 1
     fragRandomSpread: 0
     fragBullet: {

@@ -26,7 +26,7 @@ consumes: {
     power: 15
 }
 
-shootSound: bang
+shootSound: shootBeamPlasma
 ammoTypes: {
     plastanium: {
         type: MissileBulletType
@@ -59,7 +59,7 @@ ammoTypes: {
         homingDelay: 6
         absorbable: false
         sprite: sapphirium-acid-bullet
-        hitSound: plasmaboom
+        hitSound: explosionAfflict
         hitShake: 4
         trailWidth: 4
         trailLength: 15
@@ -189,7 +189,7 @@ ammoTypes: {
         homingRange: 80
         homingDelay: 6
         sprite: sapphirium-acid-bullet
-        hitSound: plasmaboom
+        hitSound: explosionAfflict
         hitShake: 4
         trailWidth: 4
         trailLength: 15

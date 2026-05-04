@@ -43,7 +43,7 @@ consumes: {
         ]
     }
 }
-ambientSound: techloop
+ambientSound: loopTech
 ambientSoundVolume: 0.03
 category: crafting
 requirements: [

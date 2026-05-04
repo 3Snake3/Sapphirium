@@ -21,7 +21,7 @@ heatColor: ff0000
 size: 2
 targetGround: false
 targetAir: true
-shootSound: mediumCannon
+shootSound: shootEclipse
 shootType: {
 speed: 18
 lifetime: 15
@@ -45,7 +45,7 @@ fragBullets: 4
 fragRandomSpread: 0
 fragSpread: 45
 fragOnHit: true
-hitSound: laser
+hitSound: shootLaser
 fragBullet: {
 type: LaserBulletType
 colors: [d94848, ff6e6e, ffffff]

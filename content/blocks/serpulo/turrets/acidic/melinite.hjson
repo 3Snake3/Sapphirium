@@ -8,7 +8,7 @@ category: turret
 reload: 75
 recoil: 2
 shootSound: bang
-shootEffect: shootHeal
+shootEffect: shootAlpha
 consumes: {
     power: 2
 }
@@ -34,7 +34,7 @@ shootType: {
     splashDamage: 12
     sprite: sapphirium-acid-bullet
     splashDamageRadius: 15
-    hitSound: plasmaboom
+    hitSound: shootAfflict
     hitShake: 1
     trailWidth: 2
     trailLength: 7

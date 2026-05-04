@@ -257,9 +257,9 @@ startDelay: 600
 smokeEffect: none
 moveWhileCharging: false
 accurateDelay: false
-shootSound: beam
-loopSound: laserbig
-chargeSound: lasercharge
+shootSound: shootNavanax
+loopSound: beamPlasma
+chargeSound: chargeVela
 size: 8
 health: 5400
 category: turret

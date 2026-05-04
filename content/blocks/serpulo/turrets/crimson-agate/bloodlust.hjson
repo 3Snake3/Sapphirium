@@ -11,7 +11,7 @@ shootY: 2
 health: 2600
 shootCone: 24
 range: 200
-shootSound: bolt
+shootSound: shootLocus
 inaccuracy: 3
 ammoPerShot: 5
 maxAmmo: 50

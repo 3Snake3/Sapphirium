@@ -10,7 +10,7 @@ consumes: {
     power: 0.8
 }
 size: 2
-shootSound: flame
+shootSound: shootFlame
 baseExplosiveness: 0.95
 group: walls
 inaccuracy: 10

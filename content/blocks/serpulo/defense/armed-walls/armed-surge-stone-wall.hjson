@@ -1,6 +1,6 @@
 health: 4220
 category: defense
-reload: 60
+reload: 180
 recoil: 3
 consumes: {
     power: 5
@@ -11,22 +11,26 @@ emitLight: true
 lightRadius: 85
 size: 2
 shootEffect: sparkShoot
-shootSound: spark
+shootSound: shootAfflict
 smokeEffect: none
 group: walls
 range: 130
 shootType: {
+    type: EmpBulletType
+    radius: 25
+    unitDamageScl: 1
     width: 10
     height: 10
     sprite: circle-bullet
-    speed: 5
-    lifetime: 26
+    speed: 2.5
+    lifetime: 52
     damage: 15
-    splashDamage: 20
+    splashDamage: 60
     splashDamageRadius: 25
     backColor: f3e979
     frontColor: ffffff
     lightColor: f3e979
+    hitColor: f3e979
     lightRadius: 25
     lightning: 4
     lightningLength: 4.16

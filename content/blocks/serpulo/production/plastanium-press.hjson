@@ -17,7 +17,7 @@ region: sapphirium-rhombus
 }
 itemCapacity: 30
 liquidCapacity: 50
-ambientSound: techloop
+ambientSound: loopMachine2
 ambientSoundVolume: 0.19
 drawer: {
     type: DrawMulti

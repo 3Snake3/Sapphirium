@@ -25,7 +25,7 @@ velocityRnd: 0.3
 consumes: {
     power: 10
 }
-shootSound: laser
+shootSound: shootArtillerySap
 outlineColor: 1d1d21
 chargeSound: lasercharge2
 moveWhileCharging: false
@@ -101,7 +101,7 @@ shootType: {
     reflectable: false
     hittable: false
     collidesAir: false
-    hitSound: laser
+    hitSound: shootLaser
     fragBullets: 3
     fragSpread: 120
     fragBullet: {

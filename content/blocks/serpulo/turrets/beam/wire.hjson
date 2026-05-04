@@ -6,7 +6,7 @@ rotateSpeed: 8
 targetAir: false
 shootEffect: sparkShoot
 smokeEffect: none
-shootSound: bolt
+shootSound: shootLocus
 range: 96
 consumes: {
     power: 2

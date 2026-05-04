@@ -148,7 +148,7 @@ shotDelay: 15
 shake: 4
 smokeEffect: none
 heatColor: FF8900
-shootSound: laser
+shootSound: shootLaser
 shootCone: 10
 unitSort: strongest
 cooldownTime: 350

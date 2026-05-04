@@ -31,7 +31,7 @@ consumes: {
 inaccuracy: 3
 range: 325
 health: 1250
-shootSound: missile
+shootSound: shootMissile
 unitSort: strongest
 shootEffect: shootSmallColor
 ammoTypes: {

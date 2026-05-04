@@ -11,7 +11,7 @@ requirements: [
 outlineColor: 1d1d21
 minWarmup: 0.96
 warmupMaintainTime: 30
-shootSound: laser
+shootSound: shootArtillerySapBig
 rotateSpeed: 4
 range: 360
 reload: 350
