@@ -20,7 +20,7 @@ recoil: 4
 shake: 1.5
 range: 325
 velocityRnd:0.3
-shootSound: shootSnap
+shootSound: shootDisperse
 ammoPerShot: 12
 shootY:-1
 targetGround: false

@@ -11,7 +11,7 @@ category: turret
 ammoUseEffect: casing1
 ammoPerShot: 1
 maxAmmo: 20
-shootSound: throw
+shootSound: shootDuo
 ammoTypes: {
     copper: {
         width: 9

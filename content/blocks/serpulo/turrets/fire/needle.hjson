@@ -3,7 +3,7 @@ reload: 280
 recoil: 6
 shootY: 0.75
 shake: 6
-shootSound: railgun
+shootSound: shootOmura
 targetGround: true
 targetAir: true
 rotateSpeed: 2.5

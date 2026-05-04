@@ -5,7 +5,7 @@ reload: 200
 recoil: 3
 shootEffect: shootBigColor
 smokeEffect:  shootBigSmoke
-shootSound: shootBig
+shootSound: shootAtrax
 shoot: {
     type: ShootMulti
     source: {
@@ -83,7 +83,7 @@ ammoTypes: {
             smokeColor: 8ca4f575
         }
         trailEffect: missileTrail
-        hitSound: splash
+        hitSound: stepWater
         hitShake: 4
         collidesGround: false
         status: wet

@@ -1,7 +1,7 @@
 reload: 45
 recoil: 4
 shootEffect: shootHeal
-shootSound: laser
+shootSound: shootLancer
 targetHealing: true
 rotateSpeed: 6
 health: 960

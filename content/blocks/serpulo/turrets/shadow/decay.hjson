@@ -5,7 +5,7 @@ shake: 4
 ammoUseEffect: casing3
 maxAmmo: 65
 ammoPerShot: 4
-shootSound: artillery
+shootSound: shootArtillerySap
 health: 1120
 range: 240
 consumes: {

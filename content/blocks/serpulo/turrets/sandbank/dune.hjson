@@ -19,7 +19,7 @@ shoot: {
 }
 shootCone: 75
 
-shootSound: throw
+shootSound: shootCyclone
 ammoTypes: {
     sand: {
         sprite: circle-bullet
@@ -162,7 +162,7 @@ sizeInterp: pow2Out
             region: particle
         }
         ammoMultiplier: 4
-        hitSound: explosion
+        hitSound: explosionArtillery
         fragBullets: 1
         fragRandomSpread: 45
         fragAngle: 180
@@ -326,7 +326,7 @@ sizeInterp: pow2Out
         homingPower: 1
         homingRange: 40
         homingDelay: 1
-        hitSound: explosion
+        hitSound: explosionArtillery
         hitEffect: {
             type: ExplosionEffect
             sparks: 5
@@ -385,7 +385,7 @@ sizeInterp: pow2Out
             homingPower: 1
             homingRange: 40
             homingDelay: 1
-            hitSound: explosion
+            hitSound: explosionArtillery
             hitEffect: {
                 type: ExplosionEffect
                 sparks: 5
@@ -442,7 +442,7 @@ sizeInterp: pow2Out
                 homingPower: 1
                 homingRange: 40
                 homingDelay: 1
-                hitSound: explosion
+                hitSound: explosionArtillery
                 hitEffect: {
                     type: ExplosionEffect
                     sparks: 5

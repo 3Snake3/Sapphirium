@@ -4,7 +4,7 @@ size: 3
 reload: 200
 recoil: 6
 shootCone: 5
-shootSound: laser
+shootSound: shootArtillerySapBig
 consumes: {
     power: 10
 }
@@ -53,7 +53,7 @@ ammoTypes: {
         trailColor: 98ffa9
         trailWidth: 5
         trailLength: 10
-        hitSound: laser
+        hitSound: shootLancer
         collides: true
         collidesTiles: true
         collidesAir: false
@@ -105,7 +105,7 @@ ammoTypes: {
             backColor: 98ffa9
             frontColor: ffffff
             trailColor: 98ffa9
-            hitSound: laser
+            hitSound: shootLancer
             trailWidth: 2
             trailLength: 5
             collidesAir: false

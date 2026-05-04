@@ -5,7 +5,7 @@ inaccuracy: 0
 shake: 3
 recoilTime: 30
 range: 200
-shootSound: shootBig
+shootSound: shootBreach
 health: 440
 category: turret
 size: 2
@@ -127,7 +127,7 @@ ammoTypes: {
         fragVelocityMin: 1
         fragOnHit: false
      
-        despawnSound: pew
+        despawnSound: shoot
         
         fragBullet: {
         sprite: sapphirium-diamond-shard
@@ -177,7 +177,7 @@ ammoTypes: {
         fragBullets: 1
         fragAngle: 180
         fragRandomSpread: 0
-        despawnSound: missile
+        despawnSound: shootBreach
         fragVelocityMin: 1
         
         fragBullet: {
@@ -200,8 +200,8 @@ ammoTypes: {
         statusDuration: 10
         pierce: true
         pierceBuilding: true
-        hitSound: respawn
-        despawnSound: pew
+        hitSound: unitCreate
+        despawnSound: shoot
         
         hitEffect: {
         type: ParticleEffect

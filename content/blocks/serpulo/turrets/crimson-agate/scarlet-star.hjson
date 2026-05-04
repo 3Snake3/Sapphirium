@@ -27,7 +27,7 @@ consumes: {
 }
 shootSound: shootArtillerySap
 outlineColor: 1d1d21
-chargeSound: lasercharge2
+chargeSound: chargeVela
 moveWhileCharging: false
 accurateDelay: false
 shootEffect: {

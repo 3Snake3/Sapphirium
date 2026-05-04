@@ -5,7 +5,7 @@ recoil: 3
 health: 960
 rotateSpeed: 4
 inaccuracy: 1
-shootSound: missile
+shootSound: shootMissilePlasmaShort
 shootEffect: sparkShoot
 category: turret
 smokeEffect: {

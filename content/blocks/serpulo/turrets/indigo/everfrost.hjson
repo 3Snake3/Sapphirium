@@ -18,7 +18,7 @@ rotateSpeed: 1.2
 shootCone: 1
 range: 280
 targetAir: false
-shootSound: dullExplosion
+shootSound: explosionDull
 loopSound: none
 shootY: 0
 drawer: [

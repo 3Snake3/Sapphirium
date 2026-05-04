@@ -5,7 +5,7 @@ recoil: 3
 rotateSpeed: 0.9
 shake: 3
 cooldownTime: 550
-shootSound: laser
+shootSound: shootEclipse
 maxAmmo: 96
 ammoPerShot: 24
 ammoUseEffect: none
@@ -48,7 +48,7 @@ ammoTypes: {
         hitShake: 4
         trailRotation: true
         status: electrified
-        hitSound: plasmaboom
+        hitSound: shootBeamPlasma
         hitEffect: [
             hitEmpSpark, 
             {

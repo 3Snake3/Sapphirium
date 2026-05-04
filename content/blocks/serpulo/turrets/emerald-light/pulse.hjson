@@ -4,7 +4,7 @@ health: 260
 targetHealing: true
 rotateSpeed: 5
 shake: 0
-shootSound: lasershoot
+shootSound: shootAlpha
 shootEffect: shootHeal
 range: 80
 consumes: {

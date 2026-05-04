@@ -45,7 +45,7 @@ fragBullets: 4
 fragRandomSpread: 0
 fragSpread: 45
 fragOnHit: true
-hitSound: shootLaser
+hitSound: shootLancer
 fragBullet: {
 type: LaserBulletType
 colors: [d94848, ff6e6e, ffffff]

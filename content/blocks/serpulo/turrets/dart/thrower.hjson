@@ -119,4 +119,4 @@ health: 960
 shake: 1
 ammoEjectBack: 1
 ammoUseEffect: casing2
-shootSound: throw
+shootSound: shootDuo

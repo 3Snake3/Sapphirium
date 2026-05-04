@@ -9,7 +9,7 @@ shoot: {
 recoil: 3
 rotateSpeed: 8
 shootCone: 15
-shootSound: lasershoot
+shootSound: shootLaser
 health: 980
 consumes: {
     power: 6.5

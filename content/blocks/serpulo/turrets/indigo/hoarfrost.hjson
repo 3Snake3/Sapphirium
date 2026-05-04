@@ -24,7 +24,7 @@ range: 240
 health: 1300
 shootEffect: lightningShoot
 heatColor: a9d8ff60
-shootSound: missile
+shootSound: shootMissile
 shootType: {
     sprite: sapphirium-spear-bullet
     width: 8

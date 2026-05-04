@@ -44,7 +44,7 @@ recoil: 2
 inaccuracy: 6
 shootCone: 30
 rotateSpeed: 2
-shootSound: missile
+shootSound: shootMissile
 unitSort: weakest
 range: 300
 shoot: {

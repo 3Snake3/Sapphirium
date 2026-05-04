@@ -100,7 +100,7 @@ shootEffect: lancerLaserShoot
 smokeEffect: none
 size: 3
 targetAir: true
-shootSound: laser
+shootSound: shootLancer
 drawer: {
 type: DrawTurret
 parts: [

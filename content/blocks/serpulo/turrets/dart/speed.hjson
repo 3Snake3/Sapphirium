@@ -2,7 +2,7 @@ health: 960
 size: 2
 reload: 9
 recoil: 4
-shootSound: shootBig
+shootSound: shoot
 smokeEffect: shootBigSmoke
 range: 200
 shoot: {

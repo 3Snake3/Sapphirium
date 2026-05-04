@@ -2,7 +2,7 @@ health: 2000
 size: 4
 reload: 12
 recoil: 6
-shootSound: shoot
+shootSound: shootDuo
 shootEffect: {
     type: MultiEffect
     effects: [

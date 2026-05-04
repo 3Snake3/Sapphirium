@@ -3,7 +3,7 @@ health: 1560
 reload: 18
 inaccuracy: 8
 recoil: 2
-shootSound: splash
+shootSound: stepWater
 envDisabled: 16
 placeableLiquid: true
 heatColor: 8ca4f5
@@ -37,7 +37,7 @@ ammoTypes: {
         knockback: 1.5
         displayAmmoMultiplier: false
         fragRandomSpread: 0
-        hitSound: splash
+        hitSound: stepWater
         fromColor: 8ca4f5
         toColor: 8ca4f575
         status: wet
@@ -73,7 +73,7 @@ ammoTypes: {
         knockback: 2
         displayAmmoMultiplier: false
         fragRandomSpread: 0
-        hitSound: splash
+        hitSound: stepWater
         fromColor: bfecff
         toColor: 86ceeb
         status: freezing
@@ -114,7 +114,7 @@ ammoTypes: {
         reloadMultiplier: 0.6
         buildingDamageMultiplier: 0.5
         fragRandomSpread: 0
-        hitSound: splash
+        hitSound: setWater
         fromColor: b8fffe
         toColor: 6fdedc
         status: overfreezing

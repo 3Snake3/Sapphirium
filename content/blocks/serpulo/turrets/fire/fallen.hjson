@@ -32,7 +32,7 @@ ammoTypes: {
 }
 range: 250
 envDisabled: 16
-loopSound: torch
+loopSound: shootSublimate
 shootSound: none
 loopSoundVolume: 1
 rotateSpeed: 2

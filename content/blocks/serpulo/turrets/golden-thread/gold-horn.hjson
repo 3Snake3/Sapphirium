@@ -7,8 +7,8 @@ reload: 80
 recoil: 4
 range: 230
 rotateSpeed: 3
-shootSound: release
-chargeSound: lasercharge2
+shootSound: shootMissilePlasma
+chargeSound: chargeVela
 targetAir: false
 moveWhileCharging: false
 accurateDelay: false

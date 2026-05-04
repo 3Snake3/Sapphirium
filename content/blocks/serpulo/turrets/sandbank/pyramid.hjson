@@ -6,7 +6,7 @@ inaccuracy: 2
 range: 424
 outlineColor: 242429
 size: 4
-shootSound: artillery
+shootSound: shootArtillery
 shoot: {
 type: ShootMulti
 source: {
@@ -523,6 +523,7 @@ type: ArtilleryBulletType
 width: 17
 height: 17
 sprite: large-orb
+hitSound: explosionArtilleryShockBig
 shrinkY:0
 trailColor: f2e879
 trailWidth: 3
@@ -583,6 +584,7 @@ type: ArtilleryBulletType
 width: 7
 height: 7
 sprite: large-orb
+hitSound: explosionArtilleryShock
 hitShake: 2
 buildingDamageMultiplier: 0.45
 lightning: 2

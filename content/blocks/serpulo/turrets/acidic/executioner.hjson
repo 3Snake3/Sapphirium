@@ -259,7 +259,7 @@ moveWhileCharging: false
 accurateDelay: false
 shootSound: shootNavanax
 loopSound: beamPlasma
-chargeSound: chargeVela
+chargeSound: chargeCorvus
 size: 8
 health: 5400
 category: turret

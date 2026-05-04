@@ -13,7 +13,7 @@ rotateSpeed: 0.8
 range: 170
 shootCone: 25
 shootSound: none
-loopSound: torch
+loopSound: shootSublimate
 loopSoundVolume: 1
 ammoTypes: {
     surge-mass: {

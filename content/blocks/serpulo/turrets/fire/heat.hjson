@@ -50,7 +50,7 @@ smokeEffect: {
         }
     ]
 }
-shootSound: shootBig
+shootSound: shootSalvo
 ammoUseEffect: casing3Double
 shootCone: 45
 inaccuracy: 15

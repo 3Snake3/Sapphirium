@@ -20,7 +20,7 @@ recoilTime: 440
 cooldownTime: 440
 shake: 5
 shootCone: 2
-shootSound: railgun
+shootSound: shootForeshadow
 unitSort: strongest
 consumes: {
     power: 30

@@ -3,7 +3,7 @@ recoil: 4
 maxAmmo: 128
 shootY: 3.75
 smokeEffect: shootBigSmoke
-shootSound: shootBig
+shootSound: shootMissile
 shootCone: 60
 inaccuracy: 18
 shake: 4

@@ -41,6 +41,7 @@ ammoTypes: {
         fragRandomSpread: 360
         status: slow
         statusDuration: 16
+        hitSound: explosion
         fragBullet: {
             type: BasicBulletType
             width: 7
@@ -76,6 +77,7 @@ ammoTypes: {
         width: 11
         height: 11
         splashDamageRadius: 13
+        
         splashDamage: 15
         knockback: 0.4
         collidesTiles: false
@@ -102,7 +104,7 @@ maxAmmo: 60
 ammoPerShot: 4
 rotateSpeed: 8
 shootCone: 25
-shootSound: bang
+shootSound: explosionDull
 smokeEffect: {
 particles: 6
 cone: 10

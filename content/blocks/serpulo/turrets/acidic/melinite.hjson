@@ -7,8 +7,8 @@ requirements: [
 category: turret
 reload: 75
 recoil: 2
-shootSound: bang
-shootEffect: shootAlpha
+shootSound: shootAlpha
+shootEffect: shootHeal
 consumes: {
     power: 2
 }

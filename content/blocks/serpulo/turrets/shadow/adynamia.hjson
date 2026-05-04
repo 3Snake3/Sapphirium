@@ -8,7 +8,7 @@ reload: 12
 recoil: 2
 rotateSpeed: 5
 health: 1300
-shootSound: shootBig
+shootSound: shootAlpha
 ammoPerShot: 2
 ammoUseEffect: casing3Double
 inaccuracy: 1

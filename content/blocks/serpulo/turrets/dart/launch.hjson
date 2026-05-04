@@ -17,7 +17,7 @@ requirements: [
     silicon/120
     plastanium/15
 ]
-shootSound: missile
+shootSound: shootMissile
 shootEffect: shootBig
 smokeEffect: shootBigSmoke
 reload: 40

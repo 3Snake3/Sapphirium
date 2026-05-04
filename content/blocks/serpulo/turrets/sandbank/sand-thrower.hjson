@@ -187,7 +187,7 @@ shake: 2
 rotateSpeed: 8
 inaccuracy: 6
 range: 180
-shootSound: artillery
+shootSound: shootScepter
 targetAir: false
 smokeEffect: {
 particles: 8

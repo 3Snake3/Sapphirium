@@ -3,7 +3,7 @@ recoil: 2
 range: 160
 inaccuracy: 8
 health: 260
-shootSound: missile
+shootSound: shootMissile
 ammoTypes: {
     ice-cube: {
         type: MissileBulletType

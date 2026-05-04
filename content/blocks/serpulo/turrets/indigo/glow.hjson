@@ -17,7 +17,7 @@ consumes: {
 }
 shake: 3
 smokeEffect: none
-shootSound: laser
+shootSound: shootEclipse
 ammoTypes: {
     globium: {
         sprite: sapphirium-laser-bullet

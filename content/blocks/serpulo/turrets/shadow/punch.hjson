@@ -3,7 +3,7 @@ reload: 190
 recoil: 6
 shake: 3
 shootCone: 30
-shootSound: bang
+shootSound: shootArtillerySapBig
 shootEffect: shootBig
 smokeEffect: shootBigSmoke
 ammoUseEffect: casing3Double
@@ -37,7 +37,7 @@ ammoTypes: {
         damage: 50
         splashDamage: 80
         splashDamageRadius: 65
-        hitSound: explosion
+        hitSound: shootArtillerySap
         sprite: circle-bullet
         shrinkY: 0
         hitEffect: sapExplosion
@@ -63,7 +63,7 @@ ammoTypes: {
         collides: false
         collidesTiles: false
         splashDamagePierce: true
-        hitSound: explosion
+        hitSound: shootArtillerySap
         sprite: circle-bullet
         shrinkY: 0
         hitEffect: sapExplosion
@@ -83,7 +83,7 @@ ammoTypes: {
         damage: 50
         splashDamage: 80
         splashDamageRadius: 65
-        hitSound: explosion
+        hitSound: shootArtillerySap
         sprite: circle-bullet
         shrinkY: 0
         hitEffect: sapExplosion
