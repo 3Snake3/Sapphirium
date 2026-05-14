@@ -8,7 +8,7 @@ requirements: [
 buildCostMultiplier: 0.8
 category: turret
 shootSound: none
-loopSound: torch
+loopSound: shootSublimate
 consumes: {
     power: 12
 }

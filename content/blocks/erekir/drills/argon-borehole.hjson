@@ -60,7 +60,7 @@ drawer: [
 ]
 craftTime: 180
 size: 3
-ambientSound: extractLoop
+ambientSound: loopExtract
 ambientSoundVolume: 0.9
 boostScale: 0.111111111
 hasLiquids: true

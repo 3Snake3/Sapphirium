@@ -138,7 +138,7 @@ warmupMaintainTime: 30
 shake: 2
 reload: 145
 outlineColor: 2d2f39
-shootSound: bolt
+shootSound: shootLocus
 
 ammoTypes: {
 ruby: {

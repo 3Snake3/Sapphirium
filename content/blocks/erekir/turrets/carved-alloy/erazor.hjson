@@ -7,8 +7,8 @@ cooldownTime: 270
 recoilTime: 270
 minWarmup: 0.9
 moveWhileCharging: false
-reloadSound: laserreload
-shootSound: shockBlast
+reloadSound: loopThoriumReactor
+shootSound: blockExplodeElectric
 range: 425
 shootY: -2.25
 smokeEffect: none

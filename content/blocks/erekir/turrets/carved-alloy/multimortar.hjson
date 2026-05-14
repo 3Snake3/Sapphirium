@@ -11,7 +11,7 @@ inaccuracy: 6
 outlineColor: 2d2f39
 shake: 3
 ammoUseEffect: none
-shootSound: bang
+shootSound: shootDuo
 ammoPerShot: 6
 velocityRnd: 0.5
 targetAir: false

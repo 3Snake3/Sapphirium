@@ -103,7 +103,7 @@ shoot: {
 range: 210
 outlineColor: 2d2f39
 recoil: 0
-loopSound: bioLoop
+loopSound: loopBio
 scaledHealth: 260
 size: 4
 warmupMaintainTime: 20

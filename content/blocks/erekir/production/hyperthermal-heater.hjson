@@ -25,7 +25,7 @@ itemCapacity: 0
 liquidCapacity: 84
 rotateDraw: false
 regionRotated1: 1
-ambientSound: hum
+ambientSound: loopHum
 consumes: {
 power: 4
 liquid: creotine/0.8

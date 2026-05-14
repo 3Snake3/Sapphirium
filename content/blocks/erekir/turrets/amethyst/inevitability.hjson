@@ -163,7 +163,7 @@ drawer: {
         }
     ]
 }
-shootSound: pulseBlast
+shootSound: explosionNavanax
 shake: 2
 ammoPerShot: 6
 reload: 360
@@ -175,7 +175,7 @@ shootCone: 1
 scaledHealth: 380
 range: 230
 rotateSpeed: 1.5
-loopSound: respawning
+loopSound: loopUnitBuilding
 loopSoundVolume: 0.8
 ammoTypes: {
     amethyst: {

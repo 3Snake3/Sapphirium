@@ -391,7 +391,7 @@ drawer: {
 shootY: -7.75
 reload: 300
 outlineColor: 2d2f39
-shootSound: largeCannon
+shootSound: shootConquer
 heatRequirement: 60
 maxHeatEfficiency: 2
 shootWarmupSpeed: 0.03

@@ -245,7 +245,7 @@ ammoTypes: {
 shake: 2
 ammoPerShot: 2
 targetUnderBlocks: false
-shootSound: shockBlast
+shootSound: explosionObviate
 drawer: {
     type: DrawTurret
     basePrefix: reinforced-

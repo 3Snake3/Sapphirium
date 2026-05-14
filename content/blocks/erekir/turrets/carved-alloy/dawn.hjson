@@ -12,7 +12,7 @@ range: 600
 rotateSpeed: 1
 heatColor: ffffffff
 category: turret
-shootSound: missileLarge
+shootSound: shootMissileLarge
 ammoPerShot: 8
 ammoTypes: {
     surge-alloy: {

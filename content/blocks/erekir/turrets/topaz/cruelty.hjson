@@ -123,7 +123,7 @@ consumes: {
 targetUnderBlocks: false
 reload: 10
 outlineColor: 2d2f39
-shootSound: shootBig
+shootSound: shoot
 research: {
 parent: greed
 planet: erekir

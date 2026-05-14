@@ -10,7 +10,7 @@ consumes: {
     liquid: creotine/0.08
     power: 5
 }
-shootSound: laser
+shootSound: shootEclipse
 shake: 3
 recoil: 3
 reload: 54

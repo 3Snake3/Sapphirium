@@ -7,7 +7,7 @@ recoil: 4
 cooldownTime: 260
 recoilTime: 230
 minWarmup: 0.9
-shootSound: shockBlast
+shootSound: blockExplodeElectric
 range: 400
 shootY: 3.25
 smokeEffect: none

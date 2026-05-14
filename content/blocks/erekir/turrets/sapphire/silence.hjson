@@ -1,7 +1,7 @@
 size: 3
 reload: 45
 recoil: 2
-shootSound: missile
+shootSound: shootMissile
 rotateSpeed: 3
 consumes: {
 power: 3

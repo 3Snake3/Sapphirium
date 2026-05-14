@@ -4,7 +4,7 @@ requirements: [
     oxide/40
 ]
 category: crafting
-ambientSound: smelter
+ambientSound: loopSmelter
 ambientSoundVolume: 0.5
 craftTime: 120
 outputItem: sapphire/1

@@ -6,7 +6,7 @@ requirements: [
 ]
 size: 4
 category: turret
-shootSound: shootAlt
+shootSound: shootBreach
 ammoTypes: {
     amethyst: {
         speed: 8

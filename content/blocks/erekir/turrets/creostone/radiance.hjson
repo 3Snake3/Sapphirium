@@ -9,7 +9,7 @@ category: turret
 shootY: 2.5
 reload: 180
 outlineColor: 2d2f39
-shootSound: largeCannon
+shootSound: shootEclipse
 heatRequirement: 60
 maxHeatEfficiency: 2
 shootWarmupSpeed: 0.03
@@ -59,6 +59,7 @@ lifetime: 80
 }
 collides: false
 collidesTiles: false
+despawnSound: shootEclipse
 status: super-melting
 statusDuration: 120
 fragRandomSpread: 0
@@ -97,6 +98,7 @@ collidesTiles: false
 status: super-melting
 statusDuration: 80
 fragRandomSpread: 0
+despawnSound: shootEclipse
 fragBullets: 1
 fragBullet: {
 sprite: circle-bullet
@@ -166,6 +168,7 @@ collides: false
 collidesTiles: false
 status: super-melting
 statusDuration: 45
+despawnSound: shootEclipse
 }
 }
 }

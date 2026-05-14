@@ -25,7 +25,7 @@ generateEffect: {
 }
 effectChance: 0.01
 size: 3
-ambientSound: smelter
+ambientSound: loopSmelter
 ambientSoundVolume: 0.06
 drawer: [
 {

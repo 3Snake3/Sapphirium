@@ -45,7 +45,7 @@ itemCapacity: 20
 liquidCapacity: 40
 itemDuration: 60
 generateEffect: none
-ambientSound: smelter
+ambientSound: loopSmelter
 ambientSoundVolume: 0.06
 requirements: [
 ruby/80

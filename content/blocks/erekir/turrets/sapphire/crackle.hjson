@@ -155,7 +155,7 @@ ammoTypes: {
         }
     }
 }
-shootSound: cannon
+shootSound: shootTank
 shoot: {
     type: ShootAlternate
     spread: 8
