@@ -32,7 +32,7 @@ rotate: false
 mirror: true
 alternate: false
 alwaysShootWhenMoving: true
-shootSound: spark
+shootSound: shootEnergyField
 reload: 1
 recoil: 0
 shootY: 0
@@ -72,7 +72,7 @@ absorbable: false
 collidesTiles: false
 sprite: mine-bullet
 lifetime: 24
-hitSound: plasmaboom
+hitSound: shootCollaris
 backColor: d1efff
 hitColor: d1efff
 trailColor: d1efff

@@ -44,7 +44,7 @@ weapons: [
         mirror: true
         alternate: true
         shootY: 2.25
-        shootSound: shootAltLong
+        shootSound: shootBreachCarbide
 
         bullet: {
             type: BasicBulletType

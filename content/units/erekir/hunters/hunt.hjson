@@ -12,7 +12,7 @@ weapons: [
         reload: 300
         recoil: 3
         shootY: -3.25
-        shootSound: railgun
+        shootSound: shootForeshadow
         ejectEffect: none
         mirror: false
         top: false
@@ -112,7 +112,7 @@ weapons: [
         y: -1.25
         mirror: false
         top: false
-        shootSound: shootAltLong
+        shootSound: shootBreachCarbide
         ejectEffect: casing2
         reload: 40
         recoil: 4

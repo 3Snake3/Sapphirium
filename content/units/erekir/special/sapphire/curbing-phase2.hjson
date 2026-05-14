@@ -29,7 +29,7 @@ shots: 4
 shotDelay: 15
 }
 mirror: false
-shootSound: bang
+shootSound: shoot
 bullet: {
 type: ArtilleryBulletType
 width: 8

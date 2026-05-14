@@ -32,7 +32,7 @@ weapons: [
         mirror: true
         alternate: true
         shootY: -1.25
-        shootSound: spark
+        shootSound: shootEnergyField
         velocityRnd: 0.3
         xRand: 3
         shoot: {
@@ -127,7 +127,7 @@ weapons: [
         rotationLimit: 15
         recoil: 3
         alternate: true
-        shootSound: shootSnap
+        shootSound: shootCyclone
         bullet: {
             width: 14
             height: 16

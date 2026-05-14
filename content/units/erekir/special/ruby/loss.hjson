@@ -216,7 +216,7 @@ collides: false
 collidesAir: false
 shrinkY: 0
 shrinkX: 0
-despawnSound: shockBlast
+despawnSound: explosionObviate
 }
 }
 }
@@ -226,7 +226,7 @@ y: 10.5
 reload: 8
 shootCone: 25
 ignoreRotation: true
-shootSound: bolt
+shootSound: shootLocus
 alternate: true
 bullet: {
 width: 10

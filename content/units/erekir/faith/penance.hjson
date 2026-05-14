@@ -210,7 +210,7 @@ weapons: [
         rotate: false
         reload: 280
         recoil: 0
-        shootSound: railgun
+        shootSound: shootOmura
         shootY: 0
         recoilTime: 279
         layerOffset: -0.001
@@ -373,7 +373,7 @@ weapons: [
         rotate: false
         reload: 280
         recoil: 0
-        shootSound: none
+        shootSound: shootSegment
         shootY: 0
         recoilTime: 279
         display: false

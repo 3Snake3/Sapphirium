@@ -35,7 +35,7 @@ weapons: [
         mirror: true
         alternate: true
         rotate: false
-        shootSound: bolt
+        shootSound: shootLocus
         shootY: 2.25
         reload: 20
         recoil: 2

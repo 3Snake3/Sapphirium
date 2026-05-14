@@ -32,7 +32,7 @@ y: 2
 reload: 60
 mirror: true
 alternate: true
-shootSound: laser
+shootSound: shootEclipse
 bullet: {
 type: LaserBulletType
 width: 10
@@ -51,7 +51,7 @@ y: 0
 reload: 60
 mirror: true
 alternate: true
-shootSound: laser
+shootSound: shootEclipse
 bullet: {
 type: LaserBulletType
 width: 10

@@ -17,7 +17,7 @@ x: 0
 y: 0
 reload: 60
 mirror: false
-shootSound: bolt
+shootSound: shootLocus
 shootCone: 15
 bullet: {
 sprite: circle-bullet

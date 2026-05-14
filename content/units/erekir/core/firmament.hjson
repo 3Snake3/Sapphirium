@@ -29,7 +29,7 @@ weapons: [
         x: 0
         y: 0
         reload: 60
-        shootSound: missile
+        shootSound: shootMissile
         rotate: false
         shootY: 5
         recoil: 0

@@ -30,7 +30,7 @@ rotationLimit: 45
 rotateSpeed: 0.5
 mirror: true
 alternate: true
-shootSound: laser
+shootSound: shootLancer
 shake: 4
 recoil: 4
 reload: 300
@@ -45,7 +45,7 @@ height: 10
 damage: 70
 splashDamage: 600
 splashDamageRadius: 40
-hitSound: plasmaboom
+hitSound: explosionQuad
 status: crystallization
 statusDuration: 80
 backColor: d1efff

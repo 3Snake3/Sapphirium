@@ -103,7 +103,7 @@ reload: 60
 rotateSpeed: 1
 mirror: true
 alternate: true
-shootSound: bolt
+shootSound: shootLocus
 recoil: 3
 shake: 1.2
 inaccuracy: 15

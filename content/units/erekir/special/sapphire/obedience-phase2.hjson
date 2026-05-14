@@ -18,7 +18,7 @@ reload: 15
 rotateSpeed: 1
 mirror: true
 alternate: true
-shootSound: bolt
+shootSound: shootLocus
 ignoreRotation: true
 recoil: 3
 bullet: {

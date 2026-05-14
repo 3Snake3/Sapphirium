@@ -44,7 +44,7 @@ y: 2
 rotate: true
 rotateSpeed: 1.4
 shootCone: 25
-shootSound: torch
+shootSound: shootSublimate
 controllable: false
 autoTarget: true
 targetInterval: 20
@@ -70,7 +70,7 @@ x: -3
 y: 0
 reload: 60
 recoil: 3
-shootSound: bolt
+shootSound: shootAlpha
 rotateSpeed: 2
 
 shoot: {
@@ -147,7 +147,7 @@ y: 0
 shootOnDeath: true
 reload: 15
 shootCone: 360
-shootSound: plasmaboom
+shootSound: explosionQuad
 controllable: false
 bullet: {
 type: ExplosionBulletType

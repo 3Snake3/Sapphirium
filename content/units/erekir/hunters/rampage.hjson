@@ -21,7 +21,7 @@ weapons: [
         reload: 23
         recoil: 0
         rotate: true
-        shootSound: sap
+        shootSound: shootSap
         bullet: {
             type: SapBulletType
             sapStrength: 1.5
@@ -87,7 +87,7 @@ weapons: [
     {
         name: rampage-sapping-mount
         top: false
-        shootSound: sap
+        shootSound: shootSap
         reload: 17
         x: 9.25
         y: 0

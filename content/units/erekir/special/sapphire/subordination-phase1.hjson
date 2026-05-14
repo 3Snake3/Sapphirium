@@ -99,7 +99,7 @@ x: 0
 y: 0
 shootCone: 360
 reload: 20
-shootSound: plasmaboom
+shootSound: explosionQuad
 shootOnDeath: true
 bullet: {
 type: ExplosionBulletType

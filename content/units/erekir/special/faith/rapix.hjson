@@ -34,7 +34,7 @@ name: rapix-weapon
 x: 4
 y: -0.25
 reload: 60
-shootSound: bolt
+shootSound: shootLocus
 top: false
 layerOffset: -0.001
 rotate: false
@@ -145,7 +145,7 @@ alwaysShooting: true
 reload: 60
 rotate: false
 mirror: false
-shootSound: mineDeploy
+shootSound: shootMissile
 bullet: {
 width: 8
 height: 12
