@@ -77,7 +77,7 @@ reload: 60
 mirror: false
 alternate: false
 ejectEffect: none
-shootSound: laser
+shootSound: shootLancer
 bullet: {
 type: LaserBulletType
 length: 60

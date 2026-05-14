@@ -42,7 +42,7 @@ weapons: [
         rotate: true
         mirror: false
         ejectEffect: casing1
-        shootSound: missile
+        shootSound: shootMissile
         bullet: {
             type: MissileBulletType
             damage: 24

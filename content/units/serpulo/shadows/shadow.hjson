@@ -80,7 +80,7 @@ weapons: [
         y: 0
         shootY: 0
         reload: 140
-        shootSound: bolt
+        shootSound: shootLocus
         shake: 4
         shootCone: 2
         mirror: false
@@ -233,7 +233,7 @@ weapons: [
             colorTo: a488eb
             casingFlip: true
         }
-        shootSound: shootAltLong
+        shootSound: shootBreachCarbide
         inaccuracy: 0.2
         shake: 1
         shoot: {

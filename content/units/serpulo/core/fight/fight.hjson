@@ -114,7 +114,7 @@ weapons: [
         recoil: 0
         inaccuracy: 8
         shootY: 4
-        shootSound: mineDeploy
+        shootSound: shootCleroi
         bullet: {
             type: MissileBulletType
             width: 12
@@ -182,7 +182,7 @@ weapons: [
         recoil: 0
         inaccuracy: 8
         shootY: 4
-        shootSound: mineDeploy
+        shootSound: shootCleroi
         bullet: {
             type: MissileBulletType
             width: 12
@@ -250,7 +250,7 @@ weapons: [
         recoil: 0
         inaccuracy: 8
         shootY: 4
-        shootSound: mineDeploy
+        shootSound: shootCleroi
         bullet: {
             buildingDamageMultiplier: 0.5
             type: MissileBulletType

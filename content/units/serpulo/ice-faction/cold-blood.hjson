@@ -75,7 +75,7 @@ weapons: [
         mirror: true 
         alternate: true 
         ejectEffect: casing3 
-        shootSound: artillery 
+        shootSound: shootArtillery
         shake: 4 
         recoil: 4
         shootY:6
@@ -211,7 +211,7 @@ weapons: [
             range: 88
             splashDamageRadius: 88 
             sprite: large-bomb 
-            hitSound: plasmaboom 
+            hitSound: explosionPlasmaSmall
             despawnShake: 5 
             hitEffect: [ 
                 { 

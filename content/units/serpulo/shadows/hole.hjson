@@ -78,6 +78,7 @@ weapons: [
         reload: 60
         top: false
         ejectEffect: casing1
+        shootSound: shootAlpha
         shootCone: 15
         inaccuracy: 20
         shoot: {

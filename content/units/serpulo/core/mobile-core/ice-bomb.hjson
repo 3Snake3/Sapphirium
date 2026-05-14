@@ -39,7 +39,7 @@ weapons: [
         name: death
         x: 0
         y: 0
-        shootSound: explosion
+        shootSound: explosionAfflict
         reload: 180
         shoot: {
             firstShotDelay: 179

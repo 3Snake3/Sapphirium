@@ -168,7 +168,7 @@ weapons: [
         alternate: false
         controllable: false
         shootCone: 360
-        shootSound: plasmaboom
+        shootSound: explosionQuad
         bullet: {
             type: ExplosionBulletType
             splashDamage: 1400
@@ -278,7 +278,7 @@ weapons: [
             damage: 315
             hitColor: 240935FF
             status: slow
-            hitSound: malignShoot
+            hitSound: shootMalign
             shootEffect: none
             smokeEffect: none
             fromColor:00000000
@@ -378,7 +378,7 @@ weapons: [
             damage: 700
             hitColor: 240935FF
             status: slow
-            hitSound: malignShoot
+            hitSound: shootMalign
             shootEffect: none
             smokeEffect: none
             hitShake: 6
@@ -469,7 +469,7 @@ weapons: [
 
     reload: 150
     inaccuracy:30
-    shootSound: missile
+    shootSound: shootMissile
 shoot: {
        	type: ShootMulti
        	source: {
@@ -581,7 +581,7 @@ bullet: {
         layer:100.3
       }
     ]
-    hitSound: missile
+    hitSound: shootMissile
 
     lightColor: a488eb
     lightOpacity: 0.7

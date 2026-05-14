@@ -75,7 +75,7 @@ weapons: [
         mirror: true
         alternate: true
         ejectEffect: casing1
-        shootSound: laser
+        shootSound: shootLancer
         shake: 3
         shootY:3
         recoil: 3
@@ -226,7 +226,7 @@ weapons: [
             rangeOverride: 48
             maxRange: 48
             sprite: large-bomb
-            hitSound: plasmaboom
+            hitSound: explosionPlasmaSmall
             despawnShake: 3
             status: overfreezing
             statusDuration: 420
@@ -323,6 +323,7 @@ weapons: [
         shake: 3
         mirror: true
         alternate: true
+        shootSound: shootLaser
         bullet: {
             type: ShrapnelBulletType
             length: 66

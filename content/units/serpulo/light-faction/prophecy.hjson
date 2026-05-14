@@ -67,7 +67,7 @@ weapons: [
         reload: 400
         recoil: 0
         shootY: 0
-        shootSound: respawn
+        shootSound: shootFlamePlasma
         ejectEffect: none
         bullet: {
             width: 55
@@ -196,7 +196,7 @@ weapons: [
         rotate: true
         rotateSpeed: 3
         mirror: false
-        shootSound: sap
+        shootSound: shootLaser
         ejectEffect: none
         xRand:4
         velocityRnd: 0.5
@@ -262,7 +262,7 @@ weapons: [
         rotate: true
         rotateSpeed: 0.9
         mirror: false
-        shootSound: sap
+        shootSound: shootLaser
         ejectEffect: none
         xRand:4
         velocityRnd: 0.2

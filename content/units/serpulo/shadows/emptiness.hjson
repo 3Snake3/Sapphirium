@@ -105,7 +105,7 @@ weapons: [
         alternate: false
         mirror: false
         ejectEffect: none
-        shootSound: sap
+        shootSound: shootSap
         bullet: {
             type: SapBulletType
             length: 130
@@ -125,7 +125,7 @@ weapons: [
         top: false
         inaccuracy: 2
         shootY:1
-        shootSound: shootBig
+        shootSound: shootLaser
         recoil: 0
         shake: 1
         ejectEffect: {

@@ -73,7 +73,7 @@ weapons: [
         recoil: 2
         shootY: 2
         recoilTime: 15
-        shootSound: shootBig
+        shootSound: shootLaser
         ejectEffect: none
         bullet: {
             type: ShrapnelBulletType
@@ -117,7 +117,7 @@ weapons: [
         reload: 180
         recoil: 2
         recoilTime: 25
-        shootSound: shootBig
+        shootSound: shootLaser
         ejectEffect: none
         bullet: {
             type: ShrapnelBulletType
@@ -156,7 +156,7 @@ weapons: [
         rotate: true
         rotateSpeed: 4
         mirror: false
-        shootSound: sap
+        shootSound: shootSap
         ejectEffect: none
         xRand:4
         bullet: {

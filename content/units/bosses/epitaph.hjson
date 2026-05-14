@@ -65,7 +65,7 @@ weapons: [
         ]
         recoil: 0
         cooldownTime: 600
-        shootSound: beam
+        shootSound: beamMeltdown
         shootCone: 2
         shootStatusDuration: 610
         bullet: {
@@ -95,7 +95,7 @@ weapons: [
         rotateSpeed: 2
         recoil: 4
         shake: 5
-        shootSound: railgun
+        shootSound: shootOmura
         ignoreRotation: true
         shootCone: 2
         shoot: {
@@ -192,7 +192,7 @@ weapons: [
         reload: 60
         recoil: 4
         shake: 4
-        shootSound: artillery
+        shootSound: shootArtillery
         rotate: true
         rotateSpeed: 5
         ignoreRotation: true
@@ -260,7 +260,7 @@ weapons: [
         shake: 2
         shootY: 21.25
         xRand: 13.75
-        shootSound: shootBig
+        shootSound: shootAfflict
         parts: [
             {
                 type: RegionPart

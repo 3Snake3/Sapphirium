@@ -61,7 +61,7 @@ weapons: [
         reload: 100
         mirror: false
         rotate: false
-        shootSound: missile
+        shootSound: shootMissile
         ejectEffect: none
         layerOffset: -0.001
         bullet: {
@@ -175,7 +175,7 @@ weapons: [
             shots: 4
             shotDelay: 30
         }
-        shootSound: sap
+        shootSound: shootSap
         ejectEffect: none
         bullet: {
             type: SapBulletType

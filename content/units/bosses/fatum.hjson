@@ -166,7 +166,7 @@ weapons: [
         recoil: 5
         recoilTime: 290
         mirror: false
-        shootSound: railgun
+        shootSound: shootForeshadow
         shake: 5
         bullet: {
             type: PointBulletType
@@ -976,7 +976,7 @@ weapons: [
                     colorTo: ffffff
                 }
             ]
-            hitSound: plasmaboom
+            hitSound: explosionQuad
             maxRange: 320
             range: 320
             rangeOverride: 320
@@ -1204,7 +1204,7 @@ weapons: [
                     colorTo: ffffff
                 }
             ]
-            hitSound: plasmaboom
+            hitSound: explosionQuad
         }
     }
     // On death
@@ -1219,7 +1219,7 @@ weapons: [
         alternate: false
         controllable: false
         shootCone: 360
-        shootSound: plasmaboom
+        shootSound: explosionQuad
         bullet: {
             type: ExplosionBulletType
             splashDamage: 200

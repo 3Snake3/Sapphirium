@@ -20,7 +20,7 @@ weapons: [
         mirror: true
         reload: 45
         recoil: 0
-        shootSound: missile
+        shootSound: shootMissilePlasma
         inaccuracy: 6
         ejectEffect: none
         bullet: {
@@ -39,7 +39,7 @@ weapons: [
             collidesAir: false
             lifetime: 1800
             backColor: 98ffa9
-            hitSound: plasmaboom
+            hitSound: explosionPlasmaSmall
             frontColor: ffffff
             rangeOverride: 96
             hitEffect: hitBulletColor

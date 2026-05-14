@@ -43,7 +43,7 @@ weapons: [
         ejectEffect: none
         minShootVelocity: 0.75
         shootCone: 180
-        shootSound: mineDeploy
+        shootSound: shootHorizon
         inaccuracy: 20
         ignoreRotation: true
 

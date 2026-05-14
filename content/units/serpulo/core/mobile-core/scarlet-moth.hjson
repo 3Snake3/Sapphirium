@@ -23,7 +23,7 @@ weapons: [
         y: 0
         recoil: 2
         ejectEffect: casing1
-        shootSound: missile
+        shootSound: shootMissile
         bullet: {
             type: MissileBulletType
             speed: 4
@@ -104,7 +104,7 @@ weapons: [
         recoil: 0
         alternate: false
         mirror: false
-        shootSound: pew
+        shootSound: shootAlpha
         bullet: {
             width: 11
             height: 16

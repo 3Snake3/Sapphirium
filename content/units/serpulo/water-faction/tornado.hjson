@@ -68,7 +68,7 @@ weapons: [
         recoil: 6
         inaccuracy: 20
         velocityRnd: 0.3
-        shootSound: missileLaunch
+        shootSound: shootMissileLarge
         shoot: {
             type: ShootMulti
             source: {
@@ -121,7 +121,7 @@ weapons: [
         xRand: 6
         inaccuracy: 10
         shootCone: 30
-        shootSound: shootSnap
+        shootSound: shootCyclone
         bullet: {
             type: FlakBulletType
             speed: 4
@@ -168,7 +168,7 @@ weapons: [
         shadow: 5
         inaccuracy: 1
         velocityRnd: 0.1
-        shootSound: missile
+        shootSound: shootMissile
         ejectEffect: none
         bullet: {
             type: MissileBulletType

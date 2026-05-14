@@ -34,7 +34,7 @@ weapons: [
         targetInterval: 9
         targetSwitchInterval: 12
         recoil: 0
-        shootSound: lasershoot
+        shootSound: shootSegment
         bullet: {
             shootEffect: sparkShoot
             hitEffect: pointHit

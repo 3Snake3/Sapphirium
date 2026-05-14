@@ -39,7 +39,7 @@ weapons: [
         rotate: true
         rotateSpeed: 5
         ejectEffect: casing2
-        shootSound: missile
+        shootSound: shootMissile
         mirror: false
         bullet: {
             type: MissileBulletType
@@ -99,7 +99,7 @@ weapons: [
         rotate: true
         mirror: false
         rotateSpeed: 2
-        shootSound: bang
+        shootSound: shootDuo
         ejectEffect: none
         bullet: {
             shootEffect: {

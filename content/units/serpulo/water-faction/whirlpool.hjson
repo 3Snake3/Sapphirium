@@ -60,7 +60,7 @@ weapons: [
         y: 10.25
         reload: 80
         recoil: 4
-        shootSound: mineDeploy
+        shootSound: shootHorizon
         rotate: true
         mirror: true
         alternate: true
@@ -169,7 +169,7 @@ weapons: [
         shootWarmupSpeed: 0.03
         shootCone: 1
         recoil: 4
-        shootSound: missileLaunch
+        shootSound: shootMissileLarge
         rotate: true
         rotateSpeed: 0.8
         mirror: false

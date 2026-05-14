@@ -25,7 +25,7 @@ weapons: [
         top: false
         reload: 100
         recoil: 0
-        shootSound: blaster
+        shootSound: shootAvert
         bullet: {
             width: 20
             height: 20

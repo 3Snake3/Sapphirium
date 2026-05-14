@@ -52,7 +52,7 @@ weapons: [
         mirror: true
         alternate: true
         ejectEffect: none
-        shootSound: shootBig
+        shootSound: shootEclipse
         inaccuracy: 0
         shootY:7
         shoot: {

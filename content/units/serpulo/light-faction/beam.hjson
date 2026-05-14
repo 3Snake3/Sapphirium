@@ -61,7 +61,7 @@ weapons: [
         y: 1 
         mirror: false 
         rotate: false 
-        shootSound: sap 
+        shootSound: shootSap
         reload: 60 
         ejectEffect: none 
         shoot: { 

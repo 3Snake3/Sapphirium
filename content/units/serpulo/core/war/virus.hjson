@@ -21,7 +21,7 @@ weapons: [
         rotateSpeed: 7
         alternate: false
         mirror: false
-        shootSound: missile
+        shootSound: shootMissile
         bullet: {
             type: MissileBulletType
             width: 12

@@ -50,7 +50,7 @@ weapons: [
         rotate: true
         inaccuracy: 3
         velocityRnd: 0.2
-        shootSound: missile
+        shootSound: shootMissile
         shootStatusDuration: 25
         bullet: {
             type: MissileBulletType

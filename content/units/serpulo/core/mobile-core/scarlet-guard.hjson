@@ -35,7 +35,7 @@ weapons: [
             shots: 4
             spread: 20
         }
-        shootSound: bolt
+        shootSound: shootMissile
         alternate: true
         bullet: {
             type: MissileBulletType

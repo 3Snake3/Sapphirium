@@ -64,7 +64,7 @@ weapons: [
         rotate: true
         rotateSpeed: 5
         alternate: true
-        shootSound: shootSnap
+        shootSound: shootCyclone
         reload: 60
         ejectEffect: casing1
         shoot: {

@@ -30,7 +30,7 @@ weapons: [
         }
         inaccuracy: 7
         velocityRnd: 0.3
-        shootSound: shootBig
+        shootSound: shootAfflict
         ejectEffect: casing2Double
         shootY: 0
         bullet: {
@@ -102,7 +102,7 @@ weapons: [
             rangeOverride: 48
             hitShake: 6
             collides: false
-            hitSound: plasmaboom
+            hitSound: explosionQuad
             hitEffect: none
             shootEffect: none
             smokeEffect: none

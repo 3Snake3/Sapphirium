@@ -25,7 +25,7 @@ weapons: [
         recoil: 0
         mirror: false
         alternate: false
-        shootSound: bolt
+        shootSound: shootEclipse
         shake: 3
         shoot: {
             type: ShootPattern
@@ -70,7 +70,7 @@ weapons: [
         reload: 90
         recoil: 5
         recoilTime: 89
-        shootSound: laser
+        shootSound: shootNavanax
         shake: 5
         mirror: true
         alternate: true
@@ -89,7 +89,7 @@ weapons: [
             hitShake: 5
             collidesTeam: true
             healPercent: 35
-            hitSound: plasmaboom
+            hitSound: explosionNavanax
             backColor: 98ffa9
             frontColor: ffffff
             shootEffect: {

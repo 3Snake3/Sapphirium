@@ -1,5 +1,6 @@
 
-hovering: true
+flying: true
+lowAltitude: true
 mineSpeed: 9
 mineTier: 3
 buildSpeed: 2
@@ -45,7 +46,7 @@ weapons: [
         reload: 80
         recoil: 0
         mirror: false
-        shootSound: bolt
+        shootSound: shootAlpha
         x: 0
         y: 0
         parts: [

@@ -41,7 +41,7 @@ weapons: [
         y: -5
         reload: 60
         recoil: 4
-        shootSound: bang
+        shootSound: shootReign
         rotate: true
         mirror: false
         rotateSpeed: 2
@@ -80,7 +80,7 @@ weapons: [
         rotate: true
         mirror: true
         alternate: true
-        shootSound: missile
+        shootSound: shootMissile
         bullet: {
             type: MissileBulletType
             damage: 55

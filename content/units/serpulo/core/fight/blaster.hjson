@@ -30,7 +30,7 @@ recoil: 2
 reload: 120
 top: false
 layerOffset: -0.01
-shootSound: shockBlast
+shootSound: explosionObviate
 shake: 2
 rotate: false
 mirror: false

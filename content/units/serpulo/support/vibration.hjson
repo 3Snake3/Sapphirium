@@ -33,7 +33,7 @@ weapons: [
         rotateSpeed: 4
         reload: 60
         recoil: 1
-        shootSound: lasershoot
+        shootSound: shootLaser
         inaccuracy: 1
         alternate: true
         mirror: true

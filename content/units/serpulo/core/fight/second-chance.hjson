@@ -49,7 +49,7 @@ weapons: [
         shootY: 0
         reload: 30
         recoil: 4
-        shootSound: bolt
+        shootSound: shootAvert
         shootStatus: burning
         shootStatusDuration: 119.165839
         bullet: {

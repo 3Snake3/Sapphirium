@@ -31,7 +31,7 @@ weapons: [
         y: 9.5
         reload: 100
         recoil: 3
-        shootSound: bolt
+        shootSound: shootRetusa
         mirror: false
         alternate: false
         shootStatus: {
@@ -61,6 +61,7 @@ weapons: [
             damage: 28
             splashDamage: 32
             splashDamageRadius: 24
+            hitSound: shootAtrax
             backColor: 8ca4f5
             frontColor: ffffff
             trailWidth: 8.07
@@ -233,7 +234,7 @@ weapons: [
         x: 5.5
         reload: 9
         cooldownTime: 9
-        shootSound: bolt    
+        shootSound: shootAlpha
         recoil: 3
         bullet: {
             type: LaserBoltBulletType
