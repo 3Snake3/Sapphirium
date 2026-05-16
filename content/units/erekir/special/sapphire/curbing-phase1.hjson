@@ -45,8 +45,8 @@ trailLength: 7
 
 weapons: [
 {
-x: 5.5
-y: 6.25
+x: 4.5
+y: 5.25
 mirror: true
 alternate: false
 alwaysShooting: true
@@ -65,8 +65,8 @@ buildingDamageMultiplier: 1.7
 }
 }
 {
-x: 0
-y: 3.5
+x: -1
+y: 2.5
 mirror: false
 alternate: false
 alwaysShooting: true
@@ -85,8 +85,8 @@ buildingDamageMultiplier: 1.7
 }
 }
 {
-x: 5.5
-y: 0
+x: 4.5
+y: -1
 mirror: true
 alternate: false
 alwaysShooting: true
@@ -106,8 +106,8 @@ buildingDamageMultiplier: 1.7
 }
 }
 {
-x: 0
-y: 4.5
+x: -1
+y: 3.5
 mirror: false
 alternate: false
 alwaysShooting: true
@@ -126,8 +126,8 @@ buildingDamageMultiplier: 1.7
 }
 }
 {
-x: 5.5
-y: -5.5
+x: 3.5
+y: -4.5
 mirror: true
 alternate: false
 alwaysShooting: true

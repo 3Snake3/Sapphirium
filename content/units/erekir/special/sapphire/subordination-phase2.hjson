@@ -11,9 +11,9 @@ range: 144
 hitSize: 54
 
 legExtension: -4
-legLength: 112
-legCount: 8
-legMoveSpace: 2.5
+legLength: 100
+legCount: 6
+legMoveSpace: 4
 legPairOffset: 3
 legForwardScl: 3
 legBaseOffset: 10
@@ -136,11 +136,12 @@ alwaysShooting: true
 alwaysContinuous: true
 shootSound: none
 mirror: false
+baseRotation: 180
 bullet: {
 type: ContinuousFlameBulletType
-width: 2.75
+width: 3
 drawFlare: false
-length: 8
+length: 10
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 0
@@ -149,22 +150,37 @@ collidesTiles: false
 }
 }
 {
-x: 7.5
-y: -14
+x: -6.5
+y: -13
 alwaysShooting: true
 alwaysContinuous: true
 shootSound: none
 mirror: true
+baseRotation: 125
 bullet: {
 type: ContinuousFlameBulletType
-width: 2.75
+width: 3
 drawFlare: false
-length: 8
+length: 10
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 0
 collides: false
 collidesTiles: false
 }
+}
+]
+abilities: [
+{
+type: SpawnDeathAbility
+unit: subordination-phase2-part0
+}
+{
+type: SpawnDeathAbility
+unit: subordination-phase2-part1
+}
+{
+type: SpawnDeathAbility
+unit: subordination-phase2-part2
 }
 ]

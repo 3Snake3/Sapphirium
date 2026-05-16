@@ -1,0 +1,12 @@
+difficulty: 4
+sector: 67
+planet: erekir
+research: {
+parent: mess
+objectives: [
+{
+type: SectorComplete
+preset: mess
+}
+]
+}

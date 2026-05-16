@@ -1,7 +1,7 @@
 
 category: defense
 health: 2080
-armor: 2
+armor: 12
 size: 2
 rotateSpeed: 2
 unitSort: strongest
@@ -15,6 +15,9 @@ shoot: {
 type: ShootAlternate
 shots: 2
 }
+consumes: {
+power: 4
+}
 shootType: {
 type: ShrapnelBulletType
 length: 72
@@ -25,6 +28,7 @@ knockback: -6
 lifesteal: 60
 fromColor: b1dd7e
 toColor: b1dd7e
+shootEffect: none
 hitEffect: {
 particles: 8
 lifetime: 30
@@ -35,6 +39,31 @@ lenTo: 0
 colorFrom: b1dd7e
 colorTo: b1dd7e
 }
+spawnBullets: [
+{
+type: ShrapnelBulletType
+length: 16
+width: 0
+damage: 25
+serrations: 0
+lifesteal: 25
+fromColor: b1dd7e
+toColor: b1dd7e
+shootEffect: none
+hitEffect: {
+particles: 8
+lifetime: 30
+line: true
+cone: 20
+lenFrom: 3
+lenTo: 0
+colorFrom: b1dd7e
+colorTo: b1dd7e
 }
-buildVisibility: sandboxOnly
-ty: editorOnly
+]
+}
+requirements: [
+beryllium/24
+tungsten/16
+]
+research: beryllium-wall-large

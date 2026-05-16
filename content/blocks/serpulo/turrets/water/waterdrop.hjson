@@ -15,7 +15,7 @@ shoot: {
     spread: 4.5
 }
 recoil: 2
-shootSound: mineDeploy
+shootSound: shootAtrax
 loopSound: none
 targetAir: false
 range: 360
@@ -35,7 +35,7 @@ ammoTypes: {
         backColor: 6a75c4
         frontColor: 80a8ff
         mixColorTo: 80a8ff
-        hitSound: shootAtrax
+        hitSound: stepWater
         collidesAir: false
         shootEffect: none
         smokeEffect: none
@@ -91,7 +91,7 @@ ammoTypes: {
         backColor: 86ceeb
         frontColor: bfecff
         mixColorTo: bfecff
-        hitSound: shootAtrax
+        hitSound: stepWater
         collidesAir: false
         shootEffect: none
         smokeEffect: none
@@ -147,7 +147,7 @@ ammoTypes: {
         backColor: 6fdedc
         frontColor: b8fffe
         mixColorTo: b8fffe
-        hitSound: shootAtrax
+        hitSound: stepWater
         collidesAir: false
         shootEffect: none
         smokeEffect: none

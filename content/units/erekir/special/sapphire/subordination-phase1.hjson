@@ -134,9 +134,9 @@ mirror: false
 baseRotation: 180
 bullet: {
 type: ContinuousFlameBulletType
-width: 2.75
+width: 3
 drawFlare: false
-length: 8
+length: 10
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 0
@@ -145,8 +145,8 @@ collidesTiles: false
 }
 }
 {
-x: 7.5
-y: -14
+x: -6.5
+y: -13
 alwaysShooting: true
 alwaysContinuous: true
 shootSound: none
@@ -154,9 +154,9 @@ mirror: true
 baseRotation: -135
 bullet: {
 type: ContinuousFlameBulletType
-width: 2.75
+width: 3
 drawFlare: false
-length: 8
+length: 10
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 0
