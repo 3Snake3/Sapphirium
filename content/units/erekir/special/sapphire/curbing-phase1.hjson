@@ -65,27 +65,7 @@ buildingDamageMultiplier: 1.7
 }
 }
 {
-x: -1
-y: 2.5
-mirror: false
-alternate: false
-alwaysShooting: true
-alwaysContinuous: true
-shootSound: none
-
-bullet: {
-type: ContinuousFlameBulletType
-width: 1.75
-drawFlare: false
-length: 16
-colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
-hitColor: d1efff
-damage: 10
-buildingDamageMultiplier: 1.7
-}
-}
-{
-x: 4.5
+x: 3.5
 y: -1
 mirror: true
 alternate: false
@@ -105,29 +85,10 @@ damage: 10
 buildingDamageMultiplier: 1.7
 }
 }
-{
-x: -1
-y: 3.5
-mirror: false
-alternate: false
-alwaysShooting: true
-alwaysContinuous: true
-shootSound: none
 
-bullet: {
-type: ContinuousFlameBulletType
-width: 1.75
-drawFlare: false
-length: 16
-colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
-hitColor: d1efff
-damage: 10
-buildingDamageMultiplier: 1.7
-}
-}
 {
-x: 3.5
-y: -4.5
+x: 2.5
+y: -3.5
 mirror: true
 alternate: false
 alwaysShooting: true

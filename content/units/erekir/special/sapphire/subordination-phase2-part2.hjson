@@ -10,7 +10,7 @@ armor: 18
 playerControllable: false
 range: 80
 hitSize: 20
-
+drawCell: false
 parts: [
 {
 type: HoverPart

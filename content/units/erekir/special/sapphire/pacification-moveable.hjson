@@ -3,8 +3,6 @@ health: 640
 armor: 6
 rotateSpeed: 4
 itemCapacity: 0
-playerControllable: false
-hidden: true
 healColor: d1efff
 immunities: [crystallization, unleash]
 speed: 1
@@ -17,6 +15,10 @@ abilities: [
 {
 type: RegenAbility
 amount: 1.2
+}
+{
+type: SpawnDeathAbility
+unit: pacification
 }
 ]
 

@@ -13,12 +13,12 @@ hitSize: 54
 legExtension: -4
 legLength: 100
 legCount: 6
-legMoveSpace: 4
+legMoveSpace: 0.6
 legPairOffset: 3
 legForwardScl: 3
 legBaseOffset: 10
+legSpeed: 0.2
 mechStepParticles: true
-
 
 weapons: [
 {
@@ -155,13 +155,33 @@ y: -13
 alwaysShooting: true
 alwaysContinuous: true
 shootSound: none
-mirror: true
+mirror: false
 baseRotation: 125
 bullet: {
 type: ContinuousFlameBulletType
 width: 3
 drawFlare: false
-length: 10
+length: 24
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 0
+collides: false
+collidesTiles: false
+}
+}
+{
+x: 6.5
+y: -13
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: none
+mirror: false
+baseRotation: -125
+bullet: {
+type: ContinuousFlameBulletType
+width: 3
+drawFlare: false
+length: 24
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 0

@@ -24,7 +24,7 @@ x: 0
 y: 0
 }
 ]
-
+drawCell: false
 weapons: [
 {
 x: 0

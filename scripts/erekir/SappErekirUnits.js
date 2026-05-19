@@ -2866,7 +2866,7 @@ const rapix = extend(ErekirUnitType, "rapix", {});
 rapix.constructor = () => extend(LegsUnit, {});
 
 const pacification = extend(ErekirUnitType, "pacification", {});
-pacification.constructor = () => extend(UnitEntity, {});
+pacification.constructor = () => extend(ElevationMoveUnit, {});
 
 const pacificationMove = extend(ErekirUnitType, "pacification-moveable", {});
 pacificationMove.constructor = () => extend(TankUnit, {});

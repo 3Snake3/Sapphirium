@@ -11,7 +11,7 @@ playerControllable: false
 range: 80
 hitSize: 26
 engineSize: 0
-
+drawCell: false
 weapons: [
 {
 x: 0

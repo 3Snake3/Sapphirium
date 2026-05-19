@@ -6,7 +6,7 @@ drag: 0.05
 accel: 0.08
 health: 4000
 armor: 24
-range: 10
+range: 64
 hitSize: 34
 targetAir: false
 immunities: [crystallization, unleash]
@@ -114,14 +114,25 @@ shotDelay: 3
 }
 
 bullet: {
-type: LaserBulletType
-width: 10
-length: 80
-damage: 80
-colors: [d1efff70, d1efff, ffffff]
-sideWidth: 0
-lifetime: 10
-collidesAir: false
+width: 9
+height: 12
+speed: 5
+lifetime: 24
+backColor: d1efff
+frontColor: ffffff
+hitColor: d1efff
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+trailWidth: 0.6
+trailLength: 24
+trailColor: d1efff
+pierce: true
+pierceBuiding: true
+pierceCap: 3
+homingPower: 0.8
+homingRange: 64
+status: crystallization
+statusDuration: 30
 }
 }
 ]

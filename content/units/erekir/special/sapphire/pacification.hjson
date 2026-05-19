@@ -33,6 +33,7 @@ collidesAir: false
 }
 }
 {
+name: pacification-mount
 recoil: 3
 ignoreRotation: true
 controllable: false
@@ -40,14 +41,14 @@ autoTarget: true
 shootSound: shootElude
 rotateSpeed: 2
 reload: 80
-x: 2.75
+x: 3
 y: 0
 alternate: true
 
 shoot: {
 type: ShootSpread
-spread: 15
-shots: 3
+spread: 8
+shots: 2
 }
 
 bullet: {
@@ -56,8 +57,8 @@ width: 8
 height: 8
 speed: 2.4
 lifetime: 83
-damage: 54
-splashDamage: 85
+damage: 27
+splashDamage: 42.5
 splashDamageRadius: 32
 collidesTiles: true
 backColor: d1efff
