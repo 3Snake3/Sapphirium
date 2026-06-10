@@ -17,5 +17,5 @@ consumesPower: false
 baseColor: 98dbff
 group: walls
 range: 3
-healPercent: 0.08
+healPercent: 0.047
 shownPlanets: [erekir]

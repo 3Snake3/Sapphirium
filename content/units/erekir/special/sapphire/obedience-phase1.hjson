@@ -9,6 +9,7 @@ armor: 24
 range: 64
 hitSize: 34
 targetAir: false
+canHeal: true
 immunities: [crystallization, unleash]
 healColor: d1efff
 
@@ -118,12 +119,13 @@ width: 9
 height: 12
 speed: 5
 lifetime: 24
+damage: 64
 backColor: d1efff
 frontColor: ffffff
 hitColor: d1efff
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
-trailWidth: 0.6
+trailWidth: 1
 trailLength: 24
 trailColor: d1efff
 pierce: true
@@ -133,6 +135,7 @@ homingPower: 0.8
 homingRange: 64
 status: crystallization
 statusDuration: 30
+healPercent: 0.4
 }
 }
 ]

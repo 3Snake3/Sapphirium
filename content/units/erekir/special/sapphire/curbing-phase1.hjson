@@ -45,8 +45,8 @@ trailLength: 7
 
 weapons: [
 {
-x: 4.5
-y: 5.25
+x: 5.5
+y: 4
 mirror: true
 alternate: false
 alwaysShooting: true

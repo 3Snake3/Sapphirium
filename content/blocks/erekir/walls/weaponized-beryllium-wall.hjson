@@ -22,7 +22,7 @@ shootType: {
 type: ShrapnelBulletType
 length: 72
 width: 10
-damage: 60
+damage: 30
 serrations: 0
 knockback: -6
 lifesteal: 60
@@ -39,12 +39,13 @@ lenTo: 0
 colorFrom: b1dd7e
 colorTo: b1dd7e
 }
+showStats: true
 spawnBullets: [
 {
 type: ShrapnelBulletType
 length: 16
 width: 0
-damage: 25
+damage: 15
 serrations: 0
 lifesteal: 25
 fromColor: b1dd7e
