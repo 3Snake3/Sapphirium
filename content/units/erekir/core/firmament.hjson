@@ -9,8 +9,8 @@ speed: 6
 isEnemy: false
 fogRadius: 0
 lowAltitude: false
-mineWalls: false
-mineFloor: true
+mineWalls: true
+mineFloor: false
 mineHardnessScaling: true
 mineSpeed: 6.5
 mineTier: 3

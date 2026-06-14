@@ -19,7 +19,6 @@ itemCapacity: 80
 health: 900
 armor: 3
 hitSize: 13
-fogRadius: 4
 buildBeamOffset: 9
 pickupUnits: true
 vulnerableWithPayloads: true

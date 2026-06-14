@@ -2245,6 +2245,7 @@ cloudBreaker.buildType = () => extend(ItemTurret.ItemTurretBuild, cloudBreaker, 
 	creload: 0,
 	updateTile(){
 		this.super$updateTile();
+		if(this.isActive() && this.hasAmmo()){
 		this.creload++;
 		if(this.creload == 180){
 		Units.nearbyEnemies(this.team, this.x, this.y, 325, other => {
@@ -2255,6 +2256,7 @@ cloudBreaker.buildType = () => extend(ItemTurret.ItemTurretBuild, cloudBreaker, 
 		else if(this.creload >= 180){
 			this.creload = 0;
 			}
+		}
 }
 });
 
