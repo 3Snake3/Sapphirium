@@ -19,10 +19,12 @@ const energyFieldAbility = extend(EnergyFieldAbility, 180, 180, 800, {
 		}
 });
 
+var energyFieldSeq = abilities.add(energyFieldAbility);
+
 const energyFieldEr = extend(UnitCargoLoader, "energy-field-projector-erekir", {
 setStats(){
 	this.super$setStats();
-this.stats.add(abilitiesFunction, StatValues.abilities(energyFieldAbility));
+this.stats.add(abilitiesFunction, StatValues.abilities(energyFieldSeq));
 	this.stats.add(Stat.output, customValue(table => {
         	table.row();
             table.table(Styles.grayPanel, b => {
