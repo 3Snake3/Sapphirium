@@ -19,7 +19,7 @@ const energyFieldAbility = extend(EnergyFieldAbility, 180, 180, 800, {
 		}
 });
 
-var energyFieldSeq = abilities.add(energyFieldAbility);
+var energyFieldSeq = abilitiesFunction.add(energyFieldAbility);
 
 const energyFieldEr = extend(UnitCargoLoader, "energy-field-projector-erekir", {
 setStats(){
