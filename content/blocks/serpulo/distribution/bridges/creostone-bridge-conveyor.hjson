@@ -7,7 +7,7 @@ placeableLiquid: true
 bufferCapacity: 22
 itemCapacity: 18
 speed: 50
-transportTime: 2
+transportTime: 3.428571428571428571
 displayedSpeed: 17.5
 shownPlanets: [serpulo]
 requirements: [
