@@ -5,8 +5,9 @@ requirements: [
 ]
 shownPlanets: [serpulo]
 category: distribution
-speed: 44
+speed: 37.8
 capacity: 12
+displayedSpeed: 19
 research: {
     parent: junction
 }
