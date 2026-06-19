@@ -6,6 +6,7 @@ const sapphireRestorer = extend(MendProjector, "sapphire-restorer", {});
 const customValue = method => new StatValue() {
     display: method
 }
+const abilities = new Seq();
 var abilitiesFunction = new Stat("abilities", StatCat.function);
 
 const energyFieldAbility = extend(EnergyFieldAbility, 180, 180, 800, {
@@ -19,7 +20,7 @@ const energyFieldAbility = extend(EnergyFieldAbility, 180, 180, 800, {
 		}
 });
 
-var energyFieldSeq = abilitiesFunction.add(energyFieldAbility);
+var energyFieldSeq = abilities.add(energyFieldAbility);
 
 const energyFieldEr = extend(UnitCargoLoader, "energy-field-projector-erekir", {
 setStats(){
