@@ -10,7 +10,9 @@ strongConveyor.junctionReplacement = strongJunction;
 
 const creostoneRouter = extend(Router, "creostone-router", {});
 const creostoneJunction = extend(Junction, "creostone-junction", {});
+creostoneJunction.speed = 44;
 const creostoneBridgeConveyor = extend(BufferedItemBridge, "creostone-bridge-conveyor", {});
+creostoneBridgeConveyor.speed = 120;
 const creostoneConveyor = extend(Conveyor, "creostone-conveyor", {
 init(){
 	this.super$init();
