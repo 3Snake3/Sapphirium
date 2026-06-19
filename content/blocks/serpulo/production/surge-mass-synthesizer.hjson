@@ -4,8 +4,8 @@ consumes: {
     liquid: slag/0.7
     items: {
         items: [
-            surge-alloy/1
-            scrap/6
+            surge-alloy/2
+            scrap/3
         ]
     }
 }
@@ -32,7 +32,7 @@ drawer: {
     ]
 }
 size: 3
-craftTime: 120
+craftTime: 180
 liquidCapacity: 84
 category: crafting
 shownPlanets: [serpulo]
