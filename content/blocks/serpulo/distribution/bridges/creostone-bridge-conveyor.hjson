@@ -4,10 +4,9 @@ category: distribution
 health: 100
 range: 7
 placeableLiquid: true
-bufferCapacity: 22
-itemCapacity: 18
-speed: 50
-transportTime: 3.428571428571428571
+bufferCapacity: 14
+itemCapacity: 10
+speed: 74
 displayedSpeed: 17.5
 shownPlanets: [serpulo]
 requirements: [
