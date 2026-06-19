@@ -3,7 +3,7 @@ category: distribution
 
 health: 240
 speed: 0.13
-displayedSpeed: 17.8
+displayedSpeed: 17.5
 
 requirements: [
     metaglass/1
