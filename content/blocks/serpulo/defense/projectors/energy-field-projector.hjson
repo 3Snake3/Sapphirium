@@ -7,8 +7,7 @@ requirements: [
 category: effect
 group: projectors
 health: 400
-unitsSpawned: 1
-droneType: energy-field
+unitType: energy-field
 size: 2
 consumes: {
     power: 7

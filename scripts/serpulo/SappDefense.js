@@ -27,14 +27,9 @@ const abilities = new Seq();
 var abilitiesFunction = new Stat("abilities", StatCat.function);
 var energyFieldSeq = abilities.add(energyField);
 
-const energyFieldProjector = extend(DroneCenter, "energy-field-projector", {
-	status: StatusEffects.none,
-	droneRange: 140,
-	droneConstructTime: 60,
-	init() {
-		this.super$init();
-		this.droneType.aiController = () => extend(FlyingAI, {});
-	},
+const energyFieldProjector = extend(UnitCargoLoader, "energy-field-projector", {
+	unitBuildTime: 60,
+	polyRadius: -1,
 	setStats(){
 		this.super$setStats();
 		this.stats.add(abilitiesFunction, StatValues.abilities(energyFieldSeq));

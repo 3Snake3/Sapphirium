@@ -101,6 +101,39 @@ fragVelocityMin: 1
 fragRandomSpread: 0
 fragSpread: 22.5
 fragBullet: {
+fragBullets: 1
+fragLifeMin: 0.8
+fragLifeMax: 1.8
+fragBullet: {
+width: 8
+height: 8
+speed: 0
+damage: 0
+lifetime: 60
+backColor: d1efff
+hitColor: d1efff
+trailColor: d1efff
+frontColor: ffffff
+hitEffect: {
+type: WaveEffect
+strokeFrom: 6
+strokeTo: 0
+sizeTo: 16
+colorTo: d1efff
+lifetime: 80
+}
+despawnEffect: {
+type: WaveEffect
+strokeFrom: 6
+strokeTo: 0
+sizeTo: 16
+colorTo: d1efff
+lifetime: 80
+}
+pierce: true
+pierceBuilding: true
+}
+
 width: 8
 height: 12
 speed: 4
