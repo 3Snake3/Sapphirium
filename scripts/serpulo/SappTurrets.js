@@ -1776,7 +1776,7 @@ aorta.buildType = () => extend(ItemTurret.ItemTurretBuild, aorta, {
     creload : 0,
     updateTile() {
         this.super$updateTile();
-        let aortaShoot = this.isShooting() && this.hasAmmo() && this.power.status > 0.5;
+        let aortaShoot = this.isShooting && this.hasAmmo() && this.power.status > 0.5;
 
         if(aortaShoot) {
             this.creload++;
