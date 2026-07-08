@@ -1645,7 +1645,8 @@ bloodlust.buildType = () => extend(ItemTurret.ItemTurretBuild, bloodlust, {
     updateTile() {
         this.super$updateTile();
         this.creload++;
-        let bloodlustShoot = this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5;
+       
+        let bloodlustShoot = this.isShooting && this.isActive() && this.hasAmmo() && this.power.status > 0.5;
 		if (bloodlustShoot) {
 			if (this.creload % 20 == 0 && this.creload != 80) {
 	            bloodsap.create(this, this.team, this.x, this.y, this.rotation);

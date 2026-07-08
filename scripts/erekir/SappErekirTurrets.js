@@ -77,7 +77,7 @@ thrust.buildType = () => extend(ItemTurret.ItemTurretBuild, thrust, {
         let cldred = (Mathf.round(this.abscrl * 0.02) > 200) ? 200 : Mathf.round(this.abscrl * 0.02);
         let cooldownShoot = 60 + cldred;
 
-        if(!(this.hasAmmo() && this.isShooting() && this.isActive())) {
+        if(!(this.hasAmmo() && this.isShooting && this.isActive())) {
             if (this.creload > 0) this.creload--;
             if (this.abscrl > 0) this.abscrl -= 3;
             return;
@@ -185,7 +185,7 @@ greed.buildType = () => extend(ItemTurret.ItemTurretBuild, greed, {
     updateTile() {
         this.super$updateTile();
         let cldred = (Mathf.round(this.abscrl * 0.005) > 40) ? 40 : Mathf.round(this.abscrl * 0.005)
-        if (this.hasAmmo() && this.isShooting() && this.isActive()) {
+        if (this.hasAmmo() && this.isShooting && this.isActive()) {
             this.creload++;
             if (this.abscrl < 2000) {
                 if (this.creload == 65) {
@@ -283,7 +283,7 @@ cruelty.buildType = () => extend(ItemTurret.ItemTurretBuild, cruelty, {
     abscrl : 0,
     updateTile() {
         this.super$updateTile();
-        let crueltyShoot = this.isShooting() && this.hasAmmo();
+        let crueltyShoot = this.isShooting && this.hasAmmo();
         let rx = this.x + Mathf.range(7, -7);
         let ry = this.y + Mathf.range(7, -7);
         let rr = this.rotation + Mathf.range(360,0);
@@ -453,7 +453,7 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
 		
 		this.updateTimer += 1;
 		
-		if(this.target != null || this.isShooting()) {
+		if(this.target != null || this.isShooting) {
 			/* turret is shooting or targeting now */
 			
 			if(this.updateTimer > ((7 * 60) / scaleUpdateRate2)) {
@@ -532,7 +532,7 @@ shelter.buildType = () => extend(ContinuousLiquidTurret.ContinuousLiquidTurretBu
 		
 		this.updateTimer += 1;
 		
-		if(this.target != null || this.isShooting()) {
+		if(this.target != null || this.isShooting) {
 			/* turret is shooting or targeting now */
 			
 			if(this.updateTimer > (60 / scaleUpdateRate)) {
@@ -599,7 +599,7 @@ addiction.buildType = () => extend(ItemTurret.ItemTurretBuild, addiction, {
     creload : 0,
     updateTile() {
         this.super$updateTile();
-        let addictionShoot = this.isShooting() && this.hasAmmo() && this.efficiency > 0;
+        let addictionShoot = this.isShooting && this.hasAmmo() && this.efficiency > 0;
         if(addictionShoot) {
             this.creload++;
             if(this.creload == 110) {
@@ -692,7 +692,7 @@ sorrow.buildType = () => extend(PowerTurret.PowerTurretBuild, sorrow, {
     creload : 0,
     updateTile() {
         this.super$updateTile();
-        let sorrowShoot = this.isShooting() && this.hasAmmo() && this.power.status > 0;
+        let sorrowShoot = this.isShooting && this.hasAmmo() && this.power.status > 0;
 
         if(sorrowShoot) {
         	this.creload++;
