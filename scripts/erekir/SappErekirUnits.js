@@ -969,7 +969,7 @@ const presenceWraithWeapon = extend(Weapon, "presence-wraith-weapon", {
     y: 0,
     mirror: false,
     rotate: true,
-    reload: 15,
+    reload: 1,
     recoil: 0,
     ejectEffect: Fx.none,
     shootSound: Sounds.shootMissile,
