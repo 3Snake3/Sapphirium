@@ -545,7 +545,7 @@ reproduction.buildType = () => extend(ItemTurret.ItemTurretBuild, reproduction, 
 	creload : 0,
     updateTile() {
         this.super$updateTile();
-        let reproductionShoot = this.isShooting() && this.isActive() && this.hasAmmo();
+        let reproductionShoot = this.isShooting && this.isActive() && this.hasAmmo();
 
         if(reproductionShoot) {
             if(this.creload >= 70) {
@@ -583,7 +583,7 @@ impaler.buildType = () => extend(ItemTurret.ItemTurretBuild, impaler, {
 	creload : 0,
     updateTile() {
         this.super$updateTile();
-        let impalerShoot = this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5;
+        let impalerShoot = this.isShooting && this.isActive() && this.hasAmmo() && this.power.status > 0.5;
 
         if(impalerShoot) {
             if(this.creload >= 240) {
@@ -662,7 +662,7 @@ everfrost.buildType = () => extend(LiquidTurret.LiquidTurretBuild, everfrost, {
     creload : 0,
     updateTile() {
         this.super$updateTile();
-        let shooting = this.isShooting() && this.hasAmmo() && this.power.status > 0.5;
+        let shooting = this.isShooting && this.hasAmmo() && this.power.status > 0.5;
 
         if(shooting) {
             if(this.creload % 310 == 0 && this.creload != 1100) {
@@ -874,7 +874,7 @@ wire.buildType = () => extend(PowerTurret.PowerTurretBuild, wire, {
 		this.super$updateTile();
 		this.creload++;
 		if(this.creload == 300){
-			if(this.isShooting() && this.isActive() && this.hasAmmo()){
+			if(this.isShooting && this.isActive() && this.hasAmmo()){
 			Vars.indexer.allBuildings(this.x, this.y, 48, b => {
 				if(b.team == this.team){
 					if(b.block.hasPower && b.efficiency > 0 && b.block.canOverdrive){
@@ -923,7 +923,7 @@ shock.buildType = () => extend(ItemTurret.ItemTurretBuild, shock, {
 		this.super$updateTile();
 		this.creload++;
 		if(this.creload == 300){
-			if(this.isShooting() && this.isActive() && this.hasAmmo()){
+			if(this.isShooting && this.isActive() && this.hasAmmo()){
 			Vars.indexer.allBuildings(this.x, this.y, 80, b => {
 				if(b.team == this.team){
 					if((b.block.hasPower || b.block.hasItems || !b.block.hasLiquids) && b.efficiency > 0 && b.block.canOverdrive){
@@ -975,7 +975,7 @@ discharge.buildType = () => extend(PowerTurret.PowerTurretBuild, discharge, {
 		this.super$updateTile();
 		this.creload++;
 		if(this.creload == 300){
-			if(this.isActive() && this.isShooting() && this.hasAmmo() && this.power.status >= 0.5 && this.target != null){
+			if(this.isActive() && this.isShooting && this.hasAmmo() && this.power.status >= 0.5 && this.target != null){
 			Vars.indexer.allBuildings(this.x, this.y, 100, b => {
 				if(b.team == this.team){
 					if((b.block.hasPower || b.block.hasItems || b.block.hasLiquids) && b.efficiency > 0 && b.block.canOverdrive){
@@ -1422,7 +1422,7 @@ pierce.buildType = () => extend(ItemTurret.ItemTurretBuild, pierce, {
     updateTile() {
         this.super$updateTile();
         this.creload++;
-        if(this.isActive() && this.isShooting() && this.hasAmmo()){
+        if(this.isActive() && this.isShooting && this.hasAmmo()){
         	if(this.creload == 201){
             jerkSpawn.create(this, this.team, this.x, this.y, this.rotation);
             }
@@ -1568,7 +1568,7 @@ injection.buildType = () => extend(ItemTurret.ItemTurretBuild, injection, {
 	creload : 0,
     updateTile() {
         this.super$updateTile();
-        let injectionShoot = this.isShooting() && this.hasAmmo() && this.power.status > 0.5;
+        let injectionShoot = this.isShooting && this.hasAmmo() && this.power.status > 0.5;
         
         if(injectionShoot) {
             if(this.creload >= 440) {
@@ -1868,7 +1868,7 @@ enlight.buildType = () => extend(ItemTurret.ItemTurretBuild, enlight, {
         this.super$updateTile();
         let fx = this.x + Mathf.range(-2.5, 2.5);
         let fy = this.y + Mathf.range(-6.5, 6.5);
-        let enlightShoot = this.isShooting() && this.hasAmmo();
+        let enlightShoot = this.isShooting && this.hasAmmo();
 
         if (enlightShoot) {
             this.creload++;
@@ -1999,7 +1999,7 @@ brazier.buildType = () => extend(ContinuousLiquidTurret.ContinuousLiquidTurretBu
         this.super$updateTile();
         let brX = this.x - 1;
         let brX2 = this.x + 1;
-        let brazierShoot = this.isShooting() && this.power.status > 0.5 && this.hasAmmo();
+        let brazierShoot = this.isShooting && this.power.status > 0.5 && this.hasAmmo();
 
         if(brazierShoot) {
             this.creload++;
@@ -2301,7 +2301,7 @@ flame.buildType = () => extend(ItemTurret.ItemTurretBuild, flame, {
     creload : 0,
     updateTile() {
         this.super$updateTile();
-        let flameShoot = this.isShooting() && this.hasAmmo();
+        let flameShoot = this.isShooting && this.hasAmmo();
 
         if(flameShoot) {
             if(this.creload >= 9) {
@@ -2345,7 +2345,7 @@ fallen.buildType = () => extend(ContinuousLiquidTurret.ContinuousLiquidTurretBui
     creload : 0,
     updateTile() {
         this.super$updateTile();
-        let fallenShoot = this.isShooting() && this.hasAmmo() && this.power.status > 0.5;
+        let fallenShoot = this.isShooting && this.hasAmmo() && this.power.status > 0.5;
 
         if (fallenShoot) {
             this.creload++;
@@ -2437,7 +2437,7 @@ adynamia.buildType = () => extend(ItemTurret.ItemTurretBuild, adynamia, {
     creload : 0,
     updateTile() {
         this.super$updateTile();
-        let shootingA = this.isShooting() && this.hasAmmo() && this.power.status > 0.5;
+        let shootingA = this.isShooting && this.hasAmmo() && this.power.status > 0.5;
         
         if(shootingA) {
             this.creload++;
@@ -3057,7 +3057,7 @@ shine.buildType = () => extend(ItemTurret.ItemTurretBuild, shine, {
     creload : 0,
     updateTile() {
         this.super$updateTile();
-        var shineShoot = this.isShooting() && this.hasAmmo();
+        var shineShoot = this.isShooting && this.hasAmmo();
 
         if (shineShoot && this.creload >= 600) {
             this.creload = 0;
@@ -3130,7 +3130,7 @@ executioner.buildType = () => extend(LaserTurret.LaserTurretBuild, executioner, 
         //bullet summoning x/y coordinates
         let wx = this.x + Mathf.range(14.25, -14.25);
         let wy = this.y + Mathf.range(22, -22);
-        let executionerShoot = this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5;
+        let executionerShoot = this.isShooting && this.isActive() && this.hasAmmo() && this.power.status > 0.5;
 
         if (executionerShoot) {
             this.creload++;
