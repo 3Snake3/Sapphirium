@@ -937,7 +937,7 @@ const blurWeapon = extend(Weapon, "blur-weapon", {
     x: 0,
     y: 0,
     mirror: false,
-    reload: 20,
+    reload: 600,
     recoil: 0,
     ejectEffect: Fx.none,
     shootSound: Sounds.none,
@@ -955,13 +955,13 @@ const wraithWeaponBullet = extend(BasicBulletType, {
     height: 8,
     speed: 5,
     damage: 0,
-    lifetime: 8,
+    lifetime: 7.2,
     sprite: "sapphirium-none-bullet",
     hitEffect: Fx.none,
     despawnEffect: Fx.none,
     shootEffect: Fx.none,
     smokeEffect: Fx.none,
-    maxRange: 35
+    maxRange: 36
 });
 
 const presenceWraithWeapon = extend(Weapon, "presence-wraith-weapon", {
@@ -969,7 +969,7 @@ const presenceWraithWeapon = extend(Weapon, "presence-wraith-weapon", {
     y: 0,
     mirror: false,
     rotate: true,
-    reload: 1,
+    reload: 15,
     recoil: 0,
     ejectEffect: Fx.none,
     shootSound: Sounds.shootMissile,
