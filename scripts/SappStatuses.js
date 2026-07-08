@@ -202,7 +202,14 @@ const blur = extend(StatusEffect, "blur", {
 const wraith = extend(StatusEffect, "wraith", {
     init() {
         this.affinity(blur, (unit, result, time) => result.set(blur, Math.min(time + result.time, 1)));
-    }
+    },
+    update(unit, time){
+    	this.super$update(unit, time);
+     if(!unit.type.targetable && !unit.type.hittable){
+     	unit.type.targetable = true;
+         unit.type.hittable = true;
+     }
+     }
 });
 
 const truesight = extend(StatusEffect, "truesight", {});
