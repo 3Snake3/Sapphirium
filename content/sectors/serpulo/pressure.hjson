@@ -11,7 +11,7 @@ research: {
         creostone-reactor,
         {
             type: SectorComplete
-            preset: duality
+            preset: calamity
         }
     ]
 }
