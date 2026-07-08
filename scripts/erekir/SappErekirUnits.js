@@ -955,13 +955,13 @@ const wraithWeaponBullet = extend(BasicBulletType, {
     height: 8,
     speed: 5,
     damage: 0,
-    lifetime: 6,
+    lifetime: 8,
     sprite: "sapphirium-none-bullet",
     hitEffect: Fx.none,
     despawnEffect: Fx.none,
     shootEffect: Fx.none,
     smokeEffect: Fx.none,
-    maxRange: 30
+    maxRange: 35
 });
 
 const presenceWraithWeapon = extend(Weapon, "presence-wraith-weapon", {

@@ -2322,8 +2322,8 @@ weapons: [
         shootY: 0
         reload: 560
         shake: 8
-        shootSound: laserblast
-        chargeSound: lasercharge
+        shootSound: shootCorvus
+        chargeSound: chargeCorvus
         inaccuracy: 9
         shoot: {
             type: ShootMulti
