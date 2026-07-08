@@ -17,4 +17,12 @@ consumes: {
     power: 1
 }
 
-research: phase-conveyor
+research: {
+parent: titanium-conveyor
+objectives: [
+{
+type: SectorComplete
+preset: tarFields
+}
+]
+}
