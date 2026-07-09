@@ -345,7 +345,7 @@ let coreErekirUnits = [
   UnitTypes.evoke, UnitTypes.incite, UnitTypes.emanate
   ]
 for(let i = 0; i < coreErekirUnits.length; i++) {
-    coreErekirUnits[i].immunities.add(statuses.unleash, statuses.wraith, statuses.blur); 
+    coreErekirUnits[i].immunities.addAll(statuses.unleash, statuses.wraith, statuses.blur); 
 }
 
 let supportGround = [
