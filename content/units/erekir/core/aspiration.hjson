@@ -27,7 +27,7 @@ hittable: false
 engineOffset: 9.25
 engineSize: 3.25
 engineColor: c093fa
-immunities: [unleash, high-speed, overdrive, overclock]
+immunities: [unleash, high-speed, overdrive, overclock, wraith, blur]
 engines: [
     {
         x: 10.25

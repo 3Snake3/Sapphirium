@@ -1,0 +1,88 @@
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            suffix: "-bottom"
+        }
+        {
+            type: DrawMultiWeave
+	    glowColor: ffedbc
+        }
+        {
+            type: DrawDefault
+        }
+	{
+            type: DrawHeatInput
+        }
+    ]
+}
+size: 4
+craftTime: 90
+outputItem: sapphirium-topaz/3
+outputLiquid: slag/0.2
+craftEffect: {
+particles: 9
+cone: 360
+length: 17
+lifetime: 22
+sizeFrom: 4
+sizeTo: 1
+colorFrom: ffedbc
+colorTo: ffe18f
+region: sapphirium-rhombus
+}
+updateEffect:{
+    type: RadialEffect
+    lengthOffset: 15.8
+    rotationOffset: 45
+    layer: 111
+    effect:{
+	type: ParticleEffect
+	particles: 3
+	cone: 30
+	sizeFrom: 1.7
+	sizeTo: 4
+	lifetime: 80
+	colorFrom: 5f5f5f55
+	colorTo: 9f9f9f00
+	layer: 111
+	interp: sineOut
+	length: 28
+    }
+}
+updateEffectSpread: 0
+updateEffectChance: 0.18
+warmupSpeed: 0.035
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 30
+liquidCapacity: 90
+consumes: {
+    power: 3.7
+    liquid: water/0.25
+    items: {
+        items: [
+            beryllium/4
+            sand/6
+	    tungsten/2
+        ]
+    }
+}
+maxEfficiency: 4
+heatRequirement: 7
+ambientSound: loopTech
+ambientSoundVolume: 0.06
+category: crafting
+requirements: [
+    oxide/225
+    silicon/190
+    beryllium/245
+    tungsten/140
+    sapphirium-sapphire/60
+]
+shownPlanets: [erekir]
+research: oxidation-chamber
+

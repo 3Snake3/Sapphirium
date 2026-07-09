@@ -1,3 +1,4 @@
+const topazCrucible = extend(HeatCrafter, "topaz-crucible", {});
 const sapphireSynthesizer = extend(HeatCrafter, "sapphire-synthesizer", {});
 const neoplasmConverter = extend(GenericCrafter, "neoplasm-converter", {});
 const creostoneCrucible = extend(GenericCrafter, "creostone-crucible", {});

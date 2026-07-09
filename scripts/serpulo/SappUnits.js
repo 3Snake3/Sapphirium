@@ -335,11 +335,17 @@ let vanillaUnits = [
     //Erekir Units(Vanilla)
     UnitTypes.stell, UnitTypes.locus, UnitTypes.precept, UnitTypes.vanquish, UnitTypes.conquer,
     UnitTypes.merui, UnitTypes.cleroi, UnitTypes.anthicus, UnitTypes.tecta, UnitTypes.collaris,
-    UnitTypes.elude, UnitTypes.avert, UnitTypes.obviate,
-    UnitTypes.evoke, UnitTypes.incite, UnitTypes.emanate
+    UnitTypes.elude, UnitTypes.avert, UnitTypes.obviate
 ]
 for(let i = 0; i < vanillaUnits.length; i++) {
     vanillaUnits[i].immunities.add(statuses.unleash); 
+}
+
+let coreErekirUnits = [
+  UnitTypes.evoke, UnitTypes.incite, UnitTypes.emanate
+  ]
+for(let i = 0; i < coreErekirUnits.length; i++) {
+    coreErekirUnits[i].immunities.add(statuses.unleash, statuses.wraith, statuses.blur); 
 }
 
 let supportGround = [

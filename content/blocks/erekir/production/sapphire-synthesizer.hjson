@@ -45,5 +45,5 @@ drawer: [
         suffix: -heat-top
     }
 ]
-research: oxidation-chamber
+research: topaz-crucible
 shownPlanets: [erekir]
