@@ -204,7 +204,7 @@ research: {
     objectives: [
         {
             type: SectorComplete
-            preset: duality
+            preset: calamity
         }
     ]
 }
