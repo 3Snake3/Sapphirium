@@ -106,7 +106,7 @@ regenFielder.consumePower(6.5);
 regenFielder.buildType = () => extend(PowerTurret.PowerTurretBuild, regenFielder, {
 	updateTile(){
 		this.super$updateTile();
-		let rf = this.isShooting() && this.hasAmmo() && this.power.status >= 0.1;
+		let rf = this.isShooting && this.hasAmmo() && this.power.status >= 0.1;
 		timer += Time.delta;
 		if(rf){
 			if(timer >= 180){
