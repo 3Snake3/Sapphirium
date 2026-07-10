@@ -425,6 +425,12 @@ var aoePlaceholder = extend(BulletType, {
 	status: statuses.shockStun,
 	statusDuration: 10,
 });
+
+var shockstunWave = new Effect(22, e => {
+	    Draw.color(Color.valueOf("80a8ff"));
+        Lines.stroke(e.fout() * 2);
+        Lines.circle(e.x, e.y, 4 + e.finpow() * e.rotation);
+});
 	
 const crackle = extend(ItemTurret, "crackle", {
 	squareSprite: false,
@@ -496,6 +502,8 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
                 Units.nearbyEnemies(this.team, this.x, this.y, crackle.range, other => {
                 other.apply(statuses.shockStun, 10);
                 Fx.shockwave.at(this.x, this.y, this.rotation);
+                Fx.chainEmp.at(other.x, other.y, 0, Color.valueOf("80a8ff"), other);
+                shockstunWave.at(other.x, other.y, other.rotation)
                 });
              }
              this.updateTimer = 0;
@@ -864,6 +872,26 @@ oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
 						});
 
 //Vanilla ammo
+let breach = Blocks.breach;
+breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
+  updateTimer: 0,
+	handleItem(source, item){
+		this.super$handleItem(source, item);
+		this.updateTimer += Time.delta;
+		if(this.updateTimer >= 1){
+		if(item == items.ruby){
+			Units.nearbyEnemies(this.team, this.x, this.y, 190, other => {
+				if(!other.type.targetable && !other.type.hittable){
+					other.apply(statuses.wraith, 99999);
+					}
+				});
+			}
+			this.updateTimer = 0;
+		}
+		else this.updateTimer++;
+		}
+	});
+
 var colorLerp = Color.valueOf("ea8878").lerp(Pal.redLight, 0.5);
 const titanThoriumAmmo = extend(ArtilleryBulletType, 2.5, 350, "shell", {
 	hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),

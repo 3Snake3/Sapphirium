@@ -16,6 +16,6 @@ itemCapacity: 120
 health: 700
 armor: 34
 hitSize: 24
-fogRadius: 4
+fogRadius: 0
 buildBeamOffset: 9
 pickupUnits: true

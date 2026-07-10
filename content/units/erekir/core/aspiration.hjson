@@ -20,6 +20,7 @@ health: 900
 armor: 3
 hitSize: 13
 buildBeamOffset: 9
+fogRadius: 0
 pickupUnits: true
 vulnerableWithPayloads: true
 targetable: false

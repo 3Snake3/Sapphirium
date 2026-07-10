@@ -10,6 +10,8 @@ targetable: false
 groundLayer: 50
 physics: false
 hittable: false
+wobble: false
+faceTarget: false
 engineSize: 0
 immunities: [unleash]
 speed: 0
