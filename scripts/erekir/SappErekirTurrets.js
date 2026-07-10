@@ -510,10 +510,12 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
                   other.type.hittable = true;
                   other.apply(statuses.wraith, 99999);
                 }*/
-                
+                Units.invalidateTarget(this.target, this.team, this.x, this.y, crackle.range, target => {
+                  return true;
                   other.apply(statuses.wraith, 99999);
-                
                 });
+                });
+                
              }
              this.updateTimer = 0;
             }
