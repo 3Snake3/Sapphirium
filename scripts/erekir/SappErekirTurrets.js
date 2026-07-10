@@ -504,6 +504,11 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
                 Fx.shockwave.at(this.x, this.y, this.rotation);
                 Fx.chainEmp.at(other.x, other.y, 0, Color.valueOf("80a8ff"), other);
                 shockstunWave.at(other.x, other.y, other.rotation)
+                if(!other.type.targetable && !other.type.hittable){
+                  other.type.targetable = true;
+                  other.type.hittable = true;
+                }
+                }
                 });
              }
              this.updateTimer = 0;
