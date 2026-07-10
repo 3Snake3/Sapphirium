@@ -500,20 +500,12 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
 		if(this.updateTimer >= 100){
 		if(item == items.carvedAlloy){
                 Units.nearbyEnemies(this.team, this.x, this.y, crackle.range, other => {
-                /*other.apply(statuses.shockStun, 10);
+                other.apply(statuses.shockStun, 10);
                 Fx.shockwave.at(this.x, this.y, this.rotation);
                 Fx.chainEmp.at(other.x, other.y, 0, Color.valueOf("80a8ff"), other);
                 
                 shockstunWave.at(other.x, other.y, other.rotation);
-                if(other.team != this.team && !other.targetable(this.team) && !other.hittable()){
-                  other.type.targetable = true;
-                  other.type.hittable = true;
-                  other.apply(statuses.wraith, 99999);
-                }*/
-                Units.invalidateTarget(this.target, this.team, this.x, this.y, crackle.range, target => {
-                  return true;
-                  other.apply(statuses.wraith, 99999);
-                });
+                
                 });
                 
              }
@@ -892,7 +884,9 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
 		if(this.updateTimer >= 1){
 		if(item == items.ruby){
 			Units.nearbyEnemies(this.team, this.x, this.y, 190, other => {
-				if(!other.type.targetable && !other.type.hittable){
+				if(!other.targetable(this.team) && !other.hittable()){
+				  other.type.targetable = true;
+				  other.type.hittable = true;
 					other.apply(statuses.wraith, 99999);
 					}
 				});
