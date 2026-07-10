@@ -500,7 +500,7 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
 		if(this.updateTimer >= 100){
 		if(item == items.carvedAlloy){
                 Units.nearby(this.team, this.x, this.y, crackle.range, other => {
-                other.apply(statuses.shockStun, 10);
+                /*other.apply(statuses.shockStun, 10);
                 Fx.shockwave.at(this.x, this.y, this.rotation);
                 Fx.chainEmp.at(other.x, other.y, 0, Color.valueOf("80a8ff"), other);
                 
@@ -508,6 +508,9 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
                 if(other.team != this.team && !other.targetable(this.team) && !other.hittable()){
                   other.type.targetable = true;
                   other.type.hittable = true;
+                  other.apply(statuses.wraith, 99999);
+                }*/
+                if(other.team != this.team){
                   other.apply(statuses.wraith, 99999);
                 }
                 });
