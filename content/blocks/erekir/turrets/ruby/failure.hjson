@@ -9,7 +9,7 @@ category: turret
 shootY: 11
 heatRequirement: 40
 maxHeatEfficiency: 2
-buildVisibility: editorOnly
+buildVisibility: sandboxOnly
 shoot: {
     type: ShootBarrel
     shots: 4

@@ -13,7 +13,7 @@ shootSound: oblivion-shoot
 chargeSound: oblivion-charge
 playerControllable: false
 
-buildVisibility: editorOnly
+buildVisibility: sandboxOnly
 category: turret
 
 shoot: {

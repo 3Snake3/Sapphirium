@@ -25,7 +25,6 @@ lifetime: 60
 createScorch: false
 fallEffect: none
 fallEngineEffect: none
-hidden: true
 range: 8
 engineOffset: 6
 engineSize: 1.25
@@ -39,7 +38,7 @@ playerControllable: false
 abilities: [
 {
 type: SpawnDeathAbility
-unit: extinctionSmoke
+unit: extinctionSmokeChance
 spread: 0
 }
 ]

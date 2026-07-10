@@ -19,6 +19,8 @@ deathExplosionEffect: none
 deathSound: 0
 deathShake: 0
 hidden: true
+physics: false
+engineSize: -1
 
 abilities: [
 {

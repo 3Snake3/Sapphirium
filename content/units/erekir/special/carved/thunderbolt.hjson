@@ -12,7 +12,6 @@ engineOffset: 8.5
 engineSize: 1.5
 faceTarget: false
 circleTarget: true
-hidden: true
 playerControllable: false
 
 abilities: [
