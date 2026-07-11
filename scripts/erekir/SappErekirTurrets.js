@@ -913,19 +913,21 @@ var wraithAoeWaveBack = extend(WaveEffect, {
 var wraithSequence = new SeqEffect(wraithAoeWave, wraithAoeWaveBack);
 let breach = Blocks.breach;
 breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
-  updateTimer: 0,
+  creload: 0,
 	handleItem(source, item){
 		this.super$handleItem(source, item);
-		this.updateTimer += Time.delta;
-		if(this.updateTimer >= 1){
+		this.creload++;
+		if(this.creload == 1){
 		if(item == items.ruby){
 		  Units.nearbyBuildings(this.x, this.y, 190, b => {
 		  wraithAoe.create(this, this.team, this.x, this.y, this.rotation)
 		  })
 		}
-		  this.updateTimer = 0;
+		  
 		}
-		else this.updateTimer++;
+		else if(this.creload >= 1){
+		  this.creload = 0;
+		}
 		}
 	});
 
