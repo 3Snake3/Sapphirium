@@ -919,24 +919,10 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
 		this.updateTimer += Time.delta;
 		if(this.updateTimer >= 1){
 		if(item == items.ruby){
-		  Units.nearbyBuildings(this.x, this.y, breach.range, b => {
-		    if(b.team == this.team && b.team != this.team){
-		    Damage.status(this.team, this.x, this.y, 190, statuses.wraith, 99999, true, true);
-		    Damage.damage(this.team, this.x, this.y, 1, 190, true, true)
-		    }
-		  }
-		  )
+		  Units.nearbyBuildings(this.x, this.y, 190, b => {
+		  wraithAoe.create(this, this.team, this.x, this.y, this.rotation)
+		  })
 		}
-			this.updateTimer = 0;
-		}
-		if(this.updateTimer >= 120){
-		  if(item == items.ruby){
-		    Units.nearbyBuildings(this.x, this.y, breach.range, b => {
-		    if(b.team == this.team && b.team != this.team){
-		    wraithSequence.at(this);
-		    }
-		    });
-		  }
 		  this.updateTimer = 0;
 		}
 		else this.updateTimer++;
