@@ -118,7 +118,7 @@ absorbable: false
 buildingDamageMultiplier: 0.3
 fragBullets: 1
 fragRandomSpread: 0
-fragAngle: 90
+fragAngle: -45
 fragVelocityMin: 1
 fragBullet: {
 width: 14
@@ -141,7 +141,6 @@ absorbable: false
 buildingDamageMultiplier: 0.3
 fragBullets: 1
 fragRandomSpread: 0
-fragAngle: 45
 fragVelocityMin: 1
 fragBullet: {
 width: 14

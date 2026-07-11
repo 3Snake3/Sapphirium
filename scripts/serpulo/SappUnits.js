@@ -211,9 +211,7 @@ var iceBombDropping = extend(Ability, {
 
 const snowflake = extend(UnitType, "snowflake", {});
 snowflake.constructor = () => extend(UnitEntity, {});
-snowflake.controller = () => extend(BuilderAI, {
-  alwaysFlee: false,
-});
+snowflake.controller = u => u.team.isAI() ? new BuilderAI(false, 0) : new CommandAI();
 snowflake.abilities.addAll(freezingWaveAbility, iceBombDropping);
 
 const flood = extend(UnitType, "flood", {});
