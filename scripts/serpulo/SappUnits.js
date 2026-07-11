@@ -211,6 +211,9 @@ var iceBombDropping = extend(Ability, {
 
 const snowflake = extend(UnitType, "snowflake", {});
 snowflake.constructor = () => extend(UnitEntity, {});
+snowflake.controller = () => extend(BuilderAI, {
+  alwaysFlee: false,
+});
 snowflake.abilities.addAll(freezingWaveAbility, iceBombDropping);
 
 const flood = extend(UnitType, "flood", {});
@@ -310,6 +313,9 @@ scarletMoth.constructor = () => extend(UnitEntity, {});
 scarletMoth.abilities.addAll(bloodragePowerAbility, transformation);
 const fight = extend(UnitType, "fight", {});
 fight.constructor = () => extend(UnitEntity, {});
+fight.controller = () => extend(BuilderAI, {
+  alwaysFlee: false,
+});
 const secondChance = extend(UnitType, "second-chance", {});
 secondChance.constructor = () => extend(MechUnit, {});
 const blaster = extend(UnitType, "blaster", {});

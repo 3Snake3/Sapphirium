@@ -2171,6 +2171,9 @@ const firmament = extend(ErekirUnitType, "firmament", {
     engineColor: Color.valueOf("d1efff")
 });
 firmament.constructor = () => extend(PayloadUnit, {});
+firmament.controller = () => extend(BuilderAI, {
+  alwaysFlee: false,
+});
 firmament.payloadCapacity = (2* 2) * Vars.tilePayload;
 firmament.abilities.addAll(repairField, repairWave);
 firmament.setEnginesMirror(
@@ -2282,6 +2285,9 @@ var paganismField = extend(Ability, {
 
 const aspiration = extend(ErekirUnitType, "aspiration", {});
 aspiration.constructor = () => extend(PayloadUnit, {});
+aspiration.controller = () => extend(BuilderAI, {
+  alwaysFlee: false,
+});
 aspiration.payloadCapacity = (2 * 2) * Vars.tilePayload;
 aspiration.abilities.addAll(highSpeedField, sappingField, paganismField);
 
@@ -2752,6 +2758,9 @@ const flowSphereBack = extend(ShapePart, {
 
 const flow = extend(ErekirUnitType, "flow", {});
 flow.constructor = () => extend(PayloadUnit, {});
+flow.controller = () => extend(BuilderAI, {
+  alwaysFlee: false,
+});
 flow.payloadCapacity = (3 * 3) * Vars.tilePayload;
 flow.weapons.add(flowWeapon);
 flow.abilities.addAll(flowEnergyField, murderSpawn, flowMoveEffect, flowMoveEffectFront, flowMoveEffectBack, flowMoveEffectFrontMirror, flowMoveEffectBackMirror);

@@ -875,6 +875,40 @@ oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
 						});
 
 //Vanilla ammo
+var wraithAoe = extend(ExplosionBulletType, {
+  splashDamage: 0,
+  splashDamageRadius: 190,
+  hitEffect: none,
+  despawnEffect: none,
+  hitSound: none,
+  despawnSound: none,
+  despawnShake: 0,
+  status: statuses.wraith,
+  statusDuration: 99999,
+});
+var wraithAoeWave = extend(WaveEffect, {
+  sides: 0,
+  sizeFrom: 180,
+  sizeTo: 200,
+  strokeFrom: 6,
+  strokeTo: 0,
+  interp: Interp.circleOut,
+  lifetime: 60,
+  colorFrom: Color.valueOf("f25555"),
+  colorTo: Color.valueOf("f25555"),
+})
+var wraithAoeWaveBack = extend(WaveEffect, {
+  sides: 0,
+  sizeFrom: 200,
+  sizeTo: 180,
+  strokeFrom: 6,
+  strokeTo: 0,
+  interp: Interp.circleIn,
+  lifetime: 60,
+  colorFrom: Color.valueOf("f25555"),
+  colorTo: Color.valueOf("f25555"),
+});
+var wraithSequence = new SeqEffect(wraithAoeWave, wraithAoeWaveBack);
 let breach = Blocks.breach;
 breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
   updateTimer: 0,
@@ -883,13 +917,15 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
 		this.updateTimer += Time.delta;
 		if(this.updateTimer >= 1){
 		if(item == items.ruby){
-			Units.nearbyEnemies(this.team, this.x, this.y, 190, other => {
-				
-				other.apply(statuses.wraith, 99999);
-					
-				});
-			}
+		  wraithAoe.create(this, this.team, this.x, this.y, this.rotation);
+		}
 			this.updateTimer = 0;
+		}
+		if(this.updateTimer >= 120){
+		  if(item == items.ruby){
+		    wraithSequence.at(this);
+		  }
+		  this.updateTimer = 0;
 		}
 		else this.updateTimer++;
 		}
