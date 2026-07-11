@@ -503,9 +503,6 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
                 other.apply(statuses.shockStun, 10);
                 Fx.shockwave.at(this.x, this.y, this.rotation);
                 Fx.chainEmp.at(other.x, other.y, 0, Color.valueOf("80a8ff"), other);
-                
-                shockstunWave.at(other.x, other.y, other.rotation);
-                
                 });
                 
              }
@@ -919,13 +916,19 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
 		this.creload++;
 		if(this.creload == 1){
 		if(item == items.ruby){
-		  Units.nearbyBuildings(this.x, this.y, 190, b => {
-		  wraithAoe.create(this, this.team, this.x, this.y, this.rotation)
-		  })
+		  Units.nearbyEnemies(this.team, this.x, this.y, 190, e => {
+		    if(!e.type.drawMinimap){
+		      e.apply(statuses.wraith, 99999);
+		    }
+		  });
 		}
-		  
 		}
-		else if(this.creload >= 1){
+		if(this.creload == 120){
+		  if(item == items.ruby){
+		  wraithSequence.at(this);
+		}
+		}
+		else if(this.creload >= 120){
 		  this.creload = 0;
 		}
 		}

@@ -955,13 +955,13 @@ const wraithWeaponBullet = extend(BasicBulletType, {
     height: 8,
     speed: 5,
     damage: 0,
-    lifetime: 7.2,
+    lifetime: 3.2,
     sprite: "sapphirium-none-bullet",
     hitEffect: Fx.none,
     despawnEffect: Fx.none,
     shootEffect: Fx.none,
     smokeEffect: Fx.none,
-    maxRange: 36
+    maxRange: 16,
 });
 
 const presenceWraithWeapon = extend(Weapon, "presence-wraith-weapon", {
@@ -972,7 +972,7 @@ const presenceWraithWeapon = extend(Weapon, "presence-wraith-weapon", {
     reload: 15,
     recoil: 0,
     ejectEffect: Fx.none,
-    shootSound: Sounds.shootMissile,
+    shootSound: Sounds.none,
     shootStatus: statuses.wraith,
     shootStatusDuration: 999999,
     display: false,
@@ -1043,15 +1043,15 @@ presence.setEnginesMirror(
 const apparitionWraithWeaponBullet = extend(BasicBulletType, {
     width: 8,
     height: 8,
-    speed: 4.75,
+    speed: 5,
     damage: 0,
-    lifetime: 8,
+    lifetime: 4.8,
     sprite: "sapphirium-none-bullet",
     hitEffect: Fx.none,
     despawnEffect: Fx.none,
     shootEffect: Fx.none,
     smokeEffect: Fx.none,
-    maxRange: 38
+    maxRange: 24
 });
 
 const apparitonWraithWeapon = extend(Weapon, "apparition-wraith-weapon", {
