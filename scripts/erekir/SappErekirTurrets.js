@@ -917,9 +917,7 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
 		if(this.creload == 1){
 		if(item == items.ruby){
 		  Units.nearbyEnemies(this.team, this.x, this.y, 190, e => {
-		    if(!e.type.drawMinimap){
 		      e.apply(statuses.wraith, 99999);
-		    }
 		  });
 		}
 		}
