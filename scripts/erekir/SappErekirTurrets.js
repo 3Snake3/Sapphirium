@@ -886,6 +886,7 @@ var wraithAoe = extend(ExplosionBulletType, {
   status: statuses.wraith,
   statusDuration: 99999,
   killShooter: false,
+  collides: true,
 });
 var wraithAoeWave = extend(WaveEffect, {
   sides: 0,
@@ -920,7 +921,8 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
 		if(item == items.ruby){
 		  Units.nearbyBuildings(this.x, this.y, breach.range, b => {
 		    if(b.team == this.team && b.team != this.team){
-		    wraithAoe.create(this, this.team, this.x, this.y, this.rotation);
+		    Damage.status(this.team, this.x, this.y, 190, statuses.wraith, 99999, true, true);
+		    Damage.damage(this.team, this.x, this.y, 1, 190, true, true)
 		    }
 		  }
 		  )
