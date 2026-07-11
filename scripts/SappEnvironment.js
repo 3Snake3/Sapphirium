@@ -300,13 +300,20 @@ const spinelWall = extend(StaticWall, "spinel-wall", {
 spinel.asFloor().wall = spinelWall;
 spinelWall.attributes.set(Attribute.sand, 1);
 
-Blocks.carbonWall.attributes.set(Attribute.sand, 0.7, graphiteAttr, 1.2);
-Blocks.ferricStoneWall.attributes.set(Attribute.sand, 0.5, graphiteAttr, 0.5)
-Blocks.beryllicStoneWall.attributes.set(Attribute.sand, 1.2, graphiteAttr, 0.7)
-Blocks.regolithWall.attributes.set(Attribute.sand, 1, graphiteAttr, 0.4)
-Blocks.rhyoliteWall.attributes.set(Attribute.sand, 1, graphiteAttr, 0.4)
-Blocks.redStoneWall.attributes.set(Attribute.sand, 1.5, graphiteAttr, 1)
-Blocks.yellowStoneWall.attributes.set(Attribute.sand, 1.5, graphiteAttr, 1)
+Blocks.carbonWall.attributes.set(Attribute.sand, 0.7);
+Blocks.carbonWall.attributes.set(graphiteAttr, 1.2);
+Blocks.ferricStoneWall.attributes.set(Attribute.sand, 0.5)
+Blocks.ferricStoneWall.attributes.set(graphiteAttr, 0.3)
+Blocks.beryllicStoneWall.attributes.set(Attribute.sand, 1.2)
+Blocks.beryllicStoneWall.attributes.set(graphiteAttr, 0.7)
+Blocks.regolithWall.attributes.set(Attribute.sand, 1)
+Blocks.regolithWall.attributes.set(graphiteAttr, 0.4)
+Blocks.rhyoliteWall.attributes.set(Attribute.sand, 1)
+Blocks.rhyoliteWall.attributes.set(graphiteAttr, 0.4)
+Blocks.redStoneWall.attributes.set(Attribute.sand, 1.5)
+Blocks.redStoneWall.attributes.set(graphiteAttr, 1)
+Blocks.yellowStoneWall.attributes.set(Attribute.sand, 1.5)
+Blocks.yellowStoneWall.attributes.set(graphiteAttr, 1)
 
 //Decoration
 const topazBoulder = extend(Prop, "topaz-boulder", {
