@@ -884,9 +884,9 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
 		if(this.updateTimer >= 1){
 		if(item == items.ruby){
 			Units.nearbyEnemies(this.team, this.x, this.y, 190, other => {
-				if(!other.type.targetable){
+				
 				other.apply(statuses.wraith, 99999);
-					}
+					
 				});
 			}
 			this.updateTimer = 0;
