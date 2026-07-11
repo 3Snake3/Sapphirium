@@ -876,7 +876,7 @@ oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
 
 //Vanilla ammo
 var wraithAoe = extend(ExplosionBulletType, {
-  splashDamage: 500,
+  splashDamage: 0,
   splashDamageRadius: 190,
   hitEffect: Fx.none,
   despawnEffect: Fx.none,
