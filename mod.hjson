@@ -6,16 +6,17 @@ description:
   Let us introduce the list of content it includes: A hell amount of fraction turrets, brand new fraction units and in the end new interesting materials and mechanics. 
   
   Contentmaker & Helpers List: 
-  Kostolom - Balancer, Mapper, Json coder, Effect designer, Multi-tool functionally. Discord profile kostolom#9777 
-  Laim - Spriter, map maker. Discord profile LaIm-Ik.json#5237
-  Liplum - Multicrafter's library author. Discord profile Liplum#2623 
-  Fr4ncuzS4n - JS helper. Discord profile ADG021222#7589 
-  Fox1va - A small helper. Discord profile Fox1va_#3532 
-  Vervalamis - Spriter. Discord profile Saigo no-nozomi#1206 
+  [accent]Kostolom[] - Balancer, Mapper, Json coder, Effect designer, Multi-tool functionally. Discord profile [gray]"kostolom#9777"[] 
+  [#98ffa9]Laim[] - Spriter, map maker. Discord profile [gray]"LaIm-Ik.json#5237" []
+  [#3CA370FF]Liplum[] - Multicrafter's library author. Discord profile [gray]"Liplum#2623"[] 
+  [#F2A65EFF]Fr4ncuzS4n[] - JS helper. Discord profile [gray]"ADG021222#7589"[] 
+  [#EB564BFF]Fox1va[] - A small helper. Discord profile [gray]"Fox1va_#3532"[] 
+  [#2593F3FF]Vervalamis[] - Spriter. Discord profile [gray]"Saigo no-nozomi#1206"[]
+  [#780049]The_[scarlet]Alone[][] – Minor content helper, mapper. Discord profile [gray]"model8663"[]
   
   Thanks everyone for support.
   '''
 author: "Snake"
 minGameVersion: "159.2"
-version: "18"
+version: "18.1"
 repo: 3Snake3/Sapphirium

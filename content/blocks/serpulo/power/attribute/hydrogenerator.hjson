@@ -28,7 +28,7 @@ colorFrom: 7191eb90
 colorTo: 7191eb70
 }
 size: 2
-ambientSound: hum
+ambientSound: loopHum
 ambientSoundVolume: 0.06
 attribute: water
 shownPlanets: [serpulo]

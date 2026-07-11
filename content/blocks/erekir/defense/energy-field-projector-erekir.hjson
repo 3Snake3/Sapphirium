@@ -11,4 +11,4 @@ health: 4000
 category: effect
 size: 3
 category: effect
-buildVisibility: editorOnly
+buildVisibility: sandboxOnly

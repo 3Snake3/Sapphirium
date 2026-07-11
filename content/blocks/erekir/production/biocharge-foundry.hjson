@@ -168,7 +168,7 @@ craftTime: 540
 itemCapacity: 60
 liquidCapacity: 160
 outputLiquid: neoplasm/1.4
-ambientSound: smelter 
+ambientSound: loopSmelter
 ambientSoundVolume: 1
 hasPower: true 
 hasItems: true 

@@ -5,7 +5,7 @@ hasItems: true
 hasLiquids: false
 itemDuration: 120
 powerProduction: 0.7
-ambientSound: steam
+ambientSound: loopHum
 ambientSoundVolume: 0.04
 
 requirements: [

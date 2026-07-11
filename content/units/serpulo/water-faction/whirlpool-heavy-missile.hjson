@@ -6,9 +6,9 @@ rotateSpeed: 0.25
 trailLength: 18
 speed: 4.6
 missileAccelTime: 50
-loopSound: missileTrail
+loopSound: loopMissileTrail
 loopSoundVolume: 0.6
-deathSound: largeExplosion
+deathSound: explosionMissile
 targetAir: false
 maxRange: 6
 lifetime: 250

@@ -9,23 +9,26 @@ const customValue = method => new StatValue() {
 const abilities = new Seq();
 var abilitiesFunction = new Stat("abilities", StatCat.function);
 
-const energyFieldAbility = extend(EnergyFieldAbility, 180, 180, 800, {
+const energyFieldAbility = extend(EnergyFieldAbility, 180, 30, 800, {
 	status: statuses.shockStun,
-	statusDuration: 25,
+	statusDuration: 1,
 	hitBuildings: false,
 	healPercent: 0,
-	maxTargets: 180,
+	maxTargets: 40,
 	localized(){
 		return Core.bundle.get("ability.energyfield");
 		}
 });
 
-var energyFieldSeq = abilities.add(energyFieldAbility);
+var carvedShieldRegen = extend(ShieldRegenFieldAbility, 80, 800, 180, 800);
+var carvedForceField = extend(ForceFieldAbility, 800, 0.2, 800, 600);
+
+var carvedAbilities = abilities.addAll(energyFieldAbility, carvedShieldRegen, carvedForceField);
 
 const energyFieldEr = extend(UnitCargoLoader, "energy-field-projector-erekir", {
 setStats(){
 	this.super$setStats();
-this.stats.add(abilitiesFunction, StatValues.abilities(energyFieldSeq));
+this.stats.add(abilitiesFunction, StatValues.abilities(carvedAbilities));
 	this.stats.add(Stat.output, customValue(table => {
         	table.row();
             table.table(Styles.grayPanel, b => {

@@ -34,7 +34,7 @@ color: b8fffe70
 type: DrawParticles
 particles: 10
 particleLife: 100
-particlesRad: 10
+particleRad: 10
 particleSize: 4
 color: b8fffe
 alpha: 0.6

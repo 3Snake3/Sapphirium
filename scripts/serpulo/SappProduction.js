@@ -42,6 +42,12 @@ const creotiteConverter = extend(AttributeCrafter, "creotite-converter", {
     envDisabled: Env.scorching
 });
 const bigBlastMixer = extend(GenericCrafter, "big-blast-mixer", {});
+bigBlastMixer.buildType = () => extend(GenericCrafter.GenericCrafterBuild, bigBlastMixer, {
+  craft(){
+    this.super$craft();
+    Sounds.shootRipple.at(this);
+  }
+});
 const weakCharger = extend(AttributeCrafter, "weak-charger", {});
 const mediumCharger = extend(AttributeCrafter, "medium-charger", {});
 const mightyCharger = extend(AttributeCrafter, "mighty-charger", {});

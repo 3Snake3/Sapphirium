@@ -30,7 +30,8 @@ baseRotation: -90
 rotate: false
 mirror: true
 alternate: false
-alwaysShootWhenMoving: true
+alwaysShooting: true
+ignoreRotation: true
 shootSound: shootEnergyField
 reload: 1
 recoil: 0

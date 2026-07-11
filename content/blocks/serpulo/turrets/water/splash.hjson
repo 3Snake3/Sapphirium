@@ -65,7 +65,7 @@ ammoTypes: {
     cryofluid: {
         type: ShrapnelBulletType
         length: 160
-        rangeRange: 30
+        rangeChange: 30
         width: 15
         serrations: 4
         damage: 45
@@ -114,7 +114,7 @@ ammoTypes: {
         reloadMultiplier: 0.6
         buildingDamageMultiplier: 0.5
         fragRandomSpread: 0
-        hitSound: setWater
+        hitSound: stepWater
         fromColor: b8fffe
         toColor: 6fdedc
         status: overfreezing

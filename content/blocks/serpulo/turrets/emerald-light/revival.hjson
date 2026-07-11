@@ -31,7 +31,7 @@ ammoTypes: {
         statusDuration: 420
         hitEffect: hitFlamePlasma
         ammoMultiplier: 1
-        ejectEffect: none
+        
         despawnEffect: none
         keepVelocity: false
         hittable: false

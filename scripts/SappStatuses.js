@@ -186,15 +186,13 @@ const blur = extend(StatusEffect, "blur", {
     },
     update(unit, time){
     	this.super$update(unit, time);
-     if(unit.type.targetable && unit.type.hittable){
+     if(unit.type.targetable){
      	unit.type.targetable = false;
-         unit.type.hittable = false;
      }
      },
      onRemoved(unit){
-     	if(!unit.type.targetable && !unit.type.hittable){
+     	if(!unit.type.targetable){
      	unit.type.targetable = true;
-         unit.type.hittable = true;
      }
      }
 });
@@ -205,9 +203,8 @@ const wraith = extend(StatusEffect, "wraith", {
     },
     update(unit, time){
     	this.super$update(unit, time);
-     if(!unit.type.targetable && !unit.type.hittable){
+     if(!unit.type.targetable){
      	unit.type.targetable = true;
-         unit.type.hittable = true;
      }
      }
 });

@@ -51,7 +51,6 @@ shootCone: 180
 shootSound: explosion
 shootY: 0
 mirror: false
-targetUnderBlocks: false
 
 bullet: {
 sprite: sapphirium-none-bullet
@@ -60,6 +59,7 @@ collides: false
 hitSound: explosion
 
 hitEffect: none
+hitUnder: false
 
 speed: 0
 splashDamageRadius: 32
@@ -108,7 +108,7 @@ shootOnDeath: true
 rotate: false
 mirror: false
 shootCone: 360
-shootSound: false
+shootSound: none
 display: false
 
 bullet: {

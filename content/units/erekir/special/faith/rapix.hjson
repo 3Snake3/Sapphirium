@@ -25,7 +25,6 @@ hovering: true
 shadowElevation: 0.2
 groundLayer: 74
 range: 120
-hidden: true
 immunities: [unleash]
 playerControllable: false
 weapons: [

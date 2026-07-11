@@ -22,7 +22,7 @@ rotateSpeed: 2
 recoil: 4
 recoilTime: 150
 cooldownTime: 150
-shake: 6
+shake: 0
 size: 5
 research: dublicity
 consumes: {

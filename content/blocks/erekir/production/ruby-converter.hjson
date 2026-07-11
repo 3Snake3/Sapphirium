@@ -1,0 +1,60 @@
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            suffix: "-bottom"
+        }
+        {
+            type: DrawPlasma
+	    plasma1: 8a3340
+	    plasma2: ff6e6e
+	    plasmas: 3
+        }
+        {
+            type: DrawDefault
+        }
+	{
+            type: DrawHeatInput
+        }
+	{
+        type: DrawGlowRegion
+        color: ff6e6e
+	}
+    ]
+}
+size: 3
+craftTime: 75
+outputItem: sapphirium-ruby/2
+craftEffect: none
+warmupSpeed: 0.007
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 40
+liquidCapacity: 60
+consumes: {
+    power: 6
+    liquid: nitrogen/0.13333333333
+    items: {
+        items: [
+            thorium/5
+            sapphirium-topaz/3
+        ]
+    }
+}
+maxEfficiency: 2
+heatRequirement: 15
+ambientSound: loopPulse
+ambientSoundVolume: 0.05
+category: crafting
+requirements: [
+    silicon/260
+    tungsten/195
+    thorium/120
+    sapphirium-amethyst/180
+    sapphirium-topaz/225
+]
+research: sapphire-synthesizer
+shownPlanets: [erekir]

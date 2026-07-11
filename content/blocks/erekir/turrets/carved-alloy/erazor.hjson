@@ -7,7 +7,7 @@ cooldownTime: 270
 recoilTime: 270
 minWarmup: 0.9
 moveWhileCharging: false
-reloadSound: loopThoriumReactor
+chargeSound: loopThoriumReactor
 shootSound: blockExplodeElectric
 range: 425
 shootY: -2.25
@@ -100,7 +100,7 @@ lifetime: 30
 }
 ]
 smokeEffect: shootSmokeTitan
-despawnSound: shockBlast
+despawnSound: explosionPlasmaSmall
 spawnBullets: [
 {
 speed: 0
@@ -113,7 +113,7 @@ absorbable: false
 reflectable: false
 fragRandomSpread: 0
 fragBullets: 1
-despawnSound: laser
+despawnSound: shootEclipse
 fragBullet: {
 type: LaserBulletType
 width: 45

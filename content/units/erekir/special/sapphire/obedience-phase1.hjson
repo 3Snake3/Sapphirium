@@ -129,7 +129,7 @@ trailWidth: 1
 trailLength: 24
 trailColor: d1efff
 pierce: true
-pierceBuiding: true
+pierceBuilding: true
 pierceCap: 3
 homingPower: 0.8
 homingRange: 64

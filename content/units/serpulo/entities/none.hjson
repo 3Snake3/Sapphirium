@@ -9,4 +9,6 @@ drawMinimap: false
 drawBody: false
 drawShields: false
 drawCell: false
+wobble: false
+engineSize: -1
 type: flying

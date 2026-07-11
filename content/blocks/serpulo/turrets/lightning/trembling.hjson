@@ -7291,7 +7291,7 @@ colorTo: ffa66500
     hitEffect: none
     status: stunne
     statusDuration: 60
-    hitSound: plasmaboom
+    hitSound: explosionPlasmaSmall
     fragBullets:12
     fragSpread:30
     fragRandomSpread:30

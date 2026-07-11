@@ -8,7 +8,6 @@ drag: 0.03
 accel: 0.03
 rotateSpeed: 5
 targetFlags: [generator, reactor, battery]
-hidden: true
 hitSize: 30
 lowAltitude: false
 drawCell: false
@@ -61,7 +60,6 @@ abilities: [
 {
 type: SpawnDeathAbility
 unit: teleportationSmokeDeath
-spread: 0.1
 }
 {
 type: RegenAbility

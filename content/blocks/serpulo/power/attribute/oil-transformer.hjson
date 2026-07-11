@@ -28,7 +28,7 @@ generateEffect: {
     colorTo: 61615b75
 }
 size: 3
-ambientSound: hum
+ambientSound: loopHum
 ambientSoundVolume: 0.06
 attribute: oil
 shownPlanets: [serpulo]

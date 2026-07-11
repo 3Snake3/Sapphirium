@@ -300,6 +300,14 @@ const spinelWall = extend(StaticWall, "spinel-wall", {
 spinel.asFloor().wall = spinelWall;
 spinelWall.attributes.set(Attribute.sand, 1);
 
+Blocks.carbonWall.attributes.set(Attribute.sand, 0.7, graphiteAttr, 1.2);
+Blocks.ferricStoneWall.attributes.set(Attribute.sand, 0.5, graphiteAttr, 0.5)
+Blocks.beryllicStoneWall.attributes.set(Attribute.sand, 1.2, graphiteAttr, 0.7)
+Blocks.regolithWall.attributes.set(Attribute.sand, 1, graphiteAttr, 0.4)
+Blocks.rhyoliteWall.attributes.set(Attribute.sand, 1, graphiteAttr, 0.4)
+Blocks.redStoneWall.attributes.set(Attribute.sand, 1.5, graphiteAttr, 1)
+Blocks.yellowStoneWall.attributes.set(Attribute.sand, 1.5, graphiteAttr, 1)
+
 //Decoration
 const topazBoulder = extend(Prop, "topaz-boulder", {
 	variants: 2,
@@ -414,6 +422,8 @@ const wallOreRuby = extend(OreBlock, "ore-wall-ruby", {
 	wallOre: true,
 	itemDrop: items.ruby,
 });
+
+
 
 module.exports = {
 	topazAttr: topazAttr,
