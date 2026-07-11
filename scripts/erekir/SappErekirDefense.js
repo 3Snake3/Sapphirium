@@ -20,8 +20,8 @@ const energyFieldAbility = extend(EnergyFieldAbility, 180, 30, 800, {
 		}
 });
 
-var carvedShieldRegen = extend(ShieldRegenFieldAbility, 80, 800, 180, 800);
-var carvedForceField = extend(ForceFieldAbility, 800, 0.2, 800, 600);
+var carvedShieldRegen = extend(ShieldRegenFieldAbility, 80, 800, 180, 800, {});
+var carvedForceField = extend(ForceFieldAbility, 800, 0.2, 800, 600, {});
 
 var carvedAbilities = abilities.addAll(energyFieldAbility, carvedShieldRegen, carvedForceField);
 

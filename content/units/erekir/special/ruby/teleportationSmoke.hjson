@@ -16,6 +16,7 @@ strafePenalty: 0
 createWreck: false
 createScorch: false
 deathSound: none
+wobble: false
 deathExplosionEffect: {
 type: ExplosionEffect
 lifetime: 60
