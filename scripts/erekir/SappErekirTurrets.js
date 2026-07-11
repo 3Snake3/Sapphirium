@@ -914,21 +914,16 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
 	handleItem(source, item){
 		this.super$handleItem(source, item);
 		this.creload++;
-		if(this.creload == 60){
 		if(item == items.ruby){
+		if(this.creload == 60){
 		  Units.nearbyEnemies(this.team, this.x, this.y, 190, e => {
-		      e.apply(statuses.wraith, 99999);
-		      e.damage(9999);
-		  });
+		    e.damage(9999);
+		    e.apply(statuses.wraith, 99999);
+		  })
 		}
-		}
-		if(this.creload == 120){
-		  if(item == items.ruby){
-		  wraithSequence.at(this);
-		}
-		}
-		else if(this.creload >= 120){
+		else if(this.creload >= 60){
 		  this.creload = 0;
+		}
 		}
 		}
 	});
