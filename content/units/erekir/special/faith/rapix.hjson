@@ -72,7 +72,7 @@ lightningLength: 8.5
 lightningColor: 6d56bf
 lightningLengthRand: 1.5
 hitColor: 6d56bf
-status: execution
+status: execute
 }
 {
 type: LightningBulletType
@@ -81,7 +81,7 @@ lightningLength: 8.5
 lightningColor: 6d56bf
 lightningLengthRand: 1.5
 hitColor: 6d56bf
-status: execution
+status: execute
 }
 ]
 fragOnHit: false
@@ -186,7 +186,7 @@ frontColor: bf92f9
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 shootEffect: shootBigColor
-status: execution
+status: execute
 circleShooter: true
 circleShooterRadius: 24
 lifesteal: 80
@@ -209,7 +209,7 @@ frontColor: bf92f9
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 shootEffect: shootBigColor
-status: execution
+status: execute
 circleShooter: true
 circleShooterRadius: 28
 lifesteal: 80
@@ -232,7 +232,7 @@ frontColor: bf92f9
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 shootEffect: shootBigColor
-status: execution
+status: execute
 circleShooter: true
 circleShooterRadius: 32
 lifesteal: 80
