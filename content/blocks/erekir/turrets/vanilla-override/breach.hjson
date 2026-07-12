@@ -80,7 +80,18 @@ hitColor: f25555
 trailColor: f25555
 frontColor: fc8e6d
 damage: 225
-shootEffect: [shootBigColor, colorSparkBig]
+shootEffect: [shootBigColor, colorSparkBig, {
+type: WaveEffect
+sides: 0
+  sizeFrom: 180
+  sizeTo: 200
+  strokeFrom: 6
+  strokeTo: 0
+  interp: circleOut
+  lifetime: 60
+  colorFrom: f25555
+  colorTo: f25555
+}]
 smokeEffect: shootBigSmoke
 ammoMultiplier: 3
 pierce: true
@@ -93,6 +104,22 @@ absorbable: false
 hittable: false
 reloadMultiplier: 0.2
 buildingDamageMultiplier: 0.3
+spawnBullets: [
+{
+type: ExplosionBulletType
+splashDamage: 24
+splashDamageRadius: 190
+killShooter: false
+collides: true
+hitEffect: none
+despawnEffect: none
+shootEffect: none
+despawnSound: none
+hitSound: none
+status: wraith
+statusDuration: 99999
+}
+]
 fragBullets: 2
 fragOnHit: false
 fragVelocityMin: 1
@@ -173,3 +200,4 @@ buildingDamageMultiplier: 0.2
 }
 }
 }
+shootY: 0

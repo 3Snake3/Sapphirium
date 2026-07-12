@@ -872,20 +872,8 @@ oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
 						});
 
 //Vanilla ammo
-var wraithAoe = extend(ExplosionBulletType, {
-  splashDamage: 0,
-  splashDamageRadius: 190,
-  hitEffect: Fx.none,
-  despawnEffect: Fx.none,
-  hitSound: Sounds.none,
-  despawnSound: Sounds.none,
-  despawnShake: 0,
-  status: statuses.wraith,
-  statusDuration: 99999,
-  killShooter: false,
-  collides: true,
-});
-var wraithAoeWave = extend(WaveEffect, {
+
+/*var wraithAoeWave = extend(WaveEffect, {
   sides: 0,
   sizeFrom: 180,
   sizeTo: 200,
@@ -923,7 +911,7 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
       this.creload = 0;
     }
   }
-	});
+	});*/
 
 var colorLerp = Color.valueOf("ea8878").lerp(Pal.redLight, 0.5);
 const titanThoriumAmmo = extend(ArtilleryBulletType, 2.5, 350, "shell", {
