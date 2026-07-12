@@ -168,7 +168,7 @@ shrinkY: 0.3
 sprite: sapphirium-large-shell
 collidesGround: false
 collidesTiles: false
-frontColor: fffff
+frontColor: ffffff
 hitColor: ff7272
 trailColor: ff7272
 backColor: fff7272
@@ -223,7 +223,7 @@ shrinkY: 0.3
 sprite: sapphirium-large-shell
 collidesGround: false
 collidesTiles: false
-frontColor: fffff
+frontColor: ffffff
 hitColor: ff7272
 trailColor: ff7272
 backColor: fff7272
