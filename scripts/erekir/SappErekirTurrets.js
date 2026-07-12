@@ -852,25 +852,21 @@ const failure = extend(ItemTurret, "failure", {});
 	
 const oblivion = extend(ItemTurret, "oblivion", {});
 oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
-	creload: 0,
+	updateTimer: 0,
 	updateTile(){
-		this.super$updateTile();
-		if(this.creload == 60){
-			if(this.power.status >= 100 && this.efficiency > 0 && this.hasAmmo()){
-			Units.nearby(this.team, this.x, this.y, 800, unit => {
-				if(unit.type.targetable && unit.type.hittable){
-					unit.apply(statuses.blur, 61);
-					}
-					});
-					}
-					this.creload++;
-					} 
-                    if(this.creload >= 60){
-						this.creload = 0;
-						}
-						}
-						});
-
+	  this.super$updateTile();
+	  this.updateTimer += Time.delta;
+	  if(this.hasAmmo() && this.isActive()){
+	  if(this.updateTimer >= 60){
+	    Units.nearby(this.team, this.x, this.y, oblivion.range, u => {
+	      u.apply(statuses.blur, 61);
+	    })
+	    this.updateTimer = 0;
+	  }
+	  else this.updateTimer++;
+	}
+	}
+});
 //Vanilla ammo
 
 /*var wraithAoeWave = extend(WaveEffect, {

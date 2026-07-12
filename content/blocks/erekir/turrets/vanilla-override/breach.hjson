@@ -136,6 +136,8 @@ hitColor: f25555
 trailColor: f25555
 frontColor: fc8e6d
 damage: 112.5
+homingPower: 10
+homingRange: 84
 pierce: true
 pierceBuilding: true
 trailWidth: 2.3
