@@ -2,7 +2,7 @@ unitType: rapix
 health: 2000
 itemCapacity: 0
 squareSprite: false
-unitBuildTime: 36000
+unitBuildTime: 7200
 polyRadius: 0
 consumes: {
     power: 1
@@ -10,4 +10,8 @@ consumes: {
 category: units
 size: 2
 buildVisibility: sandboxOnly
-requirements: []
+requirements: [
+amethyst/240
+silicon/180
+tungsten/60
+]

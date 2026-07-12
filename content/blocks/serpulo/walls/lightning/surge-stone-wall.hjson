@@ -4,7 +4,7 @@ requirements: [
     surge-stone/10
 ]
 research: {
-    parent: armed-creostone-wall
+    parent: surge-wall
     objectives: [surge-wall-large]
 }
 emitLight: true

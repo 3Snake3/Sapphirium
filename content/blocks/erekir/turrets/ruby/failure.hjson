@@ -10,6 +10,13 @@ shootY: 11
 heatRequirement: 40
 maxHeatEfficiency: 2
 buildVisibility: sandboxOnly
+shownPlanets: [erekir]
+requirements: [
+ruby/320
+silicon/200
+carbide/180
+thorium/300
+]
 shoot: {
     type: ShootBarrel
     shots: 4

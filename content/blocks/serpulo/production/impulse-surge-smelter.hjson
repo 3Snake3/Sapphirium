@@ -60,5 +60,5 @@ requirements: [
 ]
 research: {
 parent: surge-smelter
-objectives: [creotite-mixer, plastanium-press]
+objectives: [creotite-mixer]
 }

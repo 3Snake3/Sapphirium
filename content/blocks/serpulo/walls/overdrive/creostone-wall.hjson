@@ -13,5 +13,6 @@ requirements: [
 envDisabled: 16
 category: defense
 research: {
-    parent: armed-silicon-wall
+    parent: graphite-wall
+    objectives: [overdrive-projector]
 }

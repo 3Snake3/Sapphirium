@@ -9,4 +9,5 @@ itemCapacity: 250
 size: 2
 research: {
     parent: container
+    objectives: [vault]
 }

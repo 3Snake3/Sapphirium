@@ -48,6 +48,6 @@ shownPlanets: [serpulo]
 outputItem: ledonite-cube/4
 craftTime: 80
 research: {
-    parent: cryochamber
+    parent: freezer
     objectives: [ledonite-mixer]
 }

@@ -1,0 +1,75 @@
+
+category: crafting
+ambientSound: loopSmelter
+ambientSoundVolume: 0.3
+craftTime: 50
+outputLiquid: sapphirium-creotite/0.34
+size: 4
+hasLiquids: true
+itemCapacity: 20
+liquidCapacity: 80
+hasItems: true
+hasPower: true
+craftEffect: none
+updateEffect:{
+    type: RadialEffect
+    lengthOffset: 12.8
+    rotationOffset: 0
+    layer: 111
+    effect:{
+	type: ParticleEffect
+	particles: 3
+	cone: 30
+	sizeFrom: 1.7
+	sizeTo: 4
+	lifetime: 80
+	colorFrom: 22222255
+	colorTo: 66666600
+	layer: 111
+	interp: sineOut
+	length: 28
+    }
+}
+updateEffectSpread: 0
+updateEffectChance: 0.3
+consumes: {
+    power: 3.4
+    items: {
+        items: [
+            sapphirium-creostone/5
+	    sapphirium-tinorium/1
+        ]
+    }
+}
+drawer: [
+    {
+        type: DrawRegion
+	suffix: -bottom
+    }
+    {
+        type: DrawLiquidTile
+        drawLiquid: sapphirium-creotite
+	padding: 3
+    }
+    {
+        type: DrawArcSmelt
+        midColor: ffb380
+	circleSpace: 2.5
+	flameRad: 1.25
+    }
+    {
+        type: DrawDefault
+    }
+    {
+        type: DrawGlowRegion
+        color: ffb380
+    }
+]
+shownPlanets: [serpulo]
+requirements: [
+  silicon/220
+  sapphirium-dense-alloy/685
+  sapphirium-creostone/310
+  surge-alloy/400
+]
+research: creotite-mixer

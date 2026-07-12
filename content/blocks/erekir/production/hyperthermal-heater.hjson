@@ -32,4 +32,9 @@ liquid: creotine/0.8
 }
 heatOutput: 100
 buildVisibility: sandboxOnly
-requirements: []
+shownPlanets: [erekir]
+requirements: [
+ruby/120
+creostone/80
+oxide/120
+]

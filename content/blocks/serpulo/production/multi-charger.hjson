@@ -57,5 +57,9 @@ outputItem: charged-cylinder/1
 craftTime: 120
 outputLiquid: surge-mass/0.05
 research: {
-    parent: impulse-surge-smelter
+    parent: weak-charger
+    objectives: [
+    medium-charger,
+    mighty-charger
+    ]
 }

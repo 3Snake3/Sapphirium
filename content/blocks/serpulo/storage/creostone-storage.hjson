@@ -9,5 +9,6 @@ itemCapacity: 4000
 category: effect
 size: 3
 research: {
-    parent: vault
+    parent: container
+    objectives: [vault]
 }

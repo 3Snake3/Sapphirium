@@ -66,4 +66,5 @@ shownPlanets: [serpulo]
 category: defense
 research: {
     parent: creostone-wall
+    objectives: [armed-ice-cube-wall]
 }

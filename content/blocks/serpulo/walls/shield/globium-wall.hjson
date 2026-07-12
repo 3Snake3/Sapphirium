@@ -12,6 +12,6 @@ requirements: [
     silicon/3
 ]
 research: {
-    parent: plastanium-wall-large
-    objectives: [snow-monolith]
+    parent: plastanium-wall
+    objectives: [snow-monolith, force-projector]
 }

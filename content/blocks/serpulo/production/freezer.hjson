@@ -30,5 +30,10 @@ outputItem: ice-cube/1
 craftTime: 30
 research: {
     parent: dense-smelter
-    objectives: [mechanical-pump]
+    objectives: [mechanical-pump, 
+    {
+    type: SectorComplete
+    preset: greyland
+    }
+    ]
 }

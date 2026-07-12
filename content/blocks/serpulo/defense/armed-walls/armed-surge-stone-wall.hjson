@@ -87,5 +87,6 @@ requirements: [
 ]
 shownPlanets: [serpulo]
 research: {
-    parent: surge-stone-wall    
+    parent: surge-stone-wall
+    objectives: [armed-ice-cube-wall]
 }

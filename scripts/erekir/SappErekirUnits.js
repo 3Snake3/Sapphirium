@@ -1483,6 +1483,11 @@ const oozeOrb = extend(BasicBulletType, {
     
     removed(b){
     	this.super$removed(b);
+    	Units.nearbyEnemies(b.team, b.x, b.y, 4 * Vars.tilesize, other => {
+    	  if(!other.type.drawMinimap && other.type.targetable && other.type.hittable){
+    	    other.apply(statuses.wraith, 99999);
+    	  }
+    	});
     	Units.nearbyBuildings(b.x, b.y, 4 * Vars.tilesize, other => {
 			if(other.team != b.team && !other.block.insulated && !other.block.absorbLasers && other.block.targetable){
 				if(other.block.hasItems || other.block.hasLiquids || other.block.hasPower){
@@ -1551,6 +1556,8 @@ const oozeWeapon = extend(Weapon, "sapphirium-ooze-weapon", {
     t.add("[accent]" + 25 + "[lightgray]" + "%" + " [lightgray]" + slowdown.localized() + " ~ " + "[accent]" + 4 + "[lightgray] " + StatUnit.blocks.localized());
     t.row();
     t.add("[accent]" + "+" + 100 + "[lightgray]" + "% " + powerBuildings.localized());
+    t.row();
+    t.add(statuses.wraith.emoji() + " " + statuses.wraith.localizedName);
     }
 });
 
@@ -1904,6 +1911,11 @@ const gazeOrb = extend(BasicBulletType, {
     
     removed(b){
     	this.super$removed(b);
+    	Units.nearbyEnemies(b.team, b.x, b.y, 4 * Vars.tilesize, other => {
+    	  if(!other.type.drawMinimap && other.type.targetable && other.type.hittable){
+    	    other.apply(statuses.wraith, 99999);
+    	  }
+    	});
     	Units.nearbyBuildings(b.x, b.y, 4 * Vars.tilesize, other => {
 			if(other.team != b.team && !other.block.insulated && !other.block.absorbLasers && other.block.targetable){
 				if(other.block.hasItems || other.block.hasLiquids || other.block.hasPower){
@@ -1941,6 +1953,7 @@ const gazeBackWeapon = extend(Weapon, "sapphirium-ooze-weapon", {
     t.add("[accent]" + 25 + "[lightgray]" + "%" + " [lightgray]" + slowdown.localized() + " ~ " + "[accent]" + 4 + "[lightgray] " + StatUnit.blocks.localized());
     t.row();
     t.add("[accent]" + "+" + 100 + "[lightgray]" + "% " + powerBuildings.localized());
+    t.add(statuses.wraith.emoji() + " " + statuses.wraith.localizedName);
     }
 });
 

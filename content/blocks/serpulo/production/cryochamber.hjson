@@ -41,9 +41,5 @@ craftTime: 40
 shownPlanets: [serpulo]
 research: {
 parent: freezer
-objectives: [cryofluid-mixer, {
-type: SectorComplete
-preset: greyland
-}
-]
+objectives: [cryofluid-mixer]
 }

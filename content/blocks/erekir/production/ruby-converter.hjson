@@ -28,6 +28,7 @@ size: 3
 craftTime: 75
 outputItem: sapphirium-ruby/2
 craftEffect: none
+squareSprite: false
 warmupSpeed: 0.007
 hasItems: true
 hasLiquids: true

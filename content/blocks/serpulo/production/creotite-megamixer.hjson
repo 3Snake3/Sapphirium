@@ -54,7 +54,7 @@ sizeInterp: circleOut
 }
 consumes: {
     power: 100
-    liquid: ledonite-liquid/1.3333333
+    liquid: ledonite-liquid/1.4
     items: {
         items: [
             blast-compound/12
@@ -69,7 +69,8 @@ category: crafting
 research: {
     parent: creotite-mixer
     objectives: [
-        big-blast-mixer, 
+        big-blast-mixer,
+        creostone-melter,
         ledonite-mixer, 
         impulse-surge-smelter
     ]

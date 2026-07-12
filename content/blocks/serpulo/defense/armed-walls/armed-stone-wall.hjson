@@ -30,7 +30,7 @@ requirements: [
 shownPlanets: [serpulo]
 research: {
     parent: stone-e-wall
-    objectives: [
+    objectives: [armed-ice-cube-wall,
         {
             type: SectorComplete
             preset: extractionOutpost

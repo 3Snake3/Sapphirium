@@ -65,4 +65,5 @@ requirements: [
 envDisabled: 16
 research: {
     parent: armed-creostone-wall
+    objectives: [force-projector]
 }

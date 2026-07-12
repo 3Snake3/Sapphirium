@@ -58,6 +58,6 @@ itemCapacity: 10
 outputItem: surge-stone/1
 craftTime: 100
 research: {
-    parent: ledochamber
+    parent: freezer
     objectives: [electromixer]
 }

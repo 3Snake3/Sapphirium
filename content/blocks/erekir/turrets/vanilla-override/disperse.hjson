@@ -108,6 +108,138 @@ trailEffect: disperseTrail
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 }
+ruby: {
+damage: 34
+speed: 4
+rangeChange: 24
+status: slow
+statusDuration: 180
+width: 16
+height: 16
+shrinkY: 0.3
+backSprite: large-bomb-back
+sprite: mine-bullet
+collidesGround: false
+collidesTiles: false
+shootEffect: [shootBig2, 
+{
+type: WaveEffect
+interp: circleOut
+lifetime: 9
+strokeFrom: 5
+strokeTo: 0
+sizeFrom: 320
+sizeTo: 334
+colorFrom: ff7272
+colorTo: ff7272
+}
+]
+smokeEffect: shootSmokeDisperse
+frontColor: fffff
+hitColor: ff7272
+trailColor: ff7272
+backColor: fff7272
+trailChance: 0.44
+ammoMultiplier: 4
+lifetime: 41.75
+rotationOffset: 90
+trailRotation: true
+trailEffect: disperseTrail
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+inaccuracy: 14
+spawnBullets: [
+{
+type: EmptyBulletType
+damage: 0
+lifetime: 180
+hitEffect: none
+despawnEffect: none
+intervalBullets: 1
+bulletInterval: 60
+intervalRandomSpread: 0
+intervalBullet: {
+damage: 14
+pierceArmor: true
+speed: 5
+width: 16
+height: 22
+shrinkY: 0.3
+sprite: sapphirium-large-shell
+collidesGround: false
+collidesTiles: false
+frontColor: fffff
+hitColor: ff7272
+trailColor: ff7272
+backColor: fff7272
+lifetime: 67
+trailLength: 12
+trailWidth: 2.5
+hitEffect: [hitBulletColor, 
+{
+type: WaveEffect
+interp: circleOut
+sides: 0
+sizeFrom: 24
+sizeTo: 48
+lifetime: 10
+colorFrom: ff7272
+colorTo: ff7272
+}
+]
+despawnEffect: [hitBulletColor, 
+{
+type: WaveEffect
+interp: circleOut
+sides: 0
+sizeFrom: 24
+sizeTo: 48
+lifetime: 10
+colorFrom: ff7272
+colorTo: ff7272
+}
+]
+homingPower: 0.7
+homingRange: 36
+splashDamage: 14
+splashDamageRadius: 48
+hittable: false
+absorbable: false
+}
+}
+]
+fragBullets: 1
+fragVelocityMin: 0.3
+fragLifeMin: 0.3
+fragRandomSpread: 45
+fragBullet: {
+damage: 24
+speed: 10
+status: slow
+statusDuration: 180
+width: 16
+height: 22
+shrinkY: 0.3
+sprite: sapphirium-large-shell
+collidesGround: false
+collidesTiles: false
+frontColor: fffff
+hitColor: ff7272
+trailColor: ff7272
+backColor: fff7272
+lifetime: 20
+trailLength: 12
+trailWidth: 2.5
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+homingPower: 10
+homingRange: 24
+pierce: true
+pierceCap: 3
+hittable: false
+absorbable: false
+}
+}
 creostone: {
 damage: 64.5
 splashDamage: 64.5

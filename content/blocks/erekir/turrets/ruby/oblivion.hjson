@@ -11,8 +11,15 @@ loopSound: oblivion-loop
 loopSoundVolume: 0.8
 shootSound: oblivion-shoot
 chargeSound: oblivion-charge
-playerControllable: false
-
+shownPlanets: [erekir]
+requirements: [
+sapphirium-ruby/2800
+sapphirium-creostone/800
+silicon/1600
+phase-fabric/400
+carbide/800
+sapphirium-carved-alloy/250
+]
 buildVisibility: sandboxOnly
 category: turret
 

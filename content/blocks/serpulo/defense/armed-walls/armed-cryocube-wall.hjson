@@ -112,4 +112,7 @@ category: defense
 shownPlanets: [serpulo]
 research: {
     parent: cryocube-wall
+    objectives: [
+    armed-ice-cube-wall
+    ]
 }

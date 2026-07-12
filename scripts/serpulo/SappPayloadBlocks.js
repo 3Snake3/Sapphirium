@@ -35,7 +35,7 @@ const regeneration = extend(StatusEffect, "regeneration", {
 	color: Pal.heal,
 	update(unit, time){
 		this.super$update(unit, time);
-		unit.heal((unit.maxHealth * 0.05 / 100) * Time.delta);
+		unit.heal((unit.maxHealth * 0.03 / 100) * Time.delta);
 		},
 	setStats(){
 		this.super$setStats();

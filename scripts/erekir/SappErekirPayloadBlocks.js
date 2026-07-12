@@ -83,7 +83,7 @@ setStats(){
                 b.table(cons(info => {
                     info.add(sappErekirUnits.rapix.localizedName).left();
                     info.row();
-                    info.add(Strings.autoFixed(1500 / 60, 1) + " " + Core.bundle.get("unit.seconds")).color(Color.lightGray);
+                    info.add(Strings.autoFixed(7200 / 60, 1) + " " + Core.bundle.get("unit.seconds")).color(Color.lightGray);
                 })).left();
                 b.button("?", Styles.flatBordert, () => Vars.ui.content.show(sappErekirUnits.rapix)).size(40).pad(10).right().grow().visible(() => sappErekirUnits.rapix.unlockedNow());
             }).growX().pad(5).row();

@@ -4,7 +4,7 @@ size: 2
 category: defense
 research: {
     parent: graphite-wall
-    objectives: [
+    objectives: [armed-ice-cube-wall,
         {
             type: SectorComplete
             preset: stainedMountains

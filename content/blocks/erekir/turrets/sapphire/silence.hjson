@@ -2,6 +2,12 @@ size: 3
 reload: 45
 recoil: 2
 shootSound: shootMissile
+shownPlanets: [erekir]
+requirements: [
+sapphire/200
+silicon/130
+tungsten/80
+]
 rotateSpeed: 3
 consumes: {
 power: 3

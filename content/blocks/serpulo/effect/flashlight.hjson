@@ -16,4 +16,8 @@ consumes: {
     power: 1
 }
 shownPlanets: [serpulo]
-research: illuminator
+research: {
+parent: illuminator
+objectives: [diamond-press]
+}
+

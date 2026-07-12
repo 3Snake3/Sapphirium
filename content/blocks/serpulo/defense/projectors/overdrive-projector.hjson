@@ -1,6 +1,6 @@
 research: {
-    parent: force-projector
-    objectives: [
+    parent: overdrive-projector
+    objectives: [force-projector,
         {
             type: SectorComplete
             preset: impact0078

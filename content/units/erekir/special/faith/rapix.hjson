@@ -25,8 +25,7 @@ hovering: true
 shadowElevation: 0.2
 groundLayer: 74
 range: 120
-immunities: [unleash]
-playerControllable: false
+immunities: [unleash, paganism, sapped, true-sight]
 weapons: [
 {
 name: rapix-weapon
@@ -44,8 +43,6 @@ shotDelay: 5
 }
 shootStatus: unmoving
 shootStatusDuration: 30
-controllable: false
-autoTarget: true
 bullet: {
 width: 8
 height: 12
@@ -64,7 +61,7 @@ frontColor: bf92f9
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 shootEffect: shootBigColor
-status: sapped
+status: paganism
 statusDuration: 300
 spawnBulletRandomSpread: 45
 spawnBullets: [
@@ -75,6 +72,7 @@ lightningLength: 8.5
 lightningColor: 6d56bf
 lightningLengthRand: 1.5
 hitColor: 6d56bf
+status: execution
 }
 {
 type: LightningBulletType
@@ -83,6 +81,7 @@ lightningLength: 8.5
 lightningColor: 6d56bf
 lightningLengthRand: 1.5
 hitColor: 6d56bf
+status: execution
 }
 ]
 fragOnHit: false
@@ -187,8 +186,7 @@ frontColor: bf92f9
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 shootEffect: shootBigColor
-status: sapped
-statusDuration: 300
+status: execution
 circleShooter: true
 circleShooterRadius: 24
 lifesteal: 80
@@ -211,8 +209,7 @@ frontColor: bf92f9
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 shootEffect: shootBigColor
-status: sapped
-statusDuration: 300
+status: execution
 circleShooter: true
 circleShooterRadius: 28
 lifesteal: 80
@@ -235,8 +232,7 @@ frontColor: bf92f9
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 shootEffect: shootBigColor
-status: sapped
-statusDuration: 300
+status: execution
 circleShooter: true
 circleShooterRadius: 32
 lifesteal: 80

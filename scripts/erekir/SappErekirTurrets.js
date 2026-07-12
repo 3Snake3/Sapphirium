@@ -849,6 +849,22 @@ dawn.buildType = () => extend(ItemTurret.ItemTurretBuild, dawn, {
 	});
 	
 const failure = extend(ItemTurret, "failure", {});
+failure.buildType = () => extend(ItemTurret.ItemTurretBuild, failure, {
+	updateTimer: 0,
+	updateTile(){
+	  this.super$updateTile();
+	  this.updateTimer += Time.delta;
+	  if(this.hasAmmo() && this.power.status >= 0 && this.efficiency > 0 && !this.isActive() && !this.isShooting){
+	  if(this.updateTimer >= 60){
+	    Units.nearbyEnemies(this.team, this.x, this.y, failure.range, u => {
+	      u.apply(statuses.wraith, 300);
+	    })
+	    this.updateTimer = 0;
+	  }
+	  else this.updateTimer++;
+	}
+	}
+})
 	
 const oblivion = extend(ItemTurret, "oblivion", {});
 oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
@@ -856,10 +872,10 @@ oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
 	updateTile(){
 	  this.super$updateTile();
 	  this.updateTimer += Time.delta;
-	  if(this.hasAmmo() && this.isActive()){
+	  if(this.hasAmmo() && this.power.status >= 130 && this.efficiency > 0 && !this.isActive() && !this.isShooting){
 	  if(this.updateTimer >= 60){
-	    Units.nearby(this.team, this.x, this.y, oblivion.range, u => {
-	      u.apply(statuses.blur, 61);
+	    Units.nearbyEnemies(this.team, this.x, this.y, oblivion.range, u => {
+	      u.apply(statuses.wraith, 300);
 	    })
 	    this.updateTimer = 0;
 	  }
@@ -869,45 +885,25 @@ oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
 });
 //Vanilla ammo
 
-/*var wraithAoeWave = extend(WaveEffect, {
-  sides: 0,
-  sizeFrom: 180,
-  sizeTo: 200,
-  strokeFrom: 6,
-  strokeTo: 0,
-  interp: Interp.circleOut,
-  lifetime: 60,
-  colorFrom: Color.valueOf("f25555"),
-  colorTo: Color.valueOf("f25555"),
-})
-var wraithAoeWaveBack = extend(WaveEffect, {
-  sides: 0,
-  sizeFrom: 200,
-  sizeTo: 180,
-  strokeFrom: 6,
-  strokeTo: 0,
-  interp: Interp.circleIn,
-  lifetime: 60,
-  colorFrom: Color.valueOf("f25555"),
-  colorTo: Color.valueOf("f25555"),
-});
-var wraithSequence = new SeqEffect(wraithAoeWave, wraithAoeWaveBack);
-let breach = Blocks.breach;
-breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
-  creload: 0,
+let disperse = Blocks.disperse;
+disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
+  updateTimer: 0,
   handleItem(source, item){
     this.super$handleItem(source, item);
-    this.creload++;
-    if(this.creload == 1){
-      Units.nearbyBuildings(this.x, this.y, 190, b => {
-        wraithAoe.create(this, this.team, this.x, this.y, this.rotation)
-      })
-    }
-    else if(this.creload >= 1){
-      this.creload = 0;
+    this.updateTimer += Time.delta;
+    if(this.isActive && this.isShooting && this.hasAmmo() && item == items.ruby){
+      if(this.updateTimer >= 9){
+        Units.nearbyEnemies(this.team, this.x, this.y, disperse.range, e => {
+          if(!e.type.drawMinimap){
+          e.apply(statuses.wraith, 99999)
+          }
+        })
+        this.updateTimer = 0;
+      }
+      else this.updateTimer++;
     }
   }
-	});*/
+})
 
 var colorLerp = Color.valueOf("ea8878").lerp(Pal.redLight, 0.5);
 const titanThoriumAmmo = extend(ArtilleryBulletType, 2.5, 350, "shell", {

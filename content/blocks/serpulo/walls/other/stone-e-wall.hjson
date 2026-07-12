@@ -3,5 +3,5 @@ category: defense
 requirements: [
     stone/8
 ]
-research: armed-graphite-wall
+research: copper-wall
 envDisabled: 16

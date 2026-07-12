@@ -1,6 +1,6 @@
 category: power
 research: {
-    parent: hydrogenerator
+    parent: thermal-generator
     objectives: [
         {
             type: SectorComplete

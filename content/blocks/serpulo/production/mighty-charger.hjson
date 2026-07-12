@@ -61,5 +61,5 @@ craftTime: 55
 boostScale: 0.05
 maxBoost: 0.5
 research: {
-    parent: medium-charger
+    parent: weak-charger
 }

@@ -47,8 +47,8 @@ requirements: [
     titanium/45
 ]
 research: {
-    parent: armed-graphite-wall
-    objectives: [
+    parent: armed-ice-cube-wall
+    objectives: [armed-graphite-wall,
         {
             type: SectorComplete
             preset: saltFlats

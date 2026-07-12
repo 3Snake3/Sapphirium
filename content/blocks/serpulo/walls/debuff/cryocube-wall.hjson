@@ -2,7 +2,12 @@
 category: defense
 research: {
     parent: armed-ice-cube-wall
-    objectives: [freezer]
+    objectives: [
+    {
+    type: SectorComplete
+    preset: greyland
+   }
+    ]
 }
 playerControllable: false
 
