@@ -1,5 +1,5 @@
 research: {
-    parent: copper-generator
+    parent: copper-transformer
     objectives: [
         {
             type: SectorComplete

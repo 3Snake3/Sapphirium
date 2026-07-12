@@ -135,7 +135,7 @@ colorTo: ff7272
 }
 ]
 smokeEffect: shootSmokeDisperse
-frontColor: fffff
+frontColor: ffffff
 hitColor: ff7272
 trailColor: ff7272
 backColor: fff7272
