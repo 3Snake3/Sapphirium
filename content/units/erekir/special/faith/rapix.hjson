@@ -25,7 +25,7 @@ hovering: true
 shadowElevation: 0.2
 groundLayer: 74
 range: 120
-immunities: [unleash, paganism, sapped, true-sight]
+immunities: [unleash, paganism, sapped, truesight]
 weapons: [
 {
 name: rapix-weapon
