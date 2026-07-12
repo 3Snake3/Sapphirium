@@ -854,7 +854,7 @@ failure.buildType = () => extend(ItemTurret.ItemTurretBuild, failure, {
 	updateTile(){
 	  this.super$updateTile();
 	  this.updateTimer += Time.delta;
-	  if(this.hasAmmo() && this.power.status >= 0 && this.efficiency > 0 && !this.isActive() && !this.isShooting){
+	  if(this.hasAmmo() && this.power.status > 0 && this.efficiency > 0 && !this.isActive() && !this.isShooting){
 	  if(this.updateTimer >= 60){
 	    Units.nearbyEnemies(this.team, this.x, this.y, failure.range, u => {
 	      u.apply(statuses.wraith, 300);
