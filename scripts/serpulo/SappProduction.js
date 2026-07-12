@@ -41,6 +41,9 @@ const creostoneSmelter = extend(GenericCrafter, "creostone-smelter", {
 const creotiteConverter = extend(AttributeCrafter, "creotite-converter", {
     envDisabled: Env.scorching
 });
+const creostoneMeltingFactory = extend(GenericCrafter, "creostone-melter", {
+    envDisabled: Env.scorching
+});
 const bigBlastMixer = extend(GenericCrafter, "big-blast-mixer", {});
 bigBlastMixer.buildType = () => extend(GenericCrafter.GenericCrafterBuild, bigBlastMixer, {
   craft(){
