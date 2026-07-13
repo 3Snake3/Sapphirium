@@ -260,6 +260,7 @@ ammoTypes: {
         }
 drawer: {
 type: DrawTurret
+basePrefix: "crimson-agate-"
 parts: [
 {
 type: ShapePart

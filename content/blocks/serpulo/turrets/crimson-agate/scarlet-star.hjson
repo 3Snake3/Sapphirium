@@ -15,6 +15,10 @@ shoot: {
         }
     ]
 }
+drawer: {
+type: DrawTurret
+basePrefix: "crimson-agate-"
+}
 recoil: 2
 rotateSpeed: 3
 targetAir: false

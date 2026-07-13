@@ -7,6 +7,10 @@ shoot: {
 shots: 6
 shotDelay: 6
 }
+drawer: {
+type: DrawTurret
+basePrefix: "fire-"
+}
 shootEffect: {
     type: MultiEffect
     effects: [

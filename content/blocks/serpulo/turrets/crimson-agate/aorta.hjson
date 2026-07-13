@@ -117,6 +117,7 @@ ammoTypes: {
 research: bloodlust
 drawer: {
     type: DrawTurret
+    basePrefix: "crimson-agate-"
     parts: [
         {
             type: RegionPart

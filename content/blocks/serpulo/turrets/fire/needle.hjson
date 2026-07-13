@@ -4,6 +4,10 @@ recoil: 6
 shootY: 0.75
 shake: 6
 shootSound: shootOmura
+drawer: {
+type: DrawTurret
+basePrefix: "fire-"
+}
 targetGround: true
 targetAir: true
 rotateSpeed: 2.5

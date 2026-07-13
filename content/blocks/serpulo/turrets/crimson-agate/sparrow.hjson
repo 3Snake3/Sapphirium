@@ -11,6 +11,10 @@ rotateSpeed: 8
 consumes: {
     power: 4.5
 }
+drawer: {
+type: DrawTurret
+basePrefix: "crimson-agate-"
+}
 targetGround: false
 range: 120
 heatColor: ff0000

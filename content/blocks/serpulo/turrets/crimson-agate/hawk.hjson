@@ -15,6 +15,10 @@ cooldownTime: 0.03
 consumes: {
     power: 7.5
 }
+drawer: {
+type: DrawTurret
+basePrefix: "crimson-agate-"
+}
 shake: 3
 smokeEffect: none
 heatColor: ff0000
