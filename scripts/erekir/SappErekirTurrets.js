@@ -2,7 +2,7 @@ const items = require("SappItems");
 const statuses = require("SappStatuses");
 const statusStat = require("serpulo/SappPayloadBlocks");
 var additionally = new Stat("additionally", StatCat.function);
-var crackleExtra = new Stat("crackleExtra", StatCat.function);
+var crackleExtra = new Stat("crackleextra", StatCat.function);
 
 //topaz branch
 var thrustBullet = extend(BasicBulletType, { 
