@@ -155,13 +155,13 @@ frontColor: ffffff
 hitColor: ff7272
 trailColor: ff7272
 backColor: fff7272
-lifetime: 20
+lifetime: 34
 trailLength: 12
 trailWidth: 2.5
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 homingPower: 10
-homingRange: 24
+homingRange: 40
 pierce: true
 pierceCap: 3
 hittable: false

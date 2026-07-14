@@ -955,29 +955,31 @@ var disperseSpawner = extend(EmptyBulletType, {
 });
 
 disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
-	updateTimer: 0,
+	creload: 0,
 	handleItem(source, item){
 		this.super$handleItem(source, item);
-		this.updateTimer += Time.delta;
+		this.creload++;
 		if(this.hasAmmo() && this.isActive() && this.isShooting && item == items.ruby){
 			Units.nearbyEnemies(this.team, this.x, this.y, disperse.range, u => {
-			if(this.updateTimer == 30){
+			if(this.creload == 30){
 				disperseSpawner.create(this, this.x + Mathf.random(disperse.range / 4), this.y + Mathf.random(disperse.range / 4), Mathf.random(0, 360));
-				this.updateTimer = 0;
+				
 			}
-			if(this.updateTimer == 60){
+			if(this.creload == 60){
 				disperseSpawner.create(this, this.x - Mathf.random(disperse.range / 4), this.y - Mathf.random(disperse.range / 4), Mathf.random(0, 360));
-				this.updateTimer = 0;
+				
 			}
-			if(this.updateTimer == 90){
+			if(this.creload == 90){
 				disperseSpawner.create(this, this.x - Mathf.random(disperse.range / 4), this.y + Mathf.random(disperse.range / 4), Mathf.random(0, 360));
-				this.updateTimer = 0;
+				
 			}
-			if(this.updateTimer >= 120){
+			if(this.creload == 120){
 				disperseSpawner.create(this, this.x + Mathf.random(disperse.range / 4), this.y - Mathf.random(disperse.range / 4), Mathf.random(0, 360));
-				this.updateTimer = 0;
+				
 			}
-			else this.updateTimer++;
+			else if(this.creload >= 120){
+			  this.creload = 0;
+			}
 			});
 			}
 			}
