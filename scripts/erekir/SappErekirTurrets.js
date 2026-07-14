@@ -947,7 +947,7 @@ var disperseWave = extend(WaveEffect, {
 var disperseSpawner = extend(EmptyBulletType, {
 	lifetime: 1,
 	damage: 0,
-	despawnSound: Sounds.disperseShoot,
+	despawnSound: Sounds.shootDisperse,
 	despawnEffect: disperseWave,
     fragRandomSpread: 45,
     fragBullets: 1,
