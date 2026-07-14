@@ -151,10 +151,10 @@ shrinkY: 0.3
 sprite: sapphirium-large-shell
 collidesGround: false
 collidesTiles: false
-frontColor: ffffff
-hitColor: ff7272
-trailColor: ff7272
-backColor: fff7272
+frontColor: fc8e6d
+hitColor: f25555
+trailColor: f25555
+backColor: f25555
 lifetime: 34
 trailLength: 12
 trailWidth: 2.5

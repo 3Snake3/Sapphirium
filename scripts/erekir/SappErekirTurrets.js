@@ -958,7 +958,7 @@ var disperseSpawner2 = extend(EmptyBulletType, {
 	damage: 0,
 	despawnEffect: disperseWave,
     intervalBullets: 1,
-    intervalRandomSpread: 90,
+    intervalRandomSpread: 360,
     bulletInterval: 9,
     intervalBullet: extend(EmptyBulletType, {
     speed: 10,
@@ -977,7 +977,7 @@ disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
 		this.super$handleItem(source, item);
 		this.updateTimer += Time.delta;
 		if(this.hasAmmo() && this.isActive() && this.isShooting && item == items.ruby){
-			if(this.updateTimer >= 60){
+			if(this.updateTimer >= 9){
 				Units.nearbyEnemies(this.team, this.x, this.y, disperse.range, u => {
 				disperseSpawner2.create(this, this.x, this.y, this.rotation);
 				});
