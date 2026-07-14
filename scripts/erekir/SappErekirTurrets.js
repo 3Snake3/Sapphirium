@@ -886,24 +886,102 @@ oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
 //Vanilla ammo
 
 let disperse = Blocks.disperse;
+var disperseExplosion = new MultiEffect(
+      extend(WaveEffect, {
+      	lifetime: 15,
+          sizeFrom: 24,
+          sizeTo: 64,
+          colorFrom: Color.valueOf("fc8e6d"),
+          colorTo: Color.valueOf("fc8e6d"),
+          }),
+       extend(ParticleEffect, {
+       	lifetime: 45,
+           length: 64,
+           sizeFrom: 6,
+           sizeTo: 0,
+           interp: Interp.circleOut,
+           sizeInterp: Interp.circleOut,
+           particles: 8,
+           colorFrom: Color.valueOf("fc8e6d70"),
+           colorTo: Color.valueOf("fc8e6d70"),
+           }));
+
+var disperseRubyShell = extend(MissileBulletType, {
+	sprite: "sapphirium-large-shell",
+	speed: 5,
+	lifetime: 50,
+	damage: 24,
+	pierceArmor: true,
+	collidesGround: false,
+	collidesTiles: false,
+	hittable: false,
+	absorbable: false,
+	splashDamage: 24,
+	splashDamageRadius: 64,
+	trailRotation: true,
+	trailEffect: Fx.disperseTrail,
+	trailLength: 24,
+	trailWidth: 3,
+	width: 16,
+	height: 20,
+	hitShake: 4,
+	hitColor: Color.valueOf("f25555"),
+	backColor: Color.valueOf("f25555"),
+	trailColor: Color.valueOf("f25555"),
+	frontColor: Color.valueOf("fc8e6d"),
+	homingPower: 0.7,
+	homingRange: 300,
+	hitEffect: disperseExplosion,
+    despawnEffect: disperseExplosion,
+    accel: 0.01,
+    status: statuses.wraith,
+    statusDuration: 99999,
+});
+var disperseWave = extend(WaveEffect, {
+		lifetime: 10,
+		sizeFrom: 4,
+		sizeTo: 0,
+		colorFrom: Color.valueOf("fc8e6d"),
+        colorTo: Color.valueOf("fc8e6d"),
+        });
+var disperseSpawner = extend(EmptyBulletType, {
+	lifetime: 1,
+	damage: 0,
+	despawnSound: Sounds.disperseShoot,
+	despawnEffect: disperseWave,
+    fragRandomSpread: 45,
+    fragBullets: 1,
+    fragBullet: disperseRubyShell,
+});
+
 disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
-  updateTimer: 0,
-  handleItem(source, item){
-    this.super$handleItem(source, item);
-    this.updateTimer += Time.delta;
-    if(this.isActive && this.isShooting && this.hasAmmo() && item == items.ruby){
-      if(this.updateTimer >= 9){
-        Units.nearbyEnemies(this.team, this.x, this.y, disperse.range, e => {
-          if(!e.type.drawMinimap){
-          e.apply(statuses.wraith, 99999)
-          }
-        })
-        this.updateTimer = 0;
-      }
-      else this.updateTimer++;
-    }
-  }
-})
+	updateTimer: 0,
+	handleItem(source, item){
+		this.super$handleItem(source, item);
+		this.updateTimer += Time.delta;
+		if(this.hasAmmo() && this.isActive() && this.isShooting && item == items.ruby){
+			Units.nearbyEnemies(this.team, this.x, this.y, disperse.range, u => {
+			if(this.updateTimer == 30){
+				disperseSpawner.create(this, this.x + Mathf.random(disperse.range / 4), this.y + Mathf.random(disperse.range / 4), Mathf.random(0, 360));
+				this.updateTimer = 0;
+			}
+			if(this.updateTimer == 60){
+				disperseSpawner.create(this, this.x - Mathf.random(disperse.range / 4), this.y - Mathf.random(disperse.range / 4), Mathf.random(0, 360));
+				this.updateTimer = 0;
+			}
+			if(this.updateTimer == 90){
+				disperseSpawner.create(this, this.x - Mathf.random(disperse.range / 4), this.y + Mathf.random(disperse.range / 4), Mathf.random(0, 360));
+				this.updateTimer = 0;
+			}
+			if(this.updateTimer >= 120){
+				disperseSpawner.create(this, this.x + Mathf.random(disperse.range / 4), this.y - Mathf.random(disperse.range / 4), Mathf.random(0, 360));
+				this.updateTimer = 0;
+			}
+			else this.updateTimer++;
+			});
+			}
+			}
+			});
 
 var colorLerp = Color.valueOf("ea8878").lerp(Pal.redLight, 0.5);
 const titanThoriumAmmo = extend(ArtilleryBulletType, 2.5, 350, "shell", {

@@ -13,10 +13,6 @@ health: 1200
 consumes: {
 power: 16
 }
-drawer: {
-type: DrawTurret
-basePrefix: "fire-"
-}
 reload: 50
 inaccuracy: 9
 rotateSpeed: 6
@@ -608,6 +604,7 @@ fragBullet: {
 }
 drawer: {
 type: DrawTurret
+basePrefix: "fire-"
 parts: [
 {
 type: RegionPart

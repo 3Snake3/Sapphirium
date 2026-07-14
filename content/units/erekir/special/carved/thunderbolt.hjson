@@ -13,6 +13,8 @@ engineSize: 1.5
 faceTarget: false
 circleTarget: true
 alwaysShootWhenMoving: true
+omniMovement: false
+circleTargetRadius: 100
 
 abilities: [
 {
@@ -50,7 +52,7 @@ createChance: 0.15
 {
 x: 0
 y: 0
-reload: 80
+reload: 10
 shootCone: 180
 shootSound: none
 mirror: false
@@ -71,6 +73,7 @@ radius: 180
 splashDamage: 180
 splashDamageRadius: 32
 scaledSplashDamage: true
+splashDamagePierce: true
 collides: false
 absorbable: false
 collidesTiles: false

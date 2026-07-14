@@ -41,15 +41,16 @@ type: ShieldRegenFieldAbility
 max: 800
 amount: 80
 reload: 180
-radius: 800
+range: 800
 }
 {
 type: ForceFieldAbility
-radius: 800
+radius: 40
 max: 800
 regen: 0.2
 cooldown: 600
-sides: 8
+sides: 4
+rotation: 45
 }
 {
 type: UnitSpawnAbility
