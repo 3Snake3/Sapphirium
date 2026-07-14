@@ -2,6 +2,7 @@ const items = require("SappItems");
 const statuses = require("SappStatuses");
 const statusStat = require("serpulo/SappPayloadBlocks");
 var additionally = new Stat("additionally", StatCat.function);
+var crackleExtra = new Stat("crackleExtra", StatCat.function);
 
 //topaz branch
 var thrustBullet = extend(BasicBulletType, { 
@@ -439,7 +440,7 @@ const crackle = extend(ItemTurret, "crackle", {
 		this.stats.add(Stat.repairSpeed, 14, StatUnit.seconds);
 		this.stats.add(minHeal, 3, StatUnit.percent);
 		this.stats.add(maxHeal, 18, StatUnit.percent);
-		this.stats.add(additionally, StatValues.ammo(ObjectMap.of(items.carvedAlloy, aoePlaceholder)));
+		this.stats.add(crackleExtra, StatValues.ammo(ObjectMap.of(items.carvedAlloy, aoePlaceholder)));
 	},
 });
 crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
@@ -502,7 +503,7 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
                 Units.nearbyEnemies(this.team, this.x, this.y, crackle.range, other => {
                 other.apply(statuses.shockStun, 10);
                 Fx.shockwave.at(this.x, this.y, this.rotation);
-                Fx.chainEmp.at(other.x, other.y, 0, Color.valueOf("80a8ff"), other);
+                Fx.chainEmp.at(this.x, this.y, 0, Color.valueOf("80a8ff"), other);
                 });
                 
              }
@@ -908,7 +909,7 @@ var disperseExplosion = new MultiEffect(
 
 var disperseRubyShell = extend(MissileBulletType, {
 	sprite: "sapphirium-large-shell",
-	speed: 5,
+	speed: 8,
 	lifetime: 50,
 	damage: 24,
 	pierceArmor: true,
@@ -971,6 +972,12 @@ var disperseSpawner2 = extend(EmptyBulletType, {
 })
 });
 
+disperse = extend(ItemTurret, "disperse", {
+  setStats(){
+    this.super$setStats();
+    this.stats.add(additionally, StatValues.ammo(ObjectMap.of(items.ruby, disperseRubyShell)));
+  }
+})
 disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
 	updateTimer: 0,
 	handleItem(source, item){
