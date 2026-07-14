@@ -13,6 +13,7 @@ const energyFieldAbility = extend(EnergyFieldAbility, 180, 30, 800, {
 	status: statuses.shockStun,
 	statusDuration: 1,
 	hitBuildings: false,
+	displayHeal: false,
 	healPercent: 0,
 	maxTargets: 40,
 	localized(){
@@ -20,8 +21,16 @@ const energyFieldAbility = extend(EnergyFieldAbility, 180, 30, 800, {
 		}
 });
 
-var carvedShieldRegen = extend(ShieldRegenFieldAbility, 80, 800, 180, 800, {});
-var carvedForceField = extend(ForceFieldAbility, 800, 0.2, 800, 600, {});
+var carvedShieldRegen = extend(ShieldRegenFieldAbility, 80, 800, 180, 800, {
+  localized(){
+    return Core.bundle.get("ability.shieldregenfield")
+  }
+});
+var carvedForceField = extend(ForceFieldAbility, 800, 0.2, 800, 600, {
+  localized() {
+    return Core.bundle.get("ability.forcefield")
+  }
+});
 
 var carvedAbilities = abilities.addAll(energyFieldAbility, carvedShieldRegen, carvedForceField);
 

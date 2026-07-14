@@ -19,8 +19,8 @@ const emptiness = extend(UnitType, "emptiness", {});
 emptiness.constructor = () => extend(MechUnit, {});
 const shadow = extend(UnitType, "shadow", {});
 shadow.constructor = () => extend(MechUnit, {});
-const Void = extend(UnitType, "void", {});
-Void.constructor = () => extend(MechUnit, {});
+const voidd = extend(UnitType, "void", {});
+voidd.constructor = () => extend(MechUnit, {});
 const nihil = extend(UnitType, "nihil", {});
 nihil.constructor = () => extend(MechUnit, {});
 
