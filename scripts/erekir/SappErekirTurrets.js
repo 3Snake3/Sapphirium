@@ -972,12 +972,6 @@ var disperseSpawner2 = extend(EmptyBulletType, {
 })
 });
 
-disperse = extend(ItemTurret, "disperse", {
-  setStats(){
-    this.super$setStats();
-    this.stats.add(additionally, StatValues.ammo(ObjectMap.of(items.ruby, disperseRubyShell)));
-  }
-})
 disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
 	updateTimer: 0,
 	handleItem(source, item){
