@@ -953,37 +953,40 @@ var disperseSpawner = extend(EmptyBulletType, {
     fragBullets: 1,
     fragBullet: disperseRubyShell,
 });
+var disperseSpawner2 = extend(EmptyBulletType, {
+	lifetime: 60,
+	damage: 0,
+	despawnEffect: disperseWave,
+    intervalBullets: 1,
+    intervalRandomSpread: 90,
+    bulletInterval: 9,
+    intervalBullet: extend(EmptyBulletType, {
+    speed: 10,
+	lifetime: 2.0875,
+	damage: 0,
+	despawnSound: Sounds.shootDisperse,
+	despawnEffect: disperseWave,
+    fragBullets: 1,
+    fragBullet: disperseSpawner,
+})
+});
 
 disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
-	creload: 0,
+	updateTimer: 0,
 	handleItem(source, item){
 		this.super$handleItem(source, item);
-		this.creload++;
+		this.updateTimer += Time.delta;
 		if(this.hasAmmo() && this.isActive() && this.isShooting && item == items.ruby){
-			Units.nearbyEnemies(this.team, this.x, this.y, disperse.range, u => {
-			if(this.creload == 30){
-				disperseSpawner.create(this, this.x + Mathf.random(disperse.range / 4), this.y + Mathf.random(disperse.range / 4), Mathf.random(0, 360));
-				
+			if(this.updateTimer >= 60){
+				Units.nearbyEnemies(this.team, this.x, this.y, disperse.range, u => {
+				disperseSpawner2.create(this, this.x, this.y, this.rotation);
+				});
+				this.updateTimer = 0;
+				}
+				else this.updateTimer++;
 			}
-			if(this.creload == 60){
-				disperseSpawner.create(this, this.x - Mathf.random(disperse.range / 4), this.y - Mathf.random(disperse.range / 4), Mathf.random(0, 360));
-				
-			}
-			if(this.creload == 90){
-				disperseSpawner.create(this, this.x - Mathf.random(disperse.range / 4), this.y + Mathf.random(disperse.range / 4), Mathf.random(0, 360));
-				
-			}
-			if(this.creload == 120){
-				disperseSpawner.create(this, this.x + Mathf.random(disperse.range / 4), this.y - Mathf.random(disperse.range / 4), Mathf.random(0, 360));
-				
-			}
-			else if(this.creload >= 120){
-			  this.creload = 0;
-			}
-			});
-			}
-			}
-			});
+		}
+	});
 
 var colorLerp = Color.valueOf("ea8878").lerp(Pal.redLight, 0.5);
 const titanThoriumAmmo = extend(ArtilleryBulletType, 2.5, 350, "shell", {
