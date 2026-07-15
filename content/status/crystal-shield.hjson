@@ -1,0 +1,14 @@
+name: crystal-shield
+healthMultiplier: 4
+speedMultiplier: 0.7
+effect: {
+particles: 1
+region: sapphirium-rhombus
+sizeFrom: 4
+sizeTo: 0
+lifetime: 30
+length: 0
+colorFrom: d1efff
+colorTo: d1efff
+}
+damage: -0.8

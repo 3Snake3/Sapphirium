@@ -3,6 +3,7 @@ health: 1600
 armor: 16
 rotateSpeed: 0
 itemCapacity: 0
+drawCell: false
 speed: 0
 targetAir: false
 healColor: d1efff
@@ -17,7 +18,7 @@ spawnTime: 1800
 
 weapons: [
 {
-name: cubing-artillery
+name: curbing-artillery
 x: 0
 rotate: true
 rotateSpeed: 2
@@ -39,6 +40,8 @@ lifetime: 80
 damage: 44
 splashDamage: 64
 splashDamageRadius: 32
+status: crystallization
+statusDuration: 120
 hitShake: 2
 backColor: d1efff
 hitColor: d1efff

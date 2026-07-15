@@ -64,6 +64,7 @@ shootEffect: shootBigColor
 status: paganism
 statusDuration: 300
 spawnBulletRandomSpread: 45
+showStats: true
 spawnBullets: [
 {
 type: LightningBulletType

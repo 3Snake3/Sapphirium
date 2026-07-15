@@ -95,8 +95,10 @@ shootType: {
     sprite: circle-bullet
     width: 12
     height: 12
-    backColor: d94848
-    frontColor: ff6e6e
+    backColor: ff6e6e
+    frontColor: ffffff
+    shrinkX: 0
+    shrinkY: 0
     damage: 44
     speed: 6
     lifetime: 45
@@ -107,26 +109,49 @@ shootType: {
     collidesAir: false
     hitSound: shootLaser
     fragBullets: 3
-    fragSpread: 120
+    fragRandomSpread: 360
+    fragVelocityMin: 0.2
+    fragVelocityMax: 2
+    fragLifeMin: 0.2
+    fragLifeMax: 2
+    fragBullet: {
+    sprite: circle-bullet
+    width: 12
+    height: 12
+    backColor: ff6e6e
+    frontColor: ffffff
+    shrinkX: 0
+    shrinkY: 0
+    damage: 44
+    speed: 6
+    lifetime: 15
+    splashDamage: 36
+    splashDamageRadius: 40
+    reflectable: false
+    hittable: false
+    collidesAir: false
+    hitSound: shootLaser
+    fragBullets: 6
+    fragSpread: 90
     fragBullet: {
         type: LaserBulletType
         length: 40
-        width: 16
+        width: 24
         hitEffect: hitLancer
         despawnEffect: none
         hitSize: 5
-        damage: 33
+        damage: 20
         colors: ["8a3340", "d94848", "ff6e6e"]
         collidesAir: false
-        hitSound: spark
         status: passive-bloodrage
     }
-    lightning: 2
+    }
+    lightning: 4
     lightningCone: 360
     lightningAngle: 45
-    lightningColor: d94848
+    lightningColor: ff6e6e
     lightningDamage: 14
-    lightningLength: 10
+    lightningLength: 16
     status: active-bloodrage
     trailWidth: 6
     trailLength: 10

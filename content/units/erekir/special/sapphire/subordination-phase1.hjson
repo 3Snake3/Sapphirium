@@ -43,23 +43,7 @@ spawnTime: 1200
 }
 {
 type: StatusFieldAbility
-effect: {
-name: crystal-shield
-healthMultiplier: 4
-speedMultiplier: 0.7
-show: false
-effect: {
-particles: 1
-region: sapphirium-rhombus
-sizeFrom: 4
-sizeTo: 0
-lifetime: 30
-length: 0
-colorFrom: d1efff
-colorTo: d1efff
-}
-damage: -0.8
-}
+effect: crystal-shield
 activeEffect: {
 type: WaveEffect
 sides: 6
@@ -78,9 +62,9 @@ colorFrom: d1efff
 colorTo: d1efff
 interp: circleOut
 }
-duration: 180
+duration: 600
 reload: 300
-range: 64
+range: 80
 color: d1efff
 }
 {
@@ -140,9 +124,9 @@ mirror: false
 baseRotation: 180
 bullet: {
 type: ContinuousFlameBulletType
-width: 3
+width: 5
 drawFlare: false
-length: 10
+length: 16
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 0
@@ -151,7 +135,7 @@ collidesTiles: false
 }
 }
 {
-x: -6.5
+x: 6.5
 y: -13
 alwaysShooting: true
 alwaysContinuous: true
@@ -160,9 +144,9 @@ mirror: true
 baseRotation: -135
 bullet: {
 type: ContinuousFlameBulletType
-width: 3
+width: 5
 drawFlare: false
-length: 10
+length: 16
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 0

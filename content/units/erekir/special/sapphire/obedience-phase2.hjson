@@ -5,6 +5,7 @@ armor: 14
 range: 180
 hitSize: 34
 hovering: true
+drawCell: false
 healColor: d1efff
 immunities: [crystallization, unleash]
 

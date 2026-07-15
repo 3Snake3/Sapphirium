@@ -1,7 +1,7 @@
 name: crystallization
 damage: 0.5
 speedMultiplier: 0.02
-reloadMultiplier: 0
+reloadMultiplier: 0.02
 effect: {
 particles: 1
 sizeFrom: 3.5

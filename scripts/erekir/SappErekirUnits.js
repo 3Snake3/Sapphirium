@@ -1752,7 +1752,7 @@ const ooze = extend(ErekirUnitType, "ooze", {
 });
 
 ooze.constructor = () => extend(UnitEntity, {});
-ooze.immunities.addAll(statuses.unleash, statuses.truesight);
+ooze.immunities.addAll(statuses.unleash, statuses.truesight, StatusEffects.slow);
 ooze.weapons.addAll(oozeWeapon, oozeWeaponSec, oozeCenterWeapon, blurWeapon, oozeWraithWeapon);
 ooze.abilities.addAll(oppressionFieldAbility);
 ooze.parts.addAll(redSphere);
@@ -2963,18 +2963,51 @@ const RegenFieldAbility = extend(Ability, {
       }
 });
 
-const subPhase2part0 = extend(ErekirUnitType, "subordination-phase2-part0", {});
-subPhase2part0.constructor = () => extend(UnitEntity, {});
+const shieldAbility = extend(Ability, {
+  update(unit){
+    timer += Time.delta;
+    if(timer >= 1200){
+      if(unit.shield < 20000){
+        unit.shield = Math.min(unit.shield + 20000, 20000)
+        unit.shieldAlpha = 1;
+        Fx.shieldApply.at(unit.x, unit.y, 0, unit.team.color, true ? unit : null)
+      }
+      timer = 0;
+    }
+  },
+  addStats(t){
+   t.add(Core.bundle.get("ability.shield.description"));
+   t.row();
+   t.add("[lightgray]" + Stat.reload.localized() + ": [white]" + Strings.autoFixed(60 / 1200, 2) + " " + StatUnit.perSecond.localized());
+   t.row();
+   t.add(this.abilityStat("shield", Strings.autoFixed(20000, 2)));
+  }
+})
 
-const subPhase2part1= extend(ErekirUnitType, "subordination-phase2-part1", {});
-subPhase2part1.constructor = () => extend(UnitEntity, {});
+const subPhase3part0 = extend(ErekirUnitType, "subordination-phase3-part0", {});
+subPhase3part0.constructor = () => extend(UnitEntity, {});
 
-const subPhase2part2= extend(ErekirUnitType, "subordination-phase2-part2", {});
-subPhase2part2.constructor = () => extend(UnitEntity, {});
+const subPhase3part1 = extend(ErekirUnitType, "subordination-phase3-part1", {});
+subPhase3part1.constructor = () => extend(UnitEntity, {});
+
+const subPhase3part2 = extend(ErekirUnitType, "subordination-phase3-part2", {});
+subPhase3part2.constructor = () => extend(UnitEntity, {});
 			
-const subordinationPhase2 = extend(ErekirUnitType, "subordination-phase2", {});
-subordinationPhase2.constructor = () => extend(LegsUnit, {});
-subordinationPhase2.abilities.addAll(RegenFieldAbility, extend(SpawnDeathAbility, subPhase2part0, 1, 8, {}), extend(SpawnDeathAbility, subPhase2part1, 1, 8, {}), extend(SpawnDeathAbility, subPhase2part2, 1, 8, {}));
+const subordinationPhase3 = extend(ErekirUnitType, "subordination-phase3", {});
+subordinationPhase3.constructor = () => extend(LegsUnit, {});
+
+const subP2Repair = extend(UnitSpawnAbility, subordinationPhase3, 2700, 0, 0, {
+  localized(){
+    return Core.bundle.format("ability.unitspawn", subordinationPhase3.localizedName);
+  }
+})
+
+const subPhase2 = extend(ErekirUnitType, "subordinationPhase2", {});
+subPhase2.constructor = () => extend(UnitEntity, {});
+subPhase2.abilities.addAll(shieldAbility, subP2Repair)
+
+subordinationPhase3.constructor = () => extend(LegsUnit, {});
+subordinationPhase3.abilities.addAll(RegenFieldAbility, extend(SpawnDeathAbility, subPhase3part0, 1, 8, {}), extend(SpawnDeathAbility, subPhase3part1, 1, 8, {}), extend(SpawnDeathAbility, subPhase3part2, 1, 8, {}));
 
 const thunderbolt = extend(ErekirUnitType, "thunderbolt", {});
 thunderbolt.constructor = () => extend(UnitEntity, {});

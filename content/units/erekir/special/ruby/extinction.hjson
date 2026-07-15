@@ -39,6 +39,7 @@ abilities: [
 {
 type: SpawnDeathAbility
 unit: extinctionSmokeChance
+display: false
 spread: 0
 }
 ]
