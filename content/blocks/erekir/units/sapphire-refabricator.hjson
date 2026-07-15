@@ -1,4 +1,4 @@
-requirements: []
+
 category: units
 size: 3
 regionSuffix: -dark
@@ -18,3 +18,8 @@ upgrades: [
 ]
 shownPlanets: [erekir]
 buildVisibility: sandboxOnly
+requirements: [
+sapphire/220
+tungsten/130
+silicon/100
+]

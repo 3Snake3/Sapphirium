@@ -12,3 +12,10 @@ category: effect
 size: 3
 category: effect
 buildVisibility: sandboxOnly
+shownPlanets: [erekir]
+requirements: [
+tungsten/1000
+silicon/1000
+carbide/500
+carved-alloy/300
+]

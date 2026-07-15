@@ -19,7 +19,7 @@ range: 200
 ammoTypes: {
     copper: {
         sprite: sapphirium-dartt
-        width: 10
+        width: 4
         height: 13
         damage: 9
         speed: 5
@@ -31,7 +31,7 @@ ammoTypes: {
     }
     graphite: {
         sprite: sapphirium-dartt
-        width: 10
+        width: 4
         height: 13
         damage: 16
         speed: 4.5
@@ -43,7 +43,7 @@ ammoTypes: {
     }
     metaglass: {
         sprite: sapphirium-dartt
-        width: 10
+        width: 4
         height: 13
         damage: 12
         speed: 7
@@ -66,7 +66,7 @@ ammoTypes: {
     }
     thorium: {
         sprite: sapphirium-dartt
-        width: 10
+        width: 4
         height: 13
         damage: 24
         speed: 4.5
@@ -79,7 +79,7 @@ ammoTypes: {
     }
     silicon: {
         sprite: sapphirium-dartt
-        width: 10
+        width: 4
         height: 13
         damage: 14
         speed: 5
@@ -92,7 +92,7 @@ ammoTypes: {
     }
     pyratite: {
         sprite: sapphirium-dartt
-        width: 10
+        width: 4
         height: 13
         damage: 14
         speed: 5

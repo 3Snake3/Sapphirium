@@ -3031,6 +3031,7 @@ module.exports = {
 	curbingPhase1: curbingPhase1,
 	obediencePhase1: obediencePhase1,
 	subordinationPhase1: subordinationPhase1,
-	subordinationPhase2: subordinationPhase2,
+	subordinationPhase3: subordinationPhase3,
+	subPhase2: subPhase2,
 	thunderbolt: thunderbolt
 }

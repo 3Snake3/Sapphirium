@@ -17,4 +17,8 @@ consumes: {
 power: 2
 }
 buildVisibility: sandboxOnly
-requirements: []
+requirements: [
+silicon/200
+sapphire/180
+tungsten/100
+]

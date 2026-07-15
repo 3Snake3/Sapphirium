@@ -567,6 +567,19 @@ surgeStoneWall.buildType = () => extend(Wall.WallBuild, surgeStoneWall, {
                     lLightning.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
                 }
                 lightningSound.at(this.tile, Mathf.random(0.9, 1.1));
+                Units.nearby(this.team, this.x, this.y, 32, 32, e => {
+                if(e.team != this.team && e.hittable()){
+              var absorber = Damage.findAbsorber(this.team, this.x, this.y, e.x, e.y);
+                if(absorber != null){
+                            return;
+                        }
+
+                        surgeEmpSpark.at(e.x, e.y, this.angleTo(e), Pal.surge);
+                        Fx.chain.at(this.x, this.y, 0, Pal.surge, e);
+                        e.damage(24);
+                        e.apply(statuses.shockStun, 1);
+                }
+                });
             }
         }
         return true;
@@ -597,6 +610,19 @@ armedSurgeStoneWall.buildType = () => extend(PowerTurret.PowerTurretBuild, armed
                     lLightning.create(this, this.x, this.y, (360 / 4) * i + Mathf.random(16));
                 }
                 lightningSound.at(this.tile, Mathf.random(0.9, 1.1));
+                Units.nearby(this.team, this.x, this.y, 32, 32, e => {
+                if(e.team != this.team && e.hittable()){
+              var absorber = Damage.findAbsorber(this.team, this.x, this.y, e.x, e.y);
+                if(absorber != null){
+                            return;
+                        }
+
+                        surgeEmpSpark.at(e.x, e.y, this.angleTo(e), Pal.surge);
+                        Fx.chain.at(this.x, this.y, 0, Pal.surge, e);
+                        e.damage(24);
+                        e.apply(statuses.shockStun, 1);
+                }
+                });
             }
         }
         return true;

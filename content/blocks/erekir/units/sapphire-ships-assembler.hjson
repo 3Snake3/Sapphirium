@@ -8,4 +8,10 @@ liquids: [hydrogen/0.2, creotine/0.1]
 }
 shownPlanets: [erekir]
 buildVisibility: sandboxOnly
-requirements: []
+requirements: [
+thorium/1200
+silicon/1600
+sapphire/600
+tungsten/500
+carved-alloy/300
+]

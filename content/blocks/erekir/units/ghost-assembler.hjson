@@ -1,8 +1,8 @@
 requirements: [
-thorium/600
-tungsten/200
+thorium/1000
+tungsten/530
 ruby/300
-silicon/450
+silicon/1200
 carved-alloy/200
 ]
 regionSuffix: -dark

@@ -14,7 +14,7 @@ maxAmmo: 20
 shootSound: shootDuo
 ammoTypes: {
     copper: {
-        width: 9
+        width: 4
         height: 12
         sprite: sapphirium-dartt
         speed: 6
@@ -24,7 +24,7 @@ ammoTypes: {
         pierceCap: 1
     }
     dense-alloy: {
-        width: 9
+        width: 4
         height: 12
         sprite: sapphirium-dartt
         speed: 6
@@ -36,7 +36,7 @@ ammoTypes: {
         buildingDamageMultiplier: 1.15
     }
     graphite: {
-        width: 9
+        width: 4
         height: 12
         sprite: sapphirium-dartt
         speed: 6
@@ -47,7 +47,7 @@ ammoTypes: {
         ammoMultiplier: 1.5
     }
     metaglass: {
-        width: 9
+        width: 4
         height: 12
         sprite: sapphirium-dartt
         speed: 6
