@@ -1,0 +1,63 @@
+
+category: crafting
+ambientSound: loopCultivator
+ambientSoundVolume: 0.115
+craftTime: 80
+outputLiquid: hydrogen/0.06666666666
+outputItem: sapphirium-amethyst/2
+size: 3
+hasLiquids: true
+itemCapacity: 20
+liquidCapacity: 90
+maxEfficiency: 4
+heatRequirement: 10
+hasItems: true
+hasPower: true
+craftEffect: none
+consumes: {
+    power: 2.25
+    liquid: sapphirium-argon/0.15
+    items: {
+        items: [
+            sapphirium-sapphire/1
+	    graphite/4
+        ]
+    }
+}
+drawer: [
+    {
+        type: DrawRegion
+	suffix: -bottom
+    }
+    {
+        type: DrawLiquidTile
+        drawLiquid: sapphirium-argon
+	padding: 1
+    }
+    {
+        type: DrawCultivator
+	plantColor: 6c41b066
+	plantColorLight: db8cff
+	bottomColor: 6c41b000
+	timeScl: 35
+	strokeMin: 0
+	radius: 3
+	spread: 4
+	sides: 75
+	bubbles: 14
+        recurrence: 3.5
+    }
+    {
+        type: DrawDefault
+    }
+    {
+        type: DrawHeatInput
+    }
+]
+shownPlanets: [erekir]
+requirements: [
+  silicon/320
+  tungsten/220
+  sapphirium-topaz/185
+  surge-alloy/100
+]
