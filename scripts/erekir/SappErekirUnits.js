@@ -2992,9 +2992,10 @@ subPhase3part1.constructor = () => extend(UnitEntity, {});
 
 const subPhase3part2 = extend(ErekirUnitType, "subordination-phase3-part2", {});
 subPhase3part2.constructor = () => extend(UnitEntity, {});
-			
+
 const subordinationPhase3 = extend(ErekirUnitType, "subordination-phase3", {});
 subordinationPhase3.constructor = () => extend(LegsUnit, {});
+subordinationPhase3.abilities.addAll(RegenFieldAbility, extend(SpawnDeathAbility, subPhase3part0, 1, 8, {}), extend(SpawnDeathAbility, subPhase3part1, 1, 8, {}), extend(SpawnDeathAbility, subPhase3part2, 1, 8, {}));
 
 const subP2Repair = extend(UnitSpawnAbility, subordinationPhase3, 2700, 0, 0, {
   localized(){
@@ -3002,12 +3003,9 @@ const subP2Repair = extend(UnitSpawnAbility, subordinationPhase3, 2700, 0, 0, {
   }
 })
 
-const subPhase2 = extend(ErekirUnitType, "subordinationPhase2", {});
+const subPhase2 = extend(ErekirUnitType, "subordination-phase2", {});
 subPhase2.constructor = () => extend(UnitEntity, {});
 subPhase2.abilities.addAll(shieldAbility, subP2Repair)
-
-subordinationPhase3.constructor = () => extend(LegsUnit, {});
-subordinationPhase3.abilities.addAll(RegenFieldAbility, extend(SpawnDeathAbility, subPhase3part0, 1, 8, {}), extend(SpawnDeathAbility, subPhase3part1, 1, 8, {}), extend(SpawnDeathAbility, subPhase3part2, 1, 8, {}));
 
 const educationAssemblyDrone = extend(ErekirUnitType, "education-assembly-drone", {});
 educationAssemblyDrone.constructor = () => extend(BuildingTetherPayloadUnit, {});
