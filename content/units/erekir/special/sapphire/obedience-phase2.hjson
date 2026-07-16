@@ -8,7 +8,11 @@ hovering: true
 drawCell: false
 healColor: d1efff
 immunities: [crystallization, unleash]
-
+deathExplosionEffect: none
+playerControllable: false
+logicControllable: false
+allowedInPayloads: false
+deathSound: unitCreateBig
 weapons: [
 {
 name: obedience-p2-weapon

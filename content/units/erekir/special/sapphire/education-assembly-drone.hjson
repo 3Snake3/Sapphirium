@@ -21,6 +21,8 @@ type: HoverPart
 phase: 35
 x: 0
 y: 0
-color: ff6568
+radius: 16
+under: true
+color: ffd1efff
 }
 ]

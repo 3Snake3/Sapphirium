@@ -15,7 +15,11 @@ unit: curbing-phase1
 spawnTime: 1800
 }
 ]
-
+deathExplosionEffect: none
+playerControllable: false
+logicControllable: false
+allowedInPayloads: false
+deathSound: unitCreate
 weapons: [
 {
 name: curbing-artillery

@@ -3019,6 +3019,69 @@ educationBuilderDrone.constructor = () => extend(UnitEntity, {})
 const thunderbolt = extend(ErekirUnitType, "thunderbolt", {});
 thunderbolt.constructor = () => extend(UnitEntity, {});
 
+const placeholder = extend(ErekirUnitType, {
+  drawBody: false,
+  internal: true,
+  drawShields: false,
+  createWreck: false,
+  hidden: true,
+  targetable: false,
+  hittable: false,
+  deathExplosionEffect: Fx.none,
+  deathSound: Sounds.none,
+  speed: 0,
+  rotateSpeed: 0,
+  isEnemy: false,
+  bounded: false,
+  drawCell: false,
+  drawMinimap: false,
+  playerControllable: false,
+  logicControllable: false,
+});
+placeholder.constructor = () => extend(UnitEntity, {})
+
+const placeholder2 = extend(ErekirUnitType, {
+  drawBody: false,
+  internal: true,
+  drawShields: false,
+  createWreck: false,
+  hidden: true,
+  targetable: false,
+  hittable: false,
+  deathExplosionEffect: Fx.none,
+  deathSound: Sounds.none,
+  speed: 0,
+  rotateSpeed: 0,
+  isEnemy: false,
+  bounded: false,
+  drawCell: false,
+  drawMinimap: false,
+  playerControllable: false,
+  logicControllable: false,
+});
+placeholder2.constructor = () => extend(UnitEntity, {})
+
+const placeholder3 = extend(ErekirUnitType, {
+  drawBody: false,
+  internal: true,
+  drawShields: false,
+  createWreck: false,
+  hidden: true,
+  targetable: false,
+  hittable: false,
+  deathExplosionEffect: Fx.none,
+  deathSound: Sounds.none,
+  speed: 0,
+  rotateSpeed: 0,
+  isEnemy: false,
+  bounded: false,
+  drawCell: false,
+  drawMinimap: false,
+  playerControllable: false,
+  logicControllable: false,
+});
+placeholder3.constructor = () => extend(UnitEntity, {})
+
 module.exports = {
 	hound: hound,
 	rampage: rampage,
@@ -3040,5 +3103,8 @@ module.exports = {
 	subordinationPhase1: subordinationPhase1,
 	subordinationPhase3: subordinationPhase3,
 	subPhase2: subPhase2,
-	thunderbolt: thunderbolt
+	thunderbolt: thunderbolt,
+	placeholder: placeholder,
+	placeholder2: placeholder2,
+	placeholder3: placeholder3
 }

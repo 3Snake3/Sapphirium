@@ -2,28 +2,35 @@ health: 3000
 speed: 0
 rotateSpeed: 0
 drawCell: false
+deathExplosionEffect: none
+playerControllable: false
+logicControllable: false
+allowedInPayloads: false
+deathSound: unitCreateBig
 hitSize: 54
 immunities: [crystallization, unleash]
 hovering: true
-/*weapons: [
+weapons: [
 {
-name: shield
-x: 0
-y: 0
-display: false
-shootSound: none
-reload: 1200
-recoil: 0
-shootStatus: self-shield-regen
-shootStatusDuration: 5
+reload: 2701
+shoot: {
+firstShotDelay: 2701
+}
+rotate: false
 controllable: false
+mirror: false
+display: false
+x: 0
 alwaysShooting: true
 bullet: {
-type: EmptyBulletType
+killShooter: true
+sprite: sapphirium-none-bullet
+damage: 0
+speed: 0
 lifetime: 1
 hitEffect: none
 despawnEffect: none
+shootEffect: none
 }
 }
-]*/
-
+]
