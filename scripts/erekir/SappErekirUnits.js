@@ -3019,7 +3019,7 @@ educationBuilderDrone.constructor = () => extend(UnitEntity, {})
 const thunderbolt = extend(ErekirUnitType, "thunderbolt", {});
 thunderbolt.constructor = () => extend(UnitEntity, {});
 
-const placeholder = extend(ErekirUnitType, {
+const placeholder = extend(ErekirUnitType, "placeholder", {
   drawBody: false,
   internal: true,
   drawShields: false,
@@ -3040,7 +3040,7 @@ const placeholder = extend(ErekirUnitType, {
 });
 placeholder.constructor = () => extend(UnitEntity, {})
 
-const placeholder2 = extend(ErekirUnitType, {
+const placeholder2 = extend(ErekirUnitType, "placeholder2", {
   drawBody: false,
   internal: true,
   drawShields: false,
@@ -3061,7 +3061,7 @@ const placeholder2 = extend(ErekirUnitType, {
 });
 placeholder2.constructor = () => extend(UnitEntity, {})
 
-const placeholder3 = extend(ErekirUnitType, {
+const placeholder3 = extend(ErekirUnitType, "placeholder3", {
   drawBody: false,
   internal: true,
   drawShields: false,
