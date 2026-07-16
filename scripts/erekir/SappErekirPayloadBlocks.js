@@ -25,9 +25,13 @@ UnitAssembler.AssemblerUnitPlan(sappErekirUnits.raptor, 3600, PayloadStack.list(
 UnitAssembler.AssemblerUnitPlan(sappErekirUnits.maw, 14400, PayloadStack.list(sappErekirUnits.rampage, 6, sappErekirWalls.carvedWallLarge, 8))
 );
 
+const obedienceAssembler = extend(UnitAssembler, "obedience-assembler", {});
+obedienceAssembler.plans.add(
+UnitAssembler.AssemblerUnitPlan(sappErekirUnits.obediencePhase1, 3600, PayloadStack.list(sappErekirUnits.pacificationMove, 3, sappErekirWalls.sapphireWall, 4)),
+);
+
 const sapphireShipsAssembler = extend(UnitAssembler, "sapphire-ships-assembler", {});
 sapphireShipsAssembler.plans.add(
-UnitAssembler.AssemblerUnitPlan(sappErekirUnits.obediencePhase1, 3600, PayloadStack.list(sappErekirUnits.pacificationMove, 3, sappErekirWalls.sapphireWall, 4)),
 UnitAssembler.AssemblerUnitPlan(sappErekirUnits.subordinationPhase1, 14400, PayloadStack.list(sappErekirUnits.curbingPhase1, 4, sappErekirWalls.sapphireWallLarge, 6))
 );
 

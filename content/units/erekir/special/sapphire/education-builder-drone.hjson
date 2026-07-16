@@ -1,0 +1,23 @@
+aiController: BuilderAI
+flying: true
+speed: 7
+range: 130
+drag: 0.06
+accel: 0.11
+health: 400
+armor: 3
+rotateSpeed: 7
+engineSize: -1
+payloadCapacity: 0
+isEnemy: false
+allowedInPayloads: false
+buildSpeed: 2
+parts: [
+{
+type: HoverPart
+phase: 35
+x: 0
+y: 0
+color: ff6568
+}
+]

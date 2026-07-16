@@ -3009,6 +3009,15 @@ subPhase2.abilities.addAll(shieldAbility, subP2Repair)
 subordinationPhase3.constructor = () => extend(LegsUnit, {});
 subordinationPhase3.abilities.addAll(RegenFieldAbility, extend(SpawnDeathAbility, subPhase3part0, 1, 8, {}), extend(SpawnDeathAbility, subPhase3part1, 1, 8, {}), extend(SpawnDeathAbility, subPhase3part2, 1, 8, {}));
 
+const educationAssemblyDrone = extend(ErekirUnitType, "education-assembly-drone", {});
+educationAssemblyDrone.constructor = () => extend(BuildingTetherPayloadUnit, {});
+
+const educationAssemblyDroneT2 = extend(ErekirUnitType, "education-assembly-drone-tier2", {});
+educationAssemblyDroneT2.constructor = () => extend(BuildingTetherPayloadUnit, {})
+
+const educationBuilderDrone = extend(ErekirUnitType, "education-builder-drone", {});
+educationBuilderDrone.constructor = () => extend(UnitEntity, {})
+
 const thunderbolt = extend(ErekirUnitType, "thunderbolt", {});
 thunderbolt.constructor = () => extend(UnitEntity, {});
 

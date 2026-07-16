@@ -1,0 +1,17 @@
+regionSuffix: -dark
+category: units
+size: 5
+areaSize: 13
+droneType: education-aseembly-drone
+consumes: {
+power: 3
+liquids: [hydrogen/0.3, sapphirium-argon/0.3]
+}
+shownPlanets: [erekir]
+buildVisibility: sandboxOnly
+requirements: [
+thorium/800
+silicon/800
+sapphire/645
+tungsten/455
+]

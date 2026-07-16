@@ -1,0 +1,35 @@
+aiController: AssemblerAI
+flying: true
+speed: 2
+drag: 0.06
+accel: 0.11
+health: 180
+engineSize: -1
+payloadCapacity: 0
+targetable: false
+bounded: false
+isEnemy: false
+hidden: true
+useUnitCap: false
+logicControllable: false
+playerControllable: false
+allowedInPayloads: false
+createWreck: false
+parts: [
+{
+type: HoverPart
+phase: 35
+x: 0
+y: 0
+color: ff6568
+}
+]
+abilities: [
+{
+type: UnitSpawnAbility
+unit: education-builder-drone
+spawnTime: 2700
+spawnX: 0
+spawnY: 0
+}
+]
