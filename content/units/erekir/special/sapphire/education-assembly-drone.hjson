@@ -1,4 +1,4 @@
-aiController: AssemblerAI
+controller: AssemblerAI
 flying: true
 speed: 2
 drag: 0.06

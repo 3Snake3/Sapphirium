@@ -1,4 +1,4 @@
-aiController: BuilderAI
+controller: BuilderAI
 flying: true
 speed: 7
 range: 130
