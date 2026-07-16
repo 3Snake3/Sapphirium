@@ -2,7 +2,7 @@ regionSuffix: -dark
 category: units
 size: 5
 areaSize: 13
-droneType: education-aseembly-drone-tier2
+droneType: education-assembly-drone-tier2
 consumes: {
 power: 5
 liquids: [hydrogen/0.2, creotine/0.1]

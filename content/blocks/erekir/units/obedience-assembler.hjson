@@ -2,7 +2,7 @@ regionSuffix: -dark
 category: units
 size: 5
 areaSize: 13
-droneType: education-aseembly-drone
+droneType: education-assembly-drone
 consumes: {
 power: 3
 liquids: [hydrogen/0.3, sapphirium-argon/0.3]
