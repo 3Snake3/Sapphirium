@@ -32,7 +32,8 @@ UnitAssembler.AssemblerUnitPlan(sappErekirUnits.obediencePhase1, 3600, PayloadSt
 
 const sapphireShipsAssembler = extend(UnitAssembler, "sapphire-ships-assembler", {});
 sapphireShipsAssembler.plans.add(
-UnitAssembler.AssemblerUnitPlan(sappErekirUnits.placeholder, 60, PayloadStack.list(sappErekirUnits.placeholder2, 1, sappErekirUnits.placeholder3, 1), sappErekirUnits.subordinationPhase1, 14400, PayloadStack.list(sappErekirUnits.curbingPhase1, 4, sappErekirWalls.sapphireWallLarge, 6))
+UnitAssembler.AssemblerUnitPlan(sappErekirUnits.placeholder, 60, PayloadStack.list(sappErekirUnits.placeholder2, 1, sappErekirUnits.placeholder3, 1)),
+UnitAssembler.AssemblerUnitPlan(sappErekirUnits.subordinationPhase1, 14400, PayloadStack.list(sappErekirUnits.curbingPhase1, 4, sappErekirWalls.sapphireWallLarge, 6))
 );
 
 const faithAssembler = extend(UnitAssembler, "faith-assembler", {});
