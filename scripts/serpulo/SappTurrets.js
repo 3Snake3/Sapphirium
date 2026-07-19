@@ -838,14 +838,6 @@ const accentEmpSpark = new Effect(40, e => {
         });
     });
     
-const unlocked = new Effect(20, e => {
-        Draw.color(Pal.accent);
-
-        Angles.randLenVectors(e.id, 2, 1 + e.fin() * 2, (x, y) => {
-            Fill.square(e.x + x, e.y + y, e.fout() * 2.3 + 0.5);
-        });
-    });
-    
 const overdrive = new Stat("overdrive");
 const wireOverdriveAbility = extend(Ability, {
 	addStats(t){
@@ -861,17 +853,6 @@ const wireOverdriveAbility = extend(Ability, {
 });
 const wireOverdrive = new Seq();
 const wireOverdriveValue = wireOverdrive.add(wireOverdriveAbility);
-
-var unlock = extend(StatusEffect, "unlock", {
-	show: false,
-	healthMultiplier: 0.7,
-	damageMultiplier: 1.45,
-	speedMultiplier: 1.25,
-	reloadMultiplier: 1.3,
-	damage: -0.03,
-	effect: unlocked,
-	permanent: true
-});
 
 const wire = extend(PowerTurret, "wire", {
 setStats(){
@@ -1444,7 +1425,7 @@ pierce.buildType = () => extend(ItemTurret.ItemTurretBuild, pierce, {
                 Fx.chainEmp.at(this.x, this.y, 0, Pal.surge, unit);
                 }
                 else if(Mathf.chance(0.01)){
-				unit.apply(unlock, 180);
+				unit.apply(statuses.unlock, 180);
 				Sounds.uiUnlock.at(unit);
 				accentEmpSpark.at(unit.x, unit.y, this.angleTo(unit), Pal.surge);
                 Fx.chainEmp.at(this.x, this.y, 0, Pal.accent, unit);

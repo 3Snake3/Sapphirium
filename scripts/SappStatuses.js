@@ -100,25 +100,6 @@ const shockStun = extend(StatusEffect, "shock-stun", {
 	disarm: true,
 	transitionDamage: 12
 	})
-	
-const superShock = extend(StatusEffect, "super-shock", {
-	speedMultiplier: 0.001,
-	reloadMultiplier: 2,
-	update(unit, time){
-		this.super$update(unit, time);
-		if(!unit.type.flying){
-			unit.type.flying = true;
-			if(!unit.type.lowAltitude && unit.type.hitSize >= 20){
-			unit.type.lowAltitude = true;
-			}
-		}
-	},
-	onRemoved(unit){
-		if(unit.type.flying){
-			unit.type.flying = false;
-			}
-		}
-	});
 
 const stun = extend(StatusEffect, "stunne", {
 	speedMultiplier: 0.001,
@@ -162,6 +143,16 @@ const overload = extend(StatusEffect, "overload", {});
 
 const unleash = extend(StatusEffect, "unleash", {});
 
+const unlock = extend(StatusEffect, "unlock", {
+	healthMultiplier: 0.7,
+	damageMultiplier: 1.45,
+	speedMultiplier: 1.25,
+	reloadMultiplier: 1.3,
+	damage: -0.03,
+	effect: unlocked,
+	permanent: true
+});
+
 const deepWounds = extend(StatusEffect, "deep-wounds", {});
 
 const paganism = extend(StatusEffect, "paganism", {
@@ -176,7 +167,6 @@ const execute = extend(StatusEffect, "execute", {
 	reactive: true,
 });
 
-const forceField = new ForceFieldAbility(60, 0.1, 200, 60 * 5);
 const blur = extend(StatusEffect, "blur", {
     init() {
         this.affinity(wraith, (unit, result, time) => {
@@ -226,7 +216,7 @@ const crystalShield = extend(StatusEffect, "crystal-shield", {
 		if(unit.damaged()){
 			unit.heal((unit.maxHealth * 0.03 / 100) * Time.delta);
 			}
-			if((unit.maxHealth < 7 / 100) && unit.shield < 600){
+			if(unit.shield < 600){
 				unit.shield = 600;
 				unit.shieldAlpha = 1;
 				applyEffect.at(unit.x, unit.y, 0, unit.type.shieldColor(Pal.regen), false ? unit : null);
@@ -257,5 +247,6 @@ module.exports = {
 	paganism: paganism,
 	smallFlaming: smallFlaming,
 	flaming: flaming,
-	superShock: superShock
+	superShock: superShock,
+	unlock: unlock
 }
