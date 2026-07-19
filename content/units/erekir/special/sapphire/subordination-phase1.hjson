@@ -91,10 +91,13 @@ shootCone: 360
 reload: 20
 shootSound: explosionQuad
 shootOnDeath: true
+alwaysShooting: true
+controllable: false
 bullet: {
 type: ExplosionBulletType
 splashDamage: 3000
 splashDamageRadius: 80
+killShooter: false
 shootEffect: {
 type: ExplosionEffect
 lifetime: 80
@@ -124,9 +127,29 @@ mirror: false
 baseRotation: 180
 bullet: {
 type: ContinuousFlameBulletType
-width: 5
+width: 3
 drawFlare: false
-length: 16
+length: 10
+colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
+hitColor: d1efff
+damage: 0
+collides: false
+collidesTiles: false
+}
+}
+{
+x: -6.5
+y: -13
+alwaysShooting: true
+alwaysContinuous: true
+shootSound: none
+mirror: false
+baseRotation: 125
+bullet: {
+type: ContinuousFlameBulletType
+width: 3
+drawFlare: false
+length: 24
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 0
@@ -140,13 +163,13 @@ y: -13
 alwaysShooting: true
 alwaysContinuous: true
 shootSound: none
-mirror: true
-baseRotation: -135
+mirror: false
+baseRotation: -125
 bullet: {
 type: ContinuousFlameBulletType
-width: 5
+width: 3
 drawFlare: false
-length: 16
+length: 24
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 0

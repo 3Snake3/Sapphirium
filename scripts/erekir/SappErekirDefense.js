@@ -16,6 +16,11 @@ const energyFieldAbility = extend(EnergyFieldAbility, 180, 30, 800, {
 	displayHeal: false,
 	healPercent: 0,
 	maxTargets: 40,
+	addStats(t){
+		this.super$addStats(t);
+		t.add(Core.bundle.get("ability.energyfield" + ".description")).wrap().width(350);
+		t.row();
+	},
 	localized(){
 		return Core.bundle.get("ability.energyfield");
 		}

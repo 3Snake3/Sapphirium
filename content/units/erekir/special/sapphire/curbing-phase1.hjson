@@ -1,7 +1,7 @@
 
 hitSize: 18
-health: 2800
-armor: 20
+health: 1800
+armor: 6
 rotateSpeed: 4
 itemCapacity: 0
 speed: 0.84
@@ -19,6 +19,13 @@ abilities: [
 {
 type: RegenAbility
 amount: 1.2
+}
+{
+type: StatusFieldAbility
+range: 0
+reload: 240
+duration: 241
+effect: crystal-shield
 }
 {
 type: SpawnDeathAbility
@@ -57,7 +64,7 @@ bullet: {
 type: ContinuousFlameBulletType
 width: 1.75
 drawFlare: false
-length: 12
+length: 18
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
@@ -112,7 +119,7 @@ x: 0
 y: 0
 reload: 180
 mirror: false
-shootSound: none
+shootSound: shootEclipse
 shootCone: 360
 bullet: {
 type: ExplosionBulletType
@@ -120,6 +127,7 @@ killShooter: false
 splashDamage: 300
 splashDamageRadius: 24
 splashDamagePierce: true
+buildingDamageMultiplier: 0.3
 shootEffect: [
 {
 type: WaveEffect

@@ -5,7 +5,7 @@ rotateSpeed: 4
 itemCapacity: 0
 healColor: d1efff
 immunities: [crystallization, unleash]
-speed: 1
+speed: 1.8
 targetAir: false
 shadowElevation: 0.1
 hovering: true
@@ -15,6 +15,13 @@ abilities: [
 {
 type: RegenAbility
 amount: 1.2
+}
+{
+type: StatusFieldAbility
+range: 0
+reload: 240
+duration: 241
+effect: crystal-shield
 }
 {
 type: SpawnDeathAbility

@@ -1,11 +1,11 @@
 
 flying: true
-speed: 0.54
+speed: 1
 rotateSpeed: 0.8
 drag: 0.05
 accel: 0.08
-health: 4000
-armor: 24
+health: 3400
+armor: 18
 range: 64
 hitSize: 34
 targetAir: false
@@ -41,7 +41,7 @@ bullet: {
 type: ContinuousFlameBulletType
 width: 2.5
 drawFlare: false
-length: 16
+length: 19
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
@@ -63,7 +63,7 @@ bullet: {
 type: ContinuousFlameBulletType
 width: 2.5
 drawFlare: false
-length: 16
+length: 19
 colors: [8ba9e855, 8ba9e870, d1efff80, d1efff, ffffff]
 hitColor: d1efff
 damage: 10
@@ -135,7 +135,7 @@ homingPower: 0.8
 homingRange: 64
 status: crystallization
 statusDuration: 30
-healPercent: 0.4
+healPercent: 4
 }
 }
 ]
@@ -151,9 +151,16 @@ unit: obedience-phase2
 spread: 0
 }
 {
+type: StatusFieldAbility
+range: 0
+reload: 240
+duration: 241
+effect: crystal-shield
+}
+{
 type: RepairFieldAbility
 amount: 240
-reload: 120
+reload: 240
 range: 40
 healEffect: {
 type: WaveEffect

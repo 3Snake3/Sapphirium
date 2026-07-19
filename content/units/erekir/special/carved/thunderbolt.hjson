@@ -21,6 +21,7 @@ abilities: [
 type: MoveEffectAbility
 color: d1efff
 chance: 0.3
+display: false
 }
 ]
 

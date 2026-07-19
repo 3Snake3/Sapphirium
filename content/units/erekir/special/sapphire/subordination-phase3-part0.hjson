@@ -7,7 +7,6 @@ drag: 0.06
 accel: 0.07
 health: 1200
 armor: 18
-playerControllable: false
 range: 80
 hitSize: 26
 engineSize: 0

@@ -18,10 +18,13 @@ createWreck: false
 parts: [
 {
 type: HoverPart
-phase: 35
+phase: 60
 x: 0
 y: 0
-color: ff6568
+radius: 24
+under: true
+layerOffset: -0.001
+color: d1efff
 }
 ]
 abilities: [

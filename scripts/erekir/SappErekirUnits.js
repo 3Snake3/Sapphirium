@@ -1557,6 +1557,8 @@ const oozeWeapon = extend(Weapon, "sapphirium-ooze-weapon", {
     t.row();
     t.add("[accent]" + "+" + 100 + "[lightgray]" + "% " + powerBuildings.localized());
     t.row();
+    t.image(statuses.wraith.uiIcon).size(40).pad(10).center().scaling(Scaling.fit);
+    t.row();
     t.add(statuses.wraith.emoji() + " " + statuses.wraith.localizedName);
     }
 });
@@ -1953,7 +1955,10 @@ const gazeBackWeapon = extend(Weapon, "sapphirium-ooze-weapon", {
     t.add("[accent]" + 25 + "[lightgray]" + "%" + " [lightgray]" + slowdown.localized() + " ~ " + "[accent]" + 4 + "[lightgray] " + StatUnit.blocks.localized());
     t.row();
     t.add("[accent]" + "+" + 100 + "[lightgray]" + "% " + powerBuildings.localized());
-    t.add(statuses.wraith.emoji() + " " + statuses.wraith.localizedName);
+    t.row();
+    t.image(statuses.wraith.uiIcon).size(40).pad(10).center().scaling(Scaling.fit);
+    t.row();
+    t.add(statuses.wraith.emoji() + " [#ff6e6e]" + statuses.wraith.localizedName);
     }
 });
 
@@ -2237,10 +2242,12 @@ var sappingField = extend(Ability, {
 
         if(timer >= 180) {
             Units.nearbyEnemies(unit.team, unit.x, unit.y, 80, other => {
+            	if(other.targetable(unit.team)){
                 other.apply(status, 60);
                 var x = unit.x + Angles.trnsx(unit.rotation, 0, 0);
                 var y = unit.y + Angles.trnsy(unit.rotation, 0, 0);
                 multiSapping.at(x, y, true ? 80 : unit.rotation, true ? unit : null);
+                }
             });
             timer = 0;
         }
@@ -2271,10 +2278,12 @@ var paganismField = extend(Ability, {
 
         if(timer >= 180) {
             Units.nearbyEnemies(unit.team, unit.x, unit.y, 80, other => {
+            	if(other.targetable(unit.team)){
                 other.apply(status2, 60);
                 var x = unit.x + Angles.trnsx(unit.rotation, 0, 0);
                 var y = unit.y + Angles.trnsy(unit.rotation, 0, 0);
                 accentWave.at(x, y, true ? 80 : unit.rotation, true ? unit : null);
+                }
             });
 
             timer = 0;
@@ -2930,7 +2939,7 @@ const RegenFieldAbility = extend(Ability, {
 	timer += Time.delta;
 	Units.nearby(unit.team, unit.x, unit.y, 80, other => {
 		if(other.damaged()){
-			other.heal((other.maxHealth * 0.1 / 100) * Time.delta);
+			other.heal((other.maxHealth * 0.001 / 100) * Time.delta);
 			if(timer >= 120){
 				healWave1.sizeTo = 8 + other.type.hitSize;
 				healWave0.at(unit, 80);
@@ -2941,9 +2950,10 @@ const RegenFieldAbility = extend(Ability, {
 	});
 	Units.nearbyEnemies(unit.team, unit.x, unit.y, 40, enemy => {
 		if(unit.health < unit.maxHealth / 2){
-			enemy.damageContinuousPierce(enemy.maxHealth * 0.03 / 100);
-			unit.heal((unit.maxHealth * 0.03 / 100) * Time.delta);
+			enemy.damageContinuousPierce(enemy.maxHealth * 0.003 / 100);
+			unit.heal((unit.maxHealth * 0.003 / 100) * Time.delta);
 			if(timer >= 120){
+				unit.heal((unit.maxHealth * (0.003 * 120) / 100) / 2);
 				healWave1.sizeTo = 8 + enemy.type.hitSize;
 				healWave2.at(unit.x, unit.y, unit.rotation);
 				healWave1.at(enemy, true);
@@ -2959,7 +2969,10 @@ const RegenFieldAbility = extend(Ability, {
       t.row();
       t.add(Core.bundle.format("bullet.range", Strings.autoFixed(80 / Vars.tilesize, 2)));
       t.row();
-      t.add(Core.bundle.format("ability.stat.lifesteal", Strings.autoFixed(0.03 * 60, 2) + "%"));
+      t.add(Core.bundle.format("ability.stat.lifesteal", Strings.autoFixed(0.003 * 60, 2) + "%"));
+      },
+      localized(){
+        return Core.bundle.get("ability.regenfield")
       }
 });
 
@@ -2967,8 +2980,8 @@ const shieldAbility = extend(Ability, {
   update(unit){
     timer += Time.delta;
     if(timer >= 1200){
-      if(unit.shield < 20000){
-        unit.shield = Math.min(unit.shield + 20000, 20000)
+      if(unit.shield < 8000){
+        unit.shield = Math.min(unit.shield + 8000, 8000)
         unit.shieldAlpha = 1;
         Fx.shieldApply.at(unit.x, unit.y, 0, unit.team.color, true ? unit : null)
       }
@@ -2976,12 +2989,13 @@ const shieldAbility = extend(Ability, {
     }
   },
   addStats(t){
-   t.add(Core.bundle.get("ability.shield.description"));
-   t.row();
    t.add("[lightgray]" + Stat.reload.localized() + ": [white]" + Strings.autoFixed(60 / 1200, 2) + " " + StatUnit.perSecond.localized());
    t.row();
-   t.add(this.abilityStat("shield", Strings.autoFixed(20000, 2)));
-  }
+   t.add(this.abilityStat("shield", Strings.autoFixed(8000, 2)));
+  },
+  localized(){
+        return Core.bundle.get("ability.shield")
+      }
 })
 
 const subPhase3part0 = extend(ErekirUnitType, "subordination-phase3-part0", {});
@@ -2995,11 +3009,23 @@ subPhase3part2.constructor = () => extend(UnitEntity, {});
 
 const subordinationPhase3 = extend(ErekirUnitType, "subordination-phase3", {});
 subordinationPhase3.constructor = () => extend(LegsUnit, {});
-subordinationPhase3.abilities.addAll(RegenFieldAbility, extend(SpawnDeathAbility, subPhase3part0, 1, 8, {}), extend(SpawnDeathAbility, subPhase3part1, 1, 8, {}), extend(SpawnDeathAbility, subPhase3part2, 1, 8, {}));
+subordinationPhase3.abilities.addAll(RegenFieldAbility, extend(SpawnDeathAbility, subPhase3part0, 1, 8, {
+  localized(){
+    return Core.bundle.get("ability.spawndeath")
+  }
+}), extend(SpawnDeathAbility, subPhase3part1, 1, 8, {
+  localized(){
+    return Core.bundle.format("ability.spawndeath", subPhase3part1.localizedName)
+  }
+}), extend(SpawnDeathAbility, subPhase3part2, 1, 8, {
+  localized(){
+    return Core.bundle.get("ability.spawndeath")
+  }
+}));
 
 const subP2Repair = extend(UnitSpawnAbility, subordinationPhase3, 2700, 0, 0, {
   localized(){
-    return Core.bundle.format("ability.unitspawn", subordinationPhase3.localizedName);
+    return Core.bundle.get("ability.unitspawn");
   }
 })
 

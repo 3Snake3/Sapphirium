@@ -862,6 +862,17 @@ const wireOverdriveAbility = extend(Ability, {
 const wireOverdrive = new Seq();
 const wireOverdriveValue = wireOverdrive.add(wireOverdriveAbility);
 
+var unlock = extend(StatusEffect, "unlock", {
+	show: false,
+	healthMultiplier: 0.7,
+	damageMultiplier: 1.45,
+	speedMultiplier: 1.25,
+	reloadMultiplier: 1.3,
+	damage: -0.03,
+	effect: unlocked,
+	permanent: true
+});
+
 const wire = extend(PowerTurret, "wire", {
 setStats(){
 	this.super$setStats();
@@ -1379,17 +1390,6 @@ const pierceBlow = extend(BasicBulletType, 5, 0, "circle-bullet", {
 		lightningDamage: 12,
 		}),
 	hitShake: 4,
-});
-
-var unlock = extend(StatusEffect, "unlock", {
-	show: false,
-	healthMultiplier: 0.7,
-	damageMultiplier: 1.45,
-	speedMultiplier: 1.25,
-	reloadMultiplier: 1.3,
-	damage: -0.03,
-	effect: unlocked,
-	permanent: true
 });
 
 const pierce = extend(ItemTurret, "pierce", {

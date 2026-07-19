@@ -1,6 +1,6 @@
 hitSize: 18
-health: 1600
-armor: 16
+health: 800
+armor: 14
 rotateSpeed: 0
 itemCapacity: 0
 drawCell: false
@@ -12,7 +12,7 @@ abilities: [
 {
 type: UnitSpawnAbility
 unit: curbing-phase1
-spawnTime: 1800
+spawnTime: 600
 }
 ]
 deathExplosionEffect: none

@@ -211,6 +211,29 @@ const wraith = extend(StatusEffect, "wraith", {
 
 const truesight = extend(StatusEffect, "truesight", {});
 
+var applyEffect = new Effect(11, e => {
+	Draw.color(e.color, 0.7);
+    Lines.stroke(e.fout() * 2);
+    Lines.circle(e.x, e.y, 2 + e.finpow() * 7);
+    });
+const crystalShield = extend(StatusEffect, "crystal-shield", {
+	update(unit, time){
+		this.super$update(unit, time);
+		var targetPriority = unit.type.targetPriority < 4;
+		if(targetPriority){
+       unit.type.targetPriority = 4;
+       }
+		if(unit.damaged()){
+			unit.heal((unit.maxHealth * 0.03 / 100) * Time.delta);
+			}
+			if((unit.maxHealth < 7 / 100) && unit.shield < 600){
+				unit.shield = 600;
+				unit.shieldAlpha = 1;
+				applyEffect.at(unit.x, unit.y, 0, unit.type.shieldColor(Pal.regen), false ? unit : null);
+				}
+				}
+				});
+
 module.exports = {
 	weakened: weakened,
 	superMelting: superMelting,

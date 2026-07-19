@@ -339,9 +339,9 @@ const blueRegen = extend(WaveEffect, {
 	strokeTo: 0,
 	sizeInterp: Interp.circleOut,
 	interp: Interp.circleOut,
-	colorFrom: Color.valueOf("80a8ff"),
-	colorTo: Color.valueOf("80a8ff")
-});
+	colorFrom: Pal.regen,
+	colorTo: Pal.regen
+	});
 const silence = extend(PowerTurret, "silence", {
 setStats() {
 		this.super$setStats();
@@ -352,6 +352,7 @@ silence.buildType = () => extend(PowerTurret.PowerTurretBuild, silence, {
 	creload: 0,
 	updateTile(){
 		this.super$updateTile();
+		if(this.power.status >= 3 && !this.isShooting){
 		if(this.creload >= 120){
 		Vars.indexer.eachBlock(this, 120, block => ( block.damaged() && !block.isHealSuppressed() ), block => {
 			block.heal(block.maxHealth * 8);
@@ -369,6 +370,7 @@ silence.buildType = () => extend(PowerTurret.PowerTurretBuild, silence, {
                 this.creload = 0;
                 }
                 else this.creload++;
+                }
                 }
                 });
 
@@ -440,7 +442,6 @@ const crackle = extend(ItemTurret, "crackle", {
 		this.stats.add(Stat.repairSpeed, 14, StatUnit.seconds);
 		this.stats.add(minHeal, 3, StatUnit.percent);
 		this.stats.add(maxHeal, 18, StatUnit.percent);
-		this.stats.add(crackleExtra, StatValues.ammo(ObjectMap.of(items.carvedAlloy, aoePlaceholder)));
 	},
 });
 crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
@@ -506,7 +507,14 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
                 Fx.chainEmp.at(this.x, this.y, 0, Color.valueOf("80a8ff"), other);
                 });
                 
-             }
+             } else
+         if(item == items.sapphire){
+         	Units.nearbyEnemies(this.team, this.x, this.y, crackle.range, other => {
+         if(other.shield > 0){
+         	other.apply(statuses.cut, 10);
+         }
+         });
+         }
              this.updateTimer = 0;
             }
             else this.updateTimer++;
