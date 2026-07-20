@@ -255,6 +255,5 @@ module.exports = {
 	paganism: paganism,
 	smallFlaming: smallFlaming,
 	flaming: flaming,
-	superShock: superShock,
 	unlock: unlock
 }
