@@ -342,21 +342,21 @@ let vanillaUnits = [
     UnitTypes.elude, UnitTypes.avert, UnitTypes.obviate
 ]
 for(let i = 0; i < vanillaUnits.length; i++) {
-    vanillaUnits[i].immunities.add(statuses.unleash); 
+    vanillaUnits[i].immunities.addAll(statuses.unleash, statuses.crystalShield); 
 }
 
 let coreErekirUnits = [
   UnitTypes.evoke, UnitTypes.incite, UnitTypes.emanate
   ]
 for(let i = 0; i < coreErekirUnits.length; i++) {
-    coreErekirUnits[i].immunities.addAll(statuses.unleash, statuses.wraith, statuses.blur); 
+    coreErekirUnits[i].immunities.addAll(statuses.unleash, statuses.wraith, statuses.blur, statuses.crystalShield); 
 }
 
 let supportGround = [
 UnitTypes.nova, UnitTypes.pulsar, UnitTypes.quasar, UnitTypes.corvus
 ]
 for(let i = 0; i < supportGround.length; i++){
-	supportGround[i].immunities.addAll(statuses.unleash, statuses.overload);
+	supportGround[i].immunities.addAll(statuses.unleash, statuses.overload, statuses.crystalShield);
 }
 
 let burnlessUnits = [
@@ -364,9 +364,9 @@ let burnlessUnits = [
     UnitTypes.renale, UnitTypes.latum, UnitTypes.navanax
 ]
 for(let i = 0; i < burnlessUnits.length; i++) {
-    burnlessUnits[i].immunities.addAll(StatusEffects.burning, StatusEffects.melting, statuses.unleash, statuses.shockStun, statuses.flaming, statuses.smallFlaming, statuses.flammability, statuses.superMelting, statuses.overload);
+    burnlessUnits[i].immunities.addAll(StatusEffects.burning, StatusEffects.melting, statuses.unleash, statuses.shockStun, statuses.flaming, statuses.smallFlaming, statuses.flammability, statuses.superMelting, statuses.overload, statuses.crystalShield);
 }
 
-UnitTypes.aegires.immunities.addAll(statuses.unleash, statuses.shockStun, statuses.overload);
-UnitTypes.quell.immunities.addAll(statuses.unleash, statuses.shockStun, statuses.overload);
-UnitTypes.disrupt.immunities.addAll(statuses.unleash, statuses.shockStun, statuses.overload);
+UnitTypes.aegires.immunities.addAll(statuses.unleash, statuses.shockStun, statuses.overload, statuses.crystalShield);
+UnitTypes.quell.immunities.addAll(statuses.unleash, statuses.shockStun, statuses.overload, statuses.crystalShield);
+UnitTypes.disrupt.immunities.addAll(statuses.unleash, statuses.shockStun, statuses.overload, statuses.crystalShield);

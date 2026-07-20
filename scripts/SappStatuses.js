@@ -179,7 +179,7 @@ const blur = extend(StatusEffect, "blur", {
     init() {
         this.affinity(wraith, (unit, result, time) => {
             unit.damagePierce(0);
-            result.set(blur, Math.min(time + result.time, 1));
+            result.set(wraith, Math.min(time + result.time, 1));
         });
     },
     update(unit, time){
@@ -215,22 +215,42 @@ var applyEffect = new Effect(11, e => {
     Lines.circle(e.x, e.y, 2 + e.finpow() * 7);
     });
 const crystalShield = extend(StatusEffect, "crystal-shield", {
+	init() {
+        this.affinity(crystalShieldBreaker, (unit, result, time) => {
+            unit.damagePierce(140);
+            result.set(crystalShieldBreaker, Math.min(time + result.time, 1));
+        });
+    },
 	update(unit, time){
 		this.super$update(unit, time);
 		var targetPriority = unit.type.targetPriority < 4;
 		if(targetPriority){
        unit.type.targetPriority = 4;
        }
+       time += Time.delta;
+       Units.nearbyEnemies(unit.team, unit.x, unit.y, 40, other => {
+       	if(time >= 240){
+       	applyEffect.at(other.x, other.y);
+           other.apply(crystallization, 241);
+           }
+          });
 		if(unit.damaged()){
 			unit.heal((unit.maxHealth * 0.03 / 100) * Time.delta);
 			}
 			if(unit.shield < 600){
 				unit.shield = 600;
 				unit.shieldAlpha = 1;
-				applyEffect.at(unit.x, unit.y, 0, unit.type.shieldColor(Pal.regen), false ? unit : null);
+				unit.type.shieldColor = Pal.regen;
+				applyEffect.at(unit.x, unit.y, 0, Pal.regen, false ? unit : null);
 				}
 				}
 				});
+			
+const crystalShieldBreaker = extend(StatusEffect, "crystal-shield-breaker", {
+init() {
+        this.affinity(crystalShield, (unit, result, time) => result.set(crystalShield, Math.min(time + result.time, 1)));
+    },
+});
 
 module.exports = {
 	weakened: weakened,
@@ -255,5 +275,6 @@ module.exports = {
 	paganism: paganism,
 	smallFlaming: smallFlaming,
 	flaming: flaming,
-	unlock: unlock
+	unlock: unlock,
+	crystalShield: crystalShield
 }

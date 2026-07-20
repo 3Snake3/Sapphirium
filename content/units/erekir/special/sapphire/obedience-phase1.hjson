@@ -138,6 +138,21 @@ statusDuration: 30
 healPercent: 4
 }
 }
+{
+display: false
+alwaysShooting: true
+controllable: false
+reload: 240
+recoil: 0
+shootStatus: crystal-shield
+shootStatusDuration: 241
+shootSound: shieldWave
+bullet: {
+type: EmptyBulletType
+hitEffect: none
+despawnEffect: none
+lifetime: 1
+}
 ]
 
 abilities: [
@@ -148,14 +163,8 @@ amount: 2
 {
 type: SpawnDeathAbility
 unit: obedience-phase2
+display: false
 spread: 0
-}
-{
-type: StatusFieldAbility
-range: 0
-reload: 240
-duration: 241
-effect: crystal-shield
 }
 {
 type: RepairFieldAbility

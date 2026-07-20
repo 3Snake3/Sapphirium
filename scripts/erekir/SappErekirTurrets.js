@@ -510,9 +510,7 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
              } else
          if(item == items.sapphire){
          	Units.nearbyEnemies(this.team, this.x, this.y, crackle.range, other => {
-         if(other.shield > 0){
-         	other.apply(statuses.cut, 10);
-         }
+         	other.apply(statuses.crystalShieldBreaker, 240);
          });
          }
              this.updateTimer = 0;

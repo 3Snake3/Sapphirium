@@ -1754,7 +1754,7 @@ const ooze = extend(ErekirUnitType, "ooze", {
 });
 
 ooze.constructor = () => extend(UnitEntity, {});
-ooze.immunities.addAll(statuses.unleash, statuses.truesight, StatusEffects.slow);
+ooze.immunities.addAll(statuses.unleash, statuses.truesight, StatusEffects.slow, statuses.crystalShield, statuses.crystalShieldBreaker);
 ooze.weapons.addAll(oozeWeapon, oozeWeaponSec, oozeCenterWeapon, blurWeapon, oozeWraithWeapon);
 ooze.abilities.addAll(oppressionFieldAbility);
 ooze.parts.addAll(redSphere);
@@ -2100,7 +2100,7 @@ const gaze = extend(ErekirUnitType, "gaze", {
 });
 gaze.constructor = () => extend(UnitEntity, {});
 gaze.abilities.addAll(gazeOppresionField);
-gaze.immunities.addAll(statuses.shockStun, statuses.unleash, statuses.truesight);
+gaze.immunities.addAll(statuses.crystalShield, statuses.crystalShieldBreaker, statuses.shockStun, statuses.unleash, statuses.truesight);
 gaze.weapons.addAll(blurWeapon, gazeWraithWeapon, gazeCenterWeapon, gazeFrontWeapon, gazeBackWeapon);
 
 //Core
