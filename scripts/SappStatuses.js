@@ -143,6 +143,14 @@ const overload = extend(StatusEffect, "overload", {});
 
 const unleash = extend(StatusEffect, "unleash", {});
 
+const unlocked = new Effect(20, e => {
+        Draw.color(Pal.accent);
+
+        Angles.randLenVectors(e.id, 2, 1 + e.fin() * 2, (x, y) => {
+            Fill.square(e.x + x, e.y + y, e.fout() * 2.3 + 0.5);
+        });
+    });
+
 const unlock = extend(StatusEffect, "unlock", {
 	healthMultiplier: 0.7,
 	damageMultiplier: 1.45,
