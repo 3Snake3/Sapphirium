@@ -276,5 +276,6 @@ module.exports = {
 	smallFlaming: smallFlaming,
 	flaming: flaming,
 	unlock: unlock,
-	crystalShield: crystalShield
+	crystalShield: crystalShield,
+	crystalShieldBreaker: crystalShieldBreaker
 }
