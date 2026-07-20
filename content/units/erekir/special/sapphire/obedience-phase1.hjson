@@ -153,6 +153,7 @@ hitEffect: none
 despawnEffect: none
 lifetime: 1
 }
+}
 ]
 
 abilities: [
