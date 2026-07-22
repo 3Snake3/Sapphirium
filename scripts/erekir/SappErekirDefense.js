@@ -9,17 +9,26 @@ const customValue = method => new StatValue() {
 const abilities = new Seq();
 var abilitiesFunction = new Stat("abilities", StatCat.function);
 
-const energyFieldAbility = extend(EnergyFieldAbility, 180, 30, 800, {
+const energyFieldAbility = extend(EnergyFieldAbility, 180, 60, 800, {
 	status: statuses.shockStun,
 	statusDuration: 1,
 	hitBuildings: false,
-	displayHeal: false,
-	healPercent: 0,
+	healPercent: 2,
 	maxTargets: 40,
 	addStats(t){
-		this.super$addStats(t);
+		t.add(Core.bundle.get("ability." + "energyfield" + ".description")).wrap().width(350);
 		t.row();
-		t.add(Core.bundle.get("ability.energyfield" + ".description")).wrap().width(350);
+        t.add("[lightgray]" + Stat.reload.localized() + ": [white]" + Strings.autoFixed(60 / 60, 2) + " " + StatUnit.perSecond.localized());
+        t.row();
+        t.add(Core.bundle.format("bullet.range", Strings.autoFixed(800 / Vars.tilesize, 2)));
+        t.row();
+        t.add(Core.bundle.format("bullet.damage", 180));
+        t.row();
+        t.add(Core.bundle.format("bullet.healpercent", 2));
+        t.row();
+        t.add(Core.bundle.format("stat.max-targets", 3));
+        t.row();
+        t.add(statuses.shockStun.emoji() + statuses.shockStun.localizedName + "[lightgray] ~ [stat]" + (1 / 60) + " [lightgray]" + Core.bundle.get("unit.seconds"));
 	},
 	localized(){
 		return Core.bundle.get("ability.energyfield");

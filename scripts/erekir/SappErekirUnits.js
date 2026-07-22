@@ -864,6 +864,7 @@ const presenceMainWeapon = extend(Weapon, "presence-main-weapon", {
         backColor: Color.valueOf("80808080"),
         frontColor: Color.valueOf("80808080"),
         trailColor: Color.valueOf("80808080"),
+        trailRotation: true,
         trailEffect: extend(ParticleEffect, {
         	particles: 4,
             cone: 5,
@@ -1030,7 +1031,7 @@ const presence = extend(ErekirUnitType, "presence", {
     hitSize: 9,
     engineSize: 0,
     trailLength: 10,
-    lowAltitude: true,
+    lowAltitude: false,
     range: 72
 });
 presence.constructor = () => extend(UnitEntity, {});
@@ -2589,6 +2590,7 @@ const flowWeapon = extend(Weapon, "flow-releaser", {
 	homingPower: 0.18,
 	homingRange: 60,
 	trailEffect: Fx.disperseTrail,
+	trailRotation: true,
 	trailChance: 0.5,
 	bulletInterval: 20,
 	intervalBullet: extend(LightningBulletType, {

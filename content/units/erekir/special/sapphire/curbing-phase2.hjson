@@ -1,12 +1,13 @@
 hitSize: 18
 health: 800
-armor: 14
+armor: 8
 rotateSpeed: 0
 itemCapacity: 0
 drawCell: false
 speed: 0
 targetAir: false
 healColor: d1efff
+createWreck: false
 immunities: [crystallization, unleash]
 abilities: [
 {

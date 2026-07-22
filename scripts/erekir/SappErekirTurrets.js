@@ -470,7 +470,7 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
 			}
 		} else {
 			/* turret isn't shooting or targeting now */
-			
+			if(this.hasAmmo()){
 			if(this.updateTimer > ((7 * 60) * healPeriod)) {
 				this.updateTimer = 0;
 				
@@ -494,6 +494,7 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
 				
 				this.healBuff = Mathf.clamp(this.healBuff - (healDebuff / 100));
 			}
+			}
 		}
 	},
 	handleItem(source, item){
@@ -507,12 +508,12 @@ crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
                 Fx.chainEmp.at(this.x, this.y, 0, Color.valueOf("80a8ff"), other);
                 });
                 
-             } else
+             } /*else
          if(item == items.sapphire){
          	Units.nearbyEnemies(this.team, this.x, this.y, crackle.range, other => {
          	other.apply(statuses.crystalShieldBreaker, 240);
          });
-         }
+         }*/
              this.updateTimer = 0;
             }
             else this.updateTimer++;
@@ -539,6 +540,10 @@ shelter.buildType = () => extend(ContinuousLiquidTurret.ContinuousLiquidTurretBu
 	updateTile() {
 		this.super$updateTile();
 		
+		Units.nearbyEnemies(this.team, this.x, this.y, shelter.range, other => {
+         	other.apply(statuses.crystalShieldBreaker, 240)
+         	
+		});
 		/* if the turret is inactive nothing happens */
 		if(!this.hasAmmo() || this.power.status <= 0) {
 			this.updateTimer = 0;
@@ -891,6 +896,27 @@ oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
 	}
 });
 //Vanilla ammo
+let breach = Blocks.breach;
+breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
+    updateTimer: 0,
+    handleItem(source, item){
+        this.super$handleItem(source, item);
+        this.updateTimer += Time.delta;
+        if(item == items.sapphire){
+        if(this.hasAmmo() && this.isActive()){
+            if(this.damaged() && !this.isHealSuppressed()){
+                if(this.updateTimer >= 30){
+                this.heal(this.maxHealth * 0.05 / 100);
+                this.recentlyHealed();
+                Fx.healBlockFull.at(this.x,  this.y, this.block.size, Pal.regen, this.block);
+                this.updateTimer = 0;
+                }
+                else this.updateTimer = 0;
+                }
+            }
+        }
+    }
+})
 
 let disperse = Blocks.disperse;
 var disperseExplosion = new MultiEffect(
@@ -992,7 +1018,19 @@ disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
 				}
 				else this.updateTimer++;
 			}
-		}
+		} else if(item == items.sapphire){
+        if(this.hasAmmo() && this.isActive()){
+            if(this.damaged() && !this.isHealSuppressed()){
+                if(this.updateTimer >= 30){
+                this.heal(this.maxHealth * 0.05 / 100);
+                this.recentlyHealed();
+                Fx.healBlockFull.at(this.x,  this.y, this.block.size, Pal.regen, this.block);
+                this.updateTimer = 0;
+                }
+                else this.updateTimer++;
+                }
+            }
+        }
 	});
 
 var colorLerp = Color.valueOf("ea8878").lerp(Pal.redLight, 0.5);

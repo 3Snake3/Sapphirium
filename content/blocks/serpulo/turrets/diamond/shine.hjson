@@ -26,6 +26,8 @@ ammoTypes: {
         trailWidth: 4
         trailLength: 20
         hitSound: explosion
+        absorbable: false
+        reflectable: false
         hitEffect: [
             {
                 type: WaveEffect
@@ -92,6 +94,7 @@ ammoTypes: {
         collidesTiles: false
         hittable: false
         reflectable: false
+        absorbable: false
         intervalBullet: {
         sprite: sapphirium-diamond-shard
         shrinkY: 0
@@ -102,6 +105,8 @@ ammoTypes: {
         height: 14
         pierce: true
         pierceBuilding: true
+        reflectable: false
+        absorbable: false
         trailWidth: 2.33
         trailLength: 14
         backColor: a1b1d1
@@ -109,7 +114,8 @@ ammoTypes: {
         hitColor: a1b1d1
         frontColor: ffffff
         
-        hitEffect: {
+        
+        hitEffect: [{
         type: ParticleEffect
         particles: 22
         length: 20
@@ -123,8 +129,65 @@ ammoTypes: {
         interp: swingOut
         strokeTo: 0
         }
+                    {
+                type: WaveEffect
+                sides: 4
+                sizeFrom: 0
+                sizeTo: 16
+                lifetime: 25
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: ffffff
+                colorTo: ffffff
+            }
+            {
+                particles: 6
+                cone: 360
+                length: 34
+                baseLength: 0
+                sizeFrom: 6
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ffffff75
+                colorTo: ffffff75
+            }]
         
-        despawnEffect: hitBulletColor
+        despawnEffect:  [{
+        type: ParticleEffect
+        particles: 22
+        length: 20
+        lifetime: 60
+        line: true
+        lenFrom: 12
+        lenTo: 0
+        cone: 15
+        colorFrom: a1b1d1
+        colorTo: a1b1d1
+        interp: swingOut
+        strokeTo: 0
+        }
+                    {
+                type: WaveEffect
+                sides: 4
+                sizeFrom: 0
+                sizeTo: 16
+                lifetime: 25
+                strokeFrom: 6
+                strokeTo: 0
+                colorFrom: ffffff
+                colorTo: ffffff
+            }
+            {
+                particles: 6
+                cone: 360
+                length: 34
+                baseLength: 0
+                sizeFrom: 6
+                sizeTo: 0
+                lifetime: 30
+                colorFrom: ffffff75
+                colorTo: ffffff75
+            }]
         hitSound: unitCreate
         homingPower: 4
         status: unmoving
@@ -145,6 +208,8 @@ ammoTypes: {
         height: 14
         pierce: true
         pierceBuilding: true
+        reflectable: false
+        absorbable: false
         trailWidth: 2.33
         trailLength: 14
         backColor: a1b1d1

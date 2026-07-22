@@ -4,8 +4,8 @@ speed: 1
 rotateSpeed: 0.8
 drag: 0.05
 accel: 0.08
-health: 3400
-armor: 18
+health: 2200
+armor: 10
 range: 64
 hitSize: 34
 targetAir: false
@@ -142,16 +142,55 @@ healPercent: 4
 display: false
 alwaysShooting: true
 controllable: false
-reload: 240
+reload: 540
 recoil: 0
 shootStatus: crystal-shield
-shootStatusDuration: 241
+shootStatusDuration: 240
 shootSound: shieldWave
 bullet: {
 type: EmptyBulletType
+damage: 0
+speed: 0
 hitEffect: none
 despawnEffect: none
 lifetime: 1
+}
+}
+{
+controllable: false
+reload: 240
+recoil: 0
+bullet: {
+type: EmptyBulletType
+damage: 0
+speed: 0
+hitEffect: none
+despawnEffect: [
+{
+type: WaveEffect
+lifetime: 120
+interp: circleOut
+sizeTo: 40
+colorTo: d1efff
+}
+{
+particles: 16
+region: sapphirium-rhombus
+length: 40
+cone: 360
+sizeFrom: 4
+sizeTo: 0
+colorFrom: d1efff
+colorTo: d1efff
+interp: circleOut
+sizeInterp: circleOut
+}
+]
+lifetime: 1
+splashDamage: 0
+splashDamageRadius: 40
+status: crystallization
+statusDuration: 240
 }
 }
 ]

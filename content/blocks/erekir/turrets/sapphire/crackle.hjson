@@ -13,8 +13,8 @@ ammoTypes: {
         speed: 7
         lifetime: 28.58
         damage: 55
-        hitColor: 80a8ff
-        backColor: 80a8ff
+        hitColor: d1efff
+        backColor: d1efff
         frontColor: ffffff
         shootEffect: shootBigColor
         knockback: 2
@@ -23,12 +23,18 @@ ammoTypes: {
         despawnEffect: hitBulletColor
         trailWidth: 2
         trailLength: 25
-        trailColor: 80a8ff
+        trailColor: d1efff
         weaveScale: 1
         weaveMag: 8
         homingPower: 0.2
         homingRange: 85
         homingDelay: 1
+        status: crystal-shield-breaker
+        statusDuration: 600
+        shootPattern: {
+        type: ShootAlternate
+        spread: 8
+        }
     }
     carved-alloy: {
         type: BasicBulletType
@@ -38,8 +44,8 @@ ammoTypes: {
         speed: 14
         lifetime: 30.58
         damage:80
-        hitColor: 80a8ff
-        backColor: 80a8ff
+        hitColor: d1efff
+        backColor: d1efff
         frontColor: ffffff
         shootEffect: shootBigColor
         knockback: 0
@@ -82,8 +88,8 @@ ammoTypes: {
         trailWidth: 1
         trailLength: 600
         ammoMultiplier: 4
-        reloadMultiplier: 0.2
-        trailColor: 80a8ff
+        reloadMultiplier: 0.12
+        trailColor: d1efff
         fragBullets: 2
         fragRandomSpread: 120
         fragVelocityMin: 0.8
@@ -188,7 +194,7 @@ consumes: {
     }
 }
 range: 200
-reload: 20
+reload: 12
 recoil: 3
 shake: 3
 scaledHealth: 240

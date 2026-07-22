@@ -1,6 +1,6 @@
 speed: 0
 rotateSpeed: 0
-health: 2400
+health: 1800
 armor: 14
 range: 180
 hitSize: 34
@@ -13,6 +13,7 @@ playerControllable: false
 logicControllable: false
 allowedInPayloads: false
 deathSound: unitCreateBig
+createWreck: false
 weapons: [
 {
 name: obedience-p2-weapon
@@ -100,31 +101,5 @@ abilities: [
 type: UnitSpawnAbility
 unit: obedience-phase1
 spawnTime: 2700
-}
-{
-type: RegenAbility
-amount: 2
-}
-{
-type: RepairFieldAbility
-amount: 240
-reload: 120
-range: 40
-healEffect: {
-type: WaveEffect
-sizeTo: 12
-colorTo: d1efff
-strokeFrom: 2
-lifetime: 11
-interp: circleOut
-}
-activeEffect: {
-type: WaveEffect
-sizeTo: 40
-colorTo: d1efff
-lifetime: 22
-strokeFrom: 2
-interp: circleOut
-}
 }
 ]

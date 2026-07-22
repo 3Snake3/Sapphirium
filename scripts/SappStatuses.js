@@ -214,37 +214,51 @@ var applyEffect = new Effect(11, e => {
     Lines.stroke(e.fout() * 2);
     Lines.circle(e.x, e.y, 2 + e.finpow() * 7);
     });
+    
+const abilities = new Seq();
+var abilitiesFunction = new Stat("abilities", StatCat.function);
+
+const shieldAbility = extend(Ability, {
+	addStats(t){
+		t.add(this.abilityStat("shield", Strings.autoFixed(600, 2)));
+		},
+	localized(){
+		return Core.bundle.get("ability.shield");
+		}
+	});
+	
+var crystalShieldAbilities = abilities.add(shieldAbility);
+
 const crystalShield = extend(StatusEffect, "crystal-shield", {
+	transitionDamage: 140,
 	init() {
         this.affinity(crystalShieldBreaker, (unit, result, time) => {
             unit.damagePierce(140);
             result.set(crystalShieldBreaker, Math.min(time + result.time, 1));
         });
     },
+    setStats(){
+    	this.super$setStats();
+    this.stats.add(Stat.healing, 3, StatUnit.percent);
+    this.stats.add(abilitiesFunction, StatValues.abilities(crystalShieldAbilities));
+    },
 	update(unit, time){
 		this.super$update(unit, time);
 		var targetPriority = unit.type.targetPriority < 4;
 		if(targetPriority){
-       unit.type.targetPriority = 4;
-       }
-       time += Time.delta;
-       Units.nearbyEnemies(unit.team, unit.x, unit.y, 40, other => {
-       	if(time >= 240){
-       	applyEffect.at(other.x, other.y);
-           other.apply(crystallization, 241);
-           }
-          });
+		    unit.type.targetPriority = 4;
+		}
+		if(unit.shield < 600){
+			unit.shield = 600;
+			unit.shieldAlpha = 1;
+			unit.type.shieldColor = Pal.regen;
+			applyEffect.at(unit.x, unit.y, 0, Pal.regen, false ? unit : null);
+		}
 		if(unit.damaged()){
-			unit.heal((unit.maxHealth * 0.03 / 100) * Time.delta);
-			}
-			if(unit.shield < 600){
-				unit.shield = 600;
-				unit.shieldAlpha = 1;
-				unit.type.shieldColor = Pal.regen;
-				applyEffect.at(unit.x, unit.y, 0, Pal.regen, false ? unit : null);
-				}
-				}
-				});
+		    unit.heal((unit.maxHealth * 0.03 / 100) * Time.delta);
+		}
+	}
+});
 			
 const crystalShieldBreaker = extend(StatusEffect, "crystal-shield-breaker", {
 init() {

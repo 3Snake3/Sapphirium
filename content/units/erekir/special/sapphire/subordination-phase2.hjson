@@ -7,6 +7,7 @@ playerControllable: false
 logicControllable: false
 allowedInPayloads: false
 deathSound: unitCreateBig
+createWreck: false
 hitSize: 54
 immunities: [crystallization, unleash]
 hovering: true

@@ -31,9 +31,8 @@ range: 800
 status: shock-stun
 statusDuration: 1
 hitBuildings: false
-displayHeal: false
 maxTargets: 40
-healPercent: 0
+healPercent: 2
 sectors: 8
 color: d1efff
 }

@@ -105,6 +105,8 @@ ammoTypes: {
         trailColor: a1b1d1
         hitColor: a1b1d1
         frontColor: ffffff
+        absorbable: false
+        reflectable: false
         
         hitEffect: {
         type: ParticleEffect
@@ -143,6 +145,8 @@ ammoTypes: {
         frontColor: ffffff
         pierce: true
         pierceBuilding: true
+        absorbable: false
+        reflectable: false
         
         hitEffect: {
         type: ParticleEffect
@@ -190,6 +194,8 @@ ammoTypes: {
         height: 14
         pierce: true
         pierceBuilding: true
+        absorbable: false
+        reflectable: false
         trailWidth: 2.33
         trailLength: 14
         backColor: a1b1d1

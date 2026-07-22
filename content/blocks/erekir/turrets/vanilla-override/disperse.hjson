@@ -108,6 +108,61 @@ trailEffect: disperseTrail
 hitEffect: hitBulletColor
 despawnEffect: hitBulletColor
 }
+sapphire: {
+damage: 30.75
+reloadMultiplier: 1.25
+speed: 7
+width: 16
+height: 16
+shrinkY: 0.3
+backSprite: large-bomb-back
+sprite: mine-bullet
+collidesGround: false
+collidesTiles: false
+shootEffect: shootBigColor
+smokeEffect: [hitLaserColor, shootSmokeDisperse]
+frontColor: ffffff
+hitColor: d1efff
+trailColor: d1efff
+backColor: d1efff
+trailChance: 0.44
+ammoMultiplier: 3
+lifetime: 34
+rotationOffset: 90
+trailRotation: true
+trailEffect: disperseTrail
+hitEffect: {
+type: ExplosionEffect
+smokes: 6
+sparks: 0
+smokeSize: 5
+smokeRad: 24
+smokeColor: d1efff85
+waveRad: 24
+waveLife: 12
+waveColor: d1efff
+lifetime: 30
+}
+despawnEffect: {
+type: ExplosionEffect
+smokes: 6
+sparks: 0
+smokeSize: 5
+smokeRad: 24
+smokeColor: d1efff85
+waveRad: 24
+waveLife: 12
+waveColor: d1efff
+lifetime: 30
+}
+homingPower: 0.7
+homingRange: 34
+homingDelay: 4
+splashDamage: 30
+splashDamageRadius: 24
+status: crystal-shield-breaker
+statusDuration: 600
+}
 ruby: {
 damage: 34
 speed: 4

@@ -24,23 +24,27 @@ weapons: [
         x: 2.5
         y: 0
         recoil: 0
-        reload: 15
+        reload: 9
         shootSound: shoot
         mirror: true
         ejectEffect: casing1
         bullet: {
             type: BasicBulletType
             speed: 10
-            damage: 24
+            damage: 14
             pierceArmor: true
+            pierce: true
+            pierceBuilding: true
+            pierceCap: 3
             lifetime: 20
             range: 200
             maxRange: 200
             rangeOverride: 200
-            sprite: circle-bullet
+            absorbable: false
+            reflectable: false
             shrinkY: 0
             width: 6
-            height: 6
+            height: 12
             hitShake: 1
             backColor: a1b1d1
             frontColor: ffffff

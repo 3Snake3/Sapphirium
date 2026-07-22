@@ -26,6 +26,7 @@ abilities: [
         maxTargets: 3
         effectRadius: 2
         rotateSpeed: 0.8
+        healPercent: 1.5
         color: f2e879
         sectors: 4
         hitBuildings: false

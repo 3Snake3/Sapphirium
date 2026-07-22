@@ -69,12 +69,72 @@ rangeChange: 48
 reloadMultiplier: 0.5
 buildingDamageMultiplier: 0.3
 }
+sapphire: {
+speed: 7
+damage: 87
+width: 12
+hitSize: 7
+height: 18
+shootEffect: [shootBigColor, colorSparkBig, {
+type: WaveEffect
+lifetime: 30
+sizeTo: 16
+strokeFrom: 3
+strokeTo: 0
+interp: circleOut
+colorFrom: d1efff
+colorTo: d1efff
+}
+]
+smokeEffect: shootBigSmoke
+ammoMultiplier: 2
+pierce: true
+pierceBuilding: true
+pierceCap: 3
+hitColor: d1efff
+backColor: d1efff
+trailColor: d1efff
+frontColor: ffffff
+trailWidth: 1.8
+trailLength: 5
+hitEffect: {
+type: ExplosionEffect
+smokes: 6
+sparks: 0
+smokeSize: 5
+smokeRad: 24
+smokeColor: d1efff85
+waveRad: 24
+waveLife: 12
+waveColor: d1efff
+lifetime: 30
+}
+despawnEffect: {
+type: ExplosionEffect
+smokes: 6
+sparks: 0
+smokeSize: 5
+smokeRad: 24
+smokeColor: d1efff85
+waveRad: 24
+waveLife: 12
+waveColor: d1efff
+lifetime: 30
+}
+homingRange: 24
+reloadMultiplier: 1.25
+status: crystal-shield-breaker
+statusDuration: 600
+splashDamage: 0
+splashDamageRadius: 24
+buildingDamageMultiplier: 0.3
+}
 ruby: {
 width: 14
 height: 20
 speed: 10
 hitSize: 7
-lifetime: 9.5
+lifetime: 10
 backColor: f25555
 hitColor: f25555
 trailColor: f25555
@@ -130,7 +190,7 @@ width: 14
 height: 20
 speed: 10
 hitSize: 7
-lifetime: 8
+lifetime: 10
 backColor: f25555
 hitColor: f25555
 trailColor: f25555

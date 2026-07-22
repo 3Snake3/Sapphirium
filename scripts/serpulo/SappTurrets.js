@@ -2737,6 +2737,7 @@ const abyssSphere = extend(BasicBulletType, 2.5, 60, "circle-bullet", {
 	homingPower: 0.5,
 	lifetime: 300 / 2.5,
 	trailChance: 0.3,
+	trailRotation: true,
 	hitShake: 4,
 	backColor: Pal.sapBulletBack,
 	hitColor: Pal.sapBullet,
@@ -2978,7 +2979,7 @@ abyss.buildType = () => extend(PowerTurret.PowerTurretBuild, abyss, {
             var ground = false;
             if(ee.checkTarget(air, ground) && ee.team != Team.derelict){
             ee.damage(114.8);
-            ee.apply(statuses.stun, 90);
+            ee.apply(StatusEffects.unmoving, 25);
             abyssMulti.at(ee.x, ee.y, ee.rotation);
             for(var i = 0; i < 1; i++){
             var abyssRot = this.rotation + i * 360/1 - Time.time * 1;
@@ -2988,7 +2989,7 @@ abyss.buildType = () => extend(PowerTurret.PowerTurretBuild, abyss, {
             }
             else if(ee.checkTarget(false, true) && ee.team != Team.derelict){
             ee.damage(172.2);
-            ee.apply(statuses.stun, 60);
+            ee.apply(StatusEffects.unmoving, 25);
             abyssMulti.at(ee.x, ee.y, ee.rotation);
             var abyssRot2 = this.rotation + i * 360/1 - Time.time * 1;
             for(var i = 0; i < 1; i++){

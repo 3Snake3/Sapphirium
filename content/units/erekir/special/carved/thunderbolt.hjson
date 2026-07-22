@@ -4,8 +4,8 @@ health: 800
 armor: 45
 rotateSpeed: 8
 speed: 10
-drag: 0.01
-accel: 0.01
+drag: 1
+accel: 1
 hitSize: 18
 itemCapacity: 0
 engineOffset: 8.5
@@ -70,11 +70,33 @@ speed: 0.03
 drag: 1.3
 damage: 0
 powerDamageScl: 4
-radius: 180
+radius: 32
 splashDamage: 180
 splashDamageRadius: 32
 scaledSplashDamage: true
 splashDamagePierce: true
+hitPowerEffect: {
+length: 24
+cone: 360
+lifetime: 69
+line: true
+strokeFrom: 1.5
+strokeTo: 0
+lenFrom: 16
+lenTo: 0
+colorFrom: ffffff
+colorTo: d1efff
+}
+applyEffect: {
+type: WaveEffect
+lifetime: 15
+sizeFrom: 0
+sizeTo: 8
+interp: circleOut
+colorFrom: ffffff
+colorTo: d1efff
+}
+hitUnits: false
 collides: false
 absorbable: false
 collidesTiles: false
@@ -111,7 +133,7 @@ collidesAir: false
 trailLength: 8
 trailWidth: 2
 intervalBullets: 6
-bulletInterval: 25
+bulletInterval: 15
 intervalRandomSpread: 360
 intervalBullet: {
 width: 8
