@@ -5,7 +5,6 @@ planet: serpulo
 research: {
     parent: biomassFacility
     objectives: [
-        freezer, 
         cryofluid-mixer, 
         dense-smelter, 
         frostbite, 
