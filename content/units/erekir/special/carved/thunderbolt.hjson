@@ -4,8 +4,8 @@ health: 800
 armor: 45
 rotateSpeed: 8
 speed: 10
-drag: 1
-accel: 1
+drag: 0.1
+accel: 0.1
 hitSize: 18
 itemCapacity: 0
 engineOffset: 8.5

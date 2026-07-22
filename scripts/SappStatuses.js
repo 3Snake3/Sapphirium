@@ -229,6 +229,8 @@ const shieldAbility = extend(Ability, {
 	
 var crystalShieldAbilities = abilities.add(shieldAbility);
 
+var timer = 0;
+
 const crystalShield = extend(StatusEffect, "crystal-shield", {
 	transitionDamage: 140,
 	init() {
@@ -248,11 +250,15 @@ const crystalShield = extend(StatusEffect, "crystal-shield", {
 		if(targetPriority){
 		    unit.type.targetPriority = 4;
 		}
+		timer += Time.delta;
+		if(timer >= 15){
 		if(unit.shield < 600){
-			unit.shield = 600;
+			unit.shield = Math.min(unit.shield+ 5, 600)
 			unit.shieldAlpha = 1;
 			unit.type.shieldColor = Pal.regen;
 			applyEffect.at(unit.x, unit.y, 0, Pal.regen, false ? unit : null);
+		}
+		timer = 0;
 		}
 		if(unit.damaged()){
 		    unit.heal((unit.maxHealth * 0.03 / 100) * Time.delta);

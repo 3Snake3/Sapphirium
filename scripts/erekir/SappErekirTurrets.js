@@ -1018,7 +1018,7 @@ disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
 				}
 				else this.updateTimer++;
 			}
-		} else if(item == items.sapphire){
+			else if(item == items.sapphire){
         if(this.hasAmmo() && this.isActive()){
             if(this.damaged() && !this.isHealSuppressed()){
                 if(this.updateTimer >= 30){
@@ -1027,10 +1027,12 @@ disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
                 Fx.healBlockFull.at(this.x,  this.y, this.block.size, Pal.regen, this.block);
                 this.updateTimer = 0;
                 }
-                else this.updateTimer++;
+                else this.updateTimer = 0;
                 }
             }
         }
+		}
+
 	});
 
 var colorLerp = Color.valueOf("ea8878").lerp(Pal.redLight, 0.5);

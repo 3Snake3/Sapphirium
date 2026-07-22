@@ -8,7 +8,18 @@ hovering: true
 drawCell: false
 healColor: d1efff
 immunities: [crystallization, unleash]
-deathExplosionEffect: none
+/*deathExplosionEffect: {
+type: ExplosionEffect
+lifetime: 120
+waveLife: 9
+waveRad: 80
+waveColor: d1efff
+waveStroke: 4
+sparks: 12
+sparkLen: 32
+sparkStroke: 3
+sparkRad: 85
+sparkColor: d1efff*/
 playerControllable: false
 logicControllable: false
 allowedInPayloads: false
@@ -20,7 +31,7 @@ name: obedience-p2-weapon
 x: 7.5
 y: 0
 rotate: true
-reload: 15
+reload: 60
 rotateSpeed: 1
 mirror: true
 alternate: true
@@ -31,13 +42,15 @@ bullet: {
 sprite: circle-bullet
 width: 8
 height: 8
-speed: 7
-lifetime: 25.72
+speed: 4
+lifetime: 45
 damage: 77
 hitShake: 2
 backColor: d1efff
 hitColor: d1efff
 trailColor: d1efff
+trailWidth: 2
+trailLength: 5
 frontColor: ffffff
 hitEffect: {
 type: ExplosionEffect
@@ -67,15 +80,14 @@ smokeSize: 4
 smokeColor: d1efff70
 smokeRad: 32
 }
-pierce: true
-pierceBuilding: true
-pierceCap: 1
+splashDamage: 77
+splashDamageRadius: 24
 }
 }
 {
 reload: 2701
 shoot: {
-firstShotDelay: 2701
+firstShotDelay: 2700
 }
 rotate: false
 controllable: false

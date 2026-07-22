@@ -85,9 +85,9 @@ smokeRad: 32
 {
 x: 0
 mirror: false
-reload: 1802
+reload: 601
 shoot: {
-firstShotDelay: 1801
+firstShotDelay: 600
 }
 alwaysShooting: true
 controllable: false

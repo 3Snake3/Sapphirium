@@ -4,7 +4,7 @@ speed: 1
 rotateSpeed: 0.8
 drag: 0.05
 accel: 0.08
-health: 2200
+health: 4000
 armor: 10
 range: 64
 hitSize: 34
@@ -142,7 +142,7 @@ healPercent: 4
 display: false
 alwaysShooting: true
 controllable: false
-reload: 540
+reload: 600
 recoil: 0
 shootStatus: crystal-shield
 shootStatusDuration: 240

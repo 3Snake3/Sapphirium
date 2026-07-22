@@ -23,8 +23,8 @@ amount: 1.2
 {
 type: StatusFieldAbility
 range: 0
-reload: 240
-duration: 241
+reload: 600
+duration: 240
 effect: crystal-shield
 }
 {
