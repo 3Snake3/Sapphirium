@@ -112,6 +112,181 @@ ammoTypes: {
                 lifetime: 45
             }
         }
+        spawnBullets: [
+{
+type: EmptyBulletType
+speed: 0
+lifetime: 1
+damage: 0
+hitEffect: none
+despawnEffect: none
+hittable: false
+reflectable: false
+absorbable: false
+fragBullets: 7
+fragVelocityMin: 0.7
+fragVelocityMax: 1.2
+fragLifeMin: 0.7
+fragLifeMax: 1.2
+fragRandomSpread: 17
+showStats: true
+fragBullet: {
+width: 12
+height: 12
+speed: 5
+lifetime: 76.4
+damage: 44
+weaveMag: 3
+weaveScale: 3
+trailWidth: 3
+homingPower: 0.05
+homingRange: 96
+trailLength: 26
+shrinkX: 0
+shrinkY: 0
+trailColor: ff6e6e
+backColor: ff6e6e
+frontColor: ffffff
+status: passive-bloodrage
+hitColor: ff6e6e
+hitEffect: [hitBulletColor, {
+region: "sapphirium-rhombus"
+particles: 6
+cone: 360
+length: 16
+lifetime: 14
+sizeFrom: 5.5
+sizeTo: 0
+colorFrom: ff6e6e
+colorTo: ff6e6e
+pierceBuilding: true
+pierceArmor: true
+}
+]
+despawnEffect: [hitBulletColor, {
+region: "sapphirium-rhombus"
+particles: 6
+cone: 360
+length: 16
+lifetime: 14
+sizeFrom: 5.5
+sizeTo: 0
+colorFrom: ff6e6e
+colorTo: ff6e6e
+pierceBuilding: true
+pierceArmor: true
+}
+]
+}
+}
+{
+type: EmptyBulletType
+speed: 0
+lifetime: 1
+damage: 0
+hitEffect: none
+despawnEffect: none
+hittable: false
+reflectable: false
+absorbable: false
+fragBullets: 6
+fragVelocityMin: 0.7
+fragVelocityMax: 1.2
+fragLifeMin: 0.7
+fragLifeMax: 1.2
+fragRandomSpread: 27
+showStats: true
+fragBullet: {
+type: ArtilleryBulletType
+width: 12
+height: 12
+speed: 3
+lifetime: 67.34
+damage: 55
+splashDamage: 55
+splashDamageRadius: 24
+homingPower: 0.02
+homingRange: 96
+shrinkX: 0
+shrinkY: 0
+trailColor: ff6e6e
+backColor: ff6e6e
+frontColor: ffffff
+status: passive-bloodrage
+hitColor: ff6e6e
+hitEffect: {
+type: ExplosionEffect
+waveRad: 24
+waveColor: ff6e6e
+waveStroke: 3
+waveLife: 18
+sparks: 0
+smokes: 6
+lifetime: 45
+smokeRad: 28
+smokeColor: ff6e6e85
+smokeSize: 6.5
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 24
+waveColor: ff6e6e
+waveStroke: 3
+waveLife: 18
+sparks: 0
+smokes: 6
+lifetime: 45
+smokeRad: 28
+smokeColor: ff6e6e85
+smokeSize: 6.5
+}
+collides: true
+collidesTiles: false
+knockback: 0.8
+inaccuracy: 6
+pierceArmor: true
+}
+}
+{
+type: EmptyBulletType
+speed: 0
+lifetime: 1
+damage: 0
+hitEffect: none
+despawnEffect: none
+hittable: false
+reflectable: false
+absorbable: false
+fragBullets: 11
+fragVelocityMin: 0.7
+fragVelocityMax: 1.2
+fragLifeMin: 0.7
+fragLifeMax: 1.2
+fragRandomSpread: 15
+showStats: true
+fragBullet: {
+width: 12
+height: 14
+speed: 4.5
+lifetime: 24.56
+damage: 35
+shrinkX: 0
+shrinkY: 0
+homingPower: 0.02
+homingRange: 96
+backColor: ff6e6e
+frontColor: ffffff
+status: passive-bloodrage
+hitColor: ff6e6e
+hitEffect: hitBulletColor
+despawnEffect: hitBulletColor
+pierceArmor: true
+pierce: true
+pierceBuilding: true
+pierceCap: 1
+}
+}
+]
     }
 }
 research: bloodlust
