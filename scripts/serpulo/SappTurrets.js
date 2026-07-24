@@ -1545,7 +1545,7 @@ const injection = extend(ItemTurret, "injection", {
     },
     canOverdrive: false
 });
-injection.buildType = () => extend(ItemTurret.ItemTurretBuild, injection, {
+/*injection.buildType = () => extend(ItemTurret.ItemTurretBuild, injection, {
 	creload : 0,
     updateTile() {
         this.super$updateTile();
@@ -1562,7 +1562,7 @@ injection.buildType = () => extend(ItemTurret.ItemTurretBuild, injection, {
             else this.creload++;
         }
     },
-});
+});*/
 
 const bloodsap = extend(SapBulletType, {
 	sapStrength: 0.95,
