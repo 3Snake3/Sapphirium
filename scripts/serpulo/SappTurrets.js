@@ -1539,11 +1539,10 @@ const sharpLaser = extend(LaserBulletType, {
 });
 
 const injection = extend(ItemTurret, "injection", {
-    setStats() {
+    /*setStats() {
         this.super$setStats();
         this.stats.add(stat.additionally, StatValues.ammo(ObjectMap.of(items.ruby, sharpLaser)));
-    },
-    canOverdrive: false
+    },*/
 });
 /*injection.buildType = () => extend(ItemTurret.ItemTurretBuild, injection, {
 	creload : 0,

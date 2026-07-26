@@ -1,4 +1,4 @@
-reload: 35
+reload: 80
 health: 2200
 recoil: 4
 shootCone: 24
@@ -11,7 +11,7 @@ shoot: {
 size: 3
 range: 225
 outlineColor: 1d1d21
-shootSound: rockBreak
+shootSound: none
 consumes: {
     power: 6
 }
@@ -33,7 +33,8 @@ ammoUseEffect: none
 shake: 4
 ammoTypes: {
 ruby: {
-width: 10
+sprite: large-orb
+width: 13
 height: 13
 speed: 8
 lifetime: 28.125
@@ -45,7 +46,6 @@ hitColor: ff6e6e
 frontColor: ffffff
 trailColor: ff6e6e
 status: passive-bloodrage
-showStats: true
 hitEffect: {
 type: ExplosionEffect
 smokes: 0
@@ -72,16 +72,16 @@ sparkRad: 16
 sparkColor: ff6e6e
 lifetime: 33
 }
-trailWidth: 1.5
-trailLength: 6
-weaveScale: 3
-weaveMag: 6
+trailWidth: 1.8
+trailLength: 12
+weaveScale: 6
+weaveMag: 9
 intervalBullets: 3
-bulletInterval: 10
+bulletInterval: 9
 intervalBullet: {
 type: LightningBulletType
 damage: 7
-lightningLength: 7
+lightningLength: 8
 lightningColor: ff6e6e
 hitColor: ff6e6e
 lightColor: ff6e6e
@@ -90,13 +90,76 @@ fragBullets: 1
 fragRandomSpread: 0
 hitSound: shootLancer
 fragBullet: {
+sprite: large-orb
+width: 13
+height: 13
+speed: 0
+lifetime: 60
+damage: 35
+homingPower: 0.7
+homingRange: 34
+backColor: ff6e6e
+hitColor: ff6e6e
+frontColor: ffffff
+trailColor: ff6e6e
+status: passive-bloodrage
+hitEffect: {
+type: ExplosionEffect
+smokes: 0
+sparks: 3
+waveRad: 6
+waveLife: 22
+waveColor: ff6e6e
+waveStroke: 2
+sparkLen: 5
+sparkRad: 16
+sparkColor: ff6e6e
+lifetime: 33
+}
+despawnEffect: {
+type: ExplosionEffect
+smokes: 0
+sparks: 3
+waveRad: 6
+waveLife: 22
+waveColor: ff6e6e
+waveStroke: 2
+sparkLen: 5
+sparkRad: 16
+sparkColor: ff6e6e
+lifetime: 33
+}
+trailWidth: 1.8
+trailLength: 12
+weaveScale: 3
+weaveMag: 6
+intervalBullets: 1
+sticky: true
+bulletInterval: 9
+intervalBullet: {
+type: EmptyBulletType
+speed: 0
+lifetime: 1
+damage: 0
+hitEffect: none
+despawnEffect: none
+hittable: false
+reflectable: false
+absorbable: false
+fragBullets: 3
+fragSpread: 45
+fragRandomSpread: 0
+despawnSound:shootLancer
+fragBullet: {
 type: LaserBulletType
 width: 15
-length: 15
+length: 20
 damage: 7
 hitColor: ff6e6e
-status: passive-bloodrage
+status: active-bloodrage
 colors: [ff6e6e, ff6e6e, ffffff]
+}
+}
 }
 spawnBullets: [
 {
@@ -127,58 +190,11 @@ lightColor: ff6e6e
 type: LaserBulletType
 width: 15
 length: 200
-damage: 80
+damage: 14
 hitColor: ff6e6e
 status: active-bloodrage
 colors: [ff6e6e, ff6e6e, ffffff]
-}
-{
-type: EmptyBulletType
-speed: 10
-lifetime: 10
-damage: 0
-hitEffect: none
-despawnEffect: none
-hittable: false
-reflectable: false
-absorbable: false
-fragRandomSpread: 0
-fragBullets: 1
-fragAngle: -450
-angleOffset: 45
-fragBullet: {
-type: LaserBulletType
-width: 15
-length: 200
-damage: 80
-hitColor: ff6e6e
-status: active-bloodrage
-colors: [ff6e6e, ff6e6e, ffffff]
-}
-}
-{
-type: EmptyBulletType
-speed: 10
-lifetime: 10
-damage: 0
-hitEffect: none
-despawnEffect: none
-hittable: false
-reflectable: false
-absorbable: false
-fragRandomSpread: 0
-fragBullets: 1
-fragAngle: 90
-angleOffset: -405
-fragBullet: {
-type: LaserBulletType
-width: 15
-length: 200
-damage: 80
-hitColor: ff6e6e
-status: active-bloodrage
-colors: [ff6e6e, ff6e6e, ffffff]
-}
+showStats: true
 }
 ]
 }
