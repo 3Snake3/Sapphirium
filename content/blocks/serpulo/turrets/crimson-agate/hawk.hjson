@@ -1,17 +1,17 @@
 
 requirements: [
     dense-alloy/80
-    plastanium/90
+    graphite/90
     titanium/130
-    silicon/90
+    silicon/100
 ]
 envDisabled: 16
 range: 270
 health: 1440
 outlineColor: 1d1d21
 recoil: 3
-reload: 270
-cooldownTime: 0.03
+reload: 13
+rotateSpeed: 10
 consumes: {
     power: 7.5
 }
@@ -25,42 +25,60 @@ heatColor: ff0000
 size: 2
 targetGround: false
 targetAir: true
-shootSound: shootEclipse
+shootSound: shootLaser
 shootType: {
-speed: 18
-lifetime: 15
+speed: 10
+lifetime: 27
 width: 12
 height: 14
-damage: 175
+damage: 9
 status: active-bloodrage
 shrinkY: 0
-statusDuration: 80
 backColor: ff6e6e
 trailColor: ff6e6e
 hitColor: ff6e6e
-hitEffect: hitBulletColor
-despawnEffect: hitBulletColor
+hitEffect: [hitBulletColor, {
+type: ExplosionEffect
+lifetime: 30
+waveRad: 14
+waveColor: ff6e6e
+sparks: 5 
+sparkColor: ff6e6e
+sparkRad: 18
+smokes: 6 
+smokeColor: ff6e6e75
+smokeRad: 18
+}
+]
+despawnEffect: [hitBulletColor, {
+type: ExplosionEffect
+lifetime: 30
+waveRad: 14
+waveColor: ff6e6e
+sparks: 5 
+sparkColor: ff6e6e
+sparkRad: 18
+smokes: 6 
+smokeColor: ff6e6e75
+smokeRad: 18
+}
+]
 shootEffect: shootBigColor
 smokeEffect: shootBigSmoke
-knockback: 5
+knockback: 3
 trailWidth: 2.30
 trailLength: 16
-fragBullets: 4
-fragRandomSpread: 0
-fragSpread: 45
-fragOnHit: true
-hitSound: shootLancer
+fragBullets: 3
+homingPower: 0.7 
+homingRange: 40
 fragBullet: {
-type: LaserBulletType
-colors: [d94848, ff6e6e, ffffff]
+type: LightningBulletType
+lightningLength: 5
+lightningColor: ff6e6e
 hitColor: ff6e6e
-hitSize: 3
-length: 45
-sideWidth: 0
-damage: 45
-hitEffect: hitBulletColor
+lightColor: ff6e6e
 status: passive-bloodrage
-statusDuration: 80
+damage: 4
 }
 }
 category: turret
