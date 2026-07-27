@@ -1525,7 +1525,7 @@ setStats(){
 
 const hawk = extend(PowerTurret, "hawk", {});
 
-const scrStar = extend(PowerTurret, "scarlet-star", {});
+const scrStar = extend(ItemTurret, "scarlet-star", {});
 
 const sharpLaser = extend(LaserBulletType, {
 	width: 25,
