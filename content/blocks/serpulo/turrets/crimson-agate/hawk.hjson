@@ -32,6 +32,8 @@ lifetime: 27
 width: 12
 height: 14
 damage: 9
+splashDamage: 7 
+splashDamageRadius: 16
 status: active-bloodrage
 shrinkY: 0
 backColor: ff6e6e
