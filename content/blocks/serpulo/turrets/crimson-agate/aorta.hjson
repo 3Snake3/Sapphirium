@@ -18,6 +18,7 @@ reload: 350
 shootCone: 30
 shootWarmupSpeed: 0.04
 shake: 4
+shootY:2
 ammoPerShot: 40
 maxAmmo: 180
 ammoTypes: {
@@ -35,26 +36,89 @@ ammoTypes: {
         hitColor: ff6e6e
         splashDamage: 70
         splashDamageRadius: 50
-        shootEffect: {
-            type: ExplosionEffect
-            waveRad: 40
-            waveLife: 12
-            waveColor: ff6e6e
-            waveStroke: 3.5
-            sparks: 6
-            sparkLen: 5
-            sparkStroke: 3.5
-            sparkRad: 44
-            smokes: 6
-            smokeRad: 44
-            smokeColor: ff6e6e
-            smokeSize: 8
-            lifetime: 45
+        shootEffect: [{
+            type: ParticleEffect
+            particles: 8
+            length: 35
+            lifetime: 25
+            sizeFrom: 12
+            sizeTo: 5
+            cone: 30
+            interp: circleOut
+            colorFrom: ff6e6e
+            colorTo: ff6e6e00
+            layer:100.1
         }
+        {
+            type: ParticleEffect
+            particles: 12
+            length: 56
+            lifetime: 25
+            sizeFrom: 8
+            sizeTo: 5
+            cone: 15
+            interp: circleOut
+            colorFrom: ff6e6e
+            colorTo: ff6e6e00
+            layer:100.2
+        }
+        {
+            type: ParticleEffect
+            particles: 15
+            length: 63
+            lifetime: 23
+            sizeFrom: 6
+            sizeTo: 3
+            cone:13
+            interp: circleOut
+            colorFrom: ff6e6e
+            colorTo: ff6e6e00
+            layer:100.3
+        }
+        ]
         smokeEffect: none
         lightColor: ff6e6e
-        hitEffect: [titanExplosion, titanSmoke]
-        despawnEffect: [titanExplosion, titanSmoke]
+        hitEffect: [{
+            type: ParticleEffect
+            particles: 6
+            length: 60
+            lifetime: 50
+            sizeFrom: 30
+            sizeTo: 24
+            cone: 360
+            interp: circleOut
+            colorFrom: ff6e6e
+            colorTo: ff6e6e00
+            layer:100.1
+        }
+        {
+            type: ParticleEffect
+            particles: 12
+            length: 70
+            lifetime: 45
+            sizeFrom: 15
+            sizeTo: 12
+            cone: 360
+            interp: circleOut
+            colorFrom: ff6e6e
+            colorTo: ff6e6e00
+            layer:100.2
+        }
+        {
+            type: ParticleEffect
+            particles: 18
+            length: 70
+            lifetime: 45
+            sizeFrom: 8
+            sizeTo: 6
+            cone: 360
+            interp: circleOut
+            colorFrom: ff6e6e
+            colorTo: ff6e6e00
+            layer:100.3
+        }
+        ]
+        despawnEffect: none
         status: active-bloodrage
         fragBullets: 6
         fragVelocityMin: 1
@@ -79,38 +143,46 @@ ammoTypes: {
             trailLength: 10
             hitColor: ff6e6e
             hitSound: explosion
-            hitEffect: {
-                type: ExplosionEffect
-                waveRad: 32
-                waveLife: 12
-                waveColor: ff6e6e
-                waveStroke: 3.5
-                sparks: 6
-                sparkLen: 5
-                sparkStroke: 3.5
-                sparkRad: 38
-                smokes: 6
-                smokeRad: 38
-                smokeColor: ff6e6e
-                smokeSize: 8
-                lifetime: 45
+            hitEffect:[{
+                type: ParticleEffect
+                particles: 3
+                length: 33
+                lifetime: 62
+                sizeFrom: 10
+                sizeTo: 8
+                cone: 360
+                interp: circleOut
+                colorFrom: ff6e6e
+                colorTo: ff6e6e00
+                layer:100.1
             }
-            despawnEffect: {
-                type: ExplosionEffect
-                waveRad: 32
-                waveLife: 12
-                waveColor: ff6e6e
-                waveStroke: 3.5
-                sparks: 6
-                sparkLen: 5
-                sparkStroke: 3.5
-                sparkRad: 38
-                smokes: 6
-                smokeRad: 38
-                smokeColor: ff6e6e
-                smokeSize: 8
-                lifetime: 45
+            {
+                type: ParticleEffect
+                particles: 7
+                length: 34
+                lifetime: 53
+                sizeFrom: 7
+                sizeTo: 5
+                cone: 360
+                interp: circleOut
+                colorFrom: ff6e6e
+                colorTo: ff6e6e00
+                layer:100.2
             }
+            {
+                type: ParticleEffect
+                particles: 12
+                length: 35
+                lifetime: 45
+                sizeFrom: 4
+                sizeTo: 2
+                cone: 360
+                interp: circleOut
+                colorFrom: ff6e6e
+                colorTo: ff6e6e00
+                layer:100.3
+            }]
+            despawnEffect: none
         }
         spawnBullets: [
 {
@@ -123,25 +195,26 @@ despawnEffect: none
 hittable: false
 reflectable: false
 absorbable: false
-fragBullets: 7
+fragBullets: 14
 fragVelocityMin: 0.7
-fragVelocityMax: 1.2
-fragLifeMin: 0.7
-fragLifeMax: 1.2
-fragRandomSpread: 17
+fragVelocityMax: 1.9
+fragLifeMin: 0.4
+fragLifeMax: 1.0
+fragRandomSpread: 22
 showStats: true
 fragBullet: {
-width: 12
-height: 12
+width: 9
+drag:0.01
+height: 13
 speed: 5
 lifetime: 76.4
-damage: 44
+damage: 27
 weaveMag: 3
 weaveScale: 3
-trailWidth: 3
-homingPower: 0.05
+trailWidth: 2.25
+homingPower: 0.02
 homingRange: 96
-trailLength: 26
+trailLength: 17
 shrinkX: 0
 shrinkY: 0
 trailColor: ff6e6e
@@ -189,23 +262,28 @@ despawnEffect: none
 hittable: false
 reflectable: false
 absorbable: false
-fragBullets: 6
+fragBullets: 14
 fragVelocityMin: 0.7
-fragVelocityMax: 1.2
-fragLifeMin: 0.7
-fragLifeMax: 1.2
-fragRandomSpread: 27
+fragVelocityMax: 1.8
+fragLifeMin: 0.4
+fragLifeMax: 1.6
+fragRandomSpread: 39
 showStats: true
 fragBullet: {
 type: ArtilleryBulletType
 width: 12
 height: 12
 speed: 3
-lifetime: 67.34
-damage: 55
-splashDamage: 55
-splashDamageRadius: 24
-homingPower: 0.02
+drag:0.004
+lifetime: 70
+weaveMag: 2
+weaveScale: 12
+trailWidth: 3
+trailLength: 6
+damage: 25
+splashDamage: 45
+splashDamageRadius: 22
+homingPower: 0.008
 homingRange: 96
 shrinkX: 0
 shrinkY: 0
