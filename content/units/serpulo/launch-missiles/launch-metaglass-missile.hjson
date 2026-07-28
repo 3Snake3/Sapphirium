@@ -1,0 +1,64 @@
+type: missile
+template: MissileUnitType
+engineColor: ebeef5
+trailColor: ebeef5
+engineLayer: 110
+engineSize: 1 
+engineOffset: 2.25
+engineSize: 1
+engineOffset: 2.25
+speed: 6
+maxRange: 6
+lifetime: 60
+rotateSpeed: 3
+trailLength: 18
+missileAccelTime: 10
+lowAltitude: true
+loopSound: loopMissileTrail
+loopSoundVolume: 0.6
+targetUnderBlocks: false
+health: 120
+drawCell: false
+outlineColor: 565666
+weapons: [
+{
+shootCone: 360
+mirror: false
+reload: 1
+shootOnDeath: true
+shake: 4
+bullet: {
+type: ExplosionBulletType
+splashDamage: 25
+splashDamageRadius: 40
+hitColor: ebeef5
+fragBullets: 8 
+fragBullet: {
+damage: 7 
+speed: 4
+lifetime: 10
+splashDamage: 10
+splashDamageRadius: 16
+hitEffect: flakExplosion
+despawnEffect: flakExplosion
+width: 7
+height: 7
+}
+shootEffect: {
+type: ExplosionEffect
+lifetime: 120
+waveRad: 40
+waveLife: 9 
+waveColor: ebeef5
+sparks: 6 
+sparkRad: 40
+sparkColor: ebeef5
+sparkLen: 6
+smokes: 7 
+smokeRad: 40
+smokeColor: ebeef575
+smokeSize: 8
+}
+}
+}
+]

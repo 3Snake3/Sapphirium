@@ -11,7 +11,7 @@ const thrower = extend(ItemTurret, "thrower", {
 });
 const speed = extend(ItemTurret, "speed", {});
 
-const copperMissileExplosion = extend(Weapon, "cpw", {
+/*const copperMissileExplosion = extend(Weapon, "cpw", {
 	shootCone: 360,
     mirror: false,
     reload: 1,
@@ -438,10 +438,10 @@ const creostoneMissile = extend(MissileUnitType, "launch-creostone-missile", {
 		health: 280,
 });
 creostoneMissile.weapons.add(creostoneMissileExplosion);
-creostoneMissile.abilities.add(creostoneTrail);
+creostoneMissile.abilities.add(creostoneTrail);*/
 
 const launch = extend(ItemTurret, "launch", {});
-launch.ammo(
+/*launch.ammo(
 Items.copper, extend(BulletType, 0, 0, {
 	shootEffect: Fx.shootSmall,
 	smokeEffect: Fx.shootSmokeMissile,
@@ -499,7 +499,7 @@ items.creostone, extend(BulletType, 0, 0, {
 	reloadMultiplier: 0.7,
 	ammoMultiplier: 4,
 	spawnUnit: creostoneMissile,
-}));
+}));*/
 		
 	
 const flight = extend(ItemTurret, "flight", {});

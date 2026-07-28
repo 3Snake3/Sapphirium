@@ -1,0 +1,53 @@
+type: missile
+template: MissileUnitType
+engineColor: ffaa5f
+trailColor: ffaa5f
+engineLayer: 110
+engineSize: 1 
+engineOffset: 2.25
+engineSize: 1
+engineOffset: 2.25
+speed: 5
+maxRange: 6
+lifetime: 60
+rotateSpeed: 3
+trailLength: 18
+missileAccelTime: 10
+lowAltitude: true
+loopSound: loopMissileTrail
+loopSoundVolume: 0.6
+targetUnderBlocks: false
+health: 130
+drawCell: false
+outlineColor: 565666
+weapons: [
+{
+shootCone: 360
+mirror: false
+reload: 1
+shootOnDeath: true
+shake: 5
+bullet: {
+type: ExplosionBulletType
+splashDamage: 34
+splashDamageRadius: 48
+hitColor: ffaa5f
+status: burning
+shootEffect: {
+type: ExplosionEffect
+lifetime: 120
+waveRad: 48
+waveLife: 9 
+waveColor: ffaa5f
+sparks: 8
+sparkRad: 48
+sparkColor: ffaa5f
+sparkLen: 6
+smokes: 9
+smokeRad: 48
+smokeColor: ffaa5f75
+smokeSize: 8
+}
+}
+}
+]
