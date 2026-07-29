@@ -1,22 +1,7 @@
 name: "sapphirium"
 displayName: "Sapphirium"
-description:
-  '''
-  Ah the Sapphirium, sounds good right? 
-  Let us introduce the list of content it includes: A hell amount of fraction turrets, brand new fraction units and in the end new interesting materials and mechanics. 
-  
-  Contentmaker & Helpers List: 
-  [accent]Kostolom[] - Balancer, Mapper, Json coder, Effect designer, Multi-tool functionally. Discord profile [gray]"kostolom#9777"[] 
-  [#98ffa9]Laim[] - Spriter, map maker. Discord profile [gray]"LaIm-Ik.json#5237" []
-  [#3CA370FF]Liplum[] - Multicrafter's library author. Discord profile [gray]"Liplum#2623"[] 
-  [#F2A65EFF]Fr4ncuzS4n[] - JS helper. Discord profile [gray]"ADG021222#7589"[] 
-  [#EB564BFF]Fox1va[] - A small helper. Discord profile [gray]"Fox1va_#3532"[] 
-  [#2593F3FF]Vervalamis[] - Spriter. Discord profile [gray]"Saigo no-nozomi#1206"[]
-  [#780049]The_[scarlet]Alone[][] – Minor content helper, mapper. Discord profile [gray]"model8663"[]
-  
-  Thanks everyone for support.
-  '''
+description: "RU – Сапфириум звучит круто, не правда ли? Позвольте нам представить список контента который он содержит: Немеренное количество фракций турелей, совершенно новые фракции юнитов, а также интересные новые материалы и механики. \nСписок создателей контента и помощников: \nSnake - Владелец, создатель основного контента, спрайтов, а также ответственный за созданные текущие скрипты. \nДискорд профиль: 3snake3 or snake04991 \nKOSTOLOM – Создатель идей, балансировщик, тестировщик, картодел, json-кодер, мультифункционал. Дискорд профиль: kostolom#9777 \nLaim - Спрайтер, картодел. \nДискорд профиль: LaIm-Ik.json#5237 \nFr4ncuzS4n - Помощник по скриптам. \nДискорд профиль: ADG021222#7589 \nFox1va - Небольшой помощник. \nДискорд профиль: Fox1va_#3532 \nVervalamis - Спрайтер. Нарисовал юнитов ветки Тени для Серпуло. \nДискорд профиль: Saigo no-nozomi#1206 \nThe_Alone – Помощник в создании контента, картодел. \nДискорд профиль: model8663. \n\nСпасибо всем за помощь и поддержку! \n\nENG: Ah, Sapphirium sounds cool, doesn't it? Please let us present the list of content that it contains: Countless turret factions, brand new unit factions, and finally interesting new materials and mechanics. \nList of content creators and helpers: \nSnake - The owner, creator of the main content, sprites, and also responsible for creating some scripts. \nDiscord profile: 3snake3 or snake04991 \nKOSTOLOM – Creator of ideas, balancer, tester, mapper, json coder, multi-functionality. \nDiscord profile: kostolom#9777 \nLaim - Spriter, mapper. \nDiscord profile: LaIm-Ik.json#5237 \nFr4ncuzS4n - Script helper. \nDiscord profile: ADG021222#7589 \nFox1va - A little helper. \nDiscord profile: Fox1va_#3532 \nVervalamis - The spriter. Sprited a Shadow unit branch for Serpulo. \nDiscord profile: Saigo no-nozomi#1206 \nThe_Alone – Helper in content creation, mapper. \nDiscord profile: model8663. \nThank you all for your help and support!"
 author: "Snake"
 minGameVersion: "159.2"
-version: "18.3"
-repo: 3Snake3/Sapphirium
+version: "18.4"
+repo: "3Snake3/Sapphirium" 
