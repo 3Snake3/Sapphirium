@@ -1,98 +1,242 @@
 health: 1400
-reload: 100
+reload: 400
 shoot: {
-    firstShotDelay: 99
+    firstShotDelay: 399
 }
 recoil: 0
-range: 290
+range: 340
 moveWhileCharging: false
 accurateDelay: false
 cooldownTime: 0.03
 shootCone: 2
+rotateSpeed: 2
 consumes: {
-    power: 7
+    power: 10
 }
 ammoUseEffect: none
 maxAmmo: 40
 ammoPerShot: 2
 ammoTypes: {
     ice-cube: {
-        speed: 8
-        damage: 220
+        speed: 12
+        damage: 440
         sprite: sapphirium-spear-bullet
-        width: 15
-        height: 60
-        backColor: a9d8ff
+        width: 12
+        height: 30
+        backColor: c1befa
         frontColor: ffffff
-        trailWidth: 4
-        trailLength: 15
-        trailColor: a9d8ff
-        lifetime: 36.3
+        trailWidth: 2.5
+        trailLength: 14
+        trailColor: c1befa
+        lifetime: 28.4
         pierce: true
         pierceBuilding: true
         hitSize: 4
-        hittable: false
         reflectable: false
         absorbable: false
         keepVelocity: false
         drag: -0.003
-        hitEffect: hitLancer
-        despawnEffect: hitLancer
+        spawnBullets: [
+        {
+        type: ShrapnelBulletType
+        serrations: 7
+        fromColor: ffffff
+        toColor: c1befa
+        damage: 22
+        status: overfreezing
+        statusDuration: 85
+        hitColor: c1befa
+        length: 320
+        lifetime: 25
+        width: 12
+        }
+        ]
+        hitEffect: {
+            particles: 14
+            cone: 360
+            lifetime: 30
+            line: true
+            lenFrom: 0
+            lenTo: 7
+            length: 18
+            colorFrom: c1befa
+            colorTo: c1befa
+            }
+        despawnEffect: {
+            particles: 14
+            cone: 360
+            lifetime: 30
+            line: true
+            lenFrom: 0
+            lenTo: 7
+            length: 18
+            colorFrom: c1befa
+            colorTo: c1befa
+            }
         status: freezing
         statusDuration: 320
         chargeEffect: [
-            lancerLaserCharge, 
+            {
+            particles: 6 
+            lifetime: 399
+            cone: 360
+            line: true
+            lenFrom: 4
+            lenTo: 4
+            strokeFrom: 0
+            strokeTo: 3
+            length: -16
+            baseLength: 16
+            colorFrom: c1befa
+            colorTo: c1befa
+            },
+            {
+            particles: 6 
+            cone: 360
+            lifetime: 384
+            line: true
+            lenFrom: 4
+            lenTo: 4
+            strokeFrom: 0
+            strokeTo: 3
+            length: -16
+            baseLength: 16
+            colorFrom: c1befa
+            colorTo: c1befa
+            startDelay: 15
+            },
+            {
+            particles: 1 
+            length: 0 
+            sizeFrom: 0 
+            sizeTo: 6
+            lifetime: 402
+            colorFrom: c1befa
+            colorTo: c1befa
+            }
             {
                 type: WaveEffect
                 sides: 0
-                lifetime: 99
+                lifetime: 239
                 sizeFrom: 16
                 sizeTo: 0
-                strokeFrom: 3
+                strokeFrom: 2.5
                 strokeTo: 0
-                colorFrom: a9d8ff
-                colorTo: a9d8ff
+                colorFrom: c1befa
+                colorTo: c1befa
             }
         ]
     }
     cryo-cube: {
     speed: 8
-    damage: 340
+    damage: 525
     sprite: sapphirium-spear-bullet
-    width: 15
-    height: 60
+    width: 12
+    height: 30
     backColor: a9d8ff
     frontColor: ffffff
-    trailWidth: 4
-    trailLength: 15
+    trailWidth: 2.5
+    trailLength: 14
     trailColor: a9d8ff
     lifetime: 36.3
     pierce: true
     pierceBuilding: true
     hitSize: 4
-    hittable: false
     reflectable: false
     absorbable: false
     keepVelocity: false
     drag: -0.003
-    hitEffect: hitLancer
-    despawnEffect: hitLancer
+    reloadMultiplier: 0.5
+    spawnBullets: [
+        {
+        type: ShrapnelBulletType
+        serrations: 7
+        fromColor: ffffff
+        toColor: a9d8ff
+        damage: 33
+        status: overfreezing
+        statusDuration: 165
+        hitColor: a9d8ff
+        length: 320
+        lifetime: 25
+        width: 12
+        }
+        ]
+    hitEffect: {
+            particles: 14
+            cone: 360
+            lifetime: 30
+            line: true
+            lenFrom: 0
+            lenTo: 7
+            length: 18
+            colorFrom: a9d8ff
+            colorTo: a9d8ff
+            }
+        despawnEffect: {
+            particles: 14
+            cone: 360
+            lifetime: 30
+            line: true
+            lenFrom: 0
+            lenTo: 7
+            length: 18
+            colorFrom: a9d8ff
+            colorTo: a9d8ff
+            }
     status: freezing
     statusDuration: 540
     chargeEffect: [
-        lancerLaserCharge, 
-        {
-            type: WaveEffect
-            sides: 0
-            lifetime: 99
-            sizeFrom: 16
-            sizeTo: 0
-            strokeFrom: 3
-            strokeTo: 0
+            {
+            particles: 6 
+            lifetime: 399
+            cone: 360
+            line: true
+            lenFrom: 4
+            lenTo: 4
+            strokeFrom: 0
+            strokeTo: 3
+            length: -16
+            baseLength: 16
             colorFrom: a9d8ff
             colorTo: a9d8ff
-        }
-    ]
+            },
+            {
+            particles: 6 
+            cone: 360
+            lifetime: 384
+            line: true
+            lenFrom: 4
+            lenTo: 4
+            strokeFrom: 0
+            strokeTo: 3
+            length: -16
+            baseLength: 16
+            colorFrom: a9d8ff
+            colorTo: a9d8ff
+            startDelay: 15
+            },
+            {
+            particles: 1 
+            length: 0 
+            sizeFrom: 0 
+            sizeTo: 6
+            lifetime: 402
+            colorFrom: a9d8ff
+            colorTo: a9d8ff
+            }
+            {
+                type: WaveEffect
+                sides: 0
+                lifetime: 239
+                sizeFrom: 16
+                sizeTo: 0
+                strokeFrom: 2.5
+                strokeTo: 0
+                colorFrom: a9d8ff
+                colorTo: a9d8ff
+            }
+        ]
     }
 }
 shake: 3
