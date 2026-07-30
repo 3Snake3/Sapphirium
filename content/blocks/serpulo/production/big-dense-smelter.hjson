@@ -1,3 +1,4 @@
+type: GenericCrafter
 requirements: [
     dense-alloy/140
     metaglass/100

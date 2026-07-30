@@ -1,5 +1,4 @@
-
-
+type: AttributeCrafter
 category: crafting
 shownPlanets: [serpulo]
 boostScale: 0.2

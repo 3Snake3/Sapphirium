@@ -1,3 +1,4 @@
+type: GenericCrafter
 requirements: [
     creostone/440
     thorium/425

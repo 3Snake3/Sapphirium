@@ -1,4 +1,3 @@
-const strongRouter = extend(Router, "strong-router", {});
 const strongJunction = extend(Junction, "strong-junction", {});
 const strongConveyor = extend(Conveyor, "strong-conveyor", {
 init(){
@@ -7,6 +6,8 @@ init(){
     }
 });
 strongConveyor.junctionReplacement = strongJunction;
+
+const strongRouter = extend(Router, "strong-router", {});
 
 const creostoneRouter = extend(Router, "creostone-router", {});
 const creostoneJunction = extend(Junction, "creostone-junction", {});

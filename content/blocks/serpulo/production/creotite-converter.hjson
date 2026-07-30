@@ -1,3 +1,4 @@
+type: AttributeCrafter
 craftTime: 150
 outputItem: creostone/7
 outputLiquid: slag/0.1

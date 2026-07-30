@@ -1,3 +1,6 @@
+type: AttributeCrafter
+attribute: water
+boostScale: 0.5
 craftEffect: {
 particles: 5
 cone: 360

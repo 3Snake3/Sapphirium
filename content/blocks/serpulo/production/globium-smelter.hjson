@@ -1,4 +1,4 @@
-
+type: AttributeCrafter
 craftTime: 100
 outputItem: globium/2
 craftEffect: {

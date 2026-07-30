@@ -1,3 +1,6 @@
+type: AttributeCrafter
+boostScale: 0.4
+maxBoost: 1.5
 updateEffect: {
 type: ExplosionEffect
 waveLife: 8

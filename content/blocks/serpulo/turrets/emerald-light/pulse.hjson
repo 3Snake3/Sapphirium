@@ -17,8 +17,11 @@ shootType: {
     collidesTeam: true
     healPercent: 1.7
     lifetime: 30
-    backColor: ffffff
-    frontColor: 98ffa9
+    backColor: 98ffa9
+    frontColor: ffffff
+    trailLength: 6 
+    trailWidth: 1.3
+    trailColor: 98ffa9
 }
 requirements: [
     lead/20

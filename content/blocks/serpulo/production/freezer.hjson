@@ -1,4 +1,7 @@
-
+type: AttributeCrafter
+attribute: water
+boostScale: 0.8
+maxBoost: 1.5
 craftEffect: smeltsmoke
 category: crafting
 consumes: {

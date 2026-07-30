@@ -1,5 +1,5 @@
+type: AttributeCrafter
 category: crafting
-envDisabled: 16
 consumes: {
 power: 1
 items: {

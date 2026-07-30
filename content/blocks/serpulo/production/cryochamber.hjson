@@ -1,3 +1,7 @@
+type: AttributeCrafter
+attribute: water
+boostScale: 1
+maxBoost: 2
 craftEffect: {
 particles: 8
 cone: 360
@@ -12,7 +16,7 @@ region: sapphirium-rhombus
 category: crafting
 consumes: {
 power: 0.4
-liquid: cryofluid/0.1
+liquid: cryofluid/0. 
 }
 requirements: [
     dense-alloy/30

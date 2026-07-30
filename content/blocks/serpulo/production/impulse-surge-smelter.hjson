@@ -1,4 +1,4 @@
-
+type: AttributeCrafter
 attribute: heat
 maxBoost: 1.5
 boostScale: 0.125

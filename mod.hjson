@@ -4,4 +4,34 @@ description: "RU – Сапфириум звучит круто, не правд
 author: "Snake"
 minGameVersion: "159.2"
 version: "18.4"
-repo: "3Snake3/Sapphirium" 
+repo: "3Snake3/Sapphirium"
+contentOrder: [
+dense-smelter
+big-dense-smelter
+freezer
+solidification-chamber
+cryochamber
+ledochamber
+hypercharge-transformer
+plastanium-press
+phase-sewing-factory
+impulse-surge-smelter
+cryofluid-megamixer
+globium-smelter
+tinorium-crystallizer
+diamond-press
+creostone-smelter
+creotite-converter
+creostone-melter 
+big-blast-mixer
+creotite-mixer
+creotite-megamixer
+weak-charger
+medium-charger
+mighty-charger
+multi-charger 
+ledonite-mixer
+electromixer
+surge-mass-synthesizer
+]
+

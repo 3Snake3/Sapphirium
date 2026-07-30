@@ -1,4 +1,4 @@
-
+type: GenericCrafter
 drawer: {
     type: DrawMulti
     drawers: [

@@ -1,4 +1,4 @@
-
+type: GenericCrafter
 outputLiquid: surge-mass/0.3
 consumes: {
     power: 2

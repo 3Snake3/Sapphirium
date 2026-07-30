@@ -1,4 +1,4 @@
-
+type: AttributeCrafter
 attribute: oil
 boostScale: 0.075
 craftEffect: {

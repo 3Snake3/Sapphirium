@@ -1,6 +1,21 @@
 reload: 45
 recoil: 4
-shootEffect: shootHeal
+shootEffect: [shootHeal, {
+particles: 12
+length: 16 
+cone: 360
+lifetime: 60
+line: true
+lenFrom: 5
+lenTo: 5
+strokeFrom: 2 
+strokeTo: 0
+interp: pow2Out
+sizeInterp: pow2Out
+colorFrom: 98ffa9 
+colorTo: 98ffa9
+}
+]
 shootSound: shootLancer
 targetHealing: true
 rotateSpeed: 6
@@ -8,6 +23,167 @@ health: 960
 shootCone: 24
 consumes: {
     power: 5
+}
+shootType: {
+sprite: "circle-bullet"
+damage: 25
+splashDamage: 35
+splashDamageRadius: 24
+radius: 24
+timeIncrease: 1.5
+timeDuration: 300
+speed: 6
+lifetime: 45
+width: 6
+height: 6
+backColor: 98ffa9
+hitColor: 98ffa9
+trailColor: 98ffa9
+frontColor: ffffff
+trailWidth: 3
+trailLength: 16
+hitSound: explosionNavanax
+homingPower: 0.48
+homingRange: 28
+collidesTeam: true
+healPercent: 2
+hitEffect: [
+{
+type: WaveEffect
+lifetime: 80 
+strokeFrom: 4 
+strokeTo: 0 
+sizeFrom: 0 
+sizeTo: 24 
+interp: circleOut 
+colorFrom: 98ffa975
+colorTo: 98ffa975
+}
+{
+particles: 5
+length: 26 
+lifetime: 90 
+sizeFrom: 5
+sizeTo: 0.4
+cone: 360
+interp: circleOut
+sizeInterp: circleOut
+colorFrom: 98ffa975
+colorTo: 98ffa975
+}
+]
+despawnEffect: [
+{
+type: WaveEffect
+lifetime: 80 
+strokeFrom: 4 
+strokeTo: 0 
+sizeFrom: 0 
+sizeTo: 24 
+interp: circleOut 
+colorFrom: 98ffa975
+colorTo: 98ffa975
+}
+{
+particles: 5
+length: 26 
+lifetime: 90 
+sizeFrom: 5
+sizeTo: 0.4
+cone: 360
+interp: circleOut
+sizeInterp: circleOut
+colorFrom: 98ffa975
+colorTo: 98ffa975
+}
+]
+fragBullets: 3
+fragRandomSpread: 0 
+fragSpread: 180
+fragAngle: 90
+fragBullet: {
+sprite: "circle-bullet"
+damage: 12
+splashDamage: 12.5
+splashDamageRadius: 16
+radius: 12.5
+timeIncrease: 1.15
+timeDuration: 115
+speed: 6
+lifetime: 5
+width: 3
+height: 3
+backColor: 98ffa9
+hitColor: 98ffa9
+trailColor: 98ffa9
+frontColor: ffffff
+trailWidth: 2
+trailLength: 8
+hitSound: explosionNavanax
+collidesTeam: true
+healPercent: 1.3
+hitEffect: [
+{
+type: WaveEffect
+lifetime: 80
+strokeFrom: 3
+strokeTo: 0 
+sizeFrom: 0 
+sizeTo: 12.5
+interp: circleOut 
+colorFrom: 98ffa975
+colorTo: 98ffa975
+}
+{
+particles: 5
+length: 14
+lifetime: 90 
+sizeFrom: 4
+sizeTo: 0
+cone: 360
+interp: circleOut
+sizeInterp: circleOut
+colorFrom: 98ffa975
+colorTo: 98ffa975
+}
+]
+despawnEffect: [
+{
+type: WaveEffect
+lifetime: 80
+strokeFrom: 3
+strokeTo: 0 
+sizeFrom: 0 
+sizeTo: 12.5
+interp: circleOut 
+colorFrom: 98ffa975
+colorTo: 98ffa975
+}
+{
+particles: 5
+length: 14
+lifetime: 90 
+sizeFrom: 4
+sizeTo: 0
+cone: 360
+interp: circleOut
+sizeInterp: circleOut
+colorFrom: 98ffa975
+colorTo: 98ffa975
+}
+]
+spawnBullets: [
+{
+type: LightningBulletType
+damage: 9
+lightningLength: 7 
+lightningColor: 98ffa9
+lightColor: 98ffa9 
+hitColor: 98ffa9 
+status: electrified
+}
+]
+}
 }
 range: 270
 drawer: {

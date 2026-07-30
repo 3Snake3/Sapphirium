@@ -1,3 +1,5 @@
+type: AttributeCrafter
+attribute: heat
 health: 640
 size: 3
 outputItem: diamond/2

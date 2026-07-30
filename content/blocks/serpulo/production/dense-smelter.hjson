@@ -1,3 +1,4 @@
+type: GenericCrafter
 requirements: [
     copper/40
     lead/40
