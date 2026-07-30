@@ -25,6 +25,7 @@ consumes: {
     power: 5
 }
 shootType: {
+type: EmpBulletType
 sprite: "circle-bullet"
 damage: 25
 splashDamage: 35
@@ -102,6 +103,7 @@ fragRandomSpread: 0
 fragSpread: 180
 fragAngle: 90
 fragBullet: {
+type: EmpBulletType
 sprite: "circle-bullet"
 damage: 12
 splashDamage: 12.5
