@@ -71,7 +71,7 @@ reproduction.buildType = () => extend(ItemTurret.ItemTurretBuild, reproduction, 
 const north = extend(PowerTurret, "north", {});
 const bow = extend(ItemTurret, "bow", {});
 
-const impaler = extend(ItemTurret, "impaler", {}});
+const impaler = extend(ItemTurret, "impaler", {});
 
 const glow = extend(ItemTurret, "glow", {
     envDisabled: Env.scorching
