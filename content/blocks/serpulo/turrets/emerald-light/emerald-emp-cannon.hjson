@@ -137,6 +137,7 @@ trailLength: 20
 trailWidth: 6
 splashDamage: 540
 splashDamageRadius: 60
+radius: 60
 hitShake: 5
 trailRotation: true
 status: electrified
@@ -172,12 +173,17 @@ fragVelocityMin: 0.7
 fragVelocityMax: 1
 fragLifeMin: 0.7
 fragLifeMax: 1.2
+lightning: 8
+lightningLength: 12
+lightColor: 98ffa9 
+lightningColor: 98ffa9 
+lightningDamage: 7
 fragBullet: {
 type: LaserBoltBulletType
 width: 1.5
 height: 5
 speed: 3
-lifetime: 100
+lifetime: 60
 damage: 64
 collidesTeam: true
 shrinkY: 0

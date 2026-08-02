@@ -1,158 +1,645 @@
 health: 2200
-envDisabled: 16
+shownPlanets: [serpulo]
 size: 3
-reload: 200
+reload: 1200
 recoil: 6
 shootCone: 5
-shootSound: shootArtillerySapBig
+shootSound: shootLaser
+chargeSound: chargeCorvus
 consumes: {
     power: 10
 }
-targetHealing: true
-shootEffect: {
-    type: WaveEffect
-    sides: 6
-    sizeFrom: 0
-    sizeTo: 16
-    lifetime: 20
-    strokeTo: 0
-    colorFrom: 85ff94
-    colorTo: 85ff94
+moveWhileCharging: false
+shootY: 1
+shoot: {
+shots: 100
+firstShotDelay: 600
+shotDelay: 6
 }
+xRand: 3
+targetHealing: true
+shootEffect: shootHeal
 smokeEffect: {
-    type: ParticleEffect
-    particles: 6
-    length: 45
-    lifetime: 45
-    sizeFrom: 5
-    sizeTo: 0
-    region: sapphirium-rhombus
-    colorFrom: 85ff94
-    colorTo: 85ff94
-    cone: 360
+particles: 14
+length: 30
+lifetime: 60
+sizeFrom: 6
+sizeTo: 0
+cone: 30
+colorFrom: 98ffa975
+colorTo: 98ffa975
+interp: pow2Out
+sizeInterp: pow2Out
 }
 range: 300
 minRange: 100
 targetAir: false
 ammoUseEffect: none
 ammoTypes: {
-    emerald: {
-        type: ArtilleryBulletType
-        sprite: circle-bullet
-        shrinkY: 0
-        width: 16
-        height: 16
-        speed: 6
-        lifetime: 60
-        drag: 0.005
-        damage: 100
-        splashDamage: 80
-        splashDamageRadius: 32
-        backColor: 98ffa9
-        frontColor: ffffff
-        trailColor: 98ffa9
-        trailWidth: 5
-        trailLength: 10
-        hitSound: shootLancer
-        collides: true
-        collidesTiles: true
-        collidesAir: false
-        hitEffect: {
-            type: ExplosionEffect
-            waveRad: 32
-            waveColor: 98ffa9
-            waveLife: 20
-            waveStroke: 3
-            smokes: 0
-            sparks: 12
-            sparkRad: 32
-            sparkLen: 8
-            sparkStroke: 3
-            sparkColor: 98ffa9
-        }
-        despawnEffect: {
-            type: ExplosionEffect
-            waveRad: 32
-            waveColor: 98ffa9
-            waveLife: 20
-            waveStroke: 3
-            smokes: 0
-            sparks: 12
-            sparkRad: 32
-            sparkLen: 8
-            sparkStroke: 3
-            sparkColor: 98ffa9
-        }
-        fragBullets: 12
-        fragSpread:60
-        fragRandomSpread:20
-        fragLifeMin: 0.5
-        fragVelocityMax: 2
-        fragVelocityMin: 0.4
-        fragLifeMax: 5
-        fragBullet: {
-            type: BasicBulletType
-            sprite: circle-bullet
-            shrinkY: 0
-            width: 16
-            height: 16
-            speed: 4
-            drag:0.06
-            lifetime: 80
-            damage: 40
-            splashDamage: 30
-            splashDamageRadius: 16
-            backColor: 98ffa9
-            frontColor: ffffff
-            trailColor: 98ffa9
-            hitSound: shootLancer
-            trailWidth: 2
-            trailLength: 5
-            collidesAir: false
-            collidesTeam: true
-            healPercent: 1.4
-            hitEffect: {
-                type: ExplosionEffect
-                waveRad: 32
-                waveColor: 98ffa9
-                waveLife: 20
-                waveStroke: 3
-                smokes: 0
-                sparks: 12
-                sparkRad: 32
-                sparkLen: 8
-                sparkStroke: 3
-                sparkColor: 98ffa9
-            }
-            despawnEffect: [
-                {
-                    type: ExplosionEffect
-                    waveRad: 32
-                    waveColor: 98ffa940
-                    waveLife: 50
-                    waveStroke: 3
-                    smokes: 0
-                    sparks: 12
-                    sparkRad: 32
-                    sparkLen: 8
-                    sparkStroke: 3
-                    sparkColor: 98ffa970
-                }
-                {
-                    type: WaveEffect
-                    sides: 20
-                    sizeFrom: 30
-                    sizeTo: 40
-                    lifetime: 50
-                    strokeFrom: 3
-                    strokeTo: 0
-                    colorFrom: 98ffa9
-                    colorTo: 98ffa900
-                }
-            ]
-        }
-    }
+emerald: {
+type: EmpBulletType
+width: 14
+height: 14
+damage: 12
+splashDamage: 12
+splashDamageRadius: 24
+radius: 24
+inaccuracy: 10
+speed: 15
+lifetime: 20
+weaveScale: 4 
+weaveMag: 3
+sprite: "shell"
+hitShake: 5
+backColor: 98ffa9
+hitColor: 98ffa9
+trailColor: 98ffa9
+frontColor: ffffff
+trailWidth: 2
+trailLength: 10
+chargeEffect: [
+{
+type: WaveEffect
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
 }
+{
+type: WaveEffect
+startDelay: 30
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 60
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 90
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 120
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 150
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 180
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 210
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 240
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 270
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 300
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 330
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 360
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 390
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 420
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 450
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 480
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 510
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 540
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 570
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+type: WaveEffect
+startDelay: 600
+strokeFrom: 3
+strokeTo: 0
+sizeFrom: 32
+sizeTo: 0
+interp: circleIn
+lifetime: 60
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+{
+particles: 1
+lifetime: 600
+sizeFrom: 0
+sizeTo: 10
+length: 0
+colorFrom: 98ffa9 
+colorTo: 98ffa9
+}
+{
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+{
+startDelay: 50
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+{
+startDelay: 100
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+{
+startDelay: 150
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+{
+startDelay: 200
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+{
+startDelay: 250
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+{
+startDelay: 300
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+{
+startDelay: 350
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+{
+startDelay: 400
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+{
+startDelay: 450
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+{
+startDelay: 500
+particles: 7
+cone: 360
+lifetime: 100
+baseLength: 32
+length: -32
+sizeFrom: 0
+sizeTo: 9
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+interp: circleIn 
+sizeInterp: circleIn
+}
+]
+hitEffect: {
+type: ExplosionEffect
+lifetime: 60
+waveRad: 24
+waveLife: 10
+waveStroke: 2
+waveColor: 98ffa9
+sparks: 8
+sparkRad: 26 
+sparkStroke: 1.5 
+sparkLen: 8
+sparkColor: 98ffa9
+smokes: 9 
+smokeRad: 26 
+smokeSize: 7
+smokeColor: 98ffa9
+}
+despawnEffect: {
+type: ExplosionEffect
+lifetime: 60
+waveRad: 24
+waveLife: 10
+waveStroke: 2
+waveColor: 98ffa9
+sparks: 8
+sparkRad: 26
+sparkLen: 8
+sparkStroke: 1.5 
+sparkColor: 98ffa9
+smokes: 9 
+smokeRad: 26 
+smokeSize: 7
+smokeColor: 98ffa9
+}
+lightning: 3
+lightningLength: 8
+lightningColor: 98ffa9
+spawnBullets: [
+{
+type: LaserBoltBulletType
+speed: 8
+damage: 4
+pierceArmor: true
+showStats: true
+collidesTeam: true
+healPercent: 1.7
+lifetime: 30
+backColor: 98ffa9
+frontColor: ffffff
+trailLength: 6 
+trailWidth: 1.3
+trailColor: 98ffa9
+hitEffect: {
+type: WaveEffect
+sides: 4
+sizeFrom: 0 
+sizeTo: 6
+lifetime: 30
+colorFrom: 98ffa9 
+colorTo: 98ffa9
+}
+despawnffect: {
+type: WaveEffect
+sides: 4
+sizeFrom: 0 
+sizeTo: 6
+lifetime: 30
+colorFrom: 98ffa9 
+colorTo: 98ffa9 
+}
+}
+{
+type: MissileBulletType
+speed: 3
+lifetime: 100
+sprite: "missile-large"
+homingRange: 60
+collidesAir: false 
+width: 12 
+height: 12
+splashDamage: 50
+splashDamageRadius: 40
+keepVelocity: false
+drag: -0.003
+weaveScale: 3 
+weaveMag: 1
+trailLength: 8 
+trailWidth: 3
+backColor: 98ffa9 
+hitColor: 98ffa9 
+trailColor: 98ffa9 
+frontColor: ffffff
+hitEffect: {
+type: ExplosionEffect
+lifetime: 120
+waveRad: 40
+waveLife: 10
+waveStroke: 2
+waveColor: 98ffa9
+sparks: 10
+sparkRad: 40
+sparkStroke: 1.5 
+sparkLen: 9
+sparkColor: 98ffa9
+smokes: 12
+smokeRad: 40
+smokeSize: 10
+smokeColor: 98ffa975
+}
+despawnEffect: {
+type: ExplosionEffect
+lifetime: 120
+waveRad: 40
+waveLife: 10
+waveStroke: 2
+waveColor: 98ffa9
+sparks: 10
+sparkRad: 40
+sparkStroke: 1.5 
+sparkLen: 9
+sparkColor: 98ffa9
+smokes: 12
+smokeRad: 40
+smokeSize: 10
+smokeColor: 98ffa975
+}
+fragBullets: 8 
+fragRandomSpread: 30 
+hitShake: 4
+fragBullet: {
+width: 7 
+height: 12
+speed: 4 
+lifetime: 30 
+trailLength: 8
+trailWidth: 1
+backColor: 98ffa9 
+hitColor: 98ffa9 
+trailColor: 98ffa9 
+frontColor: ffffff
+hitEffect: [hitBulletColor, {
+type: WaveEffect
+sides: 4
+lifetime: 60 
+sizeFrom: 0
+sizeTo: 12 
+interp: circleOut
+colorFrom: 98ffa975
+colorTo: 98ffa975
+}
+] 
+despawnEffect: [hitBulletColor, {
+type: WaveEffect
+sides: 4
+lifetime: 60 
+sizeFrom: 0
+sizeTo: 12 
+interp: circleOut
+colorFrom: 98ffa975
+colorTo: 98ffa975
+}
+]
+}
+}
+]
+}
+}
+
 drawer: {
     type: DrawTurret
     basePrefix: emerald-
