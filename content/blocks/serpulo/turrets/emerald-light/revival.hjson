@@ -3,7 +3,7 @@ reload: 280
 size: 3
 recoil: 4
 targetHealing: true
-range: 390
+range: 260
 shootSound: shootFlamePlasma
 shootCone: 30
 rotateSpeed: 3
