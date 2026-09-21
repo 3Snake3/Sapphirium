@@ -62,11 +62,11 @@ const thrust = extend(ItemTurret, "thrust", {
     size: 3,
     shootSound: Sounds.shootAlpha,
     squareSprite: false,
-    setStats(){
-    	this.super$setStats();
+    setStats() {
+        this.super$setStats();
         this.stats.remove(Stat.ammo);
         this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(items.topaz, thrustBullet2)));
-        }
+    }
 });
 thrust.ammo(items.topaz, thrustBullet);
 thrust.buildType = () => extend(ItemTurret.ItemTurretBuild, thrust, { 
@@ -98,7 +98,7 @@ thrust.buildType = () => extend(ItemTurret.ItemTurretBuild, thrust, {
             this.creload = 0;
         }
     },
-    
+
 });
 
 var doubleSparks = extend(ParticleEffect, {
@@ -312,14 +312,14 @@ cruelty.buildType = () => extend(ItemTurret.ItemTurretBuild, cruelty, {
                 crueltyBulletObj4.damage = 54 + (this.creload + this.abscrl) * 0.038;
                 Sounds.shockBullet.at(this);
             }
-            
+
             if (this.creload % (118 - cldred) == 0) { 
                 let selfdam_obj = selfdam.create(this, Team.derelict, rx,ry,rr);
                 selfdam_obj.damage = 45 + (this.creload + this.abscrl) * 0.02;
             } 
             if (this.creload >= (205 - cldredo)) {
-            this.abscrl += this.creload;
-            this.creload = 0;
+                this.abscrl += this.creload;
+                this.creload = 0;
             }
         }
         else {
@@ -331,68 +331,68 @@ cruelty.buildType = () => extend(ItemTurret.ItemTurretBuild, cruelty, {
 
 //Sapphire branch
 const blueRegen = extend(WaveEffect, {
-	sides: 0,
-	sizeFrom: 0,
-	sizeTo: 120,
-	lifetime: 120,
-	strokeFrom: 6,
-	strokeTo: 0,
-	sizeInterp: Interp.circleOut,
-	interp: Interp.circleOut,
-	colorFrom: Pal.regen,
-	colorTo: Pal.regen
-	});
+    sides: 0,
+    sizeFrom: 0,
+    sizeTo: 120,
+    lifetime: 120,
+    strokeFrom: 6,
+    strokeTo: 0,
+    sizeInterp: Interp.circleOut,
+    interp: Interp.circleOut,
+    colorFrom: Pal.regen,
+    colorTo: Pal.regen
+});
 const silence = extend(PowerTurret, "silence", {
-setStats() {
-		this.super$setStats();
-		this.stats.add(Stat.repairSpeed, (100 / 8 * 120 / 60), StatUnit.seconds);
-		}
+    setStats() {
+        this.super$setStats();
+        this.stats.add(Stat.repairSpeed, (100 / 8 * 120 / 60), StatUnit.seconds);
+    }
 });
 silence.buildType = () => extend(PowerTurret.PowerTurretBuild, silence, {
-	creload: 0,
-	updateTile(){
-		this.super$updateTile();
-		if(this.power.status >= 3 && !this.isShooting){
-		if(this.creload >= 120){
-		Vars.indexer.eachBlock(this, 120, block => ( block.damaged() && !block.isHealSuppressed() ), block => {
-			block.heal(block.maxHealth * 8);
+    creload: 0,
+    updateTile(){
+        this.super$updateTile();
+        if(this.power.status >= 3 && !this.isShooting){
+            if(this.creload >= 120){
+                Vars.indexer.eachBlock(this, 120, block => ( block.damaged() && !block.isHealSuppressed() ), block => {
+                    block.heal(block.maxHealth * 8);
                     block.recentlyHealed();
                     Fx.healBlockFull.at(block.x, block.y, block.block.size, Pal.regen, block.block);
                     blueRegen.at(this.x, this.y, this.rotation);
                 });
-				
-				Units.nearby(this.team, this.x, this.y, 120, unit => {
+
+                Units.nearby(this.team, this.x, this.y, 120, unit => {
                     if (unit.damaged()) {
                         unit.heal(unit.maxHealth * 8);
                         blueRegen.at(this.x, this.y, this.rotation);
-					}
+                    }
                 });
                 this.creload = 0;
-                }
-                else this.creload++;
-                }
-                }
-                });
+            }
+            else this.creload++;
+        }
+    }
+});
 
 /* how many times is the charge updated per second of firing */
-const scaleUpdateRate = 10;
+    const scaleUpdateRate = 10;
 const scaleUpdateRate2 = 1;
 /* percentage of scale increase per update ( from 0 to 100 ) */
-const shootingBuff = 1;
+    const shootingBuff = 1;
 /* period of heal outburst in seconds */
-const healPeriod = 2;
+    const healPeriod = 2;
 /* how many percent will the buff decrease for one heal outburst ( from 0 to 100 ) */
-const healDebuff = 50;
+    const healDebuff = 50;
 const buffBarColor = Pal.heal;
 
 /* the radius of the spread of the heal ( in tiles ) */
-const healRadius = 136;
+    const healRadius = 136;
 const healRadius2 = 200;
 const healColor = Color.valueOf("80a8ff");
 const healEffect = Fx.healWave;
 
 /* limiting the range of values ( from 0 to 100 ) */
-const minHealPercent = 4;
+    const minHealPercent = 4;
 const maxHealPercent = 28;
 const minHealPercent2 = 3;
 const maxHealPercent2 = 18;
@@ -400,191 +400,191 @@ const maxHealPercent2 = 18;
 const timer1 = 1;
 
 const blueHealWave = extend(WaveEffect, {
-	sides: 0,
-	sizeFrom: 0,
-	sizeTo: 200,
-	lifetime: 120,
-	strokeFrom: 6,
-	strokeTo: 0,
-	sizeInterp: Interp.circleOut,
-	interp: Interp.circleOut,
-	colorFrom: Color.valueOf("80a8ff"),
-	colorTo: Color.valueOf("80a8ff")
+    sides: 0,
+    sizeFrom: 0,
+    sizeTo: 200,
+    lifetime: 120,
+    strokeFrom: 6,
+    strokeTo: 0,
+    sizeInterp: Interp.circleOut,
+    interp: Interp.circleOut,
+    colorFrom: Color.valueOf("80a8ff"),
+    colorTo: Color.valueOf("80a8ff")
 });
 
 function getHealPercent(healBuff) {
-	return Mathf.clamp(healBuff * maxHealPercent, minHealPercent, maxHealPercent) / 100;
+    return Mathf.clamp(healBuff * maxHealPercent, minHealPercent, maxHealPercent) / 100;
 };
 
 function getHealPercent2(healBuff) {
-	return Mathf.clamp(healBuff * maxHealPercent2, minHealPercent2, maxHealPercent2) / 100;
+    return Mathf.clamp(healBuff * maxHealPercent2, minHealPercent2, maxHealPercent2) / 100;
 };
 
 var minHeal = new Stat("min-heal", StatCat.function);
 var maxHeal = new Stat("max-heal", StatCat.function); 
 
 var aoePlaceholder = extend(BulletType, {
-	damage: 0,
-	status: statuses.shockStun,
-	statusDuration: 10,
+    damage: 0,
+    status: statuses.shockStun,
+    statusDuration: 10,
 });
 
 var shockstunWave = new Effect(22, e => {
-	    Draw.color(Color.valueOf("80a8ff"));
-        Lines.stroke(e.fout() * 2);
-        Lines.circle(e.x, e.y, 4 + e.finpow() * e.rotation);
+    Draw.color(Color.valueOf("80a8ff"));
+    Lines.stroke(e.fout() * 2);
+    Lines.circle(e.x, e.y, 4 + e.finpow() * e.rotation);
 });
-	
+
 const crackle = extend(ItemTurret, "crackle", {
-	squareSprite: false,
-	setStats() {
-		this.super$setStats();
-		this.stats.add(Stat.repairSpeed, 14, StatUnit.seconds);
-		this.stats.add(minHeal, 3, StatUnit.percent);
-		this.stats.add(maxHeal, 18, StatUnit.percent);
-	},
+    squareSprite: false,
+    setStats() {
+        this.super$setStats();
+        this.stats.add(Stat.repairSpeed, 14, StatUnit.seconds);
+        this.stats.add(minHeal, 3, StatUnit.percent);
+        this.stats.add(maxHeal, 18, StatUnit.percent);
+    },
 });
 crackle.buildType = () => extend(ItemTurret.ItemTurretBuild, crackle, {
-	/* ticks from last heal outburst or from the last heal update */
-	updateTimer: 0,
-	/* current percent of heal charge ( from 0 to 1 ) */
-	healBuff: 0,
-	
-	updateTile() {
-		this.super$updateTile();
-		
-		/* if the turret is inactive nothing happens */
-		if(!this.hasAmmo) {
-			this.updateTimer = 0;
-			return;
-		}
-		
-		this.updateTimer += 1;
-		
-		if(this.target != null || this.isShooting) {
-			/* turret is shooting or targeting now */
-			
-			if(this.updateTimer > ((7 * 60) / scaleUpdateRate2)) {
-				this.updateTimer = 0;
-				this.healBuff = Mathf.clamp(this.healBuff + (shootingBuff / 100));
-			}
-		} else {
-			/* turret isn't shooting or targeting now */
-			if(this.hasAmmo()){
-			if(this.updateTimer > ((7 * 60) * healPeriod)) {
-				this.updateTimer = 0;
-				
-				let healPercent = getHealPercent2(this.healBuff);
-				
-				Vars.indexer.eachBlock(this, healRadius2, block => ( block.damaged() && !block.isHealSuppressed() ), block => {
-					block.heal(block.maxHealth * healPercent);
-                    block.recentlyHealed();
-                    Fx.healBlockFull.at(block.x, block.y, block.block.size, healColor, block.block);
-                    blueHealWave.at(this.x, this.y, this.rotation);
-                });
-				
-				Units.nearby(this.team, this.x, this.y, healRadius2, unit => {
-                    if (unit.damaged()) {
-                        unit.heal(unit.maxHealth * healPercent);
-                        blueHealWave.at(this.x, this.y, this.rotation);
-					}
-                });
-				
-				//healEffect.at(this.x, this.y, healRadius, healColor);
-				
-				this.healBuff = Mathf.clamp(this.healBuff - (healDebuff / 100));
-			}
-			}
-		}
-	},
-	handleItem(source, item){
-		this.super$handleItem(source, item);
-		this.updateTimer += Time.delta;
-		if(this.updateTimer >= 100){
-		if(item == items.carvedAlloy){
+    /* ticks from last heal outburst or from the last heal update */
+    updateTimer: 0,
+    /* current percent of heal charge ( from 0 to 1 ) */
+    healBuff: 0,
+
+    updateTile() {
+        this.super$updateTile();
+
+        /* if the turret is inactive nothing happens */
+            if(!this.hasAmmo) {
+                this.updateTimer = 0;
+                return;
+            }
+
+        this.updateTimer += 1;
+
+        if(this.target != null || this.isShooting) {
+            /* turret is shooting or targeting now */
+
+                if(this.updateTimer > ((7 * 60) / scaleUpdateRate2)) {
+                    this.updateTimer = 0;
+                    this.healBuff = Mathf.clamp(this.healBuff + (shootingBuff / 100));
+                }
+        } else {
+            /* turret isn't shooting or targeting now */
+                if(this.hasAmmo()){
+                    if(this.updateTimer > ((7 * 60) * healPeriod)) {
+                        this.updateTimer = 0;
+
+                        let healPercent = getHealPercent2(this.healBuff);
+
+                        Vars.indexer.eachBlock(this, healRadius2, block => ( block.damaged() && !block.isHealSuppressed() ), block => {
+                            block.heal(block.maxHealth * healPercent);
+                            block.recentlyHealed();
+                            Fx.healBlockFull.at(block.x, block.y, block.block.size, healColor, block.block);
+                            blueHealWave.at(this.x, this.y, this.rotation);
+                        });
+
+                        Units.nearby(this.team, this.x, this.y, healRadius2, unit => {
+                            if (unit.damaged()) {
+                                unit.heal(unit.maxHealth * healPercent);
+                                blueHealWave.at(this.x, this.y, this.rotation);
+                            }
+                        });
+
+                        //healEffect.at(this.x, this.y, healRadius, healColor);
+
+                        this.healBuff = Mathf.clamp(this.healBuff - (healDebuff / 100));
+                    }
+                }
+        }
+    },
+    handleItem(source, item){
+        this.super$handleItem(source, item);
+        this.updateTimer += Time.delta;
+        if(this.updateTimer >= 100){
+            if(item == items.carvedAlloy){
                 Units.nearbyEnemies(this.team, this.x, this.y, crackle.range, other => {
-                other.apply(statuses.shockStun, 10);
-                Fx.shockwave.at(this.x, this.y, this.rotation);
-                Fx.chainEmp.at(this.x, this.y, 0, Color.valueOf("80a8ff"), other);
+                    other.apply(statuses.shockStun, 10);
+                    Fx.shockwave.at(this.x, this.y, this.rotation);
+                    Fx.chainEmp.at(this.x, this.y, 0, Color.valueOf("80a8ff"), other);
                 });
-                
-             } /*else
-         if(item == items.sapphire){
-         	Units.nearbyEnemies(this.team, this.x, this.y, crackle.range, other => {
-         	other.apply(statuses.crystalShieldBreaker, 240);
-         });
-         }*/
-             this.updateTimer = 0;
-            }
-            else this.updateTimer++;
-            }
+
+            } /*else
+                if(item == items.sapphire){
+                    Units.nearbyEnemies(this.team, this.x, this.y, crackle.range, other => {
+                        other.apply(statuses.crystalShieldBreaker, 240);
+                    });
+                }*/
+                    this.updateTimer = 0;
+        }
+        else this.updateTimer++;
+    }
 });
 
 const shelter = extend(ContinuousLiquidTurret, "shelter", {
-	squareSprite: false,
-	
-	setStats() {
-		this.super$setStats();
-		this.stats.add(Stat.repairSpeed, 2, StatUnit.seconds);
-		this.stats.add(minHeal, 4, StatUnit.percent);
-		this.stats.add(maxHeal, 28, StatUnit.percent);
-	},
+    squareSprite: false,
+
+    setStats() {
+        this.super$setStats();
+        this.stats.add(Stat.repairSpeed, 2, StatUnit.seconds);
+        this.stats.add(minHeal, 4, StatUnit.percent);
+        this.stats.add(maxHeal, 28, StatUnit.percent);
+    },
 });
 
 shelter.buildType = () => extend(ContinuousLiquidTurret.ContinuousLiquidTurretBuild, shelter, {
-	/* ticks from last heal outburst or from the last heal update */
-	updateTimer: 0,
-	/* current percent of heal charge ( from 0 to 1 ) */
-	healBuff: 1,
-	
-	updateTile() {
-		this.super$updateTile();
-		
-		Units.nearbyEnemies(this.team, this.x, this.y, shelter.range, other => {
-         	other.apply(statuses.crystalShieldBreaker, 240)
-         	
-		});
-		/* if the turret is inactive nothing happens */
-		if(!this.hasAmmo() || this.power.status <= 0) {
-			this.updateTimer = 0;
-			return;
-		}
-		
-		this.updateTimer += 1;
-		
-		if(this.target != null || this.isShooting) {
-			/* turret is shooting or targeting now */
-			
-			if(this.updateTimer > (60 / scaleUpdateRate)) {
-				this.updateTimer = 0;
-				this.healBuff = Mathf.clamp(this.healBuff + (shootingBuff / 100));
-			}
-		} else {
-			/* turret isn't shooting or targeting now */
-			
-			if(this.updateTimer > (60 * healPeriod)) {
-				this.updateTimer = 0;
-				
-				let healPercent = getHealPercent(this.healBuff);
-				
-				Vars.indexer.eachBlock(this, healRadius, block => ( block.damaged() && !block.isHealSuppressed() ), block => {
-					block.heal(block.maxHealth * healPercent);
-                    block.recentlyHealed();
-                    Fx.healBlockFull.at(block.x, block.y, block.block.size, healColor, block.block);
-                });
-				
-				Units.nearby(this.team, this.x, this.y, healRadius, unit => {
-                    if(unit.damaged()) {
-                        unit.heal(unit.maxHealth * healPercent);
-					}
-			});
-                
-				//healEffect.at(this.x, this.y, healRadius, healColor);
-				
-				this.healBuff = Mathf.clamp(this.healBuff - (healDebuff / 100));
-			}
-		}
-	}
+    /* ticks from last heal outburst or from the last heal update */
+    updateTimer: 0,
+    /* current percent of heal charge ( from 0 to 1 ) */
+    healBuff: 1,
+
+    updateTile() {
+        this.super$updateTile();
+
+        Units.nearbyEnemies(this.team, this.x, this.y, shelter.range, other => {
+            other.apply(statuses.crystalShieldBreaker, 240)
+
+        });
+        /* if the turret is inactive nothing happens */
+            if(!this.hasAmmo() || this.power.status <= 0) {
+                this.updateTimer = 0;
+                return;
+            }
+
+        this.updateTimer += 1;
+
+        if(this.target != null || this.isShooting) {
+            /* turret is shooting or targeting now */
+
+                if(this.updateTimer > (60 / scaleUpdateRate)) {
+                    this.updateTimer = 0;
+                    this.healBuff = Mathf.clamp(this.healBuff + (shootingBuff / 100));
+                }
+        } else {
+            /* turret isn't shooting or targeting now */
+
+                if(this.updateTimer > (60 * healPeriod)) {
+                    this.updateTimer = 0;
+
+                    let healPercent = getHealPercent(this.healBuff);
+
+                    Vars.indexer.eachBlock(this, healRadius, block => ( block.damaged() && !block.isHealSuppressed() ), block => {
+                        block.heal(block.maxHealth * healPercent);
+                        block.recentlyHealed();
+                        Fx.healBlockFull.at(block.x, block.y, block.block.size, healColor, block.block);
+                    });
+
+                    Units.nearby(this.team, this.x, this.y, healRadius, unit => {
+                        if(unit.damaged()) {
+                            unit.heal(unit.maxHealth * healPercent);
+                        }
+                    });
+
+                    //healEffect.at(this.x, this.y, healRadius, healColor);
+
+                    this.healBuff = Mathf.clamp(this.healBuff - (healDebuff / 100));
+                }
+        }
+    }
 });
 
 //amethyst branch
@@ -593,10 +593,10 @@ const devotion = extend(ItemTurret, "devotion", {
 });
 
 const addictionShell = extend(BasicBulletType, {
-	status: StatusEffects.slow,
-	statusDuration: 40,
-	ammoMultiplier: 1,
-	damage: 65,
+    status: StatusEffects.slow,
+    statusDuration: 40,
+    ammoMultiplier: 1,
+    damage: 65,
 });
 
 const addictionUnmovingLaser = extend(LaserBulletType, {
@@ -715,7 +715,7 @@ sorrow.buildType = () => extend(PowerTurret.PowerTurretBuild, sorrow, {
         let sorrowShoot = this.isShooting && this.hasAmmo() && this.power.status > 0;
 
         if(sorrowShoot) {
-        	this.creload++;
+            this.creload++;
             if(this.creload % 72 == 0 && this.creload != 102 && this.creload != 150 && this.creload != 180) {
                 sorrowBurningLaser.create(this, this.team, this.x, this.y, this.rotation);
                 Sounds.shootLancer.at(this);
@@ -739,7 +739,7 @@ sorrow.buildType = () => extend(PowerTurret.PowerTurretBuild, sorrow, {
 
 //for stats only
 const dublicityInterval = extend(BasicBulletType, {
-	damage: 45,
+    damage: 45,
     splashDamage: 22,
     splashDamageRadius: 10,
     buildingDamageMultiplier: 1.3,
@@ -748,7 +748,7 @@ const dublicityInterval = extend(BasicBulletType, {
     pierceArmor: true,
 });
 const dublicitySpawnBullets = extend(BasicBulletType, {
-	damage: 350,
+    damage: 350,
     splashDamage: 190,
     splashDamageRadius: 40,
     buildingDamageMultiplier: 2,
@@ -759,7 +759,7 @@ const dublicitySpawnBullets = extend(BasicBulletType, {
 });
 
 const dublicity = extend(ItemTurret, "dublicity", {
-	setStats() {
+    setStats() {
         this.super$setStats();
         this.stats.add(additionally, StatValues.ammo(ObjectMap.of(items.creostone, dublicitySpawnBullets)));
     },
@@ -767,34 +767,34 @@ const dublicity = extend(ItemTurret, "dublicity", {
 });
 
 const radiance = extend(PowerTurret, "radiance", {
-	squareSprite: false,
+    squareSprite: false,
 });
 
 //Carved Alloy branch 
 var carvedLightning = extend(LightningBulletType, {
-	damage: 45,
-	lightningLength: 6,
-	lightningLengthRand: 8,
-	lightningColor: Color.sky,
-	collidesAir: true,
-	lightningType: extend(BulletType, {
-		damage: 0,
-		speed: 0,
-		lifetime: 10,
-		hitColor: Color.sky,
-		backColor: Color.sky,
-		frontColor: Color.white,
-		hitEffect: extend(WaveEffect, {
-			sides: 4,
-			sizeTo: 6,
-			strokeFrom: 3,
-			strokeTo: 0.3,
-			colorFrom: Color.sky,
-			colorTo: Color.sky,
-		}),
-		status: statuses.shockStun,
-		statusDuration: 10,
-	})
+    damage: 45,
+    lightningLength: 6,
+    lightningLengthRand: 8,
+    lightningColor: Color.sky,
+    collidesAir: true,
+    lightningType: extend(BulletType, {
+        damage: 0,
+        speed: 0,
+        lifetime: 10,
+        hitColor: Color.sky,
+        backColor: Color.sky,
+        frontColor: Color.white,
+        hitEffect: extend(WaveEffect, {
+            sides: 4,
+            sizeTo: 6,
+            strokeFrom: 3,
+            strokeTo: 0.3,
+            colorFrom: Color.sky,
+            colorTo: Color.sky,
+        }),
+        status: statuses.shockStun,
+        statusDuration: 10,
+    })
 });
 
 var carvedLightningChance = 0.05;
@@ -806,94 +806,94 @@ const elimination = extend(ItemTurret, "elimination", {
     squareSprite: false,
     armor: 20,
     setStats(){
-    	this.super$setStats();
-    	this.stats.add(Stat.lightningChance, carvedLightningChance * 100, StatUnit.percent);
+        this.super$setStats();
+        this.stats.add(Stat.lightningChance, carvedLightningChance * 100, StatUnit.percent);
         this.stats.add(Stat.lightningDamage, 45);
-        }
+    }
 });
 elimination.buildType = () => extend(ItemTurret.ItemTurretBuild, elimination, {
-	collision(bullet){
-		this.super$collision(bullet);
-		if(Mathf.chance(carvedLightningChance)){
-			carvedLightning.create(this, this.team, this.x, this.y, bullet.rotation() + 180);
-			Sounds.shootArc.at(this.tile, Mathf.random(0.9, 1.1));
-			}
-			return true;
-		}
-	});
+    collision(bullet){
+        this.super$collision(bullet);
+        if(Mathf.chance(carvedLightningChance)){
+            carvedLightning.create(this, this.team, this.x, this.y, bullet.rotation() + 180);
+            Sounds.shootArc.at(this.tile, Mathf.random(0.9, 1.1));
+        }
+        return true;
+    }
+});
 const erazor = extend(ItemTurret, "erazor", {
     squareSprite: false,
     armor: 20,
     setStats(){
-    	this.super$setStats();
-    	this.stats.add(Stat.lightningChance, carvedLightningChance * 100, StatUnit.percent);
+        this.super$setStats();
+        this.stats.add(Stat.lightningChance, carvedLightningChance * 100, StatUnit.percent);
         this.stats.add(Stat.lightningDamage, 45);
-        }
+    }
 });
 erazor.buildType = () => extend(ItemTurret.ItemTurretBuild, erazor, {
-	collision(bullet){
-		this.super$collision(bullet);
-		if(Mathf.chance(carvedLightningChance)){
-			carvedLightning.create(this, this.team, this.x, this.y, bullet.rotation() + 180);
-			Sounds.shootArc.at(this.tile, Mathf.random(0.9, 1.1));
-			}
-			return true;
-		}
-	});
+    collision(bullet){
+        this.super$collision(bullet);
+        if(Mathf.chance(carvedLightningChance)){
+            carvedLightning.create(this, this.team, this.x, this.y, bullet.rotation() + 180);
+            Sounds.shootArc.at(this.tile, Mathf.random(0.9, 1.1));
+        }
+        return true;
+    }
+});
 const dawn = extend(ItemTurret, "dawn", {
     squareSprite: false,
     armor: 25,
     setStats(){
-    	this.super$setStats();
-    	this.stats.add(Stat.lightningChance, 0.07 * 100, StatUnit.percent);
+        this.super$setStats();
+        this.stats.add(Stat.lightningChance, 0.07 * 100, StatUnit.percent);
         this.stats.add(Stat.lightningDamage, 45);
-        }
+    }
 });
 dawn.buildType = () => extend(ItemTurret.ItemTurretBuild, dawn, {
-	collision(bullet){
-		this.super$collision(bullet);
-		if(Mathf.chance(0.07)){
-			carvedLightning.create(this, this.team, this.x, this.y, bullet.rotation() + 180);
-			Sounds.shootArc.at(this.tile, Mathf.random(0.9, 1.1));
-			}
-			return true;
-		}
-	});
-	
+    collision(bullet){
+        this.super$collision(bullet);
+        if(Mathf.chance(0.07)){
+            carvedLightning.create(this, this.team, this.x, this.y, bullet.rotation() + 180);
+            Sounds.shootArc.at(this.tile, Mathf.random(0.9, 1.1));
+        }
+        return true;
+    }
+});
+
 const failure = extend(ItemTurret, "failure", {});
 failure.buildType = () => extend(ItemTurret.ItemTurretBuild, failure, {
-	updateTimer: 0,
-	updateTile(){
-	  this.super$updateTile();
-	  this.updateTimer += Time.delta;
-	  if(this.hasAmmo() && this.efficiency > 0 && this.isActive() && this.isShooting){
-	  if(this.updateTimer >= 60){
-	    Units.nearbyEnemies(this.team, this.x, this.y, failure.range, u => {
-	      u.apply(statuses.wraith, 300);
-	    })
-	    this.updateTimer = 0;
-	  }
-	  else this.updateTimer++;
-	}
-	}
+    updateTimer: 0,
+    updateTile(){
+        this.super$updateTile();
+        this.updateTimer += Time.delta;
+        if(this.hasAmmo() && this.efficiency > 0 && this.isActive() && this.isShooting){
+            if(this.updateTimer >= 60){
+                Units.nearbyEnemies(this.team, this.x, this.y, failure.range, u => {
+                    u.apply(statuses.wraith, 300);
+                })
+                this.updateTimer = 0;
+            }
+            else this.updateTimer++;
+        }
+    }
 })
-	
+
 const oblivion = extend(ItemTurret, "oblivion", {});
 oblivion.buildType = () => extend(ItemTurret.ItemTurretBuild, oblivion, {
-	updateTimer: 0,
-	updateTile(){
-	  this.super$updateTile();
-	  this.updateTimer += Time.delta;
-	  if(this.hasAmmo() && this.power.status >= 130 && this.efficiency > 0 && this.isActive() && this.isShooting){
-	  if(this.updateTimer >= 60){
-	    Units.nearbyEnemies(this.team, this.x, this.y, oblivion.range, u => {
-	      u.apply(statuses.wraith, 300);
-	    })
-	    this.updateTimer = 0;
-	  }
-	  else this.updateTimer++;
-	}
-	}
+    updateTimer: 0,
+    updateTile(){
+        this.super$updateTile();
+        this.updateTimer += Time.delta;
+        if(this.hasAmmo() && this.power.status >= 130 && this.efficiency > 0 && this.isActive() && this.isShooting){
+            if(this.updateTimer >= 60){
+                Units.nearbyEnemies(this.team, this.x, this.y, oblivion.range, u => {
+                    u.apply(statuses.wraith, 300);
+                })
+                this.updateTimer = 0;
+            }
+            else this.updateTimer++;
+        }
+    }
 });
 //Vanilla ammo
 let breach = Blocks.breach;
@@ -903,15 +903,15 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
         this.super$handleItem(source, item);
         this.updateTimer += Time.delta;
         if(item == items.sapphire){
-        if(this.hasAmmo() && this.isActive()){
-            if(this.damaged() && !this.isHealSuppressed()){
-                if(this.updateTimer >= 30){
-                this.heal(this.maxHealth * 0.05 / 100);
-                this.recentlyHealed();
-                Fx.healBlockFull.at(this.x,  this.y, this.block.size, Pal.regen, this.block);
-                this.updateTimer = 0;
-                }
-                else this.updateTimer = 0;
+            if(this.hasAmmo() && this.isActive()){
+                if(this.damaged() && !this.isHealSuppressed()){
+                    if(this.updateTimer >= 30){
+                        this.heal(this.maxHealth * 0.05 / 100);
+                        this.recentlyHealed();
+                        Fx.healBlockFull.at(this.x,  this.y, this.block.size, Pal.regen, this.block);
+                        this.updateTimer = 0;
+                    }
+                    else this.updateTimer = 0;
                 }
             }
         }
@@ -920,134 +920,134 @@ breach.buildType = () => extend(ItemTurret.ItemTurretBuild, breach, {
 
 let disperse = Blocks.disperse;
 var disperseExplosion = new MultiEffect(
-      extend(WaveEffect, {
-      	lifetime: 15,
-          sizeFrom: 24,
-          sizeTo: 64,
-          colorFrom: Color.valueOf("fc8e6d"),
-          colorTo: Color.valueOf("fc8e6d"),
-          }),
-       extend(ParticleEffect, {
-       	lifetime: 45,
-           length: 64,
-           sizeFrom: 6,
-           sizeTo: 0,
-           interp: Interp.circleOut,
-           sizeInterp: Interp.circleOut,
-           particles: 8,
-           colorFrom: Color.valueOf("fc8e6d70"),
-           colorTo: Color.valueOf("fc8e6d70"),
-           }));
+    extend(WaveEffect, {
+        lifetime: 15,
+        sizeFrom: 24,
+        sizeTo: 64,
+        colorFrom: Color.valueOf("fc8e6d"),
+        colorTo: Color.valueOf("fc8e6d"),
+    }),
+    extend(ParticleEffect, {
+        lifetime: 45,
+        length: 64,
+        sizeFrom: 6,
+        sizeTo: 0,
+        interp: Interp.circleOut,
+        sizeInterp: Interp.circleOut,
+        particles: 8,
+        colorFrom: Color.valueOf("fc8e6d70"),
+        colorTo: Color.valueOf("fc8e6d70"),
+    }));
 
 var disperseRubyShell = extend(MissileBulletType, {
-	sprite: "sapphirium-large-shell",
-	speed: 8,
-	lifetime: 50,
-	damage: 24,
-	pierceArmor: true,
-	collidesGround: false,
-	collidesTiles: false,
-	hittable: false,
-	absorbable: false,
-	splashDamage: 24,
-	splashDamageRadius: 64,
-	trailRotation: true,
-	trailEffect: Fx.disperseTrail,
-	trailLength: 24,
-	trailWidth: 3,
-	width: 16,
-	height: 20,
-	hitShake: 4,
-	hitColor: Color.valueOf("f25555"),
-	backColor: Color.valueOf("f25555"),
-	trailColor: Color.valueOf("f25555"),
-	frontColor: Color.valueOf("fc8e6d"),
-	homingPower: 0.7,
-	homingRange: 300,
-	hitEffect: disperseExplosion,
+    sprite: "sapphirium-large-shell",
+    speed: 8,
+    lifetime: 50,
+    damage: 24,
+    pierceArmor: true,
+    collidesGround: false,
+    collidesTiles: false,
+    hittable: false,
+    absorbable: false,
+    splashDamage: 24,
+    splashDamageRadius: 64,
+    trailRotation: true,
+    trailEffect: Fx.disperseTrail,
+    trailLength: 24,
+    trailWidth: 3,
+    width: 16,
+    height: 20,
+    hitShake: 4,
+    hitColor: Color.valueOf("f25555"),
+    backColor: Color.valueOf("f25555"),
+    trailColor: Color.valueOf("f25555"),
+    frontColor: Color.valueOf("fc8e6d"),
+    homingPower: 0.7,
+    homingRange: 300,
+    hitEffect: disperseExplosion,
     despawnEffect: disperseExplosion,
     accel: 0.01,
     status: statuses.wraith,
     statusDuration: 99999,
 });
 var disperseWave = extend(WaveEffect, {
-		lifetime: 10,
-		sizeFrom: 4,
-		sizeTo: 0,
-		colorFrom: Color.valueOf("fc8e6d"),
-        colorTo: Color.valueOf("fc8e6d"),
-        });
+    lifetime: 10,
+    sizeFrom: 4,
+    sizeTo: 0,
+    colorFrom: Color.valueOf("fc8e6d"),
+    colorTo: Color.valueOf("fc8e6d"),
+});
 var disperseSpawner = extend(EmptyBulletType, {
-	lifetime: 1,
-	damage: 0,
-	despawnSound: Sounds.shootDisperse,
-	despawnEffect: disperseWave,
+    lifetime: 1,
+    damage: 0,
+    despawnSound: Sounds.shootDisperse,
+    despawnEffect: disperseWave,
     fragRandomSpread: 45,
     fragBullets: 1,
     fragBullet: disperseRubyShell,
 });
 var disperseSpawner2 = extend(EmptyBulletType, {
-	lifetime: 60,
-	damage: 0,
-	despawnEffect: disperseWave,
+    lifetime: 60,
+    damage: 0,
+    despawnEffect: disperseWave,
     intervalBullets: 1,
     intervalRandomSpread: 360,
     bulletInterval: 9,
     intervalBullet: extend(EmptyBulletType, {
-    speed: 10,
-	lifetime: 2.0875,
-	damage: 0,
-	despawnSound: Sounds.shootDisperse,
-	despawnEffect: disperseWave,
-    fragBullets: 1,
-    fragBullet: disperseSpawner,
-})
+        speed: 10,
+        lifetime: 2.0875,
+        damage: 0,
+        despawnSound: Sounds.shootDisperse,
+        despawnEffect: disperseWave,
+        fragBullets: 1,
+        fragBullet: disperseSpawner,
+    })
 });
 
 disperse.buildType = () => extend(ItemTurret.ItemTurretBuild, disperse, {
-	updateTimer: 0,
-	handleItem(source, item){
-		this.super$handleItem(source, item);
-		this.updateTimer += Time.delta;
-		if(this.hasAmmo() && this.isActive() && this.isShooting && item == items.ruby){
-			if(this.updateTimer >= 9){
-				Units.nearbyEnemies(this.team, this.x, this.y, disperse.range, u => {
-				disperseSpawner2.create(this, this.x, this.y, this.rotation);
-				});
-				this.updateTimer = 0;
-				}
-				else this.updateTimer++;
-			}
-			else if(item == items.sapphire){
-        if(this.hasAmmo() && this.isActive()){
-            if(this.damaged() && !this.isHealSuppressed()){
-                if(this.updateTimer >= 30){
-                this.heal(this.maxHealth * 0.05 / 100);
-                this.recentlyHealed();
-                Fx.healBlockFull.at(this.x,  this.y, this.block.size, Pal.regen, this.block);
+    updateTimer: 0,
+    handleItem(source, item){
+        this.super$handleItem(source, item);
+        this.updateTimer += Time.delta;
+        if(this.hasAmmo() && this.isActive() && this.isShooting && item == items.ruby){
+            if(this.updateTimer >= 9){
+                Units.nearbyEnemies(this.team, this.x, this.y, disperse.range, u => {
+                    disperseSpawner2.create(this, this.x, this.y, this.rotation);
+                });
                 this.updateTimer = 0;
-                }
-                else this.updateTimer = 0;
+            }
+            else this.updateTimer++;
+        }
+        else if(item == items.sapphire){
+            if(this.hasAmmo() && this.isActive()){
+                if(this.damaged() && !this.isHealSuppressed()){
+                    if(this.updateTimer >= 30){
+                        this.heal(this.maxHealth * 0.05 / 100);
+                        this.recentlyHealed();
+                        Fx.healBlockFull.at(this.x,  this.y, this.block.size, Pal.regen, this.block);
+                        this.updateTimer = 0;
+                    }
+                    else this.updateTimer = 0;
                 }
             }
         }
-		}
+    }
 
-	});
+});
 
 var colorLerp = Color.valueOf("ea8878").lerp(Pal.redLight, 0.5);
 const titanThoriumAmmo = extend(ArtilleryBulletType, 2.5, 350, "shell", {
-	hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),
-	despawnEffect: Fx.none,
-	knockback: 2,
-	lifetime: 140,
-	height: 19,
-	width: 17,
-	splashDamage: 350,
-	splashDamageRadius: 65,
-	scaledSplashDamage: true,
-	backColor: colorLerp,
-	hitColor: colorLerp,
+    hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),
+    despawnEffect: Fx.none,
+    knockback: 2,
+    lifetime: 140,
+    height: 19,
+    width: 17,
+    splashDamage: 350,
+    splashDamageRadius: 65,
+    scaledSplashDamage: true,
+    backColor: colorLerp,
+    hitColor: colorLerp,
     trailColor: colorLerp,
     frontColor: Color.white,
     ammoMultiplier: 1,
@@ -1068,19 +1068,19 @@ const titanThoriumAmmo = extend(ArtilleryBulletType, 2.5, 350, "shell", {
 titanThoriumAmmo.trailInterp = v => Math.max(Mathf.slope(v), 0.8);
 
 const titanOxideAmmo = extend(ArtilleryBulletType, 2.5, 300, "shell", {
-	hitEffect: new MultiEffect(Fx.titanExplosionLarge, Fx.titanSmokeLarge, Fx.smokeAoeCloud),
-	despawnEffect: Fx.none,
-	knockback: 2,
-	lifetime: 190,
-	height: 19,
-	width: 17,
-	reloadMultiplier: 0.65,
-	splashDamage: 300,
-	splashDamageRadius: 110,
-	rangeChange: 8,
-	scaledSplashDamage: true,
-	backColor: Color.valueOf("a0b380"),
-	hitColor: Color.valueOf("a0b380"),
+    hitEffect: new MultiEffect(Fx.titanExplosionLarge, Fx.titanSmokeLarge, Fx.smokeAoeCloud),
+    despawnEffect: Fx.none,
+    knockback: 2,
+    lifetime: 190,
+    height: 19,
+    width: 17,
+    reloadMultiplier: 0.65,
+    splashDamage: 300,
+    splashDamageRadius: 110,
+    rangeChange: 8,
+    scaledSplashDamage: true,
+    backColor: Color.valueOf("a0b380"),
+    hitColor: Color.valueOf("a0b380"),
     trailColor: Color.valueOf("a0b380"),
     frontColor: Color.valueOf("e4ffd6"),
     ammoMultiplier: 1,
@@ -1098,40 +1098,40 @@ const titanOxideAmmo = extend(ArtilleryBulletType, 2.5, 300, "shell", {
     shrinkX: 0.2,
     shrinkY: 0.1,
     buildingDamageMultiplier: 0.25,
-    
+
     fragBullets: 1,
-                fragBullet: extend(EmptyBulletType, {
-                    lifetime: 60 * 2.5,
-                    bulletInterval: 20,
-                    intervalBullet: extend(EmptyBulletType, {
-                        splashDamage: 30,
-                        collidesGround: true,
-                        collidesAir: false,
-                        collides: false,
-                        hitEffect: Fx.none,
-                        pierce: true,
-                        instantDisappear: true,
-                        splashDamageRadius: 90,
-                        buildingDamageMultiplier: 0.2,
-                    })
-                    })
+    fragBullet: extend(EmptyBulletType, {
+        lifetime: 60 * 2.5,
+        bulletInterval: 20,
+        intervalBullet: extend(EmptyBulletType, {
+            splashDamage: 30,
+            collidesGround: true,
+            collidesAir: false,
+            collides: false,
+            hitEffect: Fx.none,
+            pierce: true,
+            instantDisappear: true,
+            splashDamageRadius: 90,
+            buildingDamageMultiplier: 0.2,
+        })
+    })
 });
 titanOxideAmmo.trailInterp = v => Math.max(Mathf.slope(v), 0.8);
 
 const titanCarbideAmmo = extend(ArtilleryBulletType, 2.5, 700, "shell", {
-	hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),
-	despawnEffect: Fx.none,
-	knockback: 3,
-	lifetime: 140,
-	height: 19,
-	width: 17,
-	splashDamage: 750,
-	splashDamageRadius: 55,
-	reloadMultiplier: 0.8,
-	rangeChange: 10 * Vars.tilesize,
-	scaledSplashDamage: true,
-	backColor: Color.valueOf("ab8ec5"),
-	hitColor: Color.valueOf("ab8ec5"),
+    hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),
+    despawnEffect: Fx.none,
+    knockback: 3,
+    lifetime: 140,
+    height: 19,
+    width: 17,
+    splashDamage: 750,
+    splashDamageRadius: 55,
+    reloadMultiplier: 0.8,
+    rangeChange: 10 * Vars.tilesize,
+    scaledSplashDamage: true,
+    backColor: Color.valueOf("ab8ec5"),
+    hitColor: Color.valueOf("ab8ec5"),
     trailColor: Color.valueOf("ab8ec5"),
     frontColor: Color.white,
     ammoMultiplier: 1,
@@ -1153,45 +1153,45 @@ const titanCarbideAmmo = extend(ArtilleryBulletType, 2.5, 700, "shell", {
     fragLifeMin: 1.5,
     fragBullets: 12,
     fragBullet: extend(ArtilleryBulletType, 0.5, 50, "shell", {
-    	hitEffect: new MultiEffect(Fx.titanExplosionFrag, Fx.titanLightSmall, extend(WaveEffect, {
-                            lifetime: 8,
-                            strokeFrom: 1,
-                            sizeTo: 8,
-                        })),
+        hitEffect: new MultiEffect(Fx.titanExplosionFrag, Fx.titanLightSmall, extend(WaveEffect, {
+            lifetime: 8,
+            strokeFrom: 1,
+            sizeTo: 8,
+        })),
 
-                        despawnEffect: Fx.hitBulletColor,
-                        width: 8,
-                        height: 12,
-                        lifetime: 50,
-                        knockback: 0.5,
-                        splashDamageRadius: 22,
-                        splashDamage: 50,
-                        scaledSplashDamage: true,
-                        pierceArmor: true,
-                        backColor: Color.valueOf("ab8ec5"),
-	hitColor: Color.valueOf("ab8ec5"),
-    trailColor: Color.valueOf("ab8ec5"),
-    frontColor: Color.white,
-                        buildingDamageMultiplier: 0.25,
-                        shrinkY: 0.3,
-                    })
+        despawnEffect: Fx.hitBulletColor,
+        width: 8,
+        height: 12,
+        lifetime: 50,
+        knockback: 0.5,
+        splashDamageRadius: 22,
+        splashDamage: 50,
+        scaledSplashDamage: true,
+        pierceArmor: true,
+        backColor: Color.valueOf("ab8ec5"),
+        hitColor: Color.valueOf("ab8ec5"),
+        trailColor: Color.valueOf("ab8ec5"),
+        frontColor: Color.white,
+        buildingDamageMultiplier: 0.25,
+        shrinkY: 0.3,
+    })
 });
 titanCarbideAmmo.trailInterp = v => Math.max(Mathf.slope(v), 0.8);
 
 const titanCreostoneAmmo = extend(ArtilleryBulletType, 2.5, 650, "shell", {
-	hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),
-	despawnEffect: Fx.none,
-	knockback: 3,
-	lifetime: 140,
-	height: 19,
-	width: 17,
-	reloadMultiplier: 0.3,
-	splashDamage: 800,
-	splashDamageRadius: 55,
-	rangeChange: 14 * Vars.tilesize,
-	scaledSplashDamage: true,
-	backColor: Color.valueOf("ffb380"),
-	hitColor: Color.valueOf("ffb380"),
+    hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),
+    despawnEffect: Fx.none,
+    knockback: 3,
+    lifetime: 140,
+    height: 19,
+    width: 17,
+    reloadMultiplier: 0.3,
+    splashDamage: 800,
+    splashDamageRadius: 55,
+    rangeChange: 14 * Vars.tilesize,
+    scaledSplashDamage: true,
+    backColor: Color.valueOf("ffb380"),
+    hitColor: Color.valueOf("ffb380"),
     trailColor: Color.valueOf("ffb380"),
     frontColor: Color.white,
     ammoMultiplier: 1,
@@ -1203,16 +1203,16 @@ const titanCreostoneAmmo = extend(ArtilleryBulletType, 2.5, 650, "shell", {
     trailSinMag: 0.5,
     trailInterval: 3,
     trailEffect: extend(ParticleEffect, {
-         particles: 10,
-         length: -28,
-         cone: 15,
-         sizeFrom: 6,
-         sizeTo: 0,
-         colorFrom: Color.valueOf("ffb380"),
-         colorTo: Color.valueOf("ffb380"),
-         interp: Interp.pow2Out,
-         lifetime: 80,
-         rotWithParent: true,
+        particles: 10,
+        length: -28,
+        cone: 15,
+        sizeFrom: 6,
+        sizeTo: 0,
+        colorFrom: Color.valueOf("ffb380"),
+        colorTo: Color.valueOf("ffb380"),
+        interp: Interp.pow2Out,
+        lifetime: 80,
+        rotWithParent: true,
     }),
     despawnShake: 7,
     shootEffect: Fx.shootTitan,
@@ -1224,7 +1224,7 @@ const titanCreostoneAmmo = extend(ArtilleryBulletType, 2.5, 650, "shell", {
     intervalBullets: 1,
     bulletInterval: 8,
     intervalBullet: extend(BasicBulletType, 3, 60, {
-    	width: 10,
+        width: 10,
         height: 10,
         lifetime: 60,
         hitColor: Color.valueOf("ffb380"),
@@ -1243,42 +1243,42 @@ const titanCreostoneAmmo = extend(ArtilleryBulletType, 2.5, 650, "shell", {
     fragBullets: 5,
     fragLifeMin: 0.3,
     fragBullet: extend(ArtilleryBulletType, 2.5, 70, {
-    	splashDamage: 70,
+        splashDamage: 70,
         splashDamageRadius: 26,
         lifetime: 30,
         despawnShake: 7,
         knockback: 3,
         height: 17,
-	width: 15,
-	scaledSplashDamage: true,
-	backColor: Color.valueOf("ffb380"),
-	hitColor: Color.valueOf("ffb380"),
-    trailColor: Color.valueOf("ffb380"),
-    frontColor: Color.white,
-    hitSound: Sounds.explosionTitan,
-    status: StatusEffects.blasted,
-    trailLength: 16,
-    trailWidth: 3.33,
-    trailSinScl: 2.3,
-    trailSinMag: 0.3,
-    trailInterval: 3,
-    trailEffect: Fx.none,
-    shrinkX: 0.2,
-    shrinkY: 0.1,
-    buildingDamageMultiplier: 0.2,
-    hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),
+        width: 15,
+        scaledSplashDamage: true,
+        backColor: Color.valueOf("ffb380"),
+        hitColor: Color.valueOf("ffb380"),
+        trailColor: Color.valueOf("ffb380"),
+        frontColor: Color.white,
+        hitSound: Sounds.explosionTitan,
+        status: StatusEffects.blasted,
+        trailLength: 16,
+        trailWidth: 3.33,
+        trailSinScl: 2.3,
+        trailSinMag: 0.3,
+        trailInterval: 3,
+        trailEffect: Fx.none,
+        shrinkX: 0.2,
+        shrinkY: 0.1,
+        buildingDamageMultiplier: 0.2,
+        hitEffect: new MultiEffect(Fx.titanExplosion, Fx.titanSmoke),
     })
 });
 titanCreostoneAmmo.trailInterp = v => Math.max(Mathf.slope(v), 0.8);
 
 Blocks.titan.ammo(
-Items.thorium, titanThoriumAmmo, 
-Items.oxide, titanOxideAmmo, 
-Items.carbide, titanCarbideAmmo, 
-items.creostone, titanCreostoneAmmo
+    Items.thorium, titanThoriumAmmo, 
+    Items.oxide, titanOxideAmmo, 
+    Items.carbide, titanCarbideAmmo, 
+    items.creostone, titanCreostoneAmmo
 );
 
 module.exports = {
-	additionally: additionally
+    additionally: additionally
 }
-    
+
